@@ -1,6 +1,4 @@
-import Navbar from "@/components/navbar/Nav-bar";
 import NavigationBar from "@/components/navbar/Navigation-bar";
-
 
 export default function RootLayout({
   children,
@@ -9,7 +7,6 @@ export default function RootLayout({
 }>) {
   return (
     <div>
-      {/* <Navbar /> */}
       <NavigationBar/>
       {children}
     </div>

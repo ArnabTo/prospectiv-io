@@ -1,7 +1,7 @@
 
 'use client';
 import Link from "next/link";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { AlignJustify } from 'lucide-react';
 import { useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
