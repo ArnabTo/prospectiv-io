@@ -1,15 +1,16 @@
 'use client';
 
+import Link from "next/link";
 import {
     NavigationMenu,
     NavigationMenuContent,
-
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-
 } from "../ui/navigation-menu";
+
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator } from "../ui/dropdown-menu";
 const Navbar = () => {
     return (
         <div className="max-w-7xl mx-auto">
@@ -17,14 +18,19 @@ const Navbar = () => {
 
             {/* desktop view */}
             <div className="hidden lg:block">
-                <div className="flex justify-center items-center py-10">
-                    <NavigationMenu>
+                <div className="flex justify-between items-center my-12">
+                    <div>
+                        <h1 className="text-3xl font-extrabold">Prospectiv</h1>
+                    </div>
+                    <NavigationMenu className="flex justify-between items-center">
                         <NavigationMenuList>
                             <NavigationMenuItem className="text-lg">
-                                Home
+                                <Link href="/docs" className="text-lg font-medium">
+                                    Home
+                                </Link>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent">Why Prospectiv?</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent hover:text focus:bg-transparent focus:text-foreground">Why Prospectiv?</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col w-[20rem] px-5 py-3 space-y-5">
                                         <NavigationMenuLink>
@@ -58,16 +64,15 @@ const Navbar = () => {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent">Solutions</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent hover:text focus:bg-transparent focus:text-foreground">Solutions</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <NavigationMenuLink>Link</NavigationMenuLink>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent">Pricing</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <NavigationMenuLink>Link</NavigationMenuLink>
-                                </NavigationMenuContent>
+                            <NavigationMenuItem className="text-lg">
+                                <Link href="/docs" className="text-lg font-medium">
+                                    Pricing
+                                </Link>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent">Resources</NavigationMenuTrigger>
@@ -76,13 +81,43 @@ const Navbar = () => {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="bg-transparent text-lg hover:bg-transparent">Company</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <NavigationMenuLink>Link</NavigationMenuLink>
-                                </NavigationMenuContent>
+                                <DropdownMenu
+                                    trigger={
+                                        <span className=" cursor-pointer text-lg">
+                                            Hover Me
+                                        </span>
+                                    }
+                                >
+                                    <DropdownMenuContent>
+                                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuItem>Profile</DropdownMenuItem>
+                                        <DropdownMenuItem>Billing</DropdownMenuItem>
+                                        <DropdownMenuItem>Team</DropdownMenuItem>
+                                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
+                    <div className="relative">
+                        <Link href='#' className="group">
+                            <div
+                                className="w-52 text-center rounded-full p-[2px] group-hover:p-1 duration-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:scale-105"
+                                style={{
+                                    background: "linear-gradient(to right, #6f86ff, #b372ce 49%, #ff7586)",
+                                }}
+                            >
+                                <div
+                                    className="bg-black px-10 py-3 rounded-full text-white text-md font-bold"
+
+                                >
+                                    Book a Demo
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
 
                 </div>
             </div>
@@ -93,71 +128,3 @@ const Navbar = () => {
 export default Navbar;
 
 
-// <NavigationMenu className="max-w-7xl mx-auto bg-yellow-400 py-5 flex justify-between items-center">
-//     <NavigationMenuList>
-//         <NavigationMenuItem>
-//             <NavigationMenuTrigger className="bg-transparent">Why Prospectiv?</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <div className="flex flex-col">
-//                     <NavigationMenuLink>
-//                         <div className="flex justify-between items-center">
-//                             <h1>Logo</h1>
-//                             <span>
-//                                 <h4>Prospecting services</h4>
-//                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-//                             </span>
-//                         </div>
-//                     </NavigationMenuLink>
-//                     <NavigationMenuLink>
-//                         <div className="flex justify-between items-center">
-//                             <h1>Logo</h1>
-//                             <span>
-//                                 <h4>Prospecting services</h4>
-//                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-//                             </span>
-//                         </div>
-//                     </NavigationMenuLink>
-//                     <NavigationMenuLink>
-//                         <div className="flex justify-between items-center">
-//                             <h1>Logo</h1>
-//                             <span>
-//                                 <h4>Prospecting services</h4>
-//                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-//                             </span>
-//                         </div>
-//                     </NavigationMenuLink>
-//                 </div>
-//             </NavigationMenuContent>
-//         </NavigationMenuItem>
-//         <NavigationMenuItem>
-//             <NavigationMenuTrigger className="bg-transparent">Solutions</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//         </NavigationMenuItem>
-//         <NavigationMenuItem>
-//             <NavigationMenuTrigger className="bg-transparent">Pricing</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//         </NavigationMenuItem>
-//         <NavigationMenuItem>
-//             <NavigationMenuTrigger className="bg-transparent">Resources</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//         </NavigationMenuItem>
-//         <NavigationMenuItem>
-//             <NavigationMenuTrigger className="bg-transparent">Company</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//         </NavigationMenuItem>
-//         <NavigationMenuItem>
-//             <NavigationMenuTrigger className="bg-transparent">Item One</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//         </NavigationMenuItem>
-//     </NavigationMenuList>
-// </NavigationMenu>
