@@ -15,10 +15,12 @@ const config: Config = {
   			secondary: '#ff4895',
   			textColorOne: '#000000',
   			textColorTwo: '#b7b4c7',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
+			// card: '#1D1A27',
+			card: '#1d1a2746',
+  			// card: {
+  			// 	DEFAULT: 'hsl(var(--card))',
+  			// 	foreground: 'hsl(var(--card-foreground))'
+  			// },
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'

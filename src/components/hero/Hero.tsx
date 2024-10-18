@@ -32,7 +32,7 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="text-5xl md:text-6xl lg:text-7xl font-extrabold">Drive More Sales
+                    className="text-5xl md:text-6xl lg:text-6xl font-extrabold">Drive More Sales
                     <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> Meetings with Your Ideal Customers.
                     </span>
                 </motion.h1>
