@@ -8,7 +8,7 @@ import ImageThree from '@/public/assets/whatwedothree.jpg'
 import Image from 'next/image';
 const WhatWeDo = () => {
     return (
-        <div className='max-w-7xl mx-auto px-5 py-24'>
+        <div className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
             <div className='relative flex flex-col lg:flex-row flex-start justify-between gap-10'>
                 <div className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>You do your best work while we do the hard work</h1>
