@@ -61,7 +61,7 @@ const NavigationBar = () => {
                                         Home
                                     </Link>
                                 </li>
-                                <li className="relative" ref={dropdownRef}>
+                                {/* <li className="relative" ref={dropdownRef}>
                                     <div
                                         className="text-lg font-bold hover:text-secondary transition-all duration-500"
                                         onClick={() => toggleDropdown(0)}
@@ -90,6 +90,11 @@ const NavigationBar = () => {
                                             </li>
                                         ))}
                                     </motion.ul>
+                                </li> */}
+                                <li>
+                                    <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                        About Us
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
@@ -182,7 +187,7 @@ const NavigationBar = () => {
                                 Home
                             </Link>
                         </li>
-                        <li className="relative group">
+                        {/* <li className="relative group">
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500 group">
                                 Why Prospectiv?
                             </Link>
@@ -203,6 +208,11 @@ const NavigationBar = () => {
                                 </li>
 
                             </ul>
+                        </li> */}
+                        <li>
+                            <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                About Us
+                            </Link>
                         </li>
                         <li>
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
