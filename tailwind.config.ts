@@ -17,6 +17,7 @@ const config: Config = {
   			textColorTwo: '#b7b4c7',
 			// card: '#1D1A27',
 			card: '#1d1a2746',
+			smallCard: '#5e5b71',
   			// card: {
   			// 	DEFAULT: 'hsl(var(--card))',
   			// 	foreground: 'hsl(var(--card-foreground))'
