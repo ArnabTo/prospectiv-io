@@ -23,7 +23,7 @@ const WhatWeDo = () => {
                 </div>
                 <div className='relative'>
                     <div className='flex flex-col gap-10'>
-                        <div className='bg-[#1D1A27]  rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
+                        <div className='bg-card  rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
                             <div className='space-y-4 px-5 lg:px-16 py-10 w-full min-w-[60%] md:max-w-[80%]'>
                                 <div className='bg-slate-400 text-foreground text-lg p-3 rounded-lg max-w-12 text-center'>
                                     1
@@ -36,7 +36,7 @@ const WhatWeDo = () => {
                             </div>
                         </div>
 
-                        <div className='bg-[#1D1A27]  rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
+                        <div className='bg-card  rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
                             <div className='space-y-4 px-5 lg:px-16 py-10 w-full min-w-[60%] md:max-w-[80%]'>
                                 <div className='bg-slate-400 text-foreground p-3 rounded-lg max-w-12 text-center'>
                                     2
@@ -48,7 +48,7 @@ const WhatWeDo = () => {
                                 <Image src={ImageTwo} width={500} height={500} alt="image" className='rounded-t-2xl h-full lg:rounded-r-2xl' />
                             </div>
                         </div>
-                        <div className='bg-[#1D1A27]  rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
+                        <div className='bg-card rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
                             <div className='space-y-4 px-5 lg:px-16 py-10 w-full min-w-[60%] md:max-w-[80%]'>
                                 <div className='bg-slate-400 text-foreground p-3 rounded-lg max-w-12 text-center'>
                                     3
