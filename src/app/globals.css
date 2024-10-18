@@ -7,6 +7,14 @@ body{
   font-family: var(--font-thicccboi);
 }
 
+h1{
+  color: var(--text-color-three)
+}
+
+p{
+  color: var(--text-color-two)
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -41,6 +49,9 @@ body{
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --font-thicccboi: 'Thicccboi', sans-serif;
+    --text-color-one: #000000
+    --text-color-two: #b7b4c7
+    --text-color-three: #ffffff
   }
   .dark {
     --background: 240 10% 3.9%;

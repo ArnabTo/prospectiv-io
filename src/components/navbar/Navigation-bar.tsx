@@ -137,12 +137,6 @@ const NavigationBar = () => {
                                         ))}
                                     </motion.ul>
                                 </li>
-                                <li>
-                                    <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                        Legal
-                                    </Link>
-                                </li>
-
                             </ul>
                             <motion.div
                                 initial={{ opacity: 0 }}
@@ -182,7 +176,7 @@ const NavigationBar = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <ul className="flex justify-end items-center gap-5">
+                    <ul className="flex justify-end items-center gap-10">
                         <li>
                             <Link href="#" className="text-lg font-bold text-secondary transition-all duration-500">
                                 Home
@@ -247,13 +241,6 @@ const NavigationBar = () => {
                                 </li>
                             </ul>
                         </li>
-
-                        <li>
-                            <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                Legal
-                            </Link>
-                        </li>
-
                     </ul>
                 </motion.div>
 

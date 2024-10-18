@@ -25,20 +25,25 @@ const Hero = () => {
         },
     ]
     return (
-        <div className="max-w-7xl mx-auto relative space-y-24">
+        <div className="max-w-7xl mx-auto relative space-y-24 overflow-hidden xl:overflow-visible">
             <div className="w-full lg:w-3/4 text-center mx-auto space-y-10 px-4 lg:px-10 pt-32">
                 <motion.h1
                     initial={{ opacity: 0, y: 10, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="text-5xl md:text-6xl lg:text-7xl font-bold">We Help UK SMEs <br className="hidden md:block lg:hidden"></br>  <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50 font-extrabold">Book More Sales <br className="hidden md:block lg:hidden"></br> Meetings.</span></motion.h1>
+                    className="text-5xl md:text-6xl lg:text-7xl font-extrabold">Drive More Sales
+                    <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> Meetings with Your Ideal Customers.
+                    </span>
+                </motion.h1>
+
+
                 <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-2xl text-[#b7b4c7] font-medium">Using email outreach, we help our clients to book more qualified sales meetings with their ideal customers.</motion.p>
+                    className="text-2xl font-medium text-textColorTwo">Helping small-to-medium-sized service-based businesses book more sales meetings effortlessly, so you can focus on growing your business.</motion.p>
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -75,10 +80,10 @@ const Hero = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                     viewport={{ once: true }}
-                    className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
-                    <div className="bg-[#6f86ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                    <div className="bg-[#fe316f] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                    <div className="bg-[#d220ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                    className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
+                    <div className="bg-[#6f86ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                    <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                    <div className="bg-[#d220ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -86,9 +91,9 @@ const Hero = () => {
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                     className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-6 lg:-right-52 -z-10 animate-spin-slow transition-all">
-                    <div className="bg-[#6f86ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                    <div className="bg-[#1766ff] lg:bg-[#fe316f] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                    <div className="bg-[#6923ff] lg:bg-[#d220ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                    <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                    <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                    <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                 </motion.div>
 
             </div>
@@ -96,11 +101,11 @@ const Hero = () => {
             {/* clients section */}
             <div className="max-w-[80%] mx-auto">
                 <motion.div
-                initial={{ opacity: 0}}
-                whileInView={{ opacity: 1}}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="flex justify-between items-center gap-3">
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex justify-between items-center gap-3">
                     {
                         companyDetails.map((item, index) => (
                             <div key={index}>

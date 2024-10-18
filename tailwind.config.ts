@@ -14,6 +14,7 @@ const config: Config = {
   			foreground: '#ffff',
   			secondary: '#ff4895',
   			textColorOne: '#000000',
+  			textColorTwo: '#b7b4c7',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -21,10 +22,6 @@ const config: Config = {
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
