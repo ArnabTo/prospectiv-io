@@ -8,8 +8,8 @@ import ImageThree from '@/public/assets/whatwedothree.jpg'
 import Image from 'next/image';
 const WhatWeDo = () => {
     return (
-        <div className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
-            <div className='flex flex-col lg:flex-row flex-start justify-between gap-10'>
+        <section className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
+            <div className='flex flex-col lg:flex-row-reverse flex-start justify-between gap-10'>
                 <div className='sticky top-5 md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>You do your best work while we do the hard work</h1>
                     <p className='text-lg text-textColorTwo text-center lg:text-start'>
@@ -32,7 +32,7 @@ const WhatWeDo = () => {
                                 <p className='text-lg text-textColorTwo'>Speak to ideal clients that are outside your network. Discover new markets and grow your business</p>
                             </div>
                             <div>
-                                <Image src={ImageOne} width={500} height={500} alt="image" className='rounded-t-2xl h-full lg:rounded-r-2xl' />
+                                <Image src={ImageOne} width={500} height={500} alt="image" className='h-full rounded-t-2xl lg:rounded-t-none lg:rounded-r-lg' />
                             </div>
                         </div>
 
@@ -45,7 +45,7 @@ const WhatWeDo = () => {
                                 <p className='text-lg text-textColorTwo'>Speak with truly qualified opportunities to grow your sales.</p>
                             </div>
                             <div>
-                                <Image src={ImageTwo} width={500} height={500} alt="image" className='rounded-t-2xl h-full lg:rounded-r-2xl' />
+                                <Image src={ImageTwo} width={500} height={500} alt="image" className='h-full rounded-t-2xl lg:rounded-t-none lg:rounded-r-lg' />
                             </div>
                         </div>
                         <div className='bg-card rounded-2xl flex flex-col-reverse md:flex-row justify-between '>
@@ -57,7 +57,7 @@ const WhatWeDo = () => {
                                 <p className='text-lg text-textColorTwo'>Our services are designed to scale with our clients' growth, supporting their long-term success in the marketplace.</p>
                             </div>
                             <div>
-                                <Image src={ImageThree} width={500} height={500} alt="image" className='rounded-t-2xl h-full lg:rounded-r-2xl' />
+                                <Image src={ImageThree} width={500} height={500} alt="image" className='h-full rounded-t-2xl lg:rounded-t-none lg:rounded-r-lg' />
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const WhatWeDo = () => {
                     </motion.div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
