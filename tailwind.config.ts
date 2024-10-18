@@ -12,8 +12,8 @@ const config: Config = {
   		colors: {
   			background: '#13111a',
   			foreground: '#ffff',
-			secondary: '#ff4895',
-			textColorOne: '#000000',
+  			secondary: '#ff4895',
+  			textColorOne: '#000000',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -49,16 +49,38 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-		animation: {
-			'spin-slow': 'spin 15s linear infinite', 
-			'float': 'floating 3s ease-in-out infinite',
-		},
-		keyframes: {
-			floating: {
-				'0%, 100%': { transform: 'translateY(0)' },
-				'50%': { transform: 'translateY(-10px)' },
-			},
-		},
+  		animation: {
+  			'spin-slow': 'spin 15s linear infinite',
+  			float: 'floating 3s ease-in-out infinite',
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+  		},
+  		keyframes: {
+  			floating: {
+  				'0%, 100%': {
+  					transform: 'translateY(0)'
+  				},
+  				'50%': {
+  					transform: 'translateY(-10px)'
+  				}
+  			},
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			}
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
