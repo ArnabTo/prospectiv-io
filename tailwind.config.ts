@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-  			background: '#191720',
+  			background: '#13111a',
   			foreground: '#ffff',
 			secondary: '#ff4895',
 			textColorOne: '#000000',
@@ -51,6 +51,13 @@ const config: Config = {
   		},
 		animation: {
 			'spin-slow': 'spin 15s linear infinite', 
+			'float': 'floating 3s ease-in-out infinite',
+		},
+		keyframes: {
+			floating: {
+				'0%, 100%': { transform: 'translateY(0)' },
+				'50%': { transform: 'translateY(-10px)' },
+			},
 		},
   		borderRadius: {
   			lg: 'var(--radius)',
