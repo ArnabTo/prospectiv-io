@@ -9,8 +9,8 @@ import Image from 'next/image';
 const WhatWeDo = () => {
     return (
         <div className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
-            <div className='relative flex flex-col lg:flex-row flex-start justify-between gap-10'>
-                <div className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
+            <div className='flex flex-col lg:flex-row flex-start justify-between gap-10'>
+                <div className='sticky top-5 md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>You do your best work while we do the hard work</h1>
                     <p className='text-lg text-textColorTwo text-center lg:text-start'>
                         Prospectiv’s done-for-you lead generation service is designed to help companies swiftly and consistently generate leads.
