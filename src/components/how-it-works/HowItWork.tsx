@@ -15,11 +15,11 @@ const HowItWork = () => {
     const lottieRefFive = useRef(null);
     const lottieRefSix = useRef(null);
 
-    const handleMouseEnter = (lottieRef) => {
+    const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
         lottieRef?.current?.play(); // Play animation on hover
     };
 
-    const handleMouseLeave = (lottieRef) => {
+    const handleMouseLeave = (lottieRef: React.RefObject<any>) => {
         lottieRef?.current?.stop(); // Stop the animation when hover ends
     };
 
