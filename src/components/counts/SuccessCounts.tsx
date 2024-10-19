@@ -104,8 +104,20 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 className="lg:ml-10"
                             >
-                                <p className="text-lg text-textColorTwo">Successful Projects</p>
-                                <h3 className="text-7xl text-[#6923ff] font-bold">1000+</h3>
+                                <p className="text-lg text-textColorTwo">Satisfied Clients</p>
+                                <h3 className="text-7xl text-[#6923ff] font-bold">
+                                <CountUp
+                                       start={startCounting ? 0 : undefined}// Start counting when the section is in view
+                                        end={13500}
+                                        duration={5}
+                                        useEasing={true}
+                                        useGrouping={true}
+                                        separator=","
+                                        prefix=""
+                                        suffix="+"
+                                        decimals={0}
+                                    />
+                                </h3>
                             </motion.div>
                         </div>
                     </div>
