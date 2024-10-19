@@ -23,7 +23,7 @@ const SuccessCounts = () => {
                 </motion.div>
 
                 <div className="relative">
-                    <div className="flex flex-col lg:flex-row gap-10">
+                    <div className="flex flex-col md:flex-row gap-10">
                         <div className="space-y-5 p-5 rounded-lg">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
