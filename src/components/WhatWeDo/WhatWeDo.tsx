@@ -42,7 +42,7 @@ const WhatWeDo = () => {
                         className='flex flex-col gap-5 w-full lg:w-[40%] relative'>
                             <div className='bg-card rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
-                                    <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
+                                    <div className='bg-foreground font-bold text-xl text-textColorOne p-3 rounded-lg max-w-12 text-center'>
                                         1
                                     </div>
                                     <h1 className='text-3xl font-bold'>{WhatWeDoTextContent?.cardTextContent1?.heading}</h1>
@@ -51,7 +51,7 @@ const WhatWeDo = () => {
                             </div>
                             <div className='bg-card rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-4 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
-                                <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
+                                <div className='bg-foreground font-bold text-xl text-textColorOne p-3 rounded-lg max-w-12 text-center'>
                                    2
                                </div>
                                <h1 className='text-3xl font-bold'>{WhatWeDoTextContent?.cardTextContent2?.heading}</h1>
@@ -88,7 +88,7 @@ const WhatWeDo = () => {
                             viewport={{ once: true }}
                             className='bg-card  h-full rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
-                                    <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
+                                    <div className='bg-foreground font-bold text-xl text-textColorOne p-3 rounded-lg max-w-12 text-center'>
                                         3
                                     </div>
                                     <h1 className='text-3xl font-bold'>{WhatWeDoTextContent?.cardTextContent3?.heading}</h1>

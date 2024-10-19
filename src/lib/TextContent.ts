@@ -54,7 +54,7 @@ const HowItWorkTextContent = {
         paragraph: 'You tell us about your target clients and what makes you unique.',
     },
     'cardTextContent2': {
-        heading: 'SpeaCreate a Database',
+        heading: 'Create a Database',
         paragraph: 'Create a DatabaseWe source and identify an audience of decision makers.',
     },
     'cardTextContent3': {

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from 'framer-motion';
 import PartnerOne from '@/public/assets/part.svg'
 import PartnerTwo from '@/public/assets/part2.svg'
+import Marquee from "../ui/marquee";
 const Hero = () => {
 
     const companyDetails = [
@@ -53,12 +54,12 @@ const Hero = () => {
                     viewport={{ once: true }}
                     className="w-full md:w-3/4 lg:w-4/6 mx-auto flex flex-col md:flex-row justify-center items-center gap-3 space-y-3 md:space-y-0">
                     <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                        <Link href="" className="flex-1 font-bold text-lg bg-black px-10 lg:px-16 py-5 rounded-full">
+                        <Link href="" className="flex-1 font-bold text-lg bg-black px-10 lg:px-16 py-5 rounded-full hover:scale-95 transition-all duration-300">
                             Book a Demo
                         </Link>
                     </div>
                     <div className="w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                        <Link href="" className="flex-1 font-medium text-lg bg-[#302c3f]  px-10 lg:px-16 py-5 rounded-full">
+                        <Link href="" className="flex-1 font-semibold text-lg bg-foreground text-textColorOne hover:scale-95 transition-all duration-300 px-10 lg:px-16 py-5 rounded-full hover:bg-buttonHoverColor">
                             See Our Pricing
                         </Link>
                     </div>
@@ -74,10 +75,10 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 1.2 }}
                     viewport={{ once: true }}
                     className="w-full flex justify-center items-center relative px-5">
-                        
-                    <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-20 absolute left-5 lg:-left-12 lg:top-40" src={HeroBgTwo} width={300} height={300} alt="HeroBg" />
+
+                    <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-20 absolute left-5 lg:-left-12 lg:top-40" src={HeroBgTwo} width={300} height={300} alt="HeroBg" />
                     <Image className="w-full max-w-[88%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-10" src={HeroBg} width={500} height={500} alt="HeroBg" />
-                    <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-10 absolute right-5 lg:bottom-10 lg:right-8" src={HeroBgThree} width={500} height={500} alt="HeroBg" />
+                    <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-10 absolute right-5 lg:bottom-10 lg:right-8" src={HeroBgThree} width={500} height={500} alt="HeroBg" />
                 </motion.div>
                 {/* Gradient Blurs */}
                 <motion.div
@@ -95,29 +96,10 @@ const Hero = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-6 lg:-right-52 -z-10 animate-spin-slow transition-all">
+                    className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-52 -z-10 animate-spin-slow transition-all">
                     <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                     <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                     <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                </motion.div>
-
-            </div>
-
-            {/* clients section */}
-            <div className="max-w-[80%] mx-auto">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="flex justify-between items-center gap-3">
-                    {
-                        companyDetails.map((item, index) => (
-                            <div key={index}>
-                                <Image src={item.logo} width={200} height={200} alt={item.name} />
-                            </div>
-                        ))
-                    }
                 </motion.div>
             </div>
         </div>

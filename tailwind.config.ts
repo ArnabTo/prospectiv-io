@@ -15,14 +15,11 @@ const config: Config = {
   			secondary: '#ff4895',
   			textColorOne: '#000000',
   			textColorTwo: '#b7b4c7',
-			// card: '#1D1A27',
-			card: '#1d1a2746',
-			smallCard: '#302C3F',
-			borderColor: '#ffffff1c',
-  			// card: {
-  			// 	DEFAULT: 'hsl(var(--card))',
-  			// 	foreground: 'hsl(var(--card-foreground))'
-  			// },
+			buttonHoverColor: '#fffefe8c',
+  			card: '#1d1a2746',
+  			smallCard: '#302C3F',
+  			borderColor: '#ffffff1c',
+
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
@@ -53,6 +50,7 @@ const config: Config = {
   		animation: {
   			'spin-slow': 'spin 15s linear infinite',
   			float: 'floating 3s ease-in-out infinite',
+			floatReverse: 'floatingReverse 3s ease-in-out infinite',
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
@@ -65,6 +63,14 @@ const config: Config = {
   					transform: 'translateY(-10px)'
   				}
   			},
+			  floatingReverse: {
+				'0%, 100%': {
+					transform: 'translateY(-10px)'
+				},
+				'50%': {
+					transform: 'translateY(0)'
+				}
+			},
   			marquee: {
   				from: {
   					transform: 'translateX(0)'

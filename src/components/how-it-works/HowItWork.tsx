@@ -24,7 +24,7 @@ const HowItWork = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-5 py-24 space-y-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 pb-24 space-y-10 overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -48,7 +48,7 @@ const HowItWork = () => {
                         onMouseEnter={() => handleMouseEnter(lottieRefOne)}
                         onMouseLeave={() => handleMouseLeave(lottieRefOne)}
                     >
-                        <div className='max-w-16 bg-smallCard rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefOne}
                                 animationData={require('../../public/assets/search.json')}
@@ -66,7 +66,7 @@ const HowItWork = () => {
                         onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
                         onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
                     >
-                        <div className='max-w-16 bg-smallCard rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefTwo}
                                 animationData={require('../../public/assets/Database.json')}
@@ -84,7 +84,7 @@ const HowItWork = () => {
                         onMouseEnter={() => handleMouseEnter(lottieRefThree)}
                         onMouseLeave={() => handleMouseLeave(lottieRefThree)}
                     >
-                        <div className='max-w-16 bg-smallCard rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefThree}
                                 animationData={require('../../public/assets/mail.json')}
@@ -110,7 +110,7 @@ const HowItWork = () => {
                         onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                     >
-                        <div className='max-w-16 bg-smallCard rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefFour}
                                 animationData={require('../../public/assets/play.json')}
@@ -128,7 +128,7 @@ const HowItWork = () => {
                         onMouseEnter={() => handleMouseEnter(lottieRefFive)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFive)}
                     >
-                        <div className='max-w-16 bg-smallCard rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefFive}
                                 animationData={require('../../public/assets/notification.json')}
@@ -146,7 +146,7 @@ const HowItWork = () => {
                         onMouseEnter={() => handleMouseEnter(lottieRefSix)}
                         onMouseLeave={() => handleMouseLeave(lottieRefSix)}
                     >
-                        <div className='max-w-16 bg-smallCard rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefSix}
                                 animationData={require('../../public/assets/analytics.json')}
