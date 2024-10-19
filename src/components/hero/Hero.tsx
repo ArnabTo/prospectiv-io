@@ -1,5 +1,7 @@
 import Link from "next/link";
 import HeroBg from '@/public/assets/herobg.svg';
+import HeroBgTwo from '@/public/assets/herobgtwo.svg';
+import HeroBgThree from '@/public/assets/herobgthree.svg'
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import PartnerOne from '@/public/assets/part.svg'
@@ -71,8 +73,11 @@ const Hero = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.2 }}
                     viewport={{ once: true }}
-                    className="w-full flex justify-center items-center">
-                    <Image className="w-full max-w-[85%] mx-auto rounded-2xl animate-float z-10" src={HeroBg} width={500} height={500} alt="HeroBg" />
+                    className="w-full flex justify-center items-center relative px-5">
+                        
+                    <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-20 absolute left-5 lg:-left-12 lg:top-40" src={HeroBgTwo} width={300} height={300} alt="HeroBg" />
+                    <Image className="w-full max-w-[88%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-10" src={HeroBg} width={500} height={500} alt="HeroBg" />
+                    <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-10 absolute right-5 lg:bottom-10 lg:right-8" src={HeroBgThree} width={500} height={500} alt="HeroBg" />
                 </motion.div>
                 {/* Gradient Blurs */}
                 <motion.div
@@ -91,7 +96,7 @@ const Hero = () => {
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
                     className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-6 lg:-right-52 -z-10 animate-spin-slow transition-all">
-                    <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                    <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                     <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                     <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                 </motion.div>

@@ -25,13 +25,23 @@ const HowItWork = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-5 py-24 space-y-10 overflow-hidden">
-            <div className="w-full lg:max-w-[50%] mx-auto text-center space-y-5">
+            <motion.div
+                initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="w-full lg:max-w-[50%] mx-auto text-center space-y-5">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">Cold Email Lead Generation</h1>
                 <p className="text-textColorTwo text-lg">We have developed a market-leading six-step process allowing a hyper-targeted lead generation campaign to be launched for your business in as little as two weeks.</p>
-            </div>
+            </motion.div>
 
             <div className='relative space-y-5'>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                     {/* First block with Lottie animation */}
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
@@ -85,10 +95,15 @@ const HowItWork = () => {
                         <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Write Personalised Emails</h3>
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>We write on-brand and engaging emails.</p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Second section with Lottie animation */}
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1 }}
+                    viewport={{ once: true }}
+                    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                     {/* First block with Lottie animation */}
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
@@ -142,7 +157,7 @@ const HowItWork = () => {
                         <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Scale The Campaign</h3>
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>We continue to scale our efforts and increase ROI.</p>
                     </div>
-                </div>
+                </motion.div>
 
 
                 {/* Background animation using framer-motion */}

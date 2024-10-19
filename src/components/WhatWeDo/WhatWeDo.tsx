@@ -76,7 +76,12 @@ const WhatWeDo = () => {
         // </section>
         <section className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
             <div className='space-y-16'>
-                <div className='flex flex-col lg:flex-row justify-between items-start gap-10'>
+                <motion.div 
+                initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5}}
+                viewport={{ once: true }}
+                className='flex flex-col lg:flex-row justify-between items-start gap-10'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>You do your best work while we do the hard work</h1>
                     <div className='space-y-5'>
                         <p className='text-lg text-textColorTwo text-center lg:text-start'>
@@ -88,10 +93,15 @@ const WhatWeDo = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className='space-y-10'>
                     <div className='flex flex-col-reverse lg:flex-row gap-5'>
-                        <div className='flex flex-col gap-5 w-full lg:w-[40%] relative'>
+                        <motion.div 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0}}
+                        transition={{ duration: 0.5, delay: 0.5}}
+                        viewport={{ once: true }}
+                        className='flex flex-col gap-5 w-full lg:w-[40%] relative'>
                             <div className='bg-card rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                     <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
@@ -121,14 +131,24 @@ const WhatWeDo = () => {
                                 <div className="bg-[#1766ff] absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                                 <div className="bg-[#6923ff] absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
-                        </div>
-                        <div className='w-full lg:w-[60%]'>
+                        </motion.div>
+                        <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0}}
+                        transition={{ duration: 0.5, delay: 0.8}}
+                        viewport={{ once: true }}
+                        className='w-full lg:w-[60%]'>
                             <Image src={ImageTwo} width={500} height={500} alt="image" className='w-full rounded-3xl' />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className='flex flex-col-reverse lg:flex-row-reverse gap-5'>
                         <div className='w-full lg:w-[40%] relative'>
-                            <div className='bg-card  h-full rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
+                            <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0}}
+                            transition={{ duration: 0.5, delay: 0.5}}
+                            viewport={{ once: true }}
+                            className='bg-card  h-full rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                     <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
                                         3
@@ -136,7 +156,7 @@ const WhatWeDo = () => {
                                     <h1 className='text-3xl font-bold'>Easily Scalable</h1>
                                    <p className='text-lg text-textColorTwo'>Our services are designed to scale with our clients' growth, supporting their long-term success in the marketplace.</p>
                                 </div>
-                            </div>
+                            </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -148,9 +168,14 @@ const WhatWeDo = () => {
                                 <div className="bg-[#d220ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
                         </div>
-                        <div className='w-full lg:w-[60%]'>
+                        <motion.div 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0}}
+                        transition={{ duration: 0.5, delay: 0.8}}
+                        viewport={{ once: true }}
+                        className='w-full lg:w-[60%]'>
                             <Image src={ImageThree} width={500} height={500} alt="image" className='w-full rounded-3xl' />
-                        </div>
+                        </motion.div>
                     </div>
                     <div></div>
                 </div>
