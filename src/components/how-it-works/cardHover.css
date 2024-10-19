@@ -1,0 +1,30 @@
+/* Card Animation */
+.card-animation {
+    position: relative;
+    background-color: #1d1a2746; /* Initial background color */
+    transition: background 0.3s ease-in-out; /* Smooth transition */
+    overflow: hidden;
+}
+
+.card-animation::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 300%;
+    height: 300%;
+    border-radius: 10%;
+    background: #ffffff;
+    transition: transform 0.8s ease;
+    transform-origin: bottom right;
+    z-index: 0;
+}
+
+.card-animation:hover::before {
+    transform: translate(-100%, -100%);
+}
+
+.card-animation * {
+    position: relative;
+    z-index: 1;
+}
