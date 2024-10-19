@@ -4,6 +4,10 @@ import Image from 'next/image';
 import ImageOne from '@/public/assets/whyporspectiveone.png'
 import ImageTwo from '@/public/assets/whyporspectivtwo.png'
 import ImageThree from '@/public/assets/whyporspectivethree.png'
+import { whyProspectiveTextContent } from '@/lib/TextContent';
+
+
+
 const WhyProsPective = () => {
     return (
         <div className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
@@ -14,9 +18,9 @@ const WhyProsPective = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
                 className='sticky top-5 md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
-                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Why Choose Prospectiv ?</h1>
+                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>{whyProspectiveTextContent?.heading?.heading}</h1>
                     <p className='text-lg text-textColorTwo text-center lg:text-start'>
-                        Delivering Qualified Sales Meetings for SME Service-Based Businesses with Proven ROI in Just 30 Days
+                       {whyProspectiveTextContent?.heading?.paragraph}
                     </p>
                     <div className="w-full md:max-w-60 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                         <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
@@ -36,8 +40,8 @@ const WhyProsPective = () => {
                               <Image src={ImageOne} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
                             <div className='space-y-4 w-full'>
-                                <h1 className='text-3xl font-extrabold'>Driving Sales Success for SMEs</h1>
-                                <p className='text-lg text-textColorTwo'>We specialise in setting qualified sales meetings for SME service-based businesses. </p>
+                                <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent1?.heading}</h1>
+                                <p className='text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent1?.paragraph}</p>
                             </div>
                         </div>
 
@@ -46,8 +50,8 @@ const WhyProsPective = () => {
                               <Image src={ImageTwo} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
                             <div className='space-y-4 w-full'>
-                                <h1 className='text-3xl font-extrabold'>Maximizing ROI for SME Service Providers</h1>
-                                <p className='text-lg text-textColorTwo'>Our typical clients make a return on their investment in circa 30 days.</p>
+                                <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent2?.heading}</h1>
+                                <p className='text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent2?.heading}</p>
                             </div>
                         </div>
 
@@ -56,8 +60,8 @@ const WhyProsPective = () => {
                               <Image src={ImageThree} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
                             <div className='space-y-4 w-full'>
-                                <h1 className='text-3xl font-extrabold'>Empowering SMEs with £1M in Pipeline Success</h1>
-                                <p className='text-lg text-textColorTwo'> We’ve attributed over £1,000,000 ($1.3M) in pipeline for our clients in 2024.can you create a title for these options.</p>
+                                <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent3?.heading}</h1>
+                                <p className='text-lg text-textColorTwo'> {whyProspectiveTextContent?.cardTextContent3?.heading}</p>
                             </div>
                         </div>
                     </div>

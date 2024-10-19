@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Lottie from 'lottie-react';
 import './cardHover.css';
-
+import { HowItWorkTextContent } from '@/lib/TextContent';
 const HowItWork = () => {
     // Create separate refs for each Lottie animation
     const lottieRefOne = useRef(null);
@@ -31,8 +31,8 @@ const HowItWork = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="w-full lg:max-w-[50%] mx-auto text-center space-y-5">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">Cold Email Lead Generation</h1>
-                <p className="text-textColorTwo text-lg">We have developed a market-leading six-step process allowing a hyper-targeted lead generation campaign to be launched for your business in as little as two weeks.</p>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{HowItWorkTextContent?.heading?.heading}</h1>
+                <p className="text-textColorTwo text-lg">{HowItWorkTextContent?.heading?.paragraph}</p>
             </motion.div>
 
             <div className='relative space-y-5'>
@@ -56,8 +56,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Identify Your ICP</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>You tell us about your target clients and what makes you unique.</p>
+                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.paragraph}</p>
                     </div>
 
                     {/* Second block with Lottie animation */}
@@ -74,8 +74,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Create a Database</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>We source and identify an audience of decision makers.</p>
+                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.paragraph}</p>
                     </div>
 
                     {/* Third block with Lottie animation */}
@@ -92,8 +92,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Write Personalised Emails</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>We write on-brand and engaging emails.</p>
+                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.paragraph}</p>
                     </div>
                 </motion.div>
 
@@ -118,8 +118,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Campaign Goes Live</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>Your outreach goes live, personalised for each prospect.</p>
+                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.paragraph}</p>
                     </div>
 
                     {/* Second block with Lottie animation */}
@@ -136,8 +136,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>New Sales Enquiries</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>New sales enquiries are sent directly to your team in real time.</p>
+                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.paragraph}</p>
                     </div>
 
                     {/* Third block with Lottie animation */}
@@ -154,8 +154,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>Scale The Campaign</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>We continue to scale our efforts and increase ROI.</p>
+                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.paragraph}</p>
                     </div>
                 </motion.div>
 
