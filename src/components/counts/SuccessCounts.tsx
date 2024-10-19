@@ -4,8 +4,8 @@ import CountUp from 'react-countup';
 
 const SuccessCounts = () => {
     return (
-        <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-2 bg-card border border-borderColor p-10 rounded-3xl">
+        <div className="max-w-7xl mx-auto px-2 overflow-hidden">
+            <div className="flex flex-col lg:flex-row justify-between items-center gap-2 bg-card border border-borderColor p-5 lg:p-10 rounded-3xl">
                 <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -16,7 +16,7 @@ const SuccessCounts = () => {
                 </motion.div>
 
                 <div className="relative">
-                    <div className="flex flex-row gap-10">
+                    <div className="flex flex-col lg:flex-row gap-10">
                         <div className="space-y-5  p-5 rounded-lg">
                             <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -44,7 +44,7 @@ const SuccessCounts = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className='ml-10'>
+                            className='lg:ml-10'>
                                 <p className="text-lg text-textColorTwo">Happy Clients</p>
                                 <h3 className="text-7xl text-secondary font-bold flex gap-3">
                                     <CountUp
@@ -90,7 +90,7 @@ const SuccessCounts = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className='ml-10'>
+                            className='lg:ml-10'>
                                 <p className="text-lg text-textColorTwo">Successful Projects</p>
                                 <h3 className="text-7xl text-[#6923ff] font-bold">1000+</h3>
                             </motion.div>
