@@ -90,8 +90,8 @@ const WhatWeDo = () => {
                     </div>
                 </div>
                 <div className='space-y-10'>
-                    <div className='flex gap-5'>
-                        <div className='flex flex-col gap-5 w-[40%] relative'>
+                    <div className='flex flex-col-reverse lg:flex-row gap-5'>
+                        <div className='flex flex-col gap-5 w-full lg:w-[40%] relative'>
                             <div className='bg-card rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                     <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
@@ -101,7 +101,7 @@ const WhatWeDo = () => {
                                     <p className='text-lg text-textColorTwo'>Speak to ideal clients that are outside your network. Discover new markets and grow your business</p>
                                 </div>
                             </div>
-                            <div className='bg-card  rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
+                            <div className='bg-card rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-4 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                 <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
                                    2
@@ -122,12 +122,12 @@ const WhatWeDo = () => {
                                 <div className="bg-[#6923ff] absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
                         </div>
-                        <div className='w-[60%]'>
+                        <div className='w-full lg:w-[60%]'>
                             <Image src={ImageTwo} width={500} height={500} alt="image" className='w-full rounded-3xl' />
                         </div>
                     </div>
-                    <div className='flex flex-row-reverse gap-5'>
-                        <div className='w-[40%] relative'>
+                    <div className='flex flex-col-reverse lg:flex-row-reverse gap-5'>
+                        <div className='w-full lg:w-[40%] relative'>
                             <div className='bg-card  h-full rounded-3xl flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                     <div className='bg-smallCard font-bold text-xl text-foreground p-3 rounded-lg max-w-12 text-center'>
@@ -148,7 +148,7 @@ const WhatWeDo = () => {
                                 <div className="bg-[#d220ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
                         </div>
-                        <div className='w-[60%]'>
+                        <div className='w-full lg:w-[60%]'>
                             <Image src={ImageThree} width={500} height={500} alt="image" className='w-full rounded-3xl' />
                         </div>
                     </div>
