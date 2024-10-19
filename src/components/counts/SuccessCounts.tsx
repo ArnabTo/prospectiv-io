@@ -70,7 +70,7 @@ const SuccessCounts = () => {
                             viewport={{ once: true }}
                             >
                                 <p className="text-lg text-textColorTwo">Attributed</p>
-                                <h3 className="text-7xl text-secondary font-bold">
+                                <h3 className="text-7xl text-[#6923ff] font-bold">
                                     <CountUp
                                     start={0}
                                     end={1.3}
@@ -92,7 +92,7 @@ const SuccessCounts = () => {
                             viewport={{ once: true }}
                             className='ml-10'>
                                 <p className="text-lg text-textColorTwo">Successful Projects</p>
-                                <h3 className="text-7xl text-secondary font-bold">1000+</h3>
+                                <h3 className="text-7xl text-[#6923ff] font-bold">1000+</h3>
                             </motion.div>
                         </div>
                     </div>
