@@ -41,20 +41,19 @@ const Intro = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.5 }}
-                        className="bg-black w-full h-screen fixed top-0 left-0 z-40"
+                        className="bg-background w-full h-screen fixed top-0 left-0 z-40"
                     />
                 )}
                 {showBlackScreen && (
-                    <motion.div
+                        <motion.div
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.2 }}
-                        className="blur-[200px] fixed w-full max-w-[44%] min-h-[74%] -top-60 -left-24 lg:-left-52 z-50 animate-spin-slow transition-all"
-                    >
-                        <div className="bg-[#6f86ff] absolute rounded-full opacity-35 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                        <div className="bg-[#fe316f] absolute rounded-full opacity-35 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                        <div className="bg-[#d220ff] absolute rounded-full opacity-35 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                        className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 z-50 animate-spin-slow transition-all">
+                        <div className="bg-[#6f86ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                        <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                        <div className="bg-[#d220ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                     </motion.div>
                 )}
                 {showBlackScreen && (
@@ -63,11 +62,11 @@ const Intro = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.2 }}
-                        className="opacity-[0.5] fixed blur-[200px] w-full max-w-[44%] min-h-[74%] bottom-12 right-10 lg:-bottom-44 lg:right-0 z-50 transition-all"
+                        className="opacity-[0.5] fixed blur-[100px] w-full max-w-[44%] min-h-[74%] bottom-12 right-10 lg:-bottom-44 lg:right-0 z-50 transition-all"
                     >
-                        <div className="bg-[#6923ff] absolute rounded-full opacity-35 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                        <div className="bg-[#1766ff] absolute rounded-full opacity-35 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                        <div className="bg-[#6923ff] absolute rounded-full opacity-35 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                        <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                        <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                        <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                     </motion.div>
                 )}
             </AnimatePresence>
