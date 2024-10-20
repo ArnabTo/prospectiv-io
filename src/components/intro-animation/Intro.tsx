@@ -82,11 +82,11 @@ const Intro = () => {
                         className="fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center"
                     >
                         <div className="flex h-screen w-full items-center justify-center">
-                            <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-white via-white to-white bg-clip-text text-7xl box-content font-extrabold text-transparent text-center select-none">
+                            <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-white via-white to-white bg-clip-text text-5xl lg:text-7xl box-content font-extrabold text-transparent text-center select-none">
                               Prospectiv
                             </span>
                             <h1
-                                className="relative top-0 w-fit h-auto py-4 justify-center flex bg-gradient-to-r items-center from-white via-white to-white bg-clip-text text-7xl font-extrabold text-transparent text-center select-auto">
+                                className="relative top-0 w-fit h-auto py-4 justify-center flex bg-gradient-to-r items-center from-white via-white to-white bg-clip-text text-5xl lg:text-7xl font-extrabold text-transparent text-center select-auto">
                               Prospectiv
                             </h1>
                         </div>

@@ -23,7 +23,7 @@ const SuccessCounts = () => {
                 </motion.div>
 
                 <div className="relative">
-                    <div className="flex flex-col lg:flex-row gap-10">
+                    <div className="flex flex-col md:flex-row gap-10">
                         <div className="space-y-5 p-5 rounded-lg">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -104,17 +104,18 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 className="lg:ml-10"
                             >
-                                <p className="text-lg text-textColorTwo">Successful Projects</p>
+                                <p className="text-lg text-textColorTwo">Satisfied Clients</p>
                                 <h3 className="text-7xl text-[#6923ff] font-bold">
-                                    <CountUp
-                                        start={startCounting ? 0 : undefined}// Start counting when in view
-                                        end={1000}
+                                <CountUp
+                                       start={startCounting ? 0 : undefined}// Start counting when the section is in view
+                                        end={13500}
                                         duration={5}
                                         useEasing={true}
                                         useGrouping={true}
                                         separator=","
                                         prefix=""
                                         suffix="+"
+                                        decimals={0}
                                     />
                                 </h3>
                             </motion.div>
