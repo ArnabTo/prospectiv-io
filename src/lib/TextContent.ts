@@ -47,7 +47,7 @@ const WhatWeDoTextContent = {
 const HowItWorkTextContent = {
     'heading': {
         heading: 'Cold Email Lead Generation',
-        paragraph: 'We have developed a market-leading six-step process allowing a hyper-targeted lead generation campaign to be launched for your business in as little as two weeks.',
+        paragraph: 'Launch hyper-targeted lead generation campaigns in just two weeks with our proven six-step process.',
     },
     'cardTextContent1': {
         heading: 'Identify Your ICP',
