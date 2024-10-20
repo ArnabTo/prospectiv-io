@@ -44,7 +44,7 @@ const HowItWork = () => {
                     className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                     {/* First block with Lottie animation */}
                     <div
-                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
+                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefOne)}
                         onMouseLeave={() => handleMouseLeave(lottieRefOne)}
                     >
@@ -62,7 +62,7 @@ const HowItWork = () => {
 
                     {/* Second block with Lottie animation */}
                     <div
-                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
+                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
                         onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
                     >
@@ -80,7 +80,7 @@ const HowItWork = () => {
 
                     {/* Third block with Lottie animation */}
                     <div
-                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
+                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer  '
                         onMouseEnter={() => handleMouseEnter(lottieRefThree)}
                         onMouseLeave={() => handleMouseLeave(lottieRefThree)}
                     >
@@ -106,7 +106,7 @@ const HowItWork = () => {
                     className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                     {/* First block with Lottie animation */}
                     <div
-                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
+                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                     >
@@ -124,7 +124,7 @@ const HowItWork = () => {
 
                     {/* Second block with Lottie animation */}
                     <div
-                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
+                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFive)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFive)}
                     >
@@ -142,7 +142,7 @@ const HowItWork = () => {
 
                     {/* Third block with Lottie animation */}
                     <div
-                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group'
+                        className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefSix)}
                         onMouseLeave={() => handleMouseLeave(lottieRefSix)}
                     >
