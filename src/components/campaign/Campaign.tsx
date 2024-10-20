@@ -3,9 +3,9 @@ import { Button } from "../ui/button";
 
 const Campaign = () => {
     return (
-<div className="relative max-w-7xl px-5 mx-auto">
+<div className="relative max-w-7xl px-5 mx-auto py-24">
     {/* Glowing background wrapper */}
-    <div className="absolute max-w-[70%] mx-auto inset-0 bg-gradient-to-r from-[#6f86ff] via-[#fe316f] to-[#d220ff] opacity-30 blur-3xl z-[-1] rounded-3xl"></div>
+    <div className="absolute max-w-[80%] mx-auto inset-0 bg-gradient-to-r from-[#6f86ff] via-[#fe316f] to-[#d220ff] opacity-30 blur-3xl z-[-1] rounded-3xl"></div>
     
     <div className="lg:max-w-[80%] mx-auto bg-card flex flex-col lg:flex-row items-center gap-5 p-5 lg:p-10 rounded-3xl relative z-10 border border-borderColor">
         <div className="p-3 lg:max-w-[50%]">
