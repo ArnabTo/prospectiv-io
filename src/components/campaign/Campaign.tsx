@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const Campaign = () => {
     return (
-<div className="relative max-w-7xl mx-auto">
+<div className="relative max-w-7xl mx-auto py-24">
     {/* Glowing background wrapper */}
     <div className="absolute max-w-[70%] mx-auto inset-0 bg-gradient-to-r from-[#6f86ff] via-[#fe316f] to-[#d220ff] opacity-50 blur-3xl z-[-1] rounded-3xl"></div>
     
@@ -18,7 +18,7 @@ const Campaign = () => {
                 </Link>
             </div>
             <div className="w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                <Link href="" className="flex-1 font-semibold text-lg bg-foreground text-textColorOne text-center px-10 py-5 rounded-full hover:bg-buttonHoverColor transition-all duration-300">
+                <Link href="" className="flex-1 font-semibold text-lg bg-buttonColor text-textColorOne text-center px-10 py-5 rounded-full hover:bg-buttonHoverColor transition-all duration-300">
                     See Our Pricing
                 </Link>
             </div>

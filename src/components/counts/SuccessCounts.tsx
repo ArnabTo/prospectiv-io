@@ -9,7 +9,7 @@ const SuccessCounts = () => {
     return (
         <div className="max-w-7xl mx-auto px-2 overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center gap-2 bg-card border border-borderColor p-5 lg:p-10 rounded-3xl">
-                
+
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -35,7 +35,7 @@ const SuccessCounts = () => {
                                 <p className="text-lg text-textColorTwo">Successful Projects</p>
                                 <h3 className="text-7xl text-secondary font-bold">
                                     <CountUp
-                                       start={startCounting ? 0 : undefined}// Start counting when the section is in view
+                                        start={startCounting ? 0 : undefined}// Start counting when the section is in view
                                         end={1000}
                                         duration={5}
                                         useEasing={true}
@@ -105,7 +105,18 @@ const SuccessCounts = () => {
                                 className="lg:ml-10"
                             >
                                 <p className="text-lg text-textColorTwo">Successful Projects</p>
-                                <h3 className="text-7xl text-[#6923ff] font-bold">1000+</h3>
+                                <h3 className="text-7xl text-[#6923ff] font-bold">
+                                    <CountUp
+                                        start={startCounting ? 0 : undefined}// Start counting when in view
+                                        end={1000}
+                                        duration={5}
+                                        useEasing={true}
+                                        useGrouping={true}
+                                        separator=","
+                                        prefix=""
+                                        suffix="+"
+                                    />
+                                </h3>
                             </motion.div>
                         </div>
                     </div>
