@@ -37,7 +37,7 @@ const SuccessCounts = () => {
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when the section is in view
                                         end={1000}
-                                        duration={5}
+                                        duration={0.5}
                                         useEasing={true}
                                         useGrouping={true}
                                         separator=","

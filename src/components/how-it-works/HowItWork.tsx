@@ -30,7 +30,7 @@ const HowItWork = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="w-full lg:max-w-[50%] mx-auto text-center space-y-5">
+                className="w-full lg:max-w-[70%] mx-auto text-center space-y-5">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{HowItWorkTextContent?.heading?.heading}</h1>
                 <p className="text-textColorTwo text-lg">{HowItWorkTextContent?.heading?.paragraph}</p>
             </motion.div>
