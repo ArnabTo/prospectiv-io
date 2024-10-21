@@ -37,9 +37,9 @@ const WhyProsPective = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
+                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-start lg:items-center gap-10 p-5 lg:p-10'>
                             <div>
-                              <Image src={ImageOne} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
+                              <Image src={ImageOne} width={200} height={200} alt="image" className='max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
                             <div className='space-y-4 w-full'>
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent1?.heading}</h1>
@@ -52,7 +52,7 @@ const WhyProsPective = () => {
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: 0.6 }}
                           viewport={{ once: true }}
-                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
+                              className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-start lg:items-center gap-10 p-5 lg:p-10'>
                             <div>
                               <Image src={ImageTwo} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
@@ -67,7 +67,7 @@ const WhyProsPective = () => {
                           whileInView={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.5, delay: 0.8 }}
                           viewport={{ once: true }}
-                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
+                              className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-start lg:items-center gap-10 p-5 lg:p-10'>
                             <div>
                               <Image src={ImageThree} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>

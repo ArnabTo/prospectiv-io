@@ -99,7 +99,7 @@ const Footer = () => {
                 <div className='h-0.5 w-full bg-borderColor my-5'></div>
             </div>
 
-            <div className='mb-5 flex flex-col md:flex-row justify-between items-center'>
+            <div className='mb-5 flex flex-col md:flex-row justify-between items-center space-y-4'>
                 <div>
                     <h1 className='text-3xl font-bold'>Prospectiv</h1>
                 </div>

@@ -41,8 +41,8 @@ const HowItWork = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
                     viewport={{ once: true }}
-                    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                    {/* First block with Lottie animation */}
+                    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                   
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefOne)}
@@ -60,7 +60,6 @@ const HowItWork = () => {
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.paragraph}</p>
                     </div>
 
-                    {/* Second block with Lottie animation */}
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
@@ -78,7 +77,6 @@ const HowItWork = () => {
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.paragraph}</p>
                     </div>
 
-                    {/* Third block with Lottie animation */}
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer  '
                         onMouseEnter={() => handleMouseEnter(lottieRefThree)}
@@ -95,16 +93,7 @@ const HowItWork = () => {
                         <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.heading}</h3>
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.paragraph}</p>
                     </div>
-                </motion.div>
 
-                {/* Second section with Lottie animation */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 1 }}
-                    viewport={{ once: true }}
-                    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                    {/* First block with Lottie animation */}
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFour)}
@@ -122,7 +111,6 @@ const HowItWork = () => {
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.paragraph}</p>
                     </div>
 
-                    {/* Second block with Lottie animation */}
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFive)}
@@ -139,8 +127,7 @@ const HowItWork = () => {
                         <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.heading}</h3>
                         <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.paragraph}</p>
                     </div>
-
-                    {/* Third block with Lottie animation */}
+       
                     <div
                         className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefSix)}
@@ -159,8 +146,6 @@ const HowItWork = () => {
                     </div>
                 </motion.div>
 
-
-                {/* Background animation using framer-motion */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}

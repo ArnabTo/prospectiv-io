@@ -20,17 +20,17 @@ const SuccessCounts = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className='p-5'
+                    className='p-2'
                 >
                     <p className="text-lg text-textColorTwo">Our Numbers</p>
-                    <h3 className="text-6xl font-extrabold">
+                    <h3 className="text-5xl font-extrabold">
                         Our results <span className="text-secondary">in numbers</span>
                     </h3>
                 </motion.div>
 
                 <div className="relative w-full">
-                    <div className="flex flex-col md:flex-row justify-start xl:justify-center">
-                        <div className="space-y-5 p-5 rounded-lg">
+                    <div className="flex flex-col md:flex-row justify-start items-start xl:justify-center">
+                        <div className="space-y-5 p-2 rounded-lg">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -39,7 +39,7 @@ const SuccessCounts = () => {
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
                                 <p className="text-lg text-textColorTwo">Successful Projects</p>
-                                <h3 className="text-6xl text-secondary font-bold">
+                                <h3 className="text-4xl lg:text-6xl text-secondary font-bold">
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when the section is in view
                                         end={1000}
@@ -63,7 +63,7 @@ const SuccessCounts = () => {
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
                                 <p className="text-lg text-textColorTwo">Happy Clients</p>
-                                <h3 className="text-6xl text-secondary font-bold flex gap-3">
+                                <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
                                     <CountUp
                                         start={startCounting ? 0 : undefined} // Start counting when in view
                                         end={15}
@@ -78,7 +78,7 @@ const SuccessCounts = () => {
                             </motion.div>
                         </div>
 
-                        <div className="space-y-5 p-5 rounded-lg">
+                        <div className="space-y-5 p-2 rounded-lg">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -87,7 +87,7 @@ const SuccessCounts = () => {
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
                                 <p className="text-lg text-textColorTwo">Attributed</p>
-                                <h3 className="text-6xl text-[#6923ff] font-bold">
+                                <h3 className="text-4xl lg:text-6xl text-[#6923ff] font-bold">
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when in view
                                         end={1.3}
@@ -111,7 +111,7 @@ const SuccessCounts = () => {
                                 className="lg:ml-10"
                             >
                                 <p className="text-lg text-textColorTwo">Satisfied Clients</p>
-                                <h3 className="text-6xl text-[#6923ff] font-bold">
+                                <h3 className="text-4xl lg:text-6xl text-[#6923ff] font-bold">
                                 <CountUp
                                        start={startCounting ? 0 : undefined}// Start counting when the section is in view
                                         end={13500}
