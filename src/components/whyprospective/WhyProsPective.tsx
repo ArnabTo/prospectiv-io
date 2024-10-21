@@ -11,7 +11,7 @@ import { whyProspectiveTextContent } from '@/lib/TextContent';
 const WhyProsPective = () => {
     return (
         <div className='max-w-7xl mx-auto px-5 lg:py-24 overflow-hidden'>
-            <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10'>
+            <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10 space-y-5'>
                 <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
