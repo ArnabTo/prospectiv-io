@@ -40,7 +40,7 @@ const WhatWeDo = () => {
                         transition={{ duration: 0.5, delay: 0.5}}
                         viewport={{ once: true }}
                         className='flex flex-col gap-5 w-full lg:w-[40%] relative'>
-                            <div className='bg-card rounded-3xl border-borderColor flex flex-col-reverse md:flex-row justify-between '>
+                            <div className='bg-card rounded-3xl border border-borderColor flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                     <div className='bg-foreground font-bold text-xl text-textColorOne p-3 rounded-lg max-w-12 text-center'>
                                         1
@@ -49,7 +49,7 @@ const WhatWeDo = () => {
                                     <p className='text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent1?.paragraph}</p>
                                 </div>
                             </div>
-                            <div className='bg-card rounded-3xl border-borderColor flex flex-col-reverse md:flex-row justify-between '>
+                            <div className='bg-card rounded-3xl border border-borderColor flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-4 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                 <div className='bg-foreground font-bold text-xl text-textColorOne p-3 rounded-lg max-w-12 text-center'>
                                    2
@@ -86,7 +86,7 @@ const WhatWeDo = () => {
                             whileInView={{ opacity: 1, x: 0}}
                             transition={{ duration: 0.5, delay: 0.5}}
                             viewport={{ once: true }}
-                            className='bg-card  h-full rounded-3xl border-borderColor flex flex-col-reverse md:flex-row justify-between '>
+                            className='bg-card  h-full rounded-3xl border border-borderColor flex flex-col-reverse md:flex-row justify-between '>
                                 <div className='space-y-3 px-5 lg:px-10 py-5 w-full min-w-[60%] md:max-w-[80%]'>
                                     <div className='bg-foreground font-bold text-xl text-textColorOne p-3 rounded-lg max-w-12 text-center'>
                                         3

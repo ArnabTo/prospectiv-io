@@ -22,20 +22,22 @@ const WhyProsPective = () => {
                     <p className='text-lg text-textColorTwo text-center lg:text-start'>
                        {whyProspectiveTextContent?.heading?.paragraph}
                     </p>
-                    <div className="w-full md:max-w-60 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                    <div className="w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                         <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
                            How does it work ?
                         </Link>
                     </div>
                 </motion.div>
                 <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+                
                 className='relative'>
                     <div className='flex flex-col gap-10'>
-                        <div className='bg-card rounded-2xl flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
+                        <motion.div
+                        initial={{ opacity: 0, x: 20}}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
                             <div>
                               <Image src={ImageOne} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
@@ -43,9 +45,14 @@ const WhyProsPective = () => {
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent1?.heading}</h1>
                                 <p className='text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent1?.paragraph}</p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className='bg-card rounded-2xl flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
+                        <motion.div
+                          initial={{ opacity: 0, x: 20}}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.6 }}
+                          viewport={{ once: true }}
+                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
                             <div>
                               <Image src={ImageTwo} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
@@ -53,9 +60,14 @@ const WhyProsPective = () => {
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent2?.heading}</h1>
                                 <p className='text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent2?.heading}</p>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className='bg-card rounded-2xl flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
+                        <motion.div
+                          initial={{ opacity: 0, x: 20}}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.8 }}
+                          viewport={{ once: true }}
+                        className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-center gap-10 p-10'>
                             <div>
                               <Image src={ImageThree} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                             </div>
@@ -63,7 +75,7 @@ const WhyProsPective = () => {
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent3?.heading}</h1>
                                 <p className='text-lg text-textColorTwo'> {whyProspectiveTextContent?.cardTextContent3?.heading}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}

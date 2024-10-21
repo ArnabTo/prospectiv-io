@@ -35,7 +35,7 @@ const Hero = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 3.5 }}
+                        transition={{ duration: 0.7, delay: 3.5 }}
                         viewport={{ once: true }}
                         className="text-5xl md:text-6xl lg:text-7xl font-extrabold">Drive More Sales
                         <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> Meetings with Your Ideal Customers.
@@ -46,7 +46,7 @@ const Hero = () => {
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 4 }}
+                        transition={{ duration: 0.7, delay: 4 }}
                         viewport={{ once: true }}
                         className="text-2xl font-medium text-textColorTwo">Helping small-to-medium-sized service-based businesses book more sales meetings effortlessly, so you can focus on growing your business.</motion.p>
                     <motion.div
@@ -70,11 +70,11 @@ const Hero = () => {
                 </div>
 
 
-                <div className="relative mt-24 max-w-7xl mx-auto px-6">
+                <div className="relative mt-24 max-w-7xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 5 }}
+                        transition={{ duration: 0.5, delay: 3.7}}
                         viewport={{ once: true }}
                         className="w-full flex justify-center items-center relative px-5">
 
