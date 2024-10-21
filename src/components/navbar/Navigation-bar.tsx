@@ -53,15 +53,15 @@ const NavigationBar = () => {
                     <Sheet>
                         <SheetTrigger><div className="bg-[#1D1A27] p-4 rounded-full"><AlignJustify size={25} /></div></SheetTrigger>
                         <SheetContent side='bottom' className="flex">
-                            <SheetClose/>
-                        <div>
-                        <ul className="flex flex-col justify-start items-start gap-5">
-                                <li>
-                                    <Link href="#" className="text-lg font-bold text-secondary transition-all duration-500">
-                                        Home
-                                    </Link>
-                                </li>
-                                {/* <li className="relative" ref={dropdownRef}>
+                            <SheetClose />
+                            <div className="space-y-10">
+                                <ul className="flex flex-col justify-center items-center gap-5">
+                                    <li>
+                                        <Link href="#" className="text-lg font-bold text-secondary transition-all duration-500">
+                                            Home
+                                        </Link>
+                                    </li>
+                                    {/* <li className="relative" ref={dropdownRef}>
                                     <div
                                         className="text-lg font-bold hover:text-secondary transition-all duration-500"
                                         onClick={() => toggleDropdown(0)}
@@ -91,71 +91,71 @@ const NavigationBar = () => {
                                         ))}
                                     </motion.ul>
                                 </li> */}
-                                <li>
-                                    <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                        About Us
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                        Services
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                        Pricing
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                        Result
-                                    </Link>
-                                </li>
+                                    <li>
+                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                            About Us
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                            Services
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                            Pricing
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                            Result
+                                        </Link>
+                                    </li>
 
-                                <li className="relative" ref={dropdownRef}>
-                                    <div
-                                        className="text-lg font-bold hover:text-secondary transition-all duration-500"
-                                        onClick={() => toggleDropdown(1)}
-                                    >
-                                        Resources
+                                    <li className="relative" ref={dropdownRef}>
+                                        <div
+                                            className="text-lg font-bold hover:text-secondary transition-all duration-500"
+                                            onClick={() => toggleDropdown(1)}
+                                        >
+                                            Resources
+                                        </div>
+                                        <motion.ul
+                                            className="overflow-hidden"
+                                            initial="hidden"
+                                            animate={openDropdownIndex === 1 ? "visible" : "hidden"}
+                                            exit="exit"
+                                            variants={dropdownVariants}
+                                            style={{
+                                                visibility: openDropdownIndex === 1 ? 'visible' : 'hidden',
+                                                display: openDropdownIndex === 1 ? 'block' : 'none'
+                                            }}
+                                        >
+                                            {Array(3).fill(null).map((_, index) => (
+                                                <li key={index}>
+                                                    <Link href="#" className="block py-2">
+                                                        <div className="flex justify-start items-start gap-2 pl-5">
+                                                            <h1 className="text-md font-bold text-white">Logo</h1>
+                                                            <p className="font-semibold text-foreground text-sm">Resource Hub</p>
+                                                        </div>
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </motion.ul>
+                                    </li>
+                                </ul>
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.5}}
+                                >
+                                    <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                                        <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-3 rounded-full group-hover:scale-95 transition-all duration-300">
+                                            Book a Demo
+                                        </Link>
                                     </div>
-                                    <motion.ul
-                                        className="overflow-hidden"
-                                        initial="hidden"
-                                        animate={openDropdownIndex === 1 ? "visible" : "hidden"}
-                                        exit="exit"
-                                        variants={dropdownVariants}
-                                        style={{
-                                            visibility: openDropdownIndex === 1 ? 'visible' : 'hidden',
-                                            display: openDropdownIndex === 1 ? 'block' : 'none'
-                                        }}
-                                    >
-                                        {Array(3).fill(null).map((_, index) => (
-                                            <li key={index}>
-                                                <Link href="#" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Logo</h1>
-                                                        <p className="font-semibold text-foreground text-sm">Resource Hub</p>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </motion.ul>
-                                </li>
-                            </ul>
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.5, delay: 3.5 }}
-                            >
-                                <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
-                                    <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-3 rounded-full group-hover:scale-95 transition-all duration-300">
-                                        Book a Demo
-                                    </Link>
-                                </div>
-                            </motion.div>
-                        </div>
+                                </motion.div>
+                            </div>
                         </SheetContent>
                     </Sheet>
                 </div>
