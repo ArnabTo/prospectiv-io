@@ -98,17 +98,17 @@ const NavigationBar = () => {
                                     </li>
                                     <li>
                                         <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                            Services
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                             Pricing
                                         </Link>
                                     </li>
                                     <li>
                                         <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                             Result
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/life-at-prospectiv" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                            Life at Prospectiv
                                         </Link>
                                     </li>
 
@@ -147,7 +147,7 @@ const NavigationBar = () => {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.5}}
+                                    transition={{ duration: 0.5 }}
                                 >
                                     <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                                         <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-3 rounded-full group-hover:scale-95 transition-all duration-300">
@@ -216,17 +216,17 @@ const NavigationBar = () => {
                         </li>
                         <li>
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                Services
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                 Pricing
                             </Link>
                         </li>
                         <li>
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                 Result
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/life-at-prospectiv" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                Life at Prospectiv
                             </Link>
                         </li>
                         <li className="relative group">
