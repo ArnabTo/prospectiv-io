@@ -10,10 +10,7 @@ import Partners from "@/components/partners/Partners";
 export default function Home() {
   return (
     <div className="space-y-24">
-      <div className='space-y-12'>
       <Hero />
-       <Partners/>
-      </div>
        <WhyProsPective/>
        <SuccessCounts/>
        <WhatWeDo/>
