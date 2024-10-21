@@ -22,7 +22,6 @@ const SuccessCounts = () => {
                     viewport={{ once: true }}
                     className='p-2'
                 >
-                    <p className="text-lg text-textColorTwo md:text-center lg:text-start">Our Numbers</p>
                     <h3 className="text-5xl font-extrabold">
                         Our results <span className="text-secondary">in numbers</span>
                     </h3>
