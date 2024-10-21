@@ -32,7 +32,7 @@ const HowItWork = () => {
                 viewport={{ once: true }}
                 className="w-full lg:max-w-[70%] mx-auto text-center space-y-5">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{HowItWorkTextContent?.heading?.heading}</h1>
-                <p className="text-textColorTwo text-lg lg:max-w-[50%]">{HowItWorkTextContent?.heading?.paragraph}</p>
+                <p className="text-textColorTwo text-lg lg:max-w-[70%]">{HowItWorkTextContent?.heading?.paragraph}</p>
             </motion.div>
 
             <div className='relative space-y-5'>
