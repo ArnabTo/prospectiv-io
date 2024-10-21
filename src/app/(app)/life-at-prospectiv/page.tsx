@@ -1,3 +1,4 @@
+import {MemberCardMarquee } from '@/components/member-card/MemberCard';
 import Marquee from '@/components/ui/marquee';
 import HeaderImage from '@/public/assets/campany-culture.jpg'
 import Image from 'next/image';
@@ -48,20 +49,8 @@ const LifeAtProspectiv = () => {
 
             </div>
 
-            <div className="max-w-7xl mx-auto">
-                <div className="relative flex w-full flex-col items-center justify-center gap-5 rounded-full">
-                    <Marquee pauseOnHover className="[--duration:20s]">
-                        {
-                            membersDetails.map((member, index) => (
-                                <div key={index}>
-                                    <Image src={member.avatar} width={200} height={200} alt={member.name} />
-                                </div>
-                            ))
-                        }
-                    </Marquee>
-                    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#13111A]"></div>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#13111A]"></div>
-                </div>
+            <div className="max-w-7xl mx-auto py-24">
+                <MemberCardMarquee/>
             </div>
 
         </div>
