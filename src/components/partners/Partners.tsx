@@ -26,7 +26,7 @@ const Partners = () => {
     ]
 
     return (
-        <div className="max-w-7xl mx-auto py-24">
+        <div className="max-w-7xl mx-auto">
             <div className="relative flex w-full flex-col items-center justify-center gap-5 rounded-full">
                 <Marquee pauseOnHover className="[--duration:20s]">
                     {

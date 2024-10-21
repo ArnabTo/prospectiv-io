@@ -42,7 +42,7 @@ const NavigationBar = () => {
                 initial={{ opacity: 0, height: 0, paddingTop: 0, paddingBottom: 0 }}
                 animate={{ opacity: 1, height: 'auto', paddingTop: 30, paddingBottom: 30 }}
                 exit={{ opacity: 0, height: 0, paddingTop: 0, paddingBottom: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1, delay: 3.5 }}
                 className="flex justify-between items-center px-5 xl:hidden">
                 <div>
                     <Link href="#" className="text-xl font-extrabold">
@@ -147,7 +147,7 @@ const NavigationBar = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                transition={{ duration: 0.5 }}
+                                transition={{ duration: 0.5, delay: 3.5 }}
                             >
                                 <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                                     <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-3 rounded-full group-hover:scale-95 transition-all duration-300">

@@ -100,7 +100,7 @@ const WhatWeDo = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5 }}
                                 viewport={{ once: true }}
-                                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[40%] absolute bottom-1/2 right-10 md:right-44 lg:bottom-56 lg:right-24 -z-10 animate-spin-slow transition-all">
+                                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[40%] absolute bottom-1/2 right-10 md:right-44 lg:bottom-44 lg:right-52 -z-10 animate-spin-slow transition-all">
                                 <div className="bg-[#6f86ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                                 <div className="bg-[#fe316f] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                                 <div className="bg-[#d220ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
