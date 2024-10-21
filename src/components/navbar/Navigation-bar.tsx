@@ -1,9 +1,10 @@
 'use client';
 import Link from "next/link";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { AlignJustify } from 'lucide-react';
 import { useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const NavigationBar = () => {
 
@@ -52,7 +53,12 @@ const NavigationBar = () => {
                 <div>
                     <Sheet>
                         <SheetTrigger><div className="bg-[#1D1A27] p-4 rounded-full"><AlignJustify size={25} /></div></SheetTrigger>
-                        <SheetContent side='bottom' className="flex">
+                        <SheetContent side='bottom' className="flex rounded-t-2xl border border-borderColor">
+                            <SheetTitle>
+                                <VisuallyHidden>
+                                    Menu
+                                </VisuallyHidden>
+                            </SheetTitle>
                             <SheetClose />
                             <div className="space-y-10">
                                 <ul className="flex flex-col justify-center items-center gap-5">
