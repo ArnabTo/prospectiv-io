@@ -25,7 +25,7 @@ const WhatWeDo = () => {
                         <p className='text-lg text-textColorTwo text-center lg:text-start'>
                            {WhatWeDoTextContent?.heading?.paragraph}
                         </p>
-                        <div className="w-full md:max-w-60 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                        <div className="w-60 lg:w-full md:max-w-60 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                             <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
                                 Book a Demo
                             </Link>
