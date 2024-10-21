@@ -36,7 +36,7 @@ const NavigationBar = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto lg:px-10">
             {/* small device Navigation bar */}
             <motion.nav
                 initial={{ opacity: 0, height: 0, paddingTop: 0, paddingBottom: 0 }}
