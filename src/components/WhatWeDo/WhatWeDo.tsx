@@ -12,7 +12,7 @@ import { WhatWeDoTextContent } from '@/lib/TextContent';
 const WhatWeDo = () => {
     return (
         
-        <section className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
+        <section className='max-w-7xl mx-auto px-5 lg:py-24 overflow-hidden'>
             <div className='space-y-16'>
                 <motion.div 
                 initial={{ opacity: 0, y: 10, scale: 0.9 }}

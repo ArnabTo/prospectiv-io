@@ -2,7 +2,7 @@ import Link from "next/link";
 import { motion } from 'framer-motion';
 const Campaign = () => {
     return (
-        <div className="relative max-w-7xl px-5 mx-auto py-24">
+        <div className="relative max-w-7xl px-5 mx-auto lg:py-24">
             {/* Glowing background wrapper */}
             <div className="absolute max-w-[80%] mx-auto inset-0 bg-gradient-to-r from-[#6f86ff] via-[#fe316f] to-[#d220ff] opacity-30 blur-3xl z-[-1] rounded-3xl"></div>
 

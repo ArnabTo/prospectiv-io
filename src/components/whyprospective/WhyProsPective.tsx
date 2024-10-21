@@ -10,8 +10,8 @@ import { whyProspectiveTextContent } from '@/lib/TextContent';
 
 const WhyProsPective = () => {
     return (
-        <div className='max-w-7xl mx-auto px-5 py-24 overflow-hidden'>
-            <div className='flex flex-col lg:flex-row flex-start justify-between gap-10'>
+        <div className='max-w-7xl mx-auto px-5 lg:py-24 overflow-hidden'>
+            <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10'>
                 <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -22,7 +22,7 @@ const WhyProsPective = () => {
                     <p className='text-lg text-textColorTwo text-center lg:text-start'>
                        {whyProspectiveTextContent?.heading?.paragraph}
                     </p>
-                    <div className="w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                    <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                         <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
                            How does it work ?
                         </Link>

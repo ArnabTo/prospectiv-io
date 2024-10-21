@@ -24,7 +24,7 @@ const HowItWork = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-5 pb-24 space-y-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 lg:pb-24 space-y-10 overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
