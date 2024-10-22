@@ -66,7 +66,7 @@ const SuccessCounts = () => {
                                     <CountUp
                                         start={startCounting ? 0 : undefined} // Start counting when in view
                                         end={45}
-                                        duration={4}
+                                        duration={3}
                                         useEasing={true}
                                         useGrouping={true}
                                         separator=","

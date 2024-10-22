@@ -82,7 +82,7 @@ const LifeAtProspectiv = () => {
 
             </div>
 
-            <div className="max-w-7xl mx-auto py-24 space-y-24 ">
+            <div className="max-w-7xl mx-auto py-24 space-y-24 overflow-hidde">
                 <div className='px-5'>
                     <div className='lg:w-1/2 mx-auto text-center'>
                         <h3 className='text-4xl font-bold'>Meet Our People</h3>
@@ -186,7 +186,7 @@ const LifeAtProspectiv = () => {
                     </div>
                 </div> */}
 
-                <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10 space-y-5'>
+                <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10 p-5 space-y-5'>
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -296,7 +296,7 @@ const LifeAtProspectiv = () => {
                 </div>
 
 
-                <div className='space-y-10'>
+                <div className='space-y-10 px-5'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Culture and perks</h1>
 
                     <div className='space-y-10'>
@@ -385,46 +385,52 @@ const LifeAtProspectiv = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, delay: 1 }}
                                 viewport={{ once: true }}
-                                className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
+                                className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 transition-all">
                                 <div className="bg-[#6f86ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                                 <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                                 <div className="bg-[#d220ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
-                            <motion.div
+                            {/* <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.3, delay: 3.5 }}
+                                transition={{ duration: 0.3, delay: 1 }}
                                 viewport={{ once: true }}
                                 className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
                                 <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                                 <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                                 <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                            </motion.div>
+                            </motion.div> */}
                         </div>
 
 
                         <div className="w-60 lg:w-full max-w-72 flex mx-auto rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                            <Link href="" className="flex-1 font-bold text-lg bg-black px-10 py-5 rounded-full hover:scale-95 transition-all duration-300">
+                            <Link href="" className="flex-1 font-bold text-lg text-center bg-black py-5 rounded-full hover:scale-95 transition-all duration-300">
                                 See open opportunities
                             </Link>
                         </div>
                     </div>
-                    {/* 
-                    <div>
-                        <div>
-                            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Sopro values</h1>
+                </div>
+
+                <div className='space-y-24 p-5'>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className='lg:w-5/6 mx-auto text-center space-y-5'>
+                            <h3 className='text-4xl font-bold'>Perspectiv values</h3>
                             <p className='text-textColorTwo text-lg'>
                                 Our values permeate Sopro through our behaviours, both as people and across our business. They influence the way we hire new people, develop employees, review performance, evaluate reward and achieve promotion.
                             </p>
-                        </div>
+                        </motion.div>
 
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-                            <div>
-                                <div
+
+                               <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
                                     onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                                     onMouseLeave={() => handleMouseLeave(lottieRefFour)}
-                                >
-                                    <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                    >
+                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                         <Lottie
                                             lottieRef={lottieRefFour}
                                             animationData={require('@/public/assets/calendar V3.json')}
@@ -432,13 +438,79 @@ const LifeAtProspectiv = () => {
                                             autoplay={false} // Disable autoplay
                                         />
                                     </div>
-                                    <h3>We invest</h3>
-                                    <p>We invest in the long-term success of our business, our products and services. We invest in our exceptional people, in personal development, training and career progression. We invest in high performing facilities and work environments for our teams to thrive in.</p>
+                                    <div className='space-y-3 text-center lg:text-start'>
+                                        <h3 className='text-2xl font-bold text-secondary'>We invest</h3>
+                                        <p className='text-textColorTwo text-lg'>We invest in the long-term success of our business, our products and services. We invest in our exceptional people, in personal development, training and career progression. We invest in high performing facilities and work environments for our teams to thrive in.</p>
+                                    </div>
                                 </div>
-                            </div>
+
+                                   <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                                    >
+                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                        <Lottie
+                                            lottieRef={lottieRefFour}
+                                            animationData={require('@/public/assets/calendar V3.json')}
+                                            loop={false} // Play only once
+                                            autoplay={false} // Disable autoplay
+                                        />
+                                    </div>
+                                    <div className='space-y-3 text-center lg:text-start'>
+                                        <h3 className='text-2xl font-bold text-secondary'>We are ambitious</h3>
+                                        <p className='text-textColorTwo text-lg'>
+                                        We are ambitious and have an entrepreneurial spirit that is focused, energising and relentless. We set ambitious goals and clear paths to success. We value career progression and encourage passionate and imaginative collaboration between like-minded and driven professionals.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                                    >
+                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                        <Lottie
+                                            lottieRef={lottieRefFour}
+                                            animationData={require('@/public/assets/calendar V3.json')}
+                                            loop={false} // Play only once
+                                            autoplay={false} // Disable autoplay
+                                        />
+                                    </div>
+                                        <div className='space-y-3 text-center lg:text-start'>
+                                        <h3 className='text-2xl font-bold text-secondary'>We are people</h3>
+                                        <p className='text-textColorTwo text-lg'>
+                                        We are people and we are proud of our exceptional teams and their identities. We are supportive and promote each other’s success and we give back to our communities through impactful initiatives. We encourage teamwork, inclusivity and respect. Our people are empowered.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                 <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                                    >
+                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                        <Lottie
+                                            lottieRef={lottieRefFour}
+                                            animationData={require('@/public/assets/calendar V3.json')}
+                                            loop={false} // Play only once
+                                            autoplay={false} // Disable autoplay
+                                        />
+                                    </div>
+                                    <div className='space-y-3 text-center lg:text-start'>
+                                        <h3 className='text-2xl font-bold text-secondary'>We are open</h3>
+                                        <p className='text-textColorTwo text-lg'>
+                                        We are open and transparent in everything we do. We are clear about who we are, what we do and how we do it. We encourage an open-door approach to ensure every team member is valued, heard and supported.
+                                        </p>
+                                    </div>
+                                </div>
+                           
                         </div>
-                    </div> */}
-                </div>
+                    </div>
+
+
+                    <div>
+                        
+                    </div>
             </div>
 
         </div>
