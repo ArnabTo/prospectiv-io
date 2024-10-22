@@ -1,11 +1,11 @@
 'use client';
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { AlignJustify } from 'lucide-react';
+import { AlignJustify, LifeBuoy } from 'lucide-react';
 import { useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-
+import './Navigation-bar'
 const NavigationBar = () => {
 
     const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
@@ -37,7 +37,7 @@ const NavigationBar = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto lg:px-10">
+        <div className="max-w-7xl mx-auto lg:px-10 relative z-20">
             {/* small device Navigation bar */}
             <motion.nav
                 initial={{ opacity: 0, height: 0, paddingTop: 0, paddingBottom: 0 }}
@@ -67,6 +67,7 @@ const NavigationBar = () => {
                                             Home
                                         </Link>
                                     </li>
+
                                     {/* <li className="relative" ref={dropdownRef}>
                                     <div
                                         className="text-lg font-bold hover:text-secondary transition-all duration-500"
@@ -215,6 +216,7 @@ const NavigationBar = () => {
 
                             </ul>
                         </li> */}
+
                         <li>
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                 About Us
@@ -225,19 +227,60 @@ const NavigationBar = () => {
                                 Pricing
                             </Link>
                         </li>
+               
+                        <li className="relative group">
+                            <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-300">
+                                Company
+                            </Link>
+                            <div
+                                style={{
+                                    background: "rgba(255, 255, 255, 0.25)", // Proper background color for blur effect
+                                    backdropFilter: "blur(43px)", // Apply blur effect
+                                    WebkitBackdropFilter: "blur(43px)", // For Safari support
+                                    borderRadius: "10px", // Rounded corners
+                                    border: "1px solid rgba(255, 255, 255, 0.18)", // Border style
+                                }}
+                                className="absolute -left-8 w-80 border z-50 opacity-0 transform translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                            >
+                                <ul className="p-5">
+                                    <li>
+                                        <Link href="/life-at-prospectiv" className="transition-all duration-500">
+                                            <div className="flex items-start gap-4">
+                                                <LifeBuoy size={60} />
+                                                <span>
+                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
+                                                    <p className="text-sm text-textColorTwo">
+                                                        A page about our culture, people, values and what it's like to work here
+                                                    </p>
+                                                </span>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/life-at-prospectiv" className="transition-all duration-500">
+                                            <div className="flex items-start gap-4">
+                                                <LifeBuoy size={60} />
+                                                <span>
+                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
+                                                    <p className="text-sm text-textColorTwo">
+                                                        A page about our culture, people, values and what it's like to work here
+                                                    </p>
+                                                </span>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
                         <li>
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                 Result
                             </Link>
                         </li>
-                        <li>
-                            <Link href="/life-at-prospectiv" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                Life at Prospectiv
-                            </Link>
-                        </li>
-                        <li className="relative group">
+                        {/* <li className="relative group">
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                Resources
+                                Company
                             </Link>
                             <ul className="absolute top-10 left-0 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-95 group-hover:scale-100">
                                 <li>
@@ -256,7 +299,7 @@ const NavigationBar = () => {
                                     </Link>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
                     </ul>
                 </motion.div>
 
@@ -273,7 +316,7 @@ const NavigationBar = () => {
                     </div>
                 </motion.div>
             </nav>
-        </div>
+        </div >
     );
 };
 
