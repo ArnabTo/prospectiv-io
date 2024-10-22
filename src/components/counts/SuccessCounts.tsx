@@ -65,7 +65,7 @@ const SuccessCounts = () => {
                                 <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
                                     <CountUp
                                         start={startCounting ? 0 : undefined} // Start counting when in view
-                                        end={50}
+                                        end={45}
                                         duration={4}
                                         useEasing={true}
                                         useGrouping={true}
@@ -85,7 +85,7 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
-                                <p className="text-lg text-textColorTwo">Attributed</p>
+                                <p className="text-lg text-textColorTwo">Attributed in 2024</p>
                                 <h3 className="text-4xl lg:text-6xl text-[#6923ff] font-bold">
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when in view
@@ -99,7 +99,6 @@ const SuccessCounts = () => {
                                         prefix="$"
                                         suffix="M+"
                                     />
-                                    <span className='text-lg text-foreground'>in 2024</span>
                                 </h3>
                             </motion.div>
 
