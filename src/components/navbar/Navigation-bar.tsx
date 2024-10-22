@@ -240,7 +240,7 @@ const NavigationBar = () => {
                                     borderRadius: "10px", // Rounded corners
                                     border: "1px solid rgba(255, 255, 255, 0.18)", // Border style
                                 }}
-                                className="absolute -left-8 w-80 border z-50 opacity-0 transform translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                                className="absolute -left-8 w-80 border z-50 opacity-0 hidden transform translate-y-full group-hover:block group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                             >
                                 <ul className="p-5">
                                     <li>
