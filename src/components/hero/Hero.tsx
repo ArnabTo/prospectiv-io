@@ -31,7 +31,8 @@ const Hero = () => {
     ]
     return (
         <section className="overflow-hidden pt-24">
-            <Intro />
+            {/* <Intro /> */}
+            
             <div className="max-w-7xl mx-auto relative space-y-24 pb-24">
                 <div className="w-full lg:w-3/4 text-center mx-auto space-y-10 px-4 lg:px-10">
                     <div className="space-y-5">

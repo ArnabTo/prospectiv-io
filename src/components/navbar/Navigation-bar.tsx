@@ -61,7 +61,7 @@ const NavigationBar = () => {
                             </SheetTitle>
                             <SheetClose />
                             <div className="space-y-10">
-                                <ul className="flex flex-col justify-start items-start gap-5">
+                                <ul className="flex flex-col justify-center items-center gap-5">
                                     <li>
                                         <Link href="#" className="text-lg font-bold text-secondary transition-all duration-500">
                                             Home
