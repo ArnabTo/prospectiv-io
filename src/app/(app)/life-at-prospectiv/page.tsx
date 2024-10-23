@@ -10,6 +10,7 @@ import Link from 'next/link';
 import '../../custom.css'
 import { useRef } from 'react';
 import Lottie from 'lottie-react';
+import { ArrowRight } from 'lucide-react';
 
 const LifeAtProspectiv = () => {
 
@@ -163,7 +164,8 @@ const LifeAtProspectiv = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className='space-y-5'>
+
+                <div className='space-y-5'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>#lifeatprospectiv</h1>
 
                     <div className="p-5 sm:p-8">
@@ -184,7 +186,7 @@ const LifeAtProspectiv = () => {
                             See Our Pricing
                         </Link>
                     </div>
-                </div> */}
+                </div>
 
                 <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10 p-5 space-y-5'>
                     <motion.div
@@ -412,105 +414,172 @@ const LifeAtProspectiv = () => {
                 </div>
 
                 <div className='space-y-24 p-5'>
-                        <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className='lg:w-5/6 mx-auto text-center space-y-5'>
-                            <h3 className='text-4xl font-bold'>Perspectiv values</h3>
-                            <p className='text-textColorTwo text-lg'>
-                                Our values permeate Sopro through our behaviours, both as people and across our business. They influence the way we hire new people, develop employees, review performance, evaluate reward and achieve promotion.
-                            </p>
-                        </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className='lg:w-5/6 mx-auto text-center space-y-5'>
+                        <h3 className='text-4xl font-bold'>Perspectiv values</h3>
+                        <p className='text-textColorTwo text-lg'>
+                            Our values permeate Sopro through our behaviours, both as people and across our business. They influence the way we hire new people, develop employees, review performance, evaluate reward and achieve promotion.
+                        </p>
+                    </motion.div>
 
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
 
-                               <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
-                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
-                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
-                                    >
-                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                        <Lottie
-                                            lottieRef={lottieRefFour}
-                                            animationData={require('@/public/assets/calendar V3.json')}
-                                            loop={false} // Play only once
-                                            autoplay={false} // Disable autoplay
+                        <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                        >
+                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefFour}
+                                    animationData={require('@/public/assets/calendar V3.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
+                            </div>
+                            <div className='space-y-3 text-center lg:text-start'>
+                                <h3 className='text-2xl font-bold text-secondary'>We invest</h3>
+                                <p className='text-textColorTwo text-lg'>We invest in the long-term success of our business, our products and services. We invest in our exceptional people, in personal development, training and career progression. We invest in high performing facilities and work environments for our teams to thrive in.</p>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                        >
+                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefFour}
+                                    animationData={require('@/public/assets/calendar V3.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
+                            </div>
+                            <div className='space-y-3 text-center lg:text-start'>
+                                <h3 className='text-2xl font-bold text-secondary'>We are ambitious</h3>
+                                <p className='text-textColorTwo text-lg'>
+                                    We are ambitious and have an entrepreneurial spirit that is focused, energising and relentless. We set ambitious goals and clear paths to success. We value career progression and encourage passionate and imaginative collaboration between like-minded and driven professionals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                        >
+                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefFour}
+                                    animationData={require('@/public/assets/calendar V3.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
+                            </div>
+                            <div className='space-y-3 text-center lg:text-start'>
+                                <h3 className='text-2xl font-bold text-secondary'>We are people</h3>
+                                <p className='text-textColorTwo text-lg'>
+                                    We are people and we are proud of our exceptional teams and their identities. We are supportive and promote each other’s success and we give back to our communities through impactful initiatives. We encourage teamwork, inclusivity and respect. Our people are empowered.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                        >
+                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefFour}
+                                    animationData={require('@/public/assets/calendar V3.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
+                            </div>
+                            <div className='space-y-3 text-center lg:text-start'>
+                                <h3 className='text-2xl font-bold text-secondary'>We are open</h3>
+                                <p className='text-textColorTwo text-lg'>
+                                    We are open and transparent in everything we do. We are clear about who we are, what we do and how we do it. We encourage an open-door approach to ensure every team member is valued, heard and supported.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <div className='space-y-10 px-5'>
+                        <h3 className='text-4xl font-bold'>Explore About us</h3>
+
+
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+
+                            <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                                <div className='flex flex-col gap-5'>
+                                    <div>
+                                        <Image
+                                            src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                            alt="image"
+                                            width={500}
+                                            height={500}
+                                            className="w-full h-full object-cover rounded-lg"
                                         />
                                     </div>
-                                    <div className='space-y-3 text-center lg:text-start'>
-                                        <h3 className='text-2xl font-bold text-secondary'>We invest</h3>
-                                        <p className='text-textColorTwo text-lg'>We invest in the long-term success of our business, our products and services. We invest in our exceptional people, in personal development, training and career progression. We invest in high performing facilities and work environments for our teams to thrive in.</p>
-                                    </div>
-                                </div>
-
-                                   <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
-                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
-                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
-                                    >
-                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                        <Lottie
-                                            lottieRef={lottieRefFour}
-                                            animationData={require('@/public/assets/calendar V3.json')}
-                                            loop={false} // Play only once
-                                            autoplay={false} // Disable autoplay
-                                        />
-                                    </div>
-                                    <div className='space-y-3 text-center lg:text-start'>
-                                        <h3 className='text-2xl font-bold text-secondary'>We are ambitious</h3>
-                                        <p className='text-textColorTwo text-lg'>
-                                        We are ambitious and have an entrepreneurial spirit that is focused, energising and relentless. We set ambitious goals and clear paths to success. We value career progression and encourage passionate and imaginative collaboration between like-minded and driven professionals.
+                                    <div>
+                                        <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
+                                        <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
                                         </p>
                                     </div>
                                 </div>
+                            </Link>
 
-                                <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
-                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
-                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
-                                    >
-                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                        <Lottie
-                                            lottieRef={lottieRefFour}
-                                            animationData={require('@/public/assets/calendar V3.json')}
-                                            loop={false} // Play only once
-                                            autoplay={false} // Disable autoplay
+                            <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                                <div className='flex flex-col gap-5'>
+                                    <div>
+                                        <Image
+                                            src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                            alt="image"
+                                            width={500}
+                                            height={500}
+                                            className="w-full h-full object-cover rounded-lg"
                                         />
                                     </div>
-                                        <div className='space-y-3 text-center lg:text-start'>
-                                        <h3 className='text-2xl font-bold text-secondary'>We are people</h3>
-                                        <p className='text-textColorTwo text-lg'>
-                                        We are people and we are proud of our exceptional teams and their identities. We are supportive and promote each other’s success and we give back to our communities through impactful initiatives. We encourage teamwork, inclusivity and respect. Our people are empowered.
+                                    <div>
+                                        <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
+                                        <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
                                         </p>
                                     </div>
                                 </div>
+                            </Link>
 
-                                 <div className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
-                                    onMouseEnter={() => handleMouseEnter(lottieRefFour)}
-                                    onMouseLeave={() => handleMouseLeave(lottieRefFour)}
-                                    >
-                                    <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                        <Lottie
-                                            lottieRef={lottieRefFour}
-                                            animationData={require('@/public/assets/calendar V3.json')}
-                                            loop={false} // Play only once
-                                            autoplay={false} // Disable autoplay
+                            <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                                <div className='flex flex-col gap-5'>
+                                    <div>
+                                        <Image
+                                            src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                            alt="image"
+                                            width={500}
+                                            height={500}
+                                            className="w-full h-full object-cover rounded-lg"
                                         />
                                     </div>
-                                    <div className='space-y-3 text-center lg:text-start'>
-                                        <h3 className='text-2xl font-bold text-secondary'>We are open</h3>
-                                        <p className='text-textColorTwo text-lg'>
-                                        We are open and transparent in everything we do. We are clear about who we are, what we do and how we do it. We encourage an open-door approach to ensure every team member is valued, heard and supported.
+                                    <div>
+                                        <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
+                                        <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
                                         </p>
                                     </div>
                                 </div>
-                           
+                            </Link>
                         </div>
                     </div>
+                </div>
 
 
-                    <div>
-                        
-                    </div>
+                <div>
+
+                </div>
             </div>
 
         </div>
