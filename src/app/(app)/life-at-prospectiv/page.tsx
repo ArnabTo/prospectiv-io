@@ -1,9 +1,7 @@
 'use client';
 import { MemberCardMarquee } from '@/components/member-card/MemberCard';
-import Marquee from '@/components/ui/marquee';
 import HeaderImage from '@/public/assets/campany-culture.jpg'
 import Image from 'next/image';
-import { title } from 'process';
 import { motion } from 'framer-motion';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import Link from 'next/link';
@@ -83,7 +81,8 @@ const LifeAtProspectiv = () => {
 
             </div>
 
-            <div className="max-w-7xl mx-auto py-24 space-y-24 overflow-hidde">
+            <div className="max-w-7xl mx-auto py-24 space-y-24 overflow-hidden">
+
                 <div className='px-5'>
                     <div className='lg:w-1/2 mx-auto text-center'>
                         <h3 className='text-4xl font-bold'>Meet Our People</h3>
@@ -509,70 +508,69 @@ const LifeAtProspectiv = () => {
                     </div>
                 </div>
 
-                <div>
-                    <div className='space-y-10 px-5'>
-                        <h3 className='text-4xl font-bold'>Explore About us</h3>
 
+                <div className='space-y-10 px-5'>
 
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                    <h1 className='text-3xl font-bold text-start'>Explore About us</h1>
 
-                            <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                                <div className='flex flex-col gap-5'>
-                                    <div>
-                                        <Image
-                                            src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
-                                            alt="image"
-                                            width={500}
-                                            height={500}
-                                            className="w-full h-full object-cover rounded-lg"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                        <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                        </p>
-                                    </div>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+
+                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                            <div className='flex flex-col gap-5'>
+                                <div>
+                                    <Image
+                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                        alt="image"
+                                        width={500}
+                                        height={500}
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
                                 </div>
-                            </Link>
-
-                            <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                                <div className='flex flex-col gap-5'>
-                                    <div>
-                                        <Image
-                                            src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
-                                            alt="image"
-                                            width={500}
-                                            height={500}
-                                            className="w-full h-full object-cover rounded-lg"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                        <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                        </p>
-                                    </div>
+                                <div>
+                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
+                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    </p>
                                 </div>
-                            </Link>
+                            </div>
+                        </Link>
 
-                            <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                                <div className='flex flex-col gap-5'>
-                                    <div>
-                                        <Image
-                                            src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
-                                            alt="image"
-                                            width={500}
-                                            height={500}
-                                            className="w-full h-full object-cover rounded-lg"
-                                        />
-                                    </div>
-                                    <div>
-                                        <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                        <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                        </p>
-                                    </div>
+                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                            <div className='flex flex-col gap-5'>
+                                <div>
+                                    <Image
+                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                        alt="image"
+                                        width={500}
+                                        height={500}
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
                                 </div>
-                            </Link>
-                        </div>
+                                <div>
+                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
+                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+
+                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                            <div className='flex flex-col gap-5'>
+                                <div>
+                                    <Image
+                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                        alt="image"
+                                        width={500}
+                                        height={500}
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
+                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
 

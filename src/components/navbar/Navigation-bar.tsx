@@ -53,7 +53,7 @@ const NavigationBar = () => {
                 <div>
                     <Sheet>
                         <SheetTrigger><div className="bg-[#1D1A27] p-4 rounded-full"><AlignJustify size={25} /></div></SheetTrigger>
-                        <SheetContent side='bottom' className="flex rounded-t-2xl border border-borderColor">
+                        <SheetContent side='bottom' className="rounded-t-2xl border border-borderColor">
                             <SheetTitle>
                                 <VisuallyHidden>
                                     Menu
@@ -61,7 +61,7 @@ const NavigationBar = () => {
                             </SheetTitle>
                             <SheetClose />
                             <div className="space-y-10">
-                                <ul className="flex flex-col justify-center items-center gap-5">
+                                <ul className="flex flex-col justify-start items-start gap-5">
                                     <li>
                                         <Link href="#" className="text-lg font-bold text-secondary transition-all duration-500">
                                             Home
@@ -156,7 +156,7 @@ const NavigationBar = () => {
                                     exit={{ opacity: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                                    <div className="w-60 lg:w-full flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                                         <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-3 rounded-full group-hover:scale-95 transition-all duration-300">
                                             Book a Demo
                                         </Link>
