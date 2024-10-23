@@ -14,7 +14,7 @@
     width: 300%;
     height: 300%;
     border-radius: 10%;
-    background: #ffffff;
+    background: linear-gradient(135deg, #1766ff, #6923ff, purple);
     transition: transform 0.8s ease;
     transform-origin: bottom right;
     z-index: 0;

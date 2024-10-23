@@ -56,8 +56,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.heading}</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.paragraph}</p>
+                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent1?.paragraph}</p>
                     </div>
 
                     <div
@@ -73,8 +73,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.heading}</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.paragraph}</p>
+                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent2?.paragraph}</p>
                     </div>
 
                     <div
@@ -90,8 +90,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.heading}</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.paragraph}</p>
+                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent3?.paragraph}</p>
                     </div>
 
                     <div
@@ -107,8 +107,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.heading}</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.paragraph}</p>
+                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent4?.paragraph}</p>
                     </div>
 
                     <div
@@ -124,8 +124,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.heading}</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.paragraph}</p>
+                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent5?.paragraph}</p>
                     </div>
        
                     <div
@@ -141,8 +141,8 @@ const HowItWork = () => {
                                 autoplay={false} // Disable autoplay
                             />
                         </div>
-                        <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.heading}</h3>
-                        <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.paragraph}</p>
+                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.heading}</h3>
+                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.paragraph}</p>
                     </div>
                 </motion.div>
 
