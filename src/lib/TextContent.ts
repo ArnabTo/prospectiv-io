@@ -75,4 +75,20 @@ const HowItWorkTextContent = {
     },
 }
 
-export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent }
+
+// life at prospectiv
+const lifeAtProspectivTextContent = {
+    'heading': {
+        heading: 'Life at Prospectiv',
+        paragraph: `We're the people behind the prospects. For all the clever tech, what makes the Sopro service stand out is the people. As we like to tell our clients, we’re a team, not a tool.`,
+    },
+    'mettingPeople':{
+        heading: 'Meet Our People',
+        paragraph: `We bring together vast knowledge and expertise, while also making Sopro a place to grow, learn, achieve, and have fun.`
+    },
+    'ourteam':{
+        heading: 'Our Team',
+        paragraph: `We love all our teams equally! To learn more about any team or apply, check out their pages below.`,
+    }
+}
+export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent }

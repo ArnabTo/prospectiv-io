@@ -9,6 +9,12 @@ import '../../custom.css'
 import { useRef } from 'react';
 import Lottie from 'lottie-react';
 import { ArrowRight } from 'lucide-react';
+import { lifeAtProspectivTextContent } from '@/lib/TextContent';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import { EffectCards } from 'swiper/modules';
+
 
 const LifeAtProspectiv = () => {
 
@@ -52,7 +58,7 @@ const LifeAtProspectiv = () => {
         },
     ]
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className='relative'>
                 <div
                     className='w-full h-[24rem] bg-no-repeat bg-cover bg-center bg-fixed opacity-20'
@@ -63,7 +69,7 @@ const LifeAtProspectiv = () => {
                 </div>
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
                     <h1 className='text-6xl font-extrabold '>Life at <span className='text-secondary'>Prospectiv</span> </h1>
-                    <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>We're the people behind the prospects. For all the clever tech, what makes the Sopro service stand out is the people. As we like to tell our clients, we’re a team, not a tool.</p>
+                    <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>{lifeAtProspectivTextContent?.heading?.paragraph}</p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
                             <BreadcrumbList>
@@ -81,13 +87,12 @@ const LifeAtProspectiv = () => {
 
             </div>
 
-            <div className="max-w-7xl mx-auto py-24 space-y-24 overflow-hidden">
+            <div className="max-w-7xl mx-auto py-24 space-y-24">
 
                 <div className='px-5'>
                     <div className='lg:w-1/2 mx-auto text-center'>
-                        <h3 className='text-4xl font-bold'>Meet Our People</h3>
-                        <p className='text-textColorTwo text-lg'>Together we have an amazing collection of knowledge and expertise.
-                            But it’s not all hard work: we strive to make Sopro a great place where we can grow, learn, achieve, and have fun.</p>
+                        <h3 className='text-4xl font-bold'>{lifeAtProspectivTextContent?.mettingPeople?.heading}</h3>
+                        <p className='text-textColorTwo text-lg'>{lifeAtProspectivTextContent?.mettingPeople?.paragraph}</p>
                     </div>
                     <div className='relative'>
                         <MemberCardMarquee />
@@ -107,9 +112,8 @@ const LifeAtProspectiv = () => {
 
                 <div className='space-y-24 px-5'>
                     <div className='lg:w-1/2 mx-auto text-center'>
-                        <h3 className='text-4xl font-bold'>Our Teams</h3>
-                        <p className='text-textColorTwo text-lg'>These guys get their own page, but we love all our teams equally. If you want to know more about a specific team, whether you are thinking of applying to join one or just want to know more, take
-                            a look at their dedicated pages below.</p>
+                        <h3 className='text-4xl font-bold'>{lifeAtProspectivTextContent?.ourteam?.heading}</h3>
+                        <p className='text-textColorTwo text-lg'>{lifeAtProspectivTextContent?.ourteam?.paragraph}</p>
                     </div>
 
                     <div className='space-y-10'>
@@ -187,16 +191,140 @@ const LifeAtProspectiv = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10 p-5 space-y-5'>
+                <div>
+                    <div className='flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10'>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
+                            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Benefits of Prospectiv</h1>
+                            <p className='text-lg text-textColorTwo text-center lg:text-start'>
+                                Our benefits vary by location, but the core perks remain consistent no matter where you're based.
+                            </p>
+                            <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                                <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
+                                    How does it work ?
+                                </Link>
+                            </div>
+                        </motion.div>
+
+                        <div className='px-5'>
+                            <Swiper
+                                effect={'cards'}
+                                grabCursor={true}
+                                modules={[EffectCards]}
+                                className='mySwiper w-60 md:w-96 lg:w-[500px] mx-auto lg:mx-0'
+                            >
+                                <SwiperSlide className='bg-[#302C3F]'>
+                                    <div
+                                        className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                                        onMouseEnter={() => handleMouseEnter(lottieRefOne)}
+                                        onMouseLeave={() => handleMouseLeave(lottieRefOne)}
+                                    >
+                                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                            <Lottie
+                                                lottieRef={lottieRefOne}
+                                                animationData={require('@/public/assets/Advantage.json')}
+                                                loop={false} // Play only once
+                                                autoplay={false} // Disable autoplay
+                                            />
+                                        </div>
+                                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>
+                                            Career Progression Plan
+                                        </h3>
+                                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>
+                                            We provide a clear career path with regular 360-degree feedback, ensuring continuous learning and growth as a professional.
+                                        </p>
+                                        {/* <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>
+                                            We offer a well-structured career progression path supported by regular 360-degree feedback. Everyone has a clear path, so you’ll continually learn and grow as a professional.
+                                        </p> */}
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='bg-[#302C3F]'>
+                                    <div
+                                        className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                                        onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
+                                        onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
+                                    >
+                                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                            <Lottie
+                                                lottieRef={lottieRefTwo}
+                                                animationData={require('@/public/assets/medicine box.json')}
+                                                loop={false} // Play only once
+                                                autoplay={false} // Disable autoplay
+                                            />
+                                        </div>
+                                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>
+                                            Private Healthcare Insurance
+                                        </h3>
+                                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>
+                                            We look out for your health with a high level of private medical care.
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='bg-[#302C3F]'>
+                                    <div
+                                        className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                                        onMouseEnter={() => handleMouseEnter(lottieRefThree)}
+                                        onMouseLeave={() => handleMouseLeave(lottieRefThree)}
+                                    >
+                                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                            <Lottie
+                                                lottieRef={lottieRefThree}
+                                                animationData={require('@/public/assets/share.json')}
+                                                loop={false} // Play only once
+                                                autoplay={false} // Disable autoplay
+                                            />
+                                        </div>
+                                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>
+                                            Company Profit Sharing
+                                        </h3>
+                                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>
+                                            We believe in sharing in our success, so we reward your loyalty using 10% of our yearly profits.
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide className='bg-[#302C3F]'>
+                                    <div
+                                        className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                                        onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                                        onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                                    >
+                                        <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                            <Lottie
+                                                lottieRef={lottieRefFour}
+                                                animationData={require('@/public/assets/calendar V3.json')}
+                                                loop={false} // Play only once
+                                                autoplay={false} // Disable autoplay
+                                            />
+                                        </div>
+                                        <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>
+                                            Extended Annual Leave
+                                        </h3>
+                                        <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>
+                                            We provide additional annual leave allowance above the standard paid leave determined by law.
+                                        </p>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                    </div>
+                </div>
+
+                {/* <div className='flex flex-col lg:flex-row flex-start justify-between gap-5 lg:gap-10 p-5 space-y-5'> */}
+                {/* <div className='grid gird-cols-1 lg:grid-cols-3 items-center justify-between gap-5 p-5 space-y-5'>
+
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
+                        className='lg:hidden md:max-w-lg space-y-5 mx-auto'>
                         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Benefits of Prospectiv</h1>
                         <p className='text-lg text-textColorTwo text-center lg:text-start'>
-                            With offices spread across countries and continents, the details of our benefits can change based on what is available locally - and while some of the finer details may differ, the spirit of our perks remains the same wherever you’re based.
+                            Our benefits vary by location, but the core perks remain consistent no matter where you're based.
                         </p>
                         <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                             <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
@@ -205,96 +333,113 @@ const LifeAtProspectiv = () => {
                         </div>
                     </motion.div>
 
-                    <div>
-                        <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
-
-                            <div
-                                className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
-                                onMouseEnter={() => handleMouseEnter(lottieRefOne)}
-                                onMouseLeave={() => handleMouseLeave(lottieRefOne)}
-                            >
-                                <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                    <Lottie
-                                        lottieRef={lottieRefOne}
-                                        animationData={require('@/public/assets/Advantage.json')}
-                                        loop={false} // Play only once
-                                        autoplay={false} // Disable autoplay
-                                    />
-                                </div>
-                                <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
-                                    Career Progression Plan
-                                </h3>
-                                <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
-                                    We offer a well-structured career progression path supported by regular 360-degree feedback. Everyone has a clear path, so you’ll continually learn and grow as a professional.
-                                </p>
+                    <div className='flex flex-col gap-3'>
+                        <div
+                            className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                            onMouseEnter={() => handleMouseEnter(lottieRefOne)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefOne)}
+                        >
+                            <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefOne}
+                                    animationData={require('@/public/assets/Advantage.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
                             </div>
+                            <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
+                                Career Progression Plan
+                            </h3>
+                            <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
+                                We offer a well-structured career progression path supported by regular 360-degree feedback. Everyone has a clear path, so you’ll continually learn and grow as a professional.
+                            </p>
+                        </div>
 
-                            <div
-                                className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
-                                onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
-                                onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
-                            >
-                                <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                    <Lottie
-                                        lottieRef={lottieRefTwo}
-                                        animationData={require('@/public/assets/medicine box.json')}
-                                        loop={false} // Play only once
-                                        autoplay={false} // Disable autoplay
-                                    />
-                                </div>
-                                <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
-                                    Private Healthcare Insurance
-                                </h3>
-                                <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
-                                    We look out for your health with a high level of private medical care.
-                                </p>
+                        <div
+                            className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                            onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
+                        >
+                            <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefTwo}
+                                    animationData={require('@/public/assets/medicine box.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
                             </div>
-
-                            <div
-                                className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
-                                onMouseEnter={() => handleMouseEnter(lottieRefThree)}
-                                onMouseLeave={() => handleMouseLeave(lottieRefThree)}
-                            >
-                                <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                    <Lottie
-                                        lottieRef={lottieRefThree}
-                                        animationData={require('@/public/assets/share.json')}
-                                        loop={false} // Play only once
-                                        autoplay={false} // Disable autoplay
-                                    />
-                                </div>
-                                <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
-                                    Company Profit Sharing
-                                </h3>
-                                <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
-                                    We believe in sharing in our success, so we reward your loyalty using 10% of our yearly profits.
-                                </p>
-                            </div>
-
-                            <div
-                                className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
-                                onMouseEnter={() => handleMouseEnter(lottieRefFour)}
-                                onMouseLeave={() => handleMouseLeave(lottieRefFour)}
-                            >
-                                <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                    <Lottie
-                                        lottieRef={lottieRefFour}
-                                        animationData={require('@/public/assets/calendar V3.json')}
-                                        loop={false} // Play only once
-                                        autoplay={false} // Disable autoplay
-                                    />
-                                </div>
-                                <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
-                                    Extended Annual Leave
-                                </h3>
-                                <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
-                                    We provide additional annual leave allowance above the standard paid leave determined by law.
-                                </p>
-                            </div>
-
+                            <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
+                                Private Healthcare Insurance
+                            </h3>
+                            <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
+                                We look out for your health with a high level of private medical care.
+                            </p>
                         </div>
                     </div>
-                </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className='hidden lg:block lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
+                        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Benefits of Prospectiv</h1>
+                        <p className='text-lg text-textColorTwo text-center'>
+                            Our benefits vary by location, but the core perks remain consistent no matter where you're based.
+                        </p>
+                        <div className="w-60 lg:w-full md:max-w-60 mx-auto  flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                            <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
+                                How does it work ?
+                            </Link>
+                        </div>
+                    </motion.div>
+
+                    <div className='flex flex-col gap-3'>
+
+                        <div
+                            className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                            onMouseEnter={() => handleMouseEnter(lottieRefThree)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefThree)}
+                        >
+                            <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefThree}
+                                    animationData={require('@/public/assets/share.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
+                            </div>
+                            <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
+                                Company Profit Sharing
+                            </h3>
+                            <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
+                                We believe in sharing in our success, so we reward your loyalty using 10% of our yearly profits.
+                            </p>
+                        </div>
+
+                        <div
+                            className='bg-card rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
+                            onMouseEnter={() => handleMouseEnter(lottieRefFour)}
+                            onMouseLeave={() => handleMouseLeave(lottieRefFour)}
+                        >
+                            <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                                <Lottie
+                                    lottieRef={lottieRefFour}
+                                    animationData={require('@/public/assets/calendar V3.json')}
+                                    loop={false} // Play only once
+                                    autoplay={false} // Disable autoplay
+                                />
+                            </div>
+                            <h3 className='text-3xl font-bold group-hover:text-textColorOne group-hover:font-extrabold transition-all duration-1000'>
+                                Extended Annual Leave
+                            </h3>
+                            <p className='text-textColorTwo text-lg group-hover:text-textColorOne group-hover:font-medium transition-all duration-1000'>
+                                We provide additional annual leave allowance above the standard paid leave determined by law.
+                            </p>
+                        </div>
+                    </div>
+
+                </div> */}
 
 
                 <div className='space-y-10 px-5'>

@@ -109,7 +109,7 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 className="lg:ml-10"
                             >
-                                <p className="text-lg text-textColorTwo">Satisfied Clients</p>
+                                <p className="text-lg text-textColorTwo">Leads Delivered</p>
                                 <h3 className="text-4xl lg:text-6xl text-[#6923ff] font-bold">
                                 <CountUp
                                        start={startCounting ? 0 : undefined}// Start counting when the section is in view
