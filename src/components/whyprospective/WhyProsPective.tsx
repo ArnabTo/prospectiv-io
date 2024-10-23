@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import ImageOne from '@/public/assets/whyporspectiveone.png'
-import ImageTwo from '@/public/assets/whyporspectivtwo.png'
-import ImageThree from '@/public/assets/whyporspectivethree.png'
+import ImageOne from '@/public/assets/whyporspectiveone.svg'
+import ImageTwo from '@/public/assets/whyporspectivtwo.svg'
+import ImageThree from '@/public/assets/whyporspectivethree.svg'
 import { whyProspectiveTextContent } from '@/lib/TextContent';
 
 
