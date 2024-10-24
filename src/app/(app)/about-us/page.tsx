@@ -1,5 +1,5 @@
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-
+import HeaderImage from '@/public/assets/campany-culture.jpg'
 const AboutUs = () => {
     return (
         <div className='overflow-hidden'>
@@ -12,19 +12,21 @@ const AboutUs = () => {
                 >
                 </div>
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
-                    <h1 className='text-6xl font-extrabold '>Life at <span className='text-secondary'>Prospectiv</span> </h1>
-                    <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>{lifeAtProspectivTextContent?.heading?.paragraph}</p>
+                    <h1 className='text-6xl font-extrabold '>About <span className='text-secondary'>Us</span> </h1>
+                    <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>
+                        Sopro is more than a tool: we are smart humans with unrivalled expertise and powerful technology. Our teams have doubled in size every year, thanks to the expertise, dedication and passion of our people.
+                    </p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
                             <BreadcrumbList>
                                 <BreadcrumbItem>
                                     <BreadcrumbLink className='text-textColorTwo text-lg' href="/">Home</BreadcrumbLink>
                                 </BreadcrumbItem>
-                                <BreadcrumbSeparator/>
+                                <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                <BreadcrumbPage className='text-secondary text-lg'>Company</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-lg'>Company</BreadcrumbPage>
                                 </BreadcrumbItem>
-                                <BreadcrumbSeparator/>
+                                <BreadcrumbSeparator />
                                 <BreadcrumbItem>
                                     <BreadcrumbPage className='text-secondary text-lg'>About us</BreadcrumbPage>
                                 </BreadcrumbItem>
@@ -33,6 +35,10 @@ const AboutUs = () => {
                     </div>
                 </div>
 
+            </div>
+
+            <div className="max-w-7xl mx-auto">
+                
             </div>
         </div>
     );

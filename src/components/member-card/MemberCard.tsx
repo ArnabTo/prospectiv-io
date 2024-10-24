@@ -92,7 +92,7 @@ const MemberCard = ({ name, title, avatar, says }: { name: string, title: string
                     <blockquote className="mt-2 text-2xl text-textColorTwo">{says}</blockquote>
                 </div>
             </div>
-            {/* <div className="bg-gradient-to-r from-[#6f86ff] via-[#fe316f] to-[#d220ff] opacity-30 blur-3xl absolute inset-0 -z-10"></div> */}
+            {/* <div className="bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree opacity-30 blur-3xl absolute inset-0 -z-10"></div> */}
         </div>
     )
 }

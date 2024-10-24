@@ -116,9 +116,9 @@ const LifeAtProspectiv = () => {
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                             className="blur-[100px] w-full max-w-[44%] min-h-[40%] absolute top-1/3 left-1/3 -z-10  transition-all">
-                            <div className="bg-[#6f86ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                            <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                            <div className="bg-[#d220ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                            <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                            <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                            <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                         </motion.div>
                     </motion.div>
                 </motion.div>
@@ -194,13 +194,13 @@ const LifeAtProspectiv = () => {
                                 transition={{ duration: 0.3 }}
                                 viewport={{ once: true }}
                                 className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:left-1/4 -z-10 transition-all">
-                                <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                                <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                                <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                                <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
                         </div>
 
-                        <div className="w-60 lg:w-full max-w-64 flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+                        <div className="w-60 lg:w-full max-w-64 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                             <Link href="" className="flex-1 font-bold text-center text-lg bg-black px-10 xl:px-16 py-5 rounded-full hover:scale-95 transition-all duration-300">
                                 Book a Demo
                             </Link>
@@ -230,7 +230,7 @@ const LifeAtProspectiv = () => {
 
 
                     <div className="w-60 lg:w-full max-w-64 flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                        <Link href="" className="flex-1 font-semibold text-lg bg-buttonColor text-textColorOne text-center hover:scale-95 transition-all duration-300 px-10 xl:px-12 py-5 rounded-full hover:bg-buttonHoverColor">
+                        <Link href="" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center hover:scale-95 transition-all duration-300 px-10 xl:px-12 py-5 rounded-full hover:bg-buttonHoverColor">
                             See Our Pricing
                         </Link>
                     </div>
@@ -248,7 +248,7 @@ const LifeAtProspectiv = () => {
                             <p className='text-lg text-textColorTwo text-center lg:text-start'>
                                 Our benefits vary by location, but the core perks remain consistent no matter where you're based.
                             </p>
-                            <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
+                            <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                                 <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
                                     How does it work ?
                                 </Link>
@@ -267,7 +267,7 @@ const LifeAtProspectiv = () => {
                                 modules={[EffectCards]}
                                 className='mySwiper w-60 md:w-96 lg:w-[500px] mx-auto lg:mx-0'
                             >
-                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-[#d220ff] to-[#6923ff]'>
+                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-gradientColorThree to-gradientColorFour'>
                                     <div
                                         className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                                         onMouseEnter={() => handleMouseEnter(lottieRefOne)}
@@ -292,7 +292,7 @@ const LifeAtProspectiv = () => {
                                         </p> */}
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-[#d220ff] to-[#6923ff]'>
+                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-gradientColorThree to-gradientColorFour'>
                                     <div
                                         className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                                         onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
@@ -314,7 +314,7 @@ const LifeAtProspectiv = () => {
                                         </p>
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-[#d220ff] to-[#6923ff]'>
+                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-gradientColorThree to-gradientColorFour'>
                                     <div
                                         className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                                         onMouseEnter={() => handleMouseEnter(lottieRefThree)}
@@ -336,7 +336,7 @@ const LifeAtProspectiv = () => {
                                         </p>
                                     </div>
                                 </SwiperSlide>
-                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-[#d220ff] to-[#6923ff]'>
+                                <SwiperSlide className='bg-gradient-to-tr from-secondary via-gradientColorThree to-gradientColorFour'>
                                     <div
                                         className=' rounded-2xl p-5 lg:p-10 space-y-5 border border-solid border-borderColor card-animation group cursor-pointer'
                                         onMouseEnter={() => handleMouseEnter(lottieRefFour)}
@@ -481,9 +481,9 @@ const LifeAtProspectiv = () => {
                                 transition={{ duration: 0.5, delay: 1 }}
                                 viewport={{ once: true }}
                                 className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 transition-all">
-                                <div className="bg-[#6f86ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                                <div className="bg-[#fe316f] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                                <div className="bg-[#d220ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                                <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                                <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                                <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
                             {/* <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -491,14 +491,14 @@ const LifeAtProspectiv = () => {
                                 transition={{ duration: 0.3, delay: 1 }}
                                 viewport={{ once: true }}
                                 className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
-                                <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                                <div className="bg-[#1766ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                                <div className="bg-[#6923ff] absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                                <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div> */}
                         </div>
 
 
-                        <div className="w-60 lg:w-full max-w-72 flex mx-auto rounded-full bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+                        <div className="w-60 lg:w-full max-w-72 flex mx-auto rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                             <Link href="" className="flex-1 font-bold text-lg text-center bg-black py-5 rounded-full hover:scale-95 transition-all duration-300">
                                 See open opportunities
                             </Link>

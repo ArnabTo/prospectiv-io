@@ -69,7 +69,7 @@ const Footer = () => {
 
                 <div className='space-y-5'>
                     <div className='flex flex-col gap-5'>
-                        {/* <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+                        {/* <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                             <Link href="#" className="w-full font-bold text-lg text-center bg-black px-10 lg:px-16 py-5 rounded-full">
                                 Book a Demo
                             </Link>

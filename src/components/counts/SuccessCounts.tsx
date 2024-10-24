@@ -86,7 +86,7 @@ const SuccessCounts = () => {
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
                                 <p className="text-lg text-textColorTwo">Attributed in 2024</p>
-                                <h3 className="text-4xl lg:text-6xl text-[#6923ff] font-bold">
+                                <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when in view
                                         end={1.3}
@@ -110,7 +110,7 @@ const SuccessCounts = () => {
                                 className="lg:ml-10"
                             >
                                 <p className="text-lg text-textColorTwo">Leads Delivered</p>
-                                <h3 className="text-4xl lg:text-6xl text-[#6923ff] font-bold">
+                                <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
                                 <CountUp
                                        start={startCounting ? 0 : undefined}// Start counting when the section is in view
                                         end={13500}
@@ -134,9 +134,9 @@ const SuccessCounts = () => {
                         viewport={{ once: true }}
                         className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 left-32 lg:bottom-6 -z-10 animate-spin-slow transition-all"
                     >
-                        <div className="bg-[#6923ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                        <div className="bg-[#fe316f] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                        <div className="bg-[#6923ff] absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                        <div className="bg-gradientColorFour absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                        <div className="bg-gradientColorTwo absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                        <div className="bg-gradientColorFour absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                     </motion.div>
                 </div>
             </motion.div>
