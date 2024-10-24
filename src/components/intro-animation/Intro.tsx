@@ -33,7 +33,7 @@ const Intro = () => {
     }, [showBlackScreen]);
 
     return (
-        <>
+        <div className='z-30'>
             <AnimatePresence>
                 {showBlackScreen && (
                     <motion.div
@@ -110,7 +110,7 @@ const Intro = () => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </>
+        </div>
     );
 };
 

@@ -37,7 +37,7 @@ const NavigationBar = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto lg:px-10 relative">
+        <div className="max-w-7xl mx-auto lg:px-10 relative z-20">
             {/* small device Navigation bar */}
             <motion.nav
                 initial={{ opacity: 0, height: 0, paddingTop: 0, paddingBottom: 0 }}
@@ -227,23 +227,27 @@ const NavigationBar = () => {
                                 Pricing
                             </Link>
                         </li>
-               
+
                         <li className="relative group">
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-300">
                                 Company
                             </Link>
                             <div
-                                style={{
-                                    background: "rgba(255, 255, 255, 0.25)", // Proper background color for blur effect
-                                    backdropFilter: "blur(43px)", // Apply blur effect
-                                    WebkitBackdropFilter: "blur(43px)", // For Safari support
-                                    borderRadius: "10px", // Rounded corners
-                                    border: "1px solid rgba(255, 255, 255, 0.18)", // Border style
-                                }}
-                                className="absolute -left-8 w-80 border z-50 opacity-0 hidden transform translate-y-full group-hover:block group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                                className="absolute -left-8 w-[40rem] border border-borderColor rounded-2xl z-50 opacity-0 hidden transform translate-y-full bg-background group-hover:block group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                             >
-                                <ul className="p-5">
-                                    <li>
+                                <div className="flex flex-col lg:flex-row items-center gap-5 p-5">
+                                    <div className="flex flex-col gap-5">
+                                        <Link href="/life-at-prospectiv" className="w-full transition-all duration-500">
+                                            <div className="flex items-start gap-4">
+                                                <LifeBuoy size={60} />
+                                                <span>
+                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
+                                                    <p className="text-sm text-textColorTwo">
+                                                        A page about our culture, people, values and what it's like to work here
+                                                    </p>
+                                                </span>
+                                            </div>
+                                        </Link>
                                         <Link href="/life-at-prospectiv" className="transition-all duration-500">
                                             <div className="flex items-start gap-4">
                                                 <LifeBuoy size={60} />
@@ -255,8 +259,9 @@ const NavigationBar = () => {
                                                 </span>
                                             </div>
                                         </Link>
-                                    </li>
-                                    <li>
+                                    </div>
+                                    <div className="w-1 h-32 bg-foreground"></div>
+                                    <div className="flex flex-col gap-5">
                                         <Link href="/life-at-prospectiv" className="transition-all duration-500">
                                             <div className="flex items-start gap-4">
                                                 <LifeBuoy size={60} />
@@ -268,8 +273,19 @@ const NavigationBar = () => {
                                                 </span>
                                             </div>
                                         </Link>
-                                    </li>
-                                </ul>
+                                        <Link href="/life-at-prospectiv" className="transition-all duration-500">
+                                            <div className="flex items-start gap-4">
+                                                <LifeBuoy size={60} />
+                                                <span>
+                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
+                                                    <p className="text-sm text-textColorTwo">
+                                                        A page about our culture, people, values and what it's like to work here
+                                                    </p>
+                                                </span>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
                         </li>
 
@@ -308,6 +324,7 @@ const NavigationBar = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
+                    className="-z-10"
                 >
                     <div className="w-full max-w-60 flex rounded-full mx-auto bg-gradient-to-tr from-[#6f86ff] via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                         <Link href="#" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
