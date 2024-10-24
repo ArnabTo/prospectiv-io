@@ -1,3 +1,5 @@
+import { m } from "framer-motion";
+
 const HeroSectionTextContent = {
     heading: 'Drive More Sales Meetings with Your Ideal Customers.',
     paragraph: 'Helping small-to-medium-sized service-based businesses book more sales meetings effortlessly, so you can focus on growing your business.'
@@ -114,4 +116,64 @@ const lifeAtProspectivTextContent = {
         },
     }
 }
-export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent }
+
+const aboutUsPageTextContent = {
+    'heading': {
+        heading: 'About Us',
+        paragraph: 'Prospectiv is more than a tool: we are smart humans with unrivalled expertise and powerful technology. Our teams have doubled in size every year, thanks to the expertise, dedication and passion of our people.'
+    },
+    'founder': {
+        heading: 'From Two Founders to a Growing Team: The Prospectiv Journey',
+        paragraph: `In 2015, driven by a shared vision and a passion for innovation, founders Ryan and Rob launched Prospectiv with one unique idea—focusing on the numbers. Today, while delivering transparent and measurable ROI remains at our core, we've grown into a full team of professionals who bring expertise, enthusiasm, and the strength of human connection to everything we do. Together, we’ve made remarkable strides in a short period, and the journey continues.`,
+    },
+    'prospectiValues': {
+        'heading': {
+            heading: 'Prospectiv Values',
+            paragraph: ` Our values permeate Sopro through our behaviours, both as people and across our business. They influence the way we hire new people, develop employees, review performance, evaluate reward and achieve promotion.`
+        },
+        'contentOne': {
+            heading: 'We invest',
+            paragraph: `e invest in the long-term success of our business, our products and services. We invest in our exceptional people, in personal development, training and career progression. We invest in high performing facilities and work environments for our teams to thrive in.`
+        },
+        'contentTwo': {
+            heading: 'We are ambitious',
+            paragraph: `We are ambitious and have an entrepreneurial spirit that is focused, energising and relentless. We set ambitious goals and clear paths to success. We value career progression and encourage passionate and imaginative collaboration between like-minded and driven professionals.`
+        },
+        'contentThree': {
+            heading: 'We are people',
+            paragraph: `We are people and we are proud of our exceptional teams and their identities. We are supportive and promote each other’s success and we give back to our communities through impactful initiatives. We encourage teamwork, inclusivity and respect. Our people are empowered.`
+        },
+        'contentFour': {
+            heading: 'We are open',
+            paragraph: `  We are open and transparent in everything we do. We are clear about who we are, what we do and how we do it. We encourage an open-door approach to ensure every team member is valued, heard and supported.`
+        },
+    },
+    'meetCampaignMember': {
+        'heading': {
+            heading: 'Meet your campaign team',
+            paragraph: `Sopro clients get a dedicated two person team that work tirelessly to improve campaign performance. But those two are the tip of the iceberg, with an army of circa 300 experts backing them up.`
+        },
+        'contentOne': {
+            heading: 'Customer Success',
+            paragraph: `The face of Sopro, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
+            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        },
+        'contentTwo': {
+            heading: 'Operations',
+            paragraph: `The wizards behind the campaigns, these guys don't rest until they've pulled every lever and tweaked every button, in their never-ending pursuit of the perfect campaign.`,
+            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        },
+        'contentThree': {
+            heading: 'Tech',
+            paragraph: `The brains behind our world-class software, this team of self-confessed geeks build systems that deliver emails at an astonishing rate, and create cutting edge tech to take prospecting to the next level.`,
+            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        },
+        'contentFour': {
+            heading: 'Compliance and data',
+            paragraph: `The number boffins, our compliance and data experts are next-level clever, making sure everything we do is best in class and watertight.`,
+            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        },
+
+    }
+}
+export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent, aboutUsPageTextContent }
