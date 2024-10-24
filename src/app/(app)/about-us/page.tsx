@@ -36,9 +36,9 @@ const AboutUs = () => {
                     }}
                 >
                 </div>
-                <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
+                <div className='absolute w-full lg:max-w-[70%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
                     <h1 className='text-3xl lg:text-6xl font-extrabold '>About <span className='text-secondary'>Us</span> </h1>
-                    <p className='text-textColorTwo text-md lg:text-lg text-center font-bold mx-auto'>
+                    <p className='text-textColorTwo text-md lg:text-lg text-center font-bold mx- px-5'>
                         {aboutUsPageTextContent?.heading?.paragraph}
                     </p>
                     <div className='flex justify-center items-center'>
@@ -95,7 +95,7 @@ const AboutUs = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieOne)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieOne)}
                         >
@@ -120,7 +120,7 @@ const AboutUs = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieTwo)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieTwo)}
                         >
@@ -145,7 +145,7 @@ const AboutUs = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieThree)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieThree)}
                         >
@@ -170,7 +170,7 @@ const AboutUs = () => {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.8 }}
                             viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieFour)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieFour)}
                         >
@@ -206,7 +206,90 @@ const AboutUs = () => {
                         </p>
                     </motion.div>
 
-                    <div className="space-y-10">
+                    <div className="lg:max-w-[80%] mx-auto space-y-10">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col md:flex-row items-center md:items-center gap-10">
+                            <div className="rounded-3xl h-full">
+                                <Image
+                                    className="border border-borderColor w-full h-full object-cover rounded-3xl"
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentOne?.image}
+                                    width={500}
+                                    height={500}
+                                    alt="member image"
+                                />
+                            </div>
+                            <div className="space-y-3">
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentOne?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentOne?.paragraph}</p>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col md:flex-row-reverse items-center md:items-center gap-10">
+                            <div className="rounded-3xl">
+                                <Image
+                                    className="border border-borderColor w-full h-full object-cover rounded-3xl"
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.image}
+                                    width={500}
+                                    height={500}
+                                    alt="member image"
+                                />
+                            </div>
+                            <div className="space-y-3">
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.paragraph}</p>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col md:flex-row items-center md:items-center gap-10">
+                            <div className="rounded-3xl">
+                                <Image
+                                    className="border border-borderColor w-full h-full object-cover rounded-3xl"
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentThree?.image}
+                                    width={500}
+                                    height={500}
+                                    alt="member image"
+                                />
+                            </div>
+                            <div className="space-y-3">
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentThree?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentThree?.paragraph}</p>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="flex flex-col md:flex-row-reverse items-center md:items-center gap-10">
+                            <div className="rounded-3xl">
+                                <Image
+                                    className="border border-borderColor w-full h-full object-cover rounded-3xl"
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentFour?.image}
+                                    width={500}
+                                    height={500}
+                                    alt="member image"
+                                />
+                            </div>
+                            <div className="space-y-3">
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.paragraph}</p>
+                            </div>
+                        </motion.div>
+
+                    </div>
+                    {/* <div className="space-y-10">
 
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
@@ -214,9 +297,9 @@ const AboutUs = () => {
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
                             className="flex flex-col lg:flex-row items-center gap-10 lg:max-w-[80%] mx-auto">
-                            <div className="lg:w-96 lg:h-48 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-2xl lg:rounded-full">
+                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
                                 <Image
-                                    className="w-full h-full rounded-2xl lg:rounded-full border border-borderColor"
+                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
                                     src={aboutUsPageTextContent?.meetCampaignMember?.contentOne?.image}
                                     width={500} height={500} alt="member image" />
                             </div>
@@ -232,9 +315,9 @@ const AboutUs = () => {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
                             className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:max-w-[80%] mx-auto">
-                          <div className="lg:w-96 lg:h-48 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-2xl lg:rounded-full">
+                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
                                 <Image
-                                   className="w-full h-full rounded-2xl lg:rounded-full border border-borderColor"
+                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
                                     src={aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.image}
                                     width={500} height={500} alt="member image" />
                             </div>
@@ -250,9 +333,9 @@ const AboutUs = () => {
                             transition={{ duration: 0.5, delay: 0.4 }}
                             viewport={{ once: true }}
                             className="flex flex-col lg:flex-row items-center gap-10 lg:max-w-[80%] mx-auto">
-                              <div className="lg:w-96 lg:h-48 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-2xl lg:rounded-full">
+                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
                                 <Image
-                                    className="w-full h-full rounded-2xl lg:rounded-full border border-borderColor"
+                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
                                     src={aboutUsPageTextContent?.meetCampaignMember?.contentThree?.image}
                                     width={500} height={500} alt="member image" />
                             </div>
@@ -268,9 +351,9 @@ const AboutUs = () => {
                             transition={{ duration: 0.5, delay: 0.6 }}
                             viewport={{ once: true }}
                             className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:max-w-[80%] mx-auto">
-                              <div className="lg:w-96 lg:h-48 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-2xl lg:rounded-full">
+                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
                                 <Image
-                                   className="w-full h-full rounded-2xl lg:rounded-full border border-borderColor"
+                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
                                     src={aboutUsPageTextContent?.meetCampaignMember?.contentFour?.image}
                                     width={500} height={500} alt="member image" />
                             </div>
@@ -279,9 +362,8 @@ const AboutUs = () => {
                                 <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.paragraph}</p>
                             </div>
                         </motion.div>
+                    </div> */}
 
-
-                    </div>
                 </div>
 
                 <div className='space-y-5'>
@@ -326,14 +408,14 @@ const AboutUs = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
                         <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.9 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="relative sm:w-[400px] md:w-[450px] lg:w-[400px] lg:h-[500px] rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
+                            className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
                         >
                             <Image
                                 width={300}
@@ -370,7 +452,7 @@ const AboutUs = () => {
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="relative sm:w-[400px] md:w-[450px] lg:w-[400px] lg:h-[500px] rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
+                            className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full  rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
                         >
                             <Image
                                 width={300}
@@ -407,7 +489,7 @@ const AboutUs = () => {
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.5 }}
                             viewport={{ once: true }}
-                            className="relative sm:w-[400px] md:w-[450px] lg:w-[400px] lg:h-[500px] rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
+                            className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
                         >
                             <Image
                                 width={300}
@@ -445,69 +527,73 @@ const AboutUs = () => {
                 <div className="p-5">
                     <div>
 
-                        <div className="bg-card border border-borderColor rounded-3xl p-5 space-y-6">
+                        <div className="bg-card border border-borderColor rounded-3xl p-5 space-y-6 md:p-10">
 
-                            <h2 className="text-3xl font-bold text-start">
+                            <h2 className="text-3xl lg:text-5xl  font-bold text-center">
                                 Prospectiv in Numbers
                             </h2>
 
-                            <div className="flex flex-col lg:flex-row justify-between items-center gap-5 relative">
+                            <div className="flex flex-col md:flex-row justify-between items-center gap-5  relative">
 
-                                <div className="flex flex-col justify-center items-center gap-3">
-                                    <p className="text-textColorTwo">We engage over</p>
-                                    <CountUp
-                                        start={0}
-                                        end={3500}
-                                        duration={5}
-                                        separator=","
-                                        className="text-5xl font-bold text-gradientColorOne"
-                                    />
-                                    <p>new prospect per hour</p>
+                                <div className="flex flex-col lg:flex-row gap-5">
+                                    <div className="flex flex-col justify-center items-center gap-3">
+                                        <p className="text-textColorTwo">We engage over</p>
+                                        <CountUp
+                                            start={0}
+                                            end={3500}
+                                            duration={5}
+                                            separator=","
+                                            className="text-5xl font-bold text-gradientColorOne"
+                                        />
+                                        <p>new prospect per hour</p>
+                                    </div>
+
+                                    <div className="flex flex-col justify-center items-center gap-3">
+                                        <p className="text-textColorTwo">Each year we generate</p>
+                                        <CountUp
+                                            start={0}
+                                            end={215}
+                                            duration={5}
+                                            prefix="$"
+                                            suffix="M"
+                                            separator=","
+                                            className="text-5xl font-bold text-gradientColorTwo"
+                                        />
+                                        <p>of new deals for our clients</p>
+                                    </div>
                                 </div>
 
-                                <div className="flex flex-col justify-center items-center gap-3">
-                                    <p className="text-textColorTwo">Each year we generate</p>
-                                    <CountUp
-                                        start={0}
-                                        end={215}
-                                        duration={5}
-                                        prefix="$"
-                                        suffix="M"
-                                        separator=","
-                                        className="text-5xl font-bold text-gradientColorTwo"
-                                    />
-                                    <p>of new deals for our clients</p>
-                                </div>
+                                <div className="flex flex-col lg:flex-row gap-5">
+                                    <div className="flex flex-col justify-center items-center gap-3">
+                                        <p className="text-textColorTwo">We engage over</p>
+                                        <CountUp
+                                            start={0}
+                                            end={21000}
+                                            duration={5}
+                                            separator=","
+                                            className="text-5xl font-bold text-gradientColorThree"
+                                        />
+                                        <p>new prospect per hour</p>
+                                    </div>
 
-                                <div className="flex flex-col justify-center items-center gap-3">
-                                    <p className="text-textColorTwo">We engage over</p>
-                                    <CountUp
-                                        start={0}
-                                        end={21000}
-                                        duration={5}
-                                        separator=","
-                                        className="text-5xl font-bold text-gradientColorThree"
-                                    />
-                                    <p>new prospect per hour</p>
-                                </div>
-
-                                <div className="flex flex-col justify-center items-center gap-3">
-                                    <p className="text-textColorTwo">We engage over</p>
-                                    <CountUp
-                                        start={0}
-                                        end={630}
-                                        duration={5}
-                                        suffix="+"
-                                        separator=","
-                                        className="text-5xl font-bold text-gradientColorFour"
-                                    />
-                                    <p>new prospect per hour</p>
+                                    <div className="flex flex-col justify-center items-center gap-3">
+                                        <p className="text-textColorTwo">We engage over</p>
+                                        <CountUp
+                                            start={0}
+                                            end={630}
+                                            duration={5}
+                                            suffix="+"
+                                            separator=","
+                                            className="text-5xl font-bold text-gradientColorFour"
+                                        />
+                                        <p>new prospect per hour</p>
+                                    </div>
                                 </div>
 
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.3}}
+                                    transition={{ duration: 0.3 }}
                                     viewport={{ once: true }}
                                     className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-28 -left-24 lg:-left-52 -z-10 transition-all">
                                     <div className="bg-gradientColorFour absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>

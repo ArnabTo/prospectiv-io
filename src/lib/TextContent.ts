@@ -184,7 +184,7 @@ const aboutUsPageTextContent = {
             name: 'John Doe',
             position: 'CEO',
             email: 'uR4Uv@example.com',
-            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
             textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
         }
