@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { AlignJustify, LifeBuoy } from 'lucide-react';
+import { AlignJustify, LifeBuoy, MessageCircleWarning } from 'lucide-react';
 import { useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -238,19 +238,8 @@ const NavigationBar = () => {
                                 <div className="flex flex-col lg:flex-row items-center gap-5 p-5">
                                     <div className="flex flex-col gap-5">
                                         <Link href="/life-at-prospectiv" className="w-full transition-all duration-500">
-                                            <div className="flex items-start gap-4">
-                                                <LifeBuoy size={60} />
-                                                <span>
-                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
-                                                    <p className="text-sm text-textColorTwo">
-                                                        A page about our culture, people, values and what it's like to work here
-                                                    </p>
-                                                </span>
-                                            </div>
-                                        </Link>
-                                        <Link href="/life-at-prospectiv" className="transition-all duration-500">
-                                            <div className="flex items-start gap-4">
-                                                <LifeBuoy size={60} />
+                                            <div className="flex items-center gap-4">
+                                                <LifeBuoy size={120} />
                                                 <span>
                                                     <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
                                                     <p className="text-sm text-textColorTwo">
@@ -260,28 +249,17 @@ const NavigationBar = () => {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="w-1 h-32 bg-foreground"></div>
+                                    <div className="w-1 h-32 bg-secondary"></div>
                                     <div className="flex flex-col gap-5">
-                                        <Link href="/life-at-prospectiv" className="transition-all duration-500">
-                                            <div className="flex items-start gap-4">
-                                                <LifeBuoy size={60} />
-                                                <span>
-                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
+                                        <Link href="/about-us" className="transition-all duration-500">
+                                            <div className="flex items-center gap-4">
+                                                <MessageCircleWarning size={120}/>
+                                                <div>
+                                                    <h3 className="text-lg font-bold text-secondary">About Us</h3>
                                                     <p className="text-sm text-textColorTwo">
-                                                        A page about our culture, people, values and what it's like to work here
+                                                      Meet your campaign team: over 300 prospecting experts helping you sell more.
                                                     </p>
-                                                </span>
-                                            </div>
-                                        </Link>
-                                        <Link href="/life-at-prospectiv" className="transition-all duration-500">
-                                            <div className="flex items-start gap-4">
-                                                <LifeBuoy size={60} />
-                                                <span>
-                                                    <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
-                                                    <p className="text-sm text-textColorTwo">
-                                                        A page about our culture, people, values and what it's like to work here
-                                                    </p>
-                                                </span>
+                                                </div>
                                             </div>
                                         </Link>
                                     </div>

@@ -82,13 +82,36 @@ const lifeAtProspectivTextContent = {
         heading: 'Life at Prospectiv',
         paragraph: `We're the people behind the prospects. For all the clever tech, what makes the Sopro service stand out is the people. As we like to tell our clients, we’re a team, not a tool.`,
     },
-    'mettingPeople':{
+    'mettingPeople': {
         heading: 'Meet Our People',
         paragraph: `We bring together vast knowledge and expertise, while also making Sopro a place to grow, learn, achieve, and have fun.`
     },
-    'ourteam':{
+    'ourteam': {
         heading: 'Our Team',
         paragraph: `We love all our teams equally! To learn more about any team or apply, check out their pages below.`,
+    },
+    'culture': {
+        'heading': {
+            heading: 'Culture and perks',
+        },
+        'sections': {
+            'learningAndDevelopment': {
+                heading: 'Learning and development',
+                paragraph: `We’ve built our own learning platform to aid your personal and professional growth. Additional support comes from mentorship, external training and certification.`,
+            },
+            'hybridWorking': {
+                heading: 'Hybrid working',
+                paragraph: `For face-to-face time with your colleagues, work from our offices two days a week: centrally located and packed with perks and treats. And for those days when you need some quiet time to fully focus, work from home.`,
+            },
+            'wellbeingPackage': {
+                heading: 'Wellbeing package',
+                paragraph: `Our wellbeing budget is adapted to the needs of our people: regular sports, social activities and lots of healthy snacks.`,
+            },
+            'yourWorkMatters': {
+                heading: 'Your work matters',
+                paragraph: `We have an open-door policy and value your opinion. Ideas are heard and genuinely put into practice.`,
+            }
+        },
     }
 }
 export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent }
