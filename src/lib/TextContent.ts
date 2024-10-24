@@ -174,6 +174,20 @@ const aboutUsPageTextContent = {
             image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         },
 
+    },
+    'leaderShipTeam':{
+        'heading':{
+            heading: 'Our Leadership Team',
+            paragraph: `Every member of our team is focused on delivering success for our clients. And while we can't introduce every Sopro employee, you can meet our leadership team here.`
+        },
+        contentOne: {
+            name: 'John Doe',
+            position: 'CEO',
+            email: 'uR4Uv@example.com',
+            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+                                        When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        }
     }
 }
 export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent, aboutUsPageTextContent }
