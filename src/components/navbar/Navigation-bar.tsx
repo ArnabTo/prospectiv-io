@@ -216,12 +216,6 @@ const NavigationBar = () => {
 
                             </ul>
                         </li> */}
-
-                        <li>
-                            <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                About Us
-                            </Link>
-                        </li>
                         <li>
                             <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                 Pricing
