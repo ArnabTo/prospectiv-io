@@ -11,7 +11,7 @@ import {
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, LifeBuoy, MessageCircleWarning } from "lucide-react";
+import { AlignJustify, BriefcaseBusiness, LifeBuoy, MessageCircleWarning } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -253,9 +253,7 @@ const Navbar = () => {
                                                     </span>
                                                 </div>
                                             </Link>
-                                        </div>
-                                        <div className="w-1 h-32 bg-secondary"></div>
-                                        <div className="flex flex-col gap-5">
+                                            <div className="flex flex-col gap-5">
                                             <Link href="/about-us" className="transition-all duration-500">
                                                 <div className="flex items-center gap-4">
                                                     <MessageCircleWarning size={120} />
@@ -263,6 +261,21 @@ const Navbar = () => {
                                                         <h3 className="text-lg font-bold text-secondary">About Us</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             Meet your campaign team: over 300 prospecting experts helping you sell more.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        </div>
+                                        <div className="w-1 h-32 bg-secondary"></div>
+                                        <div className="flex flex-col gap-5">
+                                            <Link href="/careers" className="transition-all duration-500">
+                                                <div className="flex items-center gap-4">
+                                                 <BriefcaseBusiness size={120}/>
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-secondary">Careers</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                           Join the Prospectiv team. Browse our open opportunities and find your next role.
                                                         </p>
                                                     </div>
                                                 </div>

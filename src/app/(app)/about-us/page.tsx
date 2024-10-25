@@ -541,7 +541,7 @@ const AboutUs = () => {
                             <p className="text-lg text-textColorTwo">We’re proud of the success stories we’ve created for our clients, transforming businesses large and small through optimised email marketing. Back in 2015, Prospectiv’s first customer was… Prospectiv. We used our own technology to grow our business, perfecting the service through those initial campaigns.
                             </p>
                             <p className="text-lg text-textColorTwo"> Discover what’s possible for your business.</p>
-                            <div className="w-60 lg:w-full max-w-72 flex mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+                            <div className="w-60 lg:w-full max-w-72 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                                 <Link href="" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                                     See open opportunities
                                 </Link>
