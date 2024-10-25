@@ -8,7 +8,7 @@ import { useRef } from "react";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import '@/app/custom.css'
-import { Link2Icon, Linkedin, LinkedinIcon, Mail } from "lucide-react";
+import {  Mail } from "lucide-react";
 import CountUp from "react-countup";
 
 const AboutUs = () => {

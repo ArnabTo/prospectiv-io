@@ -12,7 +12,7 @@ import { lifeAtProspectivTextContent } from '@/lib/TextContent';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import { EffectCards } from 'swiper/modules';
+import { EffectCards, Autoplay } from 'swiper/modules';
 
 
 const LifeAtProspectiv = () => {
@@ -264,7 +264,11 @@ const LifeAtProspectiv = () => {
                             <Swiper
                                 effect={'cards'}
                                 grabCursor={true}
-                                modules={[EffectCards]}
+                                modules={[EffectCards, Autoplay]}
+                                autoplay={{
+                                    delay: 1500,
+                                    disableOnInteraction: true,
+                                }}
                                 className='mySwiper w-60 md:w-96 lg:w-[500px] mx-auto lg:mx-0'
                             >
                                 <SwiperSlide className='bg-gradient-to-tr from-secondary via-gradientColorThree to-gradientColorFour'>
