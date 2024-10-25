@@ -21,7 +21,7 @@ const NotFound = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="blur-[100px] w-full max-w-[44%] min-h-[74%] lg:max-w-[60%] lg:min-h-[60%] absolute -top-36 -left-[400px] animate-spin-slow -z-10  transition-all">
+                className="blur-[100px] w-full max-w-[44%] min-h-[74%] lg:max-w-[60%] lg:min-h-[60%] absolute top-0 left-0 lg:-top-36 lg:-left-[400px] animate-spin-slow -z-10  transition-all">
                 <div className="bg-gradientColorTwo absolute rounded-full opacity-50 min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0 lg:-top-11 lg:-right-36"></div>
                 <div className="bg-gradientColorFive absolute rounded-full opacity-50 min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                 <div className="bg-gradientColorFour absolute rounded-full opacity-50 min-w-[70%] min-h-[70%] max-h-[70%]"></div>
@@ -31,7 +31,7 @@ const NotFound = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
                 viewport={{ once: true }}
-                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -bottom-72 -right-64 -z-10 transition-all">
+                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-0 right-0 lg:-bottom-72 lg:-right-64 -z-10 transition-all">
                 <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                 <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                 <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
