@@ -553,7 +553,7 @@ const AboutUs = () => {
                         <Image
                             width={300}
                             height={300}
-                            src={aboutUsPageTextContent?.leaderShipTeam?.contentOne?.image}
+                            src={aboutUsPageTextContent?.leaderShipTeam?.contents[0]?.image}
                             alt="Harvey Todd"
                             className="w-full h-full object-cover rounded-2xl md:rounded-full"
                         />
