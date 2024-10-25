@@ -528,12 +528,7 @@ const AboutUs = () => {
                     <div>
 
                         <div className="bg-card border border-borderColor rounded-3xl p-5 space-y-6 md:p-10">
-
-                            <h2 className="text-3xl lg:text-5xl  font-bold text-center">
-                                Prospectiv in Numbers
-                            </h2>
-
-                            <div className="flex flex-col md:flex-row justify-between items-center gap-5  relative">
+                            <div className="flex flex-col md:flex-row justify-between lg:justify-center items-center gap-5  relative">
 
                                 <div className="flex flex-col lg:flex-row gap-5">
                                     <div className="flex flex-col justify-center items-center gap-3">
