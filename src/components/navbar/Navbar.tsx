@@ -7,6 +7,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
@@ -189,7 +190,7 @@ const Navbar = () => {
 
                 <div>
                     <NavigationMenu>
-                        <NavigationMenuList className="flex justify-between items-center gap-5">
+                        <NavigationMenuList className="flex justify-between items-center gap-8">
                             <NavigationMenuItem>
                                 <Link href='' className="text-lg font-bold text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Home</NavigationMenuLink>
@@ -236,7 +237,7 @@ const Navbar = () => {
                                     </div>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="pt-[3px]">
                                 <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resource</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-5 bg-background">
@@ -271,7 +272,7 @@ const Navbar = () => {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
 
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="pt-[8px]">
                                 <Link href='' className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Result</NavigationMenuLink>
                                 </Link>
