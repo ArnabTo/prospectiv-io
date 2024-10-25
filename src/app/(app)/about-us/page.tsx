@@ -8,7 +8,7 @@ import { useRef } from "react";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import '@/app/custom.css'
-import {  Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import CountUp from "react-countup";
 
 const AboutUs = () => {
@@ -216,15 +216,15 @@ const AboutUs = () => {
                             <div className="rounded-3xl h-full">
                                 <Image
                                     className="border border-borderColor w-full h-full object-cover rounded-3xl"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentOne?.image}
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.content[0].image}
                                     width={500}
                                     height={500}
                                     alt="member image"
                                 />
                             </div>
                             <div className="space-y-3">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentOne?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentOne?.paragraph}</p>
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.content[0].heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.content[0].paragraph}</p>
                             </div>
                         </motion.div>
                         <motion.div
@@ -236,15 +236,15 @@ const AboutUs = () => {
                             <div className="rounded-3xl">
                                 <Image
                                     className="border border-borderColor w-full h-full object-cover rounded-3xl"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.image}
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.content[1].image}
                                     width={500}
                                     height={500}
                                     alt="member image"
                                 />
                             </div>
                             <div className="space-y-3">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.paragraph}</p>
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.content[1]?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.content[1]?.paragraph}</p>
                             </div>
                         </motion.div>
                         <motion.div
@@ -256,15 +256,15 @@ const AboutUs = () => {
                             <div className="rounded-3xl">
                                 <Image
                                     className="border border-borderColor w-full h-full object-cover rounded-3xl"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentThree?.image}
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.content[2]?.image}
                                     width={500}
                                     height={500}
                                     alt="member image"
                                 />
                             </div>
                             <div className="space-y-3">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentThree?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentThree?.paragraph}</p>
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.content[2]?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.content[2]?.paragraph}</p>
                             </div>
                         </motion.div>
                         <motion.div
@@ -276,15 +276,15 @@ const AboutUs = () => {
                             <div className="rounded-3xl">
                                 <Image
                                     className="border border-borderColor w-full h-full object-cover rounded-3xl"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentFour?.image}
+                                    src={aboutUsPageTextContent?.meetCampaignMember?.content[3]?.image}
                                     width={500}
                                     height={500}
                                     alt="member image"
                                 />
                             </div>
                             <div className="space-y-3">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.paragraph}</p>
+                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.content[3]?.heading}</h3>
+                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.content[3]?.paragraph}</p>
                             </div>
                         </motion.div>
 
@@ -402,125 +402,54 @@ const AboutUs = () => {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                         className='lg:w-5/6 mx-auto text-center space-y-5'>
-                        <h2 className='text-4xl font-bold'> {aboutUsPageTextContent?.meetCampaignMember?.heading?.heading}</h2>
+                        <h2 className='text-4xl font-bold'>{aboutUsPageTextContent.leaderShipTeam.heading.heading}</h2>
                         <p className='text-textColorTwo text-lg'>
-                            {aboutUsPageTextContent?.meetCampaignMember?.heading?.paragraph}
+                        {aboutUsPageTextContent.leaderShipTeam.heading.paragraph}
                         </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
-                        >
-                            <Image
-                                width={300}
-                                height={300}
-                                src={aboutUsPageTextContent?.leaderShipTeam?.contentOne?.image}
-                                alt="Harvey Todd"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-x-0 bottom-0 h-full bg-background/90 rounded-2xl transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                                <div className="absolute inset-x-0 bottom-0 h-full flex items-center justify-center transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 overflow-auto lg:overflow-hidden p-4">
-                                    <div className="text-start text-white p-2 sm:p-4 space-y-4 sm:space-y-6 md:space-y-8 max-h-[100%] sm:max-h-full">
-                                        <span>
-                                            <h3 className="text-lg md:text-3xl font-bold">
-                                                {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.name}
-                                            </h3>
-                                            <p className="lg:text-md text-secondary">
-                                                {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.position}
+                        {
+                            aboutUsPageTextContent.leaderShipTeam.contents.map((content, index)=>(
+                                <motion.div
+                                initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }}
+                                key={index}
+                                className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
+                            >
+                                <Image
+                                    width={300}
+                                    height={300}
+                                    src={content?.image}
+                                    alt="Harvey Todd"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 h-full bg-background/90 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+                                    <div className="absolute inset-x-0 bottom-0 h-full flex items-center justify-center transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 overflow-auto lg:overflow-hidden p-4">
+                                        <div className="text-start text-white p-2 sm:p-4 space-y-4 sm:space-y-6 md:space-y-8 max-h-[100%] sm:max-h-full">
+                                            <span>
+                                                <h3 className="text-lg md:text-3xl font-bold">
+                                                    {content?.name}
+                                                </h3>
+                                                <p className="lg:text-md text-secondary">
+                                                    {content?.position}
+                                                </p>
+                                                <Link href='' className="flex items-center gap-2 text-sm lg:text-lg">
+                                                    <Mail />: {content?.email}
+                                                </Link>
+                                            </span>
+                                            <p className="text-sm text-md lg:text-lg text-textColorTwo overflow-auto">
+                                                {content?.textContent}
+    
                                             </p>
-                                            <Link href='' className="flex items-center gap-2 text-sm lg:text-lg">
-                                                <Mail />: {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.email}
-                                            </Link>
-                                        </span>
-                                        <p className="text-sm text-md lg:text-lg text-textColorTwo overflow-auto">
-                                            {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.textContent}
-
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full  rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
-                        >
-                            <Image
-                                width={300}
-                                height={300}
-                                src={aboutUsPageTextContent?.leaderShipTeam?.contentOne?.image}
-                                alt="Harvey Todd"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-x-0 bottom-0 h-full bg-background/90 rounded-2xl transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                                <div className="absolute inset-x-0 bottom-0 h-full flex items-center justify-center transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 overflow-auto lg:overflow-hidden p-4">
-                                    <div className="text-start text-white p-2 sm:p-4 space-y-4 sm:space-y-6 md:space-y-8 max-h-[100%] sm:max-h-full">
-                                        <span>
-                                            <h3 className="text-lg md:text-3xl font-bold">
-                                                {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.name}
-                                            </h3>
-                                            <p className="lg:text-md text-secondary">
-                                                {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.position}
-                                            </p>
-                                            <Link href='' className="flex items-center gap-2 text-sm lg:text-lg">
-                                                <Mail />: {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.email}
-                                            </Link>
-                                        </span>
-                                        <p className="text-sm text-md lg:text-lg text-textColorTwo overflow-auto">
-                                            {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.textContent}
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
-                        >
-                            <Image
-                                width={300}
-                                height={300}
-                                src={aboutUsPageTextContent?.leaderShipTeam?.contentOne?.image}
-                                alt="Harvey Todd"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-x-0 bottom-0 h-full bg-background/90 rounded-2xl transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-                                <div className="absolute inset-x-0 bottom-0 h-full flex items-center justify-center transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 overflow-auto lg:overflow-hidden p-4">
-                                    <div className="text-start text-white p-2 sm:p-4 space-y-4 sm:space-y-6 md:space-y-8 max-h-[100%] sm:max-h-full">
-                                        <span>
-                                            <h3 className="text-lg md:text-3xl font-bold">
-                                                {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.name}
-                                            </h3>
-                                            <p className="lg:text-md text-secondary">
-                                                {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.position}
-                                            </p>
-                                            <Link href='' className="flex items-center gap-2 text-sm lg:text-lg">
-                                                <Mail />: {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.email}
-                                            </Link>
-                                        </span>
-                                        <p className="text-sm text-md lg:text-lg text-textColorTwo overflow-auto">
-                                            {aboutUsPageTextContent?.leaderShipTeam?.contentOne?.textContent}
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-
+                            </motion.div>
+                            ))
+                        }
                     </div>
                 </div>
 
@@ -597,6 +526,67 @@ const AboutUs = () => {
                                 </motion.div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div className="flex flex-col lg:flex-row items-center gap-5 p-5">
+                    <div className="space-y-10">
+                        <h2 className="text-3xl font-bold">We're our own best case study</h2>
+                        <div>
+                            <h1 className="text-2xl text-textColorTwo"><span className="text-5xl bg-clip-text text-transparent bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586]">70% of our new business</span> <br></br>
+                                comes from our own email marketing campaigns
+                            </h1>
+                        </div>
+                        <div className="space-y-5">
+                            <p className="text-lg text-textColorTwo">We’re proud of the success stories we’ve created for our clients, transforming businesses large and small through optimised email marketing. Back in 2015, Prospectiv’s first customer was… Prospectiv. We used our own technology to grow our business, perfecting the service through those initial campaigns.
+                            </p>
+                            <p className="text-lg text-textColorTwo"> Discover what’s possible for your business.</p>
+                            <div className="w-60 lg:w-full max-w-72 flex mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+                                <Link href="" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
+                                    See open opportunities
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-full md:max-w-44 flex-shrink-0">
+                        <Image
+                            width={300}
+                            height={300}
+                            src={aboutUsPageTextContent?.leaderShipTeam?.contentOne?.image}
+                            alt="Harvey Todd"
+                            className="w-full h-full object-cover rounded-2xl md:rounded-full"
+                        />
+                    </div>
+                </div>
+
+                <div className='space-y-5 p-5'>
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className='w-full md:w-3/4 lg:w-4/5 text-start space-y-5'>
+                        <h2 className='text-4xl font-bold'> All winning together</h2>
+                        <p className='text-textColorTwo text-lg'>
+                            Right from the start, we wanted our clients to have more than just logins and a weekly report. Prospectiv would be a supportive marketing service, prioritising transparency, compliance and the protection of our client's reputations. So we started hiring talented people, who bought-in to our vision. And people noticed. Awards and recognition followed, which spurred us all on even more.
+                        </p>
+                    </motion.div>
+                    <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.7, delay: 0.6 }}
+                            viewport={{ once: true }}
+                            className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1668491195456-9341d9cf3977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXQlMjB3aGl0ZXxlbnwwfDF8fHwxNzIxODIyMzU3fDA&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1498100152307-ce63fd6c5424?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" />
+                        </motion.div>
                     </div>
                 </div>
             </div>

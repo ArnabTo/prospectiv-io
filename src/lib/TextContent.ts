@@ -153,41 +153,103 @@ const aboutUsPageTextContent = {
             heading: 'Meet your campaign team',
             paragraph: `Sopro clients get a dedicated two person team that work tirelessly to improve campaign performance. But those two are the tip of the iceberg, with an army of circa 300 experts backing them up.`
         },
-        'contentOne': {
-            heading: 'Customer Success',
+        content:[
+            {
+                heading: 'Customer Success',
             paragraph: `The face of Sopro, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
-            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+            },
+            {
+                heading: 'Operations',
+                paragraph: `The wizards behind the campaigns, these guys don't rest until they've pulled every lever and tweaked every button, in their never-ending pursuit of the perfect campaign.`,
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+            },
+            {
+                heading: 'Tech',
+                paragraph: `The brains behind our world-class software, this team of self-confessed geeks build systems that deliver emails at an astonishing rate, and create cutting edge tech to take prospecting to the next level.`,
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+            },
+            {
+                heading: 'Compliance and data',
+            paragraph: `The number boffins, our compliance and data experts are next-level clever, making sure everything we do is best in class and watertight.`,
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+            }
+
+        ]
+        ,
+        'contentOne': {
+            
         },
         'contentTwo': {
-            heading: 'Operations',
-            paragraph: `The wizards behind the campaigns, these guys don't rest until they've pulled every lever and tweaked every button, in their never-ending pursuit of the perfect campaign.`,
-            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            
         },
         'contentThree': {
-            heading: 'Tech',
-            paragraph: `The brains behind our world-class software, this team of self-confessed geeks build systems that deliver emails at an astonishing rate, and create cutting edge tech to take prospecting to the next level.`,
-            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+           
         },
         'contentFour': {
-            heading: 'Compliance and data',
-            paragraph: `The number boffins, our compliance and data experts are next-level clever, making sure everything we do is best in class and watertight.`,
-            image: 'https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            
         },
 
     },
-    'leaderShipTeam':{
-        'heading':{
+    'leaderShipTeam': {
+        'heading': {
             heading: 'Our Leadership Team',
             paragraph: `Every member of our team is focused on delivering success for our clients. And while we can't introduce every Sopro employee, you can meet our leadership team here.`
         },
-        contentOne: {
-            name: 'John Doe',
-            position: 'CEO',
-            email: 'uR4Uv@example.com',
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
-            textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                        When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
-        }
+        contents: [
+            {
+                name: 'John Doe',
+                position: 'CEO',
+                email: 'uR4Uv@example.com',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+            },
+           
+            {
+                name: 'John Doe',
+                position: 'CEO',
+                email: 'uR4Uv@example.com',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+            },
+           
+            {
+                name: 'John Doe',
+                position: 'CEO',
+                email: 'uR4Uv@example.com',
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+            },
+           
+
+        ],
+        // contentOne: {
+        //     name: 'John Doe',
+        //         position: 'CEO',
+        //             email: 'uR4Uv@example.com',
+        //                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+        //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        // },
+        // contentTwo: {
+        //     name: 'John Doe',
+        //         position: 'CEO',
+        //             email: 'uR4Uv@example.com',
+        //                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+        //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        // },
+        // contentThree: {
+        //     name: 'John Doe',
+        //         position: 'CEO',
+        //             email: 'uR4Uv@example.com',
+        //                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+        //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
+        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        // },
     }
 }
 export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent, aboutUsPageTextContent }
