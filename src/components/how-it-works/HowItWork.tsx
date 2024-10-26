@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Lottie from 'lottie-react';
 import './cardHover.css';
 import { HowItWorkTextContent } from '@/lib/TextContent';
+const LottieFileOne = require('../../public/assets/search.json');
+
 const HowItWork = () => {
     // Create separate refs for each Lottie animation
     const lottieRefOne = useRef(null);
@@ -15,7 +17,11 @@ const HowItWork = () => {
     const lottieRefFive = useRef(null);
     const lottieRefSix = useRef(null);
 
+    const lottieFIles = [
+        require('../../public/assets/search.json')
+    ]
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
+        console.log(lottieRef)
         lottieRef?.current?.play(); // Play animation on hover
     };
 
@@ -51,7 +57,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefOne}
-                                animationData={require('../../public/assets/search.json')}
+                                animationData={LottieFileOne}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
