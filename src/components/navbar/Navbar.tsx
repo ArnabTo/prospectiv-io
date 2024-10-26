@@ -192,13 +192,13 @@ const Navbar = () => {
                     <NavigationMenu>
                         <NavigationMenuList className="flex justify-between items-center gap-8">
                             <NavigationMenuItem>
-                                <Link href='' className="text-lg font-bold text-secondary transition-all duration-500">
+                                <Link href='/' className="text-lg font-bold text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Home</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <Link href='' className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                <Link href='/pricing' className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Pricing</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>

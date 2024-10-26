@@ -252,4 +252,44 @@ const aboutUsPageTextContent = {
         // },
     }
 }
-export { HeroSectionTextContent, whyProspectiveTextContent, WhatWeDoTextContent, HowItWorkTextContent, lifeAtProspectivTextContent, aboutUsPageTextContent }
+
+const carrerPageTextContent = {
+    'heading': {
+        heading: 'Find your Oppurtunities',
+        paragraph: `We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
+                        We work hard to make Sopro a great place to work, and reward everyone who joins us.`,
+    },
+    exploreus:{
+        heading: 'Explore About Us',
+        content:[
+            {
+                link: '/life-at-prospectiv',
+                image:'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+               title: 'Carrers',
+                description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
+            },
+            {
+                link: '/life-at-prospectiv',
+                image:'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+               title: 'Carrers',
+                description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
+            },
+            {
+                link: '/life-at-prospectiv',
+                image:'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+               title: 'Carrers',
+                description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
+            },
+        ]
+    }
+  
+}
+export { 
+    HeroSectionTextContent, 
+    whyProspectiveTextContent, 
+    WhatWeDoTextContent, 
+    HowItWorkTextContent, 
+    lifeAtProspectivTextContent, 
+    aboutUsPageTextContent,
+    carrerPageTextContent
+ }

@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, ArrowRightIcon } from 'lucide-react';
 import Image from 'next/image';
+import { carrerPageTextContent } from '@/lib/TextContent';
+
 const Careers = () => {
 
     const images = [
@@ -57,7 +59,7 @@ const Careers = () => {
     ]
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className='relative'>
                 <div
                     className='w-full h-[24rem] bg-no-repeat bg-cover bg-center bg-fixed opacity-20'
@@ -128,7 +130,9 @@ const Careers = () => {
                                         }`}
                                 >
                                     <div className="group relative overflow-hidden rounded-xl">
-                                        <img
+                                        <Image
+                                            width={500}
+                                            height={500}
                                             src={src}
                                             alt={`Gallery image ${index + 1}`}
                                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -150,31 +154,41 @@ const Careers = () => {
                     </div>
                 </div>
 
-                <div className='space-y-5 p-5'>
-                   <p>Total avalaible vacancies: {vacancies.length}</p>
-                <div className='flex flex-col gap-3 space-y-5'>
-                    {
-                        vacancies.map((vacancy, id) => (
-                            <Link href='#' key={id}>
-                                <div key={id} className='bg-card border border-borderColor p-3 rounded-xl hover:bg-smallCard shadow-black hover:shadow-xl transition-all ease-in-out duration-200'>
-                                    <div className='flex items-center'>
-                                        <div className='flex flex-col lg:flex-row items-start lg:justify-between lg:items-center gap-2 flex-1'>
-                                            <h2 className='text-3xl font-extrabold'>{vacancy.title}</h2>
-                                            <p className='text-textColorTwo text-lg'>{vacancy.location}</p>
-                                            <p className='text-textColorTwo text-lg'>{vacancy.category}</p>
-                                        </div>
-                                        <div>
-                                            <ArrowRightIcon size={30} />
+                <div className='relative space-y-5 p-5'>
+                    <p>Total avalaible vacancies: {vacancies.length}</p>
+                    <div className='flex flex-col gap-3 space-y-5'>
+                        {
+                            vacancies.map((vacancy, id) => (
+                                <Link href={`/careers/${vacancy.id}`} key={id}>
+                                    <div key={id} className='bg-card border border-borderColor p-3 rounded-xl hover:bg-background shadow-black hover:shadow-xl transition-all ease-in-out duration-200'>
+                                        <div className='flex items-center gap-5'>
+                                            <div className='flex flex-col lg:flex-row items-start lg:justify-between lg:items-center gap-2 flex-1'>
+                                                <h2 className='text-3xl font-extrabold'>{vacancy.title}</h2>
+                                                <p className='text-textColorTwo text-lg'>{vacancy.location}</p>
+                                                <p className='text-textColorTwo text-lg'>{vacancy.category}</p>
+                                            </div>
+                                            <div>
+                                                <ArrowRightIcon size={30} />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
-                        ))
-                    }
-                </div>
+                                </Link>
+                            ))
+                        }
+                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="absolute top-0 left-1/4 blur-[100px] w-full max-w-[44%] min-h-[74%]  -z-10 animate-spin-slow transition-all">
+                        <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                        <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                        <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                    </motion.div>
                 </div>
 
-                <div className='space-y-10 px-5'>
+                <div className='space-y-10 px-5 lg:px-10 py-10'>
 
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
@@ -182,72 +196,37 @@ const Careers = () => {
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        <h1 className='text-3xl font-bold text-start'>Explore About us</h1>
+                        <h1 className='text-3xl font-bold text-center'>Explore About us</h1>
                     </motion.div>
-
-                    <motion.div
+                
+                <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
-                        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-
-                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                            <div className='flex flex-col gap-5'>
-                                <div>
-                                    <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
-                                        alt="image"
-                                        width={500}
-                                        height={500}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                    </p>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                            <div className='flex flex-col gap-5'>
-                                <div>
-                                    <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
-                                        alt="image"
-                                        width={500}
-                                        height={500}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                    </p>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                            <div className='flex flex-col gap-5'>
-                                <div>
-                                    <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
-                                        alt="image"
-                                        width={500}
-                                        height={500}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                    </p>
-                                </div>
-                            </div>
-                        </Link>
+                        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-[80%] mx-auto'>
+                        {
+                            carrerPageTextContent.exploreus.content.map((content, index) => (
+                                <Link key={index} href={content.link} className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
+                                    <div className='flex flex-col gap-5'>
+                                        <div>
+                                            <Image
+                                                src={content.image}
+                                                alt="image"
+                                                width={500}
+                                                height={500}
+                                                className="w-full h-full object-cover rounded-lg"
+                                            />
+                                        </div>
+                                        <div>
+                                            <h3 className='text-2xl font-bold text-secondary'>{content.title}</h3>
+                                            <p className='text-lg text-textColorTwo flex items-end'>{content.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))
+                        }
                     </motion.div>
                 </div>
 
