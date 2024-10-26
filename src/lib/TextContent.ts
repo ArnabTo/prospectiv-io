@@ -1,4 +1,3 @@
-import { m } from "framer-motion";
 
 const HeroSectionTextContent = {
     heading: 'Drive More Sales Meetings with Your Ideal Customers.',
@@ -153,11 +152,11 @@ const aboutUsPageTextContent = {
             heading: 'Meet your campaign team',
             paragraph: `Sopro clients get a dedicated two person team that work tirelessly to improve campaign performance. But those two are the tip of the iceberg, with an army of circa 300 experts backing them up.`
         },
-        content:[
+        content: [
             {
                 heading: 'Customer Success',
-            paragraph: `The face of Sopro, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                paragraph: `The face of Sopro, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
             },
             {
                 heading: 'Operations',
@@ -171,23 +170,23 @@ const aboutUsPageTextContent = {
             },
             {
                 heading: 'Compliance and data',
-            paragraph: `The number boffins, our compliance and data experts are next-level clever, making sure everything we do is best in class and watertight.`,
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                paragraph: `The number boffins, our compliance and data experts are next-level clever, making sure everything we do is best in class and watertight.`,
+                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
             }
 
         ]
         ,
         'contentOne': {
-            
+
         },
         'contentTwo': {
-            
+
         },
         'contentThree': {
-           
+
         },
         'contentFour': {
-            
+
         },
 
     },
@@ -205,7 +204,7 @@ const aboutUsPageTextContent = {
                 textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
                                                 When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
             },
-           
+
             {
                 name: 'John Doe',
                 position: 'CEO',
@@ -214,7 +213,7 @@ const aboutUsPageTextContent = {
                 textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
                                                 When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
             },
-           
+
             {
                 name: 'John Doe',
                 position: 'CEO',
@@ -223,7 +222,7 @@ const aboutUsPageTextContent = {
                 textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
                                                 When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
             },
-           
+
 
         ],
         // contentOne: {
@@ -250,6 +249,27 @@ const aboutUsPageTextContent = {
         //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
         //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
         // },
+    },
+    'casestudy': {
+        heading: `We're our own best case study`,
+        textContentOne: `70% of our new business comes from our own email marketing campaigns`,
+        textContentTwo: `We’re proud of the success stories we’ve created for our clients, transforming businesses large and small through optimised email marketing. Back in 2015, Prospectiv’s first customer was… Prospectiv. We used our own technology to grow our business, perfecting the service through those initial campaigns.`,
+        textContentThree: `Discover what’s possible for your business.`,
+        cta: 'See open opportunities'
+    },
+    'allWinings': {
+        heading: {
+            heading: 'All winning together',
+            paragraph: `From the beginning, we aimed to offer clients more than just logins and weekly reports. Prospectiv became a supportive marketing service focused on transparency, compliance, and protecting client reputations. With a team aligned to this vision, recognition and awards soon followed, fueling our drive even further.`
+        },
+        images: [
+            'https://images.unsplash.com/photo-1472491235688-bdc81a63246e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
+            'https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
+            'https://images.unsplash.com/photo-1668491195456-9341d9cf3977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXQlMjB3aGl0ZXxlbnwwfDF8fHwxNzIxODIyMzU3fDA&ixlib=rb-4.0.3&q=80&w=1080',
+            'https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
+            'https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
+            'https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080',
+        ]
     }
 }
 
@@ -259,37 +279,37 @@ const carrerPageTextContent = {
         paragraph: `We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
                         We work hard to make Sopro a great place to work, and reward everyone who joins us.`,
     },
-    exploreus:{
+    exploreus: {
         heading: 'Explore About Us',
-        content:[
+        content: [
             {
                 link: '/life-at-prospectiv',
-                image:'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
-               title: 'Carrers',
+                image: 'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+                title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
             {
                 link: '/life-at-prospectiv',
-                image:'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
-               title: 'Carrers',
+                image: 'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+                title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
             {
                 link: '/life-at-prospectiv',
-                image:'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
-               title: 'Carrers',
+                image: 'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+                title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
         ]
     }
-  
+
 }
-export { 
-    HeroSectionTextContent, 
-    whyProspectiveTextContent, 
-    WhatWeDoTextContent, 
-    HowItWorkTextContent, 
-    lifeAtProspectivTextContent, 
+export {
+    HeroSectionTextContent,
+    whyProspectiveTextContent,
+    WhatWeDoTextContent,
+    HowItWorkTextContent,
+    lifeAtProspectivTextContent,
     aboutUsPageTextContent,
     carrerPageTextContent
- }
+}
