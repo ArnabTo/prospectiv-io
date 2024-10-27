@@ -1,12 +1,8 @@
 import { useRef } from 'react';
-import ImageOne from '@/public/assets/howitworksone.svg';
-import ImageTwo from '@/public/assets/howitworkstwo.svg';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Lottie from 'lottie-react';
 import './cardHover.css';
 import { HowItWorkTextContent } from '@/lib/TextContent';
-const LottieFileOne = require('../../public/assets/search.json');
 
 const HowItWork = () => {
     // Create separate refs for each Lottie animation
@@ -57,7 +53,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefOne}
-                                animationData={LottieFileOne}
+                                animationData={require('@/public/assets/search.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />

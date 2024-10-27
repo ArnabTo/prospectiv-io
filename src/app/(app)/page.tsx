@@ -8,15 +8,17 @@ import SuccessCounts from "@/components/counts/SuccessCounts";
 import Campaign from "@/components/campaign/Campaign";
 import Partners from "@/components/partners/Partners";
 import Intro from "@/components/intro-animation/Intro";
+import BlogSection from "@/components/Blogs/BlogSection";
 export default function Home() {
   return (
     <div className="space-y-24">
       <Hero />
-      <Intro/>
+      {/* <Intro/> */}
        <WhyProsPective/>
        <SuccessCounts/>
        <WhatWeDo/>
        <HowItWork/>
+       <BlogSection/>
        <Campaign/>
     </div>
   );

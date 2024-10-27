@@ -13,7 +13,7 @@ const StudioNavbar = (props: any) => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Link href="#" className="text-lg lg:text-3xl font-extrabold">
+                        <Link href="/" className="text-lg lg:text-3xl font-extrabold">
                             Prospectiv
                         </Link>
                     </motion.div>
