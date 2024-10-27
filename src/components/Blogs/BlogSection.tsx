@@ -34,7 +34,7 @@ const BlogSection: React.FC = () => {
             <div className="max-w-7xl mx-auto px-5 lg:py-24">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Explore our blogs</h1>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 mt-10">
                     {
                         blogs.length > 0 && blogs.map((blog) => {
                             return (
