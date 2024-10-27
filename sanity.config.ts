@@ -12,9 +12,13 @@ import {structureTool} from 'sanity/structure'
 import {apiVersion, dataset, projectId} from './src/sanity/env'
 import {schema} from './src/sanity/schemaTypes'
 import {structure} from './src/sanity/structure'
+import Navbar from '@/components/navbar/Navbar'
+import StudioNavbar from '@/components/navbar/StudioNavbar'
 
 export default defineConfig({
   basePath: '/studio',
+  name: 'Prospectiv_Content_Studio',
+  title: 'Prospectiv Content Studio',
   projectId,
   dataset,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
@@ -25,4 +29,9 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
   ],
+  studio:{
+    components:{
+      navbar: StudioNavbar
+    }
+  }
 })
