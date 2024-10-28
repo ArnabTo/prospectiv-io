@@ -216,9 +216,14 @@ const BlogDetails = () => {
                                                     <div>
                                                         <Image className="w-full h-3/4 object-contain rounded-2xl" src={blog?.mainImage?.asset?.url} width={500} height={500} alt="blog_thumbnail" />
                                                         <div className="flex items-center justify-start gap-5 mt-3">
-                                                            <p className="flex items-center gap-2 text-md text-textColorTwo">
+                                                           {
+                                                            blog.categories == null? <>"Unknown"</> 
+                                                            :
+                                                            (<p className="flex items-center gap-2 text-md text-textColorTwo">
                                                                 <Tag size={20} />
-                                                                {blog.categories.map((category, index) => (<span key={index}>{category.title}</span>))}</p>
+                                                                {blog.categories.map((category, index) => (<span key={index}>{category.title}</span>))}</p>)
+                                                           }
+                                                            
                                                             <p className="flex items-center gap-2 text-md text-textColorTwo"><Calendar size={20} /> {new Date(blog?._createdAt).toDateString()}</p>
                                                             <p className="flex items-center gap-2 text-md text-textColorTwo"><Calendar size={20} /> {readingTime}</p>
                                                         </div>
