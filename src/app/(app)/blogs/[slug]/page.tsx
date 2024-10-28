@@ -57,8 +57,6 @@ interface Blog {
 const BlogDetails = () => {
 
     const params = useParams();
-    console.log(params.slug)
-
     const [blog, setBlog] = useState<Blog>()
     const [isLoading, setIsLoading] = useState(false)
 
@@ -78,13 +76,8 @@ const BlogDetails = () => {
         fetchBlog()
     }, [fetchBlog])
 
-    console.log(blog)
-
-
 
     const readingTime = blog ? calculateReadingTime(blog.body) : "";
-    console.log(readingTime)
-
 
     return (
         <div className="space-y-20">
@@ -163,9 +156,6 @@ const BlogDetails = () => {
                         </div>
                     )
             }
-
-
-
             <div>
                 <BlogSection />
             </div>
