@@ -18,6 +18,7 @@ import LinkedInLogo from '@/public/assets/icons8-linkedin-480.png'
 import InstagramLogo from '@/public/assets//icons8-instagram-480.png'
 import FacebookLogo from '@/public/assets/icons8-facebook-480.png'
 import { slugify } from "@/utils/helper";
+import ScrollProgressBar from "@/components/PageScrollProgressBar/ProgressBar";
 
 // interface Params {
 //     params: {
@@ -87,6 +88,7 @@ const BlogDetails = () => {
 
     return (
         <div className="space-y-20">
+            <ScrollProgressBar/>
             {
                 isLoading ? (
                     <div className="flex justify-center items-center h-screen">
