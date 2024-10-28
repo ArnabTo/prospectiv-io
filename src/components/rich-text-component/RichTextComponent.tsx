@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PortableTextComponents } from '@portabletext/react';
 import { urlFor } from '@/sanity/lib/image';
+import { slugify } from '@/utils/helper';
 
 const RichTextComponent: PortableTextComponents = {
   types: {
@@ -60,26 +61,47 @@ const RichTextComponent: PortableTextComponents = {
     ),
   },
 
+  
   block: {
-    h1: ({ children }: { children?: React.ReactNode }) => (
-      <h1 className="text-4xl font-bold mt-4 mb-2">{children}</h1>
+    h2: ({ value }: any) => (
+      <h2
+        id={slugify(value.children[0].text)}
+        className="text-3xl font-bold mb-3"
+      >
+        {value.children[0].text}
+      </h2>
     ),
-    h2: ({ children }: { children?: React.ReactNode }) => (
-      <h2 className="text-3xl font-semibold mt-4 mb-2">{children}</h2>
+    h3: ({ value }: any) => (
+      <h3
+        id={slugify(value.children[0].text)}
+        className="text-2xl font-bold mb-3"
+      >
+        {value.children[0].text}
+      </h3>
     ),
-    p: ({ children }: { children?: React.ReactNode }) => (
-      <p className="text-4xl text-textColorTwo ">{children}</p>
+    h4: ({ value }: any) => (
+      <h4
+        id={slugify(value.children[0].text)}
+        className="text-2xl font-bold mb-3"
+      >
+        {value.children[0].text}
+      </h4>
     ),
-    span: ({ children }: { children?: React.ReactNode }) => (
-      <span className="text-md text-textColorTwo">{children}</span>
+    h5: ({ value }: any) => (
+      <h5
+        id={slugify(value.children[0].text)}
+        className="text-2xl font-bold mb-3"
+      >
+        {value.children[0].text}
+      </h5>
     ),
-    blockquote: ({ children }: { children?: React.ReactNode }) => (
-      <blockquote className="border-l-4 border-purple-500 pl-4 italic text-gray-700 my-4">
-        {children}
-      </blockquote>
-    ),
-    customHeading: ({ children }: { children?: React.ReactNode }) => (
-      <h2 className="text-lg text-purple-700 font-medium">{children}</h2>
+    h6: ({ value }: any) => (
+      <h6
+        id={slugify(value.children[0].text)}
+        className="text-xl font-bold mb-3"
+      >
+        {value.children[0].text}
+      </h6>
     ),
   },
 };

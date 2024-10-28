@@ -26,7 +26,6 @@ const BlogSection: React.FC = () => {
     const fetchBlogs = useCallback(async () => {
         try {
             const response = await axios.get('/api/blogs')
-            console.log(response)
             setBlogs(response.data)
         } catch (error) {
             console.log(error)
