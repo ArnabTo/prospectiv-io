@@ -136,7 +136,7 @@ const BlogDetails = () => {
                                             >
                                                 <div className="py-16 space-y-5">
                                                     <div className="border border-borderColor rounded-2xl p-5 space-y-4 hover:shadow-2xl group cursor-pointer">
-                                                        <div className="flex items-center gap-3">
+                                                        <div className="flex flex-col lg:flex-row items-center gap-3">
                                                             <Image className="w-1/4 rounded-full group-hover:scale-105 transition-all duration-300 ease-in-out"
                                                                 src={blog?.author?.image?.asset?.url} width={500} height={500}
                                                                 alt="author_image" />
@@ -152,10 +152,13 @@ const BlogDetails = () => {
                                                             <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
                                                                 <Link href='#'><Image className='max-w-10 p-2' src={InstagramLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
-                                                            <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href='#'><Image className='max-w-10 p-2' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                            <div className='hidden lg:block bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
+                                                                <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
                                                         </div>
+                                                            <div className='lg:hidden bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
+                                                                <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                            </div>
                                                     </div>
 
                                                     <Toc headings={blog.headings} />
@@ -181,7 +184,7 @@ export default BlogDetails;
 const Toc = ({ headings }: any) => {
     return (
         <div className="flex flex-col justify-center items-center">
-            <h3 className="text-xl font-bold">Table of Contents</h3>
+            <h3 className="text-md lg:text-xl font-bold">Table of Contents</h3>
             <nav>
                 <ul>
                     {
