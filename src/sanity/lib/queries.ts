@@ -1,7 +1,7 @@
 import { defineQuery } from "next-sanity";
 
 export const POST_QUERY = defineQuery(`
-    *[_type == "post" && defined(slug.current)] | order(_createdAt desc) [0...12]{
+    *[_type == "post" && defined(slug.current)] | order(_createdAt desc) [0...3]{
         _id,
         _createdAt,
         title,
@@ -22,7 +22,6 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
         title,
         slug,
         body,
-        
         mainImage{
             ...,
             asset->{
@@ -30,9 +29,9 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
                 url
             }
         },
-        
         author->{
             name,
+            bio,
             image{
                 asset->{
                     _id,

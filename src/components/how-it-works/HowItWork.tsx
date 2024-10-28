@@ -17,7 +17,6 @@ const HowItWork = () => {
         require('../../public/assets/search.json')
     ]
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
-        console.log(lottieRef)
         lottieRef?.current?.play(); // Play animation on hover
     };
 

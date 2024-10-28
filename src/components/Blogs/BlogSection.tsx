@@ -23,17 +23,10 @@ const BlogSection: React.FC = () => {
 
     const [blogs, setBlogs] = useState<Blog[]>([])
 
-    // const fetchBlogs = async () => {
-    //     try {
-    //         const response = await axios.get('/api/blogs')
-    //         setBlogs(response.data)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
     const fetchBlogs = useCallback(async () => {
         try {
             const response = await axios.get('/api/blogs')
+            console.log(response)
             setBlogs(response.data)
         } catch (error) {
             console.log(error)
@@ -43,7 +36,6 @@ const BlogSection: React.FC = () => {
     useEffect(() => {
         fetchBlogs()
     }, [fetchBlogs])
-
 
     return (
         <section>

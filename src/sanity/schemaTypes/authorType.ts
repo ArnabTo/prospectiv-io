@@ -12,6 +12,10 @@ export const authorType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'position',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       type: 'slug',
       options: {
@@ -24,6 +28,25 @@ export const authorType = defineType({
       options: {
         hotspot: true,
       },
+    }),
+    // add social links
+    defineField({
+      name: 'social',
+      type: 'object',
+      fields: [
+        {
+          name: 'twitter',
+          type: 'url',
+        },
+        {
+          name: 'linkdedin',
+          type: 'url',
+        },
+        {
+          name: 'facebook',
+          type: 'url',
+        },
+      ],
     }),
     defineField({
       name: 'bio',
