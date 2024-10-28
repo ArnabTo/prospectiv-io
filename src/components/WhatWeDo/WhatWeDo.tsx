@@ -22,7 +22,7 @@ const WhatWeDo = () => {
                 className='flex flex-col lg:flex-row justify-between items-start gap-10'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>{WhatWeDoTextContent?.heading?.heading}</h1>
                     <div className='space-y-5'>
-                        <p className='text-lg text-textColorTwo text-center lg:text-start'>
+                        <p className='text-md lg:text-lg text-textColorTwo text-center lg:text-start'>
                            {WhatWeDoTextContent?.heading?.paragraph}
                         </p>
                         <div className="w-60 lg:w-full md:max-w-60 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
@@ -46,7 +46,7 @@ const WhatWeDo = () => {
                                         1
                                     </div>
                                     <h1 className='text-3xl font-bold'>{WhatWeDoTextContent?.cardTextContent1?.heading}</h1>
-                                    <p className='text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent1?.paragraph}</p>
+                                    <p className='text-md lg:text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent1?.paragraph}</p>
                                 </div>
                             </div>
                             <div className='bg-card rounded-3xl border border-borderColor flex flex-col-reverse md:flex-row justify-between '>
@@ -55,7 +55,7 @@ const WhatWeDo = () => {
                                    2
                                </div>
                                <h1 className='text-3xl font-bold'>{WhatWeDoTextContent?.cardTextContent2?.heading}</h1>
-                               <p className='text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent2?.paragraph}</p>
+                               <p className='text-md lg:text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent2?.paragraph}</p>
                                 </div>
                             </div>
 
@@ -92,7 +92,7 @@ const WhatWeDo = () => {
                                         3
                                     </div>
                                     <h1 className='text-3xl font-bold'>{WhatWeDoTextContent?.cardTextContent3?.heading}</h1>
-                                   <p className='text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent3?.paragraph}</p>
+                                   <p className='text-md lg:text-lg text-textColorTwo'>{WhatWeDoTextContent?.cardTextContent3?.paragraph}</p>
                                 </div>
                             </motion.div>
                             <motion.div

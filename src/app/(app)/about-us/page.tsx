@@ -440,7 +440,7 @@ const AboutUs = () => {
                                                         <Mail />: {content?.email}
                                                     </Link>
                                                 </span>
-                                                <p className="text-sm text-md lg:text-lg text-textColorTwo overflow-auto">
+                                                <p className="text-sm text-md lg:text-md lg:text-lg text-textColorTwo overflow-auto">
                                                     {content?.textContent}
 
                                                 </p>
@@ -538,9 +538,9 @@ const AboutUs = () => {
                             </h1>
                         </div>
                         <div className="space-y-5">
-                            <p className="text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentTwo}
+                            <p className="text-md lg:text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentTwo}
                             </p>
-                            <p className="text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentThree}</p>
+                            <p className="text-md lg:text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentThree}</p>
                             <div className="w-60 lg:w-full max-w-72 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                                 <Link href="/careers" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                                   {aboutUsPageTextContent.casestudy.cta}

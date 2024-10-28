@@ -148,7 +148,7 @@ const LifeAtProspectiv = () => {
                                         <Image className='w-full rounded-3xl' src='https://sopro.io/wp-content/uploads/2023/08/thumbnail_tech.png' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>John Doe</h2>
-                                            <p className='text-lg text-textColorTwo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed tempore veniam quidem nostrum modi earum alias ea veritatis, aut cupiditate laboriosam ipsam omnis autem neque perferendis distinctio dignissimos repellendus!</p>
+                                            <p className='text-md lg:text-lg text-textColorTwo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed tempore veniam quidem nostrum modi earum alias ea veritatis, aut cupiditate laboriosam ipsam omnis autem neque perferendis distinctio dignissimos repellendus!</p>
                                         </div>
                                     </div>
                                 </Link>
@@ -165,7 +165,7 @@ const LifeAtProspectiv = () => {
                                         <Image className='w-full rounded-3xl' src='https://sopro.io/wp-content/uploads/2023/08/thumbnail_tech.png' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>John Doe</h2>
-                                            <p className='text-lg text-textColorTwo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed tempore veniam quidem nostrum modi earum alias ea veritatis, aut cupiditate laboriosam ipsam omnis autem neque perferendis distinctio dignissimos repellendus!</p>
+                                            <p className='text-md lg:text-lg text-textColorTwo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed tempore veniam quidem nostrum modi earum alias ea veritatis, aut cupiditate laboriosam ipsam omnis autem neque perferendis distinctio dignissimos repellendus!</p>
                                         </div>
                                     </div>
                                 </Link>
@@ -182,7 +182,7 @@ const LifeAtProspectiv = () => {
                                         <Image className='w-full rounded-3xl' src='https://sopro.io/wp-content/uploads/2023/08/thumbnail_tech.png' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>John Doe</h2>
-                                            <p className='text-lg text-textColorTwo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed tempore veniam quidem nostrum modi earum alias ea veritatis, aut cupiditate laboriosam ipsam omnis autem neque perferendis distinctio dignissimos repellendus!</p>
+                                            <p className='text-md lg:text-lg text-textColorTwo'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed tempore veniam quidem nostrum modi earum alias ea veritatis, aut cupiditate laboriosam ipsam omnis autem neque perferendis distinctio dignissimos repellendus!</p>
                                         </div>
                                     </div>
                                 </Link>
@@ -245,7 +245,7 @@ const LifeAtProspectiv = () => {
                             viewport={{ once: true }}
                             className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
                             <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Benefits of Prospectiv</h1>
-                            <p className='text-lg text-textColorTwo text-center lg:text-start'>
+                            <p className='text-md lg:text-lg text-textColorTwo text-center lg:text-start'>
                                 Our benefits vary by location, but the core perks remain consistent no matter where you're based.
                             </p>
                             <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
@@ -658,7 +658,7 @@ const LifeAtProspectiv = () => {
                                 </div>
                                 <div>
                                     <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
                                     </p>
                                 </div>
                             </div>
@@ -677,7 +677,7 @@ const LifeAtProspectiv = () => {
                                 </div>
                                 <div>
                                     <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
                                     </p>
                                 </div>
                             </div>
@@ -696,7 +696,7 @@ const LifeAtProspectiv = () => {
                                 </div>
                                 <div>
                                     <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
                                     </p>
                                 </div>
                             </div>

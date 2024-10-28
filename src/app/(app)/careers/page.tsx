@@ -220,7 +220,7 @@ const Careers = () => {
                                         </div>
                                         <div>
                                             <h3 className='text-2xl font-bold text-secondary'>{content.title}</h3>
-                                            <p className='text-lg text-textColorTwo flex items-end'>{content.description}
+                                            <p className='text-md lg:text-lg text-textColorTwo flex items-end'>{content.description}
                                             </p>
                                         </div>
                                     </div>

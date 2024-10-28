@@ -19,7 +19,7 @@ const WhyProsPective = () => {
                 viewport={{ once: true }}
                 className='sticky top-5 md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>{whyProspectiveTextContent?.heading?.heading}</h1>
-                    <p className='text-lg text-textColorTwo text-center lg:text-start'>
+                    <p className='text-md lg:text-lg text-textColorTwo text-center lg:text-start'>
                        {whyProspectiveTextContent?.heading?.paragraph}
                     </p>
                     <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
@@ -43,7 +43,7 @@ const WhyProsPective = () => {
                             </div>
                             <div className='space-y-4 w-full'>
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent1?.heading}</h1>
-                                <p className='text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent1?.paragraph}</p>
+                                <p className='text-md lg:text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent1?.paragraph}</p>
                             </div>
                         </motion.div>
 
@@ -58,7 +58,7 @@ const WhyProsPective = () => {
                             </div>
                             <div className='space-y-4 w-full'>
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent2?.heading}</h1>
-                                <p className='text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent2?.heading}</p>
+                                <p className='text-md lg:text-lg text-textColorTwo'>{whyProspectiveTextContent?.cardTextContent2?.heading}</p>
                             </div>
                         </motion.div>
 
@@ -73,7 +73,7 @@ const WhyProsPective = () => {
                             </div>
                             <div className='space-y-4 w-full'>
                                 <h1 className='text-3xl font-extrabold'>{whyProspectiveTextContent?.cardTextContent3?.heading}</h1>
-                                <p className='text-lg text-textColorTwo'> {whyProspectiveTextContent?.cardTextContent3?.heading}</p>
+                                <p className='text-md lg:text-lg text-textColorTwo'> {whyProspectiveTextContent?.cardTextContent3?.heading}</p>
                             </div>
                         </motion.div>
                     </div>

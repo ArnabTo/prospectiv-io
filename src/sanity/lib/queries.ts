@@ -22,12 +22,27 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
         title,
         slug,
         body,
+        
         mainImage{
             ...,
             asset->{
                 _id,
                 url
             }
+        },
+        
+        author->{
+            name,
+            image{
+                asset->{
+                    _id,
+                    url
+                }
+            }
+        },
+        
+        categories[]->{
+            title
         }
     }
 `)

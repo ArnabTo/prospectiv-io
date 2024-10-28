@@ -37,7 +37,7 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
-                                <p className="text-lg text-textColorTwo">Campaign Run</p>
+                                <p className="text-md lg:text-lg text-textColorTwo">Campaign Run</p>
                                 <h3 className="text-4xl lg:text-6xl text-secondary font-bold">
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when the section is in view
@@ -61,7 +61,7 @@ const SuccessCounts = () => {
                                 className="lg:ml-10"
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
-                                <p className="text-lg text-textColorTwo">Happy Clients</p>
+                                <p className="text-md lg:text-lg text-textColorTwo">Happy Clients</p>
                                 <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
                                     <CountUp
                                         start={startCounting ? 0 : undefined} // Start counting when in view
@@ -85,7 +85,7 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
-                                <p className="text-lg text-textColorTwo">Attributed in 2024</p>
+                                <p className="text-md lg:text-lg text-textColorTwo">Attributed in 2024</p>
                                 <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
                                     <CountUp
                                         start={startCounting ? 0 : undefined}// Start counting when in view
@@ -109,7 +109,7 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 className="lg:ml-10"
                             >
-                                <p className="text-lg text-textColorTwo">Leads Delivered</p>
+                                <p className="text-md lg:text-lg text-textColorTwo">Leads Delivered</p>
                                 <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
                                 <CountUp
                                        start={startCounting ? 0 : undefined}// Start counting when the section is in view
