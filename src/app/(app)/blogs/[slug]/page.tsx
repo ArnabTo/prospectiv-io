@@ -20,46 +20,17 @@ import FacebookLogo from '@/public/assets/icons8-facebook-480.png'
 import { slugify } from "@/utils/helper";
 import ScrollProgressBar from "@/components/PageScrollProgressBar/ProgressBar";
 import { Separator } from "@/components/ui/separator";
-
+import { BlogPost } from "@/types/types";
 // interface Params {
 //     params: {
 //         slug: string
 //     }
 // }
-interface Blog {
-    _id: string;
-    title: string;
-    body: any;
-    slug: {
-        current: string
-    };
-    mainImage: {
-        asset: {
-            url: string
-        }
-    };
-    categories: [
-        {
-            title: string
-        }
-    ];
-    author: {
-        name: string
-        bio: []
-        image: {
-            asset: {
-                url: string
-            }
-        }
-    };
-    _createdAt: string
-    headings?: Array<HTMLHeadingElement | string>
-}
+
 const BlogDetails = () => {
 
     const params = useParams();
-
-    const [blog, setBlog] = useState<Blog>()
+    const [blog, setBlog] = useState<BlogPost>()
     const [isLoading, setIsLoading] = useState(false)
 
     const fetchBlog = useCallback(async () => {
@@ -77,7 +48,6 @@ const BlogDetails = () => {
     useEffect(() => {
         fetchBlog()
     }, [fetchBlog])
-
 
     const readingTime = blog ? calculateReadingTime(blog.body) : "";
 
@@ -109,7 +79,7 @@ const BlogDetails = () => {
                                                                 <Image className="w-full h-3/4 object-contain rounded-2xl" src={blog?.mainImage?.asset?.url} width={500} height={500} alt="blog_thumbnail" />
                                                                 <div className="flex items-center justify-start gap-5 mt-3">
                                                                     {
-                                                                        blog.categories == null ? <>"Unknown"</>
+                                                                        blog.categories == null ? <>Unknown</>
                                                                             :
                                                                             (<p className="flex items-center gap-2 text-md text-textColorTwo">
                                                                                 <Tag size={20} />
@@ -145,7 +115,7 @@ const BlogDetails = () => {
                                                                 <PortableText value={blog.author.bio} components={RichTextComponent} />
                                                             </span>
                                                         </div>
-                                                        <div className="flex flex-row gap-3 justify-center items-center">
+                                                        <div className="flex flex-row gap-3 justify-start items-center">
                                                             <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
                                                                 <Link href='#'><Image className='max-w-10 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
@@ -156,9 +126,9 @@ const BlogDetails = () => {
                                                                 <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
                                                         </div>
-                                                            <div className='lg:hidden bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
-                                                            </div>
+                                                        <div className='lg:hidden bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
+                                                            <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                        </div>
                                                     </div>
 
                                                     <Toc headings={blog.headings} />
@@ -183,19 +153,21 @@ export default BlogDetails;
 
 const Toc = ({ headings }: any) => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div>
             <h3 className="text-md lg:text-xl font-bold">Table of Contents</h3>
-            <nav>
-                <ul>
-                    {
-                        headings.map((heading: any, index: number) => (
-                            <li key={index} className="text-start my-3 bg-smallCard px-3 py-2 rounded-full line-clamp-1  hover:text-secondary">
-                                <Link href={`#${slugify(heading?.children[0]?.text)}`} className="line-clamp-1">{heading?.children[0]?.text}</Link>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </nav>
+            <div className="flex flex-col justify-start items-start">
+                <nav className="w-full">
+                    <ul>
+                        {
+                            headings.map((heading: any, index: number) => (
+                                <li key={index} className="w-full text-start my-3 bg-smallCard px-3 py-2 rounded-full line-clamp-1  hover:text-secondary">
+                                    <Link href={`#${slugify(heading?.children[0]?.text)}`} className="line-clamp-1">{heading?.children[0]?.text}</Link>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </nav>
+            </div>
         </div>
     )
 }
