@@ -72,7 +72,7 @@ const BlogDetails = () => {
         } finally {
             setIsLoading(false)
         }
-    }, [])
+    }, [params.slug])
 
     useEffect(() => {
         fetchBlog()
