@@ -55,3 +55,12 @@ export interface BlogPost {
     _createdAt: string
     headings?: Array<HTMLHeadingElement | string>
 }
+
+export interface Openings {
+    title: string;
+    slug: string;
+    type: string;
+    location: string;
+    description: any;
+    link: string;
+  }

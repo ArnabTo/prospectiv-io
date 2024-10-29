@@ -21,12 +21,12 @@ import { slugify } from "@/utils/helper";
 import ScrollProgressBar from "@/components/PageScrollProgressBar/ProgressBar";
 import { Separator } from "@/components/ui/separator";
 import { BlogPost } from "@/types/types";
+
 // interface Params {
 //     params: {
 //         slug: string
 //     }
 // }
-
 const BlogDetails = () => {
 
     const params = useParams();

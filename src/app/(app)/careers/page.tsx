@@ -1,6 +1,6 @@
 'use client';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import HeaderImage from '@/public/assets/campany-culture.jpg'
 import CircularProgressBar from '@/components/progressbar/CircularProgressBar';
 import { motion } from 'framer-motion';
@@ -8,11 +8,12 @@ import Link from 'next/link';
 import { ArrowRight, ArrowRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import { carrerPageTextContent } from '@/lib/TextContent';
+import axios from 'axios';
+import { Openings } from '@/types/types';
 
 const Careers = () => {
 
     const images = [
-
         "https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
         "https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
         "https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080",
@@ -20,44 +21,21 @@ const Careers = () => {
         "https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
     ];
 
-    const vacancies = [
-        {
-            id: 1,
-            title: 'Software Engineer',
-            location: 'New York, NY',
-            category: 'Software Development and IT',
-            active: true
-        },
-        {
-            id: 2,
-            title: 'Data Scientist',
-            location: 'New York, NY',
-            category: 'Software Development and IT',
-            active: true
-        },
-        {
-            id: 3,
-            title: 'Product Manager',
-            location: 'New York, NY',
-            category: 'Software Development and IT',
-            active: true
-        },
-        {
-            id: 4,
-            title: 'UX Designer',
-            location: 'New York, NY',
-            category: 'Software Development and IT',
-            active: true
-        },
-        {
-            id: 5,
-            title: 'Full Stack Developer',
-            location: 'New York, NY',
-            category: 'Software Development and IT',
-            active: true
-        }
-    ]
+    const [vacancies, setVacancies] = useState<Openings[]>([]);
 
+    const fetchVacancies = useCallback(async () => {
+        try {
+            const getVacancies = await axios.get('/api/getallvacancies')
+            setVacancies(getVacancies.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }, [])
+    useEffect(() => {
+        fetchVacancies()
+    }, [fetchVacancies])
+
+    console.log(vacancies)
     return (
         <div className='overflow-hidden'>
             <div className='relative'>
@@ -159,13 +137,13 @@ const Careers = () => {
                     <div className='flex flex-col gap-3 space-y-5'>
                         {
                             vacancies.map((vacancy, id) => (
-                                <Link href={`/careers/${vacancy.id}`} key={id}>
-                                    <div key={id} className='bg-card border border-borderColor p-3 rounded-xl hover:bg-background shadow-black hover:shadow-xl transition-all ease-in-out duration-200'>
+                                <Link href={`/careers/${vacancy.slug}`} key={id} className='group'>
+                                    <div key={id} className='bg-card border border-borderColor p-5 rounded-xl hover:bg-background shadow-black hover:shadow-xl transition-all ease-in-out duration-200'>
                                         <div className='flex items-center gap-5'>
-                                            <div className='flex flex-col lg:flex-row items-start lg:justify-between lg:items-center gap-2 flex-1'>
-                                                <h2 className='text-3xl font-extrabold'>{vacancy.title}</h2>
-                                                <p className='text-textColorTwo text-lg'>{vacancy.location}</p>
-                                                <p className='text-textColorTwo text-lg'>{vacancy.category}</p>
+                                            <div className='grid grid-cols-1  lg:grid-cols-3 items-start lg:justify-between lg:items-center gap-2 flex-1'>
+                                                <h2 className='text-3xl font-extrabold group-hover:text-secondary'>{vacancy.title}</h2>
+                                                <p className='text-textColorTwo text-lg text-center'>{vacancy.type}</p>
+                                                <p className='text-textColorTwo text-lg text-center'>{vacancy.location}</p>
                                             </div>
                                             <div>
                                                 <ArrowRightIcon size={30} />
@@ -198,8 +176,8 @@ const Careers = () => {
                     >
                         <h1 className='text-3xl font-bold text-center'>Explore About us</h1>
                     </motion.div>
-                
-                <motion.div
+
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}

@@ -73,3 +73,14 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
         }
     }
 `)
+
+
+export const OPENINGS_QUERY = defineQuery(`
+    *[_type == "openings"]{
+  title,
+  "slug": slug.current,
+  type,
+  location,
+  description,
+  link
+}`)
