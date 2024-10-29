@@ -40,7 +40,6 @@ const BlogSection: React.FC = () => {
         <section>
             <div className="max-w-7xl mx-auto px-5 lg:py-24">
                 <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center">Discover how Prospectiv helps you sell more</h1>
-
                 <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -51,7 +50,7 @@ const BlogSection: React.FC = () => {
                         blogs.length > 0 && blogs.map((blog) => {
                             return (
                                 <Link href={`/blogs/${blog.slug.current}`} key={blog._id}>
-                                    <Card className="border border-borderColor flex flex-col h-full">
+                                    <Card className="border border-borderColor flex flex-col h-full rounded-2xl">
                                         <CardHeader className="flex-grow">
                                             <h3 className="text-xl font-bold">{blog?.title}</h3>
                                             <Image
