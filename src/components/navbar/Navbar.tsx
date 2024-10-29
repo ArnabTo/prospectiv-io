@@ -11,11 +11,12 @@ import {
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, BriefcaseBusiness, LifeBuoy, MessageCircleWarning } from "lucide-react";
+import { AlignJustify, BookOpenText, BriefcaseBusiness, LifeBuoy, MessageCircleWarning } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useEffect, useRef, useState } from "react";
+import { Separator } from "../ui/separator";
 
 const Navbar = () => {
 
@@ -219,8 +220,21 @@ const Navbar = () => {
                                                     </span>
                                                 </div>
                                             </Link>
+                                            <div className="flex flex-col gap-5">
+                                                <Link href="/careers" className="transition-all duration-500">
+                                                    <div className="flex items-center gap-4">
+                                                        <BriefcaseBusiness size={120} />
+                                                        <div>
+                                                            <h3 className="text-lg font-bold text-secondary">Careers</h3>
+                                                            <p className="text-sm text-textColorTwo">
+                                                                Join the Prospectiv team. Browse our open opportunities and find your next role.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            </div>
                                         </div>
-                                        <div className="w-1 h-32 bg-secondary"></div>
+                                        <div className="w-1 h-16 bg-secondary"></div>
                                         <div className="flex flex-col gap-5">
                                             <Link href="/about-us" className="transition-all duration-500">
                                                 <div className="flex items-center gap-4">
@@ -237,24 +251,28 @@ const Navbar = () => {
                                     </div>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
+
                             <NavigationMenuItem className="pt-[3px]">
-                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resource</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resources</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-5 bg-background">
-                                        <div className="flex flex-col gap-5">
-                                            <Link href="/life-at-prospectiv" className="w-full transition-all duration-500">
+                                        <div className="flex flex-col gap-5 flex-1">
+                                            <Link href="/resources/blog" className="w-full transition-all duration-500">
                                                 <div className="flex items-center gap-4">
-                                                    <LifeBuoy size={120} />
+                                                    <BookOpenText size={120} />
                                                     <span>
-                                                        <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
+                                                        <h3 className="text-lg font-bold text-secondary">Blog</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             A page about our culture, people, values and what it's like to work here
                                                         </p>
                                                     </span>
                                                 </div>
                                             </Link>
-                                            <div className="flex flex-col gap-5">
-                                            <Link href="/about-us" className="transition-all duration-500">
+
+                                        </div>
+                                        <div className="w-1 h-16 bg-secondary"></div>
+                                        <div className="flex flex-col gap-5 flex-1">
+                                            <Link href="/about-us" className=" gap-1 transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
                                                     <MessageCircleWarning size={120} />
                                                     <div>
@@ -266,24 +284,43 @@ const Navbar = () => {
                                                 </div>
                                             </Link>
                                         </div>
-                                        </div>
-                                        <div className="w-1 h-32 bg-secondary"></div>
-                                        <div className="flex flex-col gap-5">
-                                            <Link href="/careers" className="transition-all duration-500">
+                                    </div>
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
+
+                            {/* <NavigationMenuItem className="pt-[3px]">
+                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resource</NavigationMenuTrigger>
+                                <NavigationMenuContent>
+                                    <div className="flex items-center gap-5 p-5 bg-background">
+                                        <div className="flex-1">
+                                            <Link href="/resources/blog" className="w-full transition-all duration-500">
                                                 <div className="flex items-center gap-4">
-                                                 <BriefcaseBusiness size={120}/>
-                                                    <div>
-                                                        <h3 className="text-lg font-bold text-secondary">Careers</h3>
+                                                    <BookOpenText size={120} />
+                                                    <span>
+                                                        <h3 className="text-lg font-bold text-secondary">Blogs</h3>
                                                         <p className="text-sm text-textColorTwo">
-                                                           Join the Prospectiv team. Browse our open opportunities and find your next role.
+                                                            A page about our culture, people, values and what it's like to work here
                                                         </p>
-                                                    </div>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className="flex-1">
+                                            <Link href="/resources/blog" className="w-full transition-all duration-500">
+                                                <div className="flex items-center gap-4">
+                                                    <BookOpenText size={120} />
+                                                    <span>
+                                                        <h3 className="text-lg font-bold text-secondary">Blogs</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            A page about our culture, people, values and what it's like to work here
+                                                        </p>
+                                                    </span>
                                                 </div>
                                             </Link>
                                         </div>
                                     </div>
                                 </NavigationMenuContent>
-                            </NavigationMenuItem>
+                            </NavigationMenuItem> */}
 
                             <NavigationMenuItem className="pt-[8px]">
                                 <Link href='' className="text-lg font-bold hover:text-secondary transition-all duration-500">
