@@ -32,6 +32,7 @@ const BlogDetails = () => {
     const params = useParams();
     const [blog, setBlog] = useState<BlogPost>()
     const [isLoading, setIsLoading] = useState(false)
+    const [activeHeading, setActiveHeading] = useState<string | null>(null);
 
     const fetchBlog = useCallback(async () => {
         setIsLoading(true)
@@ -48,6 +49,29 @@ const BlogDetails = () => {
     useEffect(() => {
         fetchBlog()
     }, [fetchBlog])
+
+    useEffect(() => {
+        const handleScrollSpy = () => {
+            const headings = document.querySelectorAll('article h2, article h3'); // Adjust selectors based on heading levels
+            let activeId: string | null = null;
+
+            headings.forEach((heading) => {
+                const rect = heading.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top <= 200) { // Adjust range for better effect
+                    activeId = heading.id;
+                }
+            });
+
+            if (activeId) {
+                setActiveHeading(activeId);
+            }
+        };
+
+        window.addEventListener('scroll', handleScrollSpy);
+        return () => {
+            window.removeEventListener('scroll', handleScrollSpy);
+        };
+    }, []);
 
     const readingTime = blog ? calculateReadingTime(blog.body) : "";
 
@@ -101,7 +125,7 @@ const BlogDetails = () => {
                                             </div>
                                             <div className="hidden md:block col-span-1 sticky top-16 border-l border-borderColor px-3"
                                                 style={{
-                                                    height: `calc(100vh - 95px)`
+                                                    height: `calc(100vh - 150px)`
                                                 }}
                                             >
                                                 <div className="py-16 space-y-5">
@@ -131,7 +155,9 @@ const BlogDetails = () => {
                                                         </div>
                                                     </div>
 
-                                                    <Toc headings={blog.headings} />
+                                                    <div>
+                                                        <Toc headings={blog?.headings || []} activeHeading={activeHeading} />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,20 +177,27 @@ const BlogDetails = () => {
 
 export default BlogDetails;
 
-const Toc = ({ headings }: any) => {
+const Toc = ({ headings, activeHeading }: { headings: any[], activeHeading: string | null }) => {
     return (
         <div>
             <h3 className="text-md lg:text-xl font-bold">Table of Contents</h3>
             <div className="flex flex-col justify-start items-start">
                 <nav className="w-full">
                     <ul>
-                        {
-                            headings.map((heading: any, index: number) => (
-                                <li key={index} className="w-full text-start my-3 bg-smallCard px-3 py-2 rounded-full line-clamp-1  hover:text-secondary">
-                                    <Link href={`#${slugify(heading?.children[0]?.text)}`} className="line-clamp-1">{heading?.children[0]?.text}</Link>
+                        {headings.map((heading, index) => {
+                            const headingId = slugify(heading?.children[0]?.text);
+                            return (
+                                <li
+                                    key={index}
+                                    className={`w-full text-start my-3 px-3 py-2 rounded-full line-clamp-1 
+                                    ${activeHeading === headingId ? 'bg-secondary text-white' : 'bg-smallCard'}`}
+                                >
+                                    <Link href={`#${headingId}`} aria-current={activeHeading === headingId ? 'true' : 'false'} className="line-clamp-1">
+                                        {heading?.children[0]?.text}
+                                    </Link>
                                 </li>
-                            ))
-                        }
+                            );
+                        })}
                     </ul>
                 </nav>
             </div>
