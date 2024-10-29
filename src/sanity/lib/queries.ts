@@ -84,3 +84,14 @@ export const OPENINGS_QUERY = defineQuery(`
   description,
   link
 }`)
+export const OPENINGS_QUERY_BY_SLUG = defineQuery(`
+ *[_type == "openings" && slug.current == $slug][0]{
+  title,
+  "slug": slug.current,
+  type,
+  location,
+  description,
+  link,
+  _createdAt,
+  deadline
+}`)

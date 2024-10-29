@@ -52,7 +52,7 @@ const RichTextComponent: PortableTextComponents = {
 
   listItem: {
     bullet: ({ children }: { children?: React.ReactNode }) => (
-      <li style={{ listStyleType: 'disc' }} className="ml-4 text-textColorTwo">
+      <li style={{ listStyleType: 'disc' }} className="ml-4 text-textColorTwo font-light">
         {children}
       </li>
     ),
@@ -102,6 +102,14 @@ const RichTextComponent: PortableTextComponents = {
       >
         {value.children[0].text}
       </h6>
+    ),
+    p: ({ value }: any) => (
+      <p
+        id={slugify(value.children[0].text)}
+        className="text-lg font-bold text-textColorTwo"
+      >
+        {value.children[0].text}
+      </p>
     ),
   },
 };

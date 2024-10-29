@@ -63,4 +63,6 @@ export interface Openings {
     location: string;
     description: any;
     link: string;
+    _createdAt: string;
+    deadline: string;
   }
