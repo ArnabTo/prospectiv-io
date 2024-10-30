@@ -96,7 +96,7 @@ export const OPENINGS_QUERY_BY_SLUG = defineQuery(`
 }`)
 
 export const BLOG_SEARCH_QUERY = defineQuery(`
-*[_type == "post" && title match $query + "*"]{
+*[_type == "post" && title match $params.query + "*"]{
   title,
   "slug": slug.current,
   author->{

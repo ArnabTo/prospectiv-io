@@ -34,7 +34,7 @@ export default function Blogs() {
     const searchBlog = useCallback(async () => {
         setIsLoading(true)
         try {
-            const getBlog = await axios.get(`/api/searchblog?query=${searchQuery}`)
+            const getBlog = await axios.get(`/api/searchblog?query=${encodeURIComponent(searchQuery)}`)
             setSearchedBlog(getBlog.data)
             // setBlogs(getBlog.data)
         } catch (error) {
