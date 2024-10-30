@@ -6,7 +6,7 @@ import { Loader2 } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
-import RichTextComponent from "@/components/rich-text-component/RichTextComponent";
+import { RichTextComponent } from "@/components/rich-text-component/RichTextComponent";
 import Link from "next/link";
 
 interface Vacancy {

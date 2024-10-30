@@ -1,8 +1,10 @@
 /* Card Animation */
 .card-animation {
     position: relative;
-    background-color: #1d1a2746; /* Initial background color */
-    transition: background 0.3s ease-in-out; /* Smooth transition */
+    background-color: #1d1a2746;
+    /* Initial background color */
+    transition: background 0.3s ease-in-out;
+    /* Smooth transition */
     overflow: hidden;
 }
 
@@ -29,9 +31,7 @@
     z-index: 1;
 }
 
-
-  
-  .swiper-slide {
+.swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,8 +39,4 @@
     font-size: 22px;
     font-weight: bold;
     color: #fff;
-  }
-
-p{
-    color: #b7b4c7
 }

@@ -11,8 +11,7 @@ import { Calendar, Loader2, Tag } from "lucide-react";
 import calculateReadingTime from "@/components/reading-time-caculator/ReadingTimeCalculator";
 import BlogSection from "@/components/Blogs/BlogSection";
 import { motion } from 'framer-motion';
-import RichTextComponent from "@/components/rich-text-component/RichTextComponent";
-import '../../../custom.css'
+import { RichTextComponent } from "@/components/rich-text-component/RichTextComponent";
 import Link from "next/link";
 import LinkedInLogo from '@/public/assets/icons8-linkedin-480.png'
 import InstagramLogo from '@/public/assets//icons8-instagram-480.png'
