@@ -110,6 +110,10 @@ export const BLOG_SEARCH_QUERY = defineQuery(`
     alt
   },
   publishedAt,
-  body
+  body,
+  categories[]->{
+    title
+  },
+  _createdAt,
 }
 `)
