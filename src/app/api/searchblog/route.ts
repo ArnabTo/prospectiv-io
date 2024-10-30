@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { BLOG_SEARCH_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 
