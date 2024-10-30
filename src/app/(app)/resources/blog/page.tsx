@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react"
 import { Blog } from '@/types/types'
+import { Separator } from "@/components/ui/separator";
 
 
 export default function Blogs() {
@@ -52,22 +53,26 @@ export default function Blogs() {
     // console.log(blogs)
     return (
         <div className="max-w-7xl mx-auto space-y-16 py-16">
-            <div className="w-full mx-auto space-y-5">
+            <div className="w-full mx-auto space-y-7">
                 <div className="space-y-5">
                     <span className="w-20 mx-auto text-xl text-center flex justify-center items-center border border-borderColor px-4 py-2 rounded-full">Blog</span>
                     <p className="text-xl md:text-3xl lg:text-5xl font-bold text-center">Stay Uptodate with <br /> <span className="text-secondary">Prospectiv</span></p>
                 </div>
-                <div className="flex items-center justify-center gap-2 relative">
-                    {/* <input
-                        type="text"
-                        placeholder="🔍"
-                        onChange={(e) => {
-                            setSearchQuery(e.target.value)
-                            searchBlog()
-                        }}
-                        value={searchQuery}
-                        className="w-1/2 focus:w-full flex-shrink-0 px-4 py-2 text-textColorOne border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-secondary transition-all duration-300 ease-in-out" /> */}
+                <div className="flex h-5 justify-center items-center space-x-4">
+                    <div>
+                       <Link className="text-lg hover:text-secondary hover:border-b border-secondary" href='/about-us'>About Us</Link>
+                    </div>
+                    <Separator orientation="vertical" />
+                    <div><Link className="text-lg hover:text-secondary hover:border-b border-secondary" href='/paper'>White Paper</Link></div>
+                    <Separator orientation="vertical" />
+                    <div><Link className="text-lg hover:text-secondary hover:border-b border-secondary" href='/resources/blog'>Other Blogs</Link></div>
+                    <Separator orientation="vertical" />
+                    <div><Link className="text-lg hover:text-secondary hover:border-b border-secondary" href='/careers'>Openings</Link></div>
+                    <Separator orientation="vertical" />
+                    <div><Link className="text-lg hover:text-secondary hover:border-b border-secondary" href='/life-at-prospect'>Life at Prospect</Link></div>
+                </div>
 
+                <div className="flex items-center justify-center gap-2 relative">
                     <div className="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
                         <div className="grid place-items-center h-full w-12 text-gray-300">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
