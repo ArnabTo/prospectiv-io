@@ -74,7 +74,6 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
     }
 `)
 
-
 export const OPENINGS_QUERY = defineQuery(`
     *[_type == "openings" && defined(slug.current)] | order(_createdAt desc){
   title,
@@ -95,3 +94,22 @@ export const OPENINGS_QUERY_BY_SLUG = defineQuery(`
   _createdAt,
   deadline
 }`)
+
+export const BLOG_SEARCH_QUERY = defineQuery(`
+*[_type == "post" && title match $query + "*"]{
+  title,
+  "slug": slug.current,
+  author->{
+    name
+  },
+  mainImage{
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  publishedAt,
+  body
+}
+`)

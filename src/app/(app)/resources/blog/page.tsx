@@ -15,6 +15,8 @@ export default function Blogs() {
 
     const [blogs, setBlogs] = useState<Blog[]>([])
     const [isLoading, setIsLoading] = useState(false)
+    const [searchQuery, setSearchQuery] = useState('')
+    const [msg, setMsg] = useState('')
 
     const fetchBlogs = useCallback(async () => {
         setIsLoading(true)
@@ -28,20 +30,43 @@ export default function Blogs() {
         }
     }, [])
 
-    useEffect(() => {
-        fetchBlogs()
-    }, [fetchBlogs])
+    const searchBlog = useCallback(async () => {
+        setIsLoading(true)
+        try {
+            const getBlog = await axios.get(`/api/searchblog?query=${searchQuery}`)
+            setBlogs(getBlog.data)
+        } catch (error) {
+            console.log(error, 'error on search blog')
+        } finally {
+            setIsLoading(false)
+        }
+    }, [searchQuery])
 
-   
+    useEffect(() => {
+        if (!searchQuery) {
+            fetchBlogs()
+        }
+    }, [fetchBlogs, searchQuery])
+
+    // console.log(blogs)
+    // console.log(blogs)
     return (
         <div className="max-w-7xl mx-auto space-y-16">
             <div className="w-1/3 ml-auto">
                 <div className="flex items-center space-x-4 relative">
-                    <input type="text" className="flex-shrink-0 w-full px-4 py-2 text-textColorOne border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-secondary" />
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        onChange={(e) => {
+                            setSearchQuery(e.target.value)
+                            searchBlog()
+                        }}
+                        value={searchQuery}
+                        className="flex-shrink-0 w-full px-4 py-2 text-textColorOne border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-secondary" />
                     {/* <Button className="absolute right-1 w-24 px-10 rounded-full bg-buttonColor text-foreground hover:bg-buttonHoverColor">
                         <Search size={25} />
                     </Button> */}
-                    <div className="w-24 absolute right-1 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
+                    <div onClick={() => searchBlog()} className="w-24 absolute right-1 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
                         <div className="flex-1 flex justify-center items-center py-[6px] text-center bg-black  rounded-full hover:scale-95 transition-all duration-300">
                             <Search size={25} />
                         </div>
