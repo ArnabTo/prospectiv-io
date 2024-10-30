@@ -4,6 +4,7 @@ import { client } from "@/sanity/lib/client";
 export async function GET(reqest: Request) {
     try {
         const response = await client.fetch(ALL_POST_QUERY);
+        console.log(response.length)
         return new Response(JSON.stringify(response), { status: 200 });
     } catch (error) {
         console.error(error);

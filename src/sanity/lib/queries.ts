@@ -76,7 +76,7 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
 
 
 export const OPENINGS_QUERY = defineQuery(`
-    *[_type == "openings"] [0...3]{
+    *[_type == "openings" && defined(slug.current)] | order(_createdAt desc){
   title,
   "slug": slug.current,
   type,
