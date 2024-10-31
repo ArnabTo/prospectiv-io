@@ -55,7 +55,6 @@ export default function Blogs() {
         <div className="max-w-7xl mx-auto space-y-16 py-16">
             <div className="w-full mx-auto space-y-7">
                 <div className="space-y-5">
-                    <span className="w-20 mx-auto text-xl text-center flex justify-center items-center border border-borderColor px-4 py-2 rounded-full">Blog</span>
                     <p className="text-xl md:text-3xl lg:text-5xl font-bold text-center">Stay Uptodate with <br /> <span className="text-secondary">Prospectiv</span></p>
                 </div>
                 <div className="flex flex-col gap-4">
