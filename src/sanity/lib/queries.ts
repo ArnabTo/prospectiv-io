@@ -116,3 +116,58 @@ export const BLOG_SEARCH_QUERY = defineQuery(`
         }
 }
 `)
+export const WHITEPAPER_QUERY = defineQuery(`
+*[_type == "whitepaper" && defined(slug.current)] | order(_createdAt desc){
+  title,
+  "slug": slug.current,
+  mainImage{
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  body,
+  download_link
+}
+`)
+export const WEBINAR_QUERY = defineQuery(`
+*[_type == "webinars" && defined(slug.current)] | order(_createdAt desc){
+  title,
+  "slug": slug.current,
+  mainImage{
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  author->{
+            name,
+            bio,
+            image{
+                asset->{
+                    _id,
+                    url
+                }
+            }
+        },
+  body, 
+  content_link
+}
+`)
+export const GUIDE_QUERY = defineQuery(`
+*[_type == "guide" && defined(slug.current)] | order(_createdAt desc){
+  title,
+  "slug": slug.current,
+  mainImage{
+    asset->{
+      _id,
+      url
+    },
+    alt
+  },
+  body, 
+  download_link
+}
+`)
