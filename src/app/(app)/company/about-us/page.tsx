@@ -36,7 +36,7 @@ const AboutUs = () => {
                     }}
                 >
                 </div>
-                <div className='absolute w-full lg:max-w-[70%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
+                <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
                     <h1 className='text-3xl lg:text-6xl font-extrabold '>About <span className='text-secondary'>Us</span> </h1>
                     <p className='text-textColorTwo text-md lg:text-lg text-center font-bold mx- px-5'>
                         {aboutUsPageTextContent?.heading?.paragraph}
@@ -542,7 +542,7 @@ const AboutUs = () => {
                             </p>
                             <p className="text-md lg:text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentThree}</p>
                             <div className="w-60 lg:w-full max-w-72 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                                <Link href="/careers" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
+                                <Link href="company/careers" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                                   {aboutUsPageTextContent.casestudy.cta}
                                 </Link>
                             </div>

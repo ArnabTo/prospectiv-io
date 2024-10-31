@@ -284,19 +284,19 @@ const carrerPageTextContent = {
         content: [
             {
                 link: '/life-at-prospectiv',
-                image: 'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+                image: 'https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
                 title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
             {
                 link: '/life-at-prospectiv',
-                image: 'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+                image: 'https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
                 title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
             {
                 link: '/life-at-prospectiv',
-                image: 'https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg',
+                image: 'https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
                 title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },

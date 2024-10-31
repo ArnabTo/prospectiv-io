@@ -11,7 +11,7 @@ import {
     NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, BookOpenText, BriefcaseBusiness, LifeBuoy, MessageCircleWarning } from "lucide-react";
+import { AlignJustify, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, MessageCircleWarning } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -125,9 +125,50 @@ const Navbar = () => {
                                     <li className="relative" ref={dropdownRef}>
                                         <div
                                             className="text-lg font-bold hover:text-secondary transition-all duration-500"
-                                            onClick={() => toggleDropdown(1)}
+                                            onClick={() => toggleDropdown(0)}
                                         >
                                             Company
+                                        </div>
+                                        <motion.ul
+                                            className="overflow-hidden"
+                                            initial="hidden"
+                                            animate={openDropdownIndex === 0 ? "visible" : "hidden"}
+                                            exit="exit"
+                                            variants={dropdownVariants}
+                                            style={{
+                                                visibility: openDropdownIndex === 0 ? 'visible' : 'hidden',
+                                                display: openDropdownIndex === 0 ? 'block' : 'none'
+                                            }}
+                                        >
+                                            <li>
+                                                <Link href="/life-at-prospectiv" className="block py-2">
+                                                    <div className="flex justify-start items-start gap-2 pl-5">
+                                                        <h1 className="text-md font-bold text-white">Life at Prospectiv</h1>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/about-us" className="block py-2">
+                                                    <div className="flex justify-start items-start gap-2 pl-5">
+                                                        <h1 className="text-md font-bold text-white">About Us</h1>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="" className="block py-2">
+                                                    <div className="flex justify-start items-start gap-2 pl-5">
+                                                        <h1 className="text-md font-bold text-white">Careers</h1>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                        </motion.ul>
+                                    </li>
+                                    <li className="relative" ref={dropdownRef}>
+                                        <div
+                                            className="text-lg font-bold hover:text-secondary transition-all duration-500"
+                                            onClick={() => toggleDropdown(1)}
+                                        >
+                                            Resources
                                         </div>
                                         <motion.ul
                                             className="overflow-hidden"
@@ -143,14 +184,21 @@ const Navbar = () => {
                                             <li>
                                                 <Link href="/life-at-prospectiv" className="block py-2">
                                                     <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Life at Prospectiv</h1>
+                                                        <h1 className="text-md font-bold text-white">Blog</h1>
                                                     </div>
                                                 </Link>
                                             </li>
                                             <li>
                                                 <Link href="/about-us" className="block py-2">
                                                     <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">About Us</h1>
+                                                        <h1 className="text-md font-bold text-white">Resource Hub</h1>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="" className="block py-2">
+                                                    <div className="flex justify-start items-start gap-2 pl-5">
+                                                        <h1 className="text-md font-bold text-white">Careers</h1>
                                                     </div>
                                                 </Link>
                                             </li>
@@ -209,9 +257,9 @@ const Navbar = () => {
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-5 bg-background">
                                         <div className="flex flex-col gap-5">
-                                            <Link href="/life-at-prospectiv" className="w-full transition-all duration-500">
+                                            <Link href="/company/life-at-prospectiv" className="w-full transition-all duration-500">
                                                 <div className="flex items-center gap-4">
-                                                    <LifeBuoy size={120} />
+                                                    <LifeBuoy size={100} />
                                                     <span>
                                                         <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
                                                         <p className="text-sm text-textColorTwo">
@@ -221,9 +269,9 @@ const Navbar = () => {
                                                 </div>
                                             </Link>
                                             <div className="flex flex-col gap-5">
-                                                <Link href="/careers" className="transition-all duration-500">
+                                                <Link href="/company/careers" className="transition-all duration-500">
                                                     <div className="flex items-center gap-4">
-                                                        <BriefcaseBusiness size={120} />
+                                                        <BriefcaseBusiness size={100} />
                                                         <div>
                                                             <h3 className="text-lg font-bold text-secondary">Careers</h3>
                                                             <p className="text-sm text-textColorTwo">
@@ -236,9 +284,9 @@ const Navbar = () => {
                                         </div>
                                         <div className="w-1 h-16 bg-secondary"></div>
                                         <div className="flex flex-col gap-5">
-                                            <Link href="/about-us" className="transition-all duration-500">
+                                            <Link href="/company/about-us" className="transition-all duration-500">
                                                 <div className="flex items-center gap-4">
-                                                    <MessageCircleWarning size={120} />
+                                                    <MessageCircleWarning size={100} />
                                                     <div>
                                                         <h3 className="text-lg font-bold text-secondary">About Us</h3>
                                                         <p className="text-sm text-textColorTwo">
@@ -259,11 +307,22 @@ const Navbar = () => {
                                         <div className="flex flex-col gap-5 flex-1">
                                             <Link href="/resources/blog" className="w-full transition-all duration-500">
                                                 <div className="flex items-center gap-4">
-                                                    <BookOpenText size={120} />
+                                                    <BookOpenText size={100} />
                                                     <span>
                                                         <h3 className="text-lg font-bold text-secondary">Blog</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             A page about our culture, people, values and what it's like to work here
+                                                        </p>
+                                                    </span>
+                                                </div>
+                                            </Link>
+                                            <Link href="/resources/resource-hub" className="w-full transition-all duration-500">
+                                                <div className="flex items-center gap-4">
+                                                    <Folders size={100} />
+                                                    <span>
+                                                        <h3 className="text-lg font-bold text-secondary">Resource Hub</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            Whitepapers, guides and webinars. All designed to help you sell more.
                                                         </p>
                                                     </span>
                                                 </div>

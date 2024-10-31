@@ -137,7 +137,7 @@ const Careers = () => {
                     <div className='flex flex-col gap-3 space-y-5'>
                         {
                             vacancies.map((vacancy, id) => (
-                                <Link href={`/careers/${vacancy.slug}`} key={id} className='group'>
+                                <Link href={`company/careers/${vacancy.slug}`} key={id} className='group'>
                                     <div key={id} className='bg-card border border-borderColor p-5 rounded-xl hover:bg-background shadow-black hover:shadow-xl transition-all ease-in-out duration-200'>
                                         <div className='flex items-center gap-5'>
                                             <div className='grid grid-cols-1  lg:grid-cols-3 items-start lg:justify-between lg:items-center gap-2 flex-1'>

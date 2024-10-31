@@ -66,7 +66,7 @@ const VacancyDetails = () => {
                                             </BreadcrumbItem>
                                             <BreadcrumbSeparator />
                                             <BreadcrumbItem>
-                                                <BreadcrumbLink className='text-textColorTwo text-lg' href="/careers">Careers</BreadcrumbLink>
+                                                <BreadcrumbLink className='text-textColorTwo text-lg' href="company/careers">Careers</BreadcrumbLink>
                                             </BreadcrumbItem>
                                             <BreadcrumbSeparator />
                                             <BreadcrumbItem>

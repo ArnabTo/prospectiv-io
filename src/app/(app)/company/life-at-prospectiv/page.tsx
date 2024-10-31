@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import Link from 'next/link';
-import '../../custom.css'
+import '../../../custom.css'
 import { useRef } from 'react';
 import Lottie from 'lottie-react';
 import { lifeAtProspectivTextContent } from '@/lib/TextContent';
@@ -649,7 +649,7 @@ const LifeAtProspectiv = () => {
                             <div className='flex flex-col gap-5'>
                                 <div>
                                     <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                        src='https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg'
                                         alt="image"
                                         width={500}
                                         height={500}
@@ -668,7 +668,7 @@ const LifeAtProspectiv = () => {
                             <div className='flex flex-col gap-5'>
                                 <div>
                                     <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                        src='https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg'
                                         alt="image"
                                         width={500}
                                         height={500}
@@ -687,7 +687,7 @@ const LifeAtProspectiv = () => {
                             <div className='flex flex-col gap-5'>
                                 <div>
                                     <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07/careers_bottom.jpg'
+                                        src='https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg'
                                         alt="image"
                                         width={500}
                                         height={500}
