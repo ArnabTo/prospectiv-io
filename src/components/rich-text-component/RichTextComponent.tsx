@@ -21,10 +21,10 @@ export const RichTextComponent = {
 },
 list: {
   bullet: ({children}: any) => (
-    <ul className="ml-10 py-5 list-disc text-lg">{children}</ul>
+    <ul className="ml-10 list-disc text-lg">{children}</ul>
   ),
   number: ({children}: any) => (
-    <ol className="mt-lg list-decimal">{children}</ol>
+    <ol className="ml-10 list-decimal text-lg">{children}</ol>
   ),
 },
 block:{
@@ -39,12 +39,12 @@ block:{
   h3: ({value}: any) => (
     <h3 
     id={slugify(value.children[0].text)}
-    className='text-2xl py-10 font-bold'>{value.children[0].text}</h3>
+    className='text-2xl pt-10 pb-1 font-bold'>{value.children[0].text}</h3>
   ),
   h4: ({value}: any) => (
     <h4 
     id={slugify(value.children[0].text)}
-    className='text-xl py-10 font-bold'>{value.children[0].text}</h4>
+    className='text-xl pt-10 pb-1 font-bold'>{value.children[0].text}</h4>
   ),
   blockqote: ({children}: any) => (
     <blockquote className='border-l-4 border-gradientColorTwo pl-5 py-5 my-5'>
