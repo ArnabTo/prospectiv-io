@@ -24,7 +24,7 @@ export const webminarType = defineType({
       to: {type: 'author'},
     }),
     defineField({
-      name: 'mainImage',
+      name: 'thumbnail',
       type: 'image',
       options: {
         hotspot: true,
@@ -54,7 +54,7 @@ export const webminarType = defineType({
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'thumbnail',
     },
     prepare(selection) {
       const {author} = selection

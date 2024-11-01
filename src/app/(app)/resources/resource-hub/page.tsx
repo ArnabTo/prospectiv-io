@@ -1,5 +1,5 @@
 'use client';
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Guide, Webinar, Whitepaper } from "@/types/types";
 import axios from "axios";
 import Image from "next/image";
@@ -7,58 +7,123 @@ import { useCallback, useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
 import { motion } from 'framer-motion';
 import Link from "next/link";
-import { ArrowUpRightIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRightIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 const ResourceHub = () => {
 
    const [webinars, setWebinars] = useState<Webinar[]>([]);
    const [guides, setGuides] = useState<Guide[]>([]);
    const [whitePapers, setWhitePapers] = useState<Whitepaper[]>([]);
+   const [allContents, setAllContents] = useState<any[]>([]);
+   const [currentTab, setCurrentTab] = useState("All");
+   const [currentPage, setCurrentPage] = useState(1);
 
-   // fetching webinars
+   // Fetching content
    const fetchWebinars = useCallback(async () => {
       try {
-         const getWebinars = await axios.get('/api/getwebinars');
-         setWebinars(getWebinars.data);
+         const response = await axios.get('/api/getwebinars');
+         setWebinars(response.data);
+         setAllContents(prev => [...prev, ...response.data]);
       } catch (error) {
-         console.log(error)
+         console.log(error);
       }
-   }, [])
+   }, []);
 
-   // fetching whitepapers
    const fetchWhitePapers = useCallback(async () => {
       try {
-         const getWhitePapers = await axios.get('/api/getwhitepaper');
-         setWhitePapers(getWhitePapers.data);
+         const response = await axios.get('/api/getwhitepaper');
+         setWhitePapers(response.data);
+         setAllContents(prev => [...prev, ...response.data]);
       } catch (error) {
-         console.log(error)
+         console.log(error);
       }
-   }, [])
+   }, []);
 
-   // fetching guides
    const fetchGuides = useCallback(async () => {
       try {
-         const getGuides = await axios.get('/api/getguides');
-         setGuides(getGuides.data);
+         const response = await axios.get('/api/getguides');
+         setGuides(response.data);
+         setAllContents(prev => [...prev, ...response.data]);
       } catch (error) {
-         console.log(error)
+         console.log(error);
       }
-   }, [])
+   }, []);
 
    useEffect(() => {
       fetchGuides();
       fetchWhitePapers();
       fetchWebinars();
-   }, [fetchGuides, fetchWhitePapers, fetchWebinars])
+   }, [fetchGuides, fetchWhitePapers, fetchWebinars]);
 
-   console.log(webinars[0])
+   // Filter content based on the selected tab
+   const filteredContent = currentTab === "All"
+      ? allContents
+      : currentTab === "webinars"
+         ? webinars
+         : currentTab === "guides"
+            ? guides
+            : whitePapers;
+
+   // Paginate content
+   const startIndex = (currentPage - 1) * 9;
+   const paginatedContent = filteredContent.slice(startIndex, startIndex + 9);
+   const totalPages = Math.ceil(filteredContent.length / 9);
+
+   const handlePageChange = (page: number) => {
+      setCurrentPage(page);
+   };
+
+
+   const renderContent = (content: any) => {
+      console.log(content)
+      return (
+         <div key={content.id} className="p-4 rounded-lg shadow-md">
+            <Link href=''>
+               <Card className="border border-borderColor h-full max-w-96 rounded-2xl group">
+                  <CardHeader className="space-y-3">
+                     <div className="overflow-hidden">
+                        <Image
+                        src={content.thumbnail.assets?.url}
+                        width={500}
+                        height={500}
+                        alt='blog_thumbnail'
+                        className="rounded-lg group-hover:scale-110 transition-all duration-300 border border-borderColor"
+                     />
+                     </div>
+                     <div className="flex justify-start gap-3">
+                        {
+                           content.categories == null ? <>"Unknown"</>
+                              :
+                              <Badge className="bg-buttonColor text-foreground hover:bg-secondary w-fit text-center">
+                                 {content.categories.map((category:any, index:number) => (<span key={index}>{category.title}</span>))}
+                              </Badge>
+                        }
+                        <p>{new Date(content?._createdAt).toDateString()}</p>
+                     </div>
+                  </CardHeader>
+                  <CardContent>
+                     <h2 className="text-xl font-bold line-clamp-2">{content.title}</h2>
+                     <p className="text-lg text-textColorTwo line-clamp-2"><PortableText value={content.body} /></p>
+                  </CardContent>
+                  <CardFooter>
+                     <div className="w-full flex justify-end items-end">
+                        <ArrowRight size={30} />
+                     </div>
+                  </CardFooter>
+               </Card>
+            </Link>
+         </div>
+      )
+   }
+   // console.log(allContents)
    return (
       <div className="overflow-hidden">
          <div className="space-y-24">
-               <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-center">Resource Hub</h1>
+            <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-center">Resource Hub</h1>
 
             <div className="max-w-screen-2xl mx-auto">
                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12 px-4 relative">
@@ -67,7 +132,7 @@ const ResourceHub = () => {
                      <Link href=''>
                         <div className="overflow-hidden relative">
                            <Image
-                              src={webinars[0]?.mainImage?.asset?.url}
+                              src={webinars[0]?.thumbnail?.asset?.url}
                               width={500}
                               height={500}
                               alt="thumbnail"
@@ -94,7 +159,7 @@ const ResourceHub = () => {
                                  width={500}
                                  height={500}
                                  alt="thumbnail"
-                                 className="w-full  min-h-[85%] bg-white rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
+                                 className="w-full  min-h-[85%] bg-white rounded-xl p-2 group-hover:scale-105 transition-all duration-300 ease-linear"
                               />
                               <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Guide</Badge>
                            </div>
@@ -121,7 +186,7 @@ const ResourceHub = () => {
                                  width={500}
                                  height={500}
                                  alt="thumbnail"
-                                 className="w-full min-h-[85%] rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
+                                 className="w-full min-h-[85%] rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear p-2"
                               />
                               <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Whitepaper</Badge>
                            </div>
@@ -152,16 +217,51 @@ const ResourceHub = () => {
             </div>
 
             <div className="max-w-7xl mx-auto">
-               <Tabs defaultValue="account" className="w-full mx-auto ">
+               <Tabs defaultValue="All" onValueChange={setCurrentTab} className="w-full mx-auto">
                   <TabsList className="mx-auto w-fit bg-card flex justify-center p-5 rounded-full">
-                     <TabsTrigger className="text-xl rounded-full" value="account">Account</TabsTrigger>
-                     <TabsTrigger className="text-xl  rounded-full" value="password">Password</TabsTrigger>
-                     <TabsTrigger className="text-xl  rounded-full" value="Webinars">Password</TabsTrigger>
-                     <TabsTrigger className="text-xl  rounded-full" value="Guides">Password</TabsTrigger>
+                     <TabsTrigger value="All">All</TabsTrigger>
+                     <TabsTrigger value="webinars">Webinars</TabsTrigger>
+                     <TabsTrigger value="guides">Guides</TabsTrigger>
+                     <TabsTrigger value="whitepapers">White Papers</TabsTrigger>
                   </TabsList>
-                  <TabsContent value="account">Make changes to your account here.</TabsContent>
-                  <TabsContent value="password">Change your password here.</TabsContent>
+
+                  <TabsContent value="All">
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {paginatedContent.map(renderContent)}
+                     </div>
+                  </TabsContent>
+                  <TabsContent value="webinars">
+                     {paginatedContent.map(renderContent)}
+                  </TabsContent>
+                  <TabsContent value="guides">
+                     {paginatedContent.map(renderContent)}
+                  </TabsContent>
+                  <TabsContent value="whitepapers">
+                     {paginatedContent.map(renderContent)}
+                  </TabsContent>
                </Tabs>
+
+               {/* Pagination */}
+               <Pagination>
+                  <PaginationContent>
+                     <PaginationItem>
+                        <PaginationPrevious onClick={() => handlePageChange(Math.max(1, currentPage - 1))} />
+                     </PaginationItem>
+                     {[...Array(totalPages)].map((_, index) => (
+                        <PaginationItem key={index}>
+                           <PaginationLink
+                              onClick={() => handlePageChange(index + 1)}
+                              isActive={index + 1 === currentPage}
+                           >
+                              {index + 1}
+                           </PaginationLink>
+                        </PaginationItem>
+                     ))}
+                     <PaginationItem>
+                        <PaginationNext onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))} />
+                     </PaginationItem>
+                  </PaginationContent>
+               </Pagination>
             </div>
          </div>
       </div>
@@ -169,3 +269,5 @@ const ResourceHub = () => {
 };
 
 export default ResourceHub;
+
+

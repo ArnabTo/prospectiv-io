@@ -4,6 +4,7 @@ import { WEBINAR_QUERY } from "@/sanity/lib/queries";
 export async function GET(request: Request) {
     try {
         const response = await client.fetch(WEBINAR_QUERY);
+        console.log(response)
         return new Response(JSON.stringify(response), { status: 200 });
     } catch (error) {
         console.error(error);

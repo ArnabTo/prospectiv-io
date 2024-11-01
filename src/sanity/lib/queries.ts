@@ -135,7 +135,7 @@ export const WEBINAR_QUERY = defineQuery(`
 *[_type == "webinars" && defined(slug.current)] | order(_createdAt desc){
   title,
   "slug": slug.current,
-  mainImage{
+  thumbnail{
     asset->{
       _id,
       url
