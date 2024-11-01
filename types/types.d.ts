@@ -77,33 +77,9 @@ export interface Whitepaper {
         };
         alt?: string;
     };
-    body: any; // Replace 'any' with a more specific type if using a rich text component
+    body: any;
     download_link: string;
-}
-
-
-export interface Webinar {
-    title: string;
-    slug: string;
-    thumbnail: {
-        asset: {
-            _id: string;
-            url: string;
-        };
-        alt?: string;
-    };
-    author: {
-        name: string;
-        bio: string;
-        image: {
-            asset: {
-                _id: string;
-                url: string;
-            };
-        };
-    };
-    body: any; // Replace 'any' with a more specific type if using a rich text component
-    content_link: string;
+    content_type: string;
 }
 
 
@@ -117,6 +93,33 @@ export interface Guide {
         };
         alt?: string;
     };
-    body: any; // Replace 'any' with a more specific type if using a rich text component
+    body: any; 
     download_link: string;
+    content_type: string;
+}
+
+
+export interface Webinar {
+    title: string;
+    slug: string;
+    thumbnail: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+        alt?: string;
+    };
+
+    author: {
+        name: string
+        bio: []
+        image: {
+            asset: {
+                url: string
+            }
+        }
+    };
+    body: any;
+    webinar_link: string;
+    content_type: string;
 }

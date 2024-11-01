@@ -21,13 +21,12 @@ const ResourceHub = () => {
    const [allContents, setAllContents] = useState<any[]>([]);
    const [currentTab, setCurrentTab] = useState("All");
    const [currentPage, setCurrentPage] = useState(1);
-
+   const ITEMS_PER_PAGE = 6;
    // Fetching content
    const fetchWebinars = useCallback(async () => {
       try {
-         const response = await axios.get('/api/getwebinars');
+         const response = await axios.get('/api/getwebinar');
          setWebinars(response.data);
-         setAllContents(prev => [...prev, ...response.data]);
       } catch (error) {
          console.log(error);
       }
@@ -37,7 +36,6 @@ const ResourceHub = () => {
       try {
          const response = await axios.get('/api/getwhitepaper');
          setWhitePapers(response.data);
-         setAllContents(prev => [...prev, ...response.data]);
       } catch (error) {
          console.log(error);
       }
@@ -47,17 +45,24 @@ const ResourceHub = () => {
       try {
          const response = await axios.get('/api/getguides');
          setGuides(response.data);
-         setAllContents(prev => [...prev, ...response.data]);
       } catch (error) {
          console.log(error);
       }
    }, []);
 
+   // Combine all content without duplicates
    useEffect(() => {
       fetchGuides();
       fetchWhitePapers();
       fetchWebinars();
    }, [fetchGuides, fetchWhitePapers, fetchWebinars]);
+
+   useEffect(() => {
+      const combinedContent = [...webinars, ...guides, ...whitePapers];
+      const uniqueContent = Array.from(new Set(combinedContent.map(item => item.slug)))
+         .map(slug => combinedContent.find(item => item.slug === slug));
+      setAllContents(uniqueContent);
+   }, [webinars, guides, whitePapers]);
 
    // Filter content based on the selected tab
    const filteredContent = currentTab === "All"
@@ -69,56 +74,66 @@ const ResourceHub = () => {
             : whitePapers;
 
    // Paginate content
-   const startIndex = (currentPage - 1) * 9;
-   const paginatedContent = filteredContent.slice(startIndex, startIndex + 9);
-   const totalPages = Math.ceil(filteredContent.length / 9);
+   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+   const paginatedContent = filteredContent.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+   const totalPages = Math.ceil(filteredContent.length / ITEMS_PER_PAGE);
 
    const handlePageChange = (page: number) => {
       setCurrentPage(page);
    };
 
-
    const renderContent = (content: any) => {
-      console.log(content)
+ 
+      // Determine the link based on content type
+      const contentTypePath = content.content_type === 'webinar'
+          ? `/resources/resource-hub/webinar/${content.slug}`
+          : content.content_type === 'guide'
+          ? `/api/guide/${content.slug}`
+          : `/api/whitepaper/${content.slug}`;
+  
       return (
-         <div key={content.id} className="p-4 rounded-lg shadow-md">
-            <Link href=''>
-               <Card className="border border-borderColor h-full max-w-96 rounded-2xl group">
-                  <CardHeader className="space-y-3">
-                     <div className="overflow-hidden">
-                        <Image
-                        src={content.thumbnail.assets?.url}
-                        width={500}
-                        height={500}
-                        alt='blog_thumbnail'
-                        className="rounded-lg group-hover:scale-110 transition-all duration-300 border border-borderColor"
-                     />
-                     </div>
-                     <div className="flex justify-start gap-3">
-                        {
-                           content.categories == null ? <>"Unknown"</>
-                              :
-                              <Badge className="bg-buttonColor text-foreground hover:bg-secondary w-fit text-center">
-                                 {content.categories.map((category:any, index:number) => (<span key={index}>{category.title}</span>))}
-                              </Badge>
-                        }
-                        <p>{new Date(content?._createdAt).toDateString()}</p>
-                     </div>
-                  </CardHeader>
-                  <CardContent>
-                     <h2 className="text-xl font-bold line-clamp-2">{content.title}</h2>
-                     <p className="text-lg text-textColorTwo line-clamp-2"><PortableText value={content.body} /></p>
-                  </CardContent>
-                  <CardFooter>
-                     <div className="w-full flex justify-end items-end">
-                        <ArrowRight size={30} />
-                     </div>
-                  </CardFooter>
-               </Card>
-            </Link>
+         <Link href={contentTypePath} key={content.id}>
+         <div className="p-4 rounded-lg shadow-md cursor-pointer h-full">
+           <Card className="border border-borderColor h-full max-w-96 rounded-2xl group flex flex-col">
+             <CardHeader className="space-y-3 flex-shrink-0 min-h-[200px]">
+               <div className="overflow-hidden">
+                 <Image
+                   src={content.thumbnail.asset?.url}
+                   width={500}
+                   height={500}
+                   alt="blog_thumbnail"
+                   className="rounded-lg group-hover:scale-110 transition-all duration-300 border border-borderColor"
+                 />
+               </div>
+               <div className="flex justify-start gap-3">
+                 {content.categories == null ? (
+                   <>Unknown</>
+                 ) : (
+                   <Badge className="bg-buttonColor text-foreground hover:bg-secondary w-fit text-center">
+                     {content.categories.map((category: any, index: number) => (
+                       <span key={index}>{category.title}</span>
+                     ))}
+                   </Badge>
+                 )}
+                 <p>{new Date(content?._createdAt).toDateString()}</p>
+               </div>
+             </CardHeader>
+             
+             <CardContent className="flex-grow">
+               <h2 className="text-xl font-bold line-clamp-2">{content.title}</h2>
+               <p className="text-lg text-textColorTwo line-clamp-2">
+                 <PortableText value={content.body} />
+               </p>
+             </CardContent>
+             
+             <CardFooter className="flex justify-end items-end">
+               <ArrowRight size={30} />
+             </CardFooter>
+           </Card>
          </div>
-      )
-   }
+       </Link>
+      );
+  };
    // console.log(allContents)
    return (
       <div className="overflow-hidden">
@@ -128,9 +143,9 @@ const ResourceHub = () => {
             <div className="max-w-screen-2xl mx-auto">
                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12 px-4 relative">
                   {/* Webinars Section */}
-                  <div className="row-span-1 md:row-span-4 h-full bg-card border border-borderColor p-4 rounded-2xl space-y-4 group">
+                  <div className="row-span-1 md:row-span-4 h-full bg-card border border-borderColor p-7 rounded-2xl space-y-4 group">
                      <Link href=''>
-                        <div className="overflow-hidden relative">
+                        <div className="overflow-hidden relative rounded-xl">
                            <Image
                               src={webinars[0]?.thumbnail?.asset?.url}
                               width={500}
@@ -153,13 +168,13 @@ const ResourceHub = () => {
                   <div className="row-span-1 md:row-span-2 h-full bg-card border border-borderColor p-2 rounded-2xl group">
                      <Link href=''>
                         <div className="flex flex-col md:flex-row items-center h-full gap-4">
-                           <div className="w-full min-w-[40%] h-full flex justify-center items-center overflow-hidden relative">
+                           <div className="w-full min-w-[35%] max-w-[40%] h-full rounded-xl flex justify-center items-center overflow-hidden relative">
                               <Image
                                  src={guides[0]?.thumbnail?.asset?.url}
                                  width={500}
                                  height={500}
                                  alt="thumbnail"
-                                 className="w-full  min-h-[85%] bg-white rounded-xl p-2 group-hover:scale-105 transition-all duration-300 ease-linear"
+                                 className="w-full min-h-[85%] bg-white object-cover rounded-xl p-2 group-hover:scale-105 transition-all duration-300 ease-linear"
                               />
                               <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Guide</Badge>
                            </div>
@@ -177,16 +192,16 @@ const ResourceHub = () => {
                   </div>
 
                   {/* White Papers Section */}
-                  <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-2 h-full bg-card border border-borderColor p-2 rounded-2xl group">
+                  <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-2 h-full bg-card border border-borderColor p-5 rounded-2xl group">
                      <Link href=''>
                         <div className="flex flex-col md:flex-row items-center h-full gap-4">
-                           <div className="w-full min-w-[40%] h-full flex justify-center items-center overflow-hidden relative">
+                           <div className="w-full min-w-[35%] max-w-[40%] h-full flex justify-center items-center overflow-hidden relative">
                               <Image
                                  src={whitePapers[0]?.thumbnail?.asset?.url}
                                  width={500}
                                  height={500}
                                  alt="thumbnail"
-                                 className="w-full min-h-[85%] rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear p-2"
+                                 className="w-full min-h-[85%] object-cover rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
                               />
                               <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Whitepaper</Badge>
                            </div>
@@ -226,18 +241,24 @@ const ResourceHub = () => {
                   </TabsList>
 
                   <TabsContent value="All">
-                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {paginatedContent.map(renderContent)}
                      </div>
                   </TabsContent>
                   <TabsContent value="webinars">
-                     {paginatedContent.map(renderContent)}
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {paginatedContent.map(renderContent)}
+                     </div>
                   </TabsContent>
                   <TabsContent value="guides">
-                     {paginatedContent.map(renderContent)}
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {paginatedContent.map(renderContent)}
+                     </div>
                   </TabsContent>
                   <TabsContent value="whitepapers">
-                     {paginatedContent.map(renderContent)}
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {paginatedContent.map(renderContent)}
+                     </div>
                   </TabsContent>
                </Tabs>
 

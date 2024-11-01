@@ -1,49 +1,54 @@
-import { defineField, defineType } from "sanity";
-import { BookIcon } from "@sanity/icons";
+import { defineType } from "sanity";
+
 export const guideType = defineType({
     name: 'guide',
     title: 'Guide',
     type: 'document',
-    icon: BookIcon,
     fields: [
-      defineField({
+      {
         name: 'title',
+        title: 'Title',
         type: 'string',
-      }),
-      defineField({
+      },
+      {
         name: 'slug',
+        title: 'Slug',
         type: 'slug',
         options: {
           source: 'title',
         },
-      }),
-      defineField({
+      },
+      {
         name: 'thumbnail',
+        title: 'Thumbnail',
         type: 'image',
         options: {
           hotspot: true,
         },
-        fields: [
-          {
-            name: 'alt',
-            type: 'string',
-            title: 'Alternative text',
-          }
-        ]
-      }),
-      defineField({
+      },
+      {
         name: 'body',
-        type: 'blockContent',
-      }),
-      defineField({
+        title: 'Body',
+        type: 'array',
+        of: [{ type: 'block' }],
+      },
+      {
         name: 'download_link',
+        title: 'Download Link',
         type: 'url',
-      })
+      },
+      {
+        name: 'content_type',
+        title: 'Content Type',
+        type: 'string',
+        initialValue: 'Guide',
+        readOnly: true,
+      },
     ],
     preview: {
-      select: {
-        title: 'title',
-        media: 'thumbnail',
+        select: {
+          title: 'title',
+          media: 'thumbnail',
+        },
       },
-    },
 })

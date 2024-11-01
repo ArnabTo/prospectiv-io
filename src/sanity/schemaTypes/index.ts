@@ -5,9 +5,9 @@ import { categoryType } from './categoryType'
 import { postType } from './postType'
 import { authorType } from './authorType'
 import { openingsType } from './openingsType'
-import { webminarType } from './webinarsType'
+import { webinarType } from './webinarType'
 import { whitepaperType } from './whitepaperType'
-import { guideType } from './guideType'
+import { guideType } from './guideType' 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [blockContentType,
@@ -15,7 +15,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     postType,
     authorType,
     openingsType,
-    webminarType,
-    whitepaperType,
-    guideType],
+    guideType,
+    webinarType,
+    whitepaperType
+  ],
 }

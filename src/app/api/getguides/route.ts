@@ -1,7 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import { GUIDE_QUERY } from "@/sanity/lib/queries";
 
-export async function GET(request: Request) {
+export async function GET() {
     try {
         const response = await client.fetch(GUIDE_QUERY);
         return new Response(JSON.stringify(response), { status: 200 });

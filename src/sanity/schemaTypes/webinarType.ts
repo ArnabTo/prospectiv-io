@@ -1,9 +1,9 @@
 import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
-export const whitepaperType = defineType({
-    name: 'whitepaper',
-    title: 'Whitepaper',
+export const webinarType = defineType({
+    name: 'webinar',
+    title: 'Webinar',
     type: 'document',
     icon: DocumentTextIcon,
     fields: [
@@ -17,6 +17,11 @@ export const whitepaperType = defineType({
             options: {
                 source: 'title',
             },
+        }),
+        defineField({
+            name: 'author',
+            type: 'reference',
+            to: { type: 'author' },
         }),
         defineField({
             name: 'thumbnail',
@@ -36,18 +41,32 @@ export const whitepaperType = defineType({
             name: 'body',
             type: 'blockContent',
         }),
+        defineField({
+            name: 'publishedAt',
+            title: 'Published at',
+            type: 'datetime',
+        }),
+        defineField({
+            name: 'webinar_url',
+            type: 'url',
+        }),
         {
             name: 'content_type',
             title: 'Content Type',
             type: 'string',
             hidden: true,
-            initialValue: 'Whitepaper',
+            initialValue: 'Webinar',
           },
     ],
     preview: {
         select: {
             title: 'title',
+            author: 'author.name',
             media: 'thumbnail',
+        },
+        prepare(selection) {
+            const { author } = selection
+            return { ...selection, subtitle: author && `by ${author}` }
         },
     },
 })
