@@ -7,7 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
 import { motion } from 'framer-motion';
 import Link from "next/link";
-import { ArrowRight, ArrowUpRightIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRightIcon, BookOpen, BookOpenIcon, ScrollText, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -233,11 +233,11 @@ const ResourceHub = () => {
 
             <div className="max-w-7xl mx-auto">
                <Tabs defaultValue="All" onValueChange={setCurrentTab} className="w-full mx-auto">
-                  <TabsList className="mx-auto w-fit bg-card flex justify-center p-5 rounded-full">
+                  <TabsList className="mx-auto lg:max-w-[80%] bg-card flex justify-between items-center p-5 rounded-full">
                      <TabsTrigger value="All">All</TabsTrigger>
-                     <TabsTrigger value="webinars">Webinars</TabsTrigger>
-                     <TabsTrigger value="guides">Guides</TabsTrigger>
-                     <TabsTrigger value="whitepapers">White Papers</TabsTrigger>
+                     <TabsTrigger value="webinars" className="flex flex-col lg:flex-row"><Video className="mr-2" size={25}/> Webinars</TabsTrigger>
+                     <TabsTrigger value="guides" className="flex flex-col lg:flex-row"><ScrollText className="mr-2" size={25}/> Guides</TabsTrigger>
+                     <TabsTrigger value="whitepapers" className="flex flex-col lg:flex-row"><BookOpenIcon className="mr-2" size={25}/>  White Papers</TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="All">
