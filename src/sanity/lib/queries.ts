@@ -120,7 +120,7 @@ export const WHITEPAPER_QUERY = defineQuery(`
 *[_type == "whitepaper" && defined(slug.current)] | order(_createdAt desc){
   title,
   "slug": slug.current,
-  mainImage{
+  thumbnail{
     asset->{
       _id,
       url
@@ -160,7 +160,7 @@ export const GUIDE_QUERY = defineQuery(`
 *[_type == "guide" && defined(slug.current)] | order(_createdAt desc){
   title,
   "slug": slug.current,
-  mainImage{
+  thumbnail{
     asset->{
       _id,
       url

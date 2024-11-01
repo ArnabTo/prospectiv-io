@@ -1,4 +1,4 @@
-export interface Blog{
+export interface Blog {
     _id: string;
     title: string;
     slug: {
@@ -65,4 +65,58 @@ export interface Openings {
     link: string;
     _createdAt: string;
     deadline: string;
-  }
+}
+
+export interface Whitepaper {
+    title: string;
+    slug: string;
+    thumbnail: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+        alt?: string;
+    };
+    body: any; // Replace 'any' with a more specific type if using a rich text component
+    download_link: string;
+}
+
+
+export interface Webinar {
+    title: string;
+    slug: string;
+    thumbnail: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+        alt?: string;
+    };
+    author: {
+        name: string;
+        bio: string;
+        image: {
+            asset: {
+                _id: string;
+                url: string;
+            };
+        };
+    };
+    body: any; // Replace 'any' with a more specific type if using a rich text component
+    content_link: string;
+}
+
+
+export interface Guide {
+    title: string;
+    slug: string;
+    thumbnail: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+        alt?: string;
+    };
+    body: any; // Replace 'any' with a more specific type if using a rich text component
+    download_link: string;
+}
