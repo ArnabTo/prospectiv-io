@@ -123,3 +123,15 @@ export interface Webinar {
     webinar_link: string;
     content_type: string;
 }
+
+// Define the available currencies
+export type Currency = 'USD' | 'EUR' | 'GBP';
+
+// Define a type for ROI calculation results
+export interface ROIResults {
+  generatedRevenue: number;
+  prospects: number;
+  leads: number;
+  proposals: number;
+  closedDeals: number;
+}
