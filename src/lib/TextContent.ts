@@ -304,6 +304,48 @@ const carrerPageTextContent = {
     }
 
 }
+
+const pricingPageTextContent = {
+    'heading': {
+        heading: 'Pricing',
+        paragraph: `We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
+                        We work hard to make Sopro a great place to work, and reward everyone who joins us.`,
+    },
+    whatsincluded: {
+        contentOne:{
+            heading: 'Sales engagement service',
+            paragraph: `You receive enquiries directly and do what you do best.`,
+        },
+        contentTwo:{
+            heading: 'Multi-channel prospecting',
+            paragraph: `Bespoke, expert campaigns with multiple touchpoints - email, social, and more`,
+        },
+        contentThree:{
+            heading: 'Best-in-class data',
+            paragraph: `A unique and up-to-date list of prospects, built for, and owned by, you`,
+        },
+        contentFour:{
+            heading: 'Prospect tracking',
+            paragraph: `Get notified when individuals in your campaign visit your site and show buyer intent`,
+        },
+        contentFive:{
+            heading: 'Onboarding and optimisation',
+            paragraph: `Your team of two continually analyse and improve your campaigns.`,
+        },
+        contentSix:{
+            heading: 'Client portal access',
+            paragraph: `Real-time, in-depth campaign reporting for total transparency and control`,
+        },
+        contentSeven:{
+            heading: 'LinkedIn outreach',
+            paragraph: `Improve campaign performance by sending LinkedIn messages to high intent prospects`,
+        },
+        contentEight:{
+            heading: 'Gifting service option',
+            paragraph: `Create deeper connections with your prospects by adding redeemable gifts to your outreach`,
+        },
+    }
+}
 export {
     HeroSectionTextContent,
     whyProspectiveTextContent,
@@ -311,5 +353,6 @@ export {
     HowItWorkTextContent,
     lifeAtProspectivTextContent,
     aboutUsPageTextContent,
-    carrerPageTextContent
+    carrerPageTextContent,
+    pricingPageTextContent
 }

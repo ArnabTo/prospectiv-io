@@ -5,11 +5,11 @@ import { Card } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ArrowLeft, ChevronDown, ChevronDownIcon, DollarSign, EuroIcon, PoundSterling, PoundSterlingIcon, Rocket, Search, Users } from 'lucide-react';
+import { ArrowLeft, Bell, ChevronDown, ChevronDownIcon, DollarSign, EuroIcon, PoundSterling, PoundSterlingIcon, Rocket, Search, Users } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu';
 import { Separator } from '../ui/separator';
-
+import { motion } from 'framer-motion';
 
 
 const FIXED_PROSPECTS: Record<number, number> = {
@@ -1027,8 +1027,7 @@ const ROICalculator = () => {
   return (
     <div className="max-w-7xl mx-auto p-3 space-y-10">
 
-      <div className='space-y-2'>
-        <p className='text-center text-lg text-textColorTwo'>Answer three questions to see our pricing and your predicted ROI</p>
+      <div className='space-y-2 relative'>
         {!showResults ? (
           <Card className="p-5 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
             {error && (
@@ -1183,7 +1182,7 @@ const ROICalculator = () => {
                   <p className='text-2xl text-right font-bold text-textColorTwo leading-3'>Would you invest
                     <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()}</span> <br></br>
                     to generate
-                    <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()}</span>
+                    <span className='text-3xl text-gradientColorFive font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()}</span>
                   </p>
                   <p className='text-2xl font-bold text-textColorTwo mb-5 text-right'>revenue each month?</p>
 
@@ -1199,46 +1198,59 @@ const ROICalculator = () => {
 
                 <div>
                   <div
-                    onClick={() => setShowResults(false)}
                     className="w-60 lg:w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
                     <div className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
                       Book a Demo
                     </div>
                   </div>
-                  <p className='flex items-center justify-center text-gradientColorFive'><ArrowLeft className="mr-2 h-4 w-4" />
+                  <p
+                    onClick={() => setShowResults(false)}
+                    className='flex items-center justify-center cursor-pointer text-gradientColorFive'><ArrowLeft className="mr-2 h-4 w-4" />
                     Recalculate ROI</p>
                 </div>
               </div>
-              <div className="md:max-w-[40%] border-l border-borderColor px-5 flex-1">
+              <div className="md:max-w-[60%] border-l border-borderColor px-5 flex-1">
                 <div className="space-y-1 py-5">
-                  <div className="flex justify-between px-5 py-2 rounded-sm bg-gradientColorFive">
-                    <span>Prospects:</span>
+                  <div className="flex justify-between px-5 py-3 w-[90%] mx-auto rounded-sm bg-gradientColorFive">
+                    <span>Prospects</span>
                     <span className="font-bold">{metrics.prospects.toLocaleString()}</span>
                   </div>
-                  <div className='bg-gradientColorFive py-2 rounded-sm w-[90%] mx-auto '>
-                    <p className='text-center mb-2'>Multi-channel engagement campaign</p>
-                  <div className='flex justify-center items-center gap-2'>
-                  <span>
-                      <Users size={20}/>
-                    </span>
-                    <span>
-                      <Rocket size={20}/>
-                    </span>
-                    <span>
-                      <Search size={20}/>
-                    </span>
+                  <div className='bg-gradientColorFive py-3 rounded-sm w-[85%] h-24 mx-auto relative'>
+                    <p className='text-center mb-2 text-sm'>Multi-channel engagement campaign</p>
+                    <div className='flex justify-center items-center gap-2 '>
+                      <div className='group'>
+                        <Users className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Dedicated outreach consultant</p>
+                      </div>
+                      <div className='group'>
+                        <Rocket className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Multi-channel prospecting campaigns</p>
+                      </div>
+                      <div className='group'>
+                        <Rocket className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Multi-channel prospecting campaigns</p>
+                      </div>
+                      <div className='group'>
+                        <Bell className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Website buyer intent data</p>
+                      </div>
+                      <div className='group'>
+                        <Search className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Targeted and complainet dataset</p>
+                      </div>
+
+                    </div>
                   </div>
-                  </div>
-                  <div className="flex justify-between px-5 py-2 max-w-[85%] mx-auto rounded-sm bg-gradientColorFive">
-                    <span>Leads:</span>
+                  <div className="flex justify-between items-center px-5 py-3 max-w-[80%] mx-auto rounded-sm bg-gradientColorFive">
+                    <span className='text-sm'>Leads</span>
                     <span className="font-bold">{metrics.leads.toLocaleString()}</span>
                   </div>
-                  <div className="flex justify-between px-5 py-2 max-w-[80%] mx-auto rounded-sm bg-gradientColorFive">
-                    <span>Proposals:</span>
+                  <div className="flex justify-between items-center px-5 py-3 max-w-[75%] mx-auto rounded-sm bg-gradientColorFive">
+                    <span className='text-sm'>Proposals</span>
                     <span className="font-bold">{metrics.proposals.toLocaleString()}</span>
                   </div>
-                  <div className="flex justify-between py-2 rounded-sm max-w-[70%] mx-auto bg-secondary px-5">
-                    <span>Closed Deals:</span>
+                  <div className="flex justify-between items-center py-3 rounded-sm max-w-[60%] mx-auto bg-secondary px-5">
+                    <span className='text-sm'>Closed Deals</span>
                     <span className="font-bold">{metrics.closedDeals.toLocaleString()}</span>
                   </div>
                 </div>
@@ -1246,6 +1258,17 @@ const ROICalculator = () => {
             </div>
           </Card>
         )}
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:right-24 -z-10 transition-all">
+          <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+          <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+          <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+        </motion.div>
       </div>
 
       <div

@@ -40,3 +40,21 @@
     font-weight: bold;
     color: #fff;
 }
+
+.pricing-swiper {
+    margin: 100px auto;
+    width: 320px;
+    height: 240px;
+  }
+  
+  .pricing-swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
