@@ -1029,151 +1029,160 @@ const ROICalculator = () => {
 
       <div className='space-y-2 relative'>
         {!showResults ? (
-          <Card className="p-5 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
-            {error && (
-              <Alert variant="destructive" className="mb-4">
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
+          <div className='space-y-5'>
+            <Card className="p-5 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
+              {error && (
+                <Alert variant="destructive" className="mb-4">
+                  <AlertDescription>{error}</AlertDescription>
+                </Alert>
+              )}
 
-            <div className="space-y-8">
-              <div className='space-y-5'>
-                <label htmlFor="budget" className="mb-2 text-textColorTwo flex flex-col md:flex-row justify-between items-center gap-3">
-                  <div className='flex justify-center items-center gap-3'>
-                    <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
-                      1
-                    </span>
-                    What's your monthly budget?
-                  </div>
-                  <div className="min-w-[100px] flex justify-center items-center ml-auto md:ml-0">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger className='border-none outline-none'>
-                        <span className='flex justify-center items-center gap-1 cursor-pointer'>
-                          {
-                            currency === 'USD' ? <DollarSign size={25} /> :
-                              currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
-                          }
-                          <ChevronDown size={25} />
-                        </span>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className='bg-smallCard border border-borderColor'>
-                        <DropdownMenuLabel>Select currency</DropdownMenuLabel>
-                        <Separator />
-                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
-                          onClick={() => handleCurrencyChange('USD')}
-                        ><DollarSign size={50} /></DropdownMenuItem>
-                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
-                          onClick={() => handleCurrencyChange('EUR')}
-                        ><EuroIcon className='text-center' size={50} /></DropdownMenuItem>
-                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
-                          onClick={() => handleCurrencyChange('GBP')}
-                        ><PoundSterlingIcon size={50} /></DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    {/* {budget.toLocaleString()} */}
-                    {formatCurrency(budget, currency)}
-                  </div>
-                </label>
-                <div className="flex items-center gap-4 max-w-[95%] ml-auto">
-                  <Slider
-                    id="budget"
-                    value={[budget]}
-                    min={4000}
-                    max={12000}
-                    step={1000}
-                    onValueChange={(value) => {
-                      const newValue = value[0];
-                      if (newValue === 11000) {
-                        setBudget(10000);
-                      } else {
-                        setBudget(newValue);
-                      }
-                    }}
-                    className="w-full"
-                    aria-label="Budget amount"
-                  />
-                </div>
-              </div>
-
-              <div className='space-y-5'>
-                <label htmlFor="budget" className="mb-2 text-textColorTwo">
-                  <div className='flex justify-start items-center gap-3'>
-                    <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
-                      2
-                    </span>
-                    What's your average client value?
-                  </div>
-                </label>
-                <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-[95%] ml-auto">
-                  <div className='flex justify-center items-center lg:max-w-[60%]'>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger className='border-none outline-none'>
-                        <span className='flex justify-center items-center gap-1 cursor-pointer'>
-                          {
-                            currency === 'USD' ? <DollarSign size={25} /> :
-                              currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
-                          }
-                          <ChevronDown size={25} />
-                        </span>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className='bg-smallCard border border-borderColor'>
-                        <DropdownMenuLabel>Select currency</DropdownMenuLabel>
-                        <Separator />
-                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
-                          onClick={() => handleCurrencyChange('USD')}
-                        ><DollarSign size={50} /></DropdownMenuItem>
-                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
-                          onClick={() => handleCurrencyChange('EUR')}
-                        ><EuroIcon className='text-center' size={50} /></DropdownMenuItem>
-                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
-                          onClick={() => handleCurrencyChange('GBP')}
-                        ><PoundSterlingIcon size={50} /></DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    <Input
-                      id="clientValue"
-                      type="number"
-                      min="1000"
-                      value={clientValue}
-                      onChange={handleClientValueChange}
-                      className="flex-1"
-                      aria-label="Average client value"
-                    />
-                  </div>
-                  <span className='text-lg text-textColorTwo ml-auto md:ml-0'>per customer</span>
-                </div>
-              </div>
-
-              <div className='space-y-5'>
-                <label htmlFor="budget" className="mb-2 text-textColorTwo">
-                  <div className='flex flex-col md:flex-row justify-between items-center gap-3'>
+              <div className="space-y-8">
+                <div className='space-y-5'>
+                  <label htmlFor="budget" className="mb-2 text-textColorTwo flex flex-col md:flex-row justify-between items-center gap-3">
                     <div className='flex justify-center items-center gap-3'>
                       <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
-                        3
+                        1
                       </span>
-                      How long is your average sales cycle?
+                      What's your monthly budget?
                     </div>
-                    <span className=" text-textColorTwo text-lg ml-auto md:ml-0">{salesCycle}</span>
+                    <div className="min-w-[100px] flex justify-center items-center ml-auto md:ml-0">
+                      <DropdownMenu>
+                        <DropdownMenuTrigger className='border-none outline-none'>
+                          <span className='flex justify-center items-center gap-1 cursor-pointer'>
+                            {
+                              currency === 'USD' ? <DollarSign size={25} /> :
+                                currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
+                            }
+                            <ChevronDown size={25} />
+                          </span>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                          <DropdownMenuLabel>Select currency</DropdownMenuLabel>
+                          <Separator />
+                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                            onClick={() => handleCurrencyChange('USD')}
+                          ><DollarSign size={50} /></DropdownMenuItem>
+                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                            onClick={() => handleCurrencyChange('EUR')}
+                          ><EuroIcon className='text-center' size={50} /></DropdownMenuItem>
+                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                            onClick={() => handleCurrencyChange('GBP')}
+                          ><PoundSterlingIcon size={50} /></DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+
+                      {/* {budget.toLocaleString()} */}
+                      {formatCurrency(budget, currency)}
+                    </div>
+                  </label>
+                  <div className="flex items-center gap-4 max-w-[95%] ml-auto">
+                    <Slider
+                      id="budget"
+                      value={[budget]}
+                      min={4000}
+                      max={12000}
+                      step={1000}
+                      onValueChange={(value) => {
+                        const newValue = value[0];
+                        if (newValue === 11000) {
+                          setBudget(10000);
+                        } else {
+                          setBudget(newValue);
+                        }
+                      }}
+                      className="w-full"
+                      aria-label="Budget amount"
+                    />
                   </div>
-                </label>
-                <div className="flex items-center gap-4 max-w-[95%] ml-auto">
-                  <Slider
-                    id="salesCycle"
-                    value={[salesCycle]}
-                    min={1}
-                    max={12}
-                    step={1}
-                    onValueChange={(value) => setSalesCycle(value[0])}
-                    className="w-full"
-                    aria-label="Sales cycle length"
-                  />
                 </div>
-                <span className="flex justify-end text-textColorTwo">months sales cycle</span>
+
+                <div className='space-y-5'>
+                  <label htmlFor="budget" className="mb-2 text-textColorTwo">
+                    <div className='flex justify-start items-center gap-3'>
+                      <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                        2
+                      </span>
+                      What's your average client value?
+                    </div>
+                  </label>
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-[95%] ml-auto">
+                    <div className='flex justify-center items-center lg:max-w-[60%]'>
+                      <DropdownMenu>
+                        <DropdownMenuTrigger className='border-none outline-none'>
+                          <span className='flex justify-center items-center gap-1 cursor-pointer'>
+                            {
+                              currency === 'USD' ? <DollarSign size={25} /> :
+                                currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
+                            }
+                            <ChevronDown size={25} />
+                          </span>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                          <DropdownMenuLabel>Select currency</DropdownMenuLabel>
+                          <Separator />
+                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                            onClick={() => handleCurrencyChange('USD')}
+                          ><DollarSign size={50} /></DropdownMenuItem>
+                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                            onClick={() => handleCurrencyChange('EUR')}
+                          ><EuroIcon className='text-center' size={50} /></DropdownMenuItem>
+                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                            onClick={() => handleCurrencyChange('GBP')}
+                          ><PoundSterlingIcon size={50} /></DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+
+                      <Input
+                        id="clientValue"
+                        type="number"
+                        min="1000"
+                        value={clientValue}
+                        onChange={handleClientValueChange}
+                        className="flex-1"
+                        aria-label="Average client value"
+                      />
+                    </div>
+                    <span className='text-lg text-textColorTwo ml-auto md:ml-0'>per customer</span>
+                  </div>
+                </div>
+
+                <div className='space-y-5'>
+                  <label htmlFor="budget" className="mb-2 text-textColorTwo">
+                    <div className='flex flex-col md:flex-row justify-between items-center gap-3'>
+                      <div className='flex justify-center items-center gap-3'>
+                        <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                          3
+                        </span>
+                        How long is your average sales cycle?
+                      </div>
+                      <span className=" text-textColorTwo text-lg ml-auto md:ml-0">{salesCycle}</span>
+                    </div>
+                  </label>
+                  <div className="flex items-center gap-4 max-w-[95%] ml-auto">
+                    <Slider
+                      id="salesCycle"
+                      value={[salesCycle]}
+                      min={1}
+                      max={12}
+                      step={1}
+                      onValueChange={(value) => setSalesCycle(value[0])}
+                      className="w-full"
+                      aria-label="Sales cycle length"
+                    />
+                  </div>
+                  <span className="flex justify-end text-textColorTwo">months sales cycle</span>
+                </div>
+              </div>
+            </Card>
+            <div
+              onClick={handleCalculateClick}
+              className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+              <div className="flex-1 font-bold text-lg text-center bg-black px-10 py-5 rounded-full hover:scale-95 transition-all duration-300">
+                Reveal Your Roi
               </div>
             </div>
-          </Card>
+          </div>
         ) : (
           <Card className="p-6 border-borderColor w-4/5 mx-auto">
             <div className="flex flex-col md:flex-row justify-center items-center gap-5">
@@ -1269,14 +1278,6 @@ const ROICalculator = () => {
           <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
           <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
         </motion.div>
-      </div>
-
-      <div
-        onClick={handleCalculateClick}
-        className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-        <div className="flex-1 font-bold text-lg text-center bg-black px-10 py-5 rounded-full hover:scale-95 transition-all duration-300">
-          Reveal Your Roi
-        </div>
       </div>
     </div>
   );

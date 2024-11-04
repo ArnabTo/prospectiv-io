@@ -344,7 +344,30 @@ const pricingPageTextContent = {
             heading: 'Gifting service option',
             paragraph: `Create deeper connections with your prospects by adding redeemable gifts to your outreach`,
         },
-    }
+    },
+
+    companyRaing: [
+        {
+            logo: 'https://i.ibb.co/88FPxMJ/google.png',
+            rating: 5
+        },
+        {
+            logo: 'https://i.ibb.co/88FPxMJ/google.png',
+            rating: 4
+        },
+        {
+            logo: 'https://i.ibb.co/88FPxMJ/google.png',
+            rating: 4.5
+        },
+        {
+            logo: 'https://i.ibb.co/88FPxMJ/google.png',
+            rating: 4.6
+        },
+        {
+            logo: 'https://i.ibb.co/88FPxMJ/google.png',
+            rating: 5
+        },
+    ]
 }
 export {
     HeroSectionTextContent,
