@@ -1025,7 +1025,7 @@ const ROICalculator = () => {
 
 
   return (
-    <div className="max-w-7xl mx-auto p-3 space-y-10">
+    <div className="max-w-7xl mx-auto space-y-10">
 
       <div className='space-y-2 relative'>
         {!showResults ? (
@@ -1184,27 +1184,21 @@ const ROICalculator = () => {
             </div>
           </div>
         ) : (
-          <Card className="p-6 border-borderColor w-4/5 mx-auto">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+          <Card className="border-borderColor lg:w-4/5 mx-auto">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-5 py-12">
               <div className='space-y-5'>
                 <div>
-                  <p className='text-2xl text-right font-bold text-textColorTwo leading-3'>Would you invest
+                  <p className='text-2xl text-center lg:text-right font-bold text-textColorTwo leading-3'>Would you invest
                     <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()}</span> <br></br>
                     to generate
                     <span className='text-3xl text-gradientColorFive font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()}</span>
                   </p>
-                  <p className='text-2xl font-bold text-textColorTwo mb-5 text-right'>revenue each month?</p>
+                  <p className='text-2xl font-bold text-textColorTwo mb-5 text-center lg:text-right'>revenue each month?</p>
 
-                  <p className='text-textColorTwo text-lg text-right'>No long-term commitment required.<br></br>
+                  <p className='text-textColorTwo text-lg text-center lg:text-right'>No long-term commitment required.<br></br>
                     <span className='text-sm'>Excludes one-off setup fee.</span></p>
                 </div>
-                {/* <h2 className="text-2xl font-bold mb-6">Would you invest</h2>
-                <div className="text-4xl font-bold mb-4"></div>
-                <p className="text-xl mb-6">to generate</p>
-                <div className="text-4xl font-bold text-green-600">
-                  {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()}
-                </div> */}
-
+    
                 <div>
                   <div
                     className="w-60 lg:w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
@@ -1218,15 +1212,15 @@ const ROICalculator = () => {
                     Recalculate ROI</p>
                 </div>
               </div>
-              <div className="md:max-w-[60%] border-l border-borderColor px-5 flex-1">
+              <div className="md:max-w-[60%] lg:border-l border-borderColor flex-1">
                 <div className="space-y-1 py-5">
-                  <div className="flex justify-between px-5 py-3 w-[90%] mx-auto rounded-sm bg-gradientColorFive">
+                  <div className="trapezoid flex justify-between px-5 py-3 w-[85%] mx-auto rounded-sm">
                     <span>Prospects</span>
                     <span className="font-bold">{metrics.prospects.toLocaleString()}</span>
                   </div>
-                  <div className='bg-gradientColorFive py-3 rounded-sm w-[85%] h-24 mx-auto relative'>
+                  <div className='trapezoidtwo py-3 rounded-sm w-[80%] h-40 mx-auto relative'>
                     <p className='text-center mb-2 text-sm'>Multi-channel engagement campaign</p>
-                    <div className='flex justify-center items-center gap-2 '>
+                    <div className='flex justify-center items-center gap-10 '>
                       <div className='group'>
                         <Users className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
                         <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Dedicated outreach consultant</p>
@@ -1250,16 +1244,16 @@ const ROICalculator = () => {
 
                     </div>
                   </div>
-                  <div className="flex justify-between items-center px-5 py-3 max-w-[80%] mx-auto rounded-sm bg-gradientColorFive">
-                    <span className='text-sm'>Leads</span>
+                  <div className="trapezoidthree flex justify-between px-5 py-3 w-[71%] mx-auto rounded-sm">
+                    <span>Leads</span>
                     <span className="font-bold">{metrics.leads.toLocaleString()}</span>
                   </div>
-                  <div className="flex justify-between items-center px-5 py-3 max-w-[75%] mx-auto rounded-sm bg-gradientColorFive">
-                    <span className='text-sm'>Proposals</span>
+                  <div className="trapezoidthree flex justify-between px-5 py-3 w-[65%] mx-auto rounded-sm">
+                    <span>Proposals</span>
                     <span className="font-bold">{metrics.proposals.toLocaleString()}</span>
                   </div>
-                  <div className="flex justify-between items-center py-3 rounded-sm max-w-[60%] mx-auto bg-secondary px-5">
-                    <span className='text-sm'>Closed Deals</span>
+                  <div className="trapezoidfive flex justify-between px-5 py-3 w-[60%] mx-auto rounded-sm">
+                    <span>Closed Deals</span>
                     <span className="font-bold">{metrics.closedDeals.toLocaleString()}</span>
                   </div>
                 </div>
