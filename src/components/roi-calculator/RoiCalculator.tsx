@@ -5,8 +5,10 @@ import { Card } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronDownIcon, DollarSign, EuroIcon, PoundSterling, PoundSterlingIcon, Rocket, Search, Users } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu';
+import { Separator } from '../ui/separator';
 
 
 
@@ -250,7 +252,7 @@ const BUDGET_7K_METRICS = {
     cycle4to10: { leads: 44, proposals: 13, closedDeals: 0.6 },
     cycle12: { leads: 33, proposals: 10, closedDeals: 0.5 }
   },
-  tier7: { 
+  tier7: {
     cycle1to3: { leads: 44, proposals: 13, closedDeals: 0.8 },
     cycle4to5: { leads: 44, proposals: 13, closedDeals: 0.5 },
     cycle6to12: { leads: 33, proposals: 10, closedDeals: 0.4 }
@@ -401,7 +403,7 @@ const BUDGET_10K_METRICS = {
   }
 };
 
-const BUDGET_12K_METRICS: BudgetMetrics  = {
+const BUDGET_12K_METRICS: BudgetMetrics = {
   tier1: {
     cycle1: { leads: 206, proposals: 62, closedDeals: 22 },
     cycle2: { leads: 180, proposals: 54, closedDeals: 19 },
@@ -446,16 +448,6 @@ const BUDGET_12K_METRICS: BudgetMetrics  = {
     cycle2to5: { leads: 103, proposals: 31, closedDeals: 1 },
     cycle6to12: { leads: 77, proposals: 23, closedDeals: 0.9 }
   }
-};
-
-const getValueTier = (value: number) => {
-  if (value < 5000) return 'tier1';
-  if (value < 15000) return 'tier2';
-  if (value < 50000) return 'tier3';
-  if (value < 100000) return 'tier4';
-  if (value < 500000) return 'tier5';
-  if (value < 1000000) return 'tier6';
-  return 'tier7';
 };
 
 // Function to get cycle key for $4000 budget
@@ -621,9 +613,6 @@ const get7kBudgetCycleKey = (valueTier: string, cycle: number): string => {
   return cycleKey;
 };
 
-
-
-
 // Fix the get8kBudgetCycleKey function
 const get8kBudgetCycleKey = (valueTier: string, cycle: number): string => {
   const cycleRanges: Record<string, Record<number | string, string>> = {
@@ -663,7 +652,7 @@ const get8kBudgetCycleKey = (valueTier: string, cycle: number): string => {
 
   const tierRanges = cycleRanges[valueTier] || cycleRanges.tier1;
   const cycleKey = tierRanges[cycle] || tierRanges.default;
-  
+
   return cycleKey;
 };
 
@@ -705,7 +694,7 @@ const get9kBudgetCycleKey = (valueTier: string, cycle: number): string => {
 
   const tierRanges = cycleRanges[valueTier] || cycleRanges.tier1;
   const cycleKey = tierRanges[cycle] || tierRanges.default;
-  
+
   return cycleKey;
 };
 
@@ -748,7 +737,7 @@ const get10kBudgetCycleKey = (valueTier: string, cycle: number): string => {
 
   const tierRanges = cycleRanges[valueTier] || cycleRanges.tier1;
   const cycleKey = tierRanges[cycle] || tierRanges.default;
-  
+
   return cycleKey;
 };
 
@@ -797,68 +786,114 @@ const get12kBudgetCycleKey = (valueTier: string, cycle: number): string => {
 
 type CycleKey = 'cycle1' | 'cycle2' | 'cycle3' | 'cycle4to12';
 // Function to calculate metrics for $4000 budget
-const calculateMetrics = (budget: number, clientValue: number, salesCycle: number) => {
-  const defaultMetrics = { leads: 0, proposals: 0, closedDeals: 0 };
-  
-  try {
-    const valueTier = getValueTier(clientValue);
-    let metrics = defaultMetrics;
-    const prospects = FIXED_PROSPECTS[budget] || 0;
-    let cycleKey
-    switch(budget) {
-      case 4000:
-        cycleKey = get4kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_4K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 5000:
-        cycleKey = get5kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_5K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 6000:
-        cycleKey = get6kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_6K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 7000:
-        cycleKey = get7kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_7K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 8000:
-        cycleKey = get8kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_8K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 9000:
-        cycleKey = get9kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_9K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 10000:
-        cycleKey = get10kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_10K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-      case 12000:
-        cycleKey = get12kBudgetCycleKey(valueTier, salesCycle);
-        metrics = BUDGET_12K_METRICS[valueTier][cycleKey] || defaultMetrics;
-        break;
-    }
+// const calculateMetrics = (budget: number, clientValue: number, salesCycle: number, currency: string) => {
+//   const defaultMetrics = { leads: 0, proposals: 0, closedDeals: 0 };
 
-    return {
-      prospects,
-      leads: metrics.leads,
-      proposals: metrics.proposals,
-      closedDeals: metrics.closedDeals,
-      investment: budget,
-      revenue: Math.round(metrics.closedDeals * clientValue)
-    };
-  } catch (error) {
-    console.error('Error calculating metrics:', error);
-    return {
-      ...defaultMetrics,
-      prospects: FIXED_PROSPECTS[budget] || 0,
-      investment: budget,
-      revenue: 0
-    };
-  }
+//   try {
+
+//      // Convert budget and client value to USD for calculations
+//      const budgetUSD = convertCurrency(budget, currency, 'USD');
+//      const clientValueUSD = convertCurrency(clientValue, currency, 'USD');
+
+//     const valueTier = getValueTier(clientValueUSD);
+//     let metrics = defaultMetrics;
+//     const prospects = FIXED_PROSPECTS[budgetUSD] || 0;
+//     let cycleKey
+
+//     switch (budgetUSD) {
+//       case 4000:
+//         cycleKey = get4kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_4K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 5000:
+//         cycleKey = get5kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_5K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 6000:
+//         cycleKey = get6kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_6K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 7000:
+//         cycleKey = get7kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_7K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 8000:
+//         cycleKey = get8kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_8K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 9000:
+//         cycleKey = get9kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_9K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 10000:
+//         cycleKey = get10kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_10K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//       case 12000:
+//         cycleKey = get12kBudgetCycleKey(valueTier, salesCycle);
+//         metrics = BUDGET_12K_METRICS[valueTier][cycleKey] || defaultMetrics;
+//         break;
+//     }
+
+//     // Calculate revenue in USD first, then convert back to selected currency
+// const revenueUSD = Math.round(metrics.closedDeals * clientValueUSD);
+// const revenueInSelectedCurrency = convertCurrency(revenueUSD, 'USD', currency);
+
+//     return {
+//       prospects,
+//       leads: metrics.leads,
+//       proposals: metrics.proposals,
+//       closedDeals: metrics.closedDeals,
+//       investment: budget,
+//       revenue: revenueInSelectedCurrency
+//     };
+//   } catch (error) {
+//     console.error('Error calculating metrics:', error);
+//     return {
+//       ...defaultMetrics,
+//       prospects: FIXED_PROSPECTS[budget] || 0,
+//       investment: budget,
+//       revenue: 0
+//     };
+//   }
+// };
+
+// Currency conversion rates
+const CONVERSION_RATES = {
+  USD: 1,
+  EUR: 0.92,
+  GBP: 0.79
 };
 
+const getValueTier = (value: number, currency: string): string => {
+
+  // Convert client value to USD for tier calculation
+  const valueInUSD = convertCurrency(value, currency, 'USD');
+
+  if (valueInUSD >= 1000000) return 'tier7';
+  if (valueInUSD >= 500000) return 'tier6';
+  if (valueInUSD >= 250000) return 'tier5';
+  if (valueInUSD >= 100000) return 'tier4';
+  if (valueInUSD >= 50000) return 'tier3';
+  if (valueInUSD >= 25000) return 'tier2';
+  return 'tier1';
+};
+
+
+const formatCurrency = (amount, currency) => {
+  const symbols = {
+    USD: '$',
+    EUR: '€',
+    GBP: '£'
+  };
+
+  return `${symbols[currency]}${amount.toLocaleString()}`;
+};
+
+const convertCurrency = (amount, fromCurrency, toCurrency) => {
+  const inUSD = amount / CONVERSION_RATES[fromCurrency];
+  return Math.round(inUSD * CONVERSION_RATES[toCurrency]);
+};
 
 const ROICalculator = () => {
   const [showResults, setShowResults] = useState(false);
@@ -866,8 +901,108 @@ const ROICalculator = () => {
   const [salesCycle, setSalesCycle] = useState(1);
   const [budget, setBudget] = useState(4000);
   const [error, setError] = useState('');
+  const [currency, setCurrency] = useState('USD');
 
-  const handleClientValueChange = (event:any) => {
+  const handleCurrencyChange = (newCurrency) => {
+    const newClientValue = convertCurrency(clientValue, currency, newCurrency);
+    const newBudget = convertCurrency(budget, currency, newCurrency);
+
+    setClientValue(newClientValue);
+    setBudget(newBudget);
+    setCurrency(newCurrency);
+  };
+
+  const calculateMetrics = (budget: number, clientValue: number, salesCycle: number, currency: string) => {
+    const defaultMetrics = { leads: 0, proposals: 0, closedDeals: 0 };
+
+    try {
+
+      // Convert budget and client value to USD for calculations
+      const budgetUSD = convertCurrency(budget, currency, 'USD');
+      const clientValueUSD = convertCurrency(clientValue, currency, 'USD');
+
+      const valueTier = getValueTier(clientValueUSD, 'USD');
+      let metrics = defaultMetrics;
+      const prospects = FIXED_PROSPECTS[budgetUSD] || 0;
+      let cycleKey
+
+      switch (budgetUSD) {
+        case 4000:
+          cycleKey = get4kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_4K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 5000:
+          cycleKey = get5kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_5K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 6000:
+          cycleKey = get6kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_6K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 7000:
+          cycleKey = get7kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_7K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 8000:
+          cycleKey = get8kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_8K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 9000:
+          cycleKey = get9kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_9K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 10000:
+          cycleKey = get10kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_10K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+        case 12000:
+          cycleKey = get12kBudgetCycleKey(valueTier, salesCycle);
+          metrics = BUDGET_12K_METRICS[valueTier][cycleKey] || defaultMetrics;
+          break;
+
+        default:
+          // Find the nearest budget tier
+          const budgetTiers = [4000, 5000, 6000, 7000, 8000, 9000, 10000, 12000];
+          const nearestBudget = budgetTiers.reduce((prev, curr) => {
+            return Math.abs(curr - budgetUSD) < Math.abs(prev - budgetUSD) ? curr : prev;
+          });
+
+          return calculateMetrics(
+            convertCurrency(nearestBudget, 'USD', currency),
+            clientValue,
+            salesCycle,
+            currency
+          );
+      }
+
+      // Calculate revenue in USD first, then convert back to selected currency
+      const revenueUSD = Math.round(metrics.closedDeals * clientValueUSD);
+      const revenueInSelectedCurrency = convertCurrency(revenueUSD, 'USD', currency);
+
+      return {
+        prospects,
+        leads: metrics.leads,
+        proposals: metrics.proposals,
+        closedDeals: metrics.closedDeals,
+        investment: budget,
+        revenue: revenueInSelectedCurrency
+      };
+    } catch (error) {
+      console.error('Error calculating metrics:', error);
+      return {
+        ...defaultMetrics,
+        prospects: FIXED_PROSPECTS[budget] || 0,
+        investment: budget,
+        revenue: 0
+      };
+    }
+  };
+
+  const metrics = useMemo(() => {
+    return calculateMetrics(budget, clientValue, salesCycle, currency);
+  }, [budget, clientValue, salesCycle, currency]);
+
+  const handleClientValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(event.target.value);
     setClientValue(value);
     if (error) setError('');
@@ -888,127 +1023,238 @@ const ROICalculator = () => {
     return true;
   };
 
-  const metrics = useMemo(() => {
-    return calculateMetrics(budget, clientValue, salesCycle);
-  }, [budget, clientValue, salesCycle]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6">
-      {!showResults ? (
-        <Card className="p-6">
-          <h2 className="text-2xl font-bold mb-6">ROI Calculator</h2>
+    <div className="max-w-7xl mx-auto p-3 space-y-10">
 
-          {error && (
-            <Alert variant="destructive" className="mb-4">
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
+      <div className='space-y-2'>
+        <p className='text-center text-lg text-textColorTwo'>Answer three questions to see our pricing and your predicted ROI</p>
+        {!showResults ? (
+          <Card className="p-5 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
+            {error && (
+              <Alert variant="destructive" className="mb-4">
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
 
-          <div className="space-y-8">
-            <div>
-              <label htmlFor="budget" className="block mb-2">Select your budget</label>
-              <div className="flex items-center gap-4">
-                <Slider
-                  id="budget"
-                  value={[budget]}
-                  min={4000}
-                  max={12000}
-                  step={1000}
-                  onValueChange={(value) => setBudget(value[0])}
-                  className="w-full"
-                  aria-label="Budget amount"
-                />
-                <span className="min-w-[100px]">${budget.toLocaleString()}</span>
-              </div>
-            </div>
+            <div className="space-y-8">
+              <div className='space-y-5'>
+                <label htmlFor="budget" className="mb-2 text-textColorTwo flex flex-col md:flex-row justify-between items-center gap-3">
+                  <div className='flex justify-center items-center gap-3'>
+                    <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                      1
+                    </span>
+                    What's your monthly budget?
+                  </div>
+                  <div className="min-w-[100px] flex justify-center items-center ml-auto md:ml-0">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className='border-none outline-none'>
+                        <span className='flex justify-center items-center gap-1 cursor-pointer'>
+                          {
+                            currency === 'USD' ? <DollarSign size={25} /> :
+                              currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
+                          }
+                          <ChevronDown size={25} />
+                        </span>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                        <DropdownMenuLabel>Select currency</DropdownMenuLabel>
+                        <Separator />
+                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                          onClick={() => handleCurrencyChange('USD')}
+                        ><DollarSign size={50} /></DropdownMenuItem>
+                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                          onClick={() => handleCurrencyChange('EUR')}
+                        ><EuroIcon className='text-center' size={50} /></DropdownMenuItem>
+                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                          onClick={() => handleCurrencyChange('GBP')}
+                        ><PoundSterlingIcon size={50} /></DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
 
-            <div>
-              <label htmlFor="clientValue" className="block mb-2">What is your average client value?</label>
-              <div className="flex items-center gap-4">
-                <Input
-                  id="clientValue"
-                  type="number"
-                  min="1000"
-                  value={clientValue}
-                  onChange={handleClientValueChange}
-                  className="w-full"
-                  aria-label="Average client value"
-                />
-                <span>$ per customer</span>
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="salesCycle" className="block mb-2">How long is your average sales cycle?</label>
-              <div className="flex items-center gap-4">
-                <Slider
-                  id="salesCycle"
-                  value={[salesCycle]}
-                  min={1}
-                  max={12}
-                  step={1}
-                  onValueChange={(value) => setSalesCycle(value[0])}
-                  className="w-full"
-                  aria-label="Sales cycle length"
-                />
-                <span className="min-w-[100px]">{salesCycle} {salesCycle === 1 ? 'month' : 'months'}</span>
-              </div>
-            </div>
-
-            <Button
-              className="w-full mt-6"
-              onClick={handleCalculateClick}
-              aria-label="Calculate ROI"
-            >
-              Calculate ROI
-            </Button>
-          </div>
-        </Card>
-      ) : (
-        <Card className="p-6">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Would you invest</h2>
-              <div className="text-4xl font-bold mb-4">${metrics.investment.toLocaleString()}</div>
-              <p className="text-xl mb-6">to generate</p>
-              <div className="text-4xl font-bold text-green-600">
-                ${metrics.revenue.toLocaleString()}
-              </div>
-              <Button
-                className="mt-8"
-                onClick={() => setShowResults(false)}
-                variant="outline"
-                aria-label="Recalculate ROI"
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Recalculate ROI
-              </Button>
-            </div>
-
-            <div className="bg-card p-6 rounded-lg">
-              <h3 className="font-bold mb-4">Summary</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between">
-                  <span>Prospects:</span>
-                  <span className="font-bold">{metrics.prospects.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Leads:</span>
-                  <span className="font-bold">{metrics.leads.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Proposals:</span>
-                  <span className="font-bold">{metrics.proposals.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Closed Deals:</span>
-                  <span className="font-bold">{metrics.closedDeals.toLocaleString()}</span>
+                    {/* {budget.toLocaleString()} */}
+                    {formatCurrency(budget, currency)}
+                  </div>
+                </label>
+                <div className="flex items-center gap-4 max-w-[95%] ml-auto">
+                  <Slider
+                    id="budget"
+                    value={[budget]}
+                    min={4000}
+                    max={12000}
+                    step={1000}
+                    onValueChange={(value) => {
+                      const newValue = value[0];
+                      if (newValue === 11000) {
+                        setBudget(10000);
+                      } else {
+                        setBudget(newValue);
+                      }
+                    }}
+                    className="w-full"
+                    aria-label="Budget amount"
+                  />
                 </div>
               </div>
+
+              <div className='space-y-5'>
+                <label htmlFor="budget" className="mb-2 text-textColorTwo">
+                  <div className='flex justify-start items-center gap-3'>
+                    <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                      2
+                    </span>
+                    What's your average client value?
+                  </div>
+                </label>
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-[95%] ml-auto">
+                  <div className='flex justify-center items-center lg:max-w-[60%]'>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className='border-none outline-none'>
+                        <span className='flex justify-center items-center gap-1 cursor-pointer'>
+                          {
+                            currency === 'USD' ? <DollarSign size={25} /> :
+                              currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
+                          }
+                          <ChevronDown size={25} />
+                        </span>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                        <DropdownMenuLabel>Select currency</DropdownMenuLabel>
+                        <Separator />
+                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                          onClick={() => handleCurrencyChange('USD')}
+                        ><DollarSign size={50} /></DropdownMenuItem>
+                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                          onClick={() => handleCurrencyChange('EUR')}
+                        ><EuroIcon className='text-center' size={50} /></DropdownMenuItem>
+                        <DropdownMenuItem className='text-center hover:bg-secondary flex justify-center cursor-pointer'
+                          onClick={() => handleCurrencyChange('GBP')}
+                        ><PoundSterlingIcon size={50} /></DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    <Input
+                      id="clientValue"
+                      type="number"
+                      min="1000"
+                      value={clientValue}
+                      onChange={handleClientValueChange}
+                      className="flex-1"
+                      aria-label="Average client value"
+                    />
+                  </div>
+                  <span className='text-lg text-textColorTwo ml-auto md:ml-0'>per customer</span>
+                </div>
+              </div>
+
+              <div className='space-y-5'>
+                <label htmlFor="budget" className="mb-2 text-textColorTwo">
+                  <div className='flex flex-col md:flex-row justify-between items-center gap-3'>
+                    <div className='flex justify-center items-center gap-3'>
+                      <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                        3
+                      </span>
+                      How long is your average sales cycle?
+                    </div>
+                    <span className=" text-textColorTwo text-lg ml-auto md:ml-0">{salesCycle}</span>
+                  </div>
+                </label>
+                <div className="flex items-center gap-4 max-w-[95%] ml-auto">
+                  <Slider
+                    id="salesCycle"
+                    value={[salesCycle]}
+                    min={1}
+                    max={12}
+                    step={1}
+                    onValueChange={(value) => setSalesCycle(value[0])}
+                    className="w-full"
+                    aria-label="Sales cycle length"
+                  />
+                </div>
+                <span className="flex justify-end text-textColorTwo">months sales cycle</span>
+              </div>
             </div>
-          </div>
-        </Card>
-      )}
+          </Card>
+        ) : (
+          <Card className="p-6 border-borderColor w-4/5 mx-auto">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+              <div className='space-y-5'>
+                <div>
+                  <p className='text-2xl text-right font-bold text-textColorTwo leading-3'>Would you invest
+                    <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()}</span> <br></br>
+                    to generate
+                    <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()}</span>
+                  </p>
+                  <p className='text-2xl font-bold text-textColorTwo mb-5 text-right'>revenue each month?</p>
+
+                  <p className='text-textColorTwo text-lg text-right'>No long-term commitment required.<br></br>
+                    <span className='text-sm'>Excludes one-off setup fee.</span></p>
+                </div>
+                {/* <h2 className="text-2xl font-bold mb-6">Would you invest</h2>
+                <div className="text-4xl font-bold mb-4"></div>
+                <p className="text-xl mb-6">to generate</p>
+                <div className="text-4xl font-bold text-green-600">
+                  {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()}
+                </div> */}
+
+                <div>
+                  <div
+                    onClick={() => setShowResults(false)}
+                    className="w-60 lg:w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
+                    <div className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
+                      Book a Demo
+                    </div>
+                  </div>
+                  <p className='flex items-center justify-center text-gradientColorFive'><ArrowLeft className="mr-2 h-4 w-4" />
+                    Recalculate ROI</p>
+                </div>
+              </div>
+              <div className="md:max-w-[40%] border-l border-borderColor px-5 flex-1">
+                <div className="space-y-1 py-5">
+                  <div className="flex justify-between px-5 py-2 rounded-sm bg-gradientColorFive">
+                    <span>Prospects:</span>
+                    <span className="font-bold">{metrics.prospects.toLocaleString()}</span>
+                  </div>
+                  <div className='bg-gradientColorFive py-2 rounded-sm w-[90%] mx-auto '>
+                    <p className='text-center mb-2'>Multi-channel engagement campaign</p>
+                  <div className='flex justify-center items-center gap-2'>
+                  <span>
+                      <Users size={20}/>
+                    </span>
+                    <span>
+                      <Rocket size={20}/>
+                    </span>
+                    <span>
+                      <Search size={20}/>
+                    </span>
+                  </div>
+                  </div>
+                  <div className="flex justify-between px-5 py-2 max-w-[85%] mx-auto rounded-sm bg-gradientColorFive">
+                    <span>Leads:</span>
+                    <span className="font-bold">{metrics.leads.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between px-5 py-2 max-w-[80%] mx-auto rounded-sm bg-gradientColorFive">
+                    <span>Proposals:</span>
+                    <span className="font-bold">{metrics.proposals.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between py-2 rounded-sm max-w-[70%] mx-auto bg-secondary px-5">
+                    <span>Closed Deals:</span>
+                    <span className="font-bold">{metrics.closedDeals.toLocaleString()}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        )}
+      </div>
+
+      <div
+        onClick={handleCalculateClick}
+        className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+        <div className="flex-1 font-bold text-lg text-center bg-black px-10 py-5 rounded-full hover:scale-95 transition-all duration-300">
+          Reveal Your Roi
+        </div>
+      </div>
     </div>
   );
 };

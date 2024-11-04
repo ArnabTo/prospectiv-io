@@ -5,8 +5,8 @@ import React from 'react';
 
 const PricingPage = () => {
     return (
-        <div className='max-w-7xl mx-auto h-screen'>
-            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Comming Soon!</h1>
+        <div className='max-w-7xl mx-auto py-24'>
+            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Your pricing and forecast</h1>
 
             <ROICalculator/>
         </div>
