@@ -134,7 +134,23 @@ export const WHITEPAPER_QUERY = defineQuery(`
     }
   }
 `)
-
+export const WHITEPAPER_QUERY_BY_SLUG = defineQuery(`
+  *[_type == "guide" && slug.current == $slug][0]{
+    title,
+    "slug": slug.current,
+    body,
+    download_link,
+    content_type,
+    thumbnail{
+      asset->{
+        _id,
+        url
+      },
+      alt
+    } 
+ }
+ `)
+ 
 export const GUIDE_QUERY = defineQuery(`
 *[_type == "guide" && defined(slug.current)] | order(_createdAt desc){
   title,

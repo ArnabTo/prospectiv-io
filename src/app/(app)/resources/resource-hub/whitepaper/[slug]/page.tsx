@@ -14,18 +14,19 @@ import Link from "next/link";
 import { Download, Loader2 } from "lucide-react";
 import '../../../../../custom.css'
 import GuideSection from "@/components/guide/GuideSection";
-const GuideDetails = () => {
+import WhitePaperSection from "@/components/whitepapers/WhitepaperSection";
+const WhitepaperDetails = () => {
 
     const params = useParams();
 
-    const [guide, setGuide] = useState<Guide | null>(null);
+    const [whitepaper, setWhitepaper] = useState<Guide | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
     const fetchGuide = useCallback(async () => {
         setIsLoading(true);
         try {
-            const getGuide = await axios.get(`/api/getguidewithslug/${params.slug}`);
-            setGuide(getGuide.data)
+            const getGuide = await axios.get(`/api/getwhitepaperwithslug/${params.slug}`);
+            setWhitepaper(getGuide.data)
         } catch (error) {
             console.log(error, 'error on fetch webinar')
         } finally {
@@ -37,7 +38,7 @@ const GuideDetails = () => {
         fetchGuide()
     }, [fetchGuide])
 
-
+    console.log(whitepaper, 'guide')
     return (
         <div className="p-4">
             <div className="max-w-7xl mx-auto space-y-10">
@@ -48,16 +49,16 @@ const GuideDetails = () => {
                             :
                             <div className="space-y-7">
                                 <div className="space-y-3">
-                                    <h3 className='text-3xl md:text-4xl lg:text-5xl font-bold'>{guide?.title}</h3>
+                                    <h3 className='text-3xl md:text-4xl lg:text-5xl font-bold'>{whitepaper?.title}</h3>
                                     <div className="overflow-hidden rounded-lg w-full md:w-[500px]">
                                         {
-                                            guide?.thumbnail?.asset?.url ?
+                                            whitepaper?.thumbnail?.asset?.url ?
                                                 <Image
                                                     className="w-full h-auto object-contain rounded-lg hover:scale-110 transition-all duration-300"
-                                                    src={guide?.thumbnail?.asset?.url}
+                                                    src={whitepaper?.thumbnail?.asset?.url}
                                                     width={500}
                                                     height={500}
-                                                    alt="guide_thumbnail"
+                                                    alt="whitepaper_thumbnail"
                                                 />
                                                 :
                                                 <div className="flex justify-center items-center"><Loader2 className="animate-spin" size={40} /></div>
@@ -65,7 +66,7 @@ const GuideDetails = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <p><PortableText value={guide?.body} components={RichTextComponent} /></p>
+                                    <p><PortableText value={whitepaper?.body} components={RichTextComponent} /></p>
                                 </div>
                             </div>
                     }
@@ -96,9 +97,16 @@ const GuideDetails = () => {
                             </CardContent>
                             <CardFooter className="flex justify-between z-10">
                                 <div className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                                    <Link href="" className="flex-1 flex items-center justify-center gap-3 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
-                                        Get your guide <Download size={20} />
-                                    </Link>
+                                    {
+                                        whitepaper?.download_link ?
+                                            <Link href={whitepaper?.download_link} className="flex-1 flex items-center justify-center gap-3 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
+                                                Get your guide <Download size={20} />
+                                            </Link>
+                                            :
+                                            <Link href='' className="flex-1 flex items-center justify-center gap-3 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
+                                                Get your guide <Download size={20} />
+                                            </Link>
+                                    }
                                 </div>
                             </CardFooter>
 
@@ -117,10 +125,10 @@ const GuideDetails = () => {
                     </div>
                 </div>
 
-                <GuideSection />
+                <WhitePaperSection/>
             </div>
         </div>
     );
 };
 
-export default GuideDetails;
+export default WhitepaperDetails;
