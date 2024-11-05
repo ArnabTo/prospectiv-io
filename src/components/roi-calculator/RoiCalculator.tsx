@@ -1052,27 +1052,27 @@ const ROICalculator = () => {
                       <DropdownMenu>
                         <DropdownMenuTrigger className='border-none outline-none'>
                           <span className='flex justify-center items-center gap-1 cursor-pointer'>
-                            {
+                            {/* {
                               currency === 'USD' ? <DollarSign size={25} /> :
                                 currency === 'EUR' ? <EuroIcon size={25} /> : <PoundSterlingIcon size={25} />
-                            }
+                            } */}
                             <ChevronDown size={25} />
                           </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='bg-smallCard border border-borderColor'>
-                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
+                          <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('USD')}
                           >
                             <DollarSign size={50} />
                             {currency === 'USD' && <CheckIcon size={20} />}
                           </DropdownMenuItem>
-                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
+                          <DropdownMenuItem className='w-fulltext-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('EUR')}
                           >
                             <EuroIcon className='text-center' size={50} />
                             {currency === 'EUR' && <CheckIcon size={20} />}
                           </DropdownMenuItem>
-                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
+                          <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('GBP')}
                           >
                             <PoundSterlingIcon size={50} />
@@ -1129,19 +1129,19 @@ const ROICalculator = () => {
                           </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='bg-smallCard border border-borderColor'>
-                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
+                          <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('USD')}
                           >
                             <DollarSign size={50} />
                             {currency === 'USD' && <CheckIcon size={20} />}
                           </DropdownMenuItem>
-                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
+                          <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('EUR')}
                           >
                             <EuroIcon className='text-center' size={50} />
                             {currency === 'EUR' && <CheckIcon size={20} />}
                           </DropdownMenuItem>
-                          <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
+                          <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('GBP')}
                           >
                             <PoundSterlingIcon size={50} />
@@ -1156,11 +1156,11 @@ const ROICalculator = () => {
                         min="1000"
                         value={clientValue}
                         onChange={handleClientValueChange}
-                        className="flex-1"
+                        className="flex-1 text-lg"
                         aria-label="Average client value"
                       />
                     </div>
-                    <span className='text-lg text-textColorTwo ml-auto md:ml-0'>per customer</span>
+                    <span className='text-xl text-textColorTwo ml-auto md:ml-0'>per customer</span>
                   </div>
                 </div>
 
@@ -1190,7 +1190,7 @@ const ROICalculator = () => {
                       aria-label="Sales cycle length"
                     />
                   </div>
-                  <span className="flex justify-end text-textColorTwo">months sales cycle</span>
+                  <span className="flex justify-end text-lg text-textColorTwo">months sales cycle</span>
                 </div>
               </div>
             </Card>
