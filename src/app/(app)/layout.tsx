@@ -16,7 +16,7 @@ export default function RootLayout({
         {children}
         <Toaster />
       </div>
-      <div className="bg-background h-[500px] fixed bottom-0 z-10 w-full">
+      <div className="bg-card h-[600px] fixed bottom-0 z-10 w-full">
         <Footer />
       </div>
     </div>
