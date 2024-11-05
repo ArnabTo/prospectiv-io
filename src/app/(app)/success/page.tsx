@@ -1,5 +1,5 @@
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import HeaderImage from '@/public/assets/campany-culture.jpg'
+import HeaderImage from '@/public/assets/successbg.jpg'
 
 const SuccessStory = () => {
     return (
