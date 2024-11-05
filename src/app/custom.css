@@ -95,3 +95,20 @@
     clip-path: polygon(var(--p) 100%,calc(100% - var(--p)) 100%,100% 0,0 0);
     background: #ff4895;
   }
+
+  /* HTML: <div class="triangle"></div> */
+.triangle-guide-top {
+  width: 100px;
+  aspect-ratio: 1;
+  border-top-left-radius: 25px;
+  clip-path: polygon(0 100%,100% 0,0 0);
+  background: linear-gradient(45deg,#1766ff,#ff4895);
+}
+/* HTML: <div class="triangle"></div> */
+.triangle-guide-bottom {
+  width: 80px;
+  aspect-ratio: 1;
+  border-bottom-right-radius: 25px;
+  clip-path: polygon(100% 0,0 100%,100% 100%);
+  background: linear-gradient(45deg,#1766ff,#ff4895);
+}

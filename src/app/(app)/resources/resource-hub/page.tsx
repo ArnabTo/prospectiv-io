@@ -106,7 +106,7 @@ const ResourceHub = () => {
             <div className="p-4 rounded-lg shadow-md cursor-pointer h-full">
                <Card className="border border-borderColor h-full max-w-96 rounded-2xl group flex flex-col">
                   <CardHeader className="space-y-3 flex-shrink-0 min-h-[200px]">
-                     <div className="overflow-hidden">
+                     <div className="overflow-hidden rounded-lg">
                         <Image
                            src={content.thumbnail.asset?.url}
                            width={500}

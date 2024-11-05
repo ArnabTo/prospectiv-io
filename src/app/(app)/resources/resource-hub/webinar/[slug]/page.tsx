@@ -12,7 +12,7 @@ import BlogSection from '@/components/Blogs/BlogSection';
 
 const WebinarDetails = () => {
     const params = useParams();
-    console.log(params)
+
     const [webinar, setWebinar] = useState<Webinar | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -32,7 +32,7 @@ const WebinarDetails = () => {
         fetchWebinar()
     }, [fetchWebinar])
 
-    console.log(webinar)
+
 
     const getEmbedUrl = (url: string) => {
         if (url.includes("youtube.com/watch?v=")) {

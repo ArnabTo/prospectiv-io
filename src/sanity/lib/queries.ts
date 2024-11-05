@@ -152,6 +152,23 @@ export const GUIDE_QUERY = defineQuery(`
 }
 `)
 
+export const GUIDE_QUERY_BY_SLUG = defineQuery(`
+  *[_type == "guide" && slug.current == $slug][0]{
+    title,
+    "slug": slug.current,
+    body,
+    download_link,
+    content_type,
+    thumbnail{
+      asset->{
+        _id,
+        url
+      },
+      alt
+    } 
+ }
+`)
+
 export const WEBINAR_QUERY = defineQuery(`
   *[_type == "webinar" && defined(slug.current)] | order(_createdAt desc){
     title,
@@ -207,6 +224,7 @@ export const WEBINAR_BY_SLUG = defineQuery(`
     } 
  }
 `)
+
 // export const WHITEPAPER_QUERY = defineQuery(`
 // *[_type == "whitepaper" && defined(slug.current)] | order(_createdAt desc){
 //   title,
