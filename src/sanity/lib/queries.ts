@@ -157,8 +157,9 @@ export const WEBINAR_QUERY = defineQuery(`
     title,
     "slug": slug.current,
     body,
-    webinar_link,
+    webinar_url,
     content_type,
+    publishedAt,
     author->{
         name,
         bio,
@@ -180,12 +181,13 @@ export const WEBINAR_QUERY = defineQuery(`
 `)
 
 export const WEBINAR_BY_SLUG = defineQuery(`
-      *[_type == "webinar" && slug.current == $slug][0]{
+  *[_type == "webinar" && slug.current == $slug][0]{
         title,
     "slug": slug.current,
     body,
-    webinar_link,
+    webinar_url,
     content_type,
+    publishedAt,
     author->{
         name,
         bio,

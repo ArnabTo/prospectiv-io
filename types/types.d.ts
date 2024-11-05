@@ -120,7 +120,8 @@ export interface Webinar {
         }
     };
     body: any;
-    webinar_link: string;
+    publishedAt: string;
+    webinar_url: string;
     content_type: string;
 }
 
