@@ -24,14 +24,13 @@ const PricingPage = () => {
                     initial={{ opacity: 0, y: 10, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
-                    viewport={{ once: true }}
-                >
+                    viewport={{ once: true }}>
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className='space-y-3'>
+                        className='space-y-3 mb-5'>
                         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Your pricing and forecast</h1>
                         <p className='text-center text-lg text-textColorTwo'>Answer three questions to see our pricing and your predicted ROI</p>
                     </motion.div>
