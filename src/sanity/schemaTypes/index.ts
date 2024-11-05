@@ -8,6 +8,7 @@ import { openingsType } from './openingsType'
 import { webinarType } from './webinarType'
 import { whitepaperType } from './whitepaperType'
 import { guideType } from './guideType' 
+import { userDataType } from './userDataType'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [blockContentType,
@@ -17,6 +18,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     openingsType,
     guideType,
     webinarType,
-    whitepaperType
+    whitepaperType,
+    userDataType
   ],
 }

@@ -1,5 +1,6 @@
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
+import { Toaster } from "sonner";
 
 
 
@@ -13,6 +14,7 @@ export default function RootLayout({
       {/* <NavigationBar/> */}
       <Navbar />
       {children}
+      <Toaster />
       <Footer />
     </div>
   );

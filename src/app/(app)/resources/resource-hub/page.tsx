@@ -94,10 +94,8 @@ const ResourceHub = () => {
       setCurrentPage(page);
    };
 
-   console.log(allContents, 'allContents')
-   console.log(whitePapers, 'whitePapers')
    const renderContent = (content: any) => {
-      // console.log(content)
+
       // Determine the link based on content type
       const contentTypePath = content.content_type === 'webinar'
          ? `/resources/resource-hub/webinar/${content.slug}`
@@ -153,7 +151,7 @@ const ResourceHub = () => {
                   <div className="row-span-1 md:row-span-4 h-full bg-card border border-borderColor p-7 rounded-2xl space-y-4 group">
                      {
                         isLoading ?
-                           <div className="flex justify-center items-center"><Loader2 size={40} className="animate-spin" /></div>
+                           <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
                            <Link href=''>
                               <div className="overflow-hidden relative rounded-xl">
@@ -181,7 +179,7 @@ const ResourceHub = () => {
                   <div className="row-span-1 md:row-span-2 h-full bg-card border border-borderColor p-2 rounded-2xl group">
                      {
                         isLoading ?
-                           <div className="flex justify-center items-center"><Loader2 size={40} className="animate-spin" /></div>
+                           <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
                            <Link href=''>
                               <div className="flex flex-col md:flex-row items-center h-full gap-4">
@@ -213,7 +211,7 @@ const ResourceHub = () => {
                   <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-2 h-full bg-card border border-borderColor p-5 rounded-2xl group">
                      {
                         isLoading ?
-                           <div className="flex justify-center items-center"><Loader2 size={40} className="animate-spin" /></div>
+                           <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
                            <Link href=''>
                               <div className="flex flex-col md:flex-row items-center h-full gap-4">
