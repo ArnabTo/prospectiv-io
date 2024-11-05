@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Separator } from "@/components/ui/separator";
 
 const ResourceHub = () => {
 
@@ -69,9 +70,10 @@ const ResourceHub = () => {
 
    useEffect(() => {
       const combinedContent = [...webinars, ...guides, ...whitePapers];
+      console.log(combinedContent, 'combinedContent')
       const uniqueContent = Array.from(new Set(combinedContent.map(item => item.slug)))
          .map(slug => combinedContent.find(item => item.slug === slug));
-      setAllContents(uniqueContent);
+      setAllContents(combinedContent);
    }, [webinars, guides, whitePapers]);
 
    // Filter content based on the selected tab
@@ -92,15 +94,17 @@ const ResourceHub = () => {
       setCurrentPage(page);
    };
 
+   console.log(allContents, 'allContents')
+   console.log(whitePapers, 'whitePapers')
    const renderContent = (content: any) => {
-
+      // console.log(content)
       // Determine the link based on content type
       const contentTypePath = content.content_type === 'webinar'
          ? `/resources/resource-hub/webinar/${content.slug}`
          : content.content_type === 'guide'
             ? `/resources/resource-hub/guide/${content.slug}`
             : `/resources/resource-hub/whitepaper/${content.slug}`;
-      console.log(content)
+
       return (
          <Link href={contentTypePath} key={content.id}>
             <div className="p-4 rounded-lg shadow-md cursor-pointer h-full">
@@ -251,14 +255,14 @@ const ResourceHub = () => {
             </div>
 
             <div className="max-w-7xl mx-auto">
-               <Tabs defaultValue="All" onValueChange={setCurrentTab} className="w-full mx-auto">
+               <Tabs defaultValue="All" onValueChange={setCurrentTab} className="w-full mx-auto space-y-10">
                   <TabsList className="mx-auto lg:max-w-[70%] bg-card flex justify-between items-center p-5 rounded-full">
                      <TabsTrigger value="All">All</TabsTrigger>
                      <TabsTrigger value="webinars" className="flex flex-col lg:flex-row"><Video className="mr-2" size={25} /> Webinars</TabsTrigger>
                      <TabsTrigger value="guides" className="flex flex-col lg:flex-row"><ScrollText className="mr-2" size={25} /> Guides</TabsTrigger>
                      <TabsTrigger value="whitepapers" className="flex flex-col lg:flex-row"><BookOpenIcon className="mr-2" size={25} />  White Papers</TabsTrigger>
                   </TabsList>
-
+ 
                   <TabsContent value="All">
                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {paginatedContent.map(renderContent)}
