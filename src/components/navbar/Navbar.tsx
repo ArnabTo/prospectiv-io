@@ -255,23 +255,27 @@ const Navbar = () => {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Company</NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <div className="flex flex-col lg:flex-row items-center gap-5 p-5 bg-background">
+                                    <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5">
-                                            <Link href="/company/life-at-prospectiv" className="w-full transition-all duration-500">
+                                            <Link href="/company/life-at-prospectiv" className="w-full transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
-                                                    <LifeBuoy size={100} />
-                                                    <span>
+                                                <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                    <LifeBuoy className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                </div>
+                                                 <div>
                                                         <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             A page about our culture, people, values and what it's like to work here
                                                         </p>
-                                                    </span>
+                                                    </div>
                                                 </div>
                                             </Link>
                                             <div className="flex flex-col gap-5">
-                                                <Link href="/company/careers" className="transition-all duration-500">
+                                                <Link href="/company/careers" className="transition-all duration-500 group">
                                                     <div className="flex items-center gap-4">
-                                                        <BriefcaseBusiness size={100} />
+                                                        <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                            <BriefcaseBusiness className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                        </div>
                                                         <div>
                                                             <h3 className="text-lg font-bold text-secondary">Careers</h3>
                                                             <p className="text-sm text-textColorTwo">
@@ -284,9 +288,11 @@ const Navbar = () => {
                                         </div>
                                         <div className="w-1 h-16 bg-secondary"></div>
                                         <div className="flex flex-col gap-5">
-                                            <Link href="/company/about-us" className="transition-all duration-500">
+                                            <Link href="/company/about-us" className="transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
-                                                    <MessageCircleWarning size={100} />
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <MessageCircleWarning className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
                                                     <div>
                                                         <h3 className="text-lg font-bold text-secondary">About Us</h3>
                                                         <p className="text-sm text-textColorTwo">
@@ -303,41 +309,46 @@ const Navbar = () => {
                             <NavigationMenuItem className="pt-[3px]">
                                 <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resources</NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <div className="flex flex-col lg:flex-row items-center gap-5 p-5 bg-background">
+                                    <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5 flex-1">
-                                            <Link href="/resources/blog" className="w-full transition-all duration-500">
+                                            <Link href="/resources/blog" className="w-full transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
-                                                    <BookOpenText size={100} />
-                                                    <span>
-                                                        <h3 className="text-lg font-bold text-secondary">Blog</h3>
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <BookOpenText className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-md font-bold text-secondary">Blog</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             A page about our culture, people, values and what it's like to work here
                                                         </p>
-                                                    </span>
+                                                    </div>
                                                 </div>
                                             </Link>
-                                            <Link href="/resources/resource-hub" className="w-full transition-all duration-500">
+                                            <Link href="/resources/resource-hub" className="w-full transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
-                                                    <Folders size={100} />
-                                                    <span>
-                                                        <h3 className="text-lg font-bold text-secondary">Resource Hub</h3>
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <Folders className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-md font-bold text-secondary">Resource Hub</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             Whitepapers, guides and webinars. All designed to help you sell more.
                                                         </p>
-                                                    </span>
+                                                    </div>
                                                 </div>
                                             </Link>
-
                                         </div>
                                         <div className="w-1 h-16 bg-secondary"></div>
                                         <div className="flex flex-col gap-5 flex-1">
-                                            <Link href="/about-us" className=" gap-1 transition-all duration-500 group">
+                                            <Link href="/resources/resource-hub" className="w-full transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
-                                                    <MessageCircleWarning size={120} />
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <MessageCircleWarning className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
                                                     <div>
-                                                        <h3 className="text-lg font-bold text-secondary">About Us</h3>
+                                                        <h3 className="text-md font-bold text-secondary">Resource Hub</h3>
                                                         <p className="text-sm text-textColorTwo">
-                                                            Meet your campaign team: over 300 prospecting experts helping you sell more.
+                                                            Whitepapers, guides and webinars. All designed to help you sell more.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -382,7 +393,7 @@ const Navbar = () => {
                             </NavigationMenuItem> */}
 
                             <NavigationMenuItem className="pt-[8px]">
-                                <Link href='' className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                <Link href='/success' className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Result</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
