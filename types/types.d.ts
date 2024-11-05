@@ -136,3 +136,33 @@ export interface ROIResults {
   proposals: number;
   closedDeals: number;
 }
+
+
+
+export interface SuccessStoryType {
+    _id: string;
+    title: string;
+    slug: string;
+    company_location: string;
+    company_service: string;
+    deal_cycle?: string;
+    location: string;
+    company_website: string;
+    company_size: string;
+    role: string;
+    cost_per_lead: number;
+    lead_rate: number;
+    response_rate: number;
+    body: BlockContent[];
+    created_at?: string;
+    thumbnail?: {
+        _type: 'image';
+        asset: SanityImageAsset;
+        alt?: string;
+    };
+    company_logo?: {
+        _type: 'image';
+        asset: SanityImageAsset;
+        alt?: string;
+    };
+}

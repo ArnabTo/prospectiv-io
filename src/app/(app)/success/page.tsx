@@ -14,12 +14,13 @@ import { Separator } from "@/components/ui/separator";
 import Rating from "@/components/rating/RatingComponent";
 import '../../custom.css'
 import axios from "axios";
+import { SuccessStoryType } from "@/types/types";
 
 
 
 const SuccessStory = () => {
 
-    const [successStories, setSuccessStories] = useState<[]>([]);
+    const [successStories, setSuccessStories] = useState<SuccessStoryType[]>([]);
     const plugin = useRef(
         Autoplay({ delay: 2500, stopOnInteraction: true })
     )
