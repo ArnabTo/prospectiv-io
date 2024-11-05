@@ -105,3 +105,15 @@
   clip-path: polygon(100% 0,0 100%,100% 100%);
   background: linear-gradient(45deg,#1766ff,#ff4895);
 }
+
+/* Hide spinner buttons in Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spinner buttons in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

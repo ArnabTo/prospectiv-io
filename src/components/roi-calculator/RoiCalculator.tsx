@@ -10,7 +10,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../ui/dropdown-menu';
 import { Separator } from '../ui/separator';
 import { motion } from 'framer-motion';
-
+import '../../app/custom.css';
 
 const FIXED_PROSPECTS: Record<number, number> = {
   4000: 1000,
@@ -1030,7 +1030,7 @@ const ROICalculator = () => {
       <div className='space-y-2 relative'>
         {!showResults ? (
           <div className='space-y-5'>
-            <Card className="p-5 lg:py-10 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
+            <Card className="p-5 lg:py-10 border border-borderColor max-w-[35rem] mx-auto rounded-2xl">
               {error && (
                 <Alert variant="destructive" className="mb-4">
                   <AlertDescription>{error}</AlertDescription>
@@ -1040,11 +1040,13 @@ const ROICalculator = () => {
               <div className="space-y-8">
                 <div className='space-y-5'>
                   <label htmlFor="budget" className="mb-2 text-textColorTwo flex flex-col md:flex-row justify-between items-center gap-3">
-                    <div className='flex justify-center items-center gap-3'>
-                      <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
-                        1
-                      </span>
-                      What's your monthly budget?
+                    <div>
+                      <p className='text-xl font-semibold flex justify-center items-center gap-3'>
+                        <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                          1
+                        </span>
+                        What's your monthly budget?
+                      </p>
                     </div>
                     <div className="min-w-[100px] flex justify-center items-center ml-auto md:ml-0">
                       <DropdownMenu>
@@ -1061,26 +1063,26 @@ const ROICalculator = () => {
                           <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('USD')}
                           >
-                            <DollarSign size={50} /> 
-                            {currency === 'USD' && <CheckIcon size={20} />} 
-                            </DropdownMenuItem>
+                            <DollarSign size={50} />
+                            {currency === 'USD' && <CheckIcon size={20} />}
+                          </DropdownMenuItem>
                           <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('EUR')}
                           >
                             <EuroIcon className='text-center' size={50} />
-                             {currency === 'EUR' && <CheckIcon size={20} />}
-                             </DropdownMenuItem>
+                            {currency === 'EUR' && <CheckIcon size={20} />}
+                          </DropdownMenuItem>
                           <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('GBP')}
                           >
-                            <PoundSterlingIcon size={50} /> 
+                            <PoundSterlingIcon size={50} />
                             {currency === 'GBP' && <CheckIcon size={20} />}
-                            </DropdownMenuItem>
+                          </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
 
                       {/* {budget.toLocaleString()} */}
-                      {formatCurrency(budget, currency)}
+                      <p className='text-xl font-semibold'>{formatCurrency(budget, currency)}</p>
                     </div>
                   </label>
                   <div className="flex items-center gap-4 max-w-[95%] ml-auto">
@@ -1107,10 +1109,11 @@ const ROICalculator = () => {
                 <div className='space-y-5'>
                   <label htmlFor="budget" className="mb-2 text-textColorTwo">
                     <div className='flex justify-start items-center gap-3'>
-                      <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                      <p className='text-lg md:text-xl font-semibold flex justify-center items-center gap-3'><span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
                         2
                       </span>
-                      What's your average client value?
+                        What's your average client value?
+                      </p>
                     </div>
                   </label>
                   <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-[95%] ml-auto">
@@ -1129,21 +1132,21 @@ const ROICalculator = () => {
                           <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('USD')}
                           >
-                            <DollarSign size={50} /> 
-                            {currency === 'USD' && <CheckIcon size={20} />} 
-                            </DropdownMenuItem>
+                            <DollarSign size={50} />
+                            {currency === 'USD' && <CheckIcon size={20} />}
+                          </DropdownMenuItem>
                           <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('EUR')}
                           >
                             <EuroIcon className='text-center' size={50} />
-                             {currency === 'EUR' && <CheckIcon size={20} />}
-                             </DropdownMenuItem>
+                            {currency === 'EUR' && <CheckIcon size={20} />}
+                          </DropdownMenuItem>
                           <DropdownMenuItem className='text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('GBP')}
                           >
-                            <PoundSterlingIcon size={50} /> 
+                            <PoundSterlingIcon size={50} />
                             {currency === 'GBP' && <CheckIcon size={20} />}
-                            </DropdownMenuItem>
+                          </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
 
@@ -1164,11 +1167,13 @@ const ROICalculator = () => {
                 <div className='space-y-5'>
                   <label htmlFor="budget" className="mb-2 text-textColorTwo">
                     <div className='flex flex-col md:flex-row justify-between items-center gap-3'>
-                      <div className='flex justify-center items-center gap-3'>
-                        <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
-                          3
-                        </span>
-                        How long is your average sales cycle?
+                      <div>
+                        <p className='text-lg md:text-xl font-semibold flex justify-center items-center gap-3'>
+                          <span className="text-lg bg-buttonColor rounded-full text-foreground p-2 w-6 h-6 flex items-center justify-center">
+                            3
+                          </span>
+                          How long is your average sales cycle?
+                        </p>
                       </div>
                       <span className=" text-textColorTwo text-lg ml-auto md:ml-0">{salesCycle}</span>
                     </div>

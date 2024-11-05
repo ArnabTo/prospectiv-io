@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion } from 'framer-motion';
 import PartnerOne from '@/public/assets/part.svg'
 import PartnerTwo from '@/public/assets/part2.svg'
-import Intro from "../intro-animation/Intro";
 import Partners from "@/components/partners/Partners";
 
 const Hero = () => {
