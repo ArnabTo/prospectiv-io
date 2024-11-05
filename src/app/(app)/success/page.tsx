@@ -282,7 +282,7 @@ const SuccessStory = () => {
                                         </p>
                                     </CardContent>
 
-                                    <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
+                                    <CardFooter className="p-4 border border-borderColor rounded-xl flex justify-center items-center">
                                         <div className="flex justify-between items-center gap-5">
                                             <span className="text-center">
                                                 <p className="text-2xl text-center font-bold text-secondary">$23</p>
