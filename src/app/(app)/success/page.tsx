@@ -266,12 +266,87 @@ const SuccessStory = () => {
                                     </CardFooter>
                                 </Card>
                             </Link>
+                            <Link href=''>
+                                <Card className=" border-none relative group">
+                                    <CardHeader>
+                                        <div className="h-40 bg-foreground rounded-xl">
+                                            <Image className="w-full h-full rounded-xl object-contain"
+                                                src='https://sopro.io/wp-content/uploads/2020/03/STORK.png'
+                                                width={200} height={200} alt='' />
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-lg text-textColorTwo">
+                                            How Stork evolved from not having enough time to develope
+                                            opportunities to having hundreads of leads.
+                                        </p>
+                                    </CardContent>
+
+                                    <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
+                                        <div className="flex justify-between items-center gap-5">
+                                            <span className="text-center">
+                                                <p className="text-2xl text-center font-bold text-secondary">$23</p>
+                                                <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
+                                            </span>
+                                            <span className="text-center">
+                                                <p className="text-2xl text-center font-bold text-secondary">53%</p>
+                                                <p className="text-xs text-textColorTwo uppercase">Response rate</p>
+                                            </span>
+                                            <span className="flex flex-col justify-center items-center">
+                                                <p className="text-2xl text-center font-bold text-secondary">11%</p>
+                                                <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
+                                            </span>
+                                        </div>
+                                    </CardFooter>
+                                </Card>
+                            </Link>
+                            <Link href=''>
+                                <Card className=" border-none relative group">
+                                    <CardHeader>
+                                        <div className="h-40 bg-foreground rounded-xl">
+                                            <Image className="w-full h-full rounded-xl object-contain"
+                                                src='https://sopro.io/wp-content/uploads/2020/03/STORK.png'
+                                                width={200} height={200} alt='' />
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <p className="text-lg text-textColorTwo">
+                                            How Stork evolved from not having enough time to develope
+                                            opportunities to having hundreads of leads.
+                                        </p>
+                                    </CardContent>
+
+                                    <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
+                                        <div className="flex justify-between items-center gap-5">
+                                            <span className="text-center">
+                                                <p className="text-2xl text-center font-bold text-secondary">$23</p>
+                                                <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
+                                            </span>
+                                            <span className="text-center">
+                                                <p className="text-2xl text-center font-bold text-secondary">53%</p>
+                                                <p className="text-xs text-textColorTwo uppercase">Response rate</p>
+                                            </span>
+                                            <span className="flex flex-col justify-center items-center">
+                                                <p className="text-2xl text-center font-bold text-secondary">11%</p>
+                                                <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
+                                            </span>
+                                        </div>
+                                    </CardFooter>
+                                </Card>
+                            </Link>
                         </div>
                     </div>
 
                     <div className="space-y-5">
-                        <div className="flex justify-center items-center"><p className="text-center bg-smallCard rounded-lg p-2 w-max">Clients who trust us</p></div>
-                        <div className="grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    <h1 className="text-3xl md:text-3xl font-bold text-center">Clients trust on us</h1>
+                        <div className="grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 border border-borderColor rounded-xl p-5 lg:p-10">
+                            <div className='flex flex-col justify-center items-center gap-3'>
+                                <Image src='https://i.ibb.co/88FPxMJ/google.png' alt="logo" width={70} height={70} />
+                                <div className='flex items-center gap-2'>
+                                    <Rating rating={4.5} />
+                                    <p className='text-textColorTwo text-lg'>4.0</p>
+                                </div>
+                            </div>
                             <div className='flex flex-col justify-center items-center gap-3'>
                                 <Image src='https://i.ibb.co/88FPxMJ/google.png' alt="logo" width={70} height={70} />
                                 <div className='flex items-center gap-2'>
