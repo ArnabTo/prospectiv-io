@@ -59,7 +59,6 @@ const AboutUs = () => {
                         </Breadcrumb>
                     </div>
                 </div>
-
             </div>
 
             <div className="max-w-7xl mx-auto space-y-24">
@@ -289,81 +288,6 @@ const AboutUs = () => {
                         </motion.div>
 
                     </div>
-                    {/* <div className="space-y-10">
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col lg:flex-row items-center gap-10 lg:max-w-[80%] mx-auto">
-                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
-                                <Image
-                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentOne?.image}
-                                    width={500} height={500} alt="member image" />
-                            </div>
-                            <div className="space-y-3">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentOne?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentOne?.paragraph}</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:max-w-[80%] mx-auto">
-                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
-                                <Image
-                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.image}
-                                    width={500} height={500} alt="member image" />
-                            </div>
-                            <div className="space-y-3 lg:text-end">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentTwo?.paragraph}</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col lg:flex-row items-center gap-10 lg:max-w-[80%] mx-auto">
-                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
-                                <Image
-                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentThree?.image}
-                                    width={500} height={500} alt="member image" />
-                            </div>
-                            <div className="space-y-3">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentThree?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentThree?.paragraph}</p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                            viewport={{ once: true }}
-                            className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:max-w-[80%] mx-auto">
-                            <div className="relative lg:w-48 lg:h-48 w-32 h-32 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree rounded-full">
-                                <Image
-                                    className="absolute inset-0 w-full h-full rounded-full object-cover border border-borderColor"
-                                    src={aboutUsPageTextContent?.meetCampaignMember?.contentFour?.image}
-                                    width={500} height={500} alt="member image" />
-                            </div>
-                            <div className="space-y-3 lg:text-end">
-                                <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.heading}</h3>
-                                <p className="text-lg">{aboutUsPageTextContent?.meetCampaignMember?.contentFour?.paragraph}</p>
-                            </div>
-                        </motion.div>
-                    </div> */}
-
                 </div>
 
                 <div className='space-y-5'>
