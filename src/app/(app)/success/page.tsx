@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
-import { useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
 import CountUp from "react-countup";
 import Image from "next/image";
@@ -13,15 +13,25 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator";
 import Rating from "@/components/rating/RatingComponent";
 import '../../custom.css'
+import axios from "axios";
 
 
 
 const SuccessStory = () => {
 
+    const [successStories, setSuccessStories] = useState<[]>([]);
     const plugin = useRef(
         Autoplay({ delay: 2500, stopOnInteraction: true })
     )
 
+    const fetchStories = useCallback(async () => {
+        const getStories = await axios.get('/api/getsuccessstories');
+        setSuccessStories(getStories.data)
+    }, [])
+
+    useEffect(() => {
+        fetchStories();
+    }, [fetchStories])
     const getEmbedUrl = (url: string) => {
         if (url.includes("youtube.com/watch?v=")) {
             const videoId = url.split("v=")[1];
@@ -34,6 +44,7 @@ const SuccessStory = () => {
         }
     };
 
+    console.log(successStories)
     return (
         <div className="overflow-hidden">
             <div className='relative'>
@@ -130,77 +141,77 @@ const SuccessStory = () => {
 
                     <div className="space-y-10 bg-card rounded-3xl border border-borderColor p-5 md:p-10 relative">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Our results</h1>
-                        <div>
+                        <div className="lg:w-3/4 mx-auto">
                             <div className="space-y-5 lg:space-y-8">
                                 <div className="grid grid-cols-2 md:grid-cols-3 justify-center items-center gap-10">
-                                    <div className="border-l border-secondary px-5 py-5">
+                                    <div className="border-l-2 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={19}
                                             duration={2}
-                                            className=" text-4xl font-bold"
+                                            className=" text-5xl font-extralight"
                                             separator=","
                                             prefix="$"
                                         />
-                                        <p className="text-lg text-secondary">Cost per lead</p>
+                                        <p className="text-base font-normal text-secondary">Cost per lead</p>
                                     </div>
-                                    <div className="border-l border-secondary px-5 py-5">
+                                    <div className="border-l-2 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={50}
                                             duration={3}
-                                            className="text-4xl font-bold"
+                                            className=" text-5xl font-extralight"
                                             separator=","
                                             prefix=""
                                             suffix="M+"
                                         />
-                                        <p className="text-lg text-secondary">Emails sent</p>
+                                        <p className="ttext-base font-normalg text-secondary">Emails sent</p>
                                     </div>
-                                    <div className="border-l border-secondary px-5 py-5">
+                                    <div className="border-l-2 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={15000}
                                             duration={3}
-                                            className=" text-4xl font-bold"
+                                            className=" text-5xl font-extralight"
                                             separator=","
                                             suffix="+"
                                         />
-                                        <p className="text-lg text-secondary">Campaigns delivered</p>
+                                        <p className="text-base font-normal text-secondary">Campaigns delivered</p>
                                     </div>
-                                    <div className="border-l border-secondary px-5 py-5">
+                                    <div className="border-l-2 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={8.6}
                                             decimal="."
                                             decimals={1}
                                             duration={2}
-                                            className=" text-4xl font-bold"
+                                            className=" text-5xl font-extralight"
                                             separator=","
                                             prefix="$"
                                         />
-                                        <p className="text-lg text-secondary">Lead rate</p>
+                                        <p className="text-base font-normal text-secondary">Lead rate</p>
                                     </div>
-                                    <div className="border-l border-secondary px-5 py-5">
+                                    <div className="border-l-2 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={600}
                                             duration={2}
-                                            className=" text-4xl font-bold"
+                                            className=" text-5xl font-extralight"
                                             separator=","
                                             suffix="+"
                                         />
-                                        <p className="text-lg text-secondary">Clients</p>
+                                        <p className="text-base font-normal text-secondary">Clients</p>
                                     </div>
-                                    <div className="border-l border-secondary px-5 py-5">
+                                    <div className="border-l-2 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={2000}
                                             duration={2}
-                                            className="text-4xl font-bold"
+                                            className=" text-5xl font-extralight"
                                             separator=","
                                             suffix="+"
                                         />
-                                        <p className="text-lg text-secondary">Leads delivered</p>
+                                        <p className="text-base font-normal text-secondary">Leads delivered</p>
                                     </div>
                                 </div>
                             </div>
@@ -232,113 +243,48 @@ const SuccessStory = () => {
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">All success stories</h1>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                            <Link href=''>
-                                <Card className=" border-none relative group">
-                                    <CardHeader>
-                                        <div className="h-40 bg-foreground rounded-xl">
-                                            <Image className="w-full h-full rounded-xl object-contain"
-                                                src='https://sopro.io/wp-content/uploads/2020/03/STORK.png'
-                                                width={200} height={200} alt='' />
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p className="text-lg text-textColorTwo">
-                                            How Stork evolved from not having enough time to develope
-                                            opportunities to having hundreads of leads.
-                                        </p>
-                                    </CardContent>
+                            {
+                                successStories.map((story, index) => (
+                                    <Link href='' key={index}>
+                                        <Card className=" border-none relative group">
+                                            <CardHeader>
+                                                <div className="h-40 bg-foreground rounded-xl">
+                                                    <Image className="w-full h-full rounded-xl object-contain"
+                                                        src={story?.company_logo?.asset?.url}
+                                                        width={200} height={200} alt='' />
+                                                </div>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <p className="text-lg text-textColorTwo">
+                                                    {story.title}
+                                                </p>
+                                            </CardContent>
 
-                                    <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
-                                        <div className="flex justify-between items-center gap-5">
-                                            <span className="text-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">$23</p>
-                                                <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
-                                            </span>
-                                            <span className="text-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">53%</p>
-                                                <p className="text-xs text-textColorTwo uppercase">Response rate</p>
-                                            </span>
-                                            <span className="flex flex-col justify-center items-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">11%</p>
-                                                <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
-                                            </span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </Link>
-                            <Link href=''>
-                                <Card className=" border-none relative group">
-                                    <CardHeader>
-                                        <div className="h-40 bg-foreground rounded-xl">
-                                            <Image className="w-full h-full rounded-xl object-contain"
-                                                src='https://sopro.io/wp-content/uploads/2020/03/STORK.png'
-                                                width={200} height={200} alt='' />
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p className="text-lg text-textColorTwo">
-                                            How Stork evolved from not having enough time to develope
-                                            opportunities to having hundreads of leads.
-                                        </p>
-                                    </CardContent>
-
-                                    <CardFooter className="p-4 border border-borderColor rounded-xl flex justify-center items-center">
-                                        <div className="flex justify-between items-center gap-5">
-                                            <span className="text-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">$23</p>
-                                                <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
-                                            </span>
-                                            <span className="text-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">53%</p>
-                                                <p className="text-xs text-textColorTwo uppercase">Response rate</p>
-                                            </span>
-                                            <span className="flex flex-col justify-center items-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">11%</p>
-                                                <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
-                                            </span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </Link>
-                            <Link href=''>
-                                <Card className=" border-none relative group">
-                                    <CardHeader>
-                                        <div className="h-40 bg-foreground rounded-xl">
-                                            <Image className="w-full h-full rounded-xl object-contain"
-                                                src='https://sopro.io/wp-content/uploads/2020/03/STORK.png'
-                                                width={200} height={200} alt='' />
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p className="text-lg text-textColorTwo">
-                                            How Stork evolved from not having enough time to develope
-                                            opportunities to having hundreads of leads.
-                                        </p>
-                                    </CardContent>
-
-                                    <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
-                                        <div className="flex justify-between items-center gap-5">
-                                            <span className="text-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">$23</p>
-                                                <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
-                                            </span>
-                                            <span className="text-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">53%</p>
-                                                <p className="text-xs text-textColorTwo uppercase">Response rate</p>
-                                            </span>
-                                            <span className="flex flex-col justify-center items-center">
-                                                <p className="text-2xl text-center font-bold text-secondary">11%</p>
-                                                <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
-                                            </span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </Link>
+                                            <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
+                                                <div className="flex justify-between items-center gap-5">
+                                                    <span className="text-center">
+                                                        <p className="text-2xl text-center font-bold text-secondary">${story?.cost_per_lead}</p>
+                                                        <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
+                                                    </span>
+                                                    <span className="text-center">
+                                                        <p className="text-2xl text-center font-bold text-secondary">{story?.response_rate}%</p>
+                                                        <p className="text-xs text-textColorTwo uppercase">Response rate</p>
+                                                    </span>
+                                                    <span className="flex flex-col justify-center items-center">
+                                                        <p className="text-2xl text-center font-bold text-secondary">{story?.lead_rate}%</p>
+                                                        <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
+                                                    </span>
+                                                </div>
+                                            </CardFooter>
+                                        </Card>
+                                    </Link>
+                                ))
+                            }
                         </div>
                     </div>
 
                     <div className="space-y-5">
-                    <h1 className="text-3xl md:text-3xl font-bold text-center">Clients trust on us</h1>
+                        <h1 className="text-3xl md:text-3xl font-bold text-center">Clients trust on us</h1>
                         <div className="grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 border border-borderColor rounded-xl p-5 lg:p-10">
                             <div className='flex flex-col justify-center items-center gap-3'>
                                 <Image src='https://i.ibb.co/88FPxMJ/google.png' alt="logo" width={70} height={70} />

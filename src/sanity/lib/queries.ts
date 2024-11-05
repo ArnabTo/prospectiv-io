@@ -241,63 +241,36 @@ export const WEBINAR_BY_SLUG = defineQuery(`
  }
 `)
 
-// export const WHITEPAPER_QUERY = defineQuery(`
-// *[_type == "whitepaper" && defined(slug.current)] | order(_createdAt desc){
-//   title,
-//   "slug": slug.current,
-//   body,
-//   download_link,
-//   content_type,
-//   thumbnail{
-//     asset->{
-//       _id,
-//       url
-//     },
-//     alt
-//   },
-// }
-// `)
-
-// export const GUIDE_QUERY = defineQuery(`
-// *[_type == "guide" && defined(slug.current)] | order(_createdAt desc){
-//   title,
-//   "slug": slug.current,
-//   body,
-//   download_link,
-//   content_type,
-//   thumbnail{
-//     asset->{
-//       _id,
-//       url
-//     },
-//     alt
-//   },
-// }
-// `)
-
-// export const WEBINAR_QUERY = defineQuery(`
-//   *[_type == "webinar" && defined(slug.current)] | order(_createdAt desc){
-//     title,
-//     "slug": slug.current,
-//     body,
-//     webinar_link,
-//     content_type,
-//     author->{
-//               name,
-//               bio,
-//               image{
-//                   asset->{
-//                       _id,
-//                       url
-//                   }
-//               }
-//           },
-//           thumbnail{
-//       asset->{
-//         _id,
-//         url
-//       },
-//       alt
-//     },
-//   }
-//   `)
+export const  SUCCESSSTORY_QUERY = defineQuery(`
+  *[_type == "successstory" && defined(slug.current)] | order(_createdAt desc){
+    title,
+    "slug": slug.current,
+    body,
+    publishedAt,
+    company_website,
+    company_location,
+    company_service,
+    deal_cycle,
+    location,
+    company_size,
+    role,
+    cost_per_lead,
+    lead_rate,
+    response_rate,
+    created_at,
+    thumbnail{
+      asset->{
+        _id,
+        url 
+      },
+      alt
+    } ,
+    company_logo{
+      asset->{
+        _id,
+        url 
+      },
+      alt
+    } ,
+} 
+`)
