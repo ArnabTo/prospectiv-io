@@ -1186,7 +1186,7 @@ const ROICalculator = () => {
         ) : (
           <Card className="border-borderColor lg:w-4/5 mx-auto">
             <div className="flex flex-col md:flex-row justify-center items-center gap-5 py-12">
-              <div className='space-y-5'>
+              <div className='space-y-5 flex-1'>
                 <div>
                   <p className='text-2xl text-center lg:text-right font-bold text-textColorTwo leading-3'>Would you invest
                     <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()}</span> <br></br>
@@ -1198,63 +1198,63 @@ const ROICalculator = () => {
                   <p className='text-textColorTwo text-lg text-center lg:text-right'>No long-term commitment required.<br></br>
                     <span className='text-sm'>Excludes one-off setup fee.</span></p>
                 </div>
-    
-                <div>
+
+                <div className='space-y-3'>
                   <div
-                    className="w-60 lg:w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
+                    className="w-60 flex rounded-full ml-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
                     <div className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
                       Book a Demo
                     </div>
                   </div>
                   <p
                     onClick={() => setShowResults(false)}
-                    className='flex items-center justify-center cursor-pointer text-gradientColorFive'><ArrowLeft className="mr-2 h-4 w-4" />
+                    className='flex items-center justify-end cursor-pointer text-gradientColorFive mr-3'><ArrowLeft className="mr-2 h-4 w-4" />
                     Recalculate ROI</p>
                 </div>
               </div>
               <div className="md:max-w-[60%] lg:border-l border-borderColor flex-1">
                 <div className="space-y-1 py-5">
-                  <div className="trapezoid flex justify-between px-5 py-3 w-[85%] mx-auto rounded-sm">
+                  <div className="trapezoid flex justify-between px-5 py-3 w-[90%] lg:w-[75%] mx-auto rounded-sm">
                     <span>Prospects</span>
                     <span className="font-bold">{metrics.prospects.toLocaleString()}</span>
                   </div>
-                  <div className='trapezoidtwo py-3 rounded-sm w-[80%] h-40 mx-auto relative'>
+                  <div className='trapezoidtwo py-2 lg:py-3 rounded-sm w-[77%] lg:w-[66%] h-44 mx-auto relative'>
                     <p className='text-center mb-2 text-sm'>Multi-channel engagement campaign</p>
-                    <div className='flex justify-center items-center gap-10 '>
+                    <div className='flex justify-center items-center gap-3 lg:gap-5'>
                       <div className='group'>
                         <Users className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
-                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Dedicated outreach consultant</p>
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-0 lg:bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Dedicated outreach consultant</p>
                       </div>
                       <div className='group'>
                         <Rocket className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
-                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Multi-channel prospecting campaigns</p>
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-0 lg:bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Multi-channel prospecting campaigns</p>
                       </div>
                       <div className='group'>
                         <Rocket className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
-                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Multi-channel prospecting campaigns</p>
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-0 lg:bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Multi-channel prospecting campaigns</p>
                       </div>
                       <div className='group'>
                         <Bell className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
-                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Website buyer intent data</p>
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-0 lg:bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Website buyer intent data</p>
                       </div>
                       <div className='group'>
                         <Search className='scale-90 opacity-50 group-hover:scale-105 group-hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer' size={25} />
-                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Targeted and complainet dataset</p>
+                        <p className='absolute w-max opacity-0 text-xs left-1/2 bottom-0 lg:bottom-3 transform -translate-x-1/2 opacecity-0 group-hover:opacity-100 transition-all'>Targeted and complainet dataset</p>
                       </div>
 
                     </div>
                   </div>
-                  <div className="trapezoidthree flex justify-between px-5 py-3 w-[71%] mx-auto rounded-sm">
-                    <span>Leads</span>
-                    <span className="font-bold">{metrics.leads.toLocaleString()}</span>
+                  <div className="trapezoidthree flex justify-between px-5 py-3 w-[61%] lg:w-[55%] mx-auto rounded-sm">
+                    <span className='text-sm md:text-lg'>Leads</span>
+                    <span className="font-bold text-sm md:text-lg">{metrics.leads.toLocaleString()}</span>
                   </div>
-                  <div className="trapezoidthree flex justify-between px-5 py-3 w-[65%] mx-auto rounded-sm">
-                    <span>Proposals</span>
-                    <span className="font-bold">{metrics.proposals.toLocaleString()}</span>
+                  <div className="trapezoidthree flex justify-between px-5 py-3 w-[54%] lg:w-[51%] mx-auto rounded-sm">
+                    <span className='text-sm md:text-lg'>Proposals</span>
+                    <span className="font-bold text-sm md:text-lg">{metrics.proposals.toLocaleString()}</span>
                   </div>
-                  <div className="trapezoidfive flex justify-between px-5 py-3 w-[60%] mx-auto rounded-sm">
-                    <span>Closed Deals</span>
-                    <span className="font-bold">{metrics.closedDeals.toLocaleString()}</span>
+                  <div className="trapezoidfour flex justify-between px-3 lg:px-5 py-3 w-[48%] lg:w-[47%] mx-auto rounded-sm">
+                    <span className='text-sm md:text-lg'>Closed Deals</span>
+                    <span className="font-bold text-sm md:text-lg">{metrics.closedDeals.toLocaleString()}</span>
                   </div>
                 </div>
               </div>

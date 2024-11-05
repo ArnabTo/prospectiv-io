@@ -18,7 +18,7 @@ import MarketBg from '@/public/assets/market.png'
 
 const PricingPage = () => {
     return (
-        <div className='py-24  px-5 overflow-hidden'>
+        <div className='py-24  px-3 overflow-hidden'>
             <div className='max-w-7xl mx-auto space-y-40'>
                 <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.9 }}
