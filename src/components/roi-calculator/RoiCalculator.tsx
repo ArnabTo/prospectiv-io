@@ -1030,7 +1030,7 @@ const ROICalculator = () => {
       <div className='space-y-2 relative'>
         {!showResults ? (
           <div className='space-y-5'>
-            <Card className="p-5 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
+            <Card className="p-5 lg:py-10 border border-borderColor max-w-[30rem] mx-auto rounded-2xl">
               {error && (
                 <Alert variant="destructive" className="mb-4">
                   <AlertDescription>{error}</AlertDescription>
@@ -1098,7 +1098,7 @@ const ROICalculator = () => {
                           setBudget(newValue);
                         }
                       }}
-                      className="w-full"
+                      className="w-full cursor-pointer"
                       aria-label="Budget amount"
                     />
                   </div>
@@ -1181,7 +1181,7 @@ const ROICalculator = () => {
                       max={12}
                       step={1}
                       onValueChange={(value) => setSalesCycle(value[0])}
-                      className="w-full"
+                      className="w-full cursor-pointer"
                       aria-label="Sales cycle length"
                     />
                   </div>
