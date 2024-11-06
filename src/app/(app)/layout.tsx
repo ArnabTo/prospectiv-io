@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <div>
-      <div className="relative z-20 mb-[70vh] h-max bg-background">
+      <div className="relative z-20 mb-[65vh] h-max bg-background rounded-b-3xl">
         <Navbar />
         {children}
         <Toaster />
