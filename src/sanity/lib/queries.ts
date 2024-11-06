@@ -190,19 +190,8 @@ export const WEBINAR_QUERY = defineQuery(`
     title,
     "slug": slug.current,
     body,
-    webinar_url,
     content_type,
     publishedAt,
-    author->{
-        name,
-        bio,
-        image{
-        asset->{
-            _id,
-            url
-              }
-            }
-          },
     thumbnail{
       asset->{
         _id,
@@ -243,6 +232,23 @@ export const WEBINAR_BY_SLUG = defineQuery(`
 
 export const  SUCCESSSTORY_QUERY = defineQuery(`
   *[_type == "successstory" && defined(slug.current)] | order(_createdAt desc){
+    title,
+    "slug": slug.current,
+    cost_per_lead,
+    lead_rate,
+    response_rate,
+    created_at,
+    company_logo{
+      asset->{
+        _id,
+        url 
+      },
+      alt
+    } ,
+} 
+`)
+export const  SUCCESSSTORY_DEATILS_QUERY = defineQuery(`
+  *[_type == "successstory" && slug.current == $slug][0]{
     title,
     "slug": slug.current,
     body,

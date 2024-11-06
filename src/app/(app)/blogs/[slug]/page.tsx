@@ -5,8 +5,6 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
-import { Avatar } from "@radix-ui/react-avatar";
-import { AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Calendar, Loader2, Tag } from "lucide-react";
 import calculateReadingTime from "@/components/reading-time-caculator/ReadingTimeCalculator";
 import BlogSection from "@/components/Blogs/BlogSection";

@@ -12,7 +12,7 @@ import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Rating from "@/components/rating/RatingComponent";
-import '../../custom.css'
+import '../../../custom.css'
 import axios from "axios";
 import { SuccessStoryType } from "@/types/types";
 
@@ -246,7 +246,7 @@ const SuccessStory = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                             {
                                 successStories.map((story, index) => (
-                                    <Link href='' key={index}>
+                                    <Link href={`/result/success-story/${story.slug}`} key={index}>
                                         <Card className=" border-none relative group">
                                             <CardHeader>
                                                 <div className="h-40 bg-foreground rounded-xl">
