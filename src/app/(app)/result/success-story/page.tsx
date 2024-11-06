@@ -18,6 +18,7 @@ import { SuccessStoryType } from "@/types/types";
 import CompanyLogoOne from '@/public/assets/company_logo/capterra_logo_colored.svg'
 import CompanyLogoTwo from '@/public/assets/company_logo/getapp_logo_colored.svg'
 import CompanyLogoThree from '@/public/assets/company_logo/software_advice_logo_colored.svg'
+import PaginatedSuccessStories from "@/components/successstories/AllSuccessStories";
 
 
 const SuccessStory = () => {
@@ -38,7 +39,7 @@ const SuccessStory = () => {
         fetchStories();
     }, [fetchStories])
 
-    // console.log(featuresCaseStudies)
+
     const getEmbedUrl = (url: string) => {
         if (url.includes("youtube.com/watch?v=")) {
             const videoId = url.split("v=")[1];
@@ -75,11 +76,11 @@ const SuccessStory = () => {
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-lg'>Company</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-lg'>Results</BreadcrumbPage>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-secondary text-lg'>About us</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-secondary text-lg'>Success Stories</BreadcrumbPage>
                                 </BreadcrumbItem>
                             </BreadcrumbList>
                         </Breadcrumb>
@@ -89,7 +90,7 @@ const SuccessStory = () => {
 
             <div className="py-24">
                 <div className="max-w-7xl mx-auto px-5 space-y-28">
-
+                    {/* case studies */}
                     <div className="space-y-10 py-20">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Featured case studies</h1>
                         <div>
@@ -147,6 +148,7 @@ const SuccessStory = () => {
                         </div>
                     </div>
 
+                    {/* our results */}
                     <div className="space-y-10 bg-card rounded-3xl border border-borderColor p-5 md:p-10 relative">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">Our results</h1>
                         <div className="lg:w-3/4 mx-auto">
@@ -247,50 +249,9 @@ const SuccessStory = () => {
                         </motion.div>
                     </div>
 
-                    <div>
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">All success stories</h1>
+                    <PaginatedSuccessStories successStories={successStories}/>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                            {
-                                successStories.map((story, index) => (
-                                    <Link href={`/result/success-story/${story.slug}`} key={index}>
-                                        <Card className=" border-none relative group">
-                                            <CardHeader>
-                                                <div className="h-40 bg-foreground rounded-xl">
-                                                    <Image className="w-full h-full rounded-xl object-contain"
-                                                        src={story?.company_logo?.asset?.url}
-                                                        width={200} height={200} alt='' />
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent>
-                                                <p className="text-lg text-textColorTwo">
-                                                    {story.title}
-                                                </p>
-                                            </CardContent>
-
-                                            <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
-                                                <div className="flex justify-between items-center gap-5">
-                                                    <span className="text-center">
-                                                        <p className="text-2xl text-center font-bold text-secondary">${story?.cost_per_lead}</p>
-                                                        <p className="text-xs text-textColorTwo uppercase">cost per lead</p>
-                                                    </span>
-                                                    <span className="text-center">
-                                                        <p className="text-2xl text-center font-bold text-secondary">{story?.response_rate}%</p>
-                                                        <p className="text-xs text-textColorTwo uppercase">Response rate</p>
-                                                    </span>
-                                                    <span className="flex flex-col justify-center items-center">
-                                                        <p className="text-2xl text-center font-bold text-secondary">{story?.lead_rate}%</p>
-                                                        <p className="text-xs text-textColorTwo uppercase">Lead rate</p>
-                                                    </span>
-                                                </div>
-                                            </CardFooter>
-                                        </Card>
-                                    </Link>
-                                ))
-                            }
-                        </div>
-                    </div>
-
+                    {/* companies trus on us */}
                     <div className="space-y-5">
                         <h1 className="text-3xl md:text-3xl font-bold text-center">Clients trust on us</h1>
                         <div className="bg-card grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 border border-borderColor rounded-xl p-5 lg:p-10">
