@@ -14,38 +14,30 @@ const PaginatedSuccessStories = ({ successStories }: PaginatedSuccessStoriesProp
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8;
     
-    // Calculate total pages
     const totalPages = Math.ceil(successStories.length / itemsPerPage);
-    
-    // Get current items
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = successStories.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Change page
     const handlePageChange = (pageNumber: number) => {
         setCurrentPage(pageNumber);
     };
 
-    // Generate page numbers
     const getPageNumbers = () => {
         const pageNumbers = [];
         const maxVisiblePages = 5;
         
         if (totalPages <= maxVisiblePages) {
-            // Show all pages if total pages is less than max visible
             for (let i = 1; i <= totalPages; i++) {
                 pageNumbers.push(i);
             }
         } else {
-            // Always show first page
             pageNumbers.push(1);
             
             if (currentPage > 3) {
                 pageNumbers.push('ellipsis');
             }
             
-            // Show current page and surrounding pages
             for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
                 pageNumbers.push(i);
             }
@@ -54,7 +46,6 @@ const PaginatedSuccessStories = ({ successStories }: PaginatedSuccessStoriesProp
                 pageNumbers.push('ellipsis');
             }
             
-            // Always show last page
             pageNumbers.push(totalPages);
         }
         
@@ -67,9 +58,9 @@ const PaginatedSuccessStories = ({ successStories }: PaginatedSuccessStoriesProp
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {currentItems.map((story, index) => (
-                    <Link href={`/result/success-story/${story.slug}`} key={index}>
-                        <Card className="border-none relative group">
-                            <CardHeader>
+                    <Link href={`/result/success-story/${story.slug}`} key={index} className="h-full">
+                        <Card className="border-none relative group h-full flex flex-col">
+                            <CardHeader className="flex-shrink-0">
                                 <div className="h-40 bg-foreground rounded-xl">
                                     <Image 
                                         className="w-full h-full rounded-xl object-contain"
@@ -80,13 +71,13 @@ const PaginatedSuccessStories = ({ successStories }: PaginatedSuccessStoriesProp
                                     />
                                 </div>
                             </CardHeader>
-                            <CardContent>
-                                <p className="text-lg text-textColorTwo">
+                            <CardContent className="flex-grow">
+                                <p className="text-lg text-textColorTwo line-clamp-3">
                                     {story.title}
                                 </p>
                             </CardContent>
 
-                            <CardFooter className="p-5 border border-borderColor rounded-xl flex justify-center items-center">
+                            <CardFooter className="p-5 mt-auto border border-borderColor rounded-xl flex justify-center items-center">
                                 <div className="flex justify-between items-center gap-5">
                                     <span className="text-center">
                                         <p className="text-2xl text-center font-bold text-secondary">${story?.cost_per_lead}</p>
