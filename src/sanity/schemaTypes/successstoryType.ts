@@ -21,6 +21,11 @@ export const successstoryType = defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
+            name: 'company_website',
+            type: 'url',
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
             name: 'company_location',
             type: 'string',
             validation: (Rule) => Rule.required(),
@@ -35,13 +40,8 @@ export const successstoryType = defineType({
             type: 'string',
         }),
         defineField({
-            name: 'location',
+            name: 'target_location',
             type: 'string',
-            validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-            name: 'company_website',
-            type: 'url',
             validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -77,6 +77,10 @@ export const successstoryType = defineType({
         defineField({
             name: 'created_at',
             type: 'datetime',
+        }),
+        defineField({
+            name: 'video_url',
+            type: 'url',
         }),
         defineField({
             name: 'thumbnail',

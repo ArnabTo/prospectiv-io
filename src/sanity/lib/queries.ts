@@ -237,7 +237,9 @@ export const  SUCCESSSTORY_QUERY = defineQuery(`
     cost_per_lead,
     lead_rate,
     response_rate,
+    role,
     created_at,
+    video_url,
     company_logo{
       asset->{
         _id,
@@ -257,13 +259,14 @@ export const  SUCCESSSTORY_DEATILS_QUERY = defineQuery(`
     company_location,
     company_service,
     deal_cycle,
-    location,
+    target_location,
     company_size,
     role,
     cost_per_lead,
     lead_rate,
     response_rate,
     created_at,
+    video_url,
     thumbnail{
       asset->{
         _id,

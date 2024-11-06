@@ -12,17 +12,17 @@ const Rating = ({ rating }:{rating: number}) => {
             {stars.map((star) => (
                 <span key={star} style={{ position: 'relative' }}>
                     {rating >= star ? (
-                        <Star fill="#ffffff" color="#ffffff" />
+                        <Star fill="#ffdc00" color="#ffdc00" />
                     ) : rating >= star - 0.5 ? (
                         <Star
-                            fill="#ffffff"
-                            color="#ffffff"
+                            fill="#ffdc00"
+                            color="#ffdc00"
                             style={{
                                 clipPath: 'inset(0 50% 0 0)' // Clip to show half-filled star
                             }}
                         />
                     ) : (
-                        <Star color="#ffffff" />
+                        <Star color="#ffdc00" />
                     )}
                 </span>
             ))}

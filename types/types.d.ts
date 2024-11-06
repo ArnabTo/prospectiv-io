@@ -146,7 +146,7 @@ export interface SuccessStoryType {
     company_location: string;
     company_service: string;
     deal_cycle?: string;
-    location: string;
+    target_location: string;
     company_website: string;
     company_size: string;
     role: string;
@@ -155,6 +155,7 @@ export interface SuccessStoryType {
     response_rate: number;
     body: BlockContent[];
     created_at?: string;
+    video_url: string;
     thumbnail?: {
         _type: 'image';
         asset: SanityImageAsset;
