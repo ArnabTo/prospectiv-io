@@ -206,7 +206,7 @@ const LegalPage = () => {
                   {
                     legalPageContent.cookies.section[3].contents &&
                     legalPageContent.cookies.section[3].contents[3] &&
-                    <div className='space-y-3  border border-borderColor rounded-2xl p-5'>
+                    <div className='space-y-2  border border-borderColor rounded-2xl p-5'>
                       <h3 className='text-xl text-secondary'>{legalPageContent.cookies.section[3].contents[3].title}</h3>
                       <p className='text-base text-textColorTwo'>{legalPageContent.cookies.section[3].contents[3].textContent}</p>
 
