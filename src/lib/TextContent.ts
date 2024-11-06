@@ -312,35 +312,35 @@ const pricingPageTextContent = {
                         We work hard to make Sopro a great place to work, and reward everyone who joins us.`,
     },
     whatsincluded: {
-        contentOne:{
+        contentOne: {
             heading: 'Sales engagement service',
             paragraph: `You receive enquiries directly and do what you do best.`,
         },
-        contentTwo:{
+        contentTwo: {
             heading: 'Multi-channel prospecting',
             paragraph: `Bespoke, expert campaigns with multiple touchpoints - email, social, and more`,
         },
-        contentThree:{
+        contentThree: {
             heading: 'Best-in-class data',
             paragraph: `A unique and up-to-date list of prospects, built for, and owned by, you`,
         },
-        contentFour:{
+        contentFour: {
             heading: 'Prospect tracking',
             paragraph: `Get notified when individuals in your campaign visit your site and show buyer intent`,
         },
-        contentFive:{
+        contentFive: {
             heading: 'Onboarding and optimisation',
             paragraph: `Your team of two continually analyse and improve your campaigns.`,
         },
-        contentSix:{
+        contentSix: {
             heading: 'Client portal access',
             paragraph: `Real-time, in-depth campaign reporting for total transparency and control`,
         },
-        contentSeven:{
+        contentSeven: {
             heading: 'LinkedIn outreach',
             paragraph: `Improve campaign performance by sending LinkedIn messages to high intent prospects`,
         },
-        contentEight:{
+        contentEight: {
             heading: 'Gifting service option',
             paragraph: `Create deeper connections with your prospects by adding redeemable gifts to your outreach`,
         },
@@ -369,6 +369,983 @@ const pricingPageTextContent = {
         },
     ]
 }
+
+const legalPageContent = {
+    cookies: {
+        section: [
+            {
+                id: "introduction",
+                title: 'Introduction',
+                contents: [
+                    {
+                        id: 1.1,
+                        content: `We are committed to safeguarding the privacy and accuracy of the personal data of our website visitors, service users and email recipients..`
+                    },
+                    {
+                        id: 1.2,
+                        content: `This policy applies where we are acting as a Data Controller with respect to the personal data of our website visitors, service users, email recipients and personal data collected from public sources; in other words, where we determine the purposes and means of the processing of that personal data.`
+                    },
+                    {
+                        id: 1.3,
+                        content: `In this policy, “we”, “us” and “our” refer to Prospect Global Ltd – trading as Sopro.`
+                    },
+                    {
+                        id: 1.4,
+                        content: `Reference to a Data Subject means a natural person whose personal data is processed by a Data Controller or a Data Processor, in other words, you.`
+                    },
+                ]
+            },
+            {
+                id: 'what-are-cookies',
+                title: 'What are cookies?',
+                textContent: `Cookies and similar technologies are small text documents or code, frequently containing a unique identification code. When you visit websites or use mobile application, a computer will ask your computer/device for permission to save this file on your computer/device and gain access to this information. Information collected through cookies may include the date and time of your visit and how you use a particular website.`
+            },
+            {
+                id: 'what-do-we-use-cookies',
+                title: 'Why do we use cookies?',
+                textContent: `Cookies make sure that during your visit to our site that you can remain logged in, all information you might want to carry over from one page goes to the next and that you can browse safely and smoothly. Cookies also allow us to see how our website is used and importantly how we can improve it, as well as allowing us to potentially present you with targeted marketing that matches your personal interests.`
+            },
+            {
+                id: 'what-types-of-cookies-do-we-use',
+                title: 'What types of cookies do we use?',
+                update: '11/10/2024, 07:14',
+                contents: [
+                    {
+                        title: 'Essential',
+                        textContent: `These cookies are necessary for the website to function properly. Vital actions can be performed by using these cookies such as saving your cookie preferences for this website or logging in to our portal.`,
+                        headers: ['Name', 'Purpose', 'Domain', 'Expiration time', 'Provider', 'Type'],
+                        rows: [
+                            {
+                                "name": "__cf_bm [5x]",
+                                "purpose": "The __cf_bm cookie is a cookie necessary to support Cloudflare Bot Management, currently in private beta. As part of our bot management service, this cookie helps manage incoming traffic that matches criteria associated with bots.",
+                                "domain": ".hsforms.net, .hsforms.com, .t.co, .hubspot.com, .vimeo.com",
+                                "expiration": "29 minutes",
+                                "provider": {
+                                    title: "Cloudflare",
+                                    sitelink: 'https://www.cloudflare.com/en-gb/privacypolicy/'
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "__hssrc",
+                                "purpose": "Whenever HubSpot changes the session cookie, this cookie is also set to determine if the visitor has restarted their browser. If this cookie does not exist when HubSpot manages cookies, it is considered a new session.",
+                                "domain": ".sopro.io",
+                                "expiration": "Session",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "__tmbid",
+                                "purpose": "This cookie is associated with Crimtan Holding Limited for the purpose of consented relevant advertising.",
+                                "domain": "sopro.io",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_cfuvid [3x]",
+                                "purpose": "This cookie is a part of the services provided by Cloudflare - Including load-balancing, deliverance of website content and serving DNS connection for website operators.",
+                                "domain": ".hsforms.com, .hubspot.com, .vimeo.com",
+                                "expiration": "Session",
+                                "provider": {
+                                    title: "Cloudflare",
+                                    sitelink: 'https://www.cloudflare.com/en-gb/privacypolicy/'
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "cookiefirst-consent",
+                                "purpose": "This cookie saves your cookie preferences for this website. You can change these or withdraw your consent easily.",
+                                "domain": "sopro.io",
+                                "expiration": "a year",
+                                "provider": {
+                                    title: "Cookie First",
+                                    sitelink: 'https://cookiefirst.com/legal/data-processing-agreement/'
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "cookiefirst-consent",
+                                "purpose": "This cookie saves your cookie preferences for this website. You can change these or withdraw your consent easily.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": {
+                                    title: "Cookie First",
+                                    sitelink: 'https://cookiefirst.com/legal/data-processing-agreement/'
+                                },
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "cookiefirst-id",
+                                "purpose": "This cookie contains your unique ID so CookieFirst can identify unique visitors to this website.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": {
+                                    title: "Cookie First",
+                                    sitelink: 'https://cookiefirst.com/legal/data-processing-agreement/'
+                                },
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "JSESSIONID",
+                                "purpose": "This is a general purpose session cookie used by websites written in JSP. Usually used to maintain an anonymous user session by the server.",
+                                "domain": ".nr-data.net",
+                                "expiration": "Session",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "pa_enabled",
+                                "purpose": "This item determines the device used to access the website. This allows the website to be formatted accordingly.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": "",
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "PHPSESSID",
+                                "purpose": "Cookie generated by applications based on the PHP language. This is a general purpose identifier used to maintain user session variables.",
+                                "domain": "sopro.io",
+                                "expiration": "Session",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "__hssc",
+                                "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
+                                "domain": ".sopro.io",
+                                "expiration": "29 minutes",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "__hstc",
+                                "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
+                                "domain": ".sopro.io",
+                                "expiration": "6 months",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_ga",
+                                "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics.",
+                                "domain": ".sopro.io",
+                                "expiration": "2 years",
+                                "provider": "Google LLC",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_ga_********",
+                                "purpose": "This cookie stores a unique ID for a website visitor and tracks how the visitor uses the website. The data is used for statistics.",
+                                "domain": ".sopro.io",
+                                "expiration": "2 years",
+                                "provider": "Google LLC",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_gat_UA-****",
+                                "purpose": "The _gat_UA cookie is a variation of the Google Analytics _gat cookie. It is used to limit the collection of data on high-traffic websites.",
+                                "domain": ".sopro.io",
+                                "expiration": "a few seconds",
+                                "provider": "Google LLC",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_gid",
+                                "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics.",
+                                "domain": ".sopro.io",
+                                "expiration": "a day",
+                                "provider": "Google LLC",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_hjSession_******",
+                                "purpose": "A cookie that holds the current session data. This ensures that subsequent requests within the session window will be attributed to the same Hotjar session.",
+                                "domain": ".sopro.io",
+                                "expiration": "29 minutes",
+                                "provider": "Hotjar Ltd",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_hjSessionUser_******",
+                                "purpose": "Hotjar cookie that is set when a user first lands on a page with the Hotjar script. It is used to persist the Hotjar User ID.",
+                                "domain": ".sopro.io",
+                                "expiration": "a year",
+                                "provider": "Hotjar Ltd",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_obid",
+                                "purpose": "This cookie is set when a user lands on the site, containing a unique ID relating to the email that was clicked on.",
+                                "domain": "sopro.io",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_pk_id.***.*****",
+                                "purpose": "Matomo / Piwik cookie, used to store a few details about the user such as the unique visitor ID.",
+                                "domain": "sopro.io",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_pk_ses.***.**",
+                                "purpose": "This cookie is used to record visitors' behavior on the website. It is used to collect statistics about website usage.",
+                                "domain": "sopro.io",
+                                "expiration": "29 minutes",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "hubspotutk",
+                                "purpose": "This cookie is used to keep track of a visitor's identity. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.",
+                                "domain": ".sopro.io",
+                                "expiration": "64 years",
+                                "provider": "",
+                                "type": "Cookie"
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Functional',
+                        textContent: `These cookies enable more functionality for visitors to our website. These cookies can be set by our external service providers or by our own website. Some example functionalities that may be enabled when this category is accepted include: live chat services and watching embedded videos.`,
+                        headers: ['Name', 'Purpose', 'Domain', 'Expiration time', 'Provider', 'Type'],
+                        rows: [
+                            {
+                                name: 'hubspotutk',
+                                purpose: 'This cookie name is associated with websites built on the HubSpot platform. HubSpot reports its purpose as user authentication. As a persistent rather than a session cookie, it cannot be classified as Strictly Necessary.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                "provider": {
+                                    title: "Hubshot",
+                                    sitelink: 'https://legal.hubspot.com/privacy-policy'
+                                },
+                                type: 'Local storage'
+                            },
+                            {
+                                name: 'li_gc',
+                                purpose: "This is a cookie from LinkedIn and is used for storing visitors' consent regarding the use of cookies for non-essential purposes.",
+                                domain: '.linkedin.com',
+                                expiration: '6 months',
+                                "provider": {
+                                    title: "LinkedIn",
+                                    sitelink: 'https://www.linkedin.com/legal/privacy-policy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'lidc',
+                                purpose: 'Cookie from LinkedIn used by share buttons and advertising tags.',
+                                domain: '.linkedin.com',
+                                expiration: '2 months',
+                                "provider": {
+                                    title: "LinkedIn",
+                                    sitelink: 'https://www.linkedin.com/legal/privacy-policy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'pa',
+                                purpose: 'This item registers the speed and performance of the website. This function can be used in the context of statistics and load balancing.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                provider: '',
+                                type: 'Local storage'
+                            },
+                            {
+                                name: 'VISITOR_INFO1_LIVE',
+                                purpose: 'This cookie allows YouTube to check bandwidth usage.',
+                                domain: '.youtube.com',
+                                expiration: '6 months',
+                                "provider": {
+                                    title: "YouTube",
+                                    sitelink: 'https://policies.google.com/privacy?hl=nl'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'vuid',
+                                purpose: 'This is a cookie from Vimeo used for the video player on our website.',
+                                domain: '.vimeo.com',
+                                expiration: '2 years',
+                                "provider": {
+                                    title: "Vimeo",
+                                    sitelink: 'https://vimeo.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'YSC',
+                                purpose: 'Registers unique IDs and keeps statistics on which videos users have viewed from YouTube.',
+                                domain: '.youtube.com',
+                                expiration: 'Session',
+                                "provider": {
+                                    title: "YouTube",
+                                    sitelink: 'https://policies.google.com/privacy?hl=nl'
+                                },
+                                type: 'Cookie'
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Advertising/Tracking",
+                        "headers": ["Name", "Purpose", "Domain", "Expiration time", "Provider", "Type"],
+                        "rows": [
+                            {
+                                "name": "__hssc",
+                                "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
+                                "domain": ".sopro.io",
+                                "expiration": "29 minutes",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "__hstc",
+                                "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
+                                "domain": ".sopro.io",
+                                "expiration": "6 months",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_ga",
+                                "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics. Data transfer to third countries: USA. Google LLC. is certified under the Data Privacy Framework, indicating that your rights as a data subject can be guaranteed.",
+                                "domain": ".sopro.io",
+                                "expiration": "2 years",
+                                "provider": {
+                                    "title": "Google LLC.",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_ga_********",
+                                "purpose": "This cookie stores a unique ID for a website visitor and tracks how the visitor uses the website. The data is used for statistics. Data transfer to third countries: USA. Google LLC. is certified under the Data Privacy Framework, indicating that your rights as a data subject can be guaranteed.",
+                                "domain": ".sopro.io",
+                                "expiration": "2 years",
+                                "provider": {
+                                    "title": "Google LLC.",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_gat_UA-****",
+                                "purpose": "The _gat_UA cookie is a variation of the Google Analytics _gat cookie. It is used to limit the collection of data on high-traffic websites. The cookie is set by the Google Analytics tracking code and it contains the unique ID of the tracking account or website to which it relates. The _gat_UA cookie is typically used to throttle the request rate, which means it limits the amount of data that Google Analytics can collect from the website.",
+                                "domain": ".sopro.io",
+                                "expiration": "a few seconds",
+                                "provider": {
+                                    "title": "Google LLC",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_gid",
+                                "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics. Data transfer to third countries: USA. Google LLC. is certified under the Data Privacy Framework, indicating that your rights as a data subject can be guaranteed.",
+                                "domain": ".sopro.io",
+                                "expiration": "a day",
+                                "provider": {
+                                    "title": "Google LLC.",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_hjSession_******",
+                                "purpose": "A cookie that holds the current session data. This ensures that subsequent requests within the session window will be attributed to the same Hotjar session.",
+                                "domain": ".sopro.io",
+                                "expiration": "29 minutes",
+                                "provider": {
+                                    "title": "Hotjar Ltd",
+                                    "sitelink": "https://www.hotjar.com/legal/policies/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_hjSessionUser_******",
+                                "purpose": "Hotjar cookie that is set when a user first lands on a page with the Hotjar script. It is used to persist the Hotjar User ID, unique to that site on the browser. This ensures that behavior in subsequent visits to the same site will be attributed to the same user ID.",
+                                "domain": ".sopro.io",
+                                "expiration": "a year",
+                                "provider": {
+                                    "title": "Hotjar Ltd",
+                                    "sitelink": "https://www.hotjar.com/legal/policies/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_obid",
+                                "purpose": "This cookie is set when a user lands on the site, containing a unique ID relating to the email that was clicked on.",
+                                "domain": "sopro.io",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_pk_id.***.*****",
+                                "purpose": "Matomo / Piwik cookie, used to store a few details about the user such as the unique visitor ID.",
+                                "domain": ".sopro.io",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_pk_ses.***.**",
+                                "purpose": "This cookie is used to record visitors' behavior on the website. It is used to collect statistics about website usage, such as the time of the last visit to the website. The cookie does not contain any personal data and is used solely for website analysis.",
+                                "domain": ".sopro.io",
+                                "expiration": "29 minutes",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "hubspotutk",
+                                "purpose": "This cookie name is associated with websites built on the HubSpot platform. This cookie is used to keep track of a visitor's identity. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.",
+                                "domain": ".sopro.io",
+                                "expiration": "64 years",
+                                "provider": "",
+                                "type": "Cookie"
+                            }
+                        ]
+                    },                    
+                    {
+                        title:'Advertising/Tracking',
+                        textContent:`These cookies are set by external advertising partners and are used for the profiling and tracking of data across multiple websites. If you accept these cookies, we may show you our advertisements on other websites based on your user profile and preferences. These cookies also save data about how many visitors have seen or clicked on our advertisements to better optimise our advertising campaigns.`,
+                        headers: ['Name', 'Purpose', 'Domain', 'Expiration time', 'Provider', 'Type'],
+                        rows: [
+                            {
+                                name: '_fbp',
+                                purpose: 'This cookie is used by Facebook for advertising purposes and conversion tracking.',
+                                domain: '.sopro.io',
+                                expiration: '3 months',
+                                "provider": {
+                                    title: "Meta Inc.",
+                                    sitelink: 'https://www.facebook.com/privacy/center/'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: '_gcl_au',
+                                purpose: "This cookie is set by Google Adsense for experiments with 'cross-website' advertising.",
+                                domain: '.sopro.io',
+                                expiration: '3 months',
+                                "provider": {
+                                    title: "Google LLC",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: '_MarketMapper',
+                                purpose: 'This cookie is set when a user submits a Market Mapper form, containing a unique ID relating to the form submitted. It is used for website customization.',
+                                domain: 'sopro.io',
+                                expiration: 'a year',
+                                "provider": {
+                                    title: "Prospectiv",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: '_obid_visit',
+                                purpose: 'This is used to identify a site session across multiple pages and is not linked to any personal data.',
+                                domain: 'sopro.io',
+                                expiration: '4 hours',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: '_uetsid',
+                                purpose: 'Contains the session ID for a unique session on the site, used by Microsoft Advertising.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                "provider": {
+                                    title: "Mircosoft",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Local storage'
+                            },
+                            {
+                                name: '_uetsid',
+                                purpose: 'This cookie is used by Bing to determine what ads should be shown that may be relevant to the end user perusing the site.',
+                                domain: '.sopro.io',
+                                expiration: 'a day',
+                                "provider": {
+                                    title: "Bing (Microsoft)",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: '_uetsid_exp',
+                                purpose: 'Contains the expiry-date for the local storage and cookie with the corresponding name.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                "provider": {
+                                    title: "Microsoft",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Local storage'
+                            },
+                            {
+                                name: '_uetvid',
+                                purpose: 'UET assigns this unique, anonymized visitor ID, representing a unique visitor. UET stores this data in a first-party cookie and local storage.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                "provider": {
+                                    title: "Microsoft",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Local storage'
+                            },
+                            {
+                                name: '_uetvid',
+                                purpose: 'This cookie is used by Bing to determine which ads are served that may be relevant to the end user browsing the site.',
+                                domain: '.sopro.io',
+                                expiration: 'a year',
+                                "provider": {
+                                    title: "Bing (Microsoft)",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: '_uetvid_exp',
+                                purpose: 'Contains the expiry-date for the cookie or local storage item with corresponding name.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                "provider": {
+                                    title: "Microsoft",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Local storage'
+                            },
+                            {
+                                name: 'bcookie',
+                                purpose: 'Cookie from LinkedIn used by share buttons and advertising tags.',
+                                domain: '.linkedin.com',
+                                expiration: 'a year',
+                                provider: 'LinkedIn',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'IDE',
+                                purpose: 'Cookie from Double Click (Google) which helps analyze and optimize advertising campaigns.',
+                                domain: '.doubleclick.net',
+                                expiration: 'a year',
+                                "provider": {
+                                    title: 'DoubleClick (Google)',
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'lastExternalReferrer',
+                                purpose: 'This item is used to determine the origin of your visit.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                provider: '',
+                                type: 'Local storage'
+                            },
+                            {
+                                name: 'lastExternalReferrerTime',
+                                purpose: 'This item is used for visitor evaluation.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                provider: '',
+                                type: 'Local storage'
+                            },
+                            {
+                                name: 'msToken',
+                                purpose: 'This cookie collects information on user behavior on multiple websites, used to optimize the relevance of advertisements.',
+                                domain: '.tiktok.com',
+                                expiration: '10 days',
+                                "provider": {
+                                    title: 'Tiktok',
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'muc_ads',
+                                purpose: 'This is a cookie set by twitter.com for optimizing ad relevance by collecting visitor navigation data.',
+                                domain: '.t.co',
+                                expiration: '2 years',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'MUID',
+                                purpose: 'Widely used by Microsoft as a unique user ID, it synchronizes across Microsoft domains for tracking.',
+                                domain: '.bing.com',
+                                expiration: 'a year',
+                                "provider": {
+                                    title: "Microsoft",
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'personalization_id',
+                                purpose: 'Carries information about user interactions with website and advertisements for tracking and targeting.',
+                                domain: '.twitter.com',
+                                expiration: '120 years',
+                                "provider": {
+                                    title: 'Twitter',
+                                    sitelink: 'https://policies.google.com/privacy'
+                                },
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'sp_landing',
+                                purpose: 'Used to implement Spotify audio content and record user interaction, serving statistics and marketing purposes.',
+                                domain: '.spotify.com',
+                                expiration: 'a day',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'sp_t',
+                                purpose: 'Used to implement Spotify audio content and record user interaction, serving statistics and marketing purposes.',
+                                domain: '.spotify.com',
+                                expiration: 'a year',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'ttwid',
+                                purpose: 'This cookie is used by TikTok for tracking the use of embedded services.',
+                                domain: '.tiktok.com',
+                                expiration: 'a year',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'VISITOR_PRIVACY_METADATA',
+                                purpose: 'Tracks and enriches user privacy settings on YouTube.',
+                                domain: '.youtube.com',
+                                expiration: '6 months',
+                                provider: 'YouTube (Google LLC)',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'bid',
+                                purpose: 'This cookie has not yet been given a description.',
+                                domain: '.consentag.eu',
+                                expiration: '5 months',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'cid_c7d053c8f1794c558d2450b1590a47cb',
+                                purpose: 'This cookie has not yet been given a description.',
+                                domain: '.ctnsnet.com',
+                                expiration: 'a year',
+                                provider: '',
+                                type: 'Cookie'
+                            },
+                            {
+                                name: 'TAoQCJWQ_bkBEL6awr8D,4402039883940',
+                                purpose: 'This cookie has not yet been given a description.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                provider: '',
+                                type: 'Local storage'
+                            },
+                            {
+                                name: 'TAoQCJWQ_bkBEL6awr8D,4402039883940_expiresAt',
+                                purpose: 'This cookie has not yet been given a description.',
+                                domain: 'sopro.io',
+                                expiration: 'Persistent',
+                                provider: '',
+                                type: 'Local storage'
+                            }
+                        ],
+                    },
+                    {
+                        "headers": ["Name", "Purpose", "Domain", "Expiration time", "Provider", "Type"],
+                        "rows": [
+                            {
+                                "name": "_fbp",
+                                "purpose": "This cookie is used by Facebook for advertising purposes and conversion tracking.",
+                                "domain": ".sopro.io",
+                                "expiration": "3 months",
+                                "provider": {
+                                    "title": "Meta Inc.",
+                                    "sitelink": "https://www.facebook.com/privacy/center/"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_gcl_au",
+                                "purpose": "This cookie is set by Google Adsense for experiments with 'cross-website' advertising.",
+                                "domain": ".sopro.io",
+                                "expiration": "3 months",
+                                "provider": {
+                                    "title": "Google LLC",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_MarketMapper",
+                                "purpose": "This cookie is set when a user submits a Market Mapper form, containing a unique ID relating to the form submitted. It is used for website customization.",
+                                "domain": "sopro.io",
+                                "expiration": "a year",
+                                "provider": {
+                                    "title": "Prospectiv",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_obid_visit",
+                                "purpose": "This is used to identify a site session across multiple pages and is not linked to any personal data.",
+                                "domain": "sopro.io",
+                                "expiration": "4 hours",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_uetsid",
+                                "purpose": "Contains the session ID for a unique session on the site, used by Microsoft Advertising.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": {
+                                    "title": "Microsoft",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "_uetsid",
+                                "purpose": "This cookie is used by Bing to determine what ads should be shown that may be relevant to the end user perusing the site.",
+                                "domain": ".sopro.io",
+                                "expiration": "a day",
+                                "provider": {
+                                    "title": "Bing (Microsoft)",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_uetsid_exp",
+                                "purpose": "Contains the expiry-date for the local storage and cookie with the corresponding name.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": {
+                                    "title": "Microsoft",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "_uetvid",
+                                "purpose": "UET assigns this unique, anonymized visitor ID, representing a unique visitor. UET stores this data in a first-party cookie and local storage.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": {
+                                    "title": "Microsoft",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "_uetvid",
+                                "purpose": "This cookie is used by Bing to determine which ads are served that may be relevant to the end user browsing the site.",
+                                "domain": ".sopro.io",
+                                "expiration": "a year",
+                                "provider": {
+                                    "title": "Bing (Microsoft)",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "_uetvid_exp",
+                                "purpose": "Contains the expiry-date for the cookie or local storage item with corresponding name.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": {
+                                    "title": "Microsoft",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "bcookie",
+                                "purpose": "Cookie from LinkedIn used by share buttons and advertising tags.",
+                                "domain": ".linkedin.com",
+                                "expiration": "a year",
+                                "provider": "LinkedIn",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "IDE",
+                                "purpose": "Cookie from Double Click (Google) which helps analyze and optimize advertising campaigns.",
+                                "domain": ".doubleclick.net",
+                                "expiration": "a year",
+                                "provider": {
+                                    "title": "DoubleClick (Google)",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "lastExternalReferrer",
+                                "purpose": "This item is used to determine the origin of your visit.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": "",
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "lastExternalReferrerTime",
+                                "purpose": "This item is used for visitor evaluation.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": "",
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "msToken",
+                                "purpose": "This cookie collects information on user behavior on multiple websites, used to optimize the relevance of advertisements.",
+                                "domain": ".tiktok.com",
+                                "expiration": "10 days",
+                                "provider": {
+                                    "title": "Tiktok",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "muc_ads",
+                                "purpose": "This is a cookie set by twitter.com for optimizing ad relevance by collecting visitor navigation data.",
+                                "domain": ".t.co",
+                                "expiration": "2 years",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "MUID",
+                                "purpose": "Widely used by Microsoft as a unique user ID, it synchronizes across Microsoft domains for tracking.",
+                                "domain": ".bing.com",
+                                "expiration": "a year",
+                                "provider": {
+                                    "title": "Microsoft",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "personalization_id",
+                                "purpose": "Carries information about user interactions with website and advertisements for tracking and targeting.",
+                                "domain": ".twitter.com",
+                                "expiration": "120 years",
+                                "provider": {
+                                    "title": "Twitter",
+                                    "sitelink": "https://policies.google.com/privacy"
+                                },
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "sp_landing",
+                                "purpose": "Used to implement Spotify audio content and record user interaction, serving statistics and marketing purposes.",
+                                "domain": ".spotify.com",
+                                "expiration": "a day",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "sp_t",
+                                "purpose": "Used to implement Spotify audio content and record user interaction, serving statistics and marketing purposes.",
+                                "domain": ".spotify.com",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "ttwid",
+                                "purpose": "This cookie is used by TikTok for tracking the use of embedded services.",
+                                "domain": ".tiktok.com",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "VISITOR_PRIVACY_METADATA",
+                                "purpose": "Tracks and enriches user privacy settings on YouTube.",
+                                "domain": ".youtube.com",
+                                "expiration": "6 months",
+                                "provider": "YouTube (Google LLC)",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "bid",
+                                "purpose": "This cookie has not yet been given a description.",
+                                "domain": ".consentag.eu",
+                                "expiration": "5 months",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "cid_c7d053c8f1794c558d2450b1590a47cb",
+                                "purpose": "This cookie has not yet been given a description.",
+                                "domain": ".ctnsnet.com",
+                                "expiration": "a year",
+                                "provider": "",
+                                "type": "Cookie"
+                            },
+                            {
+                                "name": "TAoQCJWQ_bkBEL6awr8D,4402039883940",
+                                "purpose": "This cookie has not yet been given a description.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": "",
+                                "type": "Local storage"
+                            },
+                            {
+                                "name": "TAoQCJWQ_bkBEL6awr8D,4402039883940_expiresAt",
+                                "purpose": "This cookie has not yet been given a description.",
+                                "domain": "sopro.io",
+                                "expiration": "Persistent",
+                                "provider": "",
+                                "type": "Local storage"
+                            }
+                        ]
+                    },
+                ],
+            },
+            {
+                id: 'how-to-manage-cookies',
+                title: 'Managing cookies',
+                content: [
+                    {
+                        id: 5.1,
+                        textContent: `Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version. You can however obtain up-to-date information about blocking and deleting cookies on most mainstream browsers via these links:`,
+                        link_content: [
+                            'https://support.google.com/chrome/answer/95647?hl=en (Chrome);',
+                            'https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences (Firefox);',
+                            'http://www.opera.com/help/tutorials/security/cookies/ (Opera);',
+                            'https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies (Internet Explorer);',
+                            'https://support.apple.com/kb/PH21411 (Safari)',
+                            'https://support.apple.com/kb/PH21411 (Safari); and',
+                        ]
+                    },
+                    {
+                        id: 5.2,
+                        textContent: `Blocking all cookies will have a negative impact upon the usability of many websites.`
+                    },
+                    {
+                        id: 5.3,
+                        textContent: `If you block cookies, you will not be able to use all the features on our website.`
+                    }
+                ]
+            },
+        ],
+    }
+}
 export {
     HeroSectionTextContent,
     whyProspectiveTextContent,
@@ -377,5 +1354,6 @@ export {
     lifeAtProspectivTextContent,
     aboutUsPageTextContent,
     carrerPageTextContent,
-    pricingPageTextContent
+    pricingPageTextContent,
+    legalPageContent
 }
