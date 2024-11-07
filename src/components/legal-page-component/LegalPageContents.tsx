@@ -267,26 +267,7 @@ const LegalPageContents = () => {
                 </TabsContent>
 
                 <TabsContent value="privacy">
-                    <div className='grid grid-cols-4 gap-6 py-10'>
-                        <Card className="hidden lg:block p-5 sticky top-4 h-fit col-span-1 border border-borderColor">
-                            <h3 className='text-lg font-semibold'>Table of contents</h3>
-                            <nav className="space-y-2">
-                                {
-                                    legalPageContent.privacy_policy.section.map((section) =>
-                                        <Link key={section.id} href={`#${section.id}`}
-                                            className={`block text-md py-1 px-2 ${activeSection === section.id ? 'text-primary font-bold transition-colors border-l-2 border-secondary bg-secondary/5' : 'hover:text-primary'
-                                                }`}
-                                        >
-                                            {section.title}
-                                        </Link>)
-                                }
-                            </nav>
-                        </Card>
-
-                        <div className='col-span-4 lg:col-span-3 space-y-5'>
-                            <PrivacyComponent />
-                        </div>
-                    </div>
+                    <PrivacyComponent />
                 </TabsContent>
             </Tabs>
         </div>
