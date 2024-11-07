@@ -10,7 +10,7 @@ const PrivacyComponent = () => {
 
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [activeTab, setActiveTab] = useState('cookies');
+    // const [activeTab, setActiveTab] = useState('cookies');
     const [activeSection, setActiveSection] = useState('');
 
     useEffect(() => {
@@ -31,10 +31,10 @@ const PrivacyComponent = () => {
         return () => observer.disconnect();
     }, []);
 
-    useEffect(() => {
-        const tab = searchParams.get('tab') || 'cookies'; // Default to 'cookies' tab
-        setActiveTab(tab);
-    }, [searchParams]);
+    // useEffect(() => {
+    //     const tab = searchParams.get('tab') || 'cookies'; // Default to 'cookies' tab
+    //     setActiveTab(tab);
+    // }, [searchParams]);
 
     return (
 
@@ -55,7 +55,7 @@ const PrivacyComponent = () => {
             </Card>
 
             <div className='col-span-4 lg:col-span-3 space-y-5 p-5'>
-                <section id={legalPageContent.privacy_policy.section[0].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[0].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">1. {legalPageContent.privacy_policy.section[0].title}</h2>
                     <p className='text-lg text-textColorTwo'>{legalPageContent.privacy_policy.section[0].textContent}</p>
                     <div className="border border-borderColor rounded-xl md:ml-5 w-fit p-2 md:p-10">
@@ -74,7 +74,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[1].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[1].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">2. {legalPageContent.privacy_policy.section[1].title}</h2>
                     <div className="space-y-4">
                         {legalPageContent.privacy_policy.section[1].contents?.map((content) =>
@@ -85,7 +85,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[2].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[2].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">3. {legalPageContent.privacy_policy.section[2].title}</h2>
                     <p className='text-lg text-textColorTwo'>{legalPageContent.privacy_policy.section[2].textContent}</p>
                     <div className="space-y-4">
@@ -96,10 +96,10 @@ const PrivacyComponent = () => {
                             </p>)}
                     </div>
 
-                    <p className='text-lg text-textColorTwo my-4'>{legalPageContent.privacy_policy.section[2].endTextCotent}</p>
+                    <p className='my-4'>{legalPageContent.privacy_policy.section[2].endTextCotent}</p>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[3].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[3].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">4. {legalPageContent.privacy_policy.section[3].title}</h2>
                     <p className='text-lg text-textColorTwo'>
                         <span className="text-secondary">{legalPageContent.privacy_policy.section[3].content?._id}  </span>
@@ -107,7 +107,7 @@ const PrivacyComponent = () => {
                     </p>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[4].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[4].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">5. {legalPageContent.privacy_policy.section[4].title}</h2>
                     <p className='text-lg text-textColorTwo'>
                         <span className="text-secondary">{legalPageContent.privacy_policy.section[4].content?._id}  </span>
@@ -115,7 +115,7 @@ const PrivacyComponent = () => {
                     </p>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[5].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[5].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">6. {legalPageContent.privacy_policy.section[5].title}</h2>
                     <div className="space-y-4">
                         {legalPageContent.privacy_policy.section[5].contents?.map((content) =>
@@ -126,7 +126,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[6].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[6].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">7. {legalPageContent.privacy_policy.section[6].title}</h2>
                     <div className="space-y-4">
                         {legalPageContent.privacy_policy.section[6].contents?.map((content) =>
@@ -137,7 +137,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[7].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[7].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">8. {legalPageContent.privacy_policy.section[7].title}</h2>
                     <div className="space-y-4">
                         {legalPageContent.privacy_policy.section[7].contents?.map((content) =>
@@ -148,7 +148,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[8].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[8].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">9. {legalPageContent.privacy_policy.section[8].title}</h2>
                     <p className='text-lg text-textColorTwo'>
                         <span className="text-secondary">{legalPageContent.privacy_policy.section[8].content?._id}  </span>
@@ -156,7 +156,7 @@ const PrivacyComponent = () => {
                     </p>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[9].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[9].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">10. {legalPageContent.privacy_policy.section[9].title}</h2>
                     <p className='text-lg text-textColorTwo'>
                         <span className="text-secondary">{legalPageContent.privacy_policy.section[9].content?._id}  </span>
@@ -164,7 +164,7 @@ const PrivacyComponent = () => {
                     </p>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[10].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[10].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">11. {legalPageContent.privacy_policy.section[10].title}</h2>
                     <div className="space-y-4">
 
@@ -190,7 +190,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
 
-                <section id={legalPageContent.privacy_policy.section[11].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[11].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">12. {legalPageContent.privacy_policy.section[11].title}</h2>
                     <div className="space-y-4">
                         {legalPageContent.privacy_policy.section[11].contents?.map((content) =>
@@ -227,7 +227,7 @@ const PrivacyComponent = () => {
                     </div>
                 </section>
                 
-                <section id={legalPageContent.privacy_policy.section[12].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <section id={legalPageContent.privacy_policy.section[12].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">13. {legalPageContent.privacy_policy.section[12].title}</h2>
                     <div className="space-y-4">
                         {legalPageContent.privacy_policy.section[12].contents?.map((content) =>

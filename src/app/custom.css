@@ -120,3 +120,9 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* legal page */
+
+.custom-marker-legal li::marker {
+  color: #ff4895; /* Replace with the desired color or Tailwind color */
+}

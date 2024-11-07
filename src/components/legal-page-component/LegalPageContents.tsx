@@ -9,6 +9,9 @@ import { legalPageContent } from '@/lib/TextContent';
 import Link from 'next/link';
 import { Card } from '../ui/card';
 import { useRouter, useSearchParams } from 'next/navigation';
+import TermsComponent from './terms-component/TermsComponent';
+
+
 
 const LegalPageContents = () => {
 
@@ -82,17 +85,17 @@ const LegalPageContents = () => {
                                 )}
                             </section>
 
-                            <section id={legalPageContent.cookies.section[1].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                            <section id={legalPageContent.cookies.section[1].id} className=' space-y-5 py-5'>
                                 <h2 className="text-3xl text-secondary">2. {legalPageContent.cookies.section[1].title}</h2>
                                 <p className='text-lg text-textColorTwo'>{legalPageContent.cookies.section[1].textContent}</p>
                             </section>
 
-                            <section id={legalPageContent.cookies.section[2].id} className=' space-y-2 py-8'>
+                            <section id={legalPageContent.cookies.section[2].id} className=' space-y-5 py-5'>
                                 <h2 className="text-3xl text-secondary">3. {legalPageContent.cookies.section[2].title}</h2>
                                 <p className='text-lg text-textColorTwo'>{legalPageContent.cookies.section[2].textContent}</p>
                             </section>
 
-                            <section id={legalPageContent.cookies.section[3].id} className='space-y-4 py-8'>
+                            <section id={legalPageContent.cookies.section[3].id} className='space-y-5 py-5'>
                                 <h2 className='text-3xl text-secondary'>4. {legalPageContent.cookies.section[3].title}</h2>
                                 <p className='text-lg text-textColorTwo'><span className='font-medium'>Update:</span> {legalPageContent.cookies.section[3].update}</p>
                                 <div className='overflow-x-auto max-h-72 space-y-8'>
@@ -243,7 +246,7 @@ const LegalPageContents = () => {
                                 </div>
                             </section>
 
-                            <section id={legalPageContent.cookies.section[4].id} className='space-y-7 py-8'>
+                            <section id={legalPageContent.cookies.section[4].id} className=' space-y-5 py-5'>
                                 <h2 className="text-3xl text-secondary">5. {legalPageContent.cookies.section[4].title}</h2>
                                 <div>
                                     <div className='my-3 space-y-3'>
@@ -268,6 +271,10 @@ const LegalPageContents = () => {
 
                 <TabsContent value="privacy">
                     <PrivacyComponent />
+                </TabsContent>
+
+                <TabsContent value="terms">
+                    <TermsComponent/>
                 </TabsContent>
             </Tabs>
         </div>
