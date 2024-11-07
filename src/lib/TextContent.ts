@@ -1,3 +1,5 @@
+import { title } from "process";
+import { text } from "stream/consumers";
 
 const HeroSectionTextContent = {
     heading: 'Drive More Sales Meetings with Your Ideal Customers.',
@@ -808,10 +810,10 @@ const legalPageContent = {
                                 "type": "Cookie"
                             }
                         ]
-                    },                    
+                    },
                     {
-                        title:'Advertising/Tracking',
-                        textContent:`These cookies are set by external advertising partners and are used for the profiling and tracking of data across multiple websites. If you accept these cookies, we may show you our advertisements on other websites based on your user profile and preferences. These cookies also save data about how many visitors have seen or clicked on our advertisements to better optimise our advertising campaigns.`,
+                        title: 'Advertising/Tracking',
+                        textContent: `These cookies are set by external advertising partners and are used for the profiling and tracking of data across multiple websites. If you accept these cookies, we may show you our advertisements on other websites based on your user profile and preferences. These cookies also save data about how many visitors have seen or clicked on our advertisements to better optimise our advertising campaigns.`,
                         headers: ['Name', 'Purpose', 'Domain', 'Expiration time', 'Provider', 'Type'],
                         rows: [
                             {
@@ -1344,6 +1346,32 @@ const legalPageContent = {
                 ]
             },
         ],
+    },
+    privacy_policy: {
+        section: [
+            {
+                title: 'Who are we?',
+                textContent: `We are Prospect Global Ltd – trading as Sopro.io. We are a tech company providing digital marketing services to our global client base. Our processing is based primarily on the use of publicly available data to identify sales prospects for our clients. As such, your privacy is important to us, we take our responsibilities seriously and will always respond quickly and courteously to any request. You can contact us using the details below:`,
+                contactContent: {
+                    email: 'prospectiv@example.com',
+                    telephone: '+44 20 7004 7004',
+                    address: 'Sopro, 27-29 North Street, Brighton, BN1 1EB',
+                    telephoneTwo: '+44 20 7004 7004'
+                }
+            },
+            {
+                title:'Our GDPR Policy',
+                content: [
+                    {
+                        id: 1,
+                        textContent: `We are committed to safeguarding the privacy and accuracy of the personal data of our website visitors, service users and email recipients.`,
+                    },{
+                        id: 2,
+                        textContent:`This policy applies where we are acting as a Controller with respect to the personal data of our website visitors, service users, email recipients and personal data collected from public sources; in other words, where we determine the purposes and means of the processing of that personal data.`
+                    }
+                ]
+            }
+        ]
     }
 }
 export {

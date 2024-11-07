@@ -1,11 +1,16 @@
-import LegalPageComponent from "@/components/legal-page-component/LegalPageComponent";
+
+import LegalPageContents from "@/components/legal-page-component/LegalPageContents";
 import { Suspense } from "react";
 
 const LegalPage = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <LegalPageComponent />
-    </Suspense>
+    <div className="max-w-7xl mx-auto">
+      <Suspense fallback={<div>Loading...</div>}>
+        <LegalPageContents />
+      </Suspense>
+    </div>
+    // <LegalPageComponent />
+
   );
 };
 
