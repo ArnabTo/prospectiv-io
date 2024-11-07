@@ -2019,28 +2019,28 @@ const legalPageContent = {
             {
                 title: 'GDPR FAQ',
                 id: 'gdpr-faq',
-                faqs:[
+                faqs: [
                     {
-                        question:'What is GDPR?',
-                        contents:[
-                                `The General Data Protection Regulation (GDPR) is a legal framework that sets guidelines for the collection, storage, and processing of personal information from individuals who live in the European Union (EU).`,
-                                `The Information Commissioner’s Office is the UK regulator dealing with the Data Protection Act 2018 and the General Data Protection Regulation and the Privacy and Electronic Communications (EC Directive) Regulations 2003 across the UK.`,
-                                `The ICO are like the data protection police and we need to make sure we always keep on their good side.`,
-                                `It is important to take GDPR compliance very seriously, since the penalties for non-compliance are punitive and designed to be painful. You definitely don’t want to be on the receiving end of an ICO investigation or enforcement notice.`,
-                                `We only offer 100% compliant GDPR and PECR Prospecting.`
+                        question: 'What is GDPR?',
+                        contents: [
+                            `The General Data Protection Regulation (GDPR) is a legal framework that sets guidelines for the collection, storage, and processing of personal information from individuals who live in the European Union (EU).`,
+                            `The Information Commissioner’s Office is the UK regulator dealing with the Data Protection Act 2018 and the General Data Protection Regulation and the Privacy and Electronic Communications (EC Directive) Regulations 2003 across the UK.`,
+                            `The ICO are like the data protection police and we need to make sure we always keep on their good side.`,
+                            `It is important to take GDPR compliance very seriously, since the penalties for non-compliance are punitive and designed to be painful. You definitely don’t want to be on the receiving end of an ICO investigation or enforcement notice.`,
+                            `We only offer 100% compliant GDPR and PECR Prospecting.`
                         ]
                     },
                     {
-                        question:'How does GDPR affect Marketing?',
-                        contents:[
+                        question: 'How does GDPR affect Marketing?',
+                        contents: [
                             `Most marketing formats have evolved to rely heavily on the use of customer data. GDPR is a rule set governing the circumstances and manner in which data can be processed legally. It also introduces some scary consequences for falling foul of the law. GDPR also sets out the framework for which types of data are considered Private and should be treated as such. The GDPR-savvy phrase used to describe private data is Personally Identifiable Information (PII).`,
                             `Most businesses are surprised by the amount of PII stored within their systems, often without any specific intent or purpose.`
                         ]
                     },
                     {
-                        question:'How is our service GDPR compliant?',
-                        textContent:`The aim of GDPR is to provide data protection guidelines for companies that collect, store, or process personal data, this is of course almost every company. From an email outreach perspective, GDPR and PECR guidelines oblige businesses to ensure marketing emails are directed to the individuals who are likely to find the content useful and relevant in their working capacity within the target business. That is ultimately the test for designating each communication as B2B in nature, and as such qualifying for the PECR B2B exemption. On that basis we ensure that:`,
-                        ulTextContents:[
+                        question: 'How is our service GDPR compliant?',
+                        textContent: `The aim of GDPR is to provide data protection guidelines for companies that collect, store, or process personal data, this is of course almost every company. From an email outreach perspective, GDPR and PECR guidelines oblige businesses to ensure marketing emails are directed to the individuals who are likely to find the content useful and relevant in their working capacity within the target business. That is ultimately the test for designating each communication as B2B in nature, and as such qualifying for the PECR B2B exemption. On that basis we ensure that:`,
+                        ulTextContents: [
                             `We take all reasonable precautions to identify only the types of companies that meet the exact requirements of your campaign.`,
                             `The topic of the email is clearly identified.`,
                             `We carefully craft every email to ensure the topic is relevant to the business prospect.`,
@@ -2049,40 +2049,40 @@ const legalPageContent = {
                         ]
                     },
                     {
-                        question:'Why are some businesses concerned that social prospecting is not GDPR compliant?',
-                        textContentOne:[
+                        question: 'Why are some businesses concerned that social prospecting is not GDPR compliant?',
+                        textContentOne: [
                             `It’s true to say that GDPR is complicated and that when you add in PECR requirements the situation can be confusing. However, we understand that both GDPR and PECR apply and we take our obligations very seriously.`,
                             `Our innovative prospecting approach is inherently GDPR and PECR compliant. We only target business customers with carefully crafted communication and ensure we meet PECR consent and opt-out requirements.`,
                             `We acknowledge our GDPR responsibility and ensure we meet our obligations throughout the process and help our clients understand and meet their obligations.`
                         ],
-                        textContentTwo:'A few GDPR related Sopro facts:',
-                        textContentThree:[
+                        textContentTwo: 'A few GDPR related Sopro facts:',
+                        textContentThree: [
                             `Post GDPR, we’ve noticed that some prospects mistakenly believe that email marketing became largely illegal after May 25th, 2018.`,
                             `It didn’t. Why are we so sure?`,
                             `Because our legal and tech teams worked really hard to ensure that we meet the regulations’ various guidelines on data protection, relevance, targeting, etc. It wasn’t easy. In fact, it took months of effort before May 2018 for us to say with total confidence that every Sopro campaign is (and always will) be 100% GDPR compliant.`
                         ]
                     },
                     {
-                        question:'What have we changed to become GDPR compliant?',
-                        textContent:`There are hundreds of technical and operational changes that we have had to make to ensure compliance. We’ve read the regulations, received legal advice and training, nominated a Data Protection Officer who has led our GDPR mission, adapted our Terms of Service and Privacy Policy, improved our database functionality and worked with our suppliers and clients in order to ensure every aspect of our operation is 100% GDPR compliant.`
+                        question: 'What have we changed to become GDPR compliant?',
+                        textContent: `There are hundreds of technical and operational changes that we have had to make to ensure compliance. We’ve read the regulations, received legal advice and training, nominated a Data Protection Officer who has led our GDPR mission, adapted our Terms of Service and Privacy Policy, improved our database functionality and worked with our suppliers and clients in order to ensure every aspect of our operation is 100% GDPR compliant.`
                     },
                     {
-                        question:'Does PECR still apply?',
-                        contents:[
+                        question: 'Does PECR still apply?',
+                        contents: [
                             `Yes. GDPR does not replace PECR – although it has amended the definition of consent. You need to comply with both GDPR and PECR for your business-to-business marketing.`,
                             `The EU is in the process of replacing the current e-privacy law with a new ePrivacy Regulation (ePR). However, the new ePR is yet to be agreed. The existing PECR rules continue to apply (with the new definition of consent) until the new ePR is finalised.`
                         ]
                     },
                     {
-                        question:'Do we need to appoint a Data Protection Officer?',
-                        contents:[
+                        question: 'Do we need to appoint a Data Protection Officer?',
+                        contents: [
                             `It is recommended that businesses appoint a Data Protection Officer to oversee adherence to the rules for certain types of processing however it is not a legal requirement.`,
                             `At a minimum, you should have nominated an individual able to act as your compliance officer on an immediate basis when needed. That person can be employed directly (i.e. perhaps a CTO or managing director) or employed through a compliance support service.`
                         ]
                     },
                     {
-                        question:'Am I the data controller or the data processor?',
-                        contents:[
+                        question: 'Am I the data controller or the data processor?',
+                        contents: [
                             `If you are a business conducting in-house marketing activity to help sell a product or service, then you are the data controller with respect to the data associated with that campaign. (Article 24)`,
                             `If you are a provider (business entity or freelance) of marketing services, employed to help a business sell a product or service, then the client is the data controller and you are more than likely employed as the processor. (Article 28)`,
                             `In this case, due to our ability to work to your exact requirements, target exactly the type of customers you are looking for with emails that look exactly like you sent them, we have determined that we are acting as Joint Controllers with you, as defined in GDPR.`,
@@ -2092,7 +2092,7 @@ const legalPageContent = {
                     },
                     {
                         question: 'Is it still legal to conduct B2B marketing activity?',
-                        contents:[
+                        contents: [
                             `With respect to data protection laws, B2B marketing campaigns are perfectly legal when conducted in a compliant manner and we recognise that both GDPR and PECR apply.`,
                             `GDPR defines just six lawful basis on which you can process personal data. Our primary lawful basis is ‘legitimate interest’. We have completed a full-blown Data Protection Impact Assessment to ensure our approach meets GDPR requirements in full.`,
                             `To ensure that your marketing is conducted in accordance with all relevant regulatory frameworks we recommend you conduct your own assessments and of course complete your own GDPR preparations.`,
@@ -2100,23 +2100,106 @@ const legalPageContent = {
                         ]
                     },
                     {
-                        question:'Does GDPR mean we need consent for marketing?',
-                        contents:[
+                        question: 'Does GDPR mean we need consent for marketing?',
+                        contents: [
                             `Not necessarily. GDPR is concerned with how we collect, store and process personal data.`,
                             `Under GDPR, Consent is one lawful basis for processing personal data, but there are alternatives. In particular, you may be able to rely on ‘legitimate interests’ to justify collecting, storing, and processing personal data.`,
                             `When it comes to using data for marketing purposes and questions of consent, the relevant framework is actually PECR.`,
                             `Regulations covering B2B marketing communications are generally speaking – less strict under PECR and consent is not required in B2B scenarios. You need to be careful about who you target and the type of messages you send but that’s where we come in, our approach is 100% GDPR AND PECR compliant.`,
                             `For more info on the relevant regulations, here is a link to the UK ICO’s Guide to PECR, detailing when you need consent for electronic marketing among other topics:`
                         ],
-                        textlink:'https://ico.org.uk/for-organisations/guide-to-pecr/electronic-and-telephone-marketing/'
+                        textlink: 'https://ico.org.uk/for-organisations/guide-to-pecr/electronic-and-telephone-marketing/'
                     },
                     {
-                        question:'What data am I allowed to store?',
-                        contents:[
+                        question: 'What data am I allowed to store?',
+                        contents: [
                             `GDPR heavily regulates the storage and processing of Personally Identifiable Information (PII).`,
                             `You should map your business systems to determine the data fields you store and categorise these in terms of their GDPR status.`,
                             `Generally speaking, company information is not considered PII and can be stored and processed freely, as needed. This means you do not need to obtain consent to store a database of target companies.`,
                             `PII may include fields such as prospect name, email, phone number, job titles and social profile URLs.`
+                        ]
+                    },
+                    {
+                        question: 'On what basis can I legally store Personally Identifiable Information (PII)?',
+                        contents: [
+                            `GDPR sets out a number of permissible circumstances under which PII can be processed, the most appropriate category in this case is Legitimate Interest although other categories may apply.`,
+                            `This link explains the Legitimate Interests basis for processing PII:`,
+                            `https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/legitimate-interests/`,
+                            `To ensure marketing activity falls into this category, prior to commencing, you should carry out a full Legitimate Interests Assessment (LIA) for any marketing campaign you intend to run.`
+                        ]
+                    }, 
+                    {
+                        question: 'What if my marketing activity fails the LIA?',
+                        contents: [
+                            `If you determine that your planned B2B prospecting activity does not meet the criteria for Legitimate Interests within the scope of GDPR you may not be able to conduct the activity within any regions subject to GDPR.`,
+                            `However, this is very unlikely, and you should definitely talk to us before you abandon all hope.`
+                        ]
+                    },
+                    {
+                        question: 'What policies or processes do I need in place?',
+                        contents:[
+                            `We strongly advise that you complete your GDPR preparations regardless of whether you engage Sopro or not. Failure to complete GDPR can lead to punitive fines and robust enforcement action by the ICO.`,
+                            `We have produced a template Privacy Policy and Legitimate Interest Assessment to help get you started and to allow you to start your Sopro adventure.`,
+                            `Your key document is your Privacy Policy.`,
+                            `Any marketing messages should contain a link to a privacy policy explaining exactly what the user’s rights, as well as the type of data that is held about them, by who, and how the data was collected. You need to include us in your Privacy Policy just to keep us both covered.`,
+                            `(If needed Sopro can provide a template Privacy Policy or review your existing one to ensure it meets the required standard.)`,
+                            `The rest of the documentation is just the standard GDPR set. Probably most importantly you need to know how you will manage any sort of request from a data subject. We can also help with but for example:`,
+                            `Managing opting out and exclusion lists`,
+                            `All recipients must be able to opt out easily to prevent further email communication being received. This is typically handled with an “unsubscribe” link.`,
+                            `Managing Subject Access Requests (SARs). All individuals have the right to request a copy of all data you hold on them.`,
+                            `When you receive a SAR you must have an efficient process to supply all personally identifiable data that you hold in connection with a data subject if necessary.`,
+                            `Managing Right to be Forgotten Requests`,
+                            `All individuals have the right to have their data removed (to be ‘forgotten’). You must have a reliable, repeatable process to remove all personally identifiable data that you hold in connection with a data subject.`
+
+                        ]
+                    },
+                    {
+                        question:'Can I send unsolicited emails to prospects legally?',
+                        contents:[
+                            `Whilst GDPR controls the collection, storage and processing of personal data in the UK, sending messages is regulated under the Privacy and Electronic Communications Regulations (PECR). This is very clear as to the requirements on business to business communication:`,
+                            `“You can email or text any corporate body (a company, Scottish partnership, limited liability partnership or government body). However, it is good practice – and good business sense – to keep a ‘do not email or text’ list of any businesses that object or opt out and screen any new marketing lists against that.”`,
+                            `This is where the Sopro approach really works – we only target business customers that are likely to be interested in your products and services`
+                        ]
+                    },
+                    {
+                        question:'What is the ICO / Direct Marketing checklist?',
+                        textContent:'The ICOs direct marketing checklist is a great set of guidelines,here it is:',
+                        textLink:'https://ico.org.uk/for-organisations/guide-to-pecr/electronic-and-telephone-marketing/electronic-mail-marketing/'
+                    },
+                    {
+                        question:'Do I need to conduct additional employee training?',
+                        textContent:`You should ensure all employees undergo GDPR, PECR and general compliance training, covering the GDPR rule set in detail and the relevance and impact of those rules on your business. This training should set out the steps you take to ensure best practice is observed at all times and make clear the consequences associated with failure to meet the strict standards.`
+                    },
+                    {
+                        title:'Data Storage',
+                        textContent:`We take data security VERY seriously. We have completed a Data Protection Impact Assessment and ensure that all appropriate security measures to protect our data and your data at all times.`,
+                    },
+                    {
+                        title:'Non-EU/rest of world regulations',
+                        contents:[
+                            `Where marketing activity is conducted to target non-EU nationals these campaigns are generally not subject to the same data privacy laws and GDPR does not apply.`,
+                            `Just be careful and remember that GDPR applies to EU nationals that now live outside the EU. This is quite a tricky aspect so please talk to us if you are unsure.`,
+                            `Naturally, we cannot be abreast of the constantly evolving regulatory frameworks in all countries at all times, as such it is important that you have knowledge of your local regulatory climate and ensure your business operates within the relevant regulatory frameworks and manage your campaigns accordingly.`
+                        ]
+                    },
+                    {
+                        title:'Useful Links',
+                        contents:[
+                            `We have collated the most useful links available to UK businesses researching the GDPR framework, key areas, timelines, scope and likely impact on B2B marketing.`,
+                            `Please note that GDPR rules are implemented at an EU Government (multinational) level. Each state is separately responsible for developing its own appropriate rule set ensuring, as a minimum, compliance with the EUs GDPR framework.`,
+                            `The UK Government has appointed the Information Commissioner’s Office (ICO) as the official body charged with ensuring national compliance with the GDPR. In light of this the ICO has released several handy guides.`,
+                            `Here are the most useful links from the key official bodies, including the UKs ICO, the UK Government, the European Legislation archives and the UKs Direct Marketing Association (DMA).`,
+                        ],
+                        contentBoxTow:[
+                            `GDPR final text (English)`,
+                            `ICO Guide to GDPR compliance – 12 Steps to take now (PDF)`,
+                            `GDPR Checklist 1 (UK ICO) – Data Controllers`,
+                            `GDPR Checklist 2 (UK ICO) – Data Processors`,
+                            `PECR text (UK Gov)`,
+                            `PECR B2B Exemption – (ico.org)`,
+                            `UK Direct Marketing Association (DMA) – 7 key points for B2B Marketers`,
+                            `Direct Marketing Guidance – FULL VERSION (UK ICO)`,
+                            `Direct Marketing Checklist – TLDR VERSION OF ABOVE LINK (UK ICO)`
                         ]
                     }
                 ]

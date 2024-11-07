@@ -159,6 +159,79 @@ const GdprFaq = () => {
                                 )}
                             </AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="faq-12">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[11].question}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                <p className="text-base font-light">{legalPageContent.faq.sections[1].faqs[11].contents[0]}</p>
+                                <p className="text-base font-light">{legalPageContent.faq.sections[1].faqs[11].contents[1]}</p>
+                                <Link className='text-gradientColorOne' href={legalPageContent.faq.sections[1].faqs[11].contents[1]}>{legalPageContent.faq.sections[1].faqs[11].contents[2]}</Link>
+                                <p className="text-base font-light">{legalPageContent.faq.sections[1].faqs[11].contents[3]}</p>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-13">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[12].question}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                {legalPageContent.faq.sections[1].faqs[12].contents?.map((content, index) =>
+                                    <p className="text-base font-light" key={index}>{content}</p>
+                                )}
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-14">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[13].question}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                {legalPageContent.faq.sections[1].faqs[13].contents?.map((content, index) =>
+                                    <p className="text-base font-light" key={index}>{content}</p>
+                                )}
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-15">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[14].question}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                {legalPageContent.faq.sections[1].faqs[14].contents?.map((content, index) =>
+                                    <p className="text-base font-light" key={index}>{content}</p>
+                                )}
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-16">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[15].question}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                <p className="text-base font-light">{legalPageContent.faq.sections[1].faqs[15].textContent}</p>
+                                <Link className="text-gradientColorOne font-light text-base" href={legalPageContent.faq.sections[1].faqs[15].textLink}>{legalPageContent.faq.sections[1].faqs[15].textLink}</Link>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-17">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[16].question}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                <p className="text-base font-light">{legalPageContent.faq.sections[1].faqs[16].textContent}</p>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-18">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[17].title}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                <p className="text-base font-light">{legalPageContent.faq.sections[1].faqs[17].textContent}</p>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-19">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[18].title}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                {legalPageContent.faq.sections[1].faqs[18].contents?.map((content, index) =>
+                                    <p className="text-base font-light" key={index}>{content}</p>
+                                )}
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="faq-20">
+                            <AccordionTrigger className="text-xl font-semibold">{legalPageContent.faq.sections[1].faqs[19].title}</AccordionTrigger>
+                            <AccordionContent className="space-y-3">
+                                {legalPageContent.faq.sections[1].faqs[19].contents?.map((content, index) =>
+                                    <p className="text-base font-light" key={index}>{content}</p>
+                                )}
+                                <div>
+                                    {legalPageContent.faq.sections[1].faqs[19].contentBoxTow?.map((content, index) =>
+                                        <p className="text-base font-light" key={index}>{content}</p>
+                                    )}
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
                     </Accordion>
 
                 </section>
