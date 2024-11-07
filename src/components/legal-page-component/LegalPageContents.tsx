@@ -71,7 +71,7 @@ const LegalPageContents = () => {
 
                         {/* Content */}
                         <div className='col-span-4 lg:col-span-3 space-y-5'>
-                            <section className='space-y-7 py-8' id={legalPageContent.cookies.section[0].id} >
+                            <section className='space-y-5 py-8' id={legalPageContent.cookies.section[0].id} >
                                 <h2 className="text-3xl text-secondary">1. {legalPageContent.cookies.section[0].title}</h2>
                                 {legalPageContent.cookies.section[0].contents?.map((content: any) =>
                                     'id' in content ? (

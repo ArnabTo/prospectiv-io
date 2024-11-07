@@ -22,7 +22,7 @@ const PrivacyComponent = () => {
                     }
                 });
             },
-            { threshold: 0.5, rootMargin: '0px 0px -100px 0px' } // Adjust for desired sensitivity
+            { threshold: 0.5 }
         );
 
         const sections = document.querySelectorAll('section[id]');
@@ -38,7 +38,7 @@ const PrivacyComponent = () => {
 
     return (
 
-        <div className='grid grid-cols-4 gap-6 py-10'>
+        <div className='grid grid-cols-4 gap-6 py-10 pb-24'>
             <Card className="hidden lg:block p-5 sticky top-4 h-fit col-span-1 border border-borderColor">
                 <h3 className='text-lg font-semibold'>Table of contents</h3>
                 <nav className="space-y-2">
@@ -54,22 +54,22 @@ const PrivacyComponent = () => {
                 </nav>
             </Card>
 
-            <div className='col-span-4 lg:col-span-3 space-y-5'>
+            <div className='col-span-4 lg:col-span-3 space-y-5 p-5'>
                 <section id={legalPageContent.privacy_policy.section[0].id} className='text-lg text-textColorTwo space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">1. {legalPageContent.privacy_policy.section[0].title}</h2>
                     <p className='text-lg text-textColorTwo'>{legalPageContent.privacy_policy.section[0].textContent}</p>
-                    <div className="border border-borderColor rounded-xl ml-5 w-fit p-10">
+                    <div className="border border-borderColor rounded-xl md:ml-5 w-fit p-2 md:p-10">
                         <span>
                             <p>By email to our Data Protection Officer:
                                 <Link className="text-gradientColorOne" href='mailto:dpo@sopro.io'> {legalPageContent.privacy_policy.section[0].contactContent?.email}</Link>
                             </p>
-                            <p>By telephone on: {legalPageContent.privacy_policy.section[0].contactContent?.telephone}</p>
+                            <p>By telephone on: <Link className="text-gradientColorOne" href={`tel:${legalPageContent.privacy_policy.section[0].contactContent?.telephone}`}>{legalPageContent.privacy_policy.section[0].contactContent?.telephone}</Link> </p>
                         </span>
                         <p>or</p>
                         <span>
                             <p>By post to: {legalPageContent.privacy_policy.section[0].contactContent?.address}
                             </p>
-                            <p>By telephone on: {legalPageContent.privacy_policy.section[0].contactContent?.telephoneTwo}</p>
+                            <p>By telephone on: <Link className="text-gradientColorOne" href={`tel:${legalPageContent.privacy_policy.section[0].contactContent?.telephoneTwo}`}>{legalPageContent.privacy_policy.section[0].contactContent?.telephoneTwo}</Link> </p>
                         </span>
                     </div>
                 </section>
@@ -175,7 +175,7 @@ const PrivacyComponent = () => {
 
                                 {
                                     content.subContents ?
-                                        <div className="border border-borderColor p-5 w-fit rounded-xl ml-5">
+                                        <div className="border border-borderColor p-2 md:p-5 w-fit rounded-xl md:ml-5">
                                             {content.subContents.map((subCont) =>
                                                 <p className="text-lg text-textColorTwo" key={subCont._id}>
                                                     <span className="text-secondary">{subCont._id}. </span>
@@ -198,9 +198,48 @@ const PrivacyComponent = () => {
                                 <p className="text-lg text-textColorTwo"><span className="text-secondary">{content?._id}.  </span>
                                     {content.textContent}
                                 </p>
+
+                                {
+                                    content.subContents ?
+                                        <div className="border border-borderColor p-2 md:p-5 w-fit rounded-xl md:ml-5">
+                                            <p>{content.subContents[0].textContent}</p>
+                                            <p>By email at: <Link className="text-gradientColorOne" href={`mailto:${content.subContents[1].textContent}`}>{content.subContents[1].textContent}</Link></p>
+                                            <p>By telephone: <Link className="text-gradientColorOne" href={`tel:${content.subContents[2].textContent}`}>{content.subContents[2].textContent}</Link></p>
+                                        </div>
+                                        :
+                                        <></>
+
+                                }
+                                {
+                                    content.address && content.website ?
+                                        <div className="border border-borderColor p-2 md:p-5 w-fit rounded-xl md:ml-5">
+                                            <p className=" break-words max-w-32  mb-5">{content.address}</p>
+                                            or
+                                            <p>
+                                                <Link className="text-gradientColorOne" href={content.website}>{content.website}</Link>
+                                            </p>
+                                        </div>
+                                        :
+                                        <></>
+                                }
                             </div>
                         )}
                     </div>
+                </section>
+                
+                <section id={legalPageContent.privacy_policy.section[12].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                    <h2 className="text-3xl text-secondary">13. {legalPageContent.privacy_policy.section[12].title}</h2>
+                    <div className="space-y-4">
+                        {legalPageContent.privacy_policy.section[12].contents?.map((content) =>
+                            <p className='text-lg text-textColorTwo' key={content._id}>
+                                <span className="text-secondary">{content._id}. </span>
+                                {content.textContent}
+                            </p>)}
+                    </div>
+                </section>
+
+                <section>
+                    <p className="text-lg text-textColorTwo">{legalPageContent.privacy_policy.update.textContent}</p>
                 </section>
             </div>
         </div>

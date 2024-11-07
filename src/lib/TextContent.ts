@@ -1657,8 +1657,8 @@ const legalPageContent = {
                                 textContent: `prospectiv@example.com`
                             },
                             {
-                                id: "c",
-                                _textContent: `+44 207 030 3340`
+                                _id: "c",
+                                textContent: `+44 207 030 3340`
                             }
                         ]
                     },
@@ -1680,15 +1680,15 @@ const legalPageContent = {
                 id: 'amendments-to-this-policy',
                 contents:[
                     {
-                        id: 13.1,
+                        _id: 13.1,
                         textContent: `We may update this policy from time to time by publishing a new version on our website.`
                     },
                     {
-                        id: 13.2,
+                        _id: 13.2,
                         textContent: `You should check this page occasionally to ensure you are happy with any changes to this policy.`
                     },
                     {
-                        id: 13.3,
+                        _id: 13.3,
                         textContent: `We may notify you of changes to this policy by email.`
                     }
                 ],
