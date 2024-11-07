@@ -2,25 +2,24 @@
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-    NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
 import { AlignJustify, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, MessageCircleWarning } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { useEffect, useRef, useState } from "react";
-import { Separator } from "../ui/separator";
+import { useCallback, useEffect, useRef, useState } from "react";
+import axios from "axios";
+import { Blog } from "@/types/types";
+import Image from "next/image";
 
 const Navbar = () => {
 
-
+    const [blog, setBlog] = useState<Blog[]>([])
     const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
     const dropdownRef = useRef<HTMLLIElement | null>(null);
 
@@ -44,6 +43,15 @@ const Navbar = () => {
         };
     }, []);
 
+    // fetch latest blog
+    const fetchBlog = useCallback(async () => {
+        const response = await axios.get('/api/blogs')
+        setBlog(response.data.slice(0, 1));
+    }, [])
+
+    useEffect(() => {
+        fetchBlog();
+    }, [fetchBlog])
     const toggleDropdown = (index: number) => {
         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
     };
@@ -60,7 +68,7 @@ const Navbar = () => {
                 transition={{ duration: 1, delay: 3.5 }}
                 className="flex justify-between items-center px-5 xl:hidden">
                 <div>
-                    <Link href="#" className="text-xl font-extrabold">
+                    <Link href="/" className="text-xl font-extrabold">
                         Prospectiv
                     </Link>
                 </div>
@@ -77,7 +85,7 @@ const Navbar = () => {
                             <div className="space-y-10">
                                 <ul className="flex flex-col justify-start items-start gap-5">
                                     <li>
-                                        <Link href="#" className="text-lg font-bold text-secondary transition-all duration-500">
+                                        <Link href="/" className="text-lg font-bold text-secondary transition-all duration-500">
                                             Home
                                         </Link>
                                     </li>
@@ -113,12 +121,12 @@ const Navbar = () => {
                                     </motion.ul>
                                 </li> */}
                                     <li>
-                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                        <Link href="/pricing" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                             Pricing
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                        <Link href="/result/success-story" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                             Result
                                         </Link>
                                     </li>
@@ -155,7 +163,7 @@ const Navbar = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="" className="block py-2">
+                                                <Link href="/company/careers" className="block py-2">
                                                     <div className="flex justify-start items-start gap-2 pl-5">
                                                         <h1 className="text-md font-bold text-white">Careers</h1>
                                                     </div>
@@ -232,7 +240,7 @@ const Navbar = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <Link href="#" className="text-3xl font-extrabold">
+                    <Link href="/" className="text-3xl font-extrabold">
                         Prospectiv
                     </Link>
                 </motion.div>
@@ -259,10 +267,10 @@ const Navbar = () => {
                                         <div className="flex flex-col gap-5">
                                             <Link href="/company/life-at-prospectiv" className="w-full transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
-                                                <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
-                                                    <LifeBuoy className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
-                                                </div>
-                                                 <div>
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <LifeBuoy className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
                                                         <h3 className="text-lg font-bold text-secondary">Life at Prospectiv</h3>
                                                         <p className="text-sm text-textColorTwo">
                                                             A page about our culture, people, values and what it's like to work here
@@ -308,7 +316,7 @@ const Navbar = () => {
 
                             <NavigationMenuItem className="pt-[3px]">
                                 <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resources</NavigationMenuTrigger>
-                                <NavigationMenuContent>
+                                <NavigationMenuContent className="w-52">
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5 flex-1">
                                             <Link href="/resources/blog" className="w-full transition-all duration-500 group">
@@ -340,60 +348,23 @@ const Navbar = () => {
                                         </div>
                                         <div className="w-1 h-16 bg-secondary"></div>
                                         <div className="flex flex-col gap-5 flex-1">
-                                            <Link href="/resources/resource-hub" className="w-full transition-all duration-500 group">
-                                                <div className="flex items-center gap-4">
-                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
-                                                        <MessageCircleWarning className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                            <Link href={`/blogs/${blog[0]?.slug?.current}`} className="w-full transition-all duration-500 group">
+                                                <div className="flex items-center mb-4">
+                                                    <div className="w-full relative">
+                                                        <Image className="rounded-xl" src={blog[0]?.mainImage?.asset?.url} width={500} height={500} alt="" />
+                                                        <div className="absolute top-3 px-3 left-2 bg-smallCard text-foreground rounded-full">Latest 🔥</div>
                                                     </div>
-                                                    <div>
-                                                        <h3 className="text-md font-bold text-secondary">Resource Hub</h3>
-                                                        <p className="text-sm text-textColorTwo">
-                                                            Whitepapers, guides and webinars. All designed to help you sell more.
-                                                        </p>
-                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h2 className="text-lg font-bold">{blog[0]?.title}</h2>
                                                 </div>
                                             </Link>
                                         </div>
                                     </div>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-
-                            {/* <NavigationMenuItem className="pt-[3px]">
-                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resource</NavigationMenuTrigger>
-                                <NavigationMenuContent>
-                                    <div className="flex items-center gap-5 p-5 bg-background">
-                                        <div className="flex-1">
-                                            <Link href="/resources/blog" className="w-full transition-all duration-500">
-                                                <div className="flex items-center gap-4">
-                                                    <BookOpenText size={120} />
-                                                    <span>
-                                                        <h3 className="text-lg font-bold text-secondary">Blogs</h3>
-                                                        <p className="text-sm text-textColorTwo">
-                                                            A page about our culture, people, values and what it's like to work here
-                                                        </p>
-                                                    </span>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                        <div className="flex-1">
-                                            <Link href="/resources/blog" className="w-full transition-all duration-500">
-                                                <div className="flex items-center gap-4">
-                                                    <BookOpenText size={120} />
-                                                    <span>
-                                                        <h3 className="text-lg font-bold text-secondary">Blogs</h3>
-                                                        <p className="text-sm text-textColorTwo">
-                                                            A page about our culture, people, values and what it's like to work here
-                                                        </p>
-                                                    </span>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </NavigationMenuContent>
-                            </NavigationMenuItem> */}
-
                             <NavigationMenuItem className="pt-[8px]">
-                                <Link href='/success' className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                <Link href='/result/success-story' className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Result</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
