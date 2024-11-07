@@ -36,7 +36,6 @@ const Navbar = () => {
                 setOpenDropdownIndex(null);
             }
         };
-
         document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
@@ -90,45 +89,9 @@ const Navbar = () => {
                                             Home
                                         </Link>
                                     </li>
-
-                                    {/* <li className="relative" ref={dropdownRef}>
-                                    <div
-                                        className="text-lg font-bold hover:text-secondary transition-all duration-500"
-                                        onClick={() => toggleDropdown(0)}
-                                    >
-                                        Why Prospectiv?
-                                    </div>
-                                    <motion.ul
-                                        className="overflow-hidden"
-                                        initial="hidden"
-                                        animate={openDropdownIndex === 0 ? "visible" : "hidden"}
-                                        exit="exit"
-                                        variants={dropdownVariants}
-                                        style={{
-                                            visibility: openDropdownIndex === 0 ? 'visible' : 'hidden',
-                                            display: openDropdownIndex === 0 ? 'block' : 'none'
-                                        }}
-                                    >
-                                        {Array(3).fill(null).map((_, index) => (
-                                            <li key={index}>
-                                                <Link href="#" className="block py-2">
-                                                    <div className="flex justify-center items-center gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Logo</h1>
-                                                        <p className="font-semibold text-foreground text-sm">Prospecting services</p>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </motion.ul>
-                                </li> */}
                                     <li>
                                         <Link href="/pricing" className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                             Pricing
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/result/success-story" className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                            Result
                                         </Link>
                                     </li>
                                     <li className="relative" ref={dropdownRef}>
@@ -216,7 +179,7 @@ const Navbar = () => {
                                     <li className="relative" ref={dropdownRef}>
                                         <div
                                             className="text-lg font-bold hover:text-secondary transition-all duration-500"
-                                            onClick={() => toggleDropdown(1)}
+                                            onClick={() => toggleDropdown(2)}
                                         >
                                             Results
                                         </div>
