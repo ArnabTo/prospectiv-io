@@ -1906,7 +1906,8 @@ const legalPageContent = {
             {
                 id: 'what-is-can-spam',
                 title: 'What is CAN-SPAM?',
-                textContent: `In place since 2003, the primary regulation governing B2B sales in the US is the Controlling the Assault of Non-Solicited Pornography And Marketing Act of 2003 (CAN-SPAM). As email marketing started to gain momentum in the early noughties, this act was introduced to keep things in check. Read the rules of CAN-SPAM.`,
+                textContent: `In place since 2003, the primary regulation governing B2B sales in the US is the Controlling the Assault of Non-Solicited Pornography And Marketing Act of 2003 (CAN-SPAM). As email marketing started to gain momentum in the early noughties, this act was introduced to keep things in check.`,
+                textContentLink:`Read the rules of CAN-SPAM.`,
                 textLink: 'https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business'
             },
             {
