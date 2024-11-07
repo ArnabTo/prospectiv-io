@@ -1855,7 +1855,7 @@ const legalPageContent = {
                 ]
             },
             {
-                id:'lia-failures',
+                id: 'lia-failures',
                 title: 'LIA Failures',
                 textContent: `If Sopro determines that your planned B2B prospecting activity does not meet the criteria for Legitimate Interests within the scope of GDPR or if your approach would breach some other part of the regulations [including PECR] then we cannot support the activity within any regions subject to GDPR.`
 
@@ -1897,6 +1897,109 @@ const legalPageContent = {
                 title: 'In Summary:',
                 textContent: `prospectiv has worked hard to develop a compliant platform providing innovative marketing services and technology for our clients and at all times respecting the rights of the data subjects whose information we collect. Compliance is now part of what we do and ongoing due-diligence is just part of how we operate. Compliance is central to our identity as a business.`
             },
+        ]
+    },
+    usCompliance: {
+        title: 'Sopro CAN-SPAM and CCPA compliance statement',
+        textContent: `This statement sets out the operating procedures Sopro undertakes to ensure CAN-SPAM and CCPA best practice is observed to the greatest extent possible, at all times.`,
+        sections: [
+            {
+                id: 'what-is-can-spam',
+                title: 'What is CAN-SPAM?',
+                textContent: `In place since 2003, the primary regulation governing B2B sales in the US is the Controlling the Assault of Non-Solicited Pornography And Marketing Act of 2003 (CAN-SPAM). As email marketing started to gain momentum in the early noughties, this act was introduced to keep things in check. Read the rules of CAN-SPAM.`,
+                textLink: 'https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business'
+            },
+            {
+                id: 'what-is-ccpa',
+                title: 'What is CCPA?',
+                contents: [
+                    `The California Consumer Privacy Act (CCPA) was introduced in 2020, and only applies if you’re sending sales emails to contacts within California. It gives Californians the right to know exactly what personal data companies are collecting about them.`,
+                    `Under the CCPA, Californians are able to access – and request the deletion of – any personal data that companies have collected on them.`,
+                ],
+                textUlContents: {
+                    contentOne: {
+                        title: `The CCPA applies if you meet the following requirements:`,
+                        ulContents: [
+                            `Your company has a gross annual revenue of more than $25 million`,
+                            `Your company gets more than 50% of its annual revenue from California residents`,
+                            `Your company buys, sells, or receives personal information of more than 50,000 California residents`,
+                        ],
+                    },
+                    contentTwo: {
+                        title: `Under CCPA, Californian recipients have the right to request:`,
+                        ulContents: [
+                            `What kinds of personal data your company has collected on them`,
+                            `If their personal information has been sold or shared – and who has it (this also means informing people of if you’ve had a breach involving their data)`,
+                            `That their personal information is not sold`,
+                            `The deletion of the personal information (AKA the right to be forgotten)`,
+                            `Not be discriminated against for exercising their rights under CCPA`,
+                        ]
+                    }
+                }
+            },
+            {
+                id: 'sopro-and-can-spam-ccpa-compliance',
+                title: 'Sopro and CAN-SPAM/CCPA compliance',
+                textContent: `In addition to appointing a compliance officer to oversee our adherence to the rules, Sopro has engaged 3rd party compliance expertise to audit and advise on best practice. This investment enables us to assure clients that CAN-SPAM and CCPA best practices are strictly observed wherever possible, at all times.`
+            },
+            {
+                title: 'Sopro’s relationship with you',
+                id: 'sopro-relationship-with-you',
+                contents: [
+                    `When it comes to CAN-SPAM and the CCPA, we’re joint controllers. Even though we’re working for you as a service provider, it’s important to recognise that we’re both responsible for: deciding who to target, what data to collect, and how that data is collected, processed, and stored.`,
+                    `We’ve also incorporated a comprehensive Data Sharing Agreement within Sopro’s standard Terms of Service - just to make everything easier. This agreement sets out how we work together as Joint Controllers and how we support each other if we ever receive a data request.`,
+                    `This decision is fundamental to how we operate, so please ask if you have any questions!`
+                ]
+            },
+            {
+                id: 'is-sopro-marketing-activity-compliant',
+                title: 'Is Sopro’s marketing activity compliant?',
+                contents: [
+                    `Of course! Compliance is built into everything we do at Sopro - our business wouldn’t be able to operate without it.`,
+                    `Sopro’s services are designed and offered solely to help businesses promote to other businesses (i.e. B2B marketing only). We ensure that the email marketing provided material is relevant and allow the recipient to opt out of future emails. Sopro has also established technical and operational systems to ensure all aspects of data collection, storage, and processing are compliant.`,
+                    `Before launching new client activity, we conduct an in-depth assessment to establish if the product or service, combined with the proposed targeting, meets the criteria for compliant business to business (B2B) marketing. A key part of this assessment is called the Legitimate Interest Assessment (LIA). We also have a standard privacy policy update for clients to use as needed, which includes all the relevant clauses plus references to Sopro to make everything clear to the data subject. Just let us know if you need a copy of any of these.`
+                ]
+            },
+            {
+                id: 'rights-of-individuals',
+                title: 'Rights of individuals',
+                contents: [
+                    {
+                        title: 'Rights of individuals',
+                        textContent: [
+                            `All messages sent will contain a link to a privacy policy that explains to the user exactly what their rights are as well as the type of data that is held about them and by who. Sopro will provide a template privacy policy or review your existing one to ensure it meets the required standard. Here’s a link to our privacy policy:`,
+                            `https://sopro.io/privacy-policy/`,
+                            `This standard privacy link would typically be contained in the email signature of any outbound messaging, in the case of messaging as part of client campaign activity, the privacy link will be that of our client’s own privacy policy.`
+                        ]
+                    },
+                    {
+                        title: 'Opting out and exclusion lists',
+                        textContent: `All recipients are able to opt out easily to prevent further email communication being received. All replies to prospecting emails are logged and those prospects are added to your campaign exclusion list within 24 hours. Sopro allows import of existing exclusion lists in advance of campaign activity. Exclusions can be submitted in the form of individual email addresses or full domains and will prevent communications being issued to those email addresses or domains listed.`
+                    },
+                    {
+                        title: 'Subject access requests (SAR)',
+                        textContent: `All individuals have the right to request a copy of all data you hold on them. To support this data subjects can email any SAR requests to dpo@sopro.io and we will return this data within 72 hours.`,
+                    }, {
+                        title: 'Right to be forgotten',
+                        textContent: `All individuals have the right to have some or all of their data removed (to be ‘forgotten’) at any time. A conflict does arise in removing or forgetting an email address whilst at the same time keeping this address on an exclusion list to prevent future mailings. Where we have removed data, we will move the email address to a separate exclusion list, encrypted using a one-way hashing algorithm (SHA1), ensuring we are able to prevent any future messages being sent to the customer whilst continuing to honour their right to be forgotten.`
+                    }
+                ]
+            },
+            {
+                id: 'sopro-employees',
+                title:"Sopro employees",
+                textContent:`All Sopro employees undergo both general and region-specific compliance training, this covers the CAN-SPAM and CCPA rule set in detail, the relevance and impact of those rules on Sopro and our clients, and the steps we take to ensure best practice is observed at all times. We also make clear the consequences (i.e. penalties) associated with failure to meet the strict standards.`,
+            },
+            {
+                id: 'your-responsibility',
+                title:'Your responsibility',
+                textContent:`Whilst Sopro continues to take extensive measures to ensure best practice with respect to CAN-SPAM and CCPA across all client activity, clients should take note that responsibility for compliance rests (in different forms) with each party. Sopro cannot be abreast of the constantly evolving regulatory frameworks in all countries at all times, as such it is important that you, as the client, have knowledge of your local regulatory climate and ensure your business operates within the relevant regulatory frameworks.`,
+            },
+            {
+                id: 'summary',
+                title:'In Summary',
+                textContent:`Sopro has worked hard to develop a compliant platform providing innovative marketing services and technology for our clients and at all times respecting the rights of the data subjects whose information we collect. Compliance is part of what we do and ongoing due diligence is core to how we operate.`,
+            }
         ]
     }
 }

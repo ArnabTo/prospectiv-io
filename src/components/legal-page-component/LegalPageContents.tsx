@@ -11,6 +11,7 @@ import { Card } from '../ui/card';
 import { useRouter, useSearchParams } from 'next/navigation';
 import TermsComponent from './terms-component/TermsComponent';
 import GdprComponent from './gdpr-component/GdprComponent';
+import UsCompliance from './us-compliance/UsCompliance';
 
 
 
@@ -273,13 +274,14 @@ const LegalPageContents = () => {
                 <TabsContent value="privacy">
                     <PrivacyComponent />
                 </TabsContent>
-
                 <TabsContent value="terms">
                     <TermsComponent/>
                 </TabsContent>
-
                 <TabsContent value="gdpr">
                     <GdprComponent/>
+                </TabsContent>
+                <TabsContent value="us">
+                    <UsCompliance/>
                 </TabsContent>
             </Tabs>
         </div>
