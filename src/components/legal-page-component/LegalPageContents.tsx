@@ -12,6 +12,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import TermsComponent from './terms-component/TermsComponent';
 import GdprComponent from './gdpr-component/GdprComponent';
 import UsCompliance from './us-compliance/UsCompliance';
+import GdprFaq from './gdpr-faq/GdprFaq';
 
 
 
@@ -282,6 +283,9 @@ const LegalPageContents = () => {
                 </TabsContent>
                 <TabsContent value="us">
                     <UsCompliance/>
+                </TabsContent>
+                <TabsContent value="faq">
+                    <GdprFaq/>
                 </TabsContent>
             </Tabs>
         </div>
