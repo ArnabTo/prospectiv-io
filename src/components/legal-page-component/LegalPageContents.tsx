@@ -27,7 +27,7 @@ const LegalPageContents = () => {
         setActiveTab(value);
         router.push(`/legal?tab=${value}`);
     };
-console.log(activeTab)
+
     return (
         <div>
             <Tabs defaultValue={activeTab} onValueChange={handleTabChange} className="w-full">

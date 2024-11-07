@@ -137,8 +137,6 @@ export interface ROIResults {
   closedDeals: number;
 }
 
-
-
 export interface SuccessStoryType {
     _id: string;
     title: string;
@@ -167,3 +165,24 @@ export interface SuccessStoryType {
         alt?: string;
     };
 }
+
+export interface Award {
+    _id: string;
+    _type: 'awards';
+    title: string;
+    slug: {
+      _type: 'slug';
+      current: string;
+    };
+    award_name: string;
+    category: 'gold' | 'silver' | 'bronze';
+    year: string;
+    award_url: string;
+    thumbnail: {
+      asset: {
+        url: string;
+      };
+      alt?: string;
+    };
+  }
+  
