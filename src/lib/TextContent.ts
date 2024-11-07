@@ -83,11 +83,11 @@ const HowItWorkTextContent = {
 const lifeAtProspectivTextContent = {
     'heading': {
         heading: 'Life at Prospectiv',
-        paragraph: `We're the people behind the prospects. For all the clever tech, what makes the Sopro service stand out is the people. As we like to tell our clients, we’re a team, not a tool.`,
+        paragraph: `We're the people behind the prospects. For all the clever tech, what makes the prospectiv service stand out is the people. As we like to tell our clients, we’re a team, not a tool.`,
     },
     'mettingPeople': {
         heading: 'Meet Our People',
-        paragraph: `We bring together vast knowledge and expertise, while also making Sopro a place to grow, learn, achieve, and have fun.`
+        paragraph: `We bring together vast knowledge and expertise, while also making prospectiv a place to grow, learn, achieve, and have fun.`
     },
     'ourteam': {
         heading: 'Our Team',
@@ -130,7 +130,7 @@ const aboutUsPageTextContent = {
     'prospectiValues': {
         'heading': {
             heading: 'Prospectiv Values',
-            paragraph: ` Our values permeate Sopro through our behaviours, both as people and across our business. They influence the way we hire new people, develop employees, review performance, evaluate reward and achieve promotion.`
+            paragraph: ` Our values permeate prospectiv through our behaviours, both as people and across our business. They influence the way we hire new people, develop employees, review performance, evaluate reward and achieve promotion.`
         },
         'contentOne': {
             heading: 'We invest',
@@ -152,12 +152,12 @@ const aboutUsPageTextContent = {
     'meetCampaignMember': {
         'heading': {
             heading: 'Meet your campaign team',
-            paragraph: `Sopro clients get a dedicated two person team that work tirelessly to improve campaign performance. But those two are the tip of the iceberg, with an army of circa 300 experts backing them up.`
+            paragraph: `prospectiv clients get a dedicated two person team that work tirelessly to improve campaign performance. But those two are the tip of the iceberg, with an army of circa 300 experts backing them up.`
         },
         content: [
             {
                 heading: 'Customer Success',
-                paragraph: `The face of Sopro, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
+                paragraph: `The face of prospectiv, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
             },
             {
@@ -195,7 +195,7 @@ const aboutUsPageTextContent = {
     'leaderShipTeam': {
         'heading': {
             heading: 'Our Leadership Team',
-            paragraph: `Every member of our team is focused on delivering success for our clients. And while we can't introduce every Sopro employee, you can meet our leadership team here.`
+            paragraph: `Every member of our team is focused on delivering success for our clients. And while we can't introduce every prospectiv employee, you can meet our leadership team here.`
         },
         contents: [
             {
@@ -204,7 +204,7 @@ const aboutUsPageTextContent = {
                 email: 'uR4Uv@example.com',
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
                 textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
             },
 
             {
@@ -213,7 +213,7 @@ const aboutUsPageTextContent = {
                 email: 'uR4Uv@example.com',
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
                 textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
             },
 
             {
@@ -222,7 +222,7 @@ const aboutUsPageTextContent = {
                 email: 'uR4Uv@example.com',
                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
                 textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
             },
 
 
@@ -233,7 +233,7 @@ const aboutUsPageTextContent = {
         //             email: 'uR4Uv@example.com',
         //                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
         //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
         // },
         // contentTwo: {
         //     name: 'John Doe',
@@ -241,7 +241,7 @@ const aboutUsPageTextContent = {
         //             email: 'uR4Uv@example.com',
         //                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
         //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
         // },
         // contentThree: {
         //     name: 'John Doe',
@@ -249,7 +249,7 @@ const aboutUsPageTextContent = {
         //             email: 'uR4Uv@example.com',
         //                 image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
         //                     textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at Sopro: he wrote the first line of code and now manages a team of over 30 engineers.`
+        //                                         When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
         // },
     },
     'casestudy': {
@@ -279,26 +279,26 @@ const carrerPageTextContent = {
     'heading': {
         heading: 'Find your Oppurtunities',
         paragraph: `We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
-                        We work hard to make Sopro a great place to work, and reward everyone who joins us.`,
+                        We work hard to make prospectiv a great place to work, and reward everyone who joins us.`,
     },
     exploreus: {
         heading: 'Explore About Us',
         content: [
             {
                 link: '/life-at-prospectiv',
-                image: 'https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
+                image: 'https://prospectiv.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
                 title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
             {
                 link: '/life-at-prospectiv',
-                image: 'https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
+                image: 'https://prospectiv.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
                 title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
             {
                 link: '/life-at-prospectiv',
-                image: 'https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
+                image: 'https://prospectiv.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
                 title: 'Carrers',
                 description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
             },
@@ -311,7 +311,7 @@ const pricingPageTextContent = {
     'heading': {
         heading: 'Pricing',
         paragraph: `We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
-                        We work hard to make Sopro a great place to work, and reward everyone who joins us.`,
+                        We work hard to make prospectiv a great place to work, and reward everyone who joins us.`,
     },
     whatsincluded: {
         contentOne: {
@@ -389,7 +389,7 @@ const legalPageContent = {
                     },
                     {
                         id: 1.3,
-                        content: `In this policy, “we”, “us” and “our” refer to Prospect Global Ltd – trading as Sopro.`
+                        content: `In this policy, “we”, “us” and “our” refer to Prospect Global Ltd – trading as prospectiv.`
                     },
                     {
                         id: 1.4,
@@ -431,7 +431,7 @@ const legalPageContent = {
                             {
                                 "name": "__hssrc",
                                 "purpose": "Whenever HubSpot changes the session cookie, this cookie is also set to determine if the visitor has restarted their browser. If this cookie does not exist when HubSpot manages cookies, it is considered a new session.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "Session",
                                 "provider": "",
                                 "type": "Cookie"
@@ -439,7 +439,7 @@ const legalPageContent = {
                             {
                                 "name": "__tmbid",
                                 "purpose": "This cookie is associated with Crimtan Holding Limited for the purpose of consented relevant advertising.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "a year",
                                 "provider": "",
                                 "type": "Cookie"
@@ -458,7 +458,7 @@ const legalPageContent = {
                             {
                                 "name": "cookiefirst-consent",
                                 "purpose": "This cookie saves your cookie preferences for this website. You can change these or withdraw your consent easily.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "a year",
                                 "provider": {
                                     title: "Cookie First",
@@ -469,7 +469,7 @@ const legalPageContent = {
                             {
                                 "name": "cookiefirst-consent",
                                 "purpose": "This cookie saves your cookie preferences for this website. You can change these or withdraw your consent easily.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": {
                                     title: "Cookie First",
@@ -480,7 +480,7 @@ const legalPageContent = {
                             {
                                 "name": "cookiefirst-id",
                                 "purpose": "This cookie contains your unique ID so CookieFirst can identify unique visitors to this website.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": {
                                     title: "Cookie First",
@@ -499,7 +499,7 @@ const legalPageContent = {
                             {
                                 "name": "pa_enabled",
                                 "purpose": "This item determines the device used to access the website. This allows the website to be formatted accordingly.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": "",
                                 "type": "Local storage"
@@ -507,7 +507,7 @@ const legalPageContent = {
                             {
                                 "name": "PHPSESSID",
                                 "purpose": "Cookie generated by applications based on the PHP language. This is a general purpose identifier used to maintain user session variables.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Session",
                                 "provider": "",
                                 "type": "Cookie"
@@ -515,7 +515,7 @@ const legalPageContent = {
                             {
                                 "name": "__hssc",
                                 "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "29 minutes",
                                 "provider": "",
                                 "type": "Cookie"
@@ -523,7 +523,7 @@ const legalPageContent = {
                             {
                                 "name": "__hstc",
                                 "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "6 months",
                                 "provider": "",
                                 "type": "Cookie"
@@ -531,7 +531,7 @@ const legalPageContent = {
                             {
                                 "name": "_ga",
                                 "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "2 years",
                                 "provider": "Google LLC",
                                 "type": "Cookie"
@@ -539,7 +539,7 @@ const legalPageContent = {
                             {
                                 "name": "_ga_********",
                                 "purpose": "This cookie stores a unique ID for a website visitor and tracks how the visitor uses the website. The data is used for statistics.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "2 years",
                                 "provider": "Google LLC",
                                 "type": "Cookie"
@@ -547,7 +547,7 @@ const legalPageContent = {
                             {
                                 "name": "_gat_UA-****",
                                 "purpose": "The _gat_UA cookie is a variation of the Google Analytics _gat cookie. It is used to limit the collection of data on high-traffic websites.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a few seconds",
                                 "provider": "Google LLC",
                                 "type": "Cookie"
@@ -555,7 +555,7 @@ const legalPageContent = {
                             {
                                 "name": "_gid",
                                 "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a day",
                                 "provider": "Google LLC",
                                 "type": "Cookie"
@@ -563,7 +563,7 @@ const legalPageContent = {
                             {
                                 "name": "_hjSession_******",
                                 "purpose": "A cookie that holds the current session data. This ensures that subsequent requests within the session window will be attributed to the same Hotjar session.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "29 minutes",
                                 "provider": "Hotjar Ltd",
                                 "type": "Cookie"
@@ -571,7 +571,7 @@ const legalPageContent = {
                             {
                                 "name": "_hjSessionUser_******",
                                 "purpose": "Hotjar cookie that is set when a user first lands on a page with the Hotjar script. It is used to persist the Hotjar User ID.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a year",
                                 "provider": "Hotjar Ltd",
                                 "type": "Cookie"
@@ -579,7 +579,7 @@ const legalPageContent = {
                             {
                                 "name": "_obid",
                                 "purpose": "This cookie is set when a user lands on the site, containing a unique ID relating to the email that was clicked on.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "a year",
                                 "provider": "",
                                 "type": "Cookie"
@@ -587,7 +587,7 @@ const legalPageContent = {
                             {
                                 "name": "_pk_id.***.*****",
                                 "purpose": "Matomo / Piwik cookie, used to store a few details about the user such as the unique visitor ID.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "a year",
                                 "provider": "",
                                 "type": "Cookie"
@@ -595,7 +595,7 @@ const legalPageContent = {
                             {
                                 "name": "_pk_ses.***.**",
                                 "purpose": "This cookie is used to record visitors' behavior on the website. It is used to collect statistics about website usage.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "29 minutes",
                                 "provider": "",
                                 "type": "Cookie"
@@ -603,7 +603,7 @@ const legalPageContent = {
                             {
                                 "name": "hubspotutk",
                                 "purpose": "This cookie is used to keep track of a visitor's identity. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "64 years",
                                 "provider": "",
                                 "type": "Cookie"
@@ -618,7 +618,7 @@ const legalPageContent = {
                             {
                                 name: 'hubspotutk',
                                 purpose: 'This cookie name is associated with websites built on the HubSpot platform. HubSpot reports its purpose as user authentication. As a persistent rather than a session cookie, it cannot be classified as Strictly Necessary.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 "provider": {
                                     title: "Hubshot",
@@ -651,7 +651,7 @@ const legalPageContent = {
                             {
                                 name: 'pa',
                                 purpose: 'This item registers the speed and performance of the website. This function can be used in the context of statistics and load balancing.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 provider: '',
                                 type: 'Local storage'
@@ -698,7 +698,7 @@ const legalPageContent = {
                             {
                                 "name": "__hssc",
                                 "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "29 minutes",
                                 "provider": "",
                                 "type": "Cookie"
@@ -706,7 +706,7 @@ const legalPageContent = {
                             {
                                 "name": "__hstc",
                                 "purpose": "This cookie name is linked to websites that are built on the HubSpot platform. This name is reported by them as being used for website analysis.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "6 months",
                                 "provider": "",
                                 "type": "Cookie"
@@ -714,7 +714,7 @@ const legalPageContent = {
                             {
                                 "name": "_ga",
                                 "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics. Data transfer to third countries: USA. Google LLC. is certified under the Data Privacy Framework, indicating that your rights as a data subject can be guaranteed.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "2 years",
                                 "provider": {
                                     "title": "Google LLC.",
@@ -725,7 +725,7 @@ const legalPageContent = {
                             {
                                 "name": "_ga_********",
                                 "purpose": "This cookie stores a unique ID for a website visitor and tracks how the visitor uses the website. The data is used for statistics. Data transfer to third countries: USA. Google LLC. is certified under the Data Privacy Framework, indicating that your rights as a data subject can be guaranteed.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "2 years",
                                 "provider": {
                                     "title": "Google LLC.",
@@ -736,7 +736,7 @@ const legalPageContent = {
                             {
                                 "name": "_gat_UA-****",
                                 "purpose": "The _gat_UA cookie is a variation of the Google Analytics _gat cookie. It is used to limit the collection of data on high-traffic websites. The cookie is set by the Google Analytics tracking code and it contains the unique ID of the tracking account or website to which it relates. The _gat_UA cookie is typically used to throttle the request rate, which means it limits the amount of data that Google Analytics can collect from the website.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a few seconds",
                                 "provider": {
                                     "title": "Google LLC",
@@ -747,7 +747,7 @@ const legalPageContent = {
                             {
                                 "name": "_gid",
                                 "purpose": "Registers a unique ID for a website visitor to track how the visitor uses the website. The data is used for statistics. Data transfer to third countries: USA. Google LLC. is certified under the Data Privacy Framework, indicating that your rights as a data subject can be guaranteed.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a day",
                                 "provider": {
                                     "title": "Google LLC.",
@@ -758,7 +758,7 @@ const legalPageContent = {
                             {
                                 "name": "_hjSession_******",
                                 "purpose": "A cookie that holds the current session data. This ensures that subsequent requests within the session window will be attributed to the same Hotjar session.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "29 minutes",
                                 "provider": {
                                     "title": "Hotjar Ltd",
@@ -769,7 +769,7 @@ const legalPageContent = {
                             {
                                 "name": "_hjSessionUser_******",
                                 "purpose": "Hotjar cookie that is set when a user first lands on a page with the Hotjar script. It is used to persist the Hotjar User ID, unique to that site on the browser. This ensures that behavior in subsequent visits to the same site will be attributed to the same user ID.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a year",
                                 "provider": {
                                     "title": "Hotjar Ltd",
@@ -780,7 +780,7 @@ const legalPageContent = {
                             {
                                 "name": "_obid",
                                 "purpose": "This cookie is set when a user lands on the site, containing a unique ID relating to the email that was clicked on.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "a year",
                                 "provider": "",
                                 "type": "Cookie"
@@ -788,7 +788,7 @@ const legalPageContent = {
                             {
                                 "name": "_pk_id.***.*****",
                                 "purpose": "Matomo / Piwik cookie, used to store a few details about the user such as the unique visitor ID.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a year",
                                 "provider": "",
                                 "type": "Cookie"
@@ -796,7 +796,7 @@ const legalPageContent = {
                             {
                                 "name": "_pk_ses.***.**",
                                 "purpose": "This cookie is used to record visitors' behavior on the website. It is used to collect statistics about website usage, such as the time of the last visit to the website. The cookie does not contain any personal data and is used solely for website analysis.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "29 minutes",
                                 "provider": "",
                                 "type": "Cookie"
@@ -804,7 +804,7 @@ const legalPageContent = {
                             {
                                 "name": "hubspotutk",
                                 "purpose": "This cookie name is associated with websites built on the HubSpot platform. This cookie is used to keep track of a visitor's identity. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "64 years",
                                 "provider": "",
                                 "type": "Cookie"
@@ -819,7 +819,7 @@ const legalPageContent = {
                             {
                                 name: '_fbp',
                                 purpose: 'This cookie is used by Facebook for advertising purposes and conversion tracking.',
-                                domain: '.sopro.io',
+                                domain: '.prospectiv.io',
                                 expiration: '3 months',
                                 "provider": {
                                     title: "Meta Inc.",
@@ -830,7 +830,7 @@ const legalPageContent = {
                             {
                                 name: '_gcl_au',
                                 purpose: "This cookie is set by Google Adsense for experiments with 'cross-website' advertising.",
-                                domain: '.sopro.io',
+                                domain: '.prospectiv.io',
                                 expiration: '3 months',
                                 "provider": {
                                     title: "Google LLC",
@@ -841,7 +841,7 @@ const legalPageContent = {
                             {
                                 name: '_MarketMapper',
                                 purpose: 'This cookie is set when a user submits a Market Mapper form, containing a unique ID relating to the form submitted. It is used for website customization.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'a year',
                                 "provider": {
                                     title: "Prospectiv",
@@ -852,7 +852,7 @@ const legalPageContent = {
                             {
                                 name: '_obid_visit',
                                 purpose: 'This is used to identify a site session across multiple pages and is not linked to any personal data.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: '4 hours',
                                 provider: '',
                                 type: 'Cookie'
@@ -860,7 +860,7 @@ const legalPageContent = {
                             {
                                 name: '_uetsid',
                                 purpose: 'Contains the session ID for a unique session on the site, used by Microsoft Advertising.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 "provider": {
                                     title: "Mircosoft",
@@ -871,7 +871,7 @@ const legalPageContent = {
                             {
                                 name: '_uetsid',
                                 purpose: 'This cookie is used by Bing to determine what ads should be shown that may be relevant to the end user perusing the site.',
-                                domain: '.sopro.io',
+                                domain: '.prospectiv.io',
                                 expiration: 'a day',
                                 "provider": {
                                     title: "Bing (Microsoft)",
@@ -882,7 +882,7 @@ const legalPageContent = {
                             {
                                 name: '_uetsid_exp',
                                 purpose: 'Contains the expiry-date for the local storage and cookie with the corresponding name.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 "provider": {
                                     title: "Microsoft",
@@ -893,7 +893,7 @@ const legalPageContent = {
                             {
                                 name: '_uetvid',
                                 purpose: 'UET assigns this unique, anonymized visitor ID, representing a unique visitor. UET stores this data in a first-party cookie and local storage.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 "provider": {
                                     title: "Microsoft",
@@ -904,7 +904,7 @@ const legalPageContent = {
                             {
                                 name: '_uetvid',
                                 purpose: 'This cookie is used by Bing to determine which ads are served that may be relevant to the end user browsing the site.',
-                                domain: '.sopro.io',
+                                domain: '.prospectiv.io',
                                 expiration: 'a year',
                                 "provider": {
                                     title: "Bing (Microsoft)",
@@ -915,7 +915,7 @@ const legalPageContent = {
                             {
                                 name: '_uetvid_exp',
                                 purpose: 'Contains the expiry-date for the cookie or local storage item with corresponding name.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 "provider": {
                                     title: "Microsoft",
@@ -945,7 +945,7 @@ const legalPageContent = {
                             {
                                 name: 'lastExternalReferrer',
                                 purpose: 'This item is used to determine the origin of your visit.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 provider: '',
                                 type: 'Local storage'
@@ -953,7 +953,7 @@ const legalPageContent = {
                             {
                                 name: 'lastExternalReferrerTime',
                                 purpose: 'This item is used for visitor evaluation.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 provider: '',
                                 type: 'Local storage'
@@ -1050,7 +1050,7 @@ const legalPageContent = {
                             {
                                 name: 'TAoQCJWQ_bkBEL6awr8D,4402039883940',
                                 purpose: 'This cookie has not yet been given a description.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 provider: '',
                                 type: 'Local storage'
@@ -1058,7 +1058,7 @@ const legalPageContent = {
                             {
                                 name: 'TAoQCJWQ_bkBEL6awr8D,4402039883940_expiresAt',
                                 purpose: 'This cookie has not yet been given a description.',
-                                domain: 'sopro.io',
+                                domain: 'prospectiv.io',
                                 expiration: 'Persistent',
                                 provider: '',
                                 type: 'Local storage'
@@ -1071,7 +1071,7 @@ const legalPageContent = {
                             {
                                 "name": "_fbp",
                                 "purpose": "This cookie is used by Facebook for advertising purposes and conversion tracking.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "3 months",
                                 "provider": {
                                     "title": "Meta Inc.",
@@ -1082,7 +1082,7 @@ const legalPageContent = {
                             {
                                 "name": "_gcl_au",
                                 "purpose": "This cookie is set by Google Adsense for experiments with 'cross-website' advertising.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "3 months",
                                 "provider": {
                                     "title": "Google LLC",
@@ -1093,7 +1093,7 @@ const legalPageContent = {
                             {
                                 "name": "_MarketMapper",
                                 "purpose": "This cookie is set when a user submits a Market Mapper form, containing a unique ID relating to the form submitted. It is used for website customization.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "a year",
                                 "provider": {
                                     "title": "Prospectiv",
@@ -1104,7 +1104,7 @@ const legalPageContent = {
                             {
                                 "name": "_obid_visit",
                                 "purpose": "This is used to identify a site session across multiple pages and is not linked to any personal data.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "4 hours",
                                 "provider": "",
                                 "type": "Cookie"
@@ -1112,7 +1112,7 @@ const legalPageContent = {
                             {
                                 "name": "_uetsid",
                                 "purpose": "Contains the session ID for a unique session on the site, used by Microsoft Advertising.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": {
                                     "title": "Microsoft",
@@ -1123,7 +1123,7 @@ const legalPageContent = {
                             {
                                 "name": "_uetsid",
                                 "purpose": "This cookie is used by Bing to determine what ads should be shown that may be relevant to the end user perusing the site.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a day",
                                 "provider": {
                                     "title": "Bing (Microsoft)",
@@ -1134,7 +1134,7 @@ const legalPageContent = {
                             {
                                 "name": "_uetsid_exp",
                                 "purpose": "Contains the expiry-date for the local storage and cookie with the corresponding name.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": {
                                     "title": "Microsoft",
@@ -1145,7 +1145,7 @@ const legalPageContent = {
                             {
                                 "name": "_uetvid",
                                 "purpose": "UET assigns this unique, anonymized visitor ID, representing a unique visitor. UET stores this data in a first-party cookie and local storage.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": {
                                     "title": "Microsoft",
@@ -1156,7 +1156,7 @@ const legalPageContent = {
                             {
                                 "name": "_uetvid",
                                 "purpose": "This cookie is used by Bing to determine which ads are served that may be relevant to the end user browsing the site.",
-                                "domain": ".sopro.io",
+                                "domain": ".prospectiv.io",
                                 "expiration": "a year",
                                 "provider": {
                                     "title": "Bing (Microsoft)",
@@ -1167,7 +1167,7 @@ const legalPageContent = {
                             {
                                 "name": "_uetvid_exp",
                                 "purpose": "Contains the expiry-date for the cookie or local storage item with corresponding name.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": {
                                     "title": "Microsoft",
@@ -1197,7 +1197,7 @@ const legalPageContent = {
                             {
                                 "name": "lastExternalReferrer",
                                 "purpose": "This item is used to determine the origin of your visit.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": "",
                                 "type": "Local storage"
@@ -1205,7 +1205,7 @@ const legalPageContent = {
                             {
                                 "name": "lastExternalReferrerTime",
                                 "purpose": "This item is used for visitor evaluation.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": "",
                                 "type": "Local storage"
@@ -1302,7 +1302,7 @@ const legalPageContent = {
                             {
                                 "name": "TAoQCJWQ_bkBEL6awr8D,4402039883940",
                                 "purpose": "This cookie has not yet been given a description.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": "",
                                 "type": "Local storage"
@@ -1310,7 +1310,7 @@ const legalPageContent = {
                             {
                                 "name": "TAoQCJWQ_bkBEL6awr8D,4402039883940_expiresAt",
                                 "purpose": "This cookie has not yet been given a description.",
-                                "domain": "sopro.io",
+                                "domain": "prospectiv.io",
                                 "expiration": "Persistent",
                                 "provider": "",
                                 "type": "Local storage"
@@ -1355,11 +1355,11 @@ const legalPageContent = {
             {
                 id: 'who-are-we',
                 title: 'Who are we?',
-                textContent: `We are Prospect Global Ltd – trading as Sopro.io. We are a tech company providing digital marketing services to our global client base. Our processing is based primarily on the use of publicly available data to identify sales prospects for our clients. As such, your privacy is important to us, we take our responsibilities seriously and will always respond quickly and courteously to any request. You can contact us using the details below:`,
+                textContent: `We are Prospect Global Ltd – trading as prospectiv.io. We are a tech company providing digital marketing services to our global client base. Our processing is based primarily on the use of publicly available data to identify sales prospects for our clients. As such, your privacy is important to us, we take our responsibilities seriously and will always respond quickly and courteously to any request. You can contact us using the details below:`,
                 contactContent: {
                     email: 'prospectiv@example.com',
                     telephone: '+44 20 7004 7004',
-                    address: 'Sopro, 27-29 North Street, Brighton, BN1 1EB',
+                    address: 'prospectiv, 27-29 North Street, Brighton, BN1 1EB',
                     telephoneTwo: '+44 20 7004 7004'
                 }
             },
@@ -1375,7 +1375,7 @@ const legalPageContent = {
                         textContent: `This policy applies where we are acting as a Controller with respect to the personal data of our website visitors, service users, email recipients and personal data collected from public sources; in other words, where we determine the purposes and means of the processing of that personal data.`
                     }, {
                         id: 2.3,
-                        textContent: `This policy also applies where we determine the purpose and means of the processing jointly with our clients and other companies, or where we are acting as a Processor, working on behalf of our clients to process data as required by them. In this policy, “We”, “Us” and “Our” refer to Prospect Global Ltd – trading as Sopro.`
+                        textContent: `This policy also applies where we determine the purpose and means of the processing jointly with our clients and other companies, or where we are acting as a Processor, working on behalf of our clients to process data as required by them. In this policy, “We”, “Us” and “Our” refer to Prospect Global Ltd – trading as prospectiv.`
                     }, {
                         id: 2.4,
                         textContent: `Any reference to a Data Subject means a natural person whose personal data is processed by us as a Data Controller, Joint Controller or as a Data Processor, in other words, you.`
@@ -1465,7 +1465,7 @@ const legalPageContent = {
                 contents: [
                     {
                         id: 6.1,
-                        textContent: `We don’t routinely sell or share your data with other companies other than in order to provide our services to them and to meet our obligations as a company. Sopro is a prospecting and lead generation company, where we have collected your data in order to provide our service to our clients, we share your data only with that specific client. Where this is the case, we will respect your right to be informed and ensure that you are given the option to opt-out of marketing at first contact and in all subsequent communications. The privacy policy of our client will include their contact details to ensure you are able to exercise your rights at any time.`
+                        textContent: `We don’t routinely sell or share your data with other companies other than in order to provide our services to them and to meet our obligations as a company. prospectiv is a prospecting and lead generation company, where we have collected your data in order to provide our service to our clients, we share your data only with that specific client. Where this is the case, we will respect your right to be informed and ensure that you are given the option to opt-out of marketing at first contact and in all subsequent communications. The privacy policy of our client will include their contact details to ensure you are able to exercise your rights at any time.`
                     },
                     {
                         id: 6.2,
@@ -1697,7 +1697,7 @@ const legalPageContent = {
         ]
     },
     terms: {
-        endTextContent:`You can contact Prospect Global Ltd. by email on ryan@sopro.io.`,
+        endTextContent: `You can contact Prospect Global Ltd. by email on ryan@prospectiv.io.`,
         sections: [
             {
                 id: 'introduction',
@@ -1753,8 +1753,8 @@ const legalPageContent = {
                 id: 'privacy-policy-and-cookies-policy',
                 title: 'Privacy Policy and Cookies Policy',
                 textContent: `Use of the Website is also governed by our Privacy Policy and Cookies Policy, which are incorporated into these terms and conditions by this reference. To view the Privacy Policy and Cookies Policy, please click on the following:`,
-                linkOne: 'https://sopro.io/legal/#privacy-policy',
-                linkTwo: 'https://sopro.io/legal/#cookie-policy'
+                linkOne: 'https://prospectiv.io/legal/#privacy-policy',
+                linkTwo: 'https://prospectiv.io/legal/#cookie-policy'
             },
             {
                 id: 'availability-of-the-website-and-disclaimers',
@@ -1792,7 +1792,7 @@ const legalPageContent = {
             {
                 id: 'general',
                 title: 'General',
-                contents:[
+                contents: [
                     `You may not transfer any of your rights under these terms and conditions to any other person. We may transfer our rights under these terms and conditions where we reasonably believe your rights will not be affected.`,
                     `These terms and conditions may be varied by us from time to time. Such revised terms will apply to the Website from the date of publication. Users should check the terms and conditions regularly to ensure familiarity with the then current version.`,
                     `These terms and conditions together with the Privacy Policy and Cookies Policy contain the whole agreement between the parties relating to its subject matter and supersede all prior discussions, arrangements or agreements that might have taken place in relation to the terms and conditions.`,
@@ -1806,9 +1806,97 @@ const legalPageContent = {
                 id: "prospect-global-layoutdashboard-details",
                 title: "Prospect Global LayoutDashboard. details",
                 textContent: `Prospect Global Ltd. is a company incorporated in England and Wales with registered number 09648733 whose registered address is 33 Wrotham Road,, Borough Green,, Borough Green, Sevenoaks,, Kent, TN15 8DD and it operates the website`,
-                 websiteUrl:'https://sopro.io/',
+                websiteUrl: 'https://prospectiv.io/',
                 textContentPart: `. The registered VAT number is GB234026052.`
             }
+        ]
+    },
+    gdpr_statement: {
+        title: 'Prospectiv GDPR Compliance Statement',
+        textContent: `This statement sets out the operating procedures prospectiv undertakes to ensure GDPR best practice is observed to the greatest extent possible, at all times.`,
+        sections: [
+            {
+                id: 'what-is-gdpr',
+                title: 'What is GDPR?',
+                contents: [
+                    `The General Data Protection Regulation (GDPR) is a legal framework that sets guidelines for the collection, storage, and processing of personal information from individuals who live in the European Union (EU).`,
+                    `The Information Commissioner’s Office is the UK regulator dealing with the Data Protection Act 2018 and the General Data Protection Regulation and the Privacy and Electronic Communications (EC Directive) Regulations 2003 across the UK.`,
+                    `The ICO are like the data protection police and we need to make sure we always keep on their good side. Our determination to be 100% GDPR and PECR compliance will do exactly that!`,
+                    `It is important to take GDPR compliance very seriously, since the penalties for non-compliance are punitive and designed to be painful. You definitely don’t want to be on the receiving end of an ICO investigation or enforcement notice!`
+                ]
+            },
+            {
+                id: 'prospectivs-gdpr-compliance',
+                title: 'prospectiv and GDPR compliance',
+                textContent: `In addition to appointing a compliance officer to oversee our adherence to the rules, prospectiv have engaged 3rd party compliance expertise to audit and advise on best practice. This investment enables us to assure clients that GDPR best practices are strictly observed wherever possible, at all times.`
+            },
+            {
+                id: 'prospectivs-relationship-with-you',
+                title: 'prospectiv’s relationship with you',
+                textContent: `To put this in the language of GDPR and the ICO:`,
+                textUlContents: [
+                    `We are Joint Controllers. Yes – Joint Controllers. Even though, as a service provider, we are essentially working for you, it is important to recognise that we are both responsible for deciding who to target, what data to collect, how the data is processed, what messages we send them and how their data will be collected, processed, and stored. This decision is pretty fundamental to how we operate so if you have any questions let’s talk!`,
+                    `Just to make all our lives easier we have incorporated a comprehensive Data Sharing Agreement within prospectiv’s standard Terms of Service. This sets out how we work together as Joint Controllers and how we support each other if we ever receive a GDPR request.`
+                ]
+            },
+            {
+                id: 'is-prospectivs-marketing-activity-compliant',
+                title: `Is prospectiv’s marketing activity compliant?`,
+                textContent: `Let’s look at this carefully. prospectiv’s services are designed and offered solely to help businesses promote to other businesses. I.e. B2B marketing only. In which case PECR allows email marketing provided material is relevant and we and allow the recipient to opt-out of future emails. In this respect prospectiv is naturally compliant. Now for GDPR, GDPR always applies and actually applies to all aspects of collection, storage, and processing of data. prospectiv has been designed to be compliant and has established technical and operational systems to make sure this is the case. For example, before launching new client activity, prospectiv conducts an in-depth assessment to establish if the product or service, combined with the proposed targeting, meets the criteria for GDPR and PECR compliant business to business (B2B) marketing. A key part of this assessment is called the Legitimate Interest Assessment (LIA), we have completed a LIA for us and also a standard LIA for each of our clients. We have also created a standard Privacy Policy update for client use as needed, this includes all the relevant clauses you need plus references to prospectiv to make everything clear to the data subject – just let us know if you need a copy of any of these.`,
+                textContentHeadline: `Want to know more about how Legitimate Interest applies?`,
+                textContents: [
+                    `If prospectiv determines that your planned B2B prospecting activity does not meet the criteria for Legitimate Interests within the scope of GDPR or if your approach would breach some other part of the regulations [including PECR] then we cannot support the activity within any regions subject to GDPR.`,
+                    `In the context of our Services, Legitimate Interest is the relevant lawful basis for processing as defined in GDPR. GDPR sets out a number of permissible circumstances (or categories) under which Personally Identifiable Information (PII) can be stored and processed, the most appropriate category in the case of most B2B marketing is Legitimate Interests. This link explains the Legitimate Interests basis for storing and processing PII: https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/legitimate-interests/ To ensure client activity falls into this category, prior to engaging, we will carry out a full Legitimate Interests Assessment (LIA) with each new client. Essentially the LIA is a questionnaire containing a series of questions about your scenario. There are 3 areas that need to be satisfied for Legitimate Interests to be used as a basis for processing PII:`
+                ],
+                textContentUl: [
+                    `Identify a legitimate interest – The legitimate interest can be your own interests or the interests of third parties. They can include commercial interests, individual interests or broader societal benefits. The data processing is generally in your interests – whether it be to increase market share, increase brand awareness, or engage business leaders.`,
+                    `Show that the processing is necessary to achieve it – Can the same result be achieved differently? Core to the prospectiv service is the efficiency and constant drive to be the most cost-effective sales channel which we believe cannot be replicated using other methods.`,
+                    `Balance it against the individual’s interests, rights and freedoms – Would the individual expect their data to be used in this way? Would an individual who lists publicly their role within a company expect to be contacted about services that may help that company or their department within the company? No data processing may replace or infringe the individuals interests or cause unjustified harm`
+                ]
+            },
+            {
+                id:'lia-failures',
+                title: 'LIA Failures',
+                textContent: `If Sopro determines that your planned B2B prospecting activity does not meet the criteria for Legitimate Interests within the scope of GDPR or if your approach would breach some other part of the regulations [including PECR] then we cannot support the activity within any regions subject to GDPR.`
+
+            },
+            {
+                id: 'rights-of-individuals',
+                title: 'Rights of Individuals',
+                textContents: [
+                    `Privacy Policy – All messages sent will contain a link to a privacy policy that explains to the user exactly what their rights are as well as the type of data that is held about them and by who. prospectiv will provide a template privacy policy or review your existing one to ensure it meets the required standard. A link to our Privacy Policy which is based upon this template is here:`,
+                    `https://prospectiv.io/privacy-policy/`,
+                    `This standard privacy link would typically be contained in the email signature of any outbound messaging, in the case of messaging as part of client campaign activity, the privacy link will be that of our client’s own privacy policy.`,
+
+                    `Opting Out & Exclusion Lists – All recipients are able to opt out easily to prevent further email communication being received. All replies to prospecting emails are logged and those prospects are added to your campaign exclusion list within 24 hours. prospectiv allows import of existing exclusion lists in advance of campaign activity. Exclusions can be submitted in the form of individual email addresses or full domains and will prevent communications being issued to those email addresses or domains listed.`,
+
+                    `Subject Access Requests – All individuals have the right to request a copy of all data you hold on them. To support this data subjects can email any SAR requests to`,
+                    `dpo@prospectiv.io`,
+                    `and we will return this data within 72 hours.`,
+
+                    `Right to be Forgotten – All individuals have the right to have some or all of their data removed (to be ‘forgotten’) at any time.. A conflict does arise in removing or forgetting an email address whilst at the same time keeping this address on an exclusion list to prevent future mailings. Where we have removed data, we will move the email address to a separate exclusion list, encrypted using a one-way hashing algorithm (SHA1), ensuring we are able to prevent any future messages being sent to the customer whilst continuing to honour their right to be forgotten.`
+                ],
+            },
+            {
+                id: 'pecr-and-sending-of-b2b-messages',
+                title: 'PECR and sending of B2B messages',
+                textContent: `Whilst GDPR controls the storage and processing of personal data in the UK, sending messages is regulated under the Privacy and Electronic communications Regulations (PECR). This is very clear as to the requirements on business communication: “You can email or text any corporate body (a company, Scottish partnership, limited liability partnership or government body). However, it is good practice – and good business sense – to keep a ‘do not email or text’ list of any businesses that object or opt out and screen any new marketing lists against that.” https://ico.org.uk/for-organisations/guide-to-pecr/electronic-and-telephone-marketing/electronic-mail-marketing/`
+            },
+            {
+                id: 'proepective-employees',
+                title: 'prospectiv Employees',
+                textContent: `All prospectiv employees undergo GDPR, PECR and general compliance training, this covers the GDPR rule set in detail, the relevance and impact of those rules on prospectiv and our clients, and the steps we take to ensure best practice is observed at all times. We also make clear the consequences (I.e. penalties) associated with failure to meet the strict GDPR standards.`
+            },
+            {
+                id: 'clientResponsibility',
+                title: 'Client responsibility',
+                textContent: `Whilst prospectiv continues to take extensive measures to ensure best practice with respect to GDPR and PECR across all client activity, clients should take note that responsibility for compliance vests (in different forms) with each party. prospectiv cannot be abreast of the constantly evolving regulatory frameworks in all countries at all times, as such it is important that you, as the client, have knowledge of your local regulatory climate and ensure your business operates within the relevant regulatory frameworks.`
+            },
+            {
+                id: 'summary',
+                title: 'In Summary:',
+                textContent: `prospectiv has worked hard to develop a compliant platform providing innovative marketing services and technology for our clients and at all times respecting the rights of the data subjects whose information we collect. Compliance is now part of what we do and ongoing due-diligence is just part of how we operate. Compliance is central to our identity as a business.`
+            },
         ]
     }
 }

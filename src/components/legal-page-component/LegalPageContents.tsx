@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { Card } from '../ui/card';
 import { useRouter, useSearchParams } from 'next/navigation';
 import TermsComponent from './terms-component/TermsComponent';
+import GdprComponent from './gdpr-component/GdprComponent';
 
 
 
@@ -275,6 +276,10 @@ const LegalPageContents = () => {
 
                 <TabsContent value="terms">
                     <TermsComponent/>
+                </TabsContent>
+
+                <TabsContent value="gdpr">
+                    <GdprComponent/>
                 </TabsContent>
             </Tabs>
         </div>
