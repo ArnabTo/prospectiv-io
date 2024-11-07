@@ -58,8 +58,8 @@ const TermsComponent = () => {
                 <section id={legalPageContent.terms.sections[0].id} className='space-y-5 py-5'>
                     <h2 className="text-3xl text-secondary">1. {legalPageContent.terms.sections[0].title}</h2>
                     {
-                        legalPageContent.terms.sections[0].contents.map((content) =>
-                            <p className="text-lg text-textColorTwo">{content}</p>)
+                        legalPageContent.terms.sections[0].contents.map((content, index) =>
+                            <p key={index} className="text-lg text-textColorTwo">{content}</p>)
                     }
                 </section>
 
@@ -67,8 +67,8 @@ const TermsComponent = () => {
                     <h2 className="text-3xl text-secondary">2. {legalPageContent.terms.sections[1].title}</h2>
                     <ul className="custom-marker-legal list-disc space-y-5 ml-5 md:ml-16">
                         {
-                            legalPageContent.terms.sections[1].ulContents?.map((content) => (
-                                <li className="text-textColorTwo text-lg">
+                            legalPageContent.terms.sections[1].ulContents?.map((content, index) => (
+                                <li key={index} className="text-textColorTwo text-lg">
                                     <p key={content._id}>
                                         {content.textContent}
                                     </p>
@@ -76,7 +76,7 @@ const TermsComponent = () => {
                                         content.subContents ?
                                             <div className="ml-5 md:ml-10">
                                                 {content.subContents?.map((subContent, index) => (
-                                                    <li className="text-textColorTwo text-lg">
+                                                    <li key={index} className="text-textColorTwo text-lg">
                                                         <p key={index}>
                                                             {subContent}
                                                         </p>
@@ -145,7 +145,7 @@ const TermsComponent = () => {
                                         content.subContents ?
                                             <div className="ml-5 md:ml-10">
                                                 {content.subContents?.map((subContent, index) => (
-                                                    <li className="text-textColorTwo text-lg">
+                                                    <li key={index} className="text-textColorTwo text-lg">
                                                         <p key={index}>
                                                             {subContent}
                                                         </p>
