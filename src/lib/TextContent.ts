@@ -1348,8 +1348,12 @@ const legalPageContent = {
         ],
     },
     privacy_policy: {
+        update:{
+            textContent:`This policy was last updated on 1 March 2022.`
+        },
         section: [
             {
+                id: 'who-are-we',
                 title: 'Who are we?',
                 textContent: `We are Prospect Global Ltd – trading as Sopro.io. We are a tech company providing digital marketing services to our global client base. Our processing is based primarily on the use of publicly available data to identify sales prospects for our clients. As such, your privacy is important to us, we take our responsibilities seriously and will always respond quickly and courteously to any request. You can contact us using the details below:`,
                 contactContent: {
@@ -1360,17 +1364,336 @@ const legalPageContent = {
                 }
             },
             {
-                title:'Our GDPR Policy',
-                content: [
+                id: 'our-gdpr-policy',
+                title: 'Our GDPR Policy',
+                contents: [
                     {
-                        id: 1,
+                        id: 2.1,
                         textContent: `We are committed to safeguarding the privacy and accuracy of the personal data of our website visitors, service users and email recipients.`,
-                    },{
-                        id: 2,
-                        textContent:`This policy applies where we are acting as a Controller with respect to the personal data of our website visitors, service users, email recipients and personal data collected from public sources; in other words, where we determine the purposes and means of the processing of that personal data.`
+                    }, {
+                        id: 2.2,
+                        textContent: `This policy applies where we are acting as a Controller with respect to the personal data of our website visitors, service users, email recipients and personal data collected from public sources; in other words, where we determine the purposes and means of the processing of that personal data.`
+                    }, {
+                        id: 2.3,
+                        textContent: `This policy also applies where we determine the purpose and means of the processing jointly with our clients and other companies, or where we are acting as a Processor, working on behalf of our clients to process data as required by them. In this policy, “We”, “Us” and “Our” refer to Prospect Global Ltd – trading as Sopro.`
+                    }, {
+                        id: 2.4,
+                        textContent: `Any reference to a Data Subject means a natural person whose personal data is processed by us as a Data Controller, Joint Controller or as a Data Processor, in other words, you.`
+                    }, {
+                        id: 2.5,
+                        textContent: `Any reference to the GDPR applies to both the UK GDPR and EU GDPR. Likewise, any reference to EU countries will also apply to the UK. This will remain the case so long as the UK is subject to an adequacy decision by the EU. Should there be a conflict between the two, the version that grants data subjects the greatest protection will apply.`
                     }
                 ]
-            }
+            },
+            {
+                id: 'how-we-use-your-personal-data',
+                title: 'How We use Your personal data?',
+                textcontent: `We want to be clear with you about how we use your data, so in this section we talk about the general categories of personal data that we may process and, in the case of personal data that we did not obtain directly from you, we’ll tell you where we got your data and the purposes for which we may process your data; finally, and very importantly, we’ll explain the legal bases of the processing which applies to us and you.`,
+                contents: [
+                    {
+                        id: 3.1,
+                        title: 'Usage Data',
+                        textContent: `We may process data about your use of our website and services (“Usage Data”). The Usage Data may include your IP address, geographical location, browser type and version, operating system, referral source, length of visit, page views and website navigation paths, as well as information about the timing, frequency and pattern of your service use. The source of the Usage Data is Google Analytics as well as our analytics tracking system. This Usage Data may be processed for the purposes of analysing the use of the website and services. The legal basis for this processing is our legitimate interests, namely monitoring and improving our website and services, and tailoring any communication with you. We, of course, use this data to help us run our business as well as we can.`,
+                    },
+                    {
+                        id: 3.2,
+                        title: 'Account Data',
+                        textContent: `We may process your Account Data (“Account Data”). The Account Data may include your name, email address, company information, and other contact and other related information we may collect about you. The source of the Account Data is generally you or your employer. The Account Data may be processed for the purposes of providing our services, ensuring the security of our website and services, maintaining back-ups of our databases and communicating with you. The legal basis for this processing is the performance of a contract between you and us [or your employer] and/or taking steps, at your request, to enter into such a contract. In some cases, we may also rely on Legitimate Interest as our lawful basis where we use your data for marketing purposes or in order to operate our business and improve our services.`
+                    },
+                    {
+                        id: 3.3,
+                        title: 'Service Data',
+                        textContent: `We may process your personal data that are provided in the course of the use of our services (“Service Data”). The Service Data may include name, email address, telephone number, and other related information. The source of the Service Data is you or your employer. The Service Data may be processed for the purposes of providing our services and communicating with you. The legal basis for this processing is the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract.`
+                    },
+                    {
+                        id: 3.4,
+                        title: 'Enquiry Data',
+                        textContent:`We may process information contained in any enquiry you submit to us regarding goods and/or services (“Enquiry Data”). The Enquiry Data may be processed for the purposes of us offering, marketing and selling relevant goods and/or services to you. The legal basis for this processing is consent, which may be withdrawn by you at any time by contacting us, or contract and/or legitimate interest where your requests represent an invitation to send you information about our services.`
+                    },
+                    {
+                        id: 3.5,
+                        title: 'Notification Data',
+                        textContent: `We may process information that you provide to us for the purpose of subscribing to our email notifications and/or newsletters (“Notification Data”). The Notification Data may be processed for the purposes of sending you the relevant notifications and/or newsletters. The legal basis for this processing is consent, which may be withdrawn by you at any time by contacting us.`
+                    },
+                    {
+                        id: 3.6,
+                        title: 'Correspondence Data',
+                        textContent: `We may process information contained in or relating to any communication that you send to us (“Correspondence Data”). The Correspondence Data may include your name, email address and the communication content and metadata associated with the communication. Our website will generate the metadata associated with communications made using the website contact forms. The Correspondence Data may be processed for the purposes of communicating with you and record-keeping. The legal basis for this processing is our legitimate interests, namely the proper administration of our website, business and communications with users.`
+                    },
+                    {
+                        id: 3.7,
+                        title: 'Public Data',
+                        textContent: `We may process information found on public social networking profiles and other from other publicly available sources (“Public Data”). This data may include name, employment information, career information. education details, job title, and other relevant information. Public Data may be processed for the purposes of offering, marketing and selling relevant goods and/or services to you and/or your employer. The legal basis for this processing is our legitimate interests, namely the administration of our business, to develop our business, and in order for us to make a profit.`
+                    },
+                    {
+                        id: 3.8,
+                        title: 'Legal Claims Data',
+                        textContent: `We may process any of your personal data identified in this policy where necessary for the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure (“Legal Claims Data”). The legal basis for this processing is our legitimate interests, namely the protection and assertion of our legal rights, your legal rights and the legal rights of others.`
+                    },
+                    {
+                        id: 3.9,
+                        title: 'Personal Use Data',
+                        textContent: `We may process any of your personal data identified in this policy where necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, or obtaining professional advice (“Professional Use Data”). The legal basis for processing Professional Use Data is our legitimate interests, namely the proper protection of our business against risks.`
+                    },
+                    {
+                        id: 3.10,
+                        title: 'Third Party Data',
+                        textContent: `We may process any of your personal data where we purchase this data from a third party. This includes name, address, email, phone number, other contact details, employment details etc.. Where we purchase data, we will ensure that the supplier has the appropriate lawful basis in place and is GDPR compliant. We will also ensure that we have appropriate evidence of consent where necessary, or have an alternative appropriate lawful basis and GDPR compliance processes in place to allow us to use your data.`
+                    }
+                ],
+                endTextCotent: `In addition to the specific purposes for which we may process your personal data set out in this Section, we may also process any of your personal data where such processing is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.`,
+            },
+            {
+                title: 'Our Legitimate Interest',
+                id: 'our-legitimate-interest',
+                content: {
+                    _id: 4.1,
+                    textContent: `Our lawful bases for processing include our Legitimate Interest to process your data. In this regard, we have carefully considered your rights and expectations of privacy and our rights, alongside the rights of our clients, to run our business. We have considered the impact on your privacy as a result of our processing of your data and completed a balancing assessment to consider the impact on the data subjects involved and also completed a Data Protection Impact Assessment to ensure we take appropriate precautions with all data. These Legitimate Interest and Data Protection Impact Assessments helped us ensure that the rights of the data subjects are not unduly impacted and that processing of data in this way is acceptable.`
+                }
+            },
+            {
+                title: 'Source of your Personal Data',
+                id: 'source-of-your-personal-data',
+                content: {
+                    _id: 5.1,
+                    textContent: `We use a range of sources to provide our services, including public domain and social media sources. Our approach is based on carefully targeting business contacts with offers that we believe they will be interested in. We carefully select representatives from businesses and then only send relevant offers. Where we source data from other third parties, we will ensure these companies are GDPR compliant and that your rights are at all times protected.`
+                }
+            },
+            {
+                title: 'Data sharing',
+                id: 'data-sharing',
+                contents: [
+                    {
+                        id: 6.1,
+                        textContent: `We don’t routinely sell or share your data with other companies other than in order to provide our services to them and to meet our obligations as a company. Sopro is a prospecting and lead generation company, where we have collected your data in order to provide our service to our clients, we share your data only with that specific client. Where this is the case, we will respect your right to be informed and ensure that you are given the option to opt-out of marketing at first contact and in all subsequent communications. The privacy policy of our client will include their contact details to ensure you are able to exercise your rights at any time.`
+                    },
+                    {
+                        id: 6.2,
+                        textContent: `In addition, we may disclose your personal data to any member of our group of companies (this means our subsidiaries, our ultimate holding company and all its subsidiaries, together known as “Group Companies”) insofar as reasonably necessary for the purposes, and on the legal bases, set out in this policy.`
+                    },
+                    {
+                        id: 6.3,
+                        textContent: `We may disclose your personal data to our insurers and/or professional advisers insofar as reasonably necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, obtaining professional advice, or the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedures.`
+                    },
+                    {
+                        id: 6.4,
+                        textContent: `We may also disclose your personal data to our suppliers, partners and other carefully managed third parties as required to operate our company and provide our services. Where this is the case, we will always ensure appropriate technical and administrative controls are in place.`
+                    },
+                    {
+                        id: 6.5,
+                        textContent: `As you would expect, in addition to the specific disclosures of personal data set out above, we may disclose your personal data where such disclosure is necessary for compliance with a binding legal obligation.`
+                    }
+                ]
+            },
+            {
+                title: 'International transfers of your personal data',
+                id: 'international-transfers-of-your-personal-data',
+                contents: [
+                    {
+                        id: 7.1,
+                        textContent: `In this section we provide information about the circumstances in which your personal data may be transferred to countries outside the European Economic Area (“EEA”). We, and our other Group Companies, have offices and facilities in the Republic of North Macedonia where your personal data may be processed. Transfers to the Republic of North Macedonia will be protected by appropriate technical and administrative safeguards included in our Terms of Contract for data processing agreed between us and our Republic of North Macedonia counterparts, which of course includes the standard clauses required under GDPR.`
+                    },
+                    {
+                        id: 7.2,
+                        textContent: `Remember that personal data that you submit for publication through our website or services may be available, via the internet, around the world. We cannot prevent the use (or misuse) of such personal data by others.`
+                    },
+                    {
+                        id: 7.3,
+                        textContent: `Our website contains links to external websites run by other organisations. This privacy policy applies only to our websites not those external websites that we link to, who will have their own privacy policies. We are not responsible for these external websites and their privacy policies and practices. In addition, if you linked to our website from an external site, we cannot be responsible for the privacy policies and practices of the owners and operators of that external website and recommend that you check the privacy policy of that external site.`
+                    }
+                ]
+            },
+            {
+                title: 'Retaining and deleting your personal data',
+                id: 'retaining-and-deleting-your-personal-data',
+                contents: [
+                    {
+                        id: 8.1,
+                        textContent: `This section sets out our data retention policies and procedure, which are designed to help ensure that we comply with our legal obligations in relation to the retention and deletion of personal data. Personal data that we process for any purpose or purposes shall not be kept for longer than is necessary for that purpose or those purposes.`
+                    },
+                    {
+                        id: 8.2,
+                        textContent: `Notwithstanding the other provisions of this section, we may retain your personal data where such retention is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.`
+                    }
+                ]
+            },
+            {
+                title: 'Cookies',
+                id: 'cookies',
+                content: {
+                    _id: 9.1,
+                    textContent: `By using our website and agreeing to this policy, you consent to our use of cookies, in accordance with the terms of our cookie policy.`
+                }
+            },
+            {
+                title: 'Automated Processing',
+                id: 'automated-processing',
+                content: {
+                    _id: 10.1,
+                    textContent: `We may use automated processing and decision making to verify your contact details and to determine whether to contact you as part of a prospecting campaign on behalf of our clients. This decision making is simply used to determine whether the campaign is likely to be of interest to you and to verify your contact details.`
+                }
+            },
+            {
+                title: 'The rights of data subjects',
+                id: 'the-rights-of-data-subjects',
+                contents: [
+                    {
+                        _id: 11.1,
+                        textContent: `In this section we have summarised the rights that you have under data protection law. Some of the rights are complex, and not all of the details have been included in our summaries. Accordingly, you should read the relevant laws and gu_ance from the regulatory authorities for a full explanation of these rights.`
+                    },
+                    {
+                        _id: 11.2,
+                        textContent: `Your principal rights under data protection law are:`,
+                        subContents: [
+                            {
+                                _id: `11.2.1`,
+                                textContent: `The right to be informed`
+                            },
+                            {
+                                _id: `11.2.2`,
+                                textContent: `The right to access`
+                            },
+                            {
+                                _id: `11.2.3`,
+                                textContent: `The right to rectification`
+                            },
+                            {
+                                _id: `11.2.4`,
+                                textContent: `The right to erasure`
+                            },
+                            {
+                                _id: `11.2.5`,
+                                textContent: `The right to restrict processing`
+                            },
+                            {
+                                _id: `11.2.6`,
+                                textContent: `The right to object to processing`
+                            },
+                            {
+                                _id: `11.2.7`,
+                                textContent: `The right to data portability`
+                            },
+                            {
+                                _id: `11.2.8`,
+                                textContent: `Rights related to automated decision-making including profiling`
+                            },
+                            {
+                                _id: `11.2.9`,
+                                textContent: `The right to complain to a supervisory authority; and`
+                            },
+                            {
+                                _id: `11.2.10`,
+                                textContent: `The right to withdraw consent.`
+                            },
+                        ]
+                    },
+                    {
+                        _id: 11.3,
+                        textContent: `The Right to be Informed. This is the right of Data Subjects to know details regarding the processing of their data and how we acquired their data, this information is included in this Privacy Policy.`
+                    },
+                    {
+                        _id: 11.4,
+                        textContent: `The Right to Access. You have the right to confirm as to whether or not we process your personal data and, where we do, access to the personal data, together with certain additional information. That additional information includes details of the purposes of the processing, the categories of personal data concerned and the recipients of the personal data. Providing the rights and freedoms of others are not affected, we will supply to you a copy of your personal data upon request and within one month of verification of your identity (we may extend the time within which we must provide the information by a further two months if the request is particularly complex, or if there are numerous requests and we will let you know if this is the case). The first copy will be provided free of charge, but additional copies may be subject to a reasonable fee.`
+                    },
+                    {
+                        _id: 11.5,
+                        textContent: `The Right to Rectification. You have the right to have any inaccurate personal data about you rectified and, taking into account the purposes of the processing, to have any incomplete personal data about you completed. If the request is accepted by us, the rectification will be completed within one month (may be extended by us by a further two months if complex). We will use all reasonable endeavours to notify any third party with whom we have shared the data of any rectifications made.`
+                    },
+                    {
+                        _id: 11.6,
+                        textContent: `The Right to Erasure (also known as the “Right to be Forgotten”). In some circumstances you have the right to the erasure of your personal data without undue delay. However, there are exclusions to the right to erasure. We will use all reasonable endeavours to notify any third party with whom we have shared the data of any actioned erasure requests.`
+                    },
+                    {
+                        _id: 11.7,
+                        textContent: `The Right to Restrict Processing. In some circumstances you have the right to restrict the processing of your personal data. Where processing has been restricted, we may continue to store your personal data. However, we will only otherwise process it: with your consent; for the establishment, exercise or defence of legal claims; for the protection of the rights of another natural or legal person; or for reasons of important public interest. We will use all reasonable endeavours to notify any third party with whom we have shared the data of any restriction placed on the processing of your data.`
+                    },
+                    {
+                        _id: 11.8,
+                        textContent: `The Right to Object to Processing. You have the right to object to our processing of your personal data on grounds relating to your particular situation, but only to the extent that the legal basis for the processing is that the processing is necessary for certain tasks. If you make such an objection, we will cease to process the personal information unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights and freedoms, or if the processing is for the establishment, exercise or defence of legal claims.`
+                    },
+                    {
+                        _id: 11.9,
+                        textContent: `The Right to Data Portability. To the extent that the legal basis for our processing of your personal data is:`,
+                        subContents: [
+                            {
+                                _id: "a",
+                                textContent: `consent; or`
+                            },
+                            {
+                                _id: "b",
+                                textContent: `that the processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract; and`
+                            },
+                            {
+                                _id: "c",
+                                textContent: `such processing is carried out by automated means.`
+                            },
+                        ],
+                        endTextContent: `You have the right to receive your personal data from us in a structured, commonly used and machine-readable format. However, this right does not apply where it would adversely affect the rights and freedoms of others.`
+                    },
+                    {
+                        _id: 11.10,
+                        textContent: `Rights related to automated decision-making including profiling. We do not solely use automated decision making (including profiling) when processing your data, automated processing will be used to verify your contact details and determine if the campaign will be of interest to you. You have the right to object to decisions, should they be based purely on automated processing.`
+                    },
+                    {
+                        _id: 11.11,
+                        textContent: `Right to Complain. If you consider that our processing of your personal information infringes data protection laws, you should first contact us. If you are dissatisfied with the outcome, you have a legal right to lodge a complaint with a Supervisory Authority responsible for data protection. You may do so in the EU member state of your habitual residence, your place of work or the place of the alleged infringement.`
+                    },
+                ],
+            },
+            {
+                id: 'contacting-us-concerning-the-contents-of-this-privacy-policy',
+                title: 'Contacting us concerning the contents of this Privacy Policy',
+                contents: [
+                    {
+                        _id: 12.1,
+                        textContent: `If Your query relates to this Privacy Policy or should you wish to exercise one of Your Data Protection Rights as a Data Subject, you can contact us in the following ways:`,
+                        subContents: [
+                            {
+                                _id: "a",
+                                textContent: `By post to Our registered office`
+                            },
+                            {
+                                _id: "b",
+                                textContent: `prospectiv@example.com`
+                            },
+                            {
+                                id: "c",
+                                _textContent: `+44 207 030 3340`
+                            }
+                        ]
+                    },
+                    {
+                       _id: 12.2,
+                        textContent: `If you remain unsatisfied by our response you may complain to the Information Commissioners offices at the following address:`,
+                        address: `Information Commissioner’s Office
+                       Wycliffe House
+                       Water Lane
+                           Wilmslow
+                     Cheshire
+                     SK9 5AF`,
+                        website: 'www.ico.org.uk'
+                    }
+                ]
+            },
+            {
+                title:'Amendments to this policy',
+                id: 'amendments-to-this-policy',
+                contents:[
+                    {
+                        id: 13.1,
+                        textContent: `We may update this policy from time to time by publishing a new version on our website.`
+                    },
+                    {
+                        id: 13.2,
+                        textContent: `You should check this page occasionally to ensure you are happy with any changes to this policy.`
+                    },
+                    {
+                        id: 13.3,
+                        textContent: `We may notify you of changes to this policy by email.`
+                    }
+                ],
+            } ,
+        
         ]
     }
 }

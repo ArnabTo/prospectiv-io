@@ -1,8 +1,189 @@
+// @ts-nocheck
 
+import { legalPageContent } from "@/lib/TextContent";
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 const PrivacyComponent = () => {
+
+    
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const [activeTab, setActiveTab] = useState('cookies');
+    const [activeSection, setActiveSection] = useState('');
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { threshold: 0.5, rootMargin: '0px 0px -100px 0px' } // Adjust for desired sensitivity
+        );
+
+        const sections = document.querySelectorAll('section[id]');
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const tab = searchParams.get('tab') || 'cookies'; // Default to 'cookies' tab
+        setActiveTab(tab);
+    }, [searchParams]);
+
     return (
         <div>
-            
+            <section id={legalPageContent.privacy_policy.section[0].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">1. {legalPageContent.privacy_policy.section[0].title}</h2>
+                <p className='text-lg text-textColorTwo'>{legalPageContent.privacy_policy.section[0].textContent}</p>
+                <div className="border border-borderColor rounded-xl ml-5 w-fit p-10">
+                    <span>
+                        <p>By email to our Data Protection Officer:
+                            <Link className="text-gradientColorOne" href='mailto:dpo@sopro.io'> {legalPageContent.privacy_policy.section[0].contactContent?.email}</Link>
+                        </p>
+                        <p>By telephone on: {legalPageContent.privacy_policy.section[0].contactContent?.telephone}</p>
+                    </span>
+                    <p>or</p>
+                    <span>
+                        <p>By post to: {legalPageContent.privacy_policy.section[0].contactContent?.address}
+                        </p>
+                        <p>By telephone on: {legalPageContent.privacy_policy.section[0].contactContent?.telephoneTwo}</p>
+                    </span>
+                </div>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[1].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">2. {legalPageContent.privacy_policy.section[1].title}</h2>
+                <div className="space-y-4">
+                    {legalPageContent.privacy_policy.section[1].contents?.map((content) =>
+                        <p className='text-lg text-textColorTwo' key={content.id}>
+                            <span className="text-secondary">{content.id}.   </span>
+                            {content.textContent}
+                        </p>)}
+                </div>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[2].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">3. {legalPageContent.privacy_policy.section[2].title}</h2>
+                <p className='text-lg text-textColorTwo'>{legalPageContent.privacy_policy.section[2].textContent}</p>
+                <div className="space-y-4">
+                    {legalPageContent.privacy_policy.section[2].contents?.map((content) =>
+                        <p className='text-lg text-textColorTwo' key={content.id}>
+                            <span className="text-secondary">{content.id} {content?.title}. </span>
+                            {content.textContent}
+                        </p>)}
+                </div>
+
+                <p className='text-lg text-textColorTwo my-4'>{legalPageContent.privacy_policy.section[2].endTextCotent}</p>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[3].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">4. {legalPageContent.privacy_policy.section[3].title}</h2>
+                <p className='text-lg text-textColorTwo'>
+                    <span className="text-secondary">{legalPageContent.privacy_policy.section[3].content?._id}  </span>
+                    {legalPageContent.privacy_policy.section[3].content?.textContent}
+                </p>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[4].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">5. {legalPageContent.privacy_policy.section[4].title}</h2>
+                <p className='text-lg text-textColorTwo'>
+                    <span className="text-secondary">{legalPageContent.privacy_policy.section[4].content?._id}  </span>
+                    {legalPageContent.privacy_policy.section[4].content?.textContent}
+                </p>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[5].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">6. {legalPageContent.privacy_policy.section[5].title}</h2>
+                <div className="space-y-4">
+                    {legalPageContent.privacy_policy.section[5].contents?.map((content) =>
+                        <p className='text-lg text-textColorTwo' key={content.id}>
+                            <span className="text-secondary">{content.id}. </span>
+                            {content.textContent}
+                        </p>)}
+                </div>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[6].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">7. {legalPageContent.privacy_policy.section[6].title}</h2>
+                <div className="space-y-4">
+                    {legalPageContent.privacy_policy.section[6].contents?.map((content) =>
+                        <p className='text-lg text-textColorTwo' key={content.id}>
+                            <span className="text-secondary">{content.id}. </span>
+                            {content.textContent}
+                        </p>)}
+                </div>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[7].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">8. {legalPageContent.privacy_policy.section[7].title}</h2>
+                <div className="space-y-4">
+                    {legalPageContent.privacy_policy.section[7].contents?.map((content) =>
+                        <p className='text-lg text-textColorTwo' key={content.id}>
+                            <span className="text-secondary">{content.id}. </span>
+                            {content.textContent}
+                        </p>)}
+                </div>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[8].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">9. {legalPageContent.privacy_policy.section[8].title}</h2>
+                <p className='text-lg text-textColorTwo'>
+                    <span className="text-secondary">{legalPageContent.privacy_policy.section[8].content?._id}  </span>
+                    {legalPageContent.privacy_policy.section[8].content?.textContent}
+                </p>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[9].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">10. {legalPageContent.privacy_policy.section[9].title}</h2>
+                <p className='text-lg text-textColorTwo'>
+                    <span className="text-secondary">{legalPageContent.privacy_policy.section[9].content?._id}  </span>
+                    {legalPageContent.privacy_policy.section[9].content?.textContent}
+                </p>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[10].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">11. {legalPageContent.privacy_policy.section[10].title}</h2>
+                <div className="space-y-4">
+
+                    {legalPageContent.privacy_policy.section[10].contents?.map((content) =>
+                        <div key={content?._id} className="space-y-2">
+                            <p className="text-lg text-textColorTwo"><span className="text-secondary">{content?._id}.  </span>
+                                {content.textContent}</p>
+
+                            {
+                                content.subContents ?
+                                    <div className="border border-borderColor p-5 w-fit rounded-xl ml-5">
+                                        {content.subContents.map((subCont) =>
+                                            <p className="text-lg text-textColorTwo" key={subCont._id}>
+                                                <span className="text-secondary">{subCont._id}. </span>
+                                                {subCont.textContent}
+                                            </p>)}
+                                    </div>
+                                    :
+                                    <></>
+                            }
+                        </div>
+                    )}
+                </div>
+            </section>
+
+            <section id={legalPageContent.privacy_policy.section[11].id} className='text-lg text-textColorTwo space-y-5 py-5'>
+                <h2 className="text-3xl text-secondary">12. {legalPageContent.privacy_policy.section[11].title}</h2>
+                <div className="space-y-4">
+                    {legalPageContent.privacy_policy.section[11].contents?.map((content) =>
+                        <div key={content?._id} className="space-y-2">
+                            <p className="text-lg text-textColorTwo"><span className="text-secondary">{content?._id}.  </span>
+                                {content.textContent}
+                            </p>
+                        </div>
+                    )}
+                </div>
+            </section>
         </div>
     );
 };
