@@ -3,14 +3,9 @@
 import { Card } from "@/components/ui/card";
 import { legalPageContent } from "@/lib/TextContent";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 const PrivacyComponent = () => {
 
-
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    // const [activeTab, setActiveTab] = useState('cookies');
     const [activeSection, setActiveSection] = useState('');
 
     useEffect(() => {
@@ -31,10 +26,6 @@ const PrivacyComponent = () => {
         return () => observer.disconnect();
     }, []);
 
-    // useEffect(() => {
-    //     const tab = searchParams.get('tab') || 'cookies'; // Default to 'cookies' tab
-    //     setActiveTab(tab);
-    // }, [searchParams]);
 
     return (
 

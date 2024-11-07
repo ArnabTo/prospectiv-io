@@ -8,13 +8,14 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, MessageCircleWarning } from "lucide-react";
+import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, MessageCircleWarning, Trophy } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useCallback, useEffect, useRef, useState } from "react";
+
 import axios from "axios";
-import { Blog } from "@/types/types";
+import { Blog, BlogPost } from "@/types/types";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -212,6 +213,40 @@ const Navbar = () => {
                                             </li>
                                         </motion.ul>
                                     </li>
+                                    <li className="relative" ref={dropdownRef}>
+                                        <div
+                                            className="text-lg font-bold hover:text-secondary transition-all duration-500"
+                                            onClick={() => toggleDropdown(1)}
+                                        >
+                                            Results
+                                        </div>
+                                        <motion.ul
+                                            className="overflow-hidden"
+                                            initial="hidden"
+                                            animate={openDropdownIndex === 2 ? "visible" : "hidden"}
+                                            exit="exit"
+                                            variants={dropdownVariants}
+                                            style={{
+                                                visibility: openDropdownIndex === 2 ? 'visible' : 'hidden',
+                                                display: openDropdownIndex === 2 ? 'block' : 'none'
+                                            }}
+                                        >
+                                            <li>
+                                                <Link href="/result/success-stories" className="block py-2">
+                                                    <div className="flex justify-start items-start gap-2 pl-5">
+                                                        <h1 className="text-md font-bold text-white">Success Stories</h1>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/result/awards-and-recognitions" className="block py-2">
+                                                    <div className="flex justify-start items-start gap-2 pl-5">
+                                                        <h1 className="text-md font-bold text-white">Awards & Recognition</h1>
+                                                    </div>
+                                                </Link>
+                                            </li>
+                                        </motion.ul>
+                                    </li>
                                 </ul>
                                 <motion.div
                                     initial={{ opacity: 0 }}
@@ -363,11 +398,51 @@ const Navbar = () => {
                                     </div>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-                            <NavigationMenuItem className="pt-[8px]">
+
+                            <NavigationMenuItem className="pt-[3px]">
+                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Results</NavigationMenuTrigger>
+                                <NavigationMenuContent>
+                                    <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
+                                        <div className="flex flex-col gap-5">
+                                            <Link href="/result/success-story" className="w-full transition-all duration-500 group">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <Award className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-secondary">Success Story</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            A page about our culture, people, values and what it's like to work here
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className="w-1 h-16 bg-secondary"></div>
+                                        <div className="flex flex-col gap-5">
+                                            <Link href="/result/awards-and-recognitions" className="transition-all duration-500 group">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <Trophy className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-secondary">Awards & Recognition</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            Meet your campaign team: over 300 prospecting experts helping you sell more.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </NavigationMenuContent>
+                            </NavigationMenuItem>
+                    
+                            {/* <NavigationMenuItem className="pt-[8px]">
                                 <Link href='/result/success-story' className="text-lg font-bold hover:text-secondary transition-all duration-500">
                                     <NavigationMenuLink>Result</NavigationMenuLink>
                                 </Link>
-                            </NavigationMenuItem>
+                            </NavigationMenuItem> */}
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>

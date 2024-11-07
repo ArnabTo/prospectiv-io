@@ -283,3 +283,22 @@ export const  SUCCESSSTORY_DEATILS_QUERY = defineQuery(`
     } ,
 } 
 `)
+
+export const  AWARDS_QUERY = defineQuery(`
+  *[_type == "awards" && defined(slug.current)] | order(_createdAt desc){
+    _id,
+  title,
+  slug,
+  award_name,
+  category,
+  year,
+  award_url,
+  thumbnail{
+    asset->{
+      _id,
+      url
+    },
+    alt
+  }
+} 
+`)
