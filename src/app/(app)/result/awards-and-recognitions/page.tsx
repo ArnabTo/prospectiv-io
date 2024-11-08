@@ -14,11 +14,16 @@ import CompanyLogoTwo from '@/public/assets/company_logo/getapp_logo_colored.svg
 import CompanyLogoThree from '@/public/assets/company_logo/software_advice_logo_colored.svg'
 import Rating from '@/components/rating/RatingComponent';
 import { motion } from 'framer-motion';
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
+import { awardsandRecognitionPageTextContent } from '@/lib/TextContent';
+
+const ITEMS_PER_PAGE = 6;
 
 const AwardsAndRecognitions = () => {
     const [awards, setAwards] = useState<Award[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [awardCategory, setAwardCategory] = useState('all');
+    const [currentPage, setCurrentPage] = useState(1);
 
     const fetchAwards = useCallback(async () => {
         setIsLoading(true);
@@ -45,10 +50,107 @@ const AwardsAndRecognitions = () => {
             ? awards
             : awards.filter((award) => award.category === category);
     };
+
+    const getPaginatedAwards = (category: string) => {
+        const filtered = filteredAwards(category);
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+        return filtered.slice(startIndex, endIndex);
+    };
+
+    const getTotalPages = (category: string) => {
+        const filtered = filteredAwards(category);
+        return Math.ceil(filtered.length / ITEMS_PER_PAGE);
+    };
+
+    const renderPagination = (category: string) => {
+        const totalPages = getTotalPages(category);
+        if (totalPages <= 1) return null;
+
+        return (
+            <Pagination className="mt-8">
+                <PaginationContent>
+                    <PaginationItem>
+                        <PaginationPrevious 
+                            onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                            className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                        />
+                    </PaginationItem>
+                    
+                    {[...Array(totalPages)].map((_, index) => {
+                        const pageNumber = index + 1;
+                        const isCurrentPage = pageNumber === currentPage;
+                        
+                        return (
+                            <PaginationItem key={pageNumber}>
+                                <PaginationLink
+                                    onClick={() => setCurrentPage(pageNumber)}
+                                    isActive={isCurrentPage}
+                                    className="cursor-pointer"
+                                >
+                                    {pageNumber}
+                                </PaginationLink>
+                            </PaginationItem>
+                        );
+                    })}
+
+                    <PaginationItem>
+                        <PaginationNext 
+                            onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                            className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                        />
+                    </PaginationItem>
+                </PaginationContent>
+            </Pagination>
+        );
+    };
+
+    const renderAwardGrid = (category: string) => {
+        const paginatedAwards = getPaginatedAwards(category);
+        
+        if (paginatedAwards.length === 0) {
+            return <p className='text-center text-lg text-textColorTwo'>No {category} awards found.</p>;
+        }
+
+        return (
+            <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {paginatedAwards.map((award, index) => (
+                        <div key={index} className="award-item group">
+                            <Link href={award.award_url}>
+                                <Card className="border border-borderColor rounded-xl h-full flex flex-col">
+                                    <CardHeader className="h-40">
+                                        <div className="w-full h-full flex justify-center items-center relative">
+                                            <Image
+                                                className="w-full h-full object-scale-down"
+                                                src={award.thumbnail.asset.url}
+                                                width={300}
+                                                height={300}
+                                                alt="award_thumbnail"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                            <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
+                                                {award.category}
+                                            </div>
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent className="flex-grow flex flex-col justify-between">
+                                        <p className="text-sm text-gradientColorOne">{award.year}</p>
+                                        <h3 className="text-xl font-bold">{award.title}</h3>
+                                        <p className="text-lg text-textColorTwo">{award.award_name}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+                {renderPagination(category)}
+            </>
+        );
+    };
     console.log(awards)
     return (
         <div>
-
             <div className='relative'>
                 <div
                     className='w-full h-[24rem] bg-no-repeat bg-cover bg-center bg-fixed opacity-20'
@@ -94,210 +196,30 @@ const AwardsAndRecognitions = () => {
                         <TabsTrigger value="bronze">Bronze</TabsTrigger>
                     </TabsList>
 
-                    <TabsContent value="all">
-                        {isLoading ? <div><Loader2 className='animate-spin mx-auto' /></div> : (
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {filteredAwards('all').map((award, index) => (
-                                    <div key={index} className="award-item group">
-                                        <Link href={award.award_url}>
-                                            <Card className="border border-borderColor rounded-xl h-full flex flex-col">
-                                                <CardHeader className="h-40">
-                                                    <div className="w-full h-full flex justify-center items-center relative">
-                                                        <Image
-                                                            className="w-full h-full object-scale-down"
-                                                            src={award.thumbnail.asset.url}
-                                                            width={300}
-                                                            height={300}
-                                                            alt="award_thumbnail"
-                                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                        />
-                                                        <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
-                                                            {award.category}
-                                                        </div>
-                                                    </div>
-                                                </CardHeader>
-                                                <CardContent className="flex-grow flex flex-col justify-between">
-                                                    <p className="text-sm text-gradientColorOne">{award.year}</p>
-                                                    <h3 className="text-xl font-bold">{award.title}</h3>
-                                                    <p className="text-lg text-textColorTwo">{award.award_name}</p>
-                                                </CardContent>
-                                            </Card>
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </TabsContent>
-                    <TabsContent value="shortlisted">
-                        {filteredAwards('shortlisted').length > 0 ? (
-                            filteredAwards('shortlisted').map((award, index) => (
-                                <div key={index} className="award-item group">
-                                    <Link href={award.award_url}>
-                                        <Card className="border border-borderColor rounded-xl h-full flex flex-col">
-                                            <CardHeader className="h-40">
-                                                <div className="w-full h-full flex justify-center items-center relative">
-                                                    <Image
-                                                        className="w-full h-full object-scale-down"
-                                                        src={award.thumbnail.asset.url}
-                                                        width={300}
-                                                        height={300}
-                                                        alt="award_thumbnail"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                    />
-                                                    <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
-                                                        {award.category}
-                                                    </div>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="flex-grow flex flex-col justify-between">
-                                                <p className="text-sm text-gradientColorOne">{award.year}</p>
-                                                <h3 className="text-xl font-bold">{award.title}</h3>
-                                                <p className="text-lg text-textColorTwo">{award.award_name}</p>
-                                            </CardContent>
-                                        </Card>
-                                    </Link>
-                                </div>
-                            ))
-                        ) : (
-                            <p className='text-center text-lg text-textColorTwo'>No bronze awards found.</p>
-                        )}
-                    </TabsContent>
-                    <TabsContent value="winner">
-                        {filteredAwards('winner').length > 0 ? (
-                            filteredAwards('winner').map((award, index) => (
-                                <div key={index} className="award-item group">
-                                    <Link href={award.award_url}>
-                                        <Card className="border border-borderColor rounded-xl h-full flex flex-col">
-                                            <CardHeader className="h-40">
-                                                <div className="w-full h-full flex justify-center items-center relative">
-                                                    <Image
-                                                        className="w-full h-full object-scale-down"
-                                                        src={award.thumbnail.asset.url}
-                                                        width={300}
-                                                        height={300}
-                                                        alt="award_thumbnail"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                    />
-                                                    <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
-                                                        {award.category}
-                                                    </div>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="flex-grow flex flex-col justify-between">
-                                                <p className="text-sm text-gradientColorOne">{award.year}</p>
-                                                <h3 className="text-xl font-bold">{award.title}</h3>
-                                                <p className="text-lg text-textColorTwo">{award.award_name}</p>
-                                            </CardContent>
-                                        </Card>
-                                    </Link>
-                                </div>
-                            ))
-                        ) : (
-                            <p className='text-center text-lg text-textColorTwo'>No bronze awards found.</p>
-                        )}
-                    </TabsContent>
-                    <TabsContent value="silver">
-                        {filteredAwards('silver').length > 0 ? (
-                            filteredAwards('silver').map((award, index) => (
-                                <div key={index} className="award-item group">
-                                    <Link href={award.award_url}>
-                                        <Card className="border border-borderColor rounded-xl h-full flex flex-col">
-                                            <CardHeader className="h-40">
-                                                <div className="w-full h-full flex justify-center items-center relative">
-                                                    <Image
-                                                        className="w-full h-full object-scale-down"
-                                                        src={award.thumbnail.asset.url}
-                                                        width={300}
-                                                        height={300}
-                                                        alt="award_thumbnail"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                    />
-                                                    <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
-                                                        {award.category}
-                                                    </div>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="flex-grow flex flex-col justify-between">
-                                                <p className="text-sm text-gradientColorOne">{award.year}</p>
-                                                <h3 className="text-xl font-bold">{award.title}</h3>
-                                                <p className="text-lg text-textColorTwo">{award.award_name}</p>
-                                            </CardContent>
-                                        </Card>
-                                    </Link>
-                                </div>
-                            ))
-                        ) : (
-                            <p className='text-center text-lg text-textColorTwo'>No bronze awards found.</p>
-                        )}
-                    </TabsContent>
-                    <TabsContent value="gold">
-                        {filteredAwards('gold').length > 0 ? (
-                            filteredAwards('gold').map((award, index) => (
-                                <div key={index} className="award-item group">
-                                    <Link href={award.award_url}>
-                                        <Card className="border border-borderColor rounded-xl h-full flex flex-col">
-                                            <CardHeader className="h-40">
-                                                <div className="w-full h-full flex justify-center items-center relative">
-                                                    <Image
-                                                        className="w-full h-full object-scale-down"
-                                                        src={award.thumbnail.asset.url}
-                                                        width={300}
-                                                        height={300}
-                                                        alt="award_thumbnail"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                    />
-                                                    <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
-                                                        {award.category}
-                                                    </div>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="flex-grow flex flex-col justify-between">
-                                                <p className="text-sm text-gradientColorOne">{award.year}</p>
-                                                <h3 className="text-xl font-bold">{award.title}</h3>
-                                                <p className="text-lg text-textColorTwo">{award.award_name}</p>
-                                            </CardContent>
-                                        </Card>
-                                    </Link>
-                                </div>
-                            ))
-                        ) : (
-                            <p className='text-center text-lg text-textColorTwo'>No bronze awards found.</p>
-                        )}
-                    </TabsContent>
-                    <TabsContent value="bronze">
-                        {filteredAwards('bronze').length > 0 ? (
-                            filteredAwards('bronze').map((award, index) => (
-                                <div key={index} className="award-item group">
-                                    <Link href={award.award_url}>
-                                        <Card className="border border-borderColor rounded-xl h-full flex flex-col">
-                                            <CardHeader className="h-40">
-                                                <div className="w-full h-full flex justify-center items-center relative">
-                                                    <Image
-                                                        className="w-full h-full object-scale-down"
-                                                        src={award.thumbnail.asset.url}
-                                                        width={300}
-                                                        height={300}
-                                                        alt="award_thumbnail"
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                    />
-                                                    <div className="absolute top-0 left-0 px-3 py-1 rounded-full bg-smallCard group-hover:bg-secondary">
-                                                        {award.category}
-                                                    </div>
-                                                </div>
-                                            </CardHeader>
-                                            <CardContent className="flex-grow flex flex-col justify-between">
-                                                <p className="text-sm text-gradientColorOne">{award.year}</p>
-                                                <h3 className="text-xl font-bold">{award.title}</h3>
-                                                <p className="text-lg text-textColorTwo">{award.award_name}</p>
-                                            </CardContent>
-                                        </Card>
-                                    </Link>
-                                </div>
-                            ))
-                        ) : (
-                            <p className='text-center text-lg text-textColorTwo'>No bronze awards found.</p>
-                        )}
-                    </TabsContent>
+                     {isLoading ? (
+                        <div><Loader2 className='animate-spin mx-auto' /></div>
+                    ) : (
+                        <>
+                            <TabsContent value="all">
+                                {renderAwardGrid('all')}
+                            </TabsContent>
+                            <TabsContent value="shortlisted">
+                                {renderAwardGrid('shortlisted')}
+                            </TabsContent>
+                            <TabsContent value="winner">
+                                {renderAwardGrid('winner')}
+                            </TabsContent>
+                            <TabsContent value="silver">
+                                {renderAwardGrid('silver')}
+                            </TabsContent>
+                            <TabsContent value="gold">
+                                {renderAwardGrid('gold')}
+                            </TabsContent>
+                            <TabsContent value="bronze">
+                                {renderAwardGrid('bronze')}
+                            </TabsContent>
+                        </>
+                    )}
                 </Tabs>
 
                 {/* companies trus on us */}
@@ -336,14 +258,13 @@ const AwardsAndRecognitions = () => {
                 </div>
 
                 <div className='space-y-10 px-5'>
-
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        <h1 className='text-3xl font-bold text-start'>Explore About us</h1>
+                        <h1 className='text-3xl font-bold text-start'>Explore Our Success Stories</h1>
                     </motion.div>
 
                     <motion.div
@@ -353,58 +274,21 @@ const AwardsAndRecognitions = () => {
                         viewport={{ once: true }}
                         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
 
-                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
+                        <Link href='/result/success-story' className='border border-borderColor rounded-2xl p-5'>
                             <div className='flex flex-col gap-5'>
                                 <div>
                                     <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg'
+                                        src={awardsandRecognitionPageTextContent.success_section.imageLInk}
                                         alt="image"
                                         width={500}
                                         height={500}
-                                        className="w-full h-full object-cover rounded-lg"
+                                        className="w-full h-full max-h-44 object-cover rounded-lg"
                                     />
                                 </div>
                                 <div>
-                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                    </p>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                            <div className='flex flex-col gap-5'>
-                                <div>
-                                    <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg'
-                                        alt="image"
-                                        width={500}
-                                        height={500}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
-                                    </p>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link href='#' className='border border-borderColor rounded-2xl p-5'>
-                            <div className='flex flex-col gap-5'>
-                                <div>
-                                    <Image
-                                        src='https://sopro.io/wp-content/uploads/2023/07company/careers_bottom.jpg'
-                                        alt="image"
-                                        width={500}
-                                        height={500}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className='text-2xl font-bold text-secondary'>Carrers</h3>
-                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →
+                                    <h3 className='text-2xl font-bold text-secondary'>{awardsandRecognitionPageTextContent.success_section.heading}</h3>
+                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>
+                                        {awardsandRecognitionPageTextContent.success_section.textContent} →
                                     </p>
                                 </div>
                             </div>

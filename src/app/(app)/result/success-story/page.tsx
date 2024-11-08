@@ -19,6 +19,7 @@ import CompanyLogoOne from '@/public/assets/company_logo/capterra_logo_colored.s
 import CompanyLogoTwo from '@/public/assets/company_logo/getapp_logo_colored.svg'
 import CompanyLogoThree from '@/public/assets/company_logo/software_advice_logo_colored.svg'
 import PaginatedSuccessStories from "@/components/successstories/AllSuccessStories";
+import { successStoryPageTextContent } from "@/lib/TextContent";
 
 
 const SuccessStory = () => {
@@ -285,6 +286,45 @@ const SuccessStory = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className='space-y-10 px-5'>
+                    <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                    >
+                        <h1 className='text-3xl font-bold text-center'>Explore Our Awards and Recognitions</h1>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center'>
+
+                        <Link href='/result/awards-and-recognitions' className='border border-borderColor rounded-2xl p-5'>
+                            <div className='flex flex-col gap-5'>
+                                <div>
+                                    <Image
+                                        src={successStoryPageTextContent.exploreOurAwards.imageLInk}
+                                        alt="image"
+                                        width={500}
+                                        height={500}
+                                        className="w-full h-full max-h-44 object-cover rounded-lg"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className='text-2xl font-bold text-secondary'>{successStoryPageTextContent.exploreOurAwards.heading}</h3>
+                                    <p className='text-md lg:text-lg text-textColorTwo flex items-end'>
+                                        {successStoryPageTextContent.exploreOurAwards.textContent} →
+                                    </p>
+                                </div>
+                            </div>
+                        </Link>
+                    </motion.div>
+                </div>
                 </div>
             </div>
         </div>

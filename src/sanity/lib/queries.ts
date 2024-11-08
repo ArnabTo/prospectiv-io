@@ -285,7 +285,7 @@ export const  SUCCESSSTORY_DEATILS_QUERY = defineQuery(`
 `)
 
 export const  AWARDS_QUERY = defineQuery(`
-  *[_type == "awards" && defined(slug.current)] | order(_createdAt desc){
+  *[_type == "awards" && defined(title)] | order(_createdAt desc){
     _id,
   title,
   slug,

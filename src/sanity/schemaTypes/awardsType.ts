@@ -30,9 +30,11 @@ export const awardsType = defineType({
             type: 'string',
             options: {
                 list: [
-                    { title: 'Gold', value: 'gold' },
-                    { title: 'Silver', value: 'silver' },
-                    { title: 'Bronze', value: 'bronze' },
+                    { title: 'Gold', value: 'Gold' },
+                    { title: 'Silver', value: 'Silver' },
+                    { title: 'Bronze', value: 'Bronze' },
+                    { title: 'Shortlisted', value: 'Shortlisted' },
+                    { title: 'Winner', value: 'Winner' },
                 ],
                 layout: 'dropdown', // Optional, can also be 'radio' for radio buttons
             },

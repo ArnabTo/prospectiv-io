@@ -372,6 +372,21 @@ const pricingPageTextContent = {
     ]
 }
 
+const awardsandRecognitionPageTextContent = {
+    'success_section' :{
+        heading: 'Success Stories',
+        textContent:`Discover real transformations with Sopro. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
+        imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
+    }
+}
+
+const successStoryPageTextContent = {
+    exploreOurAwards:{
+        heading: 'Explore Our Awards',
+        textContent: `Discover real transformations with Sopro. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
+         imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
+    }
+}
 const legalPageContent = {
     cookies: {
         section: [
@@ -2216,5 +2231,7 @@ export {
     aboutUsPageTextContent,
     carrerPageTextContent,
     pricingPageTextContent,
-    legalPageContent
+    legalPageContent,
+    successStoryPageTextContent,
+    awardsandRecognitionPageTextContent
 }
