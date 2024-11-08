@@ -91,7 +91,7 @@ const WebinarDetails = () => {
             <div>
                 <p className='text-center text-xl mb-5'>Find out what Prospectiv could do for your new business</p>
                 <div className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                    <Link href="" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
+                    <Link href="/demo" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                         Book a Demo
                     </Link>
                 </div>

@@ -6,13 +6,14 @@ import { motion } from 'framer-motion';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import Link from 'next/link';
 import '../../../custom.css'
-import { useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import Lottie from 'lottie-react';
 import { lifeAtProspectivTextContent } from '@/lib/TextContent';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards, Autoplay } from 'swiper/modules';
+import { DynamicComponentWithNoSSR } from '@/lib/nossr';
 
 
 const LifeAtProspectiv = () => {
@@ -35,32 +36,7 @@ const LifeAtProspectiv = () => {
         lottieRef?.current?.stop(); // Stop the animation when hover ends
     };
 
-    const membersDetails = [
-        {
-            name: 'John Doe',
-            title: 'Founder & CEO',
-            avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-            says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
-        },
-        {
-            name: 'John Doe',
-            title: 'Founder & CEO',
-            avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-            says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
-        },
-        {
-            name: 'John Doe',
-            title: 'Founder & CEO',
-            avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-            says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
-        },
-        {
-            name: 'John Doe',
-            title: 'Founder & CEO',
-            avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-            says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
-        },
-    ]
+
     return (
         <div className='overflow-hidden'>
             <div className='relative'>
@@ -104,10 +80,10 @@ const LifeAtProspectiv = () => {
                         <p className='text-textColorTwo text-lg'>{lifeAtProspectivTextContent?.mettingPeople?.paragraph}</p>
                     </div>
                     <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5}}
-                    className='relative'>
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className='relative'>
                         <MemberCardMarquee />
 
                         <motion.div
@@ -201,7 +177,7 @@ const LifeAtProspectiv = () => {
                         </div>
 
                         <div className="w-60 lg:w-full max-w-64 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                            <Link href="" className="flex-1 font-bold text-center text-lg bg-black px-10 xl:px-16 py-5 rounded-full hover:scale-95 transition-all duration-300">
+                            <Link href="/demo" className="flex-1 font-bold text-center text-lg bg-black px-10 xl:px-16 py-5 rounded-full hover:scale-95 transition-all duration-300">
                                 Book a Demo
                             </Link>
                         </div>
@@ -230,7 +206,7 @@ const LifeAtProspectiv = () => {
 
 
                     <div className="w-60 lg:w-full max-w-64 flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                        <Link href="" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center hover:scale-95 transition-all duration-300 px-10 xl:px-12 py-5 rounded-full hover:bg-buttonHoverColor">
+                        <Link href="/pricing" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center hover:scale-95 transition-all duration-300 px-10 xl:px-12 py-5 rounded-full hover:bg-buttonHoverColor">
                             See Our Pricing
                         </Link>
                     </div>
@@ -292,8 +268,8 @@ const LifeAtProspectiv = () => {
                                             We provide a clear career path with regular 360-degree feedback, ensuring continuous learning and growth as a professional.
                                         </p>
                                         {/* <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>
-                                            We offer a well-structured career progression path supported by regular 360-degree feedback. Everyone has a clear path, so you’ll continually learn and grow as a professional.
-                                        </p> */}
+                                        We offer a well-structured career progression path supported by regular 360-degree feedback. Everyone has a clear path, so you’ll continually learn and grow as a professional.
+                                    </p> */}
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide className='bg-gradient-to-tr from-secondary via-gradientColorThree to-gradientColorFour'>
@@ -370,10 +346,10 @@ const LifeAtProspectiv = () => {
 
                 <div className='space-y-7 px-5'>
                     <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 0.5}}
-                    viewport={{ once: true }}
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
                     >
                         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Culture and perks</h1>
                     </motion.div>
@@ -382,11 +358,11 @@ const LifeAtProspectiv = () => {
                         <div className='relative grid grid-cols-1 md:grid-cols-2 gap-4'>
 
                             <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            viewport={{ once: true }}
-                            className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                viewport={{ once: true }}
+                                className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
                                 onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                                 onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                             >
@@ -405,11 +381,11 @@ const LifeAtProspectiv = () => {
                             </motion.div>
 
                             <motion.div
-                               initial={{ opacity: 0, scale: 0.9 }}
-                               whileInView={{ opacity: 1, scale: 1 }}
-                               transition={{ duration: 0.5, delay: 0.4 }}
-                               viewport={{ once: true }}
-                            className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: 0.4 }}
+                                viewport={{ once: true }}
+                                className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
                                 onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                                 onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                             >
@@ -430,10 +406,10 @@ const LifeAtProspectiv = () => {
                             </motion.div>
 
                             <motion.div
-                               initial={{ opacity: 0, scale: 0.9 }}
-                               whileInView={{ opacity: 1, scale: 1 }}
-                               transition={{ duration: 0.5, delay: 0.6 }}
-                               viewport={{ once: true }}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: 0.6 }}
+                                viewport={{ once: true }}
                                 className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
                                 onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                                 onMouseLeave={() => handleMouseLeave(lottieRefFour)}
@@ -455,11 +431,11 @@ const LifeAtProspectiv = () => {
                             </motion.div>
 
                             <motion.div
-                               initial={{ opacity: 0, scale: 0.9 }}
-                               whileInView={{ opacity: 1, scale: 1 }}
-                               transition={{ duration: 0.5, delay: 0.8 }}
-                               viewport={{ once: true }}
-                            className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5, delay: 0.8 }}
+                                viewport={{ once: true }}
+                                className='bg-card border border-borderColor rounded-2xl p-5 lg:p-7 space-y-5'
                                 onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                                 onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                             >
@@ -490,15 +466,15 @@ const LifeAtProspectiv = () => {
                                 <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                             </motion.div>
                             {/* <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.3, delay: 1 }}
-                                viewport={{ once: true }}
-                                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
-                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                                <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                            </motion.div> */}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3, delay: 1 }}
+                            viewport={{ once: true }}
+                            className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
+                            <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                            <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                            <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                        </motion.div> */}
                         </div>
 
 
@@ -514,7 +490,7 @@ const LifeAtProspectiv = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5}}
+                        transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                         className='lg:w-5/6 mx-auto text-center space-y-5'>
                         <h3 className='text-4xl font-bold'>Perspectiv values</h3>
@@ -526,11 +502,11 @@ const LifeAtProspectiv = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
 
                         <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1}}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        viewport={{ once: true }}
-                        className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieOne)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieOne)}
                         >
@@ -549,11 +525,11 @@ const LifeAtProspectiv = () => {
                         </motion.div>
 
                         <motion.div
-                           initial={{ opacity: 0 }}
-                           whileInView={{ opacity: 1}}
-                           transition={{ duration: 0.5, delay: 0.4 }}
-                           viewport={{ once: true }}
-                        className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            viewport={{ once: true }}
+                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieTwo)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieTwo)}
                         >
@@ -574,11 +550,11 @@ const LifeAtProspectiv = () => {
                         </motion.div>
 
                         <motion.div
-                           initial={{ opacity: 0 }}
-                           whileInView={{ opacity: 1}}
-                           transition={{ duration: 0.5, delay: 0.6 }}
-                           viewport={{ once: true }}
-                        className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.6 }}
+                            viewport={{ once: true }}
+                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieThree)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieThree)}
                         >
@@ -599,11 +575,11 @@ const LifeAtProspectiv = () => {
                         </motion.div>
 
                         <motion.div
-                           initial={{ opacity: 0 }}
-                           whileInView={{ opacity: 1}}
-                           transition={{ duration: 0.5, delay: 0.8 }}
-                           viewport={{ once: true }}
-                        className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.8 }}
+                            viewport={{ once: true }}
+                            className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
                             onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieFour)}
                             onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieFour)}
                         >
@@ -629,21 +605,21 @@ const LifeAtProspectiv = () => {
 
                 <div className='space-y-10 px-5'>
 
-                <motion.div
-                initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.7}}
-                viewport={{ once: true }}
-                >
-                <h1 className='text-3xl font-bold text-start'>Explore About us</h1>
-                </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                    >
+                        <h1 className='text-3xl font-bold text-start'>Explore About us</h1>
+                    </motion.div>
 
                     <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7}}
-                    viewport={{ once: true }}
-                    className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                        className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
 
                         <Link href='#' className='border border-borderColor rounded-2xl p-5'>
                             <div className='flex flex-col gap-5'>
@@ -703,13 +679,11 @@ const LifeAtProspectiv = () => {
                         </Link>
                     </motion.div>
                 </div>
-
-
                 <div>
 
                 </div>
             </div>
-
+            <DynamicComponentWithNoSSR />
         </div>
     );
 };

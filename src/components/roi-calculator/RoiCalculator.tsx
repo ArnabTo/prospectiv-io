@@ -10,6 +10,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Separator } from '../ui/separator';
 import { motion } from 'framer-motion';
 import '../../app/custom.css';
+import Link from 'next/link';
 
 const FIXED_PROSPECTS: Record<number, number> = {
   4000: 1000,
@@ -1393,9 +1394,9 @@ const ROICalculator = () => {
                     <div className='space-y-3'>
                       <div
                         className="w-60 flex rounded-full ml-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
-                        <div className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
+                        <Link href='/demo' className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
                           Book a Demo
-                        </div>
+                        </Link>
                       </div>
                       <p
                         onClick={() => {

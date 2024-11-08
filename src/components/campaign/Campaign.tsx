@@ -17,12 +17,12 @@ const Campaign = () => {
                 </div>
                 <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4">
                     <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                        <Link href="" className="flex-1 font-bold text-lg bg-black px-10 text-center py-5 rounded-full hover:scale-95 transition-all duration-300">
+                        <Link href="/demo" className="flex-1 font-bold text-lg bg-black px-10 text-center py-5 rounded-full hover:scale-95 transition-all duration-300">
                             Book a Demo
                         </Link>
                     </div>
                     <div className="w-full flex rounded-full mx-auto shadow-lg duration-300 transform">
-                <Link href="" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center lg:px-10 py-5 rounded-full hover:bg-buttonHoverColor hover:scale-95 transition-all duration-300">
+                <Link href="/pricing" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center lg:px-10 py-5 rounded-full hover:bg-buttonHoverColor hover:scale-95 transition-all duration-300">
                     See Our Pricing
                 </Link>
             </div>
