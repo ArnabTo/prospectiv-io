@@ -158,22 +158,22 @@ const aboutUsPageTextContent = {
             {
                 heading: 'Customer Success',
                 paragraph: `The face of prospectiv, and your go to trusted advisors. Our Customer Success team are proactive, innovative, and creative. And they'll go the extra mile to build the campaign you deserve.`,
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                image: 'https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg?auto=compress&cs=tinysrgb&w=600',
             },
             {
                 heading: 'Operations',
                 paragraph: `The wizards behind the campaigns, these guys don't rest until they've pulled every lever and tweaked every button, in their never-ending pursuit of the perfect campaign.`,
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                image: 'https://images.pexels.com/photos/3184395/pexels-photo-3184395.jpeg?auto=compress&cs=tinysrgb&w=600',
             },
             {
                 heading: 'Tech',
                 paragraph: `The brains behind our world-class software, this team of self-confessed geeks build systems that deliver emails at an astonishing rate, and create cutting edge tech to take prospecting to the next level.`,
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                image: 'https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=600',
             },
             {
                 heading: 'Compliance and data',
                 paragraph: `The number boffins, our compliance and data experts are next-level clever, making sure everything we do is best in class and watertight.`,
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
+                image: 'https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=600',
             }
 
         ]
@@ -199,33 +199,28 @@ const aboutUsPageTextContent = {
         },
         contents: [
             {
-                name: 'John Doe',
+                name: 'Alice Johnson',
                 position: 'CEO',
-                email: 'uR4Uv@example.com',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
-                textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
+                email: 'alice.j@example.com',
+                image: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600',
+                textContent: `Alice started her career in finance but quickly shifted to technology after launching her first app at 15. Her passion for innovation has driven her to lead the company towards a digital-first approach, emphasizing user experience and functionality. She now oversees a team of creative minds and developers at Prospectiv.`
             },
-
+            
             {
-                name: 'John Doe',
-                position: 'CEO',
-                email: 'uR4Uv@example.com',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
-                textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
+                name: 'Mark Thompson',
+                position: 'CTO',
+                email: 'mark.t@example.com',
+                image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600',
+                textContent: `Mark discovered his love for coding after building his first game in high school. With over 20 years of experience in software development, he has led numerous projects across various industries. At Prospectiv, he handles all technical strategies and leads a talented team to create innovative solutions.`
             },
-
+            
             {
-                name: 'John Doe',
-                position: 'CEO',
-                email: 'uR4Uv@example.com',
-                image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwRPWpO-12m19irKlg8znjldmcZs5PO97B6A&s',
-                textContent: ` Rob has been a dedicated geek ever since being given a ZX Spectrum at 8 years old and spending an entire summer copying the code for Hangman.
-                                                When he sold his first website aged 12 he started to consider doing it for a living. He currently looks after everything tech at prospectiv: he wrote the first line of code and now manages a team of over 30 engineers.`
-            },
-
-
+                name: 'Sophie Lee',
+                position: 'Head of Product',
+                email: 'sophie.l@example.com',
+                image: 'https://images.pexels.com/photos/1065084/pexels-photo-1065084.jpeg?auto=compress&cs=tinysrgb&w=600',
+                textContent: `Sophie has a background in both design and engineering, making her a unique asset to the team. She started her journey in UX/UI and quickly moved up to product management. Known for her meticulous eye for detail, Sophie ensures that every product meets the highest standards at Prospectiv.`
+            }
         ],
         // contentOne: {
         //     name: 'John Doe',
@@ -265,12 +260,13 @@ const aboutUsPageTextContent = {
             paragraph: `From the beginning, we aimed to offer clients more than just logins and weekly reports. Prospectiv became a supportive marketing service focused on transparency, compliance, and protecting client reputations. With a team aligned to this vision, recognition and awards soon followed, fueling our drive even further.`
         },
         images: [
-            'https://images.unsplash.com/photo-1472491235688-bdc81a63246e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
-            'https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
-            'https://images.unsplash.com/photo-1668491195456-9341d9cf3977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXQlMjB3aGl0ZXxlbnwwfDF8fHwxNzIxODIyMzU3fDA&ixlib=rb-4.0.3&q=80&w=1080',
-            'https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
-            'https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080',
-            'https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080',
+            'https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/11489971/pexels-photo-11489971.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/19285096/pexels-photo-19285096/free-photo-of-group-photo-of-people-with-cameras.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/12705357/pexels-photo-12705357.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/16026798/pexels-photo-16026798/free-photo-of-people-standing-and-posing-together.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/27897550/pexels-photo-27897550/free-photo-of-a-group-of-people-standing-in-front-of-a-wall-with-graffiti.jpeg?auto=compress&cs=tinysrgb&w=1000',
+          'https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600',
         ]
     }
 }

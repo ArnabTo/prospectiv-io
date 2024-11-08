@@ -157,8 +157,8 @@ const ResourceHub = () => {
                               <div className="overflow-hidden relative rounded-xl">
                                  <Image
                                     src={webinars[0]?.thumbnail?.asset?.url}
-                                    width={500}
-                                    height={500}
+                                    width={1000}
+                                    height={1000}
                                     alt="thumbnail"
                                     className="w-full h-auto rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
                                  />

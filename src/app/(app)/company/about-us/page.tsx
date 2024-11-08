@@ -10,6 +10,7 @@ import Link from "next/link";
 import '@/app/custom.css'
 import { Mail } from "lucide-react";
 import CountUp from "react-countup";
+import PerspectivValues from "@/components/life-at-prospectiv-components/PerspectivValues";
 
 const AboutUs = () => {
 
@@ -66,7 +67,7 @@ const AboutUs = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-10 px-5 py-10">
                     <div className="lg:w-1/2">
                         <Image width={500} height={500} className="w-full rounded-2xl"
-                            src="https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="founder image" />
+                            src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600" alt="founder image" />
                     </div>
                     <div className="lg:w-1/2 space-y-5">
                         <h3 className="text-3xl font-bold text-secondary">{aboutUsPageTextContent?.founder?.heading}</h3>
@@ -74,123 +75,7 @@ const AboutUs = () => {
                     </div>
                 </div>
 
-                <div className='space-y-16 p-5'>
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
-                        className='lg:w-5/6 mx-auto text-center space-y-5'>
-                        <h2 className='text-4xl font-bold'>Perspectiv values</h2>
-                        <p className='text-textColorTwo text-lg'>
-                            {aboutUsPageTextContent?.prospectiValues?.heading?.paragraph}
-                        </p>
-                    </motion.div>
-
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
-                            onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieOne)}
-                            onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieOne)}
-                        >
-                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                <Lottie
-                                    lottieRef={perSpectiveValuesLottieOne}
-                                    animationData={require('@/public/assets/Down Payment.json')}
-                                    loop={false} // Play only once
-                                    autoplay={false} // Disable autoplay
-                                />
-                            </div>
-                            <div className='space-y-3 text-center lg:text-start'>
-                                <h3 className='text-2xl font-bold text-secondary'> {aboutUsPageTextContent?.prospectiValues?.contentOne?.heading}</h3>
-                                <p className='text-textColorTwo text-lg'>
-                                    {aboutUsPageTextContent?.prospectiValues?.contentOne?.paragraph}
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
-                            onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieTwo)}
-                            onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieTwo)}
-                        >
-                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                <Lottie
-                                    lottieRef={perSpectiveValuesLottieTwo}
-                                    animationData={require('@/public/assets/Trophy.json')}
-                                    loop={false} // Play only once
-                                    autoplay={false} // Disable autoplay
-                                />
-                            </div>
-                            <div className='space-y-3 text-center lg:text-start'>
-                                <h3 className='text-2xl font-bold text-secondary'> {aboutUsPageTextContent?.prospectiValues?.contentTwo?.heading}</h3>
-                                <p className='text-textColorTwo text-lg'>
-                                    {aboutUsPageTextContent?.prospectiValues?.contentTwo?.paragraph}
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                            viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
-                            onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieThree)}
-                            onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieThree)}
-                        >
-                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                <Lottie
-                                    lottieRef={perSpectiveValuesLottieThree}
-                                    animationData={require('@/public/assets/Team.json')}
-                                    loop={false} // Play only once
-                                    autoplay={false} // Disable autoplay
-                                />
-                            </div>
-                            <div className='space-y-3 text-center lg:text-start'>
-                                <h3 className='text-2xl font-bold text-secondary'> {aboutUsPageTextContent?.prospectiValues?.contentThree?.heading}</h3>
-                                <p className='text-textColorTwo text-lg'>
-                                    {aboutUsPageTextContent?.prospectiValues?.contentThree?.paragraph}
-                                </p>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.8 }}
-                            viewport={{ once: true }}
-                            className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
-                            onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieFour)}
-                            onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieFour)}
-                        >
-                            <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
-                                <Lottie
-                                    lottieRef={perSpectiveValuesLottieFour}
-                                    animationData={require('@/public/assets/Partnership.json')}
-                                    loop={false} // Play only once
-                                    autoplay={false} // Disable autoplay
-                                />
-                            </div>
-                            <div className='space-y-3 text-center lg:text-start'>
-                                <h3 className='text-2xl font-bold text-secondary'> {aboutUsPageTextContent?.prospectiValues?.contentFour?.heading}</h3>
-                                <p className='text-textColorTwo text-lg'>
-                                    {aboutUsPageTextContent?.prospectiValues?.contentFour?.paragraph}
-                                </p>
-                            </div>
-                        </motion.div>
-
-                    </div>
-                </div>
+                <PerspectivValues />
 
                 <div className="space-y-16 p-5">
                     <motion.div
@@ -291,7 +176,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className='space-y-5'>
-                    <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>#lifeatprospectiv</h2>
+                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>#lifeatprospectiv</h1>
 
                     <div className="p-5 sm:p-8">
                         <motion.div
@@ -300,26 +185,25 @@ const AboutUs = () => {
                             transition={{ duration: 0.7, delay: 0.6 }}
                             viewport={{ once: true }}
                             className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080" />
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080" />
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1668491195456-9341d9cf3977?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxjYXQlMjB3aGl0ZXxlbnwwfDF8fHwxNzIxODIyMzU3fDA&ixlib=rb-4.0.3&q=80&w=1080" />
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" />
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080" />
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" />
-                            <img className='rounded-xl' src="https://images.unsplash.com/photo-1498100152307-ce63fd6c5424?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080" />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/7109063/pexels-photo-7109063.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/6775117/pexels-photo-6775117.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/9301895/pexels-photo-9301895.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/7793142/pexels-photo-7793142.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/8101981/pexels-photo-8101981.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
                         </motion.div>
                     </div>
 
 
                     <div className="w-60 lg:w-full max-w-64 flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                        <Link href="" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center hover:scale-95 transition-all duration-300 px-10 xl:px-12 py-5 rounded-full hover:bg-buttonHoverColor">
+                        <Link href="/pricing" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground text-center hover:scale-95 transition-all duration-300 px-10 xl:px-12 py-5 rounded-full hover:bg-buttonHoverColor">
                             See Our Pricing
                         </Link>
                     </div>
                 </div>
 
                 <div className="space-y-16 p-5">
-
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -344,11 +228,11 @@ const AboutUs = () => {
                                     className="relative w-full lg:max-w-[80%] lg:h-[500px] xl:max-w-full rounded-2xl overflow-hidden group border border-borderColor cursor-pointer mx-auto"
                                 >
                                     <Image
-                                        width={300}
-                                        height={300}
+                                        width={1000}
+                                        height={1000}
                                         src={content?.image}
                                         alt="Harvey Todd"
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover filter grayscale group-hover:grayscale-0"
                                     />
                                     <div className="absolute inset-x-0 bottom-0 h-full bg-background/90 transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
                                         <div className="absolute inset-x-0 bottom-0 h-full flex items-center justify-center transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 overflow-auto lg:overflow-hidden p-4">
@@ -467,19 +351,19 @@ const AboutUs = () => {
                             <p className="text-md lg:text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentThree}</p>
                             <div className="w-60 lg:w-full max-w-72 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                                 <Link href="company/careers" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
-                                  {aboutUsPageTextContent.casestudy.cta}
+                                    {aboutUsPageTextContent.casestudy.cta}
                                 </Link>
                             </div>
                         </div>
                     </div>
 
-                    <div className="w-full md:max-w-44 flex-shrink-0">
+                    <div className="w-full md:max-w-60">
                         <Image
-                            width={300}
-                            height={300}
+                            width={1000}
+                            height={1000}
                             src={aboutUsPageTextContent?.leaderShipTeam?.contents[0]?.image}
                             alt="Harvey Todd"
-                            className="w-full h-full object-cover rounded-2xl md:rounded-full"
+                            className="w-full h-full object-cover rounded-2xl"
                         />
                     </div>
                 </div>

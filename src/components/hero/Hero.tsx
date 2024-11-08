@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HeroBg from '@/public/assets/herobg.svg';
+import HeroBg from '@/public/assets/herobg2.svg';
 import HeroBgTwo from '@/public/assets/herobgtwo.svg';
 import HeroBgThree from '@/public/assets/herobgthree.svg'
 import Image from "next/image";
@@ -80,7 +80,7 @@ const Hero = () => {
                         className="w-full flex justify-center items-center relative px-5">
 
                         <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-20 absolute left-5 lg:top-40" src={HeroBgTwo} width={300} height={300} alt="HeroBg" />
-                        <Image className="w-full max-w-[88%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-float z-10" src={HeroBg} width={500} height={500} alt="HeroBg" />
+                        <Image className="w-full object-cover max-w-[88%] mx-auto rounded-[10px] lg:rounded-[26px]  animate-float z-10" src={HeroBg} width={1200} height={1200} alt="HeroBg" />
                         <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-10 absolute right-5 lg:bottom-10 lg:right-8" src={HeroBgThree} width={500} height={500} alt="HeroBg" />
                     </motion.div>
 
