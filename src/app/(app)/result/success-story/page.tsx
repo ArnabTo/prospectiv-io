@@ -15,9 +15,9 @@ import Rating from "@/components/rating/RatingComponent";
 import '../../../custom.css'
 import axios from "axios";
 import { SuccessStoryType } from "@/types/types";
-import CompanyLogoOne from '@/public/assets/company_logo/capterra_logo_colored.svg'
-import CompanyLogoTwo from '@/public/assets/company_logo/getapp_logo_colored.svg'
-import CompanyLogoThree from '@/public/assets/company_logo/software_advice_logo_colored.svg'
+import CompanyLogoOne from '@/public/assets/company_logo/logoOne.svg'
+import CompanyLogoTwo from '@/public/assets/company_logo/logoTwo.svg'
+import CompanyLogoThree from '@/public/assets/company_logo/logoThree.svg'
 import PaginatedSuccessStories from "@/components/successstories/AllSuccessStories";
 import { successStoryPageTextContent } from "@/lib/TextContent";
 

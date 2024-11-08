@@ -13,15 +13,17 @@ const HowItWork = () => {
     const lottieRefFive = useRef(null);
     const lottieRefSix = useRef(null);
 
-    const lottieFIles = [
-        require('../../public/assets/search.json')
-    ]
+    
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
-        lottieRef?.current?.play(); // Play animation on hover
+        if (typeof document !== 'undefined') {
+            lottieRef?.current?.play(); // Play animation on hover
+        }
     };
 
     const handleMouseLeave = (lottieRef: React.RefObject<any>) => {
-        lottieRef?.current?.stop(); // Stop the animation when hover ends
+        if (typeof document !== 'undefined') {
+            lottieRef?.current?.stop(); // Stop the animation when hover ends
+        }
     };
 
     return (

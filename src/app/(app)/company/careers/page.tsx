@@ -14,11 +14,11 @@ import { Openings } from '@/types/types';
 const Careers = () => {
 
     const images = [
-        "https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-        "https://images.unsplash.com/photo-1515002246390-7bf7e8f87b54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxM3x8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-        "https://images.unsplash.com/photo-1511044568932-338cba0ad803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHwwfHx8MTcyMTgyMjE3OXww&ixlib=rb-4.0.3&q=80&w=1080",
-        "https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
-        "https://images.unsplash.com/photo-1475518112798-86ae358241eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y2F0fGVufDB8MHx8fDE3MjE4MjIxNzl8MA&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.pexels.com/photos/27897550/pexels-photo-27897550/free-photo-of-a-group-of-people-standing-in-front-of-a-wall-with-graffiti.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/262524/pexels-photo-262524.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/12705357/pexels-photo-12705357.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/11489971/pexels-photo-11489971.jpeg?auto=compress&cs=tinysrgb&w=600",
     ];
 
     const [vacancies, setVacancies] = useState<Openings[]>([]);
@@ -50,7 +50,7 @@ const Careers = () => {
                     <h1 className='text-3xl lg:text-6xl font-extrabold '>Find your <span className='text-secondary'>Oppurtunities</span> </h1>
                     <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>
                         We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
-                        We work hard to make Sopro a great place to work, and reward everyone who joins us.
+                        We work hard to make Prospectiv a great place to work, and reward everyone who joins us.
                     </p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
@@ -77,21 +77,9 @@ const Careers = () => {
                     <h2 className='text-3xl font-extrabold'>You’ll help businesses grow. We’ll help you grow.</h2>
                     <p className='text-textColorTwo text-lg'>
                         We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
-                        We work hard to make Sopro a great place to work, and reward everyone who joins us.
+                        We work hard to make Prospectiv a great place to work, and reward everyone who joins us.
                     </p>
                 </div>
-                {/* <div className='flex flex-col-reverse lg:flex-row justify-center items-center gap-5 mx-auto text-start space-y-4 my-16 p-5'>
-                    <div className='px-10 space-y-5'>
-                        <p className='text-textColorTwo text-lg'>That’s why our Glassdoor score is 4.8/5, and our Officevibe survey is 8.4/10. 
-                            Our team are from different backgrounds and countries, have different skills and experiences, but we’re all in this together.</p>
-                        <p>If that sounds like somewhere you’d like to join, we’d love to hear from you.</p>
-                    </div>
-                    <div className='flex flex-col justify-center gap-3 flex-shrink-0'>
-                        <CircularProgressBar rating={8} />
-                        <p className='text-lg font-bold'>Company Name</p>
-                        </div>
-                </div> */}
-
                 <div className="space-y-5">
                     <div className="p-4 md:p-8">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">

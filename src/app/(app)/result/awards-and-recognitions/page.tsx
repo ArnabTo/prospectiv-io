@@ -9,9 +9,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import HeaderImage from '@/public/assets/campany-culture.jpg'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { Loader2 } from 'lucide-react';
-import CompanyLogoOne from '@/public/assets/company_logo/capterra_logo_colored.svg'
-import CompanyLogoTwo from '@/public/assets/company_logo/getapp_logo_colored.svg'
-import CompanyLogoThree from '@/public/assets/company_logo/software_advice_logo_colored.svg'
+import CompanyLogoOne from '@/public/assets/company_logo/logoOne.svg'
+import CompanyLogoTwo from '@/public/assets/company_logo/logoTwo.svg'
+import CompanyLogoThree from '@/public/assets/company_logo/logoThree.svg'
 import Rating from '@/components/rating/RatingComponent';
 import { motion } from 'framer-motion';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';

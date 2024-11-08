@@ -52,7 +52,7 @@ const PrivacyComponent = () => {
                     <div className="border border-borderColor rounded-xl md:ml-5 w-fit p-2 md:p-10">
                         <span>
                             <p>By email to our Data Protection Officer:
-                                <Link className="text-gradientColorOne" href='mailto:dpo@sopro.io'> {legalPageContent.privacy_policy.section[0].contactContent?.email}</Link>
+                                <Link className="text-gradientColorOne" href='mailto:dpo@Prospectiv.io'> {legalPageContent.privacy_policy.section[0].contactContent?.email}</Link>
                             </p>
                             <p>By telephone on: <Link className="text-gradientColorOne" href={`tel:${legalPageContent.privacy_policy.section[0].contactContent?.telephone}`}>{legalPageContent.privacy_policy.section[0].contactContent?.telephone}</Link> </p>
                         </span>

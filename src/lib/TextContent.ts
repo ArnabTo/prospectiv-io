@@ -375,7 +375,7 @@ const pricingPageTextContent = {
 const awardsandRecognitionPageTextContent = {
     'success_section' :{
         heading: 'Success Stories',
-        textContent:`Discover real transformations with Sopro. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
+        textContent:`Discover real transformations with Prospectiv. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
         imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
     }
 }
@@ -383,7 +383,7 @@ const awardsandRecognitionPageTextContent = {
 const successStoryPageTextContent = {
     exploreOurAwards:{
         heading: 'Explore Our Awards',
-        textContent: `Discover real transformations with Sopro. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
+        textContent: `Discover real transformations with Prospectiv. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
          imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
     }
 }
@@ -1872,7 +1872,7 @@ const legalPageContent = {
             {
                 id: 'lia-failures',
                 title: 'LIA Failures',
-                textContent: `If Sopro determines that your planned B2B prospecting activity does not meet the criteria for Legitimate Interests within the scope of GDPR or if your approach would breach some other part of the regulations [including PECR] then we cannot support the activity within any regions subject to GDPR.`
+                textContent: `If Prospectiv determines that your planned B2B prospecting activity does not meet the criteria for Legitimate Interests within the scope of GDPR or if your approach would breach some other part of the regulations [including PECR] then we cannot support the activity within any regions subject to GDPR.`
 
             },
             {
@@ -1915,8 +1915,8 @@ const legalPageContent = {
         ]
     },
     usCompliance: {
-        title: 'Sopro CAN-SPAM and CCPA compliance statement',
-        textContent: `This statement sets out the operating procedures Sopro undertakes to ensure CAN-SPAM and CCPA best practice is observed to the greatest extent possible, at all times.`,
+        title: 'Prospectiv CAN-SPAM and CCPA compliance statement',
+        textContent: `This statement sets out the operating procedures Prospectiv undertakes to ensure CAN-SPAM and CCPA best practice is observed to the greatest extent possible, at all times.`,
         sections: [
             {
                 id: 'what-is-can-spam',
@@ -1954,26 +1954,26 @@ const legalPageContent = {
                 }
             },
             {
-                id: 'sopro-and-can-spam-ccpa-compliance',
-                title: 'Sopro and CAN-SPAM/CCPA compliance',
-                textContent: `In addition to appointing a compliance officer to oversee our adherence to the rules, Sopro has engaged 3rd party compliance expertise to audit and advise on best practice. This investment enables us to assure clients that CAN-SPAM and CCPA best practices are strictly observed wherever possible, at all times.`
+                id: 'Prospectiv-and-can-spam-ccpa-compliance',
+                title: 'Prospectiv and CAN-SPAM/CCPA compliance',
+                textContent: `In addition to appointing a compliance officer to oversee our adherence to the rules, Prospectiv has engaged 3rd party compliance expertise to audit and advise on best practice. This investment enables us to assure clients that CAN-SPAM and CCPA best practices are strictly observed wherever possible, at all times.`
             },
             {
-                title: 'Sopro’s relationship with you',
-                id: 'sopro-relationship-with-you',
+                title: 'Prospectiv’s relationship with you',
+                id: 'Prospectiv-relationship-with-you',
                 contents: [
                     `When it comes to CAN-SPAM and the CCPA, we’re joint controllers. Even though we’re working for you as a service provider, it’s important to recognise that we’re both responsible for: deciding who to target, what data to collect, and how that data is collected, processed, and stored.`,
-                    `We’ve also incorporated a comprehensive Data Sharing Agreement within Sopro’s standard Terms of Service - just to make everything easier. This agreement sets out how we work together as Joint Controllers and how we support each other if we ever receive a data request.`,
+                    `We’ve also incorporated a comprehensive Data Sharing Agreement within Prospectiv’s standard Terms of Service - just to make everything easier. This agreement sets out how we work together as Joint Controllers and how we support each other if we ever receive a data request.`,
                     `This decision is fundamental to how we operate, so please ask if you have any questions!`
                 ]
             },
             {
-                id: 'is-sopro-marketing-activity-compliant',
-                title: 'Is Sopro’s marketing activity compliant?',
+                id: 'is-Prospectiv-marketing-activity-compliant',
+                title: 'Is Prospectiv’s marketing activity compliant?',
                 contents: [
-                    `Of course! Compliance is built into everything we do at Sopro - our business wouldn’t be able to operate without it.`,
-                    `Sopro’s services are designed and offered solely to help businesses promote to other businesses (i.e. B2B marketing only). We ensure that the email marketing provided material is relevant and allow the recipient to opt out of future emails. Sopro has also established technical and operational systems to ensure all aspects of data collection, storage, and processing are compliant.`,
-                    `Before launching new client activity, we conduct an in-depth assessment to establish if the product or service, combined with the proposed targeting, meets the criteria for compliant business to business (B2B) marketing. A key part of this assessment is called the Legitimate Interest Assessment (LIA). We also have a standard privacy policy update for clients to use as needed, which includes all the relevant clauses plus references to Sopro to make everything clear to the data subject. Just let us know if you need a copy of any of these.`
+                    `Of course! Compliance is built into everything we do at Prospectiv - our business wouldn’t be able to operate without it.`,
+                    `Prospectiv’s services are designed and offered solely to help businesses promote to other businesses (i.e. B2B marketing only). We ensure that the email marketing provided material is relevant and allow the recipient to opt out of future emails. Prospectiv has also established technical and operational systems to ensure all aspects of data collection, storage, and processing are compliant.`,
+                    `Before launching new client activity, we conduct an in-depth assessment to establish if the product or service, combined with the proposed targeting, meets the criteria for compliant business to business (B2B) marketing. A key part of this assessment is called the Legitimate Interest Assessment (LIA). We also have a standard privacy policy update for clients to use as needed, which includes all the relevant clauses plus references to Prospectiv to make everything clear to the data subject. Just let us know if you need a copy of any of these.`
                 ]
             },
             {
@@ -1983,18 +1983,18 @@ const legalPageContent = {
                     {
                         title: 'Rights of individuals',
                         textContent: [
-                            `All messages sent will contain a link to a privacy policy that explains to the user exactly what their rights are as well as the type of data that is held about them and by who. Sopro will provide a template privacy policy or review your existing one to ensure it meets the required standard. Here’s a link to our privacy policy:`,
-                            `https://sopro.io/privacy-policy/`,
+                            `All messages sent will contain a link to a privacy policy that explains to the user exactly what their rights are as well as the type of data that is held about them and by who. Prospectiv will provide a template privacy policy or review your existing one to ensure it meets the required standard. Here’s a link to our privacy policy:`,
+                            `https://Prospectiv.io/privacy-policy/`,
                             `This standard privacy link would typically be contained in the email signature of any outbound messaging, in the case of messaging as part of client campaign activity, the privacy link will be that of our client’s own privacy policy.`
                         ]
                     },
                     {
                         title: 'Opting out and exclusion lists',
-                        textContent: `All recipients are able to opt out easily to prevent further email communication being received. All replies to prospecting emails are logged and those prospects are added to your campaign exclusion list within 24 hours. Sopro allows import of existing exclusion lists in advance of campaign activity. Exclusions can be submitted in the form of individual email addresses or full domains and will prevent communications being issued to those email addresses or domains listed.`
+                        textContent: `All recipients are able to opt out easily to prevent further email communication being received. All replies to prospecting emails are logged and those prospects are added to your campaign exclusion list within 24 hours. Prospectiv allows import of existing exclusion lists in advance of campaign activity. Exclusions can be submitted in the form of individual email addresses or full domains and will prevent communications being issued to those email addresses or domains listed.`
                     },
                     {
                         title: 'Subject access requests (SAR)',
-                        textContent: `All individuals have the right to request a copy of all data you hold on them. To support this data subjects can email any SAR requests to dpo@sopro.io and we will return this data within 72 hours.`,
+                        textContent: `All individuals have the right to request a copy of all data you hold on them. To support this data subjects can email any SAR requests to dpo@Prospectiv.io and we will return this data within 72 hours.`,
                     }, {
                         title: 'Right to be forgotten',
                         textContent: `All individuals have the right to have some or all of their data removed (to be ‘forgotten’) at any time. A conflict does arise in removing or forgetting an email address whilst at the same time keeping this address on an exclusion list to prevent future mailings. Where we have removed data, we will move the email address to a separate exclusion list, encrypted using a one-way hashing algorithm (SHA1), ensuring we are able to prevent any future messages being sent to the customer whilst continuing to honour their right to be forgotten.`
@@ -2002,19 +2002,19 @@ const legalPageContent = {
                 ]
             },
             {
-                id: 'sopro-employees',
-                title: "Sopro employees",
-                textContent: `All Sopro employees undergo both general and region-specific compliance training, this covers the CAN-SPAM and CCPA rule set in detail, the relevance and impact of those rules on Sopro and our clients, and the steps we take to ensure best practice is observed at all times. We also make clear the consequences (i.e. penalties) associated with failure to meet the strict standards.`,
+                id: 'Prospectiv-employees',
+                title: "Prospectiv employees",
+                textContent: `All Prospectiv employees undergo both general and region-specific compliance training, this covers the CAN-SPAM and CCPA rule set in detail, the relevance and impact of those rules on Prospectiv and our clients, and the steps we take to ensure best practice is observed at all times. We also make clear the consequences (i.e. penalties) associated with failure to meet the strict standards.`,
             },
             {
                 id: 'your-responsibility',
                 title: 'Your responsibility',
-                textContent: `Whilst Sopro continues to take extensive measures to ensure best practice with respect to CAN-SPAM and CCPA across all client activity, clients should take note that responsibility for compliance rests (in different forms) with each party. Sopro cannot be abreast of the constantly evolving regulatory frameworks in all countries at all times, as such it is important that you, as the client, have knowledge of your local regulatory climate and ensure your business operates within the relevant regulatory frameworks.`,
+                textContent: `Whilst Prospectiv continues to take extensive measures to ensure best practice with respect to CAN-SPAM and CCPA across all client activity, clients should take note that responsibility for compliance rests (in different forms) with each party. Prospectiv cannot be abreast of the constantly evolving regulatory frameworks in all countries at all times, as such it is important that you, as the client, have knowledge of your local regulatory climate and ensure your business operates within the relevant regulatory frameworks.`,
             },
             {
                 id: 'summary',
                 title: 'In Summary',
-                textContent: `Sopro has worked hard to develop a compliant platform providing innovative marketing services and technology for our clients and at all times respecting the rights of the data subjects whose information we collect. Compliance is part of what we do and ongoing due diligence is core to how we operate.`,
+                textContent: `Prospectiv has worked hard to develop a compliant platform providing innovative marketing services and technology for our clients and at all times respecting the rights of the data subjects whose information we collect. Compliance is part of what we do and ongoing due diligence is core to how we operate.`,
             }
         ]
     },
@@ -2024,7 +2024,7 @@ const legalPageContent = {
                 id: 'b2b-prospecting-and-gdpr-compliance',
                 title: 'B2B Prospecting and GDPR Compliance',
                 contents: [
-                    `Compliance can be an intimidating subject for any business. At Sopro, we’ve had to become experts, so you don’t have to worry. You can find a detailed FAQ below, but I wanted to highlight some of the key points first.`,
+                    `Compliance can be an intimidating subject for any business. At Prospectiv, we’ve had to become experts, so you don’t have to worry. You can find a detailed FAQ below, but I wanted to highlight some of the key points first.`,
                     `GDPR clarifies that processing personally identifiable data is fine on several grounds, including for marketing purposes, under legitimate interests.`,
                     `Consent to send email is also not required for UK B2B marketing communications, which is legislated under the UK’s PECR B2B exemption. This is different for B2C companies, but that is not new.`,
                     `The other GDPR compliance points are a bit more labour intensive to manage such as data storage, data security, additional policies and implementing Right to be Forgotten and Subject Access requests, as well as the usual unsubscribe lists.`,
@@ -2070,11 +2070,11 @@ const legalPageContent = {
                             `Our innovative prospecting approach is inherently GDPR and PECR compliant. We only target business customers with carefully crafted communication and ensure we meet PECR consent and opt-out requirements.`,
                             `We acknowledge our GDPR responsibility and ensure we meet our obligations throughout the process and help our clients understand and meet their obligations.`
                         ],
-                        textContentTwo: 'A few GDPR related Sopro facts:',
+                        textContentTwo: 'A few GDPR related Prospectiv facts:',
                         textContentThree: [
                             `Post GDPR, we’ve noticed that some prospects mistakenly believe that email marketing became largely illegal after May 25th, 2018.`,
                             `It didn’t. Why are we so sure?`,
-                            `Because our legal and tech teams worked really hard to ensure that we meet the regulations’ various guidelines on data protection, relevance, targeting, etc. It wasn’t easy. In fact, it took months of effort before May 2018 for us to say with total confidence that every Sopro campaign is (and always will) be 100% GDPR compliant.`
+                            `Because our legal and tech teams worked really hard to ensure that we meet the regulations’ various guidelines on data protection, relevance, targeting, etc. It wasn’t easy. In fact, it took months of effort before May 2018 for us to say with total confidence that every Prospectiv campaign is (and always will) be 100% GDPR compliant.`
                         ]
                     },
                     {
@@ -2153,11 +2153,11 @@ const legalPageContent = {
                     {
                         question: 'What policies or processes do I need in place?',
                         contents:[
-                            `We strongly advise that you complete your GDPR preparations regardless of whether you engage Sopro or not. Failure to complete GDPR can lead to punitive fines and robust enforcement action by the ICO.`,
-                            `We have produced a template Privacy Policy and Legitimate Interest Assessment to help get you started and to allow you to start your Sopro adventure.`,
+                            `We strongly advise that you complete your GDPR preparations regardless of whether you engage Prospectiv or not. Failure to complete GDPR can lead to punitive fines and robust enforcement action by the ICO.`,
+                            `We have produced a template Privacy Policy and Legitimate Interest Assessment to help get you started and to allow you to start your Prospectiv adventure.`,
                             `Your key document is your Privacy Policy.`,
                             `Any marketing messages should contain a link to a privacy policy explaining exactly what the user’s rights, as well as the type of data that is held about them, by who, and how the data was collected. You need to include us in your Privacy Policy just to keep us both covered.`,
-                            `(If needed Sopro can provide a template Privacy Policy or review your existing one to ensure it meets the required standard.)`,
+                            `(If needed Prospectiv can provide a template Privacy Policy or review your existing one to ensure it meets the required standard.)`,
                             `The rest of the documentation is just the standard GDPR set. Probably most importantly you need to know how you will manage any sort of request from a data subject. We can also help with but for example:`,
                             `Managing opting out and exclusion lists`,
                             `All recipients must be able to opt out easily to prevent further email communication being received. This is typically handled with an “unsubscribe” link.`,
@@ -2173,7 +2173,7 @@ const legalPageContent = {
                         contents:[
                             `Whilst GDPR controls the collection, storage and processing of personal data in the UK, sending messages is regulated under the Privacy and Electronic Communications Regulations (PECR). This is very clear as to the requirements on business to business communication:`,
                             `“You can email or text any corporate body (a company, Scottish partnership, limited liability partnership or government body). However, it is good practice – and good business sense – to keep a ‘do not email or text’ list of any businesses that object or opt out and screen any new marketing lists against that.”`,
-                            `This is where the Sopro approach really works – we only target business customers that are likely to be interested in your products and services`
+                            `This is where the Prospectiv approach really works – we only target business customers that are likely to be interested in your products and services`
                         ]
                     },
                     {
@@ -2222,6 +2222,16 @@ const legalPageContent = {
         ]
     }
 }
+
+const doNotSellMyDataPageContent= {
+    title:'Opt-out of Prospectiv data',
+    textContent: [
+        `Under the California Consumer Privacy Act (CCPA), California residents have certain rights regarding the personal information that businesses have about them. This includes the right to request access or deletion of your personal information, as well as the right to direct a company to stop selling your personal information. Under the General Data Protection Regulation (GDPR), EU citizens have similar rights. This web page helps both sets of residents fulfil their rights.`,
+        `If you would like to permanently erase all of your data and opt-out from future communications, please complete this form. Your request will be processed in the shortest time possible and we will confirm via email once we have completed your request.`,
+        `If you would like to understand what data we currently hold on you as an individual, or for further information and other requests, please email us at`
+    ],
+    mail:'prospectiv@prospectiv.com'
+}
 export {
     HeroSectionTextContent,
     whyProspectiveTextContent,
@@ -2233,5 +2243,6 @@ export {
     pricingPageTextContent,
     legalPageContent,
     successStoryPageTextContent,
-    awardsandRecognitionPageTextContent
+    awardsandRecognitionPageTextContent,
+    doNotSellMyDataPageContent
 }

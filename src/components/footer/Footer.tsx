@@ -6,9 +6,9 @@ import FacebookLogo from '@/public/assets/icons8-facebook-480.png'
 import Image from 'next/image';
 const Footer = () => {
     return (
-        <footer className='px-10 lg:px-32 mx-auto pt-24'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-10'>
-                <div className='space-y-5'>
+        <footer className='max-w-screen-2xl px-10 lg:px-32 mx-auto pt-24'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+                {/* <div className='space-y-5'>
                     <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Solutions</h3>
                     <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
                         <li className='hover:text-secondary'><Link href="#">Businesses with sales teams</Link></li>
@@ -22,21 +22,10 @@ const Footer = () => {
                         <li className='hover:text-secondary'><Link href="#">Multi-channel marketing agency</Link></li>
                         <li className='hover:text-secondary'><Link href="#">Account based marketing service</Link></li>
                     </ul>
-                </div>
-
-
-                <div className='space-y-5'>
-                    <div className='flex flex-col gap-5'>
-                        <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Results</h3>
-                        <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
-                            <li className='hover:text-secondary'><Link href="/result/success-story">Success stories</Link></li>
-                            <li className='hover:text-secondary'><Link href="/result/awards-and-recognitions">Awards and recognition</Link></li>
-                        </ul>
-                    </div>
-                </div>
+                </div> */}
 
                 <div className='space-y-5'>
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col justify-center gap-5'>
                         <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Company</h3>
                         <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
                             <li className='hover:text-secondary'><Link href="/company/about-us">About us</Link></li>
@@ -45,44 +34,48 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-
                 <div className='space-y-5'>
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col justify-center gap-5'>
+                        <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Results</h3>
+                        <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
+                            <li className='hover:text-secondary'><Link href="/result/success-story">Success stories</Link></li>
+                            <li className='hover:text-secondary'><Link href="/result/awards-and-recognitions">Awards and recognition</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='space-y-5'>
+                    <div className='flex flex-col justify-center gap-5'>
                         <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Legal</h3>
                         <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
-                            <li className='hover:text-secondary'><Link href="/legal">Cookie Policy</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">Privacy Policy</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">Terms</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">GDPR Compliance</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">US Compliance Statement</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">GDPR FAQ</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">Change cookie settings</Link></li>
-                            <li className='hover:text-secondary'><Link href="#">Do Not Sell My Personal Information</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal?tab=cookies">Cookie Policy</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal?tab=privacy">Privacy Policy</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal?tab=terms">Terms</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal?tab=gdpr">GDPR Compliance</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal?tab=us">US Compliance Statement</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal?tab=faq">GDPR FAQ</Link></li>
+                            <li className='hover:text-secondary'><Link href="/legal/do-not-sell-my-data">Do Not Sell My Personal Information</Link></li>
                         </ul>
                     </div>
                 </div>
 
-                <div className='space-y-5'>
-                    <div className='flex flex-col gap-5'>
-                        {/* <div className="w-full flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                            <Link href="#" className="w-full font-bold text-lg text-center bg-black px-10 lg:px-16 py-5 rounded-full">
-                                Book a Demo
-                            </Link>
-                        </div> */}
+                <div className='space-y-5 flex justify-center items-center'>
+                    <div className='flex flex-col justify-center gap-5'>
                         <div>
                             <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Resources</h3>
                             <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
                                 <li className='hover:text-secondary'><Link href="/resources/resource-hub">Resources hub</Link></li>
                                 <li className='hover:text-secondary'><Link href="/resources/blog">Blog</Link></li>
-                                <li className='hover:text-secondary'><Link href="#">20224 Whitepaper</Link></li>
+                                <li className='hover:text-secondary'><Link href="/resources/resource-hub">20224 Whitepaper</Link></li>
                             </ul>
                         </div>
                         <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
                             <li className='hover:text-secondary'>
-                                <Link href="#"><h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Contact</h3></Link></li>
-                            <li className='hover:text-secondary'><Link href="/pricing">
-                                <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Pricing</h3>
-                            </Link></li>
+                                <Link href="/demo"><h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Contact</h3></Link></li>
+                            <li className='hover:text-secondary'>
+                                <Link href="/pricing">
+                                    <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Pricing</h3>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -94,18 +87,12 @@ const Footer = () => {
 
             <div className='mb-5 flex flex-col md:flex-row justify-between items-center space-y-4'>
                 <div>
-                    <h1 className='text-3xl font-bold'>Prospectiv</h1>
+                 <Link href='/'><h1 className='text-3xl font-bold'>Prospectiv</h1></Link>
                 </div>
                 {/* social links */}
                 <div className='flex justify-between items-center gap-2'>
                     <div className='bg-smallCard rounded-lg'>
-                   <Link href='#'><Image className='max-w-12 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
-                    </div>
-                    <div className='bg-smallCard rounded-lg'>
-                       <Link href='#'><Image className='max-w-12 p-2' src={InstagramLogo} width={200} height={200} alt="LinkedIn" /></Link>
-                    </div>
-                    <div className='bg-smallCard rounded-lg'>
-                     <Link href='#'><Image className='max-w-12 p-2' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                        <Link href='https://www.linkedin.com/company/prospectivdotio/'><Image className='max-w-12 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
                     </div>
                 </div>
             </div>

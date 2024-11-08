@@ -15,18 +15,29 @@ const LegalPageContents = () => {
 
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [activeTab, setActiveTab] = useState('cookies');
 
+    // Initialize the activeTab state with the URL parameter or default to 'cookies'
+    const initialTab = searchParams.get('tab') || 'cookies';
+    const [activeTab, setActiveTab] = useState(initialTab);
+
+    // Update active tab when URL changes
     useEffect(() => {
-        const tab = searchParams.get('tab') || 'cookies';
-        setActiveTab(tab);
+        const currentTab = searchParams.get('tab');
+        if (currentTab) {
+            setActiveTab(currentTab);
+        }
     }, [searchParams]);
-
 
     const handleTabChange = (value) => {
         setActiveTab(value);
-        router.push(`/legal?tab=${value}`);
+        // Use replace instead of push to avoid adding to history stack
+        router.replace(`/legal?tab=${value}`, { scroll: false });
     };
+
+    // Validate that the current tab is one of the allowed values
+    const validTabs = ['cookies', 'privacy', 'terms', 'gdpr', 'us', 'faq'];
+    const currentTab = validTabs.includes(activeTab) ? activeTab : 'cookies';
+
 
     return (
         <div>

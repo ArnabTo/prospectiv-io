@@ -2,9 +2,9 @@
 import Rating from "@/components/rating/RatingComponent";
 import Image from "next/image";
 import { useEffect } from "react";
-import CompanyLogoOne from '@/public/assets/company_logo/capterra_logo_colored.svg'
-import CompanyLogoTwo from '@/public/assets/company_logo/getapp_logo_colored.svg'
-import CompanyLogoThree from '@/public/assets/company_logo/software_advice_logo_colored.svg'
+import CompanyLogoOne from '@/public/assets/company_logo/logoOne.svg'
+import CompanyLogoTwo from '@/public/assets/company_logo/logoTwo.svg'
+import CompanyLogoThree from '@/public/assets/company_logo/logoThree.svg'
 import { motion } from 'framer-motion';
 
 const BookADemoPage = () => {
@@ -24,7 +24,7 @@ const BookADemoPage = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-5">
                 <div className="space-y-4 md:max-w-[60%] bg-card  rounded-xl p-10 relative">
                     <div>
-                        <h2 className="text-5xl font-semibold">Prospectiv</h2>
+                        <h2 className="text-4xl font-semibold">Prospectiv</h2>
                         <p className="text-lg mb-4 mt-2">Book Your personal demo</p>
                     </div>
 
@@ -33,7 +33,7 @@ const BookADemoPage = () => {
                             <h4 className="text-2xl font-semibold mb-2">Understanding your business</h4>
                             <p className="text-textColorTwo">
                                 We’ll discuss your business, your goals, who you target, your current lead generation,
-                                and how Sopro could support.
+                                and how Prospectiv could support.
                             </p>
                         </div>
                         <div>
@@ -45,13 +45,13 @@ const BookADemoPage = () => {
                         <div>
                             <h4 className="text-2xl font-semibold mb-2">A glimpse at your future</h4>
                             <p className="text-textColorTwo">
-                                We’ll reveal the average lead rates for your industry, cover relevant case studies, and estimate the ROI you can achieve from Sopro.
+                                We’ll reveal the average lead rates for your industry, cover relevant case studies, and estimate the ROI you can achieve from Prospectiv.
                             </p>
                         </div>
                     </div>
 
                     <div className="space-y-5">
-                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl p-5 lg:p-10 w-fit">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 rounded-xl p-5 lg:p-10 w-fit">
                             <div className='flex flex-col justify-center items-center gap-3'>
                                 <div className="h-full">
                                     <Image src={CompanyLogoOne} alt="logo" width={200} height={70} />

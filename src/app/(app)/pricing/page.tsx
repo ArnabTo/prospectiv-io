@@ -15,7 +15,10 @@ import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import Image from 'next/image';
 import MarketBg from '@/public/assets/market.png'
-
+import CompanyLogoOne from '@/public/assets/company_logo/logoOne.svg'
+import CompanyLogoTwo from '@/public/assets/company_logo/logoTwo.svg'
+import CompanyLogoThree from '@/public/assets/company_logo/logoThree.svg'
+import CompanyLogoFour from '@/public/assets/company_logo/logoFour.svg'
 const PricingPage = () => {
     return (
         <div className='py-24  px-3 overflow-hidden'>
@@ -350,18 +353,71 @@ const PricingPage = () => {
                 </div>
 
                 <div className='bg-card border border-borderColor rounded-xl p-10 relative'>
-                    <div className=' grid grid-cols-1 md:grid-cols-3 gap-10 mb-10'>
-                        {
-                            pricingPageTextContent.companyRaing.map((content, index) => (
-                                <div key={index} className='flex flex-col justify-center items-center gap-3'>
-                                    <Image src={content.logo} alt="logo" width={100} height={100}/>
-                                    <div className='flex items-center gap-2'>
-                                        <Rating rating={content.rating} />
-                                        <p className='text-textColorTwo text-lg'>4.0</p>
-                                    </div>
-                                </div>
-                            ))
-                        }
+                    <div className=' grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10'>
+                        <div className='flex flex-col justify-center items-center gap-3'>
+                            <div className="w-full h-1/2 relative">
+                                <Image
+                                    className="w-full h-full object-scale-down"
+                                    src={CompanyLogoOne}
+                                    width={300}
+                                    height={300}
+                                    alt="award_thumbnail"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <Rating rating={4.5} />
+                                <p className='text-textColorTwo text-lg'>4.5</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-col justify-center items-center gap-3'>
+                            <div className="w-full h-1/2 relative">
+                                <Image
+                                    className="w-full h-full object-scale-down"
+                                    src={CompanyLogoTwo}
+                                    width={300}
+                                    height={300}
+                                    alt="award_thumbnail"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <Rating rating={4.5} />
+                                <p className='text-textColorTwo text-lg'>4.5</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-col justify-center items-center gap-3'>
+                            <div className="w-full h-1/2 relative">
+                                <Image
+                                    className="w-full h-full object-scale-down"
+                                    src={CompanyLogoThree}
+                                    width={300}
+                                    height={300}
+                                    alt="award_thumbnail"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <Rating rating={5.0} />
+                                <p className='text-textColorTwo text-lg'>5.0</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-col justify-center items-center gap-3'>
+                            <div className="w-full h-1/2 relative">
+                                <Image
+                                    className="w-full h-full object-scale-down"
+                                    src={CompanyLogoFour}
+                                    width={300}
+                                    height={300}
+                                    alt="award_thumbnail"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                            </div>
+                            <div className='flex items-center gap-2'>
+                                <Rating rating={4.0} />
+                                <p className='text-textColorTwo text-lg'>4.0</p>
+                            </div>
+                        </div>
                     </div>
                     <div><Separator orientation='horizontal' /></div>
 
@@ -382,9 +438,9 @@ const PricingPage = () => {
                     <div className='flex flex-col lg:flex-row items-center justify-center gap-10 border border-borderColor rounded-xl p-7 bg-card'>
                         <div className='space-y-5'>
                             <h3 className='text-3xl lg:text-4xl font-bold'>Map your entire market</h3>
-                            <p className='text-lg text-textColorTwo'>Descover the size of your audience in minutes. Understand how many contacts Sopro can engage on your behalf</p>
+                            <p className='text-lg text-textColorTwo'>Descover the size of your audience in minutes. Understand how many contacts Prospectiv can engage on your behalf</p>
                             <div className="w-60 flex rounded-full mr-auto shadow-lg duration-300 transform group-hover:scale-105">
-                                <Link href="" className="flex-1 font-semibold text-lg text-center bg-buttonColor text-foreground hover:scale-95 transition-all duration-300  py-5 rounded-full hover:bg-buttonHoverColor">
+                                <Link href="/demo" className="flex-1 font-semibold text-lg text-center bg-buttonColor text-foreground hover:scale-95 transition-all duration-300  py-5 rounded-full hover:bg-buttonHoverColor">
                                     Book a call
                                 </Link>
                             </div>

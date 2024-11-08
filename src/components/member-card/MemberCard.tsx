@@ -1,7 +1,10 @@
 import { cn } from "@/lib/utils";
 import Marquee from "../ui/marquee";
 import Image from "next/image";
-
+import PeopleOne from '@/public/assets/peoples/p1.jpeg'
+import PeopleTwo from '@/public/assets/peoples/p2.png'
+import PeopleThree from '@/public/assets/peoples/p3.jpeg'
+import PeopleFour from '@/public/assets/peoples/p4.png'
 const reviews = [
     {
         name: "Jack",
@@ -46,28 +49,28 @@ const reviews = [
 
 const membersDetails = [
     {
-        name: 'John Doe',
-        title: 'Founder & CEO',
-        avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-        says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
+        name: 'Davide Dabramo',
+        title: 'Fratelli Agency',
+        avatar: PeopleOne,
+        says: 'We closed our first bit of business within 4 weeks which meant they had paid for themselves almost instantaneously.'
     },
     {
-        name: 'John Doe',
-        title: 'Founder & CEO',
-        avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-        says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
+        name: 'Jamie Donaldson',
+        title: 'Out of Bounds',
+        avatar: PeopleTwo,
+        says: '4 weeks in, and we’ve just closed an £18.9k deal directly from Prospectiv’s work! I can’t recommend them highly enough'
     },
     {
-        name: 'John Doe',
-        title: 'Founder & CEO',
-        avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-        says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
+        name: 'Madison Potter',
+        title: 'Madsocial',
+        avatar: PeopleThree,
+        says: 'I have been working with Prospectiv for a little over a month now. We have officially signed a new client from their efforts!'
     },
     {
-        name: 'John Doe',
-        title: 'Founder & CEO',
-        avatar: 'https://i.ibb.co/85M9yHq/albert-dera-ILip77-Sbm-OE-unsplash.jpg',
-        says: 'Sopro doesnt feel like working. Its an environment where I learn, improve, and have fun.'
+        name: 'Spike O’Connell',
+        title: 'Podshop',
+        avatar: PeopleFour,
+        says: 'David and the team we’re great from the start, very accommodating to a business that’s had bad experience with marketing agencies before.'
     },
 ]
 
@@ -76,7 +79,7 @@ const firstRow = membersDetails.slice(0, reviews.length / 2);
 
 
 
-const MemberCard = ({ name, title, avatar, says }: { name: string, title: string, avatar: string, says: string }) => {
+const MemberCard = ({ name, title, avatar, says }: { name: string, title: string, avatar: any, says: string }) => {
     return (
         <div
             className='relative w-[40rem] cursor-pointer overflow-hidden rounded-xl border bg-card border-borderColor p-4'
@@ -89,7 +92,7 @@ const MemberCard = ({ name, title, avatar, says }: { name: string, title: string
                         {name}
                     </figcaption>
                     <p className="text-lg font-medium dark:text-white/40">{title}</p>
-                    <blockquote className="mt-2 text-2xl text-textColorTwo">{says}</blockquote>
+                    <blockquote className="mt-2 text-xl text-textColorTwo">{says}</blockquote>
                 </div>
             </div>
             {/* <div className="bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree opacity-30 blur-3xl absolute inset-0 -z-10"></div> */}
@@ -101,8 +104,8 @@ export function MemberCardMarquee() {
     return (
         <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent z-50">
             <Marquee pauseOnHover className="[--duration:20s]">
-                {membersDetails.map((member) => (
-                    <MemberCard key={member.name} {...member} />
+                {membersDetails.map((member, index) => (
+                    <MemberCard key={index} {...member} />
                 ))}
             </Marquee>
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r"></div>

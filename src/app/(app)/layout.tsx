@@ -11,12 +11,12 @@ export default function RootLayout({
 }>) {
   return (
     <div>
-      <div className="relative z-20 mb-[65vh] h-max bg-background rounded-b-3xl">
+      <div className="relative z-20 mb-[100vh] md:mb-[88vh] lg:mb-[65vh] h-max bg-background rounded-b-3xl">
         <Navbar />
         {children}
         <Toaster />
       </div>
-      <div className="bg-card h-[600px] fixed bottom-0 z-10 w-full">
+      <div className="bg-card h-[68rem] md:h-[42rem] lg:h-[38rem] xl:h-[33rem] 2xl:h-[30rem] fixed bottom-0 z-10 w-full">
         <Footer />
       </div>
     </div>
