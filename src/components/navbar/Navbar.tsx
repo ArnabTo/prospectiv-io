@@ -92,18 +92,23 @@ const Navbar = () => {
                             <div className="space-y-10">
                                 <ul className="flex flex-col justify-start items-start gap-5">
                                     <li>
-                                        <Link href="/" className="text-lg font-bold text-secondary transition-all duration-500">
+                                        <Link href="/" className={`text-lg font-bold text-secondary transition-all duration-500
+                                            ${pathname === '/' ? 'text-secondary' : 'text-foreground'}
+                                            `}>
                                             Home
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/pricing" className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                                        <Link href="/pricing" className={`text-lg font-bold hover:text-secondary transition-all duration-500
+                                            ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'}`}>
                                             Pricing
                                         </Link>
                                     </li>
                                     <li className="relative" ref={dropdownRef}>
                                         <div
-                                            className="text-lg font-bold hover:text-secondary transition-all duration-500"
+                                            className={`text-lg font-bold hover:text-secondary transition-all duration-500
+                                                 ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}
+                                                `}
                                             onClick={() => toggleDropdown(0)}
                                         >
                                             Company
@@ -144,7 +149,9 @@ const Navbar = () => {
                                     </li>
                                     <li className="relative" ref={dropdownRef}>
                                         <div
-                                            className="text-lg font-bold hover:text-secondary transition-all duration-500"
+                                            className={`text-lg font-bold hover:text-secondary transition-all duration-500
+                                                  ${['/resources/blog', '/resources/resource-hub'].includes(pathname) ? 'text-secondary' : 'text-foreground'}
+                                                `}
                                             onClick={() => toggleDropdown(1)}
                                         >
                                             Resources
@@ -161,23 +168,16 @@ const Navbar = () => {
                                             }}
                                         >
                                             <li>
-                                                <Link href="/life-at-prospectiv" className="block py-2">
+                                                <Link href="/resources/blog" className="block py-2">
                                                     <div className="flex justify-start items-start gap-2 pl-5">
                                                         <h1 className="text-md font-bold text-white">Blog</h1>
                                                     </div>
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="/about-us" className="block py-2">
+                                                <Link href="/resources/resource-hub" className="block py-2">
                                                     <div className="flex justify-start items-start gap-2 pl-5">
                                                         <h1 className="text-md font-bold text-white">Resource Hub</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Careers</h1>
                                                     </div>
                                                 </Link>
                                             </li>
@@ -185,7 +185,9 @@ const Navbar = () => {
                                     </li>
                                     <li className="relative" ref={dropdownRef}>
                                         <div
-                                            className="text-lg font-bold hover:text-secondary transition-all duration-500"
+                                            className={`text-lg font-bold hover:text-secondary transition-all duration-500
+                                        ${['/result/success-story', '/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}
+                                                `}
                                             onClick={() => toggleDropdown(2)}
                                         >
                                             Results
