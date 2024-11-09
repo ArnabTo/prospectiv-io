@@ -30,10 +30,14 @@ const Intro = () => {
         if (!showBlackScreen) {
             document.body.style.overflow = '';
         }
+        setTimeout(() => {
+            setShowBlackScreen(false)
+        }, 8000)
     }, [showBlackScreen]);
 
+    console.log(showBlackScreen)
     return (
-        <div className='z-30'>
+        <div className='z-50'>
             <AnimatePresence>
                 {showBlackScreen && (
                     <motion.div
@@ -45,7 +49,7 @@ const Intro = () => {
                     />
                 )}
                 {showBlackScreen && (
-                        <motion.div
+                    <motion.div
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -82,11 +86,11 @@ const Intro = () => {
                     >
                         <div className="flex h-screen w-full items-center justify-center">
                             <span className="absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-white via-white to-white bg-clip-text text-5xl lg:text-7xl box-content font-extrabold text-transparent text-center select-none">
-                              Prospectiv
+                                Prospectiv
                             </span>
                             <h1
                                 className="relative top-0 w-fit h-auto py-4 justify-center flex bg-gradient-to-r items-center from-white via-white to-white bg-clip-text text-5xl lg:text-7xl font-extrabold text-transparent text-center select-auto">
-                              Prospectiv
+                                Prospectiv
                             </h1>
                         </div>
                     </motion.div>

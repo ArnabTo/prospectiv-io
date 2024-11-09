@@ -1237,24 +1237,30 @@ const ROICalculator = () => {
                                 </span>
                               </DropdownMenuTrigger>
                               <DropdownMenuContent className='bg-smallCard border border-borderColor'>
-                                <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
-                                  onClick={() => handleCurrencyChange('USD')}
-                                >
-                                  <DollarSign size={50} />
-                                  {currency === 'USD' && <CheckIcon size={20} />}
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className='w-fulltext-center hover:bg-secondary flex justify-between cursor-pointer'
-                                  onClick={() => handleCurrencyChange('EUR')}
-                                >
-                                  <EuroIcon className='text-center' size={50} />
-                                  {currency === 'EUR' && <CheckIcon size={20} />}
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
-                                  onClick={() => handleCurrencyChange('GBP')}
-                                >
-                                  <PoundSterlingIcon size={50} />
-                                  {currency === 'GBP' && <CheckIcon size={20} />}
-                                </DropdownMenuItem>
+                                <div className='hover:bg-secondary'>
+                                  <DropdownMenuItem className='w-full text-center  flex justify-between cursor-pointer'
+                                    onClick={() => handleCurrencyChange('USD')}
+                                  >
+                                    <DollarSign size={50} />
+                                    {currency === 'USD' && <CheckIcon size={20} />}
+                                  </DropdownMenuItem>
+                                </div>
+                                ,<div className="hover:bg-secondary">
+                                  <DropdownMenuItem className='w-fulltext-center hover:bg-secondary flex justify-between cursor-pointer'
+                                    onClick={() => handleCurrencyChange('EUR')}
+                                  >
+                                    <EuroIcon className='text-center' size={50} />
+                                    {currency === 'EUR' && <CheckIcon size={20} />}
+                                  </DropdownMenuItem>
+                                </div>
+                                <div className='hover:bg-secondary'>
+                                  <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
+                                    onClick={() => handleCurrencyChange('GBP')}
+                                  >
+                                    <PoundSterlingIcon size={50} />
+                                    {currency === 'GBP' && <CheckIcon size={20} />}
+                                  </DropdownMenuItem>
+                                </div>
                               </DropdownMenuContent>
                             </DropdownMenu>
 
@@ -1306,24 +1312,30 @@ const ROICalculator = () => {
                                 </span>
                               </DropdownMenuTrigger>
                               <DropdownMenuContent className='bg-smallCard border border-borderColor'>
-                                <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
-                                  onClick={() => handleCurrencyChange('USD')}
-                                >
-                                  <DollarSign size={50} />
-                                  {currency === 'USD' && <CheckIcon size={20} />}
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
-                                  onClick={() => handleCurrencyChange('EUR')}
-                                >
-                                  <EuroIcon className='text-center' size={50} />
-                                  {currency === 'EUR' && <CheckIcon size={20} />}
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
+                                <div className='hover:bg-secondary cursor-pointer'>
+                                  <DropdownMenuItem className='w-full text-center flex justify-between cursor-pointer'
+                                    onClick={() => handleCurrencyChange('USD')}
+                                  >
+                                    <DollarSign size={50} />
+                                    {currency === 'USD' && <CheckIcon size={20} />}
+                                  </DropdownMenuItem>
+                                </div>
+                                <div className='hover:bg-secondary'>
+                                  <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
+                                    onClick={() => handleCurrencyChange('EUR')}
+                                  >
+                                    <EuroIcon className='text-center' size={50} />
+                                    {currency === 'EUR' && <CheckIcon size={20} />}
+                                  </DropdownMenuItem>
+                                </div>
+                               <div className='hover:bg-secondary'>
+                               <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                                   onClick={() => handleCurrencyChange('GBP')}
                                 >
                                   <PoundSterlingIcon size={50} />
                                   {currency === 'GBP' && <CheckIcon size={20} />}
                                 </DropdownMenuItem>
+                               </div>
                               </DropdownMenuContent>
                             </DropdownMenu>
 

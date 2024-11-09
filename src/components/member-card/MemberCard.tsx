@@ -102,7 +102,7 @@ const MemberCard = ({ name, title, avatar, says }: { name: string, title: string
 
 export function MemberCardMarquee() {
     return (
-        <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent z-50">
+        <div className="relative flex h-[250px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-transparent z-20">
             <Marquee pauseOnHover className="[--duration:20s]">
                 {membersDetails.map((member, index) => (
                     <MemberCard key={index} {...member} />
