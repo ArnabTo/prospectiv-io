@@ -10,24 +10,6 @@ import Partners from "@/components/partners/Partners";
 
 const Hero = () => {
 
-    const companyDetails = [
-        {
-            logo: PartnerOne,
-            name: 'Company Name',
-        },
-        {
-            logo: PartnerTwo,
-            name: 'Company Name',
-        },
-        {
-            logo: PartnerTwo,
-            name: 'Company Name',
-        },
-        {
-            logo: 'https://i.ibb.co/Qcj7GDJ/66f7d720752b1858a6004c5b-Untitled-design-p-500.png',
-            name: 'Company Name',
-        },
-    ]
     return (
         <section className="overflow-hidden pt-24 relative z-10">
             <div className="max-w-7xl mx-auto relative space-y-24 pb-24">
@@ -36,7 +18,7 @@ const Hero = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 10, scale: 0.9 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                            transition={{ duration: 0.7, delay: 3.5 }}
+                            transition={{ duration: 0.7, delay: 3 }}
                             viewport={{ once: true }}
                             className="text-4xl md:text-6xl lg:text-7xl font-extrabold">Drive More Sales
                             <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> Meetings with Your Ideal Customers.
@@ -45,7 +27,7 @@ const Hero = () => {
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.7, delay: 4 }}
+                            transition={{ duration: 0.7, delay: 3.5 }}
                             viewport={{ once: true }}
                             className="text-xl lg:text-2xl font-medium text-textColorTwo">Helping small and medium service businesses book more sales meetings, so you can focus on growth.
                         </motion.p>
@@ -53,7 +35,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 4 }}
+                        transition={{ duration: 0.5, delay: 3.5 }}
                         viewport={{ once: true }}
                         className="w-full md:w-3/4 lg:w-4/6 mx-auto flex flex-col md:flex-row justify-center items-center gap-3 space-y-3 md:space-y-0">
                         <div className="w-60 lg:w-full flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
@@ -75,7 +57,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 3.7 }}
+                        transition={{ duration: 0.5, delay: 3.2 }}
                         viewport={{ once: true }}
                         className="w-full flex justify-center items-center relative px-5">
 
@@ -88,7 +70,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 3.5 }}
+                        transition={{ duration: 0.5, delay: 3 }}
                         viewport={{ once: true }}
                         className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
                         <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
@@ -98,7 +80,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: 3.5 }}
+                        transition={{ duration: 0.3, delay: 3 }}
                         viewport={{ once: true }}
                         className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
                         <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>

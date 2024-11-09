@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import '../../app/globals.css'
 import Link from 'next/link';
-import ImageOne from '@/public/assets/whatwedoone.jpeg'
 import ImageTwo from '@/public/assets/whatwedonetow.svg'
 import ImageThree from '@/public/assets/whatwedothree.svg'
 import Image from 'next/image';
