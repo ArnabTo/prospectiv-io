@@ -1,4 +1,4 @@
-import MeetOurTeam from '@/components/meet-our-team-page/MeetOurTeam';
+import MeetOurTeam from '@/components/life-at-prospectiv-components/meet-our-team-page/MeetOurTeam';
 import React from 'react';
 
 const  OurTeam= () => {

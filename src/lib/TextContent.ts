@@ -115,6 +115,25 @@ const lifeAtProspectivTextContent = {
                 paragraph: `We have an open-door policy and value your opinion. Ideas are heard and genuinely put into practice.`,
             }
         },
+    },
+    'ops': {
+        'heading': 'Ops',
+        'sectionOne': {
+            contentOne: {
+                textContent: `With so many different aspects to our work, no two days are the same at Sopro operations. Whether it is working with data sets in Excel, jumping on calls with clients across the world, working with our internal software, analyzing reports, and learning about different industry sectors, there is no typical day here.
+
+That’s why we don’t limit ourselves to one specific profile of candidates. Our team is made up of people with a broad range of experience who each brings something different to the table.`,
+                imageContent: 'https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            }
+        },
+        'sectionTwo': {
+            contentOne: {
+                textContent: `Our Ops Department proves that with good time-management and organization skills and a knack for prioritising, juggling multiple tasks while delivering a world-class service is possible. And with a dedicated mentor to guide and support you, you’ll be up to speed and helping our clients grow in no time.
+
+But we don’t expect you to know everything from day one: every new starter gets a dedicated mentor to guide them through the learning process. And we don’t stop once you’re up to speed: everyone has a clear progression path, so you’ll continually learn and grow as a professional.`,
+                imageContent: 'https://images.pexels.com/photos/3184432/pexels-photo-3184432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            }
+        },
     }
 }
 
@@ -205,7 +224,7 @@ const aboutUsPageTextContent = {
                 image: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600',
                 textContent: `Alice started her career in finance but quickly shifted to technology after launching her first app at 15. Her passion for innovation has driven her to lead the company towards a digital-first approach, emphasizing user experience and functionality. She now oversees a team of creative minds and developers at Prospectiv.`
             },
-            
+
             {
                 name: 'Mark Thompson',
                 position: 'CTO',
@@ -213,7 +232,7 @@ const aboutUsPageTextContent = {
                 image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600',
                 textContent: `Mark discovered his love for coding after building his first game in high school. With over 20 years of experience in software development, he has led numerous projects across various industries. At Prospectiv, he handles all technical strategies and leads a talented team to create innovative solutions.`
             },
-            
+
             {
                 name: 'Sophie Lee',
                 position: 'Head of Product',
@@ -266,7 +285,7 @@ const aboutUsPageTextContent = {
             'https://images.pexels.com/photos/12705357/pexels-photo-12705357.jpeg?auto=compress&cs=tinysrgb&w=600',
             'https://images.pexels.com/photos/16026798/pexels-photo-16026798/free-photo-of-people-standing-and-posing-together.jpeg?auto=compress&cs=tinysrgb&w=600',
             'https://images.pexels.com/photos/27897550/pexels-photo-27897550/free-photo-of-a-group-of-people-standing-in-front-of-a-wall-with-graffiti.jpeg?auto=compress&cs=tinysrgb&w=1000',
-          'https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600',
         ]
     }
 }
@@ -369,18 +388,18 @@ const pricingPageTextContent = {
 }
 
 const awardsandRecognitionPageTextContent = {
-    'success_section' :{
+    'success_section': {
         heading: 'Success Stories',
-        textContent:`Discover real transformations with Prospectiv. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
+        textContent: `Discover real transformations with Prospectiv. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
         imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
     }
 }
 
 const successStoryPageTextContent = {
-    exploreOurAwards:{
+    exploreOurAwards: {
         heading: 'Explore Our Awards',
         textContent: `Discover real transformations with Prospectiv. Our success stories show how we drive results, helping businesses like yours sell more. See the potential below.`,
-         imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
+        imageLInk: 'https://img.freepik.com/free-photo/group-diverse-business-people-with-growth-graph_53876-47061.jpg?t=st=1731045511~exp=1731049111~hmac=104c46ee770dbfdc730737437351c2650e469278bd576739c290213e5443fe50&w=900'
     }
 }
 const legalPageContent = {
@@ -2138,7 +2157,7 @@ const legalPageContent = {
                             `https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/legitimate-interests/`,
                             `To ensure marketing activity falls into this category, prior to commencing, you should carry out a full Legitimate Interests Assessment (LIA) for any marketing campaign you intend to run.`
                         ]
-                    }, 
+                    },
                     {
                         question: 'What if my marketing activity fails the LIA?',
                         contents: [
@@ -2148,7 +2167,7 @@ const legalPageContent = {
                     },
                     {
                         question: 'What policies or processes do I need in place?',
-                        contents:[
+                        contents: [
                             `We strongly advise that you complete your GDPR preparations regardless of whether you engage Prospectiv or not. Failure to complete GDPR can lead to punitive fines and robust enforcement action by the ICO.`,
                             `We have produced a template Privacy Policy and Legitimate Interest Assessment to help get you started and to allow you to start your Prospectiv adventure.`,
                             `Your key document is your Privacy Policy.`,
@@ -2165,43 +2184,43 @@ const legalPageContent = {
                         ]
                     },
                     {
-                        question:'Can I send unsolicited emails to prospects legally?',
-                        contents:[
+                        question: 'Can I send unsolicited emails to prospects legally?',
+                        contents: [
                             `Whilst GDPR controls the collection, storage and processing of personal data in the UK, sending messages is regulated under the Privacy and Electronic Communications Regulations (PECR). This is very clear as to the requirements on business to business communication:`,
                             `“You can email or text any corporate body (a company, Scottish partnership, limited liability partnership or government body). However, it is good practice – and good business sense – to keep a ‘do not email or text’ list of any businesses that object or opt out and screen any new marketing lists against that.”`,
                             `This is where the Prospectiv approach really works – we only target business customers that are likely to be interested in your products and services`
                         ]
                     },
                     {
-                        question:'What is the ICO / Direct Marketing checklist?',
-                        textContent:'The ICOs direct marketing checklist is a great set of guidelines,here it is:',
-                        textLink:'https://ico.org.uk/for-organisations/guide-to-pecr/electronic-and-telephone-marketing/electronic-mail-marketing/'
+                        question: 'What is the ICO / Direct Marketing checklist?',
+                        textContent: 'The ICOs direct marketing checklist is a great set of guidelines,here it is:',
+                        textLink: 'https://ico.org.uk/for-organisations/guide-to-pecr/electronic-and-telephone-marketing/electronic-mail-marketing/'
                     },
                     {
-                        question:'Do I need to conduct additional employee training?',
-                        textContent:`You should ensure all employees undergo GDPR, PECR and general compliance training, covering the GDPR rule set in detail and the relevance and impact of those rules on your business. This training should set out the steps you take to ensure best practice is observed at all times and make clear the consequences associated with failure to meet the strict standards.`
+                        question: 'Do I need to conduct additional employee training?',
+                        textContent: `You should ensure all employees undergo GDPR, PECR and general compliance training, covering the GDPR rule set in detail and the relevance and impact of those rules on your business. This training should set out the steps you take to ensure best practice is observed at all times and make clear the consequences associated with failure to meet the strict standards.`
                     },
                     {
-                        title:'Data Storage',
-                        textContent:`We take data security VERY seriously. We have completed a Data Protection Impact Assessment and ensure that all appropriate security measures to protect our data and your data at all times.`,
+                        title: 'Data Storage',
+                        textContent: `We take data security VERY seriously. We have completed a Data Protection Impact Assessment and ensure that all appropriate security measures to protect our data and your data at all times.`,
                     },
                     {
-                        title:'Non-EU/rest of world regulations',
-                        contents:[
+                        title: 'Non-EU/rest of world regulations',
+                        contents: [
                             `Where marketing activity is conducted to target non-EU nationals these campaigns are generally not subject to the same data privacy laws and GDPR does not apply.`,
                             `Just be careful and remember that GDPR applies to EU nationals that now live outside the EU. This is quite a tricky aspect so please talk to us if you are unsure.`,
                             `Naturally, we cannot be abreast of the constantly evolving regulatory frameworks in all countries at all times, as such it is important that you have knowledge of your local regulatory climate and ensure your business operates within the relevant regulatory frameworks and manage your campaigns accordingly.`
                         ]
                     },
                     {
-                        title:'Useful Links',
-                        contents:[
+                        title: 'Useful Links',
+                        contents: [
                             `We have collated the most useful links available to UK businesses researching the GDPR framework, key areas, timelines, scope and likely impact on B2B marketing.`,
                             `Please note that GDPR rules are implemented at an EU Government (multinational) level. Each state is separately responsible for developing its own appropriate rule set ensuring, as a minimum, compliance with the EUs GDPR framework.`,
                             `The UK Government has appointed the Information Commissioner’s Office (ICO) as the official body charged with ensuring national compliance with the GDPR. In light of this the ICO has released several handy guides.`,
                             `Here are the most useful links from the key official bodies, including the UKs ICO, the UK Government, the European Legislation archives and the UKs Direct Marketing Association (DMA).`,
                         ],
-                        contentBoxTow:[
+                        contentBoxTow: [
                             `GDPR final text (English)`,
                             `ICO Guide to GDPR compliance – 12 Steps to take now (PDF)`,
                             `GDPR Checklist 1 (UK ICO) – Data Controllers`,
@@ -2219,14 +2238,14 @@ const legalPageContent = {
     }
 }
 
-const doNotSellMyDataPageContent= {
-    title:'Opt-out of Prospectiv data',
+const doNotSellMyDataPageContent = {
+    title: 'Opt-out of Prospectiv data',
     textContent: [
         `Under the California Consumer Privacy Act (CCPA), California residents have certain rights regarding the personal information that businesses have about them. This includes the right to request access or deletion of your personal information, as well as the right to direct a company to stop selling your personal information. Under the General Data Protection Regulation (GDPR), EU citizens have similar rights. This web page helps both sets of residents fulfil their rights.`,
         `If you would like to permanently erase all of your data and opt-out from future communications, please complete this form. Your request will be processed in the shortest time possible and we will confirm via email once we have completed your request.`,
         `If you would like to understand what data we currently hold on you as an individual, or for further information and other requests, please email us at`
     ],
-    mail:'prospectiv@prospectiv.com'
+    mail: 'prospectiv@prospectiv.com'
 }
 export {
     HeroSectionTextContent,

@@ -140,7 +140,7 @@ const LifeAtProspectiv = () => {
                                 transition={{ duration: 0.7, delay: 0.6 }}
                                 viewport={{ once: true }}
                             >
-                                <div>
+                                <Link href='/company/life-at-prospectiv/ops'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300'>
                                         <Image className='w-full rounded-3xl h-52' src='https://images.unsplash.com/photo-1716703742287-2b06c3c6d81a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhbSUyMHBob3RvfGVufDB8fDB8fHww' width={300} height={300} alt='' />
                                         <div>
@@ -148,7 +148,7 @@ const LifeAtProspectiv = () => {
                                             <p className='text-md lg:text-lg text-textColorTwo'>Our Ops team are masters of the management, organisation and juggling multiple tasks. And they make our campaigns fly.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </motion.div>
 
                             <motion.div
