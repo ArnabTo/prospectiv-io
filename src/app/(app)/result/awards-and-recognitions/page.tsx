@@ -204,7 +204,7 @@ const AwardsAndRecognitions = () => {
                     ) : (
                         <>
                             <TabsContent value="all">
-                                {renderAwardGrid('All')}
+                                {renderAwardGrid('all')}
                             </TabsContent>
                             <TabsContent value="shortlisted">
                                 {renderAwardGrid('Shortlisted')}

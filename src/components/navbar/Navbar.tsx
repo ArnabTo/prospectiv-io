@@ -17,12 +17,17 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Blog, BlogPost } from "@/types/types";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+
+
 
 const Navbar = () => {
 
     const [blog, setBlog] = useState<Blog[]>([])
     const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
     const dropdownRef = useRef<HTMLLIElement | null>(null);
+    const router = useRouter();
+    const pathname = usePathname();
 
     const dropdownVariants = {
         hidden: { opacity: 0, y: -10, scale: 0.95 },
@@ -55,6 +60,8 @@ const Navbar = () => {
     const toggleDropdown = (index: number) => {
         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
     };
+
+    console.log(pathname)
 
 
     return (
@@ -247,19 +254,31 @@ const Navbar = () => {
                     <NavigationMenu>
                         <NavigationMenuList className="flex justify-between items-center gap-8">
                             <NavigationMenuItem>
-                                <Link href='/' className="text-lg font-bold text-secondary transition-all duration-500">
+                            <Link
+                                    href="/"
+                                    className={`text-lg font-bold ${
+                                        pathname === '/' ? 'text-secondary' : 'text-foreground'
+                                    } transition-all duration-500`}
+                                >
                                     <NavigationMenuLink>Home</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <Link href='/pricing' className="text-lg font-bold hover:text-secondary transition-all duration-500">
+                            <Link
+                                    href="/pricing"
+                                    className={`text-lg font-bold ${
+                                        pathname === '/pricing' ? 'text-secondary' : 'text-foreground'
+                                    } transition-all duration-500`}
+                                >
                                     <NavigationMenuLink>Pricing</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Company</NavigationMenuTrigger>
+                                <NavigationMenuTrigger 
+                                className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none 
+                                    ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}>Company</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5">
@@ -313,7 +332,8 @@ const Navbar = () => {
                             </NavigationMenuItem>
 
                             <NavigationMenuItem className="pt-[3px]">
-                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Resources</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none
+                                    ${['/resources/blog', '/resources/resource-hub'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}>Resources</NavigationMenuTrigger>
                                 <NavigationMenuContent className="w-52">
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5 flex-1">
@@ -363,7 +383,8 @@ const Navbar = () => {
                             </NavigationMenuItem>
 
                             <NavigationMenuItem className="pt-[3px]">
-                                <NavigationMenuTrigger className="text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none">Results</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none
+                                    ${['/result/success-story', '/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}>Results</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5">
@@ -400,12 +421,6 @@ const Navbar = () => {
                                     </div>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
-                    
-                            {/* <NavigationMenuItem className="pt-[8px]">
-                                <Link href='/result/success-story' className="text-lg font-bold hover:text-secondary transition-all duration-500">
-                                    <NavigationMenuLink>Result</NavigationMenuLink>
-                                </Link>
-                            </NavigationMenuItem> */}
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>
