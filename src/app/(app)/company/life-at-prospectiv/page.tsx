@@ -37,6 +37,10 @@ const LifeAtProspectiv = () => {
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
+                                    <BreadcrumbPage className='text-textColorTwo text-lg'>Company</BreadcrumbPage>
+                                </BreadcrumbItem>
+                                <BreadcrumbSeparator />
+                                <BreadcrumbItem>
                                     <BreadcrumbPage className='text-secondary text-lg'>Life at Prospectiv</BreadcrumbPage>
                                 </BreadcrumbItem>
                             </BreadcrumbList>
@@ -98,7 +102,7 @@ const LifeAtProspectiv = () => {
                                 transition={{ duration: 0.7, delay: 0.2 }}
                                 viewport={{ once: true }}
                             >
-                                <div>
+                                <Link href='/company/life-at-prospectiv/meet-our-team'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300 '>
                                         <Image className='w-full rounded-3xl h-52' src='https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600' width={300} height={300} alt='' />
                                         <div>
@@ -108,7 +112,7 @@ const LifeAtProspectiv = () => {
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </motion.div>
 
                             <motion.div

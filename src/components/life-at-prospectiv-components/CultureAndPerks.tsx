@@ -11,10 +11,6 @@ const CultureAndPerks = () => {
     const lottieRefThree = useRef(null);
     const lottieRefFour = useRef(null);
 
-    const perSpectiveValuesLottieOne = useRef(null);
-    const perSpectiveValuesLottieTwo = useRef(null);
-    const perSpectiveValuesLottieThree = useRef(null);
-    const perSpectiveValuesLottieFour = useRef(null);
 
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
         if (typeof document !== 'undefined') {
@@ -56,7 +52,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefOne}
-                                        animationData={require('@/public/assets/calendar V3.json')}
+                                        animationData={require('@/public/assets/Training.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -79,7 +75,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefTwo}
-                                        animationData={require('@/public/assets/calendar V3.json')}
+                                        animationData={require('@/public/assets/globe.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -104,7 +100,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefThree}
-                                        animationData={require('@/public/assets/calendar V3.json')}
+                                        animationData={require('@/public/assets/Heart.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -129,7 +125,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefFour}
-                                        animationData={require('@/public/assets/calendar V3.json')}
+                                        animationData={require('@/public/assets/lightbulb.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
