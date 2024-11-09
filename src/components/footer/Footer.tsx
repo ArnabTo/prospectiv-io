@@ -87,7 +87,7 @@ const Footer = () => {
 
             <div className='mb-5 flex flex-col md:flex-row justify-between items-center space-y-4'>
                 <div>
-                 <Link href='/'><h1 className='text-3xl font-bold'>Prospectiv</h1></Link>
+                    <Link href='/'><h1 className='text-3xl font-bold'>Prospectiv</h1></Link>
                 </div>
                 {/* social links */}
                 <div className='flex justify-between items-center gap-2'>
