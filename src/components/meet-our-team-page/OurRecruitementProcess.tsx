@@ -37,7 +37,7 @@ const OurRecruitementProcess = () => {
             title: "Tech Interview",
             description: "An in-depth interview with your potential line manager and a senior team member. No whiteboard coding or sorting algorithms—just relevant technical questions.",
             lottieRef: lottieRefs.techInterview,
-            animationData: require('@/public/assets/hire.json') // Replace with your actual animation file
+            animationData: require('@/public/assets/Hire.json') // Replace with your actual animation file
         }
     ];
     const handleMouseEnter = (ref: any) => {
