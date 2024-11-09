@@ -155,7 +155,7 @@ const SuccessStory = () => {
                         <div className="lg:w-3/4 mx-auto">
                             <div className="space-y-5 lg:space-y-8">
                                 <div className="grid grid-cols-2 md:grid-cols-3 justify-center items-center gap-10">
-                                    <div className="border-l-2 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={19}
@@ -166,7 +166,7 @@ const SuccessStory = () => {
                                         />
                                         <p className="text-base font-normal text-secondary">Cost per lead</p>
                                     </div>
-                                    <div className="border-l-2 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={50}
@@ -178,7 +178,7 @@ const SuccessStory = () => {
                                         />
                                         <p className="ttext-base font-normalg text-secondary">Emails sent</p>
                                     </div>
-                                    <div className="border-l-2 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={15000}
@@ -189,7 +189,7 @@ const SuccessStory = () => {
                                         />
                                         <p className="text-base font-normal text-secondary">Campaigns delivered</p>
                                     </div>
-                                    <div className="border-l-2 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={8.6}
@@ -202,7 +202,7 @@ const SuccessStory = () => {
                                         />
                                         <p className="text-base font-normal text-secondary">Lead rate</p>
                                     </div>
-                                    <div className="border-l-2 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={600}
@@ -213,7 +213,7 @@ const SuccessStory = () => {
                                         />
                                         <p className="text-base font-normal text-secondary">Clients</p>
                                     </div>
-                                    <div className="border-l-2 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={2000}

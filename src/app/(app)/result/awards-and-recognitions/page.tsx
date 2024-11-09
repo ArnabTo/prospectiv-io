@@ -46,6 +46,7 @@ const AwardsAndRecognitions = () => {
     };
 
     const filteredAwards = (category: string) => {
+        console.log(category)
         return category === 'all'
             ? awards
             : awards.filter((award) => award.category === category);
@@ -63,6 +64,8 @@ const AwardsAndRecognitions = () => {
         return Math.ceil(filtered.length / ITEMS_PER_PAGE);
     };
 
+
+    console.log(awards)
     const renderPagination = (category: string) => {
         const totalPages = getTotalPages(category);
         if (totalPages <= 1) return null;
@@ -109,7 +112,7 @@ const AwardsAndRecognitions = () => {
         const paginatedAwards = getPaginatedAwards(category);
         
         if (paginatedAwards.length === 0) {
-            return <p className='text-center text-lg text-textColorTwo'>No {category} awards found.</p>;
+            return <p className='text-center text-lg text-textColorTwo'>No awards found.</p>;
         }
 
         return (
@@ -201,22 +204,22 @@ const AwardsAndRecognitions = () => {
                     ) : (
                         <>
                             <TabsContent value="all">
-                                {renderAwardGrid('all')}
+                                {renderAwardGrid('All')}
                             </TabsContent>
                             <TabsContent value="shortlisted">
-                                {renderAwardGrid('shortlisted')}
+                                {renderAwardGrid('Shortlisted')}
                             </TabsContent>
                             <TabsContent value="winner">
-                                {renderAwardGrid('winner')}
+                                {renderAwardGrid('Winner')}
                             </TabsContent>
                             <TabsContent value="silver">
-                                {renderAwardGrid('silver')}
+                                {renderAwardGrid('Silver')}
                             </TabsContent>
                             <TabsContent value="gold">
-                                {renderAwardGrid('gold')}
+                                {renderAwardGrid('Gold')}
                             </TabsContent>
                             <TabsContent value="bronze">
-                                {renderAwardGrid('bronze')}
+                                {renderAwardGrid('Bronze')}
                             </TabsContent>
                         </>
                     )}

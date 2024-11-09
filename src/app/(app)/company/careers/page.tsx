@@ -175,7 +175,7 @@ const Careers = () => {
                             carrerPageTextContent.exploreus.content.map((content, index) => (
                                 <Link key={index} href={content.link} className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                                     <div className='flex flex-col gap-5'>
-                                        <div>
+                                        <div className='h-52'>
                                             <Image
                                                 src={content.image}
                                                 alt="image"

@@ -123,7 +123,7 @@ const LifeAtProspectiv = () => {
                             >
                                 <div>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300'>
-                                        <Image className='w-full rounded-3xl h-52' src='https://images.unsplash.com/photo-1716703742352-0bbdb45f505b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVhbSUyMHBob3RvfGVufDB8fDB8fHww' width={300} height={300} alt='' />
+                                        <Image className='w-full rounded-3xl h-52' src='https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15855.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>Customer Success</h2>
                                             <p className='text-md lg:text-lg text-textColorTwo'>
@@ -142,7 +142,7 @@ const LifeAtProspectiv = () => {
                             >
                                 <Link href='/company/life-at-prospectiv/ops'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300'>
-                                        <Image className='w-full rounded-3xl h-52' src='https://images.unsplash.com/photo-1716703742287-2b06c3c6d81a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVhbSUyMHBob3RvfGVufDB8fDB8fHww' width={300} height={300} alt='' />
+                                        <Image className='w-full rounded-3xl h-52' src='https://img.freepik.com/free-photo/group-business-executives-smiling-camera_1170-1894.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>Ops</h2>
                                             <p className='text-md lg:text-lg text-textColorTwo'>Our Ops team are masters of the management, organisation and juggling multiple tasks. And they make our campaigns fly.</p>

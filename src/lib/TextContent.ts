@@ -300,22 +300,22 @@ const carrerPageTextContent = {
         heading: 'Explore About Us',
         content: [
             {
-                link: '/life-at-prospectiv',
-                image: 'https://prospectiv.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
-                title: 'Carrers',
-                description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
+                link: '/company/life-at-prospectiv',
+                image: 'https://img.freepik.com/free-photo/colleagues-working-project-discussing-details_114579-2817.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid',
+                title: 'Life at Prospectiv',
+                description: `Explore about our culture, people, values and what it's like to work at Prospectiv. →`
             },
             {
-                link: '/life-at-prospectiv',
-                image: 'https://prospectiv.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
-                title: 'Carrers',
-                description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
+                link: '/company/about-us',
+                image: 'https://img.freepik.com/free-photo/co-working-people-working-together_23-2149328346.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid',
+                title: 'About us',
+                description: `Find out more about Prespectiv and our team, from our leadership to our people, via our history and results. →`
             },
             {
-                link: '/life-at-prospectiv',
-                image: 'https://prospectiv.io/wp-content/uploads/2023/07company/careers_bottom.jpg',
-                title: 'Carrers',
-                description: `Once people join Prospectiv, they don't tend to leave. Our team turnover rate is 8%, compared to the UK average of 15%. →`
+                link: '/result/success-story',
+                image: 'https://img.freepik.com/free-photo/copy-space-smiley-friends-mock-up_23-2148342071.jpg?t=st=1731157987~exp=1731161587~hmac=d3f1407b0cd4d7f6e534d9a5ad0bd6b28a834586ad03b5234b1834c8c3da5af6&w=826',
+                title: 'Success Stories',
+                description: `Discover what's possible with Prospectiv. Real stories from some of our 1000+ clients →`
             },
         ]
     }
