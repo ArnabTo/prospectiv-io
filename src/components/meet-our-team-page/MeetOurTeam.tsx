@@ -9,6 +9,8 @@ import { Quote, Sparkle } from 'lucide-react';
 import BenefitsOfProspectiv from '../life-at-prospectiv-components/BenefitsOfProspectiv';
 import CultureAndPerks from '../life-at-prospectiv-components/CultureAndPerks';
 import OurRecruitementProcess from './OurRecruitementProcess';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '../ui/breadcrumb';
+import HeaderImage from '@/public/assets/ourteam.jpg'
 
 const MeetOurTeam = () => {
 
@@ -99,8 +101,45 @@ const MeetOurTeam = () => {
 
 
   return (
-    <div className='overflow-hidden'>
-      <div className='max-w-7xl mx-auto space-y-24'>
+    <div className='overflow-hidden py-24'>
+      <div className='relative'>
+        <div
+          className='w-full h-[24rem] bg-no-repeat bg-cover bg-center bg-fixed opacity-20'
+          style={{
+            backgroundImage: `url(${HeaderImage.src})`,
+          }}
+        >
+        </div>
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
+          <h1 className='text-6xl font-extrabold '>Meet our <span className='text-secondary'>Team</span> </h1>
+          <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>
+            {/* {lifeAtProspectivTextContent?.heading?.paragraph} */}
+          </p>
+          <div className='flex justify-center items-center'>
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink className='text-textColorTwo text-lg' href="/">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className='text-textColorTwo text-lg'>Company</BreadcrumbPage>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className='text-textColorTwo text-lg'>Life at Prospectiv</BreadcrumbPage>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className='text-secondary text-lg'>Meet our Team</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </div>
+
+      </div>
+      <div className='max-w-7xl mx-auto space-y-24 mb-24'>
         {/* Awards logo marquee */}
         <div className="py-12">
           <h2 className='text-4xl font-bold mb-8 text-center'>Awards and Recognitions</h2>
@@ -243,12 +282,20 @@ const MeetOurTeam = () => {
 
         <BenefitsOfProspectiv />
         <CultureAndPerks />
-        {/* Recruitment process */}
+      </div>
 
-        <div>
-          <OurRecruitementProcess />
-        </div>
-
+      <div className='max-w-screen-xl mx-auto relative'>
+        <OurRecruitementProcess />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+          className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
+          <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+          <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+          <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+        </motion.div>
       </div>
     </div>
   );

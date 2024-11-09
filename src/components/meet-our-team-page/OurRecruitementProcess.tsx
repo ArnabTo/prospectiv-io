@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
+import { Card, CardContent, CardHeader } from '../ui/card';
 
 const OurRecruitementProcess = () => {
 
@@ -52,51 +53,57 @@ const OurRecruitementProcess = () => {
         }
     };
     return (
-        <div className="w-full max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-4">
-                <div className='bg-card rounded-xl p-5 lg:p-7 flex flex-col justify-center items-center h-fit'>
+        <div className="w-full mx-auto px-4">
+            <div className='rounded-xl'>
+                <div className='rounded-xl p-5 lg:p-7 flex flex-col justify-center items-center h-fit'>
                     <h2 className='text-3xl font-bold'>Our engineering recruitment process</h2>
                     <p className='text-textColorTwo mt-4'>We keep it simple - all roles follow the same four step process.</p>
                 </div>
-                {steps.map((step, index) => (
-                    <div key={step.title} className="flex flex-col md:flex-row items-center gap-4">
-                        <div className="w-full">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 0.2 * index }}
-                                viewport={{ once: true }}
-                                className="flex flex-col items-center space-y-5 w-full"
-                                onMouseEnter={() => handleMouseEnter(step.lottieRef)}
-                                onMouseLeave={() => handleMouseLeave(step.lottieRef)}
-                            >
-                                {/* Lottie container with fixed dimensions */}
-                                <div className="w-24 h-24 bg-foreground p-1 rounded-full flex items-center justify-center">
-                                    <Lottie
-                                        lottieRef={step.lottieRef}
-                                        animationData={step.animationData}
-                                        loop={false}
-                                        autoplay={false}
-                                        className="w-full h-full"
-                                    />
-                                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
+                    {steps.map((step, index) => (
+                        <div key={step.title} className="flex flex-col md:flex-row gap-4">
+                            <Card className='border-none bg-transparent'>
+                                <CardHeader>
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.5, delay: 0.2 * index }}
+                                        viewport={{ once: true }}
+                                        className="flex flex-col items-center space-y-5 w-full"
+                                        onMouseEnter={() => handleMouseEnter(step.lottieRef)}
+                                        onMouseLeave={() => handleMouseLeave(step.lottieRef)}
+                                    >
+                                        {/* Lottie container with fixed dimensions */}
+                                        <div className="w-24 h-24 bg-foreground p-1 rounded-full flex items-center justify-center">
+                                            <Lottie
+                                                lottieRef={step.lottieRef}
+                                                animationData={step.animationData}
+                                                loop={false}
+                                                autoplay={false}
+                                                className="w-full h-full"
+                                            />
+                                        </div>
+                                    </motion.div>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="space-y-3 text-center w-full">
+                                        <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
+                                        <p className="text-textColorTwo text-base md:text-lg">{step.description}</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
 
-                                <div className="space-y-3 text-center w-full">
-                                    <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
-                                    <p className="text-textColorTwo text-base md:text-lg">{step.description}</p>
+                            {/* Arrow - Only show between items, not after the last one */}
+                            {index < steps.length - 1 && (
+                                <div className="hidden lg:flex items-center justify-center">
+                                    <ArrowRight size={30} className="transform rotate-0 lg:rotate-0" />
                                 </div>
-                            </motion.div>
+                            )}
                         </div>
-
-                        {/* Arrow - Only show between items, not after the last one */}
-                        {index < steps.length - 1 && (
-                            <div className="hidden lg:flex items-center justify-center">
-                                <ArrowRight size={30} className="transform rotate-0 lg:rotate-0" />
-                            </div>
-                        )}
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
+
         </div>
     );
 };
