@@ -21,30 +21,30 @@ export const RichTextComponent = {
 },
 list: {
   bullet: ({children}: any) => (
-    <ul className="ml-10 list-disc text-lg">{children}</ul>
+    <ul className="ml-10 my-5 list-disc text-lg">{children}</ul>
   ),
   number: ({children}: any) => (
-    <ol className="ml-10 list-decimal text-lg">{children}</ol>
+    <ol className="ml-10 my-5 list-decimal text-lg">{children}</ol>
   ),
 },
 block:{
   h1: ({children}: any) => (
-    <h1 className='text-5xl py-10 font-bold'>{children}</h1>
+    <h1 className='text-5xl py-8 font-bold text-secondary'>{children}</h1>
   ),
   h2: ({value}: any) => (
     <h2 
     id={slugify(value.children[0].text)}
-    className='text-3xl pt-10 pb-1 font-bold text-secondary'>{value.children[0].text}</h2>
+    className='text-3xl pt-8 pb-1 font-bold text-secondary'>{value.children[0].text}</h2>
   ),
   h3: ({value}: any) => (
     <h3 
     id={slugify(value.children[0].text)}
-    className='text-2xl pt-10 pb-1 font-bold'>{value.children[0].text}</h3>
+    className='text-2xl pt-8 pb-1 font-bold text-secondary'>{value.children[0].text}</h3>
   ),
   h4: ({value}: any) => (
     <h4 
     id={slugify(value.children[0].text)}
-    className='text-xl pt-10 pb-1 font-bold'>{value.children[0].text}</h4>
+    className='text-xl pt-8 pb-1 font-bold text-secondary'>{value.children[0].text}</h4>
   ),
   blockqote: ({children}: any) => (
     <blockquote className='border-l-4 border-gradientColorTwo pl-5 py-5 my-5'>
@@ -52,7 +52,7 @@ block:{
       </blockquote>
   ),
   normal: ({children}: any) => (
-    <p className='text-xl text-textColorTwo'>{children}</p>
+    <p className='text-lg text-textColorTwo'>{children}</p>
   ),
 },
 marks:{

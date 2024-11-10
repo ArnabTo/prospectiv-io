@@ -135,11 +135,11 @@ const BlogDetails = () => {
                                                                 <div>
                                                                     <span>
                                                                         <p className="text-lg font-bold">{blog?.author?.name}</p>
-                                                                        <p className="text-lg font-bold text-secondary">{blog.author.position ?? ''}</p>
+                                                                        <p className="text-md font-bold text-secondary">{blog.author.position ?? ''}</p>
                                                                     </span>
                                                                 </div>
                                                             </div>
-                                                            <PortableText value={blog.author.bio} components={RichTextComponent} />
+                                                           <p className="text-md"><PortableText value={blog.author.bio} components={RichTextComponent} /></p>
                                                         </div>
                                                         <div className="flex flex-row gap-3 justify-start items-center">
                                                             <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
@@ -191,7 +191,7 @@ const Toc = ({ headings, activeHeading }: { headings: any[], activeHeading: stri
                             return (
                                 <li
                                     key={index}
-                                    className={`w-full text-start my-3 px-3 py-2 line-clamp-1 
+                                    className={`w-full text-start my-3 px-3 py-2 line-clamp-1 hover:border-l-2 hover:border-secondary hover:bg-secondary/5
                                     ${activeHeading === headingId ? 'border-l-2 border-secondary bg-secondary/5' : 'bg-transparent'}`}
                                 >
                                     <Link href={`#${headingId}`} aria-current={activeHeading === headingId ? 'true' : 'false'} className="line-clamp-1">
