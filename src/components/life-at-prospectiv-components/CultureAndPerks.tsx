@@ -27,7 +27,7 @@ const CultureAndPerks = () => {
 
     return (
         <div>
-       <div className='space-y-7 px-5'>
+       <div className='space-y-7'>
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}

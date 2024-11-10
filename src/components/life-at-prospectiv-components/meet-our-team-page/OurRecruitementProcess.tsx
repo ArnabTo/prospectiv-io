@@ -56,7 +56,7 @@ const OurRecruitementProcess = () => {
     return (
         <div className="w-full mx-auto px-4">
             <div className='rounded-xl'>
-                <div className='rounded-xl p-5 lg:p-7 flex flex-col justify-center items-center h-fit'>
+                <div className='rounded-xl lg:p-7 text-center flex flex-col justify-center items-center h-fit'>
                     <h2 className='text-3xl font-bold'>Our engineering recruitment process</h2>
                     <p className='text-textColorTwo mt-4'>We keep it simple - all roles follow the same four step process.</p>
                 </div>
@@ -100,6 +100,11 @@ const OurRecruitementProcess = () => {
                                 {index < steps.length - 1 && (
                                     <div className="hidden lg:flex items-center justify-center">
                                         <ArrowRight size={30} className="transform rotate-0 lg:rotate-0" />
+                                    </div>
+                                )}
+                                 {index < steps.length - 1 && (
+                                    <div className="lg:hidden flex items-center justify-center">
+                                        <ArrowDown size={30} className="transform rotate-0 lg:rotate-0" />
                                     </div>
                                 )}
                             </div>

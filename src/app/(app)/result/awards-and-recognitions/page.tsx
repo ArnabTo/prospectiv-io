@@ -46,7 +46,7 @@ const AwardsAndRecognitions = () => {
     };
 
     const filteredAwards = (category: string) => {
-        return category === 'all'
+        return category === 'All'
             ? awards
             : awards.filter((award) => award.category === category);
     };
@@ -203,22 +203,22 @@ const AwardsAndRecognitions = () => {
                     ) : (
                         <>
                             <TabsContent value="all">
-                                {renderAwardGrid('all')}
+                                {renderAwardGrid('All')}
                             </TabsContent>
                             <TabsContent value="shortlisted">
-                                {renderAwardGrid('shortlisted')}
+                                {renderAwardGrid('Shortlisted')}
                             </TabsContent>
                             <TabsContent value="winner">
                                 {renderAwardGrid('Winner')}
                             </TabsContent>
                             <TabsContent value="silver">
-                                {renderAwardGrid('silver')}
+                                {renderAwardGrid('Silver')}
                             </TabsContent>
                             <TabsContent value="gold">
-                                {renderAwardGrid('gold')}
+                                {renderAwardGrid('Gold')}
                             </TabsContent>
                             <TabsContent value="bronze">
-                                {renderAwardGrid('bronze')}
+                                {renderAwardGrid('Bronze')}
                             </TabsContent>
                         </>
                     )}

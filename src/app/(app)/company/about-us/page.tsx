@@ -14,19 +14,6 @@ import PerspectivValues from "@/components/life-at-prospectiv-components/Perspec
 
 const AboutUs = () => {
 
-    const perSpectiveValuesLottieOne = useRef(null);
-    const perSpectiveValuesLottieTwo = useRef(null);
-    const perSpectiveValuesLottieThree = useRef(null);
-    const perSpectiveValuesLottieFour = useRef(null);
-
-    const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
-        lottieRef?.current?.play(); // Play animation on hover
-    };
-
-    const handleMouseLeave = (lottieRef: React.RefObject<any>) => {
-        lottieRef?.current?.stop(); // Stop the animation when hover ends
-    };
-
     return (
         <div className='overflow-hidden'>
             <div className='relative'>

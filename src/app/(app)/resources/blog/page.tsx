@@ -67,7 +67,7 @@ export default function Blogs() {
                         <Separator className="hidden md:block" orientation="vertical" />
                         <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings</Link></div>
                         <Separator orientation="vertical" />
-                        <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/life-at-prospect'>Life at Prospect</Link></div>
+                        <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/life-at-prospect'>Life at Prospect</Link></div>
                     </div>
                     <div className="flex justify-center items-center gap-3">
                         <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings</Link></div>

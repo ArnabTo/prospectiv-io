@@ -121,7 +121,7 @@ const LifeAtProspectiv = () => {
                                 transition={{ duration: 0.7, delay: 0.4 }}
                                 viewport={{ once: true }}
                             >
-                                <div>
+                                <Link href='/company/life-at-prospectiv/customer-success'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300'>
                                         <Image className='w-full rounded-3xl h-52' src='https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15855.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
                                         <div>
@@ -131,7 +131,7 @@ const LifeAtProspectiv = () => {
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </motion.div>
 
                             <motion.div
