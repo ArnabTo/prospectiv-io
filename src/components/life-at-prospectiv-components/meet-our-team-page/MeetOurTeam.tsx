@@ -78,7 +78,7 @@ const MeetOurTeam = () => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                  <BreadcrumbPage className='text-textColorTwo text-lg'>Life at Prospectiv</BreadcrumbPage>
+                  <BreadcrumbLink className='text-textColorTwo text-sm md:text-md lg:text-lg ' href="/company/life-at-prospectiv">Life at Prospectiv</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
@@ -93,7 +93,7 @@ const MeetOurTeam = () => {
       <div className='max-w-7xl mx-auto space-y-24 mb-24'>
         <AwardsSection />
 
-        <MeetOurPeople/>
+        <MeetOurPeople />
         {/* Engineering principles */}
         <div className="py-12 p-5">
           <h1 className="text-4xl font-bold mb-8">Our Engineering Principles</h1>

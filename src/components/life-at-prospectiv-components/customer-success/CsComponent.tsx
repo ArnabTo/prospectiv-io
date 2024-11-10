@@ -12,6 +12,7 @@ import OurRecruitementProcess from '../meet-our-team-page/OurRecruitementProcess
 import BenefitsOfProspectiv from '../BenefitsOfProspectiv';
 import CultureAndPerks from '../CultureAndPerks';
 import CareerPath from '../CareerPath';
+import AwardsSection from '@/components/awards-section/AwardsSection';
 
 const CsComponent = () => {
 
@@ -52,26 +53,26 @@ const CsComponent = () => {
                 </div>
                 <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
                     <h1 className='text-2xl lg:text-6xl font-extrabold '>Customer <span className='text-secondary'>Success</span> </h1>
-                    <p className='text-textColorTwo text-md lg:text-lg text-center font-bold mx- px-5'>
+                    <p className='text-textColorTwo text-sm md:text-md lg:text-lg text-center font-bold mx- px-5'>
                         Since launch, we've won multiple awards that drive us to keep investing in our people and technology. Check out our virtual award cabinet and client reviews below.
                     </p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
                             <BreadcrumbList className='justify-center'>
                                 <BreadcrumbItem>
-                                    <BreadcrumbLink className='text-textColorTwo text-lg' href="/">Home</BreadcrumbLink>
+                                    <BreadcrumbLink className='text-textColorTwo text-sm md:text-md lg:text-lg' href="/">Home</BreadcrumbLink>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-textColorTwo text-lg'>Company</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-textColorTwo text-sm md:text-md lg:text-lg'>Company</BreadcrumbPage>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-textColorTwo text-lg'>Life at Prospectiv</BreadcrumbPage>
+                                    <BreadcrumbLink className='text-textColorTwo text-sm md:text-md lg:text-lg ' href="/company/life-at-prospectiv">Life at Prospectiv</BreadcrumbLink>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-secondary text-lg'>Customer Success</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-secondary text-sm md:text-md lg:text-lg'>Customer Success</BreadcrumbPage>
                                 </BreadcrumbItem>
                             </BreadcrumbList>
                         </Breadcrumb>
@@ -304,6 +305,10 @@ const CsComponent = () => {
 
                 <div>
                     <CultureAndPerks />
+                </div>
+
+                <div>
+                    <AwardsSection/>
                 </div>
             </div>
         </div>

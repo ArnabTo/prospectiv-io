@@ -6,7 +6,7 @@ const CareerPath = () => {
         <div className='flex flex-col lg:flex-row justify-between items-center gap-10'>
             <div className='lg:max-w-[50%] space-y-4'>
                 <h2 className='text-3xl md:text-4xl lg:text-5xl text-center lg:text-left font-semibold'>Career Path</h2>
-                <p className='text-textColorTwo text-lg'>We assess all roles based on ability: we attract the best talent and then help people develop their skills and realise their career aspirations.
+                <p className='text-textColorTwo text-lg text-center lg:text-left'>We assess all roles based on ability: we attract the best talent and then help people develop their skills and realise their career aspirations.
 
                     We have a clear pathway and proven track record of enabling our people to achieve their potential – be that within Customer Success or other areas of our business.
 

@@ -31,13 +31,13 @@ const BenefitsOfProspectiv = () => {
 
     return (
         <div>
-            <div className='flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10'>
+            <div className='flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 space-y-5'>
                 <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.9 }}
                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
+                    className='md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-7 mx-auto'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>Benefits of Prospectiv</h1>
                     <p className='text-md lg:text-lg text-textColorTwo text-center lg:text-start'>
                         Our benefits vary by location, but the core perks remain consistent no matter where you're based.

@@ -35,7 +35,7 @@ const OpsComponent = () => {
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-textColorTwo text-sm md:text-lg'>Life at Prospectiv</BreadcrumbPage>
+                                    <BreadcrumbLink className='text-textColorTwo text-sm md:text-md lg:text-lg ' href="/company/life-at-prospectiv">Life at Prospectiv</BreadcrumbLink>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
