@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Footer = () => {
     return (
         <footer className='max-w-screen-2xl px-10 lg:px-32 mx-auto pt-24'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4'>
                 {/* <div className='space-y-5'>
                     <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Solutions</h3>
                     <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
@@ -58,7 +58,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='space-y-5 flex justify-center items-center'>
+                <div className='space-y-5 flex justify-start items-center lg:items-start'>
                     <div className='flex flex-col justify-center gap-5'>
                         <div>
                             <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Resources</h3>
@@ -82,17 +82,17 @@ const Footer = () => {
             </div>
 
             <div>
-                <div className='h-0.5 w-full bg-borderColor my-5'></div>
+                <div className='h-0.5 w-full bg-borderColor my-3'></div>
             </div>
 
-            <div className='mb-5 flex flex-col md:flex-row justify-between items-center space-y-4'>
+            <div className='mb-3 flex flex-row justify-between items-center'>
                 <div>
                     <Link href='/'><h1 className='text-3xl font-bold'>Prospectiv</h1></Link>
                 </div>
                 {/* social links */}
                 <div className='flex justify-between items-center gap-2'>
                     <div className='bg-smallCard rounded-lg'>
-                        <Link href='https://www.linkedin.com/company/prospectivdotio/'><Image className='max-w-12 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                        <Link href='https://www.linkedin.com/company/prospectivdotio/'><Image className='w-10 max-w-12 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
                     </div>
                 </div>
             </div>

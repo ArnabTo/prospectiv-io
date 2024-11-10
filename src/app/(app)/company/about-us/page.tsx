@@ -25,19 +25,19 @@ const AboutUs = () => {
                 >
                 </div>
                 <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
-                    <h1 className='text-3xl lg:text-6xl font-extrabold '>About <span className='text-secondary'>Us</span> </h1>
-                    <p className='text-textColorTwo text-md lg:text-lg text-center font-bold mx- px-5'>
+                    <h1  className='text-2xl md:4xl lg:text-6xl font-extrabold'>About <span className='text-secondary'>Us</span> </h1>
+                    <p className='text-textColorTwo text-sm md:text-md lg:text-lg text-center font-bold px-5'>
                         {aboutUsPageTextContent?.heading?.paragraph}
                     </p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
-                            <BreadcrumbList>
+                            <BreadcrumbList className='justify-center'>
                                 <BreadcrumbItem>
                                     <BreadcrumbLink className='text-textColorTwo text-lg' href="/">Home</BreadcrumbLink>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-lg'>Company</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-textColorTwo text-lg'>Company</BreadcrumbPage>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
@@ -50,10 +50,9 @@ const AboutUs = () => {
             </div>
 
             <div className="max-w-7xl mx-auto space-y-24">
-
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-10 px-5 py-10">
-                    <div className="lg:w-1/2">
-                        <Image width={500} height={500} className="w-full rounded-2xl"
+               <div className="flex flex-col lg:flex-row justify-between items-center gap-10 px-5 py-10">
+                    <div className="w-full lg:w-1/2">
+                        <Image width={1000} height={1000} className="w-full rounded-2xl"
                             src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600" alt="founder image" />
                     </div>
                     <div className="lg:w-1/2 space-y-5">
@@ -164,8 +163,7 @@ const AboutUs = () => {
 
                 <div className='space-y-5'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>#lifeatprospectiv</h1>
-
-                    <div className="p-5 sm:p-8">
+                    <div className="p-5 sm:p-8 flex justify-center items-center">
                         <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.9 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}

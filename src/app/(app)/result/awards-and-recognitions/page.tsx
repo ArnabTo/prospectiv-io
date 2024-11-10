@@ -136,7 +136,7 @@ const AwardsAndRecognitions = () => {
                                             </div>
                                         </div>
                                     </CardHeader>
-                                    <CardContent className="flex-grow flex flex-col justify-between">
+                                    <CardContent className="flex-grow flex flex-col justify-center space-y-2">
                                         <p className="text-sm text-gradientColorOne">{award.year}</p>
                                         <h3 className="text-xl font-bold">{award.title}</h3>
                                         <p className="text-lg text-textColorTwo">{award.award_name}</p>
@@ -162,13 +162,13 @@ const AwardsAndRecognitions = () => {
                 >
                 </div>
                 <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
-                    <h1 className='text-3xl lg:text-6xl font-extrabold '>An award  <span className='text-secondary'>winning service</span> </h1>
-                    <p className='text-textColorTwo text-md lg:text-lg text-center font-bold mx- px-5'>
+                    <h1 className='text-2xl md:4xl lg:text-6xl font-extrabold'>An award  <span className='text-secondary'>winning service</span> </h1>
+                    <p className='text-textColorTwo text-sm md:text-md lg:text-lg text-center font-bold px-5'>
                         Since our launch, we’ve won multiple awards for the service we provide. All of which spur us on to invest even more in our people and technology. Take a look at our virtual award cabinet below, followed by a summary of our client reviews.
                     </p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
-                            <BreadcrumbList>
+                        <BreadcrumbList className='justify-center'>
                                 <BreadcrumbItem>
                                     <BreadcrumbLink className='text-textColorTwo text-lg' href="/">Home</BreadcrumbLink>
                                 </BreadcrumbItem>
@@ -186,7 +186,7 @@ const AwardsAndRecognitions = () => {
                 </div>
             </div>
 
-            <div className='max-w-6xl mx-auto min-h-screen py-28 space-y-20'>
+            <div className='max-w-6xl mx-auto min-h-screen py-28 space-y-20 p-5'>
                 <Tabs defaultValue={awardCategory} onValueChange={handleChange} className="w-full mx-auto space-y-8">
                     <h1 className='text-3xl lg:text-4xl font-extrabold text-center'>Our Awards</h1>
                     <TabsList className="w-full mx-auto flex justify-between items-center rounded-full overflow-x-auto lg:overflow-hidden">
@@ -259,14 +259,14 @@ const AwardsAndRecognitions = () => {
                     </div>
                 </div>
 
-                <div className='space-y-10 px-5'>
+                <div className='space-y-10'>
                     <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.9 }}
                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        <h1 className='text-3xl font-bold text-start'>Explore Our Success Stories</h1>
+                        <h1 className='text-3xl font-bold text-center lg:text-start'>Explore Our Success Stories</h1>
                     </motion.div>
 
                     <motion.div

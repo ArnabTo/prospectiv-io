@@ -26,12 +26,12 @@ const LifeAtProspectiv = () => {
                     }}
                 >
                 </div>
-                <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
-                    <h1 className='text-6xl font-extrabold '>Life at <span className='text-secondary'>Prospectiv</span> </h1>
-                    <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>{lifeAtProspectivTextContent?.heading?.paragraph}</p>
+                <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
+                    <h1 className='text-2xl md:text-4xl lg:text-6xl font-extrabold '>Life at <span className='text-secondary'>Prospectiv</span> </h1>
+                    <p className='text-textColorTwo text-sm md:text-md lg:text-lg text-center font-bold mx- px-5'>{lifeAtProspectivTextContent?.heading?.paragraph}</p>
                     <div className='flex justify-center items-center'>
                         <Breadcrumb>
-                            <BreadcrumbList>
+                            <BreadcrumbList className='justify-center'>
                                 <BreadcrumbItem>
                                     <BreadcrumbLink className='text-textColorTwo text-lg' href="/">Home</BreadcrumbLink>
                                 </BreadcrumbItem>
@@ -104,7 +104,7 @@ const LifeAtProspectiv = () => {
                             >
                                 <Link href='/company/life-at-prospectiv/meet-our-team'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300 '>
-                                        <Image className='w-full rounded-3xl h-52' src='https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600' width={300} height={300} alt='' />
+                                        <Image className='w-full rounded-3xl h-52 object-cover' src='https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>Tech</h2>
                                             <p className='text-md lg:text-lg text-textColorTwo'>
@@ -123,7 +123,7 @@ const LifeAtProspectiv = () => {
                             >
                                 <Link href='/company/life-at-prospectiv/customer-success'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300'>
-                                        <Image className='w-full rounded-3xl h-52' src='https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15855.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
+                                        <Image className='w-full rounded-3xl h-52 object-cover' src='https://img.freepik.com/free-photo/group-people-working-out-business-plan-office_1303-15855.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>Customer Success</h2>
                                             <p className='text-md lg:text-lg text-textColorTwo'>
@@ -142,7 +142,7 @@ const LifeAtProspectiv = () => {
                             >
                                 <Link href='/company/life-at-prospectiv/ops'>
                                     <div className='bg-card border border-borderColor p-5 lg:p-7 rounded-3xl space-y-3 hover:shadow-2xl transition-all duration-300'>
-                                        <Image className='w-full rounded-3xl h-52' src='https://img.freepik.com/free-photo/group-business-executives-smiling-camera_1170-1894.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
+                                        <Image className='w-full rounded-3xl h-52 object-cover' src='https://img.freepik.com/free-photo/group-business-executives-smiling-camera_1170-1894.jpg?ga=GA1.1.1300545767.1720969685&semt=ais_hybrid' width={300} height={300} alt='' />
                                         <div>
                                             <h2 className='text-xl font-bold'>Ops</h2>
                                             <p className='text-md lg:text-lg text-textColorTwo'>Our Ops team are masters of the management, organisation and juggling multiple tasks. And they make our campaigns fly.</p>
@@ -174,13 +174,13 @@ const LifeAtProspectiv = () => {
                 <div className='space-y-5'>
                     <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>#lifeatprospectiv</h1>
 
-                    <div className="p-5 sm:p-8">
+                    <div className="p-5 sm:p-8 flex justify-center items-center">
                         <motion.div
                             initial={{ opacity: 0, y: 10, scale: 0.9 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.7, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+                            className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8 mx-auto">
                             <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/7109063/pexels-photo-7109063.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
                             <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
                             <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
@@ -199,9 +199,13 @@ const LifeAtProspectiv = () => {
                     </div>
                 </div>
 
-                <BenefitsOfProspectiv />
+                <div className='p-5'>
+                    <BenefitsOfProspectiv />
+                </div>
 
-                <CultureAndPerks />
+                <div className='p-5'>
+                    <CultureAndPerks />
+                </div>
 
                 <PerspectivValues />
 

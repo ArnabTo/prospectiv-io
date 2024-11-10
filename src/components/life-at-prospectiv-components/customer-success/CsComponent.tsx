@@ -52,7 +52,7 @@ const CsComponent = () => {
                 >
                 </div>
                 <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
-                    <h1 className='text-2xl lg:text-6xl font-extrabold '>Customer <span className='text-secondary'>Success</span> </h1>
+                    <h1 className='text-2xl md:4xl lg:text-6xl font-extrabold '>Customer <span className='text-secondary'>Success</span> </h1>
                     <p className='text-textColorTwo text-sm md:text-md lg:text-lg text-center font-bold mx- px-5'>
                         Since launch, we've won multiple awards that drive us to keep investing in our people and technology. Check out our virtual award cabinet and client reviews below.
                     </p>

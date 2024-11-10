@@ -139,13 +139,12 @@ const ResourceHub = () => {
          </Link>
       );
    };
-   // console.log(allContents)
+   console.log(webinars)
    return (
       <div className="overflow-hidden">
          <div className="space-y-24">
-            <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-center">Resource Hub</h1>
-
             <div className="max-w-screen-2xl mx-auto">
+               <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-center mb-16">Resource Hub</h1>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12 px-4 relative">
                   {/* Webinars Section */}
                   <div className="row-span-1 md:row-span-4 h-full bg-card border border-borderColor p-7 rounded-2xl space-y-4 group">
@@ -153,7 +152,7 @@ const ResourceHub = () => {
                         isLoading ?
                            <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
-                           <Link href=''>
+                           <Link href={`/resources/resource-hub/webinar/${webinars[0].slug}`}>
                               <div className="overflow-hidden relative rounded-xl">
                                  <Image
                                     src={webinars[0]?.thumbnail?.asset?.url}
@@ -181,7 +180,7 @@ const ResourceHub = () => {
                         isLoading ?
                            <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
-                           <Link href=''>
+                           <Link href={`/resources/resource-hub/guide/${guides[0].slug}`}>
                               <div className="flex flex-col md:flex-row items-center h-full gap-4">
                                  <div className="w-full min-w-[35%] max-w-[40%] h-full rounded-xl flex justify-center items-center overflow-hidden relative">
                                     <Image
@@ -213,7 +212,7 @@ const ResourceHub = () => {
                         isLoading ?
                            <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
-                           <Link href=''>
+                           <Link href={`/resources/resource-hub/whitepaper/${whitePapers[0]?.slug}`}>
                               <div className="flex flex-col md:flex-row items-center h-full gap-4">
                                  <div className="w-full min-w-[35%] max-w-[40%] h-full flex justify-center items-center overflow-hidden relative">
                                     <Image
@@ -260,7 +259,7 @@ const ResourceHub = () => {
                      <TabsTrigger value="guides" className="flex flex-col lg:flex-row"><ScrollText className="mr-2" size={25} /> Guides</TabsTrigger>
                      <TabsTrigger value="whitepapers" className="flex flex-col lg:flex-row"><BookOpenIcon className="mr-2" size={25} />  White Papers</TabsTrigger>
                   </TabsList>
- 
+
                   <TabsContent value="All">
                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {paginatedContent.map(renderContent)}

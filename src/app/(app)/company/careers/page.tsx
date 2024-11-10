@@ -46,8 +46,8 @@ const Careers = () => {
                 >
                 </div>
                 <div className='w-full lg:max-w-[50%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center space-y-3'>
-                    <h1 className='text-3xl lg:text-6xl font-extrabold '>Find your <span className='text-secondary'>Oppurtunities</span> </h1>
-                    <p className='text-textColorTwo text-lg text-center font-bold mx-auto'>
+                    <h1 className='text-2xl md:4xl lg:text-6xl font-extrabold'>Find your <span className='text-secondary'>Oppurtunities</span> </h1>
+                    <p className='text-textColorTwo text-sm md:text-md lg:text-lg text-center font-bold mx- px-5'>
                         We’re passionate about helping our clients sell more, and believe having a happy team helps us to do that.
                         We work hard to make Prospectiv a great place to work, and reward everyone who joins us.
                     </p>
@@ -59,7 +59,7 @@ const Careers = () => {
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
-                                    <BreadcrumbPage className='text-lg'>Company</BreadcrumbPage>
+                                    <BreadcrumbPage className='text-textColorTwo text-lg'>Company</BreadcrumbPage>
                                 </BreadcrumbItem>
                                 <BreadcrumbSeparator />
                                 <BreadcrumbItem>
@@ -120,7 +120,7 @@ const Careers = () => {
                 </div>
 
                 <div className='relative space-y-5 p-5'>
-                    <p>Total avalaible vacancies: {vacancies.length}</p>
+                    <p className='text-lg text-textColorTwo text-center lg:text-start'>Total avalaible vacancies: {vacancies.length}</p>
                     <div className='flex flex-col gap-3 space-y-5'>
                         {
                             vacancies.map((vacancy, id) => (
@@ -129,8 +129,8 @@ const Careers = () => {
                                         <div className='flex items-center gap-5'>
                                             <div className='grid grid-cols-1  lg:grid-cols-3 items-start lg:justify-between lg:items-center gap-2 flex-1'>
                                                 <h2 className='text-3xl font-extrabold group-hover:text-secondary'>{vacancy.title}</h2>
-                                                <p className='text-textColorTwo text-lg text-center'>{vacancy.type}</p>
-                                                <p className='text-textColorTwo text-lg text-center'>{vacancy.location}</p>
+                                                <p className='text-textColorTwo text-lg text-start lg:text-center'>{vacancy.type}</p>
+                                                <p className='text-textColorTwo text-lg text-start lg:text-center'>{vacancy.location}</p>
                                             </div>
                                             <div>
                                                 <ArrowRightIcon size={30} />
