@@ -61,9 +61,6 @@ const Navbar = () => {
         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
     };
 
-    console.log(pathname)
-
-
     return (
         <header className="max-w-7xl mx-auto lg:px-10 relative z-20">
 

@@ -49,8 +49,6 @@ export default function Blogs() {
         fetchBlogs()
     }, [fetchBlogs])
 
-    console.log(searchedBlog)
-    // console.log(blogs)
     return (
         <div className="max-w-7xl mx-auto space-y-16 py-16">
             <div className="w-full mx-auto space-y-7">
@@ -60,21 +58,21 @@ export default function Blogs() {
                 <div className="flex flex-col gap-4">
                     <div className="flex h-5 justify-center items-center space-x-4">
                         <div>
-                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/about-us'>About Us</Link>
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/about-us'>About Us</Link>
                         </div>
                         <Separator orientation="vertical" />
-                        <div><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/paper'>White Paper</Link></div>
+                        <div><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/resources/resource-hub'>White Paper</Link></div>
                         <Separator orientation="vertical" />
-                        <div><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/resources/blog'>Other Blogs</Link></div>
+                        <div><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/result/success-story'>Success Stories</Link></div>
                         <Separator className="hidden md:block" orientation="vertical" />
-                        <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='company/careers'>Openings</Link></div>
+                        <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings</Link></div>
                         <Separator orientation="vertical" />
                         <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/life-at-prospect'>Life at Prospect</Link></div>
                     </div>
                     <div className="flex justify-center items-center gap-3">
-                        <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='company/careers'>Openings</Link></div>
+                        <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings</Link></div>
                         <Separator orientation="vertical" />
-                        <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/life-at-prospect'>Life at Prospect</Link></div>
+                        <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/life-at-prospect'>Life at Prospect</Link></div>
                     </div>
                 </div>
 

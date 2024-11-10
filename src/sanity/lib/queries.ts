@@ -62,6 +62,8 @@ export const POST_QUERY_BY_SLUG = defineQuery(`
         author->{
             name,
             bio,
+            social,
+            position,
             image{
                 asset->{
                     _id,

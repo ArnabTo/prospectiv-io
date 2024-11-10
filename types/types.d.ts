@@ -45,7 +45,13 @@ export interface BlogPost {
     ];
     author: {
         name: string
-        bio: []
+        bio: [],
+        position:string,
+        social:{
+            linkedin: string,
+            facebook: string,
+            twitter: string
+        }
         image: {
             asset: {
                 url: string

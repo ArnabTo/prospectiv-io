@@ -35,7 +35,6 @@ const Intro = () => {
         }, 8000)
     }, [showBlackScreen]);
 
-    console.log(showBlackScreen)
     return (
         <div className='z-50'>
             <AnimatePresence>

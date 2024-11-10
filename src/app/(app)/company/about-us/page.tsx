@@ -350,7 +350,7 @@ const AboutUs = () => {
                             </p>
                             <p className="text-md lg:text-lg text-textColorTwo">{aboutUsPageTextContent.casestudy.textContentThree}</p>
                             <div className="w-60 lg:w-full max-w-72 flex mx-auto lg:mx-0 rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-                                <Link href="company/careers" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
+                                <Link href="/company/careers" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                                     {aboutUsPageTextContent.casestudy.cta}
                                 </Link>
                             </div>

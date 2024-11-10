@@ -127,28 +127,33 @@ const BlogDetails = () => {
                                             >
                                                 <div className="py-16 space-y-5">
                                                     <div className="border border-borderColor rounded-2xl p-5 space-y-4 hover:shadow-2xl group cursor-pointer">
-                                                        <div className="flex flex-col lg:flex-row items-center gap-3">
-                                                            <Image className="w-1/4 rounded-full group-hover:scale-105 transition-all duration-300 ease-in-out"
-                                                                src={blog?.author?.image?.asset?.url} width={500} height={500}
-                                                                alt="author_image" />
-                                                            <span>
-                                                                <p className="text-lg font-bold text-secondary">{blog?.author?.name}</p>
-                                                                <PortableText value={blog.author.bio} components={RichTextComponent} />
-                                                            </span>
+                                                        <div className="flex flex-col items-start gap-3">
+                                                            <div className="flex flex-col lg:flex-row items-center gap-3">
+                                                                <Image className="w-1/4 rounded-full group-hover:scale-105 transition-all duration-300 ease-in-out"
+                                                                    src={blog?.author?.image?.asset?.url} width={500} height={500}
+                                                                    alt="author_image" />
+                                                                <div>
+                                                                    <span>
+                                                                        <p className="text-lg font-bold">{blog?.author?.name}</p>
+                                                                        <p className="text-lg font-bold text-secondary">{blog.author.position ?? ''}</p>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <PortableText value={blog.author.bio} components={RichTextComponent} />
                                                         </div>
                                                         <div className="flex flex-row gap-3 justify-start items-center">
                                                             <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href='#'><Image className='max-w-10 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                                <Link href={blog.author.social.linkedin ?? ''}><Image className='max-w-10 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
                                                             <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href='#'><Image className='max-w-10 p-2' src={InstagramLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                                <Link href={blog.author.social.twitter ?? ''}><Image className='max-w-10 p-2' src={InstagramLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
                                                             <div className='hidden lg:block bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                                <Link href={blog.author.social.facebook ?? ''}><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                             </div>
                                                         </div>
                                                         <div className='lg:hidden bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                            <Link href='#'><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                            <Link href={blog.author.social.facebook ?? ''}><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
                                                         </div>
                                                     </div>
 
@@ -186,8 +191,8 @@ const Toc = ({ headings, activeHeading }: { headings: any[], activeHeading: stri
                             return (
                                 <li
                                     key={index}
-                                    className={`w-full text-start my-3 px-3 py-2 rounded-full line-clamp-1 
-                                    ${activeHeading === headingId ? 'bg-secondary text-white' : 'bg-smallCard'}`}
+                                    className={`w-full text-start my-3 px-3 py-2 line-clamp-1 
+                                    ${activeHeading === headingId ? 'border-l-2 border-secondary bg-secondary/5' : 'bg-transparent'}`}
                                 >
                                     <Link href={`#${headingId}`} aria-current={activeHeading === headingId ? 'true' : 'false'} className="line-clamp-1">
                                         {heading?.children[0]?.text}

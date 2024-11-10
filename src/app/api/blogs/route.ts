@@ -10,3 +10,4 @@ export async function GET(request: Request) {
         return new Response(JSON.stringify({ message: "Failed to fetch blogs" }), { status: 500 });
     }
 }
+

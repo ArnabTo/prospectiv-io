@@ -46,7 +46,6 @@ const AwardsAndRecognitions = () => {
     };
 
     const filteredAwards = (category: string) => {
-        console.log(category)
         return category === 'all'
             ? awards
             : awards.filter((award) => award.category === category);
@@ -151,7 +150,7 @@ const AwardsAndRecognitions = () => {
             </>
         );
     };
-    console.log(awards)
+
     return (
         <div>
             <div className='relative'>
@@ -207,19 +206,19 @@ const AwardsAndRecognitions = () => {
                                 {renderAwardGrid('all')}
                             </TabsContent>
                             <TabsContent value="shortlisted">
-                                {renderAwardGrid('Shortlisted')}
+                                {renderAwardGrid('shortlisted')}
                             </TabsContent>
                             <TabsContent value="winner">
                                 {renderAwardGrid('Winner')}
                             </TabsContent>
                             <TabsContent value="silver">
-                                {renderAwardGrid('Silver')}
+                                {renderAwardGrid('silver')}
                             </TabsContent>
                             <TabsContent value="gold">
-                                {renderAwardGrid('Gold')}
+                                {renderAwardGrid('gold')}
                             </TabsContent>
                             <TabsContent value="bronze">
-                                {renderAwardGrid('Bronze')}
+                                {renderAwardGrid('bronze')}
                             </TabsContent>
                         </>
                     )}
