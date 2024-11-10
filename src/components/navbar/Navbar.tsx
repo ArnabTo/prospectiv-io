@@ -144,7 +144,7 @@ const Navbar = () => {
                                             Results
                                         </div>
                                         <motion.ul
-                                            className="overflow-hidden"
+                                            className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
                                             initial="hidden"
                                             animate={openDropdownIndex === 2 ? "visible" : "hidden"}
                                             exit="exit"
