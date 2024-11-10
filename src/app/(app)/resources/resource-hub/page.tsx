@@ -70,7 +70,6 @@ const ResourceHub = () => {
 
    useEffect(() => {
       const combinedContent = [...webinars, ...guides, ...whitePapers];
-      console.log(combinedContent, 'combinedContent')
       const uniqueContent = Array.from(new Set(combinedContent.map(item => item.slug)))
          .map(slug => combinedContent.find(item => item.slug === slug));
       setAllContents(combinedContent);
@@ -139,7 +138,6 @@ const ResourceHub = () => {
          </Link>
       );
    };
-   console.log(webinars)
    return (
       <div className="overflow-hidden">
          <div className="space-y-24">

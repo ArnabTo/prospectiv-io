@@ -21,7 +21,6 @@ interface Vacancy {
 }
 const VacancyDetails = () => {
     const params = useParams();
-    console.log(params)
     const [vacancy, setVacancy] = useState<Vacancy | null>(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -42,7 +41,6 @@ const VacancyDetails = () => {
     }, [fetchVacancy])
 
 
-    console.log(vacancy)
     return (
         <div>
             <div className="max-w-screen-2xl mx-auto">

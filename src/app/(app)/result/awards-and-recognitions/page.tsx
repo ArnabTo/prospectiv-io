@@ -64,7 +64,7 @@ const AwardsAndRecognitions = () => {
     };
 
 
-    console.log(awards)
+
     const renderPagination = (category: string) => {
         const totalPages = getTotalPages(category);
         if (totalPages <= 1) return null;

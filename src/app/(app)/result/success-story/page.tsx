@@ -53,7 +53,7 @@ const SuccessStory = () => {
         }
     };
 
-    console.log(successStories)
+
     return (
         <div className="overflow-hidden">
             <div className='relative'>
