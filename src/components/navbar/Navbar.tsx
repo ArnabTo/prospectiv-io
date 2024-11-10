@@ -35,28 +35,33 @@ const Navbar = () => {
         exit: { opacity: 0, y: -10, scale: 0.95 },
     };
 
+    const companyRef = useRef<HTMLLIElement | null>(null);
+    const resourcesRef = useRef<HTMLLIElement | null>(null);
+    const resultsRef = useRef<HTMLLIElement | null>(null);
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            if (
+                companyRef.current && !companyRef.current.contains(event.target as Node) &&
+                resourcesRef.current && !resourcesRef.current.contains(event.target as Node) &&
+                resultsRef.current && !resultsRef.current.contains(event.target as Node)
+            ) {
                 setOpenDropdownIndex(null);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
+        return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
     // fetch latest blog
     const fetchBlog = useCallback(async () => {
-        const response = await axios.get('/api/blogs')
+        const response = await axios.get('/api/blogs');
         setBlog(response.data.slice(0, 1));
-    }, [])
+    }, []);
 
     useEffect(() => {
         fetchBlog();
-    }, [fetchBlog])
+    }, [fetchBlog]);
+
     const toggleDropdown = (index: number) => {
         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
     };
@@ -80,111 +85,60 @@ const Navbar = () => {
                     <Sheet>
                         <SheetTrigger><div className="bg-[#1D1A27] p-4 rounded-full"><AlignJustify size={25} /></div></SheetTrigger>
                         <SheetContent side='bottom' className="rounded-t-2xl border border-borderColor">
-                            <SheetTitle>
-                                <VisuallyHidden>
-                                    Menu
-                                </VisuallyHidden>
-                            </SheetTitle>
+                            <SheetTitle><VisuallyHidden>Menu</VisuallyHidden></SheetTitle>
                             <SheetClose />
                             <div className="space-y-10">
                                 <ul className="flex flex-col justify-start items-start gap-5">
                                     <li>
-                                        <Link href="/" className={`text-lg font-bold text-secondary transition-all duration-500
-                                            ${pathname === '/' ? 'text-secondary' : 'text-foreground'}
-                                            `}>
-                                            Home
-                                        </Link>
+                                        <Link href="/" className={`text-lg font-bold ${pathname === '/' ? 'text-secondary' : 'text-foreground'}`}>Home</Link>
                                     </li>
                                     <li>
-                                        <Link href="/pricing" className={`text-lg font-bold hover:text-secondary transition-all duration-500
-                                            ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'}`}>
-                                            Pricing
-                                        </Link>
+                                        <Link href="/pricing" className={`text-lg font-bold ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'}`}>Pricing</Link>
                                     </li>
-                                    <li className="relative" ref={dropdownRef}>
+                                    <li className="relative" ref={companyRef}>
                                         <div
-                                            className={`text-lg font-bold hover:text-secondary transition-all duration-500
-                                                 ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}
-                                                `}
+                                            className={`text-lg font-bold ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                             onClick={() => toggleDropdown(0)}
                                         >
                                             Company
                                         </div>
                                         <motion.ul
-                                            className="overflow-hidden"
+                                            className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
                                             initial="hidden"
                                             animate={openDropdownIndex === 0 ? "visible" : "hidden"}
                                             exit="exit"
                                             variants={dropdownVariants}
-                                            style={{
-                                                visibility: openDropdownIndex === 0 ? 'visible' : 'hidden',
-                                                display: openDropdownIndex === 0 ? 'block' : 'none'
-                                            }}
+                                            style={{ visibility: openDropdownIndex === 0 ? 'visible' : 'hidden', display: openDropdownIndex === 0 ? 'block' : 'none' }}
                                         >
-                                            <li>
-                                                <Link href="/life-at-prospectiv" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Life at Prospectiv</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/about-us" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">About Us</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/company/careers" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Careers</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
+                                            <li><Link href="/company/life-at-prospectiv">Life at Prospectiv</Link></li>
+                                            <li><Link href="/company/about-us">About Us</Link></li>
+                                            <li><Link href="/company/careers">Careers</Link></li>
                                         </motion.ul>
                                     </li>
-                                    <li className="relative" ref={dropdownRef}>
+
+                                    <li className="relative" ref={resourcesRef}>
                                         <div
-                                            className={`text-lg font-bold hover:text-secondary transition-all duration-500
-                                                  ${['/resources/blog', '/resources/resource-hub'].includes(pathname) ? 'text-secondary' : 'text-foreground'}
-                                                `}
+                                            className={`text-lg font-bold ${['/resources/blog', '/resources/resource-hub'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                             onClick={() => toggleDropdown(1)}
                                         >
                                             Resources
                                         </div>
                                         <motion.ul
-                                            className="overflow-hidden"
+                                            className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
                                             initial="hidden"
                                             animate={openDropdownIndex === 1 ? "visible" : "hidden"}
                                             exit="exit"
                                             variants={dropdownVariants}
-                                            style={{
-                                                visibility: openDropdownIndex === 1 ? 'visible' : 'hidden',
-                                                display: openDropdownIndex === 1 ? 'block' : 'none'
-                                            }}
+                                            style={{ visibility: openDropdownIndex === 1 ? 'visible' : 'hidden', display: openDropdownIndex === 1 ? 'block' : 'none' }}
                                         >
-                                            <li>
-                                                <Link href="/resources/blog" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Blog</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/resources/resource-hub" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Resource Hub</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
+                                            <li><Link href="/resources/blog">Blog</Link></li>
+                                            <li><Link href="/resources/resource-hub">Resource Hub</Link></li>
                                         </motion.ul>
                                     </li>
-                                    <li className="relative" ref={dropdownRef}>
+
+                                    <li className="relative" ref={resultsRef}>
                                         <div
-                                            className={`text-lg font-bold hover:text-secondary transition-all duration-500
-                                        ${['/result/success-story', '/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}
-                                                `}
+                                            className={`text-lg font-bold ${['/result/success-story', '/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                             onClick={() => toggleDropdown(2)}
                                         >
                                             Results
@@ -195,40 +149,13 @@ const Navbar = () => {
                                             animate={openDropdownIndex === 2 ? "visible" : "hidden"}
                                             exit="exit"
                                             variants={dropdownVariants}
-                                            style={{
-                                                visibility: openDropdownIndex === 2 ? 'visible' : 'hidden',
-                                                display: openDropdownIndex === 2 ? 'block' : 'none'
-                                            }}
+                                            style={{ visibility: openDropdownIndex === 2 ? 'visible' : 'hidden', display: openDropdownIndex === 2 ? 'block' : 'none' }}
                                         >
-                                            <li>
-                                                <Link href="/result/success-stories" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Success Stories</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link href="/result/awards-and-recognitions" className="block py-2">
-                                                    <div className="flex justify-start items-start gap-2 pl-5">
-                                                        <h1 className="text-md font-bold text-white">Awards & Recognition</h1>
-                                                    </div>
-                                                </Link>
-                                            </li>
+                                            <li><Link href="/result/success-story">Success Stories</Link></li>
+                                            <li><Link href="/result/awards-and-recognitions">Awards & Recognition</Link></li>
                                         </motion.ul>
                                     </li>
                                 </ul>
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.5 }}
-                                >
-                                    <div className="w-60 lg:w-full flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
-                                        <Link href="/demo" className="flex-1 font-bold text-xl text-center bg-black px-10 lg:px-10 py-3 rounded-full group-hover:scale-95 transition-all duration-300">
-                                            Book a Demo
-                                        </Link>
-                                    </div>
-                                </motion.div>
                             </div>
                         </SheetContent>
                     </Sheet>
