@@ -33,10 +33,10 @@ const WhyProsPective = () => {
                 className='relative'>
                     <div className='flex flex-col gap-10'>
                         <motion.div
-                        initial={{ opacity: 0, x: 20}}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        viewport={{ once: true }}
+                       initial={{ opacity: 0, y: 10,}}
+                       whileInView={{ opacity: 1, y: 0 }}
+                       transition={{ duration: 0.5, delay: 0.5 }}
+                       viewport={{ once: true }}
                         className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-start lg:items-center gap-10 p-5 lg:p-10 cursor-pointer shadow-black hover:shadow-xl transition-all duration-300 ease-in-out'>
                             <div>
                               <Image src={ImageOne} width={200} height={200} alt="image" className='max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
@@ -48,8 +48,8 @@ const WhyProsPective = () => {
                         </motion.div>
 
                         <motion.div
-                          initial={{ opacity: 0, x: 20}}
-                          whileInView={{ opacity: 1, x: 0 }}
+                          initial={{ opacity: 0, y: 10,}}
+                          whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.5, delay: 0.6 }}
                           viewport={{ once: true }}
                               className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-start lg:items-center gap-10 p-5 lg:p-10 cursor-pointer shadow-black hover:shadow-xl transition-all duration-300 ease-in-out'>
@@ -63,8 +63,8 @@ const WhyProsPective = () => {
                         </motion.div>
 
                         <motion.div
-                          initial={{ opacity: 0, x: 20}}
-                          whileInView={{ opacity: 1, x: 0 }}
+                          initial={{ opacity: 0, y: 10}}
+                          whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.5, delay: 0.8 }}
                           viewport={{ once: true }}
                               className='bg-card rounded-2xl border border-borderColor flex flex-col md:flex-row justify-between items-start lg:items-center gap-10 p-5 lg:p-10 cursor-pointer shadow-black hover:shadow-xl transition-all duration-300 ease-in-out'>

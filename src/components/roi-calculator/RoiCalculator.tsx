@@ -1411,7 +1411,13 @@ const ROICalculator = () => {
                     </div>
                     <div className='space-y-3'>
                       <div
-                        className="w-60 flex rounded-full ml-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
+                        className="lg:hidden w-60 flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
+                        <Link href='/demo' className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
+                          Book a Demo
+                        </Link>
+                      </div>
+                      <div
+                        className="hidden w-60 lg:flex rounded-full ml-auto shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
                         <Link href='/demo' className="flex-1 flex items-center justify-center text-center font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 py-3 rounded-full hover:bg-buttonHoverColor">
                           Book a Demo
                         </Link>
@@ -1420,7 +1426,7 @@ const ROICalculator = () => {
                         onClick={() => {
                           setShowResultCard(true)
                         }}
-                        className='flex items-center justify-end cursor-pointer text-gradientColorFive mr-3'><ArrowLeft className="mr-2 h-4 w-4" />
+                        className='flex items-center justify-center lg:justify-end cursor-pointer text-gradientColorFive mr-3'><ArrowLeft className="mr-2 h-4 w-4" />
                         Recalculate ROI</p>
                     </div>
                   </div>
@@ -1480,13 +1486,6 @@ const ROICalculator = () => {
                 <span className='text-lg md:text-3xl text-gradientColorFive font-bold'>  {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()} </span>
                 revenue each month?
               </p>}
-                {/* {showResultCard && <p className='text-center text-xl my-5 flex items-center justify-center gap-3'>Would you invest
-              Invest
-              <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()} </span>
-              to generate
-              <span className='text-3xl text-gradientColorFive font-bold'>  {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()} </span>
-              revenue each month?
-            </p>} */}
           </Card>
         )}
 

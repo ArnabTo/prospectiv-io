@@ -86,7 +86,7 @@ const PricingPage = () => {
                             viewport={{ once: true }}
                             className='card-animation rounded-xl cursor-pointer'
                         >
-                            <Card className='border border-borderColor rounded-xl'>
+                            <Card className='border border-borderColor rounded-xl h-full'>
                                 <CardHeader>
                                     <div className='bg-foreground w-max p-2 rounded-full'>
                                         <Rocket color='#FF4895' size={32} />
@@ -124,7 +124,7 @@ const PricingPage = () => {
                             viewport={{ once: true }}
                             className='card-animation rounded-xl cursor-pointer'
                         >
-                            <Card className='border border-borderColor rounded-xl'>
+                            <Card className='border border-borderColor rounded-xl h-full'>
                                 <CardHeader>
                                     <div className='bg-foreground w-max p-2 rounded-full'>
                                         <Bell color='#FF4895' size={32} />
@@ -143,7 +143,7 @@ const PricingPage = () => {
                             viewport={{ once: true }}
                             className='card-animation rounded-xl cursor-pointer'
                         >
-                            <Card className='border border-borderColor rounded-xl'>
+                            <Card className='border border-borderColor rounded-xl h-full'>
                                 <CardHeader>
                                     <div className='bg-foreground w-max p-2 rounded-full'>
                                         <Users color='#FF4895' size={32} />
@@ -162,7 +162,7 @@ const PricingPage = () => {
                             viewport={{ once: true }}
                             className='card-animation rounded-xl cursor-pointer'
                         >
-                            <Card className='border border-borderColor rounded-xl h-full'>
+                            <Card className='border border-borderColor rounded-xl h-full h-full'>
                                 <CardHeader>
                                     <div className='bg-foreground w-max p-2 rounded-full'>
                                         <ArrowUpNarrowWide color='#FF4895' size={32} />
@@ -179,7 +179,7 @@ const PricingPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 1.1 }}
                             viewport={{ once: true }}
-                            className='card-animation rounded-xl cursor-pointer'
+                            className='card-animation rounded-xl cursor-pointer h-full'
                         >
                             <Card className='border border-borderColor rounded-xl h-full'>
                                 <CardHeader>
@@ -200,7 +200,7 @@ const PricingPage = () => {
                             viewport={{ once: true }}
                             className='card-animation rounded-xl cursor-pointer'
                         >
-                            <Card className='border border-borderColor rounded-xl'>
+                            <Card className='border border-borderColor rounded-xl h-full'>
                                 <CardHeader>
                                     <div className='bg-foreground w-max p-2 rounded-full'>
                                         <Gift color='#FF4895' size={32} />

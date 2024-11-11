@@ -22,9 +22,9 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
-        <SmoothScroll>
+ 
           {children}
-        </SmoothScroll>
+    
       </body>
     </html>
   );
