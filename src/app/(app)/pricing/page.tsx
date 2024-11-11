@@ -439,7 +439,7 @@ const PricingPage = () => {
                         <div className='space-y-5'>
                             <h3 className='text-3xl lg:text-4xl font-bold'>Map your entire market</h3>
                             <p className='text-lg text-textColorTwo'>Descover the size of your audience in minutes. Understand how many contacts Prospectiv can engage on your behalf</p>
-                            <div className="w-60 flex rounded-full mr-auto shadow-lg duration-300 transform group-hover:scale-105">
+                            <div className="w-60 flex rounded-full mx-auto md:mx-0 shadow-lg duration-300 transform group-hover:scale-105">
                                 <Link href="/demo" className="flex-1 font-semibold text-lg text-center bg-buttonColor text-foreground hover:scale-95 transition-all duration-300  py-5 rounded-full hover:bg-buttonHoverColor">
                                     Book a call
                                 </Link>

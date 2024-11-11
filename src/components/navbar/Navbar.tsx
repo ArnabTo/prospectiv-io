@@ -205,7 +205,7 @@ const Navbar = () => {
                                 <Link
                                     href="/"
                                     className={`text-lg font-bold ${pathname === '/' ? 'text-secondary' : 'text-foreground'
-                                        } transition-all duration-500`}
+                                        } transition-all duration-500 hover:text-secondary`}
                                 >
                                     <NavigationMenuLink>Home</NavigationMenuLink>
                                 </Link>
@@ -215,7 +215,7 @@ const Navbar = () => {
                                 <Link
                                     href="/pricing"
                                     className={`text-lg font-bold ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'
-                                        } transition-all duration-500`}
+                                        } transition-all duration-500 hover:text-secondary`}
                                 >
                                     <NavigationMenuLink>Pricing</NavigationMenuLink>
                                 </Link>
