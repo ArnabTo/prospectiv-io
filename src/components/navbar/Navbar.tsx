@@ -25,8 +25,7 @@ const Navbar = () => {
 
     const [blog, setBlog] = useState<Blog[]>([])
     const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
-    const dropdownRef = useRef<HTMLLIElement | null>(null);
-    const router = useRouter();
+    const [isSheetOpen, setIsSheetOpen] = useState(false);
     const pathname = usePathname();
 
     const dropdownVariants = {
@@ -66,6 +65,7 @@ const Navbar = () => {
         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
     };
 
+    const closeSheet = () => setIsSheetOpen(false);
     return (
         <header className="max-w-7xl mx-auto lg:px-10 relative z-20">
 
@@ -82,7 +82,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div>
-                    <Sheet>
+                    <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                         <SheetTrigger><div className="bg-[#1D1A27] p-4 rounded-full"><AlignJustify size={25} /></div></SheetTrigger>
                         <SheetContent side='bottom' className="rounded-t-2xl border border-borderColor">
                             <SheetTitle><VisuallyHidden>Menu</VisuallyHidden></SheetTitle>
@@ -90,10 +90,10 @@ const Navbar = () => {
                             <div className="space-y-10">
                                 <ul className="flex flex-col justify-start items-start gap-5">
                                     <li>
-                                        <Link href="/" className={`text-lg font-bold ${pathname === '/' ? 'text-secondary' : 'text-foreground'}`}>Home</Link>
+                                        <Link href="/" onClick={closeSheet} className={`text-lg font-bold ${pathname === '/' ? 'text-secondary' : 'text-foreground'}`}>Home</Link>
                                     </li>
                                     <li>
-                                        <Link href="/pricing" className={`text-lg font-bold ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'}`}>Pricing</Link>
+                                        <Link href="/pricing" onClick={closeSheet} className={`text-lg font-bold ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'}`}>Pricing</Link>
                                     </li>
                                     <li className="relative" ref={companyRef}>
                                         <div
@@ -110,9 +110,18 @@ const Navbar = () => {
                                             variants={dropdownVariants}
                                             style={{ visibility: openDropdownIndex === 0 ? 'visible' : 'hidden', display: openDropdownIndex === 0 ? 'block' : 'none' }}
                                         >
-                                            <li><Link href="/company/life-at-prospectiv">Life at Prospectiv</Link></li>
-                                            <li><Link href="/company/about-us">About Us</Link></li>
-                                            <li><Link href="/company/careers">Careers</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/company/life-at-prospectiv'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/company/life-at-prospectiv">Life at Prospectiv</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/company/about-us">About Us</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/company/careers'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/company/careers">Careers</Link></li>
                                         </motion.ul>
                                     </li>
 
@@ -131,8 +140,14 @@ const Navbar = () => {
                                             variants={dropdownVariants}
                                             style={{ visibility: openDropdownIndex === 1 ? 'visible' : 'hidden', display: openDropdownIndex === 1 ? 'block' : 'none' }}
                                         >
-                                            <li><Link href="/resources/blog">Blog</Link></li>
-                                            <li><Link href="/resources/resource-hub">Resource Hub</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/resources/blog'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/resources/blog">Blog</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/resources/resource-hub'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/resources/resource-hub">Resource Hub</Link></li>
                                         </motion.ul>
                                     </li>
 
@@ -151,8 +166,15 @@ const Navbar = () => {
                                             variants={dropdownVariants}
                                             style={{ visibility: openDropdownIndex === 2 ? 'visible' : 'hidden', display: openDropdownIndex === 2 ? 'block' : 'none' }}
                                         >
-                                            <li><Link href="/result/success-story">Success Stories</Link></li>
-                                            <li><Link href="/result/awards-and-recognitions">Awards & Recognition</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/result/success-story'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                                >
+                                                <Link href="/result/success-story">Success Stories</Link></li>
+                                            <li className={`text-lg font-bold ${['/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                            onClick={closeSheet}
+                                            >
+                                                <Link href="/result/awards-and-recognitions">Awards & Recognition</Link></li>
                                         </motion.ul>
                                     </li>
                                 </ul>
@@ -180,30 +202,28 @@ const Navbar = () => {
                     <NavigationMenu>
                         <NavigationMenuList className="flex justify-between items-center gap-8">
                             <NavigationMenuItem>
-                            <Link
+                                <Link
                                     href="/"
-                                    className={`text-lg font-bold ${
-                                        pathname === '/' ? 'text-secondary' : 'text-foreground'
-                                    } transition-all duration-500`}
+                                    className={`text-lg font-bold ${pathname === '/' ? 'text-secondary' : 'text-foreground'
+                                        } transition-all duration-500`}
                                 >
                                     <NavigationMenuLink>Home</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                            <Link
+                                <Link
                                     href="/pricing"
-                                    className={`text-lg font-bold ${
-                                        pathname === '/pricing' ? 'text-secondary' : 'text-foreground'
-                                    } transition-all duration-500`}
+                                    className={`text-lg font-bold ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'
+                                        } transition-all duration-500`}
                                 >
                                     <NavigationMenuLink>Pricing</NavigationMenuLink>
                                 </Link>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger 
-                                className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none 
+                                <NavigationMenuTrigger
+                                    className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none 
                                     ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}>Company</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">

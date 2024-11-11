@@ -129,7 +129,7 @@ const GuideDetails = () => {
                                         </div>
                                         <p className="text-lg text-textColorTwo">By clicking submit, you agree to the <Link className="text-gradientColorOne" href=''>Privacy Policy</Link></p>
                                     </div>
-                                    <button type="submit">
+                                    <button type="submit" className="flex mx-auto">
                                         <div className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                                             <div className="flex-1 flex items-center justify-center gap-3 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                                                 Get your guide <Download size={20} />

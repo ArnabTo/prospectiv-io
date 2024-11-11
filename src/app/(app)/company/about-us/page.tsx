@@ -342,11 +342,11 @@ const AboutUs = () => {
                         </div>
                     </div>
 
-                    <div className="w-full md:max-w-60">
+                    <div className="w-full min-w-[50%]">
                         <Image
                             width={1000}
                             height={1000}
-                            src={aboutUsPageTextContent?.leaderShipTeam?.contents[0]?.image}
+                            src='https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=600'
                             alt="Harvey Todd"
                             className="w-full h-full object-cover rounded-2xl"
                         />

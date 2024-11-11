@@ -26,7 +26,7 @@ const BlogSection = () => {
 
     return (
         <section>
-            <div className="max-w-7xl mx-auto px-5 lg:py-24">
+            <div className="max-w-7xl mx-auto lg:py-24">
                 <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center">Discover how Prospectiv helps you sell more</h1>
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}

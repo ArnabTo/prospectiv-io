@@ -93,6 +93,7 @@ const ResourceHub = () => {
       setCurrentPage(page);
    };
 
+
    const renderContent = (content: any) => {
 
       // Determine the link based on content type
@@ -142,97 +143,111 @@ const ResourceHub = () => {
       <div className="overflow-hidden">
          <div className="space-y-24">
             <div className="max-w-screen-2xl mx-auto">
-               <h1 className="text-xl md:text-3xl lg:text-4xl font-bold text-center mb-16">Resource Hub</h1>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12 px-4 relative">
+               <h1 className="text-3xl lg:text-4xl font-bold text-center mb-16">Resource Hub</h1>
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 relative">
                   {/* Webinars Section */}
-                  <div className="row-span-1 md:row-span-4 h-full bg-card border border-borderColor p-7 rounded-2xl space-y-4 group">
+                  <div className="row-span-1 md:row-span-4 h-full bg-card border border-borderColor p-5 rounded-2xl space-y-4 group">
                      {
                         isLoading ?
                            <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
-                           <Link href={`/resources/resource-hub/webinar/${webinars[0].slug}`}>
-                              <div className="overflow-hidden relative rounded-xl">
-                                 <Image
-                                    src={webinars[0]?.thumbnail?.asset?.url}
-                                    width={1000}
-                                    height={1000}
-                                    alt="thumbnail"
-                                    className="w-full h-auto rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
-                                 />
-                                 <Badge className="bg-smallCard text-foreground text-base absolute top-4 right-4 group-hover:bg-secondary">Webinar</Badge>
-                              </div>
-                              <div className="mt-4 space-y-3">
-                                 <h1 className="text-2xl font-bold group-hover:text-secondary">{webinars[0]?.title}</h1>
-                                 <p className="line-clamp-2 text-lg text-textColorTwo">
-                                    <PortableText value={webinars[0]?.body} />
-                                 </p>
-                              </div>
-                           </Link>
-
+                           <div>
+                              {
+                                 webinars[0] && webinars[0].slug !== undefined &&
+                                 <Link href={`/resources/resource-hub/webinar/${webinars[0].slug}`}>
+                                    <div className="overflow-hidden relative rounded-xl">
+                                       <Image
+                                          src={webinars[0]?.thumbnail?.asset?.url}
+                                          width={1000}
+                                          height={1000}
+                                          alt="thumbnail"
+                                          className="w-full h-auto rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
+                                       />
+                                       <Badge className="bg-smallCard text-foreground text-base absolute top-4 right-4 group-hover:bg-secondary">Webinar</Badge>
+                                    </div>
+                                    <div className="mt-4 space-y-3">
+                                       <h1 className="text-2xl font-bold group-hover:text-secondary">{webinars[0]?.title}</h1>
+                                       <p className="line-clamp-2 text-lg text-textColorTwo">
+                                          <PortableText value={webinars[0]?.body} />
+                                       </p>
+                                    </div>
+                                 </Link>
+                              }
+                           </div>
                      }
                   </div>
 
                   {/* Guides Section */}
-                  <div className="row-span-1 md:row-span-2 h-full bg-card border border-borderColor p-2 rounded-2xl group">
+                  <div className="row-span-1 md:row-span-2 h-full bg-card border border-borderColor px-5 py-5 rounded-2xl group">
                      {
                         isLoading ?
                            <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
-                           <Link href={`/resources/resource-hub/guide/${guides[0].slug}`}>
-                              <div className="flex flex-col md:flex-row items-center h-full gap-4">
-                                 <div className="w-full min-w-[35%] max-w-[40%] h-full rounded-xl flex justify-center items-center overflow-hidden relative">
-                                    <Image
-                                       src={guides[0]?.thumbnail?.asset?.url}
-                                       width={500}
-                                       height={500}
-                                       alt="thumbnail"
-                                       className="w-full min-h-[85%] bg-white object-cover rounded-xl p-2 group-hover:scale-105 transition-all duration-300 ease-linear"
-                                    />
-                                    <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Guide</Badge>
-                                 </div>
-                                 <div className="space-y-4">
-                                    <h1 className="text-lg lg:text-2xl font-bold group-hover:text-secondary transition-all duration-300 ease-linear">{guides[0]?.title}</h1>
-                                    <p className="line-clamp-3 text-lg text-textColorTwo">
-                                       <PortableText value={guides[0]?.body} />
-                                    </p>
-                                    <p className="text-right flex items-center gap-2 group-hover:text-secondary group-hover:underline">Download PDF
-                                       <ArrowUpRightIcon size={20} />
-                                    </p>
-                                 </div>
-                              </div>
-                           </Link>
+                           <div className="h-full">
+                              {
+                                 guides[0] && guides[0].slug !== undefined &&
+                                 <Link href={`/resources/resource-hub/guide/${guides[0].slug}`}>
+                                    <div className="flex flex-col md:flex-row items-center h-full gap-4">
+                                       <div className="w-full min-w-[35%] md:max-w-[40%] h-full rounded-xl flex justify-center items-center overflow-hidden relative">
+                                          <Image
+                                             src={guides[0]?.thumbnail?.asset?.url}
+                                             width={500}
+                                             height={500}
+                                             alt="thumbnail"
+                                             className="w-full min-h-[85%] bg-white object-cover rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
+                                          />
+                                          <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Guide</Badge>
+                                       </div>
+                                       <div className="space-y-4">
+                                          <h1 className="text-lg lg:text-2xl font-bold group-hover:text-secondary transition-all duration-300 ease-linear">{guides[0]?.title}</h1>
+                                          <p className="line-clamp-3 text-lg text-textColorTwo">
+                                             <PortableText value={guides[0]?.body} />
+                                          </p>
+                                          <p className="text-right flex items-center gap-2 group-hover:text-secondary group-hover:underline">Download PDF
+                                             <ArrowUpRightIcon size={20} />
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </Link>
+                              }
+                           </div>
                      }
                   </div>
 
                   {/* White Papers Section */}
-                  <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-2 h-full bg-card border border-borderColor p-5 rounded-2xl group">
+                  <div className="row-span-1 md:row-span-2 col-start-1 md:col-start-2 h-full bg-card border border-borderColor px-5 py-5 rounded-2xl group">
                      {
                         isLoading ?
                            <div className="flex justify-center items-center h-full"><Loader2 size={40} className="animate-spin" /></div>
                            :
-                           <Link href={`/resources/resource-hub/whitepaper/${whitePapers[0]?.slug}`}>
-                              <div className="flex flex-col md:flex-row items-center h-full gap-4">
-                                 <div className="w-full min-w-[35%] max-w-[40%] h-full flex justify-center items-center overflow-hidden relative">
-                                    <Image
-                                       src={whitePapers[0]?.thumbnail?.asset?.url}
-                                       width={500}
-                                       height={500}
-                                       alt="thumbnail"
-                                       className="w-full min-h-[85%] object-cover rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
-                                    />
-                                    <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Whitepaper</Badge>
-                                 </div>
-                                 <div className="space-y-4">
-                                    <h1 className="text-lg lg:text-2xl font-bold group-hover:text-secondary transition-all duration-300 ease-linear">{whitePapers[0]?.title}</h1>
-                                    <p className="line-clamp-3 text-lg text-textColorTwo">
-                                       <PortableText value={whitePapers[0]?.body} />
-                                    </p>
-                                    <p className="text-right flex items-center gap-2 group-hover:text-secondary group-hover:underline">Download PDF
-                                       <ArrowUpRightIcon size={20} />
-                                    </p>
-                                 </div>
-                              </div>
-                           </Link>
+                           <div className="h-full">
+                              {
+                                 whitePapers[0] && whitePapers[0].slug !== undefined &&
+                                 <Link href={`/resources/resource-hub/whitepaper/${whitePapers[0]?.slug}`}>
+                                    <div className="flex flex-col md:flex-row items-center h-full gap-4">
+                                       <div className="w-full min-w-[35%] md:max-w-[40%] h-full flex justify-center items-center overflow-hidden relative">
+                                          <Image
+                                             src={whitePapers[0]?.thumbnail?.asset?.url}
+                                             width={500}
+                                             height={500}
+                                             alt="thumbnail"
+                                             className="w-full min-h-[85%] object-cover rounded-xl group-hover:scale-105 transition-all duration-300 ease-linear"
+                                          />
+                                          <Badge className="bg-smallCard text-foreground text-base absolute top-8 right-4 group-hover:bg-secondary">Whitepaper</Badge>
+                                       </div>
+                                       <div className="space-y-4">
+                                          <h1 className="text-lg lg:text-2xl font-bold group-hover:text-secondary transition-all duration-300 ease-linear">{whitePapers[0]?.title}</h1>
+                                          <p className="line-clamp-3 text-lg text-textColorTwo">
+                                             <PortableText value={whitePapers[0]?.body} />
+                                          </p>
+                                          <p className="text-right flex items-center gap-2 group-hover:text-secondary group-hover:underline">Download PDF
+                                             <ArrowUpRightIcon size={20} />
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </Link>
+                              }
+                           </div>
                      }
                   </div>
 
@@ -249,9 +264,9 @@ const ResourceHub = () => {
                </div>
             </div>
 
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto pb-20">
                <Tabs defaultValue="All" onValueChange={setCurrentTab} className="w-full mx-auto space-y-10">
-                  <TabsList className="mx-auto lg:max-w-[70%] bg-card flex justify-between items-center p-5 rounded-full">
+                  <TabsList className="mx-auto max-w-[90%] md:max-w-[70%] bg-card flex justify-between items-center p-5 rounded-full overflow-x-auto md:overflow-hidden">
                      <TabsTrigger value="All">All</TabsTrigger>
                      <TabsTrigger value="webinars" className="flex flex-col lg:flex-row"><Video className="mr-2" size={25} /> Webinars</TabsTrigger>
                      <TabsTrigger value="guides" className="flex flex-col lg:flex-row"><ScrollText className="mr-2" size={25} /> Guides</TabsTrigger>

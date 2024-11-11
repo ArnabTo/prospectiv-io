@@ -139,21 +139,28 @@ const BlogDetails = () => {
                                                                     </span>
                                                                 </div>
                                                             </div>
-                                                           <p className="text-md"><PortableText value={blog.author.bio} components={RichTextComponent} /></p>
+                                                            <p className="text-md"><PortableText value={blog.author.bio} components={RichTextComponent} /></p>
                                                         </div>
                                                         <div className="flex flex-row gap-3 justify-start items-center">
-                                                            <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href={blog.author.social.linkedin ?? ''}><Image className='max-w-10 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
-                                                            </div>
-                                                            <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href={blog.author.social.twitter ?? ''}><Image className='max-w-10 p-2' src={InstagramLogo} width={200} height={200} alt="LinkedIn" /></Link>
-                                                            </div>
-                                                            <div className='hidden lg:block bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                                <Link href={blog.author.social.facebook ?? ''}><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
-                                                            </div>
-                                                        </div>
-                                                        <div className='lg:hidden bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
-                                                            <Link href={blog.author.social.facebook ?? ''}><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                            {blog.author.social.linkedin ?
+                                                                <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
+                                                                    <Link href={blog.author.social.linkedin ?? ''}><Image className='max-w-10 p-2' src={InstagramLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                                </div>
+                                                                :
+                                                                <></>}
+                                                            {blog.author.social.twitter ?
+                                                                <div className='bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
+                                                                    <Link href={blog.author.social.twitter ?? ''}><Image className='max-w-10 p-2' src={LinkedInLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                                </div>
+                                                                :
+                                                                <></>}
+                                                            {blog.author.social.facebook ?
+                                                                <div className='hidden lg:block bg-smallCard rounded-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-secondary'>
+                                                                    <Link href={blog.author.social.facebook ?? ''}><Image className='max-w-10 p-2 mx-auto' src={FacebookLogo} width={200} height={200} alt="LinkedIn" /></Link>
+                                                                </div>
+                                                                :
+                                                                <></>
+                                                            }
                                                         </div>
                                                     </div>
 

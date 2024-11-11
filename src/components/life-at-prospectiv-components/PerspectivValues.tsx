@@ -24,7 +24,7 @@ const PerspectivValues = () => {
 
     return (
         <div>
-            <div className='space-y-24 p-5'>
+            <div className='space-y-20 p-5'>
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -115,6 +115,31 @@ const PerspectivValues = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className='flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10'
+                        onMouseEnter={() => handleMouseEnter(perSpectiveValuesLottieFour)}
+                        onMouseLeave={() => handleMouseLeave(perSpectiveValuesLottieFour)}
+                    >
+                        <div className='w-16 lg:w-1/2 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
+                            <Lottie
+                                lottieRef={perSpectiveValuesLottieFour}
+                                animationData={require('@/public/assets/Partnership.json')}
+                                loop={false} // Play only once
+                                autoplay={false} // Disable autoplay
+                            />
+                        </div>
+                        <div className='space-y-3 text-center lg:text-start'>
+                            <h3 className='text-2xl font-bold text-secondary'>We are open</h3>
+                            <p className='text-textColorTwo text-lg'>
+                              We are open and transparent in everything we do. We are clear about who we are, what we do and how we do it. We encourage an open-door approach to ensure every team member is valued, heard and supported.
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    {/* <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.8 }}
                         viewport={{ once: true }}
                         className='flex flex-col lg:flex-row justify-between items-center lg:items-start gap-5 lg:gap-10'
@@ -135,7 +160,7 @@ const PerspectivValues = () => {
                                 We are open and transparent in everything we do. We are clear about who we are, what we do and how we do it. We encourage an open-door approach to ensure every team member is valued, heard and supported.
                             </p>
                         </div>
-                    </motion.div>
+                    </motion.div> */}
 
                 </div>
             </div>

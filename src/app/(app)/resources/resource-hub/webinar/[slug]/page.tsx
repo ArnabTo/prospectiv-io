@@ -46,16 +46,16 @@ const WebinarDetails = () => {
         }
     };
     return (
-        <div className='max-w-7xl mx-auto space-y-7'>
-            <div className='flex flex-col lg:flex-row justify-center'>
-                <div className='lg:max-w-[70%] space-y-7'>
-                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold '>{webinar?.title}</h1>
-                    <div>
+        <div className='max-w-7xl mx-auto space-y-16 p-5'>
+            <div className='flex flex-col lg:flex-row justify-center gap-5'>
+                <div className="lg:max-w-[70%] space-y-7">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{webinar?.title}</h1>
+                    <div className="relative overflow-hidden" style={{ paddingTop: '56.25%' }}>
                         {webinar?.webinar_url ? (
                             <iframe
-                                width="560" height="315"
                                 src={getEmbedUrl(webinar.webinar_url)}
                                 title="Webinar Video"
+                                className="absolute top-0 left-0 w-full h-full rounded-2xl"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
@@ -88,14 +88,13 @@ const WebinarDetails = () => {
                 </div>
             </div>
 
-            <div>
+            <div className='space-y-5'>
                 <p className='text-center text-xl mb-5'>Find out what Prospectiv could do for your new business</p>
                 <div className="w-60 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                     <Link href="/demo" className="flex-1 font-bold text-lg text-center bg-black py-4 rounded-full hover:scale-95 transition-all duration-300">
                         Book a Demo
                     </Link>
                 </div>
-
                 <BlogSection />
             </div>
         </div>

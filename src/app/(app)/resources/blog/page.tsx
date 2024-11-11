@@ -49,30 +49,49 @@ export default function Blogs() {
         fetchBlogs()
     }, [fetchBlogs])
 
+
     return (
         <div className="max-w-7xl mx-auto space-y-16 py-16">
             <div className="w-full mx-auto space-y-7">
                 <div className="space-y-5">
                     <p className="text-xl md:text-3xl lg:text-5xl font-bold text-center">Stay Uptodate with <br /> <span className="text-secondary">Prospectiv</span></p>
                 </div>
-                <div className="flex flex-col gap-4">
-                    <div className="flex h-5 justify-center items-center space-x-4">
+                <div className="flex flex-col justify-center gap-4">
+                    <div className="flex h-5 justify-center items-center space-x-4 text-center">
                         <div>
                             <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/about-us'>About Us</Link>
                         </div>
                         <Separator orientation="vertical" />
-                        <div><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/resources/resource-hub'>White Paper</Link></div>
+                        <div>
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/resources/resource-hub'>White Paper
+                            </Link>
+                        </div>
                         <Separator orientation="vertical" />
-                        <div><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/result/success-story'>Success Stories</Link></div>
+                        <div>
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/result/success-story'>Success Stories
+                            </Link>
+                        </div>
                         <Separator className="hidden md:block" orientation="vertical" />
-                        <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings</Link></div>
+                        <div className="hidden md:block">
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings
+                            </Link>
+                        </div>
                         <Separator orientation="vertical" />
-                        <div className="hidden md:block"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/life-at-prospect'>Life at Prospect</Link></div>
+                        <div className="hidden md:block">
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/life-at-prospectiv'>Life at Prospect
+                            </Link>
+                        </div>
                     </div>
-                    <div className="flex justify-center items-center gap-3">
-                        <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings</Link></div>
+                    <div className="flex h-5 justify-center items-center gap-3 md:hidden">
+                        <div>
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/careers'>Openings
+                            </Link>
+                        </div>
                         <Separator orientation="vertical" />
-                        <div className="md:hidden"><Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/life-at-prospect'>Life at Prospect</Link></div>
+                        <div>
+                            <Link className="text-sm lg:text-lg hover:text-secondary hover:border-b border-secondary" href='/company/life-at-prospectiv'>Life at Prospect
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
@@ -97,19 +116,10 @@ export default function Blogs() {
                         />
 
                     </div>
-
-                    {/* <Button className="w-24 h-full px-10 py-2 rounded-lg bg-buttonColor text-foreground hover:bg-buttonHoverColor">
-                        <Search size={30} />
-                    </Button> */}
-                    {/* <div onClick={() => searchBlog()} className="w-24 absolute right-1 flex rounded-full mx-auto bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105 cursor-pointer">
-                        <div className="flex-1 flex justify-center items-center py-[6px] text-center bg-black  rounded-full hover:scale-95 transition-all duration-300">
-                            <Search size={25} />
-                        </div>
-                    </div> */}
                 </div>
             </div>
 
-            <div className="min-h-96">
+            <div className="min-h-96 p-5">
                 {
                     isLoading ?
                         <div className="flex justify-center items-center h-screen absolute left-1/2 top-1/2 transform -translate-x-1/2"><Loader2 size={60} className="w-10 h-10 mx-auto animate-spin" /></div>
@@ -120,9 +130,9 @@ export default function Blogs() {
                                     <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-5">
                                         {
                                             searchedBlog.map((blog) => <>
-                                                <Link href={`/blogs/${blog.slug.current}`} key={blog._id}>
+                                                <Link href={`/blogs/${blog.slug}`} key={blog._id}>
                                                     <Card className="border border-borderColor h-full max-w-96 rounded-2xl group">
-                                                        <CardHeader className="space-y-3">
+                                                        <CardHeader className="space-y-3 p-3 lg:p-5">
                                                             <div className="overflow-hidden">
                                                                 <Image
                                                                     src={blog.mainImage.asset.url}
@@ -140,10 +150,10 @@ export default function Blogs() {
                                                                             {blog.categories.map((category, index) => (<span key={index}>{category.title}</span>))}
                                                                         </Badge>
                                                                 }
-                                                                <p>{new Date(blog?._createdAt).toDateString()}</p>
+                                                                <p className="text-sm lg:text-md">{new Date(blog?._createdAt).toDateString()}</p>
                                                             </div>
                                                         </CardHeader>
-                                                        <CardContent>
+                                                        <CardContent className="p-3 lg:p-5">
                                                             <h2 className="text-xl font-bold line-clamp-2">{blog.title}</h2>
                                                             <p className="text-lg text-textColorTwo line-clamp-2"><PortableText value={blog.body} /></p>
                                                         </CardContent>
@@ -163,7 +173,7 @@ export default function Blogs() {
                                             blogs.map((blog) => <>
                                                 <Link href={`/blogs/${blog.slug.current}`} key={blog._id}>
                                                     <Card className="border border-borderColor h-full max-w-96 rounded-2xl group">
-                                                        <CardHeader className="space-y-3">
+                                                        <CardHeader className="space-y-3 p-3 lg:p-5">
                                                             <div className="overflow-hidden">
                                                                 <Image
                                                                     src={blog.mainImage.asset.url}
@@ -181,10 +191,10 @@ export default function Blogs() {
                                                                             {blog.categories.map((category, index) => (<span key={index}>{category.title}</span>))}
                                                                         </Badge>
                                                                 }
-                                                                <p>{new Date(blog?._createdAt).toDateString()}</p>
+                                                                <p className="text-sm lg:text-md">{new Date(blog?._createdAt).toDateString()}</p>
                                                             </div>
                                                         </CardHeader>
-                                                        <CardContent>
+                                                        <CardContent className="p-3 lg:p-5">
                                                             <h2 className="text-xl font-bold line-clamp-2">{blog.title}</h2>
                                                             <p className="text-lg text-textColorTwo line-clamp-2"><PortableText value={blog.body} /></p>
                                                         </CardContent>

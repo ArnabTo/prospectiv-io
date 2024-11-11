@@ -16,6 +16,7 @@ import Rating from '@/components/rating/RatingComponent';
 import { motion } from 'framer-motion';
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 import { awardsandRecognitionPageTextContent } from '@/lib/TextContent';
+import { Separator } from '@/components/ui/separator';
 
 const ITEMS_PER_PAGE = 6;
 
@@ -228,29 +229,33 @@ const AwardsAndRecognitions = () => {
                 <div className="space-y-5">
                     <h1 className="text-3xl md:text-3xl font-bold text-center">Clients trust on us</h1>
                     <div className="bg-card grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 border border-borderColor rounded-xl p-5 lg:p-10">
-                        <div className='flex flex-col justify-center items-center gap-3'>
-                            <Image src={CompanyLogoOne} alt="logo" width={200} height={70} />
+                        <div className='flex md:flex-col justify-center items-center gap-3'>
+                            <Image className='max-w-24 md:max-w-44' src={CompanyLogoOne} alt="logo" width={200} height={70} />
+                           <div className='md:hidden'><Separator orientation='horizontal'/></div>
                             <div className='flex items-center gap-2'>
                                 <Rating rating={4.5} />
                                 <p className='text-textColorTwo text-lg'>4.0</p>
                             </div>
                         </div>
-                        <div className='flex flex-col justify-center items-center gap-3'>
-                            <Image src={CompanyLogoTwo} alt="logo" width={200} height={70} />
+                        <div className='flex md:flex-col justify-center items-center gap-3'>
+                            <Image className='max-w-24 md:max-w-44' src={CompanyLogoTwo} alt="logo" width={200} height={70} />
+                           <div className='md:hidden'><Separator orientation='horizontal'/></div>
                             <div className='flex items-center gap-2'>
                                 <Rating rating={4.5} />
                                 <p className='text-textColorTwo text-lg'>4.0</p>
                             </div>
                         </div>
-                        <div className='flex flex-col justify-center items-center gap-3'>
-                            <Image src={CompanyLogoThree} alt="logo" width={200} height={70} />
+                        <div  className='flex md:flex-col justify-center items-center gap-3'>
+                            <Image className='max-w-24 md:max-w-44' src={CompanyLogoThree} alt="logo" width={200} height={70} />
+                            <div className='md:hidden'><Separator orientation='horizontal'/></div>
                             <div className='flex items-center gap-2'>
                                 <Rating rating={4.5} />
                                 <p className='text-textColorTwo text-lg'>4.0</p>
                             </div>
                         </div>
-                        <div className='flex flex-col justify-center items-center gap-3'>
-                            <Image src={CompanyLogoThree} alt="logo" width={200} height={70} />
+                        <div className='flex md:flex-col justify-center items-center gap-3'>
+                            <Image className='max-w-24 md:max-w-44' src={CompanyLogoThree} alt="logo" width={200} height={70} />
+                           <div className='md:hidden'><Separator orientation='horizontal'/></div>
                             <div className='flex items-center gap-2'>
                                 <Rating rating={4.5} />
                                 <p className='text-textColorTwo text-lg'>4.0</p>

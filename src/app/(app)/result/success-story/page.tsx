@@ -89,7 +89,7 @@ const SuccessStory = () => {
                 </div>
             </div>
 
-            <div className="py-24">
+            <div className="py-20">
                 <div className="max-w-7xl mx-auto px-5 space-y-28">
                     {/* case studies */}
                     <div className="space-y-10 py-20">
@@ -102,9 +102,9 @@ const SuccessStory = () => {
                                             <CarouselItem key={index}>
                                                 <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
                                                     <div className="bg-transparent border border-borderColor rounded-3xl z-20">
-                                                        <div className="flex flex-col justify-center items-center h-full lg:h-96 w-full p-10 bg-card rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50">
+                                                        <div className="flex flex-col justify-center items-center h-full lg:h-96 w-full p-5 lg:p-10 bg-card rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50">
                                                             <div className="space-y-5 lg:space-y-8">
-                                                                <span className="bg-smallCard px-4 py-1 rounded-lg text-lg">{caseStudy.role ?? ''}</span>
+                                                                <span className="bg-smallCard px-4 py-1 rounded-lg text-lg leading-10">{caseStudy.role ?? ''}</span>
                                                                 <h3 className="text-2xl font-bold">{caseStudy.title}</h3>
                                                                 <div className="grid grid-cols-2 md:grid-cols-3 justify-between items-center gap-10">
                                                                     <div className="border-l border-secondary px-5 py-5">
@@ -143,8 +143,8 @@ const SuccessStory = () => {
                                             </CarouselItem>
                                         )}
                                 </CarouselContent>
-                                <CarouselPrevious />
-                                <CarouselNext />
+                                <CarouselPrevious className="hidden lg:block" />
+                                <CarouselNext className="hidden lg:block"/>
                             </Carousel>
                         </div>
                     </div>
@@ -155,70 +155,70 @@ const SuccessStory = () => {
                         <div className="lg:w-3/4 mx-auto">
                             <div className="space-y-5 lg:space-y-8">
                                 <div className="grid grid-cols-2 md:grid-cols-3 justify-center items-center gap-10">
-                                    <div className="border-l-4 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-2 md:px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={19}
                                             duration={2}
-                                            className=" text-5xl font-extralight"
+                                            className="text-3xl lg:text-5xl font-extralight"
                                             separator=","
                                             prefix="$"
                                         />
                                         <p className="text-base font-normal text-secondary">Cost per lead</p>
                                     </div>
-                                    <div className="border-l-4 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-2 md:px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={50}
                                             duration={3}
-                                            className=" text-5xl font-extralight"
+                                            className="text-3xl lg:text-5xl font-extralight"
                                             separator=","
                                             prefix=""
                                             suffix="M+"
                                         />
                                         <p className="ttext-base font-normalg text-secondary">Emails sent</p>
                                     </div>
-                                    <div className="border-l-4 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-2 md:px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={15000}
                                             duration={3}
-                                            className=" text-5xl font-extralight"
+                                            className="text-3xl lg:text-5xl font-extralight"
                                             separator=","
                                             suffix="+"
                                         />
                                         <p className="text-base font-normal text-secondary">Campaigns delivered</p>
                                     </div>
-                                    <div className="border-l-4 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-2 md:px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={8.6}
                                             decimal="."
                                             decimals={1}
                                             duration={2}
-                                            className=" text-5xl font-extralight"
+                                            className="text-3xl lg:text-5xl font-extralight"
                                             separator=","
                                             prefix="$"
                                         />
                                         <p className="text-base font-normal text-secondary">Lead rate</p>
                                     </div>
-                                    <div className="border-l-4 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-2 md:px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={600}
                                             duration={2}
-                                            className=" text-5xl font-extralight"
+                                            className="text-3xl lg:text-5xl font-extralight"
                                             separator=","
                                             suffix="+"
                                         />
                                         <p className="text-base font-normal text-secondary">Clients</p>
                                     </div>
-                                    <div className="border-l-4 border-secondary px-5 py-5">
+                                    <div className="border-l-4 border-secondary px-2 md:px-5 py-5">
                                         <CountUp
                                             start={0}
                                             end={2000}
                                             duration={2}
-                                            className=" text-5xl font-extralight"
+                                            className="text-3xl lg:text-5xl font-extralight"
                                             separator=","
                                             suffix="+"
                                         />
