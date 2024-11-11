@@ -2,7 +2,7 @@
 import ROICalculator from '@/components/roi-calculator/RoiCalculator';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { ArrowUpNarrowWide, Bell, ChartNoAxesColumnIncreasing, Gift, Magnet, MessagesSquare, Rocket, Search, SquareArrowOutUpRight, Star, User, Users } from 'lucide-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { pricingPageTextContent } from '@/lib/TextContent';
 import { motion } from 'framer-motion';
 import '../../custom.css'
@@ -19,7 +19,22 @@ import CompanyLogoOne from '@/public/assets/company_logo/logoOne.svg'
 import CompanyLogoTwo from '@/public/assets/company_logo/logoTwo.svg'
 import CompanyLogoThree from '@/public/assets/company_logo/logoThree.svg'
 import CompanyLogoFour from '@/public/assets/company_logo/logoFour.svg'
+import { campaignDateCalculator } from '@/utils/campaignDateCalculator';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+interface CampaignEvent {
+    event: string;
+    date: string;
+}
 const PricingPage = () => {
+
+    const [dates, setDates] = useState<CampaignEvent[]>([]);
+
+    useEffect(() => {
+        const campaignDates = campaignDateCalculator(new Date());
+        setDates(campaignDates);
+    }, [])
+
+    // console.log(dates)
     return (
         <div className='py-24  px-3 overflow-hidden'>
             <div className='max-w-7xl mx-auto space-y-40'>
@@ -205,6 +220,7 @@ const PricingPage = () => {
                     <h1 className='text-xl md:text-2xl lg:text-4xl font-bold text-center'>Your campaign could be live in 21 days</h1>
 
                     <div className='hidden lg:grid grid-cols-5'>
+
                         <div className='relative group'>
                             <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                 <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>1</div>
@@ -212,7 +228,7 @@ const PricingPage = () => {
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>You are here</h4>
-                                <p className='text-lg text-textColorTwo'>November 4, 15:08</p>
+                                <p className='text-lg text-textColorTwo'>{dates[0]?.date}</p>
                             </div>
                         </div>
 
@@ -223,7 +239,7 @@ const PricingPage = () => {
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Consultatin and demo</h4>
-                                <p className='text-lg text-textColorTwo'>November 4, 17:08</p>
+                                <p className='text-lg text-textColorTwo'>{dates[1]?.date}</p>
                             </div>
                         </div>
 
@@ -234,7 +250,7 @@ const PricingPage = () => {
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Proposal</h4>
-                                <p className='text-lg text-textColorTwo'>November 4, 17:08</p>
+                                <p className='text-lg text-textColorTwo'>{dates[2]?.date}</p>
                             </div>
                         </div>
 
@@ -245,7 +261,7 @@ const PricingPage = () => {
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Onboarding</h4>
-                                <p className='text-lg text-textColorTwo'>November 12, 09:00</p>
+                                <p className='text-lg text-textColorTwo'>{dates[3]?.date}</p>
                             </div>
                         </div>
 
@@ -256,89 +272,84 @@ const PricingPage = () => {
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Go Live</h4>
-                                <p className='text-lg text-textColorTwo'>November 26, 09:00</p>
+                                <p className='text-lg text-textColorTwo'>{dates[4]?.date}</p>
                             </div>
                         </div>
                     </div>
 
                     <div className='lg:hidden relative'>
-                        <Swiper
-                            grabCursor={true}
-                            effect={'creative'}
-                            creativeEffect={{
-                                prev: {
-                                    shadow: false,
-                                    translate: ['-120%', 0, -500],
-                                },
-                                next: {
-                                    shadow: false,
-                                    translate: ['120%', 0, -500],
-                                },
-                            }}
-                            modules={[EffectCreative]}
-                            className="pricing-swiper w-max h-24"
-                        >
-                            <SwiperSlide className='pricing-swiper-slide'>
-                                <div className='relative group'>
-                                    <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
-                                        <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>1</div>
-                                        <User strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                        <Carousel>
+                            <CarouselContent>
+                                <CarouselItem>
+                                    <div className='relative group pt-4'>
+                                        <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
+                                            <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>1</div>
+                                            <User strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                        </div>
+                                        <div className='text-center mt-5'>
+                                            <h4 className='text-xl font-bold'>You are here</h4>
+                                            <p className='text-lg text-textColorTwo'>{dates[0]?.date}</p>
+                                        </div>
                                     </div>
-                                    <div className='text-center mt-5'>
-                                        <h4 className='text-xl font-bold'>You are here</h4>
-                                        <p className='text-lg text-textColorTwo'>November 4, 15:08</p>
+                                </CarouselItem>
+
+                                <CarouselItem>
+                                    <div className='relative group pt-4'>
+                                        <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
+                                            <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>2</div>
+                                            <MessagesSquare strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                        </div>
+                                        <div className='text-center mt-5'>
+                                            <h4 className='text-xl font-bold'>Consultatin and demo</h4>
+                                            <p className='text-lg text-textColorTwo'>{dates[1]?.date}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='pricing-swiper-slide'>
-                                <div className='relative group'>
-                                    <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
-                                        <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>2</div>
-                                        <MessagesSquare strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                </CarouselItem>
+
+                                <CarouselItem>
+                                    <div className='relative group pt-4'>
+                                        <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
+                                            <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>3</div>
+                                            <ChartNoAxesColumnIncreasing strokeWidth={5} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                        </div>
+                                        <div className='text-center mt-5'>
+                                            <h4 className='text-xl font-bold'>Proposal</h4>
+                                            <p className='text-lg text-textColorTwo'>{dates[2]?.date}</p>
+                                        </div>
                                     </div>
-                                    <div className='text-center mt-5'>
-                                        <h4 className='text-xl font-bold'>Consultatin and demo</h4>
-                                        <p className='text-lg text-textColorTwo'>November 4, 17:08</p>
+
+                                </CarouselItem>
+
+                                <CarouselItem>
+                                    <div className='relative group pt-4'>
+                                        <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
+                                            <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>4</div>
+                                            <SquareArrowOutUpRight strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                        </div>
+                                        <div className='text-center mt-5'>
+                                            <h4 className='text-xl font-bold'>Onboarding</h4>
+                                            <p className='text-lg text-textColorTwo'>{dates[3]?.date}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='pricing-swiper-slide'>
-                                <div className='relative group'>
-                                    <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
-                                        <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>3</div>
-                                        <ChartNoAxesColumnIncreasing strokeWidth={5} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                </CarouselItem>
+
+                                <CarouselItem>
+                                    <div className='relative group pt-4'>
+                                        <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
+                                            <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>5</div>
+                                            <Rocket strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                        </div>
+                                        <div className='text-center mt-5'>
+                                            <h4 className='text-xl font-bold'>Go Live</h4>
+                                            <p className='text-lg text-textColorTwo'>{dates[4]?.date}</p>
+                                        </div>
                                     </div>
-                                    <div className='text-center mt-5'>
-                                        <h4 className='text-xl font-bold'>Proposal</h4>
-                                        <p className='text-lg text-textColorTwo'>November 4, 17:08</p>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='pricing-swiper-slide'>
-                                <div className='relative group'>
-                                    <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
-                                        <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>4</div>
-                                        <SquareArrowOutUpRight strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
-                                    </div>
-                                    <div className='text-center mt-5'>
-                                        <h4 className='text-xl font-bold'>Onboarding</h4>
-                                        <p className='text-lg text-textColorTwo'>November 12, 09:00</p>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className='pricing-swiper-slide'>
-                                <div className='relative group'>
-                                    <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
-                                        <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>5</div>
-                                        <Rocket strokeWidth={3} color='#000000' size={50} className='group-hover:scale-125 transition-all duration-300 ease-in-out' />
-                                    </div>
-                                    <div className='text-center mt-5'>
-                                        <h4 className='text-xl font-bold'>Go Live</h4>
-                                        <p className='text-lg text-textColorTwo'>November 26, 09:00</p>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        </Swiper>
+                                </CarouselItem>
+                            </CarouselContent>
+                            <CarouselPrevious className='left-0' />
+                            <CarouselNext className='right-0'/>
+                        </Carousel>
+
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
