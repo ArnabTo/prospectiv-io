@@ -42,7 +42,7 @@ const LegalPageContents = () => {
     return (
         <div>
             <Tabs defaultValue={activeTab} onValueChange={handleTabChange} className="w-full">
-                <TabsList className="w-full justify-between items-center rounded-full overflow-x-auto lg:overflow-hidden">
+                <TabsList className="max-w-[90%] lg:max-w-full mx-auto flex justify-between items-center rounded-full overflow-x-auto lg:overflow-hidden">
                     <TabsTrigger value="cookies">Cookie Policy</TabsTrigger>
                     <TabsTrigger value="privacy">Privacy Policy</TabsTrigger>
                     <TabsTrigger value="terms">Terms</TabsTrigger>

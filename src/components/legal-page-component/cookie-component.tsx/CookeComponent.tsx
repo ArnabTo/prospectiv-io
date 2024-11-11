@@ -62,7 +62,7 @@ const CookeComponent = () => {
             </Card>
 
             {/* Content */}
-            <div className='col-span-4 lg:col-span-3 space-y-5'>
+            <div className='col-span-4 lg:col-span-3 space-y-5 p-5'>
                 <section className='space-y-5 py-8' id={legalPageContent.cookies.section[0].id} >
                     <h2 className="text-3xl text-secondary">1. {legalPageContent.cookies.section[0].title}</h2>
                     {legalPageContent.cookies.section[0].contents?.map((content: any) =>
@@ -239,11 +239,18 @@ const CookeComponent = () => {
                     <h2 className="text-3xl text-secondary">5. {legalPageContent.cookies.section[4].title}</h2>
                     <div>
                         <div className='my-3 space-y-3'>
-                            <p className='text-lg text-textColorTwo'>{legalPageContent.cookies.section[4].content[0].id} {legalPageContent.cookies.section[4].content[0].textContent}</p>
-                            <div className='w-full border border-borderColor lg:ml-7 p-5 flex flex-col gap-5 rounded-xl'>
-                                {legalPageContent.cookies.section[4].content[0].link_content?.map((cont, index) =>
-                                    <Link className='text-gradientColorOne break-words max-w-full'
-                                        key={index} href={cont}><span className='text-textColorTwo'>{index + 1}.</span>   {cont}</Link>)}
+                            <p className='text-lg text-textColorTwo'>
+                                {legalPageContent.cookies.section[4].content[0].id} {legalPageContent.cookies.section[4].content[0].textContent}
+                            </p>
+                            <div className='w-full border border-borderColor lg:ml-7 p-5 flex flex-col gap-5 rounded-xl overflow-x-auto'>
+                                {legalPageContent.cookies.section[4].content[0].link_content?.map((cont, index) => (
+                                    <Link
+                                        className='text-gradientColorOne break-words max-w-full flex gap-2'
+                                        key={index}
+                                        href={cont}>
+                                        <span className='text-textColorTwo'>{index + 1}.</span> {cont}
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                         <div className='my-3'>

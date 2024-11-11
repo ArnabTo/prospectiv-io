@@ -217,7 +217,7 @@ const LifeAtProspectiv = () => {
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
                     >
-                        <h1 className='text-3xl font-bold text-start'>Explore About us</h1>
+                        <h1 className='text-3xl font-bold text-center lg:text-start'>Explore About us</h1>
                     </motion.div>
 
                     <motion.div
