@@ -1059,7 +1059,7 @@ const ROICalculator = () => {
                             <ChevronDown size={25} />
                           </span>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                        <DropdownMenuContent className='bg-smallCard border border-borderColor max-w-[90%] mx-auto'>
                           <div className='hover:bg-secondary'>
                             <DropdownMenuItem className='w-full text-center flex justify-between cursor-pointer'
                               onClick={() => handleCurrencyChange('USD')}
@@ -1069,7 +1069,7 @@ const ROICalculator = () => {
                             </DropdownMenuItem>
                           </div>
                           <div className='hover:bg-secondary'>
-                            <DropdownMenuItem className='w-fulltext-center hover:bg-secondary flex justify-between cursor-pointer'
+                            <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer '
                               onClick={() => handleCurrencyChange('EUR')}
                             >
                               <EuroIcon className='text-center' size={50} />
@@ -1134,7 +1134,7 @@ const ROICalculator = () => {
                             <ChevronDown size={25} />
                           </span>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                        <DropdownMenuContent className='bg-smallCard border border-borderColor max-w-[90%]'>
                           <DropdownMenuItem className='w-full text-center hover:bg-secondary flex justify-between cursor-pointer'
                             onClick={() => handleCurrencyChange('USD')}
                           >
@@ -1242,7 +1242,7 @@ const ROICalculator = () => {
                                   <ChevronDown size={25} />
                                 </span>
                               </DropdownMenuTrigger>
-                              <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                              <DropdownMenuContent className='bg-smallCard border border-borderColor max-w-[90%]'>
                                 <div className='hover:bg-secondary'>
                                   <DropdownMenuItem className='w-full text-center  flex justify-between cursor-pointer'
                                     onClick={() => handleCurrencyChange('USD')}
@@ -1317,7 +1317,7 @@ const ROICalculator = () => {
                                   <ChevronDown size={25} />
                                 </span>
                               </DropdownMenuTrigger>
-                              <DropdownMenuContent className='bg-smallCard border border-borderColor'>
+                              <DropdownMenuContent className='bg-smallCard border border-borderColor max-w-[90%]'>
                                 <div className='hover:bg-secondary cursor-pointer'>
                                   <DropdownMenuItem className='w-full text-center flex justify-between cursor-pointer'
                                     onClick={() => handleCurrencyChange('USD')}
@@ -1472,13 +1472,21 @@ const ROICalculator = () => {
                 </div>
               </div>
             </div>
-            {showResultCard && <p className='text-center text-xl my-5 flex items-center justify-center gap-3'>Would you invest
+            {showResultCard &&
+              <p className='text-center text-sm md:text-lg lg:text-xl my-5 md:px-5 md:flex justify-center items-center gap-2'>Would you
+                Invest
+                <span className='text-lg md:text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()} </span>
+                to generate
+                <span className='text-lg md:text-3xl text-gradientColorFive font-bold'>  {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()} </span>
+                revenue each month?
+              </p>}
+                {/* {showResultCard && <p className='text-center text-xl my-5 flex items-center justify-center gap-3'>Would you invest
               Invest
               <span className='text-3xl text-secondary font-bold'> {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.investment.toLocaleString()} </span>
               to generate
               <span className='text-3xl text-gradientColorFive font-bold'>  {currency === 'USD' ? '$' : currency === 'EUR' ? '€' : '£'}{metrics.revenue.toLocaleString()} </span>
               revenue each month?
-            </p>}
+            </p>} */}
           </Card>
         )}
 

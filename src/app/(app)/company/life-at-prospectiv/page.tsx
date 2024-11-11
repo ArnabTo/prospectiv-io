@@ -181,13 +181,13 @@ const LifeAtProspectiv = () => {
                             transition={{ duration: 0.7, delay: 0.6 }}
                             viewport={{ once: true }}
                             className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8 mx-auto">
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/7109063/pexels-photo-7109063.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/6775117/pexels-photo-6775117.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/9301895/pexels-photo-9301895.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/7793142/pexels-photo-7793142.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
-                            <Image width={300} height={300} className='rounded-xl' src="https://images.pexels.com/photos/8101981/pexels-photo-8101981.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/7109063/pexels-photo-7109063.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/2467506/pexels-photo-2467506.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/23496703/pexels-photo-23496703/free-photo-of-a-group-of-people-standing-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/6775117/pexels-photo-6775117.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/9301895/pexels-photo-9301895.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/7793142/pexels-photo-7793142.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
+                            <Image width={1000} height={800} className='rounded-xl' src="https://images.pexels.com/photos/8101981/pexels-photo-8101981.jpeg?auto=compress&cs=tinysrgb&w=600" alt='team_photo' />
                         </motion.div>
                     </div>
 

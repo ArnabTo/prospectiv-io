@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Footer = () => {
     return (
         <footer className='max-w-screen-2xl px-10 lg:px-32 mx-auto pt-24'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 space-y-5'>
                 {/* <div className='space-y-5'>
                     <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Solutions</h3>
                     <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
@@ -43,7 +43,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='space-y-5'>
+                <div className='space-y-5 lg:flex justify-end'>
                     <div className='flex flex-col justify-center gap-5'>
                         <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Legal</h3>
                         <ul className='text-md lg:text-lg text-textColorTwo space-y-1'>
@@ -53,12 +53,11 @@ const Footer = () => {
                             <li className='hover:text-secondary'><Link href="/legal?tab=gdpr">GDPR Compliance</Link></li>
                             <li className='hover:text-secondary'><Link href="/legal?tab=us">US Compliance Statement</Link></li>
                             <li className='hover:text-secondary'><Link href="/legal?tab=faq">GDPR FAQ</Link></li>
-                            <li className='hover:text-secondary'><Link href="/legal/do-not-sell-my-data">Do Not Sell My Personal Information</Link></li>
                         </ul>
                     </div>
                 </div>
 
-                <div className='space-y-5 flex justify-start items-center lg:items-start'>
+                <div className='space-y-5 flex justify-start lg:justify-end items-center lg:items-start'>
                     <div className='flex flex-col justify-center gap-5'>
                         <div>
                             <h3 className='text-xl font-bold border-b-2 border-secondary pb-2 max-w-[30%]'>Resources</h3>

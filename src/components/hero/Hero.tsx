@@ -61,9 +61,9 @@ const Hero = () => {
                         viewport={{ once: true }}
                         className="w-full flex justify-center items-center relative px-5">
 
-                        <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-20 absolute left-5 lg:top-40" src={HeroBgTwo} width={300} height={300} alt="HeroBg" />
+                        <Image className="w-full max-w-[15%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-20 absolute left-5 lg:top-40" src={HeroBgTwo} width={300} height={300} alt="HeroBg" />
                         <Image className="w-full object-cover max-w-[88%] mx-auto rounded-[10px] lg:rounded-[26px]  animate-float z-10" src={HeroBg} width={1200} height={1200} alt="HeroBg" />
-                        <Image className="w-full max-w-[25%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-10 absolute right-5 lg:bottom-10 lg:right-8" src={HeroBgThree} width={500} height={500} alt="HeroBg" />
+                        <Image className="w-full max-w-[15%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-10 absolute right-5 bottom-8 lg:bottom-10 lg:right-8" src={HeroBgThree} width={500} height={500} alt="HeroBg" />
                     </motion.div>
 
                     {/* Gradient Blurs */}

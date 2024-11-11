@@ -13,7 +13,7 @@ const SuccessSection = () => {
 
     const fetchStories = useCallback(async () => {
         const getStories = await axios.get('/api/getsuccessstories');
-        setSuccessStories(getStories.data.slice(0, 3));
+        setSuccessStories(getStories.data.slice(0, 3).filter((story: SuccessStoryType) =>!story.video_url));
     }, [])
 
     useEffect(() => {

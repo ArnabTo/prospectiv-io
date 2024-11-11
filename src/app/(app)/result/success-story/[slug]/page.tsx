@@ -49,14 +49,14 @@ const StoryDetails = () => {
             return url; // For other URLs like Google Drive, use as-is
         }
     };
-
+console.log(storyDetails)
     return (
-        <div className="py-32">
-            <div className="max-w-7xl mx-auto space-y-24">
+        <div className="pt-16 pb-24">
+            <div className="max-w-7xl mx-auto space-y-24 p-5">
                 {isLoading ? <div className="flex justify-center items-center h-screen"><Loader2 size={40} className="animate-spin" /></div>
                     :
                     <div className="flex flex-col lg:flex-row-reverse justify-center gap-5">
-                        <div className="max-w-[70%] space-y-7">
+                        <div className="lg:max-w-[70%] space-y-7">
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ const StoryDetails = () => {
                                             frameBorder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
-                                            className="w-full lg:w-[560px] h-full lg:h-[315px] rounded-3xl"
+                                            className="w-full lg:w-[560px] h-full md:h-[350px] lg:h-[315px] rounded-3xl"
                                         ></iframe>
                                         :
                                         <Image
@@ -98,8 +98,8 @@ const StoryDetails = () => {
                                         start={0}
                                         end={storyDetails?.lead_rate ?? 0}
                                         duration={2}
-                                        prefix="$"
-                                        className="text-6xl font-extralight text-secondary"
+                                        prefix="£"
+                                        className="text-4xl lg:text-6xl font-extralight text-secondary"
                                     />
                                     <p className="text-lg font-normal text-textColorTwo border-b border-gradientColorOne py-5">cost per lead</p>
                                 </motion.div>
@@ -110,12 +110,12 @@ const StoryDetails = () => {
                                     className="border bg-card border-borderColor rounded-3xl p-10 flex flex-col justify-center items-center">
                                     <CountUp
                                         start={0}
-                                        end={storyDetails?.lead_rate ?? 0}
+                                        end={storyDetails?.cost_per_lead ?? 0}
                                         duration={2}
                                         suffix="%"
-                                        className="text-6xl font-extralight text-secondary"
+                                        className="text-4xl lg:text-6xl font-extralight text-secondary"
                                     />
-                                    <p className="text-lg font-normal text-textColorTwo border-b border-gradientColorOne py-5">cost per lead</p>
+                                    <p className="text-lg font-normal text-textColorTwo border-b border-gradientColorOne py-5">lead rate</p>
                                 </motion.div>
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
@@ -128,9 +128,9 @@ const StoryDetails = () => {
                                         end={storyDetails?.response_rate ?? 0}
                                         duration={2}
                                         suffix="%"
-                                        className="text-6xl font-extralight text-secondary"
+                                        className="text-4xl lg:text-6xl font-extralight text-secondary"
                                     />
-                                    <p className="text-lg font-normal text-textColorTwo border-b border-gradientColorOne py-5">cost per lead</p>
+                                    <p className="text-lg font-normal text-textColorTwo border-b border-gradientColorOne py-5">response rate</p>
                                 </motion.div>
                             </div>
 
