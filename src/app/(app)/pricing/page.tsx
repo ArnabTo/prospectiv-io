@@ -224,7 +224,7 @@ const PricingPage = () => {
                         <div className='relative group cursor-pointer'>
                             <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                 <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>1</div>
-                                <User strokeWidth={2} color='#ff4895 ' size={50} className='group-hover:animate-bounce group-hover:scale-125 transition-all duration-300 ease-in-out' />
+                                <User strokeWidth={2} color='#ff4895 ' size={50} className=' group-hover:scale-125 transition-all duration-300 ease-in-out' />
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>You are here</h4>
@@ -235,7 +235,7 @@ const PricingPage = () => {
                         <div className='relative group cursor-pointer'>
                             <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                 <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>2</div>
-                                <MessagesSquare strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                <MessagesSquare strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Consultatin and demo</h4>
@@ -246,7 +246,7 @@ const PricingPage = () => {
                         <div className='relative group cursor-pointer'>
                             <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                 <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>3</div>
-                                <ChartNoAxesColumnIncreasing strokeWidth={3} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                <ChartNoAxesColumnIncreasing strokeWidth={3} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Proposal</h4>
@@ -257,7 +257,7 @@ const PricingPage = () => {
                         <div className='relative group cursor-pointer'>
                             <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                 <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>4</div>
-                                <SquareArrowOutUpRight strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                <SquareArrowOutUpRight strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Onboarding</h4>
@@ -268,7 +268,7 @@ const PricingPage = () => {
                         <div className='relative group cursor-pointer'>
                             <div className='bg-foreground max-w-[50%] mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                 <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>5</div>
-                                <Rocket strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                <Rocket strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                             </div>
                             <div className='text-center mt-5'>
                                 <h4 className='text-xl font-bold'>Go Live</h4>
@@ -284,7 +284,7 @@ const PricingPage = () => {
                                     <div className='relative group cursor-pointer pt-4'>
                                         <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                             <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>1</div>
-                                            <User strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                            <User strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                                         </div>
                                         <div className='text-center mt-5'>
                                             <h4 className='text-xl font-bold'>You are here</h4>
@@ -297,7 +297,7 @@ const PricingPage = () => {
                                     <div className='relative group cursor-pointer pt-4'>
                                         <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                             <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>2</div>
-                                            <MessagesSquare strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                            <MessagesSquare strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                                         </div>
                                         <div className='text-center mt-5'>
                                             <h4 className='text-xl font-bold'>Consultatin and demo</h4>
@@ -310,7 +310,7 @@ const PricingPage = () => {
                                     <div className='relative group cursor-pointer pt-4'>
                                         <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                             <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>3</div>
-                                            <ChartNoAxesColumnIncreasing strokeWidth={3} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                            <ChartNoAxesColumnIncreasing strokeWidth={3} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                                         </div>
                                         <div className='text-center mt-5'>
                                             <h4 className='text-xl font-bold'>Proposal</h4>
@@ -324,7 +324,7 @@ const PricingPage = () => {
                                     <div className='relative group cursor-pointer pt-4'>
                                         <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                             <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>4</div>
-                                            <SquareArrowOutUpRight strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                            <SquareArrowOutUpRight strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                                         </div>
                                         <div className='text-center mt-5'>
                                             <h4 className='text-xl font-bold'>Onboarding</h4>
@@ -337,7 +337,7 @@ const PricingPage = () => {
                                     <div className='relative group cursor-pointer pt-4'>
                                         <div className='bg-foreground w-32 mx-auto p-10 rounded-3xl relative flex justify-center items-center'>
                                             <div className='absolute -top-2 -left-2 bg-secondary rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all duration-300 ease-in-out'>5</div>
-                                            <Rocket strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125 group-hover:animate-bounce transition-all duration-300 ease-in-out' />
+                                            <Rocket strokeWidth={2} color='#ff4895' size={50} className='group-hover:scale-125  transition-all duration-300 ease-in-out' />
                                         </div>
                                         <div className='text-center mt-5'>
                                             <h4 className='text-xl font-bold'>Go Live</h4>
