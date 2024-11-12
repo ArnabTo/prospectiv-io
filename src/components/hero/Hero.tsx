@@ -94,6 +94,7 @@ const Hero = () => {
     }, []);
 
     return (
+        
         <section className="overflow-hidden pt-24 relative z-10">
             <div className="max-w-7xl mx-auto relative space-y-24 pb-24">
                 <div className="w-full lg:w-3/4 text-center mx-auto space-y-10 px-4 md:px-10 lg:p-0 xl:p-10">
