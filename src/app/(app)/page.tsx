@@ -9,12 +9,10 @@ import Campaign from "@/components/campaign/Campaign";
 import Partners from "@/components/partners/Partners";
 import Intro from "@/components/intro-animation/Intro";
 import BlogSection from "@/components/Blogs/BlogSection";
-import { useEffect } from "react";
 export default function Home() {
 
-
-
   return (
+
     <div className="space-y-24">
       <Hero />
       {/* <Intro/> */}
@@ -25,5 +23,6 @@ export default function Home() {
       <BlogSection />
       <Campaign />
     </div>
+
   );
 }

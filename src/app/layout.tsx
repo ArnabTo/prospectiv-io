@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Inter } from 'next/font/google'
 import SmoothScroll from "@/components/provider/SmoothScroll";
+import { LenisProvider } from "@/components/provider/LenisSmoothScroll";
 const inter = Inter({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900',] })
-
 
 export const metadata: Metadata = {
   title: "Prospectiv",
@@ -22,9 +21,9 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
- 
+        <LenisProvider>
           {children}
-    
+        </LenisProvider>
       </body>
     </html>
   );
