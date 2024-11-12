@@ -46,8 +46,8 @@ const WebinarDetails = () => {
         }
     };
     return (
-        <div className='max-w-7xl mx-auto space-y-16 p-5'>
-            <div className='flex flex-col lg:flex-row justify-center gap-5'>
+        <div className='max-w-7xl mx-auto space-y-16'>
+            <div className='flex flex-col lg:flex-row justify-center gap-5 p-5'>
                 <div className="lg:max-w-[70%] space-y-7">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{webinar?.title}</h1>
                     <div className="relative overflow-hidden" style={{ paddingTop: '56.25%' }}>

@@ -59,7 +59,7 @@ const SuccessCounts = () => {
                                 <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
                                     <CountUp
                                         start={startCounting ? 0 : undefined} // Start counting when in view
-                                        end={45}
+                                        end={50}
                                         duration={3}
                                         useEasing={true}
                                         useGrouping={true}

@@ -12,53 +12,36 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 const BlogSection = () => {
 
     const animateRef = useRef(null);
+
     useEffect(() => {
-        // Register the plugin first
         if (typeof window !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
         }
 
-        // Make sure the ref exists
         if (!animateRef.current) return;
 
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: animateRef.current,
-                start: 'top bottom',
-                toggleActions: 'play none none none',
-                once: true
+        const tl = gsap.fromTo(animateRef.current, 
+            {
+                opacity: 0,
+                y: 100,
+                scale: 0.9
+            }, 
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                scrollTrigger: {
+                    trigger: animateRef.current,
+                    start: 'top bottom',
+                    end: 'top center',
+                    scrub: 1, // Makes animation smooth and tied to scroll position
+                    toggleActions: 'play reverse play reverse'
+                }
             }
-        })
+        );
 
-        tl.fromTo(animateRef.current, {
-            opacity: 0,
-            y: 100,
-            rotateX: 90,
-            transformOrigin: "center bottom",
-            perspective: 1000
-        }, {
-            opacity: 1,
-            y: 0,
-            rotateX: 0,
-            duration: 1,
-            ease: "power4.out"
-        })
-
-        // Add scroll-based animation
-        const st = ScrollTrigger.create({
-            trigger: animateRef.current,
-            start: "top center",
-            end: "bottom center",
-            scrub: 1,
-            onEnter: () => gsap.to(animateRef.current, { opacity: 1, rotateX: 0 }),
-            onLeave: () => gsap.to(animateRef.current, { opacity: 0, rotateX: 90 }),
-            onEnterBack: () => gsap.to(animateRef.current, { opacity: 1, rotateX: 0 }),
-            onLeaveBack: () => gsap.to(animateRef.current, { opacity: 0, rotateX: 90 })
-        });
-
-        // Cleanup
         return () => {
-            st.kill();
+            tl.kill();
         };
     }, []);
 
@@ -78,7 +61,7 @@ const BlogSection = () => {
     }, [fetchBlogs])
 
     return (
-        <section>
+        <section className="p-5">
             <div className="max-w-7xl mx-auto lg:py-24">
                 <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center">Discover how Prospectiv helps you sell more</h1>
                 <div ref={animateRef}

@@ -8,7 +8,6 @@ import { PortableText } from "@portabletext/react";
 import { Calendar, Loader2, Tag } from "lucide-react";
 import calculateReadingTime from "@/components/reading-time-caculator/ReadingTimeCalculator";
 import BlogSection from "@/components/Blogs/BlogSection";
-import { motion } from 'framer-motion';
 import { RichTextComponent } from "@/components/rich-text-component/RichTextComponent";
 import Link from "next/link";
 import LinkedInLogo from '@/public/assets/icons8-linkedin-480.png'
@@ -19,11 +18,7 @@ import ScrollProgressBar from "@/components/PageScrollProgressBar/ProgressBar";
 import { Separator } from "@/components/ui/separator";
 import { BlogPost } from "@/types/types";
 
-// interface Params {
-//     params: {
-//         slug: string
-//     }
-// }
+
 const BlogDetails = () => {
 
     const params = useParams();

@@ -72,7 +72,7 @@ const HowItWork = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-5 lg:pb-24 space-y-10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 pb-16 lg:py-28 space-y-10 overflow-hidden">
             <div ref={animateRef}
                 className="w-full lg:max-w-[70%] mx-auto text-center space-y-5">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{HowItWorkTextContent?.heading?.heading}</h1>
