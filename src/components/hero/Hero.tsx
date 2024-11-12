@@ -27,7 +27,6 @@ const Hero = () => {
                     trigger: animateRef.current,
                     start: 'top 80%',
                     toggleActions: 'play none none none',
-                    once: true
                 }
             });
 
@@ -47,8 +46,8 @@ const Hero = () => {
             }, {
                 opacity: 1,
                 y: 0,
-                duration: 0.7
-            }, "+=0.2") // Wait 0.2s after previous animation
+                duration: 0.6
+            }, "+=0.1") // Wait 0.2s after previous animation
             .fromTo(buttonRefOne.current, {
                 opacity: 0,
                 y: 10
@@ -56,7 +55,7 @@ const Hero = () => {
                 opacity: 1,
                 y: 0,
                 duration: 0.5
-            }, "+=0.2")
+            }, "+=0.1")
             .fromTo(buttonRefTwo.current, {
                 opacity: 0,
                 y: 10
@@ -64,7 +63,7 @@ const Hero = () => {
                 opacity: 1,
                 y: 0,
                 duration: 0.5
-            }, "+=0.2")
+            }, "+=0.1")
             .fromTo(imageRef.current, {
                 opacity: 0,
                 y: 10
@@ -72,7 +71,7 @@ const Hero = () => {
                 opacity: 1,
                 y: 0,
                 duration: 0.5
-            }, "+=0.2")
+            }, "+=0.1")
             .fromTo(gradientBgRef.current, {
                 opacity: 0,
                 scale: 0.9
@@ -80,7 +79,7 @@ const Hero = () => {
                 opacity: 1,
                 scale: 1,
                 duration: 0.5
-            }, "+=0.2");
+            });
         }, 3000); 
 
     }, []);

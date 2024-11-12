@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const SuccessCounts = () => {
     // State to track when the section is in view
@@ -8,15 +8,9 @@ const SuccessCounts = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-5 overflow-hidden">
-            <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex flex-col lg:flex-row justify-between items-center gap-2 lg:gap-10 mx-auto bg-card border border-borderColor p-5 lg:p-10 rounded-3xl">
-
+            <div
+                className="flex flex-col lg:flex-row justify-between items-center gap-2 lg:gap-10 mx-auto bg-card border border-borderColor p-5 lg:p-10 rounded-3xl">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
@@ -139,7 +133,7 @@ const SuccessCounts = () => {
                         <div className="bg-gradientColorFour absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                     </motion.div>
                 </div>
-            </motion.div>
+            </div>
         </div>
     );
 };

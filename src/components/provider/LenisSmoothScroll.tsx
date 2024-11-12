@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 
 // Create a custom Lenis component
-export const LenisProvider = ({ children }) => {
+export const LenisProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -13,7 +13,7 @@ export const LenisProvider = ({ children }) => {
       touchMultiplier: 2,
     });
 
-    const raf = (time) => {
+    const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };

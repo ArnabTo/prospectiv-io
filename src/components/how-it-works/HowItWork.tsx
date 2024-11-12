@@ -1,8 +1,10 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 import './cardHover.css';
 import { HowItWorkTextContent } from '@/lib/TextContent';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const HowItWork = () => {
     // Create separate refs for each Lottie animation
@@ -12,8 +14,51 @@ const HowItWork = () => {
     const lottieRefFour = useRef(null);
     const lottieRefFive = useRef(null);
     const lottieRefSix = useRef(null);
-
+    const animateRef = useRef(null);
+    const contentRef = useRef(null);
+    const gradientBgRef = useRef(null);
     
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: animateRef.current,
+                start: 'top bottom',
+                toggleActions: 'play none none none',
+                once: true
+            }
+        })
+
+        tl.fromTo(animateRef.current, {
+            opacity: 0,
+            y: 10,
+            scale: 0.9
+        }, {
+            opacity: 1, 
+            y: 0,
+            scale: 1,
+            duration: 0.5
+        })
+        .fromTo(contentRef.current, {
+            opacity: 0,
+            y: 10,
+            scale: 0.9
+        }, {
+            opacity: 1, 
+            y: 0,
+            scale: 1,
+            duration: 0.5
+        })
+        .fromTo(gradientBgRef.current, {
+            opacity: 0,
+            scale: 0.9
+        }, {
+            opacity: 1, 
+            scale: 1,
+            duration: 0.5
+        });
+    }, []);
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
         if (typeof document !== 'undefined') {
             lottieRef?.current?.play(); // Play animation on hover
@@ -28,22 +73,14 @@ const HowItWork = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-5 lg:pb-24 space-y-10 overflow-hidden">
-            <motion.div
-                initial={{ opacity: 0, y: 10, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
+            <div ref={animateRef}
                 className="w-full lg:max-w-[70%] mx-auto text-center space-y-5">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">{HowItWorkTextContent?.heading?.heading}</h1>
                 <p className="text-textColorTwo text-lg lg:max-w-[70%] mx-auto">{HowItWorkTextContent?.heading?.paragraph}</p>
-            </motion.div>
+            </div>
 
             <div className='relative space-y-5'>
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    viewport={{ once: true }}
+                <div ref={contentRef}
                     className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                    
                     <div
@@ -147,18 +184,14 @@ const HowItWork = () => {
                         <h3 className='text-3xl font-bold group-hover:text-foreground group-hover:font-extrabold transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.heading}</h3>
                         <p className='text-textColorTwo text-lg group-hover:text-foreground group-hover:font-medium transition-all duration-1000'>{HowItWorkTextContent?.cardTextContent6?.paragraph}</p>
                     </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    viewport={{ once: true }}
+                <div ref={gradientBgRef}
                     className="blur-[100px] w-full max-w-[35%] min-h-[90%] absolute left-[30%] top-0 -z-10 animate-spin-slow transition-all">
                     <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                     <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                     <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                </motion.div>
+                </div>
             </div>
         </div>
     );
