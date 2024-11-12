@@ -14,37 +14,25 @@ const BlogSection = () => {
     const animateRef = useRef(null);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-        }
+        gsap.registerPlugin(ScrollTrigger);
 
-        if (!animateRef.current) return;
-
-        const tl = gsap.fromTo(animateRef.current, 
-            {
-                opacity: 0,
-                y: 100,
-                scale: 0.9
-            }, 
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                scrollTrigger: {
-                    trigger: animateRef.current,
-                    start: 'top bottom',
-                    end: 'top center',
-                    scrub: 1, // Makes animation smooth and tied to scroll position
-                    toggleActions: 'play reverse play reverse'
-                }
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: animateRef.current,
+                start: 'top bottom',
+                toggleActions: 'play none none none'
             }
-        );
-
-        return () => {
-            tl.kill();
-        };
-    }, []);
-
+        })
+        tl.fromTo(animateRef.current, {
+            opacity: 0,
+            y: 10,
+            scale: 0.9
+        }, {
+            opacity: 1,
+            y: 0,
+            scale: 1
+        })
+    }, [])
     const [blogs, setBlogs] = useState<Blog[]>([])
 
     const fetchBlogs = useCallback(async () => {

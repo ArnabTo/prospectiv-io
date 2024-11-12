@@ -59,6 +59,7 @@ const HowItWork = () => {
             duration: 0.5
         });
     }, []);
+    
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
         if (typeof document !== 'undefined') {
             lottieRef?.current?.play(); // Play animation on hover

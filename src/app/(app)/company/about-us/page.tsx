@@ -270,7 +270,7 @@ const AboutUs = () => {
                                             start={0}
                                             end={215}
                                             duration={5}
-                                            prefix="$"
+                                            prefix="£"
                                             suffix="M"
                                             separator=","
                                             className="text-5xl font-bold text-gradientColorTwo"
@@ -281,7 +281,7 @@ const AboutUs = () => {
 
                                 <div className="flex flex-col lg:flex-row gap-5">
                                     <div className="flex flex-col justify-center items-center gap-3">
-                                        <p className="text-textColorTwo">We engage over</p>
+                                        <p className="text-textColorTwo">We have experience of</p>
                                         <CountUp
                                             start={0}
                                             end={21000}
@@ -289,11 +289,11 @@ const AboutUs = () => {
                                             separator=","
                                             className="text-5xl font-bold text-gradientColorThree"
                                         />
-                                        <p>new prospect per hour</p>
+                                        <p>previous campaigns</p>
                                     </div>
 
                                     <div className="flex flex-col justify-center items-center gap-3">
-                                        <p className="text-textColorTwo">We engage over</p>
+                                        <p className="text-textColorTwo">We support over</p>
                                         <CountUp
                                             start={0}
                                             end={630}
@@ -302,7 +302,7 @@ const AboutUs = () => {
                                             separator=","
                                             className="text-5xl font-bold text-gradientColorFour"
                                         />
-                                        <p>new prospect per hour</p>
+                                        <p>sales & marketing teams</p>
                                     </div>
                                 </div>
 
