@@ -1,16 +1,42 @@
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import { useRef, useEffect } from "react";
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 const Campaign = () => {
+
+    const animateRef = useRef(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: animateRef.current,
+                start: 'top bottom',
+                toggleActions: 'play none none none',
+                once: true
+            }
+        })
+
+        tl.fromTo(animateRef.current, {
+            opacity: 0,
+            y: 10,
+            scale: 0.9
+        }, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+        })
+    }, []);
+
     return (
         <div className="relative max-w-7xl px-5 mx-auto lg:py-24">
             {/* Glowing background wrapper */}
             <div className="absolute max-w-[80%] mx-auto inset-0 bg-gradient-to-r from-gradientColorOne via-gradientColorTwo to-gradientColorThree opacity-40 blur-3xl z-[-1] rounded-3xl"></div>
 
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-
+            <div ref={animateRef}
                 className="lg:max-w-[80%] mx-auto bg-card flex flex-col xl:flex-row items-center gap-5 p-5 lg:p-10 rounded-3xl relative z-10 border border-borderColor">
                 <div className="p-3 xl:max-w-[50%] mx-auto text-center">
                     <h2 className="text-3xl font-bold">Launch Your Campaign In As Little As 2 Weeks.</h2>
@@ -27,7 +53,7 @@ const Campaign = () => {
                         </Link>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </div>
     );
 };

@@ -47,8 +47,8 @@ const BlogSection = () => {
         // Add scroll-based animation
         const st = ScrollTrigger.create({
             trigger: animateRef.current,
-            start: "top bottom",
-            end: "top top",
+            start: "top center",
+            end: "bottom center",
             scrub: 1,
             onEnter: () => gsap.to(animateRef.current, { opacity: 1, rotateX: 0 }),
             onLeave: () => gsap.to(animateRef.current, { opacity: 0, rotateX: 90 }),
