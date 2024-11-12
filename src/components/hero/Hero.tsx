@@ -20,8 +20,16 @@ const Hero = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         
-        // Wait for intro to complete
-        setTimeout(() => {
+        // Check if this is first visit to home page in this session
+        const isFirstVisit = window.location.pathname === '/' && !sessionStorage.getItem('hasVisitedHome');
+        const delay = isFirstVisit ? 3000 : 0;
+        
+        // Mark that we've visited home
+        if (window.location.pathname === '/') {
+            sessionStorage.setItem('hasVisitedHome', 'true');
+        }
+        
+        const timer = setTimeout(() => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: animateRef.current,
@@ -80,8 +88,9 @@ const Hero = () => {
                 scale: 1,
                 duration: 0.5
             });
-        }, 3000); 
+        }, delay);
 
+        return () => clearTimeout(timer);
     }, []);
 
     return (
