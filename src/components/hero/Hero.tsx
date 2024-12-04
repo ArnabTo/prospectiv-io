@@ -19,16 +19,16 @@ const Hero = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        
+
         // Check if this is first visit to home page in this session
         const isFirstVisit = window.location.pathname === '/' && !sessionStorage.getItem('hasVisitedHome');
         const delay = isFirstVisit ? 3000 : 0;
-        
+
         // Mark that we've visited home
         if (window.location.pathname === '/') {
             sessionStorage.setItem('hasVisitedHome', 'true');
         }
-        
+
         const timer = setTimeout(() => {
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -48,66 +48,73 @@ const Hero = () => {
                 scale: 1,
                 duration: 0.7
             })
-            .fromTo(sublineRef.current, {
-                opacity: 0,
-                y: 10
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.6
-            }, "+=0.1") // Wait 0.2s after previous animation
-            .fromTo(buttonRefOne.current, {
-                opacity: 0,
-                y: 10
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.5
-            }, "+=0.1")
-            .fromTo(buttonRefTwo.current, {
-                opacity: 0,
-                y: 10
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.5
-            }, "+=0.1")
-            .fromTo(imageRef.current, {
-                opacity: 0,
-                y: 10
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.5
-            }, "+=0.1")
-            .fromTo(gradientBgRef.current, {
-                opacity: 0,
-                scale: 0.9
-            }, {
-                opacity: 1,
-                scale: 1,
-                duration: 0.5
-            });
+                .fromTo(sublineRef.current, {
+                    opacity: 0,
+                    y: 10
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6
+                }, "+=0.1") // Wait 0.2s after previous animation
+                .fromTo(buttonRefOne.current, {
+                    opacity: 0,
+                    y: 10
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5
+                }, "+=0.1")
+                .fromTo(buttonRefTwo.current, {
+                    opacity: 0,
+                    y: 10
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5
+                }, "+=0.1")
+                .fromTo(imageRef.current, {
+                    opacity: 0,
+                    y: 10
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5
+                }, "+=0.1")
+                .fromTo(gradientBgRef.current, {
+                    opacity: 0,
+                    scale: 0.9
+                }, {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.5
+                });
         }, delay);
 
         return () => clearTimeout(timer);
     }, []);
 
     return (
-        
+
         <section className="overflow-hidden pt-24 relative z-10">
             <div className="max-w-7xl mx-auto relative space-y-24 pb-24">
                 <div className="w-full lg:w-3/4 text-center mx-auto space-y-10 px-4 md:px-10 lg:p-0 xl:p-10">
                     <div className="space-y-5">
                         <h1
                             ref={animateRef}
-                            className="text-4xl md:text-6xl lg:text-7xl font-extrabold">Drive More Sales
-                            <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> Meetings with Your Ideal Customers.
+                            className="text-4xl md:text-6xl lg:text-7xl font-extrabold">
+                            {/* Drive More Sales */}
+                            Omni-Channel
+                            <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> B2B Lead Generation.
+                                {/* Meetings with Your Ideal Customers. */}
                             </span>
                         </h1>
                         <p
                             ref={sublineRef}
-                            className="text-xl lg:text-2xl font-medium text-textColorTwo">Helping small and medium service businesses book more sales meetings, so you can focus on growth.
+                            className="text-xl lg:text-2xl font-medium text-textColorTwo">
+                            {/* Helping small and medium service businesses book more sales meetings, so you can focus on growth. */}
+                            Our lead generation experts include Google Ads Certified Partners, LinkedIn Ads
+                            Certification holders, and cold email specialists. Our omnichannel approach
+                            provides a one-stop shop lead generation solution for any business.
                         </p>
                     </div>
                     <div className="w-full md:w-3/4 lg:w-4/6 mx-auto flex flex-col md:flex-row justify-center items-center gap-3 space-y-3 md:space-y-0">
