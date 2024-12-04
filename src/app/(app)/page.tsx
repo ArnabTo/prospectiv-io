@@ -6,8 +6,6 @@ import WhyProsPective from "@/components/whyprospective/WhyProsPective";
 import HowItWork from "@/components/how-it-works/HowItWork";
 import SuccessCounts from "@/components/counts/SuccessCounts";
 import Campaign from "@/components/campaign/Campaign";
-import Partners from "@/components/partners/Partners";
-import Intro from "@/components/intro-animation/Intro";
 import BlogSection from "@/components/Blogs/BlogSection";
 export default function Home() {
 
@@ -15,7 +13,6 @@ export default function Home() {
 
     <div className="space-y-24">
       <Hero />
-      {/* <Intro/> */}
       <WhyProsPective />
       <SuccessCounts />
       <WhatWeDo />

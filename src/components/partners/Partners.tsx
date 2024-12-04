@@ -16,11 +16,11 @@ const Partners = () => {
             name: 'Company Name',
         },
         {
-            logo: PartnerTwo,
+            logo: 'https://i.ibb.co/Qcj7GDJ/66f7d720752b1858a6004c5b-Untitled-design-p-500.png',
             name: 'Company Name',
         },
         {
-            logo: 'https://i.ibb.co/Qcj7GDJ/66f7d720752b1858a6004c5b-Untitled-design-p-500.png',
+            logo: PartnerTwo,
             name: 'Company Name',
         },
     ]
