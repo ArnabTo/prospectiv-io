@@ -6,23 +6,23 @@ const HeroSectionTextContent = {
     paragraph: 'Helping small-to-medium-sized service-based businesses book more sales meetings effortlessly, so you can focus on growing your business.'
 }
 
-// WhyProspective section
-const whyProspectiveTextContent = {
+// WhyProspective section 2
+const SectionTwoTextContent = {
     'heading': {
-        heading: 'Why Choose Prospectiv ?',
-        paragraph: 'Delivering Qualified Sales Meetings for SME Service-Based Businesses with Proven ROI in Just 30 Days'
+        heading: 'Flexible Lead Generation',
+        paragraph: 'Pay only for what you need with dynamic pricing and expert multi-channel strategies.'
     },
     'cardTextContent1': {
-        heading: 'Driving Sales Success for SMEs',
-        paragraph: 'We specialise in setting qualified sales meetings for SME service-based businesses.'
+        heading: 'Omni-Channel Lead Generation.',
+        paragraph: 'Our B2B marketers include Google Ads Certified Partners, LinkedIn Ads Certification holders, and cold email specialists. Your campaigns are managed by experts with deep experience across every platform.'
     },
     'cardTextContent2': {
-        heading: 'Maximizing ROI for SME Service Providers',
-        paragraph: 'Our typical clients make a return on their investment in circa 30 days.'
+        heading: 'Pay per Lead',
+        paragraph: 'Buy as few or as many leads as you’d like, no fixed-term contracts. Test us out with a small batch of leads initially before getting more.'
     },
     'cardTextContent3': {
-        heading: 'Empowering SMEs with £1M in Pipeline Success',
-        paragraph: 'We’ve attributed over £1,000,000 ($1.3M) in pipeline for our clients in 2024.can you create a title for these options.'
+        heading: 'Dynamic Pricing',
+        paragraph: 'We use demand-based pricing to adjust the cost of a lead to reflect its true value. For example, if ad CPMs reduce, so will your cost of a lead.'
     },
 }
 
@@ -2249,7 +2249,7 @@ const doNotSellMyDataPageContent = {
 }
 export {
     HeroSectionTextContent,
-    whyProspectiveTextContent,
+    SectionTwoTextContent,
     WhatWeDoTextContent,
     HowItWorkTextContent,
     lifeAtProspectivTextContent,
