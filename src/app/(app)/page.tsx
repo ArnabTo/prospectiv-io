@@ -18,7 +18,6 @@ export default function Home() {
       <WhyProsPective />
       <Omni />
       <SuccessCounts />
-      <Omni/>
       <WhatWeDo />
       <HowItWork />
       <BlogSection />

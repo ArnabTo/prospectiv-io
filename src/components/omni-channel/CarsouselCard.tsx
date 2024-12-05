@@ -18,36 +18,36 @@ const CarouselCard = ({ i, title, description, src, url, color, progress, range,
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className="cardContainer relative">
+    <div ref={container} className="h-fit flex items-center justify-center sticky top-0 p-5">
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="card border border-borderColor"
+        className="flex relative -top-6 md:min-w-[500px] h-fit rounded-3xl origin-top border border-borderColor"
       >
-        <div className="flex h-full">
-          <div className="bg-buttonHoverColor w-1/2 relative p-12 rounded-l-3xl space-y-3">
-            <h2 className='text-5xl pt-8 pb-1 font-bold text-start text-secondary'>{title}.</h2>
+        <div className="flex flex-col lg:flex-row h-full">
+          <div className="bg-buttonHoverColor w-full lg:w-1/2 relative p-5 lg:p-12 rounded-t-3xl lg:rounded-l-3xl space-y-3">
+            <h2 className='text-3xl lg:text-5xl pt-8 pb-1 font-bold text-start text-secondary'>{title}.</h2>
             <p className=' text-textColorTwo text-lg'>{description}</p>
 
             <div
               className="w-60 flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
-              <Link href="/demo" className="flex-1 font-bold text-lg bg-black px-10 xl:px-16 py-3 rounded-full hover:scale-95 transition-all duration-300">
+              <Link href="/demo" className="flex-1 font-bold text-lg bg-black text-center px-10 xl:px-16 py-3 rounded-full hover:scale-95 transition-all duration-300">
                 Learn more.
               </Link>
             </div>
           </div>
 
-          <div className="imageContainer bg-card p-12">
+          <div className="bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586]  p-12 w-full lg:w-3/5 min-h-full overflow-hidden rounded-b-3xl lg:rounded-b-none rounded-r-3xl">
             {/* <motion.div className="inner" style={{ scale: imageScale }}>
             <Image  width={500} height={500} src='https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="image" />
           </motion.div> */}
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
-              <Image
+              <Image 
                 className='rounded-3xl h-full'
-                width={1000}
-                height={1000}
+                width={800}
+                height={800}
                 alt=''
                 src='https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
             </motion.div>
