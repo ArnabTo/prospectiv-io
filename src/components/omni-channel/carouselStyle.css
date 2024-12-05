@@ -19,17 +19,6 @@
   transform-origin: top;
 }
 
-.card h2 {
-  text-align: center;
-  margin: 0;
-  font-size: 28px;
-}
-
-.card .body {
-  display: flex;
-  height: 100%;
-  gap: 50px;
-}
 
 .card .description {
   width: 50%;
