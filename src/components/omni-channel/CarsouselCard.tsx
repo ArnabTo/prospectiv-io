@@ -6,7 +6,7 @@ import './carouselStyle.css';
 import Link from 'next/link';
 
 
-const CarouselCard = ({ i, title, description, src, url, color, progress, range, targetScale }: any) => {
+const CarouselCard = ({ i, title, description, imgcontent, url, color, progress, range, targetScale }: any) => {
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -39,17 +39,17 @@ const CarouselCard = ({ i, title, description, src, url, color, progress, range,
             </div>
           </div>
 
-          <div className="bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586]  p-12 w-full lg:w-3/5 min-h-full overflow-hidden rounded-b-3xl lg:rounded-b-none rounded-r-3xl">
+          <div className="bg-gray-300  p-12 w-full lg:w-3/5 min-h-full max-h-[500px] overflow-hidden rounded-b-3xl lg:rounded-b-none rounded-r-3xl">
             {/* <motion.div className="inner" style={{ scale: imageScale }}>
             <Image  width={500} height={500} src='https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="image" />
           </motion.div> */}
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
               <Image 
-                className='rounded-3xl h-full'
+                className='rounded-3xl h-full object-cover'
                 width={800}
                 height={800}
                 alt=''
-                src='https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
+                src={imgcontent} />
             </motion.div>
           </div>
         </div>

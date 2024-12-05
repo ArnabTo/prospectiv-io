@@ -3,7 +3,9 @@ import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { color, motion, useScroll } from 'framer-motion';
 import CarouselCard from './CarsouselCard';
-
+import EmailMarket from '@/public/assets/emailmarket.jpg'
+import LinkedInAds from '@/public/assets/linkedinads.png'
+import GoogleAds from '@/public/assets/googleads.jpg'
 
 const CarouselComp = () => {
 
@@ -14,7 +16,7 @@ const CarouselComp = () => {
             description: `Cold email is a cost-effective method that allows for highly personalised and direct
 outreach to decision-makers, thriving in niche markets like HR tech, cybersecurity, and
 boutique consulting, where scalability and customisation are key advantages.`,
-            src: "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            imgcontent: EmailMarket,
             link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
             color: "#BBACAF"
         },
@@ -23,16 +25,16 @@ boutique consulting, where scalability and customisation are key advantages.`,
             description: `LinkedIn Ads excels in precisely targeting specific professional roles and reaching a
 professional audience, making it perfect for industries like B2B SaaS, professional services,
 and consulting, where tailored ad formats and content promotion drive engagement.`,
-            src: "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            imgcontent: LinkedInAds,
             link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
             color: "#977F6D"
         },
         {
-            title: "Google Ads.",
+            title: "Google Ads",
             description: `Google Ads targets high-intent users actively searching for solutions, making it highly
 effective for industries like software, IT services, and industrial equipment, with the ability
 to generate fast results and scale campaigns efficiently`,
-            src: "https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            imgcontent: GoogleAds,
             link: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
             color: "#C2491D"
         },
