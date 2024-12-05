@@ -22,7 +22,7 @@ const SuccessCounts = () => {
                 </motion.div>
 
                 <div className="relative w-full">
-                    <div className="flex flex-col md:flex-row justify-start items-start md:justify-center lg:gap-10">
+                    <div className="flex flex-col md:flex-row justify-start items-start md:justify-center lg:gap-8">
                         <div className="space-y-5 p-2 rounded-lg">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -31,71 +31,24 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
-                                <p className="text-md lg:text-lg text-textColorTwo">Campaign Run</p>
-                                <h3 className="text-4xl lg:text-6xl text-secondary font-bold">
-                                    <CountUp
-                                        start={startCounting ? 0 : undefined}// Start counting when the section is in view
-                                        end={1000}
-                                        duration={1}
-                                        useEasing={true}
-                                        useGrouping={true}
-                                        separator=","
-                                        prefix=""
-                                        suffix="+"
-                                        decimals={0}
-                                    />
-                                </h3>
+                                <p className="text-md lg:text-xl text-foreground">Podshop</p>
+                                <span className='flex items-end gap-2'>
+                                    <h3 className="text-4xl lg:text-6xl text-secondary font-bold">
+                                        <CountUp
+                                            start={startCounting ? 0 : undefined}// Start counting when the section is in view
+                                            end={40}
+                                            duration={1}
+                                            useEasing={true}
+                                            useGrouping={true}
+                                            separator=","
+                                            prefix="£"
+                                            suffix="k"
+                                            decimals={0}
+                                        />
+                                    </h3>
+                                    <p className="text-md lg:text-xl text-textColorTwo">Deal from Cold Email</p>
+                                </span>
                             </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5 }}
-                                viewport={{ once: true }}
-                                className="lg:ml-10"
-                                onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
-                            >
-                                <p className="text-md lg:text-lg text-textColorTwo">Happy Clients</p>
-                                <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
-                                    <CountUp
-                                        start={startCounting ? 0 : undefined} // Start counting when in view
-                                        end={50}
-                                        duration={3}
-                                        useEasing={true}
-                                        useGrouping={true}
-                                        separator=","
-                                        suffix="+"
-                                        decimals={0}
-                                    />
-                                </h3>
-                            </motion.div>
-                        </div>
-
-                        <div className="space-y-5 p-2 rounded-lg">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 0.4 }}
-                                viewport={{ once: true }}
-                                onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
-                            >
-                                <p className="text-md lg:text-lg text-textColorTwo">Attributed in 2024</p>
-                                <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
-                                    <CountUp
-                                        start={startCounting ? 0 : undefined}// Start counting when in view
-                                        end={1.3}
-                                        duration={5}
-                                        useEasing={true}
-                                        useGrouping={true}
-                                        separator=","
-                                        decimal="."
-                                        decimals={1}
-                                        prefix="$"
-                                        suffix="M+"
-                                    />
-                                </h3>
-                            </motion.div>
-
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -103,20 +56,53 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 className="lg:ml-10"
                             >
-                                <p className="text-md lg:text-lg text-textColorTwo">Leads Delivered</p>
-                                <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
-                                <CountUp
-                                       start={startCounting ? 0 : undefined}// Start counting when the section is in view
-                                        end={13500}
-                                        duration={3}
-                                        useEasing={true}
-                                        useGrouping={true}
-                                        separator=","
-                                        prefix=""
-                                        suffix="+"
-                                        decimals={0}
-                                    />
-                                </h3>
+                                <p className="text-md lg:text-xl text-foreground">Madsocial</p>
+                                <span className='flex items-end gap-2'>
+                                    <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
+                                        <CountUp
+                                            start={startCounting ? 0 : undefined}// Start counting when the section is in view
+                                            end={30}
+                                            duration={3}
+                                            useEasing={true}
+                                            useGrouping={true}
+                                            separator=","
+                                            prefix=""
+                                            suffix=""
+                                            decimals={0}
+                                        />
+                                    </h3>
+                                    <p className="text-md lg:text-lg text-textColorTwo">Days Deal Closed Using Cold Email</p>
+                                </span>
+                            </motion.div>
+
+                        </div>
+
+                        <div className=" p-2 rounded-lg">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }}
+                                className="lg:ml-10"
+                                onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
+                            >
+                                <p className="text-lg lg:text-xl text-foreground">Out of Bounds</p>
+                                <span className='flex items-end gap-2'>
+                                    <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
+                                        <CountUp
+                                            start={startCounting ? 0 : undefined} // Start counting when in view
+                                            end={18.9}
+                                            duration={3}
+                                            decimal='.'
+                                            useEasing={true}
+                                            useGrouping={true}
+                                            separator=","
+                                            suffix="k"
+                                            decimals={1}
+                                        />
+                                    </h3>
+                                    <p className="text-md lg:text-xl text-textColorTwo">Deal Closed In 6 Weeks</p>
+                                </span>
                             </motion.div>
                         </div>
                     </div>
