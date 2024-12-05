@@ -26,6 +26,30 @@ const SectionTwoTextContent = {
     },
 }
 
+const OmniSection = {
+    'heading': {
+        heading: 'Omni-Channel Lead Generation',
+        paragraph: `Working with an agency like Prospectiv allows you to run lead generation campaigns across one or many platforms, depending on your particular use case. Each platform has its advantages while using a combination can mean your cost per lead reduces by creating a feeling of “omnipresence” with your prospects`
+    },
+    'cardTextContent1': {
+        heading: 'Cold Email',
+        paragraph: `Cold email is a cost-effective method that allows for highly personalised and direct
+outreach to decision-makers, thriving in niche markets like HR tech, cybersecurity, and
+boutique consulting, where scalability and customisation are key advantages.`,
+    },
+    'cardTextContent2': {
+        heading: 'LinkedIn Ads',
+        paragraph: `LinkedIn Ads excels in precisely targeting specific professional roles and reaching a
+professional audience, making it perfect for industries like B2B SaaS, professional services,
+and consulting, where tailored ad formats and content promotion drive engagement.`,
+    },
+    'cardTextContent3': {
+        heading: 'Google Ads',
+        paragraph: `Google Ads targets high-intent users actively searching for solutions, making it highly
+effective for industries like software, IT services, and industrial equipment, with the ability
+to generate fast results and scale campaigns efficiently.`,
+    },
+}
 // what we do section
 const WhatWeDoTextContent = {
     'heading': {
@@ -2250,6 +2274,7 @@ const doNotSellMyDataPageContent = {
 export {
     HeroSectionTextContent,
     SectionTwoTextContent,
+    OmniSection,
     WhatWeDoTextContent,
     HowItWorkTextContent,
     lifeAtProspectivTextContent,

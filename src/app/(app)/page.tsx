@@ -7,6 +7,8 @@ import HowItWork from "@/components/how-it-works/HowItWork";
 import SuccessCounts from "@/components/counts/SuccessCounts";
 import Campaign from "@/components/campaign/Campaign";
 import BlogSection from "@/components/Blogs/BlogSection";
+import Omni from "@/components/omni-channel/Omni";
+import CarouselComp from "@/components/omni-channel/CarouselComp";
 export default function Home() {
 
   return (
@@ -14,7 +16,9 @@ export default function Home() {
     <div className="space-y-24">
       <Hero />
       <WhyProsPective />
+      <Omni />
       <SuccessCounts />
+      <Omni/>
       <WhatWeDo />
       <HowItWork />
       <BlogSection />
