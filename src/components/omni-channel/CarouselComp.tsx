@@ -59,7 +59,7 @@ to generate fast results and scale campaigns efficiently`,
     })
 
     return (
-        <div ref={container} className='relative mt-20'>
+        <div ref={container} className='relative mt-20 pb-44'>
             <div>
                 {
                     projects.map((project, i) => {
@@ -68,12 +68,6 @@ to generate fast results and scale campaigns efficiently`,
                     })
                 }
             </div>
-            {/* <div
-                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
-                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-            </div> */}
         </div>
 
     );
