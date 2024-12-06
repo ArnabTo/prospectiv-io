@@ -1,9 +1,89 @@
 import { ArrowDown } from 'lucide-react';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { FromTo } from 'sanity';
 
 const Walkthrough = () => {
+
+    const cardLeftRef = useRef(null);
+    const CardRightRef = useRef(null);
+    const gradientBgRef = useRef(null);
+
+    // useEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: gradientBgRef.current,
+    //             start: 'top 50%',
+    //             toggleActions: 'play none none none',
+    //         }
+    //     });
+
+    //     tl.fromTo(gradientBgRef.current, {
+    //         opacity: 0,
+    //         scale: 0.9
+    //     }, {
+    //         opacity: 1,
+    //         scale: 1,
+    //         duration: 0.5
+    //     })
+    //     .fromTo(cardLeftRef.current, {
+    //         opacity: 0,
+    //         x: -100,
+    //         scale: 0.9
+    //     }, {
+    //         opacity: 1,
+    //         x: 0,
+    //         scale: 1,
+    //         duration: 0.5
+    //     })
+    // }, []);
+
+
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: CardRightRef.current,
+                start: 'top 90%',
+                toggleActions: 'play none none none',
+                markers: true
+            }
+        });
+
+        tl.fromTo(CardRightRef.current, {
+            opacity: 0,
+            x: 100
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 0.6
+        }, "+=0.1") 
+        .fromTo(cardLeftRef.current, {
+            opacity: 0,
+            x: -100,
+            scale: 0.9
+        }, {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 0.7
+        }, "+=0.1")
+            .fromTo(gradientBgRef.current, {
+                opacity: 0,
+                scale: 0.9
+            }, {
+                opacity: 1,
+                scale: 1,
+                duration: 0.5
+            });
+    }, []);
     return (
-        <div className='overflow-hidden'>
+        <div className=''>
             <div className='max-w-7xl mx-auto p-5 space-y-36 lg:pt-32 lg:pb-32'>
 
                 {/* paid advertising walkthrough */}
@@ -16,7 +96,8 @@ const Walkthrough = () => {
                                 <ArrowDown />
                             </div>
                             {/* Card */}
-                            <div className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                            <div ref={CardRightRef}
+                            className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Setup & Integration</h3>
                                 </div>
@@ -37,13 +118,15 @@ const Walkthrough = () => {
                             </div>
                         </div>
 
-                        <div className='relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse gap-2 lg:gap-0 group'>
+                        <div
+                            className='relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse gap-2 lg:gap-0 group'>
                             {/* Icon */}
                             <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <ArrowDown />
                             </div>
                             {/* Card */}
-                            <div className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4  lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                            <div ref={cardLeftRef}
+                             className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4  lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Strategy & Planning</h3>
                                 </div>
@@ -73,7 +156,8 @@ const Walkthrough = () => {
                                 <ArrowDown />
                             </div>
                             {/* Card */}
-                            <div className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8  border border-borderColor shadow rounded-3xl space-y-5">
+                            <div ref={CardRightRef}
+                             className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8  border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Reporting</h3>
                                 </div>
@@ -94,7 +178,7 @@ const Walkthrough = () => {
                             </div>
                         </div>
                     </div>
-                    <div
+                    <div ref={gradientBgRef}
                         className="blur-[100px] w-full max-w-[35%] min-h-[90%] absolute left-[30%] top-0 -z-10 animate-spin-slow transition-all">
                         <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                         <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
@@ -112,7 +196,8 @@ const Walkthrough = () => {
                                 <ArrowDown />
                             </div>
                             {/* Card */}
-                            <div className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                            <div ref={CardRightRef}
+                            className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Campaign Setup</h3>
                                 </div>
@@ -137,7 +222,8 @@ const Walkthrough = () => {
                                 <ArrowDown />
                             </div>
                             {/* Card */}
-                            <div className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                            <div ref={cardLeftRef}
+                             className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Client Approval</h3>
                                 </div>
@@ -168,7 +254,7 @@ const Walkthrough = () => {
                                 <ArrowDown />
                             </div>
                             {/* Card */}
-                            <div className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl">
+                            <div ref={CardRightRef} className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl">
                                 <div className="flex items-center justify-between space-x-2">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Campaign Launch</h3>
                                 </div>
@@ -177,7 +263,7 @@ const Walkthrough = () => {
 
                     </div>
 
-                    <div
+                    <div ref={gradientBgRef}
                         className="blur-[100px] w-full max-w-[35%] min-h-[90%] absolute left-[30%] top-0 -z-10 animate-spin-slow transition-all">
                         <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                         <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
