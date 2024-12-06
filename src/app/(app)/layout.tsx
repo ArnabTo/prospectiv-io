@@ -3,7 +3,7 @@ import Footer from "@/components/footer/Footer";
 import Intro from "@/components/intro-animation/Intro";
 import Navbar from "@/components/navbar/Navbar";
 import { Toaster } from "sonner";
-
+import '../globals.css'
 
 
 export default function RootLayout({
@@ -14,6 +14,7 @@ export default function RootLayout({
   return (
     <div>
       <div className="relative z-20 mb-[120vh] md:mb-[75vh] lg:mb-[70vh] h-max bg-background rounded-b-3xl">
+        <div className="w-full h-full absolute top-0 left-0 z-0 fbg"></div>
         {/* <Intro /> */}
         <Navbar />
         <div className=" z-40">
