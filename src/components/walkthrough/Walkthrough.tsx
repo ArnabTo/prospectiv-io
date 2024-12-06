@@ -9,37 +9,11 @@ const Walkthrough = () => {
     const cardLeftRef = useRef(null);
     const CardRightRef = useRef(null);
     const gradientBgRef = useRef(null);
-
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
-
-    //     const tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: gradientBgRef.current,
-    //             start: 'top 50%',
-    //             toggleActions: 'play none none none',
-    //         }
-    //     });
-
-    //     tl.fromTo(gradientBgRef.current, {
-    //         opacity: 0,
-    //         scale: 0.9
-    //     }, {
-    //         opacity: 1,
-    //         scale: 1,
-    //         duration: 0.5
-    //     })
-    //     .fromTo(cardLeftRef.current, {
-    //         opacity: 0,
-    //         x: -100,
-    //         scale: 0.9
-    //     }, {
-    //         opacity: 1,
-    //         x: 0,
-    //         scale: 1,
-    //         duration: 0.5
-    //     })
-    // }, []);
+    const CardOneRef = useRef(null);
+    const CardTwoRef = useRef(null);
+    const CardThreeRef = useRef(null);
+    const CardFourRef = useRef(null);
+    const CardFiveRef = useRef(null);
 
 
 
@@ -48,31 +22,41 @@ const Walkthrough = () => {
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: CardRightRef.current,
+                trigger: CardOneRef.current,
                 start: 'top 90%',
                 toggleActions: 'play none none none',
-                markers: true
+                // markers: true
             }
         });
 
-        tl.fromTo(CardRightRef.current, {
+        tl.fromTo(CardOneRef.current, {
             opacity: 0,
             x: 100
         }, {
             opacity: 1,
             x: 0,
             duration: 0.6
-        }, "+=0.1") 
-        .fromTo(cardLeftRef.current, {
-            opacity: 0,
-            x: -100,
-            scale: 0.9
-        }, {
-            opacity: 1,
-            x: 0,
-            scale: 1,
-            duration: 0.7
         }, "+=0.1")
+            .fromTo(CardTwoRef.current, {
+                opacity: 0,
+                x: -100,
+                scale: 0.9
+            }, {
+                opacity: 1,
+                x: 0,
+                scale: 1,
+                duration: 0.7
+            }, "+=0.1")
+            .fromTo(CardThreeRef.current, {
+                opacity: 0,
+                x: 100,
+                scale: 0.9
+            }, {
+                opacity: 1,
+                x: 0,
+                scale: 1,
+                duration: 0.7
+            }, "+=0.1")
             .fromTo(gradientBgRef.current, {
                 opacity: 0,
                 scale: 0.9
@@ -97,7 +81,7 @@ const Walkthrough = () => {
                             </div>
                             {/* Card */}
                             <div ref={CardRightRef}
-                            className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                                className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Setup & Integration</h3>
                                 </div>
@@ -126,7 +110,7 @@ const Walkthrough = () => {
                             </div>
                             {/* Card */}
                             <div ref={cardLeftRef}
-                             className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4  lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                                className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4  lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Strategy & Planning</h3>
                                 </div>
@@ -157,7 +141,7 @@ const Walkthrough = () => {
                             </div>
                             {/* Card */}
                             <div ref={CardRightRef}
-                             className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8  border border-borderColor shadow rounded-3xl space-y-5">
+                                className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8  border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Reporting</h3>
                                 </div>
@@ -197,7 +181,7 @@ const Walkthrough = () => {
                             </div>
                             {/* Card */}
                             <div ref={CardRightRef}
-                            className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                                className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Campaign Setup</h3>
                                 </div>
@@ -223,7 +207,7 @@ const Walkthrough = () => {
                             </div>
                             {/* Card */}
                             <div ref={cardLeftRef}
-                             className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
+                                className="w-full md:w-[calc(50%-2.5rem)] bg-card p-4 lg:p-8 border border-borderColor shadow rounded-3xl space-y-5">
                                 <div className="flex items-center justify-between space-x-2 mb-1">
                                     <h3 className="text-xl lg:text-3xl font-bold text-secondary">Client Approval</h3>
                                 </div>
