@@ -27,7 +27,7 @@ const CarouselCard = ({ i, title, description, imgcontent, url, color, progress,
         className="flex relative -top-6 md:min-w-[500px] h-fit rounded-3xl origin-top border border-borderColor"
       >
         <div className="flex flex-col lg:flex-row h-full">
-          <div className="bg-buttonHoverColor w-full lg:w-1/2 relative p-5 lg:p-12 rounded-t-3xl lg:rounded-l-3xl space-y-3">
+          <div className="bg-buttonHoverColor w-full lg:w-1/2 relative p-5 lg:p-12 rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none space-y-3">
             <h2 className='text-3xl lg:text-5xl pt-8 pb-1 font-bold text-start text-secondary'>{title}.</h2>
             <p className=' text-textColorTwo text-lg'>{description}</p>
 
@@ -39,13 +39,13 @@ const CarouselCard = ({ i, title, description, imgcontent, url, color, progress,
             </div>
           </div>
 
-          <div className="bg-gray-300  p-12 w-full lg:w-3/5 min-h-full max-h-[500px] overflow-hidden rounded-b-3xl lg:rounded-b-none rounded-r-3xl">
+          <div className="bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586]  p-10 w-full lg:w-3/5 min-h-full max-h-[500px] overflow-hidden rounded-b-3xl lg:rounded-l-none rounded-r-3xl">
             {/* <motion.div className="inner" style={{ scale: imageScale }}>
             <Image  width={500} height={500} src='https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="image" />
           </motion.div> */}
-            <motion.div className="w-full h-full" style={{ scale: imageScale }}>
+            <motion.div className="w-full h-full shadow-lg rounded-3xl" style={{ scale: imageScale }} >
               <Image 
-                className='rounded-3xl h-full object-cover'
+                className='rounded-3xl h-full object-cover border border-borderColor'
                 width={800}
                 height={800}
                 alt=''

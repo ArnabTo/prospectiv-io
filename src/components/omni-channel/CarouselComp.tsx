@@ -5,7 +5,7 @@ import { color, motion, useScroll } from 'framer-motion';
 import CarouselCard from './CarsouselCard';
 import EmailMarket from '@/public/assets/emailmarket.jpg'
 import LinkedInAds from '@/public/assets/linkedinads.png'
-import GoogleAds from '@/public/assets/googleads.jpg'
+import GoogleAds from '@/public/assets/googleads.png'
 
 const CarouselComp = () => {
 
