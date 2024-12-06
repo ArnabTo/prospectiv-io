@@ -9,7 +9,7 @@ const SuccessCounts = () => {
     return (
         <div className="max-w-7xl mx-auto px-5 overflow-hidden">
             <div
-                className="flex flex-col lg:flex-row justify-between items-center gap-2 lg:gap-10 mx-auto bg-card border border-borderColor p-5 lg:p-10 rounded-3xl">
+                className="flex flex-col xl:flex-row justify-between items-center gap-2 lg:gap-10 mx-auto bg-card border border-borderColor p-5 lg:p-10 rounded-3xl">
                 <motion.div
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
@@ -22,8 +22,8 @@ const SuccessCounts = () => {
                 </motion.div>
 
                 <div className="relative w-full">
-                    <div className="flex flex-col md:flex-row justify-start items-start md:justify-center lg:gap-8">
-                        <div className="space-y-5 p-2 rounded-lg">
+                    <div className="flex flex-col xl:flex-row justify-start items-start md:justify-center lg:gap-8">
+                        <div className="space-y-5 p-2 rounded-lg grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -31,8 +31,8 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
                             >
-                                <p className="text-md lg:text-xl text-foreground">Podshop</p>
-                                <span className='flex items-end gap-2'>
+                                <p className="text-md lg:text-2xl text-foreground">Podshop</p>
+                                <span className='flex flex-col items-start gap-2'>
                                     <h3 className="text-4xl lg:text-6xl text-secondary font-bold">
                                         <CountUp
                                             start={startCounting ? 0 : undefined}// Start counting when the section is in view
@@ -56,8 +56,8 @@ const SuccessCounts = () => {
                                 viewport={{ once: true }}
                                 className="lg:ml-10"
                             >
-                                <p className="text-md lg:text-xl text-foreground">Madsocial</p>
-                                <span className='flex items-end gap-2'>
+                                <p className="text-md lg:text-2xl text-foreground">Madsocial</p>
+                                <span className='flex flex-col items-start gap-2'>
                                     <h3 className="text-4xl lg:text-6xl text-gradientColorFour font-bold">
                                         <CountUp
                                             start={startCounting ? 0 : undefined}// Start counting when the section is in view
@@ -75,8 +75,34 @@ const SuccessCounts = () => {
                                 </span>
                             </motion.div>
 
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.5 }}
+                                viewport={{ once: true }}
+                                className="lg:ml-10"
+                                onViewportEnter={() => setStartCounting(true)} // Trigger counting when in view
+                            >
+                                <p className="text-lg lg:text-xl text-foreground">Out of Bounds</p>
+                                <span className='flex flex-col items-start gap-2'>
+                                    <h3 className="text-4xl lg:text-6xl text-secondary font-bold flex gap-3">
+                                        <CountUp
+                                            start={startCounting ? 0 : undefined} // Start counting when in view
+                                            end={18.9}
+                                            duration={3}
+                                            decimal='.'
+                                            useEasing={true}
+                                            useGrouping={true}
+                                            separator=","
+                                            suffix="k"
+                                            decimals={1}
+                                        />
+                                    </h3>
+                                    <p className="text-md lg:text-xl text-textColorTwo">Deal Closed In 6 Weeks</p>
+                                </span>
+                            </motion.div>
                         </div>
-
+                        {/* 
                         <div className=" p-2 rounded-lg">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -104,7 +130,7 @@ const SuccessCounts = () => {
                                     <p className="text-md lg:text-xl text-textColorTwo">Deal Closed In 6 Weeks</p>
                                 </span>
                             </motion.div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <motion.div

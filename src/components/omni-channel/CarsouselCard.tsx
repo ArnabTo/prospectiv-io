@@ -18,13 +18,13 @@ const CarouselCard = ({ i, title, description, imgcontent, url, color, progress,
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className="h-fit flex items-center justify-center sticky top-0 p-5">
+    <div ref={container} className=" h-fit flex items-center justify-center sticky top-0 p-5">
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className="flex relative -top-6 md:min-w-[500px] h-fit rounded-3xl origin-top border border-borderColor"
+        className=" flex relative -top-6 md:min-w-[500px] h-fit rounded-3xl origin-top border border-borderColor"
       >
         <div className="flex flex-col lg:flex-row h-full">
           <div className="bg-buttonHoverColor w-full lg:w-1/2 relative p-5 lg:p-12 rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none space-y-3">

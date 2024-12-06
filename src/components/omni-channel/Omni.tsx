@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { OmniSection } from '@/lib/TextContent';
 import gsap from 'gsap';
 import CarouselComp from './CarouselComp';
+
+
 const Omni = () => {
 
     const animateRef = useRef(null);
@@ -71,7 +73,7 @@ const Omni = () => {
 
 
     return (
-        <div className='relative overflow-hidden'>
+        <div className='relative'>
             <div className='max-w-7xl mx-auto'>
                 <div className='flex flex-col lg:flex-row items-center gap-10 p-5 lg:p-10'>
                     <div className='lg:max-w-[40%] space-y-5 h-full'>
@@ -91,12 +93,12 @@ const Omni = () => {
                     <CarouselComp />
                 </div>
             </div>
-            <div
+            {/* <div
                 className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
                 <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                 <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                 <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-            </div>
+            </div> */}
         </div>
 
     );

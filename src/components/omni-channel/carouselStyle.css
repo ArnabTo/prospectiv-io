@@ -1,14 +1,14 @@
 /* styles.css */
-/* .cardContainer {
+.cardContainer {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
   top: 0;
-} */
+}
 
-/* .card {
+.card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -17,35 +17,35 @@
   width: 1000px;
   border-radius: 25px;
   transform-origin: top;
-} */
+}
 
 
-/* .card .description {
+.card .description {
   width: 50%;
   position: relative;
   padding: 50px;
-} */
+}
 
-/* .card .description p {
+.card .description p {
   font-size: 16px;
-} */
+}
 
-/* .card .description p::first-letter {
+.card .description p::first-letter {
   font-size: 28px;
   font-family: 'Title';
-} */
+}
 
-/* .card .description span {
+.card .description span {
   display: flex;
   align-items: center;
   gap: 5px;
-} */
+}
 
-/* .card .description span a {
+.card .description span a {
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
-} */
+}
 
 .card .imageContainer {
   position: relative;
