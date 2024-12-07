@@ -46,9 +46,9 @@ const GoogleAdsCampaignWalkThrough = () => {
             {
               executionData.map((item) => (
                 <div
-                 key={item.id}
-                 onClick={() => handleItemClick(item.id)}
-                 className={`bg-card border border-borderColor rounded-3xl p-5 mb-4 space-y-5 h-full`}>
+                  key={item.id}
+                  onClick={() => handleItemClick(item.id)}
+                  className={`bg-card border border-borderColor rounded-3xl p-5 mb-4 space-y-5 h-full`}>
                   <div className='w-10 h-10 mx-auto rounded-full text-2xl font-bold flex items-center justify-center bg-secondary p-5'>
                     {item.id}
                   </div>
@@ -95,11 +95,11 @@ const GoogleAdsCampaignWalkThrough = () => {
         </div> */}
       </div>
       <div
-          className="blur-[100px] w-full max-w-[35%] min-h-[90%] absolute left-[30%] top-0 -z-10 animate-spin-slow transition-all">
-          <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-          <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-          <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-        </div>
+        className="blur-[100px] w-full max-w-[35%] min-h-[60%] absolute left-[30%] top-28 -z-10 animate-spin-slow transition-all">
+        <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+        <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+        <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+      </div>
     </div>
   );
 };

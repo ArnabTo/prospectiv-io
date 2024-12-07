@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 import './cardHover.css';
 import { HowItWorkTextContent } from '@/lib/TextContent';

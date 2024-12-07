@@ -7,7 +7,7 @@ import Partners from "@/components/partners/Partners";
 const GoogleHero = () => {
 
     return (
-        <section className="relative space-y-16 py-28">
+        <section className="relative space-y-16 py-28 overflow-hidden lg:overflow-visible">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-center items-center p-5 lg:p-10">
                     <div className="space-y-5 lg:max-w-[60%] text-center lg:text-start">
