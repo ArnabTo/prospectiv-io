@@ -2,12 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import Partners from "@/components/partners/Partners";
 
 const LinkedInHero = () => {
 
     return (
-        <div className="relative">
-            <div className="max-w-7xl mx-auto py-28">
+        <section className="relative space-y-16 py-28">
+            <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-center items-center p-5 lg:p-10">
                     <div className="space-y-5 lg:max-w-[60%] text-center lg:text-start">
                         <motion.h1
@@ -15,7 +16,7 @@ const LinkedInHero = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            
+
                             className="text-4xl md:text-6xl font-extrabold">
                             B2B Google Ads Agency
                             <span className="text-transparent bg-clip-text bg-foreground lg:bg-gradient-to-l from-[#ED4A8D] to-[#5C55F6] bg-opacity-50"> for SaaS and Tech companies.
@@ -41,10 +42,10 @@ const LinkedInHero = () => {
                         </motion.div>
                     </div>
                     <motion.div
-                    initial={{ opacity: 0, x: 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 1 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 1 }}
                     >
                         <Image
                             src='https://getuplead.com/wp-content/uploads/1_Meet_the_team-2-2.webp'
@@ -56,16 +57,20 @@ const LinkedInHero = () => {
                 </div>
             </div>
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}                
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
                 className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
                 <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                 <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                 <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
             </motion.div>
-        </div>
+            <div className="space-y-10">
+                <p className="text-center text-textColorTwo text-xl">Trusted by 40+ leading B2B Tech companies</p>
+                <Partners />
+            </div>
+        </section>
     );
 };
 
