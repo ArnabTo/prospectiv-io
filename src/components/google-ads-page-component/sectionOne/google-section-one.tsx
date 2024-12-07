@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from 'framer-motion';
 import Partners from "@/components/partners/Partners";
 
-const LinkedInHero = () => {
+const GoogleHero = () => {
 
     return (
         <section className="relative space-y-16 py-28">
@@ -74,4 +74,4 @@ const LinkedInHero = () => {
     );
 };
 
-export default LinkedInHero;
+export default GoogleHero;
