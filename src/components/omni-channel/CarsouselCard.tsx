@@ -39,16 +39,13 @@ const CarouselCard = ({ i, title, description, imgcontent, url, color, progress,
             </div>
           </div>
 
-          <div className="bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586]  p-10 w-full lg:w-3/5 min-h-full max-h-[500px] overflow-hidden rounded-b-3xl lg:rounded-l-none rounded-r-3xl">
-            {/* <motion.div className="inner" style={{ scale: imageScale }}>
-            <Image  width={500} height={500} src='https://images.pexels.com/photos/18876270/pexels-photo-18876270/free-photo-of-red-cabin-on-a-cliff.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt="image" />
-          </motion.div> */}
-            <motion.div className="w-full h-full shadow-lg rounded-3xl" style={{ scale: imageScale }} >
+          <div className="bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586]  p-10 w-full lg:w-3/5 min-h-full mx-auto max-h-[500px] overflow-hidden rounded-b-3xl lg:rounded-l-none rounded-r-3xl">
+            <motion.div className="w-full h-full flex justify-center items-center rounded-3xl mx-auto" style={{ scale: imageScale }} >
               <Image 
-                className='rounded-3xl h-full object-cover border border-borderColor'
-                width={800}
-                height={800}
-                alt=''
+                className='rounded-3xl h-full object-cover border border-borderColor shadow-lg'
+                width={500}
+                height={500}
+                alt='service-image'
                 src={imgcontent} />
             </motion.div>
           </div>

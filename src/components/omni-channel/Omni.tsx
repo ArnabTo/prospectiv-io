@@ -85,20 +85,11 @@ const Omni = () => {
                     <div className='w-full h-full'>
                         <Image className='w-full h-full object-cover rounded-lg lg:rounded-3xl' src={ImageFour} alt='image' width={800} height={800} />
                     </div>
-                    {/* <div className='bg-card border border-borderColor w-full h-full flex items-center'>
-                        <Image className='w-full h-full object-cover' src={ImageFour} width={800} height={800} alt='image' />
-                    </div> */}
                 </div>
                 <div>
                     <CarouselComp />
                 </div>
             </div>
-            {/* <div
-                className="opacity-[0.5] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
-                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-            </div> */}
         </div>
 
     );
