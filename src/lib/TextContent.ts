@@ -7,6 +7,24 @@ const HeroSectionTextContent = {
 }
 
 // WhyProspective section 2
+const WhyProspectiveTextContent = {
+    'heading': {
+        heading: 'Why Choose Prospectiv?',
+        paragraph: 'Delivering Qualified Sales Meetings for SME Service-Based Businesses with Proven ROI in Just 30 Days.'
+    },
+    'cardTextContent1': {
+        heading: 'Driving Sales Success for SMEs',
+        paragraph: 'We specialise in setting qualified sales meetings for SME service-based businesses.'
+    },
+    'cardTextContent2': {
+        heading: 'Maximizing ROI for SME Service Providers',
+        paragraph: 'Maximizing ROI for SME Service Providers.'
+    },
+    'cardTextContent3': {
+        heading: 'Empowering SMEs with £1M in Pipeline Success',
+        paragraph: 'Empowering SMEs with £1M in Pipeline Success.'
+    },
+}
 const SectionTwoTextContent = {
     'heading': {
         heading: 'Flexible Lead Generation',
@@ -2274,6 +2292,7 @@ const doNotSellMyDataPageContent = {
 export {
     HeroSectionTextContent,
     SectionTwoTextContent,
+    WhyProspectiveTextContent,
     OmniSection,
     WhatWeDoTextContent,
     HowItWorkTextContent,

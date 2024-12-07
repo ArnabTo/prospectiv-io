@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 const SuccessCounts = () => {
     // State to track when the section is in view

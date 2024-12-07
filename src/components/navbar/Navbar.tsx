@@ -247,7 +247,7 @@ const Navbar = () => {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger
                                     className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none 
-                                    ${['/services/linkedin-ads', '/services/google-ads'].includes(pathname) ? 'text-secondary bg-transparent' : 'text-foreground'}`}>Services</NavigationMenuTrigger>
+                                    ${['/services/cold-email','/services/linkedin-ads', '/services/google-ads'].includes(pathname) ? 'text-secondary bg-transparent' : 'text-foreground'}`}>Services</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5">

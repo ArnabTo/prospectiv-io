@@ -8,9 +8,9 @@ import { SectionTwoTextContent } from '@/lib/TextContent';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
-import { WhyProspectiveTextContent } from '@/lib/TextContent';
 
-const WhyProsPective = () => {
+
+const FlexibleLead = () => {
 
     const animateRef = useRef(null);
     const cardOneRef = useRef(null);
@@ -79,9 +79,9 @@ const WhyProsPective = () => {
                 <div
                     ref={animateRef}
                     className='sticky top-5 md:max-w-lg lg:max-w-[300px] xl:max-w-md space-y-5 mx-auto'>
-                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>{WhyProspectiveTextContent?.heading?.heading}</h1>
+                    <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>{SectionTwoTextContent?.heading?.heading}</h1>
                     <p className='text-md lg:text-lg text-textColorTwo text-center lg:text-start'>
-                        {WhyProspectiveTextContent?.heading?.paragraph}
+                        {SectionTwoTextContent?.heading?.paragraph}
                     </p>
                     <div className="w-60 lg:w-full md:max-w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group">
                         <Link href="/result/success-story" className="flex-1 font-bold text-xl text-center bg-black px-5 py-4 rounded-full group-hover:scale-95 transition-all duration-300">
@@ -99,8 +99,8 @@ const WhyProsPective = () => {
                                     <Image src={ImageOne} width={200} height={200} alt="image" className='max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                                 </div>
                                 <div className='space-y-4 w-full'>
-                                    <h1 className='text-3xl font-extrabold'>{WhyProspectiveTextContent?.cardTextContent1?.heading}</h1>
-                                    <p className='text-md lg:text-lg text-textColorTwo'>{WhyProspectiveTextContent?.cardTextContent1?.paragraph}</p>
+                                    <h1 className='text-3xl font-extrabold'>{SectionTwoTextContent?.cardTextContent1?.heading}</h1>
+                                    <p className='text-md lg:text-lg text-textColorTwo'>{SectionTwoTextContent?.cardTextContent1?.paragraph}</p>
                                 </div>
                             </div>
 
@@ -110,8 +110,8 @@ const WhyProsPective = () => {
                                     <Image src={ImageTwo} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                                 </div>
                                 <div className='space-y-4 w-full'>
-                                    <h1 className='text-3xl font-extrabold'>{WhyProspectiveTextContent?.cardTextContent2?.heading}</h1>
-                                    <p className='text-md lg:text-lg text-textColorTwo'>{WhyProspectiveTextContent?.cardTextContent2?.paragraph}</p>
+                                    <h1 className='text-3xl font-extrabold'>{SectionTwoTextContent?.cardTextContent2?.heading}</h1>
+                                    <p className='text-md lg:text-lg text-textColorTwo'>{SectionTwoTextContent?.cardTextContent2?.paragraph}</p>
                                 </div>
                             </div>
 
@@ -121,8 +121,8 @@ const WhyProsPective = () => {
                                     <Image src={ImageThree} width={200} height={200} alt="image" className=' max-w-20 rounded-t-2xl lg:rounded-r-2xl' />
                                 </div>
                                 <div className='space-y-4 w-full'>
-                                    <h1 className='text-3xl font-extrabold'>{WhyProspectiveTextContent?.cardTextContent3?.heading}</h1>
-                                    <p className='text-md lg:text-lg text-textColorTwo'> {WhyProspectiveTextContent?.cardTextContent3?.paragraph}</p>
+                                    <h1 className='text-3xl font-extrabold'>{SectionTwoTextContent?.cardTextContent3?.heading}</h1>
+                                    <p className='text-md lg:text-lg text-textColorTwo'> {SectionTwoTextContent?.cardTextContent3?.paragraph}</p>
                                 </div>
                             </div>
                         </div>
@@ -140,4 +140,4 @@ const WhyProsPective = () => {
     );
 };
 
-export default WhyProsPective;
+export default FlexibleLead;
