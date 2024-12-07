@@ -120,7 +120,7 @@ const Walkthrough = () => {
             });
     }, []);
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className='max-w-7xl mx-auto p-5 space-y-36 lg:pt-32 lg:pb-32'>
 
                 {/* paid advertising walkthrough */}
@@ -216,7 +216,7 @@ const Walkthrough = () => {
                             </div>
                         </div>
                         <div ref={gradientBgRef}
-                            className="blur-[100px] w-full max-w-[35%] min-h-[90%] absolute left-[30%] top-0 -z-10 animate-spin-slow transition-all">
+                            className="blur-[100px] w-full max-w-[35%] min-h-[90%] absolute left-[30%] top-0 -z-10 transition-all">
                             <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
                             <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
                             <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>

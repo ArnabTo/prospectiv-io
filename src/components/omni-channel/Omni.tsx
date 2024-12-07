@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
-import ImageFour from '@/public/assets/sectwocontentfour.png'
+import ImageFour from '@/public/assets/chart.png'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { OmniSection } from '@/lib/TextContent';
@@ -82,8 +82,8 @@ const Omni = () => {
                             {OmniSection.heading.paragraph}
                         </p>
                     </div>
-                    <div className='w-full h-full'>
-                        <Image className='w-full h-full object-cover rounded-lg lg:rounded-3xl' src={ImageFour} alt='image' width={800} height={800} />
+                    <div className='w-full h-full bg-card p-10 border border-borderColor rounded-xl lg:rounded-3xl'>
+                        <Image className='w-full h-full object-cover rounded-lg lg:rounded-3xl' src={ImageFour} alt='sdfsdf' width={800} height={800} />
                     </div>
                 </div>
                 <div>
