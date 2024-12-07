@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import GoogleAds from '@/public/assets/googleads.png'
+import LinkedinAds from '@/public/assets/linkedinads.png'
 const ExploreOtherServices = () => {
     return (
         <div className='max-w-7xl mx-auto space-y-8 p-5 '>
@@ -11,10 +12,10 @@ const ExploreOtherServices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:max-w-[80%] justify-center items-center mx-auto'>
+            className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:max-w-[60%] justify-center items-center mx-auto'>
             <Link href='/services/google-ads' className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                 <div className='flex flex-col gap-5'>
-                    <div className='h-52'>
+                    <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl'>
                         <Image
                             src={GoogleAds}
                             alt="image"
@@ -32,9 +33,9 @@ const ExploreOtherServices = () => {
             </Link>
             <Link href='/services/google-ads' className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                 <div className='flex flex-col gap-5'>
-                    <div className='h-52'>
+                <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl'>
                         <Image
-                            src={GoogleAds}
+                            src={LinkedinAds}
                             alt="image"
                             width={500}
                             height={500}
