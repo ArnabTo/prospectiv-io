@@ -8,7 +8,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, Linkedin, MessageCircleWarning, Trophy } from "lucide-react";
+import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, Linkedin, Mail, MessageCircleWarning, Trophy } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGoogleads } from "react-icons/si";
 import Link from "next/link";
@@ -36,12 +36,14 @@ const Navbar = () => {
         exit: { opacity: 0, y: -10, scale: 0.95 },
     };
 
+    const serviceRef = useRef<HTMLLIElement | null>(null);
     const companyRef = useRef<HTMLLIElement | null>(null);
     const resourcesRef = useRef<HTMLLIElement | null>(null);
     const resultsRef = useRef<HTMLLIElement | null>(null);
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
+                serviceRef.current && !serviceRef.current.contains(event.target as Node) &&
                 companyRef.current && !companyRef.current.contains(event.target as Node) &&
                 resourcesRef.current && !resourcesRef.current.contains(event.target as Node) &&
                 resultsRef.current && !resultsRef.current.contains(event.target as Node)
@@ -97,12 +99,12 @@ const Navbar = () => {
                                     <li>
                                         <Link href="/pricing" onClick={closeSheet} className={`text-lg font-bold ${pathname === '/pricing' ? 'text-secondary' : 'text-foreground'}`}>Pricing</Link>
                                     </li>
-                                    <li className="relative" ref={companyRef}>
+                                    <li className="relative" ref={serviceRef}>
                                         <div
                                             className={`text-lg font-bold ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                             onClick={() => toggleDropdown(0)}
                                         >
-                                            Company
+                                            Services
                                         </div>
                                         <motion.ul
                                             className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
@@ -111,6 +113,35 @@ const Navbar = () => {
                                             exit="exit"
                                             variants={dropdownVariants}
                                             style={{ visibility: openDropdownIndex === 0 ? 'visible' : 'hidden', display: openDropdownIndex === 0 ? 'block' : 'none' }}
+                                        >
+                                            <li
+                                                className={`text-lg font-bold ${['/services/cold-email'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/company/life-at-prospectiv">Cold Email</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/services/google-ads'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/company/about-us">Google Ads</Link></li>
+                                            <li
+                                                className={`text-lg font-bold ${['/services/linkedin-ads'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                                onClick={closeSheet}
+                                            ><Link href="/company/careers">Linkedin Ads</Link></li>
+                                        </motion.ul>
+                                    </li>
+                                    <li className="relative" ref={companyRef}>
+                                        <div
+                                            className={`text-lg font-bold ${['/company/life-at-prospectiv', '/company/careers', '/company/about-us'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
+                                            onClick={() => toggleDropdown(1)}
+                                        >
+                                            Company
+                                        </div>
+                                        <motion.ul
+                                            className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
+                                            initial="hidden"
+                                            animate={openDropdownIndex === 1 ? "visible" : "hidden"}
+                                            exit="exit"
+                                            variants={dropdownVariants}
+                                            style={{ visibility: openDropdownIndex === 1 ? 'visible' : 'hidden', display: openDropdownIndex === 1 ? 'block' : 'none' }}
                                         >
                                             <li
                                                 className={`text-lg font-bold ${['/company/life-at-prospectiv'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
@@ -130,17 +161,17 @@ const Navbar = () => {
                                     <li className="relative" ref={resourcesRef}>
                                         <div
                                             className={`text-lg font-bold ${['/resources/blog', '/resources/resource-hub'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
-                                            onClick={() => toggleDropdown(1)}
+                                            onClick={() => toggleDropdown(2)}
                                         >
                                             Resources
                                         </div>
                                         <motion.ul
                                             className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
                                             initial="hidden"
-                                            animate={openDropdownIndex === 1 ? "visible" : "hidden"}
+                                            animate={openDropdownIndex === 2 ? "visible" : "hidden"}
                                             exit="exit"
                                             variants={dropdownVariants}
-                                            style={{ visibility: openDropdownIndex === 1 ? 'visible' : 'hidden', display: openDropdownIndex === 1 ? 'block' : 'none' }}
+                                            style={{ visibility: openDropdownIndex === 2 ? 'visible' : 'hidden', display: openDropdownIndex === 2 ? 'block' : 'none' }}
                                         >
                                             <li
                                                 className={`text-lg font-bold ${['/resources/blog'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
@@ -156,17 +187,17 @@ const Navbar = () => {
                                     <li className="relative" ref={resultsRef}>
                                         <div
                                             className={`text-lg font-bold ${['/result/success-story', '/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
-                                            onClick={() => toggleDropdown(2)}
+                                            onClick={() => toggleDropdown(3)}
                                         >
                                             Results
                                         </div>
                                         <motion.ul
                                             className="overflow-hidden text-lg font-bold ml-5 space-y-2 pt-2"
                                             initial="hidden"
-                                            animate={openDropdownIndex === 2 ? "visible" : "hidden"}
+                                            animate={openDropdownIndex === 3 ? "visible" : "hidden"}
                                             exit="exit"
                                             variants={dropdownVariants}
-                                            style={{ visibility: openDropdownIndex === 2 ? 'visible' : 'hidden', display: openDropdownIndex === 2 ? 'block' : 'none' }}
+                                            style={{ visibility: openDropdownIndex === 3 ? 'visible' : 'hidden', display: openDropdownIndex === 3 ? 'block' : 'none' }}
                                         >
                                             <li
                                                 className={`text-lg font-bold ${['/result/success-story'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
@@ -220,6 +251,19 @@ const Navbar = () => {
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5">
+                                            <Link href="/services/cold-email" className="w-full transition-all duration-500 group">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <Mail className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-secondary">Cold Email</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            A page about our culture, people, values and what it's like to work here
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </Link>
                                             <Link href="/services/linkedin-ads" className="w-full transition-all duration-500 group">
                                                 <div className="flex items-center gap-4">
                                                     <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
