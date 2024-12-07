@@ -8,7 +8,9 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, MessageCircleWarning, Trophy } from "lucide-react";
+import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, Linkedin, MessageCircleWarning, Trophy } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGoogleads } from "react-icons/si";
 import Link from "next/link";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -169,10 +171,10 @@ const Navbar = () => {
                                             <li
                                                 className={`text-lg font-bold ${['/result/success-story'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                                 onClick={closeSheet}
-                                                >
+                                            >
                                                 <Link href="/result/success-story">Success Stories</Link></li>
                                             <li className={`text-lg font-bold ${['/result/awards-and-recognitions'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
-                                            onClick={closeSheet}
+                                                onClick={closeSheet}
                                             >
                                                 <Link href="/result/awards-and-recognitions">Awards & Recognition</Link></li>
                                         </motion.ul>
@@ -209,6 +211,47 @@ const Navbar = () => {
                                 >
                                     <NavigationMenuLink>Home</NavigationMenuLink>
                                 </Link>
+                            </NavigationMenuItem>
+
+                            <NavigationMenuItem>
+                                <NavigationMenuTrigger
+                                    className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none 
+                                    ${['/services/linkedin-ads', '/services/google-ads'].includes(pathname) ? 'text-secondary bg-transparent' : 'text-foreground'}`}>Services</NavigationMenuTrigger>
+                                <NavigationMenuContent>
+                                    <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
+                                        <div className="flex flex-col gap-5">
+                                            <Link href="/services/linkedin-ads" className="w-full transition-all duration-500 group">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <FaLinkedin className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-secondary">Linkedin Ads</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            A page about our culture, people, values and what it's like to work here
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div className="w-1 h-16 bg-secondary"></div>
+                                        <div className="flex flex-col gap-5">
+                                            <Link href="/services/google-ads" className="transition-all duration-500 group">
+                                                <div className="flex items-center gap-4">
+                                                    <div className="bg-white rounded-full p-2 group-hover:bg-secondary transition-all duration-200 ease-in-out">
+                                                        <SiGoogleads className="text-background group-hover:text-foreground transition-all duration-200 ease-in-out" size={30} />
+                                                    </div>
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-secondary">Google Ads</h3>
+                                                        <p className="text-sm text-textColorTwo">
+                                                            Meet your campaign team: over 300 prospecting experts helping you sell more.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </NavigationMenuContent>
                             </NavigationMenuItem>
 
                             <NavigationMenuItem>
