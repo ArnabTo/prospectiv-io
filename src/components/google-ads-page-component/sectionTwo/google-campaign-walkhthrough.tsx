@@ -1,4 +1,5 @@
 'use client'
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 
@@ -33,7 +34,7 @@ const GoogleAdsCampaignWalkThrough = () => {
   };
 
   return (
-    <div className="overflow-x-hidden xl:overflow-visible relative py-32">
+    <section className="overflow-x-hidden xl:overflow-visible relative py-32">
       <div className="w-full max-w-7xl mx-auto px-5 py-12">
         <h2 className="lg:w-1/2 mx-auto text-2xl md:text-4xl font-bold text-center mb-12 text-foreground">
           How we execute high performing
@@ -45,7 +46,11 @@ const GoogleAdsCampaignWalkThrough = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center">
             {
               executionData.map((item) => (
-                <div
+                <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 * item.id }}
+                viewport={{ once: true }}
                   key={item.id}
                   onClick={() => handleItemClick(item.id)}
                   className={`bg-card border border-borderColor rounded-3xl p-5 mb-4 space-y-5 h-full pt-10`}>
@@ -56,7 +61,7 @@ const GoogleAdsCampaignWalkThrough = () => {
                     <h2 className="text-2xl font-bold text-foreground">{item.title}</h2>
                     <p className="text-lg text-textColorTwo mt-2">{item.description}</p>
                   </div>
-                </div>
+                </motion.div>
               ))
             }
           </div>
@@ -100,7 +105,7 @@ const GoogleAdsCampaignWalkThrough = () => {
         <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
         <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -17,7 +17,7 @@ const GoogleAdsCompanies = () => {
     ];
 
     return (
-        <div className="p-5 py-16 relative overflow-hidden lg:overflow-visible">
+        <section className="p-5 py-16 relative overflow-hidden lg:overflow-visible">
             <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -39,19 +39,13 @@ const GoogleAdsCompanies = () => {
                 ))}
 
                 <div
-                    className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
-                    <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                    <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                    <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                    className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-10 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
+                    <div className="bg-gradientColorOne absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                    <div className="bg-gradientColorTwo absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                    <div className="bg-gradientColorThree absolute rounded-full  w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                 </div>
-                <div
-                        className="opacity-[0.8] blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
-                        <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                        <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                        <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                    </div>
             </div>
-        </div>
+        </section>
     );
 };
 

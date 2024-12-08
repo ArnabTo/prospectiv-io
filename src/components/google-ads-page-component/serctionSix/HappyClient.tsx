@@ -64,17 +64,17 @@ const HappyClient = () => {
     };
 
     return (
-        <div className="p-5 py-16">
+        <section className="p-5 py-16">
             <motion.h1
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-7">
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">
                 Happy Clients
             </motion.h1>
             <div className="max-w-7xl mx-auto space-y-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5">
                     {Clients.slice(0, visibleClients).map((client, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -118,7 +118,7 @@ const HappyClient = () => {
                         </div>
                 }
             </div>
-        </div>
+        </section>
     );
 };
 

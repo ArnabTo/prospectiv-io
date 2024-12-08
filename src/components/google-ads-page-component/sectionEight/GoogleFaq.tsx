@@ -6,15 +6,15 @@ import { motion } from 'framer-motion';
 
 const GoogleFaq = () => {
     return (
-        <div>
-            <div className='max-w-7xl mx-auto p-5'>
-                <p className='font-semibold text-secondary text-center mx-auto'>FAQs</p>
+        <section className='max-w-7xl mx-auto p-5'>
+     
+                <p className='font-semibold text-secondary text-center mx-auto text-lg'>FAQs</p>
                 <motion.h1
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-7">
+                    className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-7">
                     Frequently asked questions (FAQs)
                 </motion.h1>
                 <Accordion type="single" collapsible>
@@ -81,8 +81,7 @@ const GoogleFaq = () => {
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
-            </div>
-        </div>
+        </section>
     );
 };
 

@@ -26,7 +26,7 @@ const WhatMakesUsDifferent = () => {
     };
 
     return (
-        <div className="overflow-hidden">
+        <section className="overflow-hidden">
             <motion.h1
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ const WhatMakesUsDifferent = () => {
                     <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                 </motion.div>
             </div>
-        </div>
+        </section>
     );
 };
 
