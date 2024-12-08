@@ -117,15 +117,15 @@ const Navbar = () => {
                                             <li
                                                 className={`text-lg font-bold ${['/services/cold-email'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                                 onClick={closeSheet}
-                                            ><Link href="/company/life-at-prospectiv">Cold Email</Link></li>
+                                            ><Link href="/services/cold-email">Cold Email</Link></li>
                                             <li
                                                 className={`text-lg font-bold ${['/services/google-ads'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                                 onClick={closeSheet}
-                                            ><Link href="/company/about-us">Google Ads</Link></li>
+                                            ><Link href="/services/google-ads">Google Ads</Link></li>
                                             <li
                                                 className={`text-lg font-bold ${['/services/linkedin-ads'].includes(pathname) ? 'text-secondary' : 'text-foreground'}`}
                                                 onClick={closeSheet}
-                                            ><Link href="/company/careers">Linkedin Ads</Link></li>
+                                            ><Link href="/services/linkedin-ads">Linkedin Ads</Link></li>
                                         </motion.ul>
                                     </li>
                                     <li className="relative" ref={companyRef}>

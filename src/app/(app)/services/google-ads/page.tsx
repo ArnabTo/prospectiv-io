@@ -1,4 +1,5 @@
 
+import WhatYouWillGet from '@/components/google-ads-page-component/sectionFive/WhatYouWillGet';
 import WhatMakesUsDifferent from '@/components/google-ads-page-component/sectionFour/WhatMakesUsDifferent';
 import GoogleHero from '@/components/google-ads-page-component/sectionOne/google-section-one';
 import WhatOurAgencyDo from '@/components/google-ads-page-component/sectionThree/WhatOurAgencyDo';
@@ -12,6 +13,7 @@ const GoogleAds = () => {
             <GoogleAdsCampaignWalkThrough />
             <WhatOurAgencyDo/>
             <WhatMakesUsDifferent/>
+            <WhatYouWillGet/>
         </div>
     );
 };
