@@ -116,7 +116,7 @@ function ExecutionStep({ step, index, isActive, controls }: ExecutionStepProps) 
     <div className="relative flex flex-col items-center mb-8">
       <motion.div
         className={`
-        flex flex-col md:flex-row items-center w-full
+        flex flex-col-reverse md:flex-row items-center w-full
         ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
       `}
         initial="hidden"
