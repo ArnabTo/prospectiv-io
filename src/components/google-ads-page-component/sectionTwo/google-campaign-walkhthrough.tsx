@@ -34,7 +34,7 @@ const GoogleAdsCampaignWalkThrough = () => {
   };
 
   return (
-    <section className="overflow-x-hidden xl:overflow-visible relative py-32">
+    <section className="overflow-x-hidden xl:overflow-visible relative pt-32">
       <div className="w-full max-w-7xl mx-auto px-5 py-12">
         <h2 className="lg:w-1/2 mx-auto text-2xl md:text-4xl font-bold text-center mb-12 text-foreground">
           How we execute high performing
@@ -67,43 +67,12 @@ const GoogleAdsCampaignWalkThrough = () => {
           </div>
         </div>
 
-        {/* large device content */}
-        {/* <div className="relative hidden xl:block">
-        
-          <div className="absolute h-1 bg-buttonColor top-1/2 transform -translate-y-1/2 left-0 right-0 z-0" />
-
-
-          <div className="relative z-10 flex flex-nowrap md:flex-wrap justify-between items-center">
-            {executionData.map((item) => (
-              <div
-                key={item.id}
-                className="group relative flex flex-col items-center"
-                role="button"
-                tabIndex={0}
-                onClick={() => handleItemClick(item.id)}
-                onKeyPress={(e) => e.key === "Enter" && handleItemClick(item.id)}
-              >
-              
-                <div className='w-10 h-10 rounded-full text-2xl font-bold flex items-center justify-center bg-secondary p-5'>
-                  {item.id}
-                </div>
-
-             
-                <div className={`absolute top-16 bg-card border border-borderColor text-center rounded-2xl shadow-lg p-5 min-w-80 max-w-96 group-hover:scale-105
-                transition-all duration-300 ease-in-out ${selectedId === item.id ? "scale-105 bg-secondary" : ""}`}>
-                  <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                  <p className="text-lg text-textColorTwo mt-2">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
       <div
-        className="blur-[100px] w-full max-w-[35%] min-h-[60%] absolute left-[30%] top-28 -z-10 animate-spin-slow transition-all">
-        <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-        <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-        <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+        className="blur-[100px] w-full max-w-[35%] min-h-[60%] absolute left-[30%] top-40 -z-10 transition-all">
+        <div className="bg-gradientColorOne absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+        <div className="bg-gradientColorTwo absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+        <div className="bg-gradientColorThree absolute rounded-full w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
       </div>
     </section>
   );
