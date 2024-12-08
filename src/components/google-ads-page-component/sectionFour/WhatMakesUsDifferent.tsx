@@ -34,7 +34,7 @@ const WhatMakesUsDifferent = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-7">What makes us different</motion.h1>
             <div className="max-w-7xl mx-auto relative">
-                <div className=" rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 p-5 lg:p-10">
+                <div className=" rounded-2xl grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-10 p-5 lg:p-10">
                     <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
