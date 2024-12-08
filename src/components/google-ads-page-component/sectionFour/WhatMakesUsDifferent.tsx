@@ -32,7 +32,7 @@ const WhatMakesUsDifferent = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5">What makes us different</motion.h1>
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-7">What makes us different</motion.h1>
             <div className="max-w-7xl mx-auto relative">
                 <div className=" rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 p-5 lg:p-10">
                     <motion.div
@@ -40,7 +40,7 @@ const WhatMakesUsDifferent = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
-                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-8 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefOne)}
                         onMouseLeave={() => handleMouseLeave(lottieRefOne)}
                     >
@@ -56,7 +56,7 @@ const WhatMakesUsDifferent = () => {
                             Small team of experts
                         </h3>
                         <p className='text-textColorTwo text-lg transition-all duration-1000'>
-                            No interns, no juniors. When you hire us, you're hiring specialists. We are a small team of senior-level experts who are highly specialized in LinkedIn Ads for a decade. By keeping our team compact, we ensure personalized attention and high-quality service tailored to your specific needs.
+                        We are a dedicated team of senior LinkedIn Ads specialists with over a decade of expertise. By maintaining a focused team, we deliver personalized, high-quality solutions tailored to your goals.
                         </p>
                     </motion.div>
 
@@ -65,7 +65,7 @@ const WhatMakesUsDifferent = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     viewport={{ once: true }}
-                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-8 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
                         onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
                     >
@@ -90,7 +90,7 @@ const WhatMakesUsDifferent = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
                     viewport={{ once: true }}
-                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-8 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefThree)}
                         onMouseLeave={() => handleMouseLeave(lottieRefThree)}
                     >
@@ -106,7 +106,7 @@ const WhatMakesUsDifferent = () => {
                             Transparency
                         </h3>
                         <p className='text-textColorTwo text-lg transition-all duration-1000'>
-                            We always share our data, account set ups, and tactics with our clients. Moreover, during our first call we’ll share with you each step of our process and methodology. We also make sure the whole setup process is documented. You'll know exactly what is going on at any time.
+                        We maintain full transparency by sharing data, account setups, and tactics with our clients. From the initial call, we walk you through every step of our process and methodology. Additionally, we document the entire setup, ensuring you're informed and in control at all times.
                         </p>
                     </motion.div>
 
@@ -115,7 +115,7 @@ const WhatMakesUsDifferent = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                     viewport={{ once: true }}
-                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-8 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                     >
@@ -131,7 +131,7 @@ const WhatMakesUsDifferent = () => {
                             No contract required
                         </h3>
                         <p className='text-textColorTwo text-lg transition-all duration-1000'>
-                            Most marketing agencies require long-term contracts, we don't. Our pricing is transparent with a fixed monthly fee and we offer our services on a month-to-month basis—no long-term commitments needed. We're confident that our results and ethics will keep you with us long-term without any contractual obligations.
+                        Unlike most agencies, we don’t require long-term contracts. Our transparent pricing is a fixed monthly fee, offered on a month-to-month basis. We trust our results and ethics will earn your long-term partnership—no commitments needed.
                         </p>
                     </motion.div>
 
@@ -140,7 +140,7 @@ const WhatMakesUsDifferent = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.9 }}
                     viewport={{ once: true }}
-                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-8 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFive)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFive)}
                     >
@@ -156,7 +156,7 @@ const WhatMakesUsDifferent = () => {
                             No minimum ad spend
                         </h3>
                         <p className='text-textColorTwo text-lg transition-all duration-1000'>
-                            Unlike many agencies that require a minimum ad spend, we prioritize flexibility and control for our clients. We believe in crafting strategies that align with your budget and goals without imposing a minimum spend requirement. This approach ensures that you're able to invest according to your comfort level and scale up as you see results.
+                        Unlike many agencies, we don’t impose minimum ad spend requirements. Our flexible approach allows you to align your investment with your budget and goals, giving you full control to scale as results grow.
                         </p>
                     </motion.div>
 
@@ -165,7 +165,7 @@ const WhatMakesUsDifferent = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.1 }}
                     viewport={{ once: true }}
-                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-8 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefSix)}
                         onMouseLeave={() => handleMouseLeave(lottieRefSix)}
                     >
@@ -181,7 +181,7 @@ const WhatMakesUsDifferent = () => {
                             Fast onboarding
                         </h3>
                         <p className='text-textColorTwo text-lg transition-all duration-1000'>
-                            Our fast onboarding process ensures that from our first call to the kickoff of your campaigns, you'll see the first campaigns running within 2 weeks. We understand the importance of momentum in marketing, which is why we've streamlined our procedures to get your campaigns up and running quick without compromising on quality or strategy.
+                        Our streamlined onboarding process ensures your campaigns are live within two weeks of our initial call. We prioritize momentum in marketing, launching quickly without compromising on quality or strategy.
                         </p>
                     </motion.div>
                 </div>
