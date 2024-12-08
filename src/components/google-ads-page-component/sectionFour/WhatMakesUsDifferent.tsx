@@ -30,7 +30,7 @@ const WhatMakesUsDifferent = () => {
             <div className="max-w-7xl mx-auto relative">
                 <div className="bg-card rounded-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 p-5 lg:p-10">
                     <div
-                        className='p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefOne)}
                         onMouseLeave={() => handleMouseLeave(lottieRefOne)}
                     >
@@ -51,7 +51,7 @@ const WhatMakesUsDifferent = () => {
                     </div>
 
                     <div
-                        className='p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
                         onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
                     >
@@ -72,7 +72,7 @@ const WhatMakesUsDifferent = () => {
                     </div>
 
                     <div
-                        className='p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefThree)}
                         onMouseLeave={() => handleMouseLeave(lottieRefThree)}
                     >
@@ -93,7 +93,7 @@ const WhatMakesUsDifferent = () => {
                     </div>
 
                     <div
-                        className='p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFour)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFour)}
                     >
@@ -114,7 +114,7 @@ const WhatMakesUsDifferent = () => {
                     </div>
 
                     <div
-                        className='p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefFive)}
                         onMouseLeave={() => handleMouseLeave(lottieRefFive)}
                     >
@@ -135,7 +135,7 @@ const WhatMakesUsDifferent = () => {
                     </div>
 
                     <div
-                        className='p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
+                        className='bg-card p-5 lg:p-10 space-y-5 border border-borderColor rounded-3xl card-animation group cursor-pointer'
                         onMouseEnter={() => handleMouseEnter(lottieRefSix)}
                         onMouseLeave={() => handleMouseLeave(lottieRefSix)}
                     >

@@ -42,13 +42,13 @@ const GoogleAdsCampaignWalkThrough = () => {
 
         {/* small device content */}
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-center">
             {
               executionData.map((item) => (
                 <div
                   key={item.id}
                   onClick={() => handleItemClick(item.id)}
-                  className={`bg-card border border-borderColor rounded-3xl p-5 mb-4 space-y-5 h-full`}>
+                  className={`bg-card border border-borderColor rounded-3xl p-5 mb-4 space-y-5 h-full pt-10`}>
                   <div className='w-10 h-10 mx-auto rounded-full text-2xl font-bold flex items-center justify-center bg-secondary p-5'>
                     {item.id}
                   </div>
