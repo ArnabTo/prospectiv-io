@@ -15,6 +15,7 @@ const Rating = ({ rating }:{rating: number}) => {
                         <Star fill="#ffdc00" color="#ffdc00" size={20}/>
                     ) : rating >= star - 0.5 ? (
                         <Star
+                        size={20}
                             fill="#ffdc00"
                             color="#ffdc00"
                             style={{
@@ -22,7 +23,7 @@ const Rating = ({ rating }:{rating: number}) => {
                             }}
                         />
                     ) : (
-                        <Star color="#ffdc00" />
+                        <Star size={20} color="#ffdc00" />
                     )}
                 </span>
             ))}

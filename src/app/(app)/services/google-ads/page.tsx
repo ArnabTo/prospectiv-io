@@ -4,6 +4,7 @@ import WhatMakesUsDifferent from '@/components/google-ads-page-component/section
 import GoogleHero from '@/components/google-ads-page-component/sectionOne/google-section-one';
 import WhatOurAgencyDo from '@/components/google-ads-page-component/sectionThree/WhatOurAgencyDo';
 import GoogleAdsCampaignWalkThrough from '@/components/google-ads-page-component/sectionTwo/google-campaign-walkhthrough';
+import HappyClient from '@/components/google-ads-page-component/serctionSix/HappyClient';
 import React from 'react';
 
 const GoogleAds = () => {
@@ -14,6 +15,7 @@ const GoogleAds = () => {
             <WhatOurAgencyDo/>
             <WhatMakesUsDifferent/>
             <WhatYouWillGet/>
+            <HappyClient/>
         </div>
     );
 };
