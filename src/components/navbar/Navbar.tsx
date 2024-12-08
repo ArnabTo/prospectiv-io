@@ -8,7 +8,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { motion } from 'framer-motion';
-import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, Linkedin, Mail, MessageCircleWarning, Trophy } from "lucide-react";
+import { AlignJustify, Award, BookOpenText, BriefcaseBusiness, Folders, LifeBuoy, Linkedin, Mail, MenuIcon, MessageCircleWarning, Trophy, X } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGoogleads } from "react-icons/si";
 import Link from "next/link";
@@ -17,10 +17,9 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import axios from "axios";
-import { Blog, BlogPost } from "@/types/types";
+import { Blog } from "@/types/types";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-
+import { usePathname } from "next/navigation";
 
 
 const Navbar = () => {
@@ -87,7 +86,20 @@ const Navbar = () => {
                 </div>
                 <div>
                     <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-                        <SheetTrigger><div className="bg-[#1D1A27] p-4 rounded-full"><AlignJustify size={25} /></div></SheetTrigger>
+                        <SheetTrigger>
+                        <motion.div
+                            initial={{ rotate: '0deg' }}
+                            animate={{ rotate: isSheetOpen ? '180deg' : '0deg' }}
+                            transition={{ duration: 0.5 }}
+                            className="text-2xl font-bold cursor-pointer bg-buttonHoverColor p-2 rounded-full"
+                        >
+                            {isSheetOpen ? (
+                                 <X size={25}/>
+                            ) : (
+                                <MenuIcon size={25}/>
+                            )}
+                        </motion.div>
+                        </SheetTrigger>
                         <SheetContent side='bottom' className="rounded-t-2xl border border-borderColor">
                             <SheetTitle><VisuallyHidden>Menu</VisuallyHidden></SheetTitle>
                             <SheetClose />
@@ -247,7 +259,7 @@ const Navbar = () => {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger
                                     className={`text-lg font-bold p-0 hover:text-secondary transition-all duration-500 outline-none 
-                                    ${['/services/cold-email','/services/linkedin-ads', '/services/google-ads'].includes(pathname) ? 'text-secondary bg-transparent' : 'text-foreground'}`}>Services</NavigationMenuTrigger>
+                                    ${['/services/cold-email', '/services/linkedin-ads', '/services/google-ads'].includes(pathname) ? 'text-secondary bg-transparent' : 'text-foreground'}`}>Services</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="flex flex-col lg:flex-row items-center gap-5 p-10 bg-background">
                                         <div className="flex flex-col gap-5">
