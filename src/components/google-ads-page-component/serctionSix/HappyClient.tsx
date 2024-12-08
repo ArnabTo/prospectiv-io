@@ -70,7 +70,7 @@ const HappyClient = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-7">
                 Happy Clients
             </motion.h1>
             <div className="max-w-7xl mx-auto space-y-10">
