@@ -1,4 +1,5 @@
 
+import GoogleFaq from '@/components/google-ads-page-component/sectionEight/GoogleFaq';
 import WhatYouWillGet from '@/components/google-ads-page-component/sectionFive/WhatYouWillGet';
 import WhatMakesUsDifferent from '@/components/google-ads-page-component/sectionFour/WhatMakesUsDifferent';
 import GoogleHero from '@/components/google-ads-page-component/sectionOne/google-section-one';
@@ -18,6 +19,7 @@ const GoogleAds = () => {
             <WhatYouWillGet/>
             <HappyClient/>
             <GoogleAdsCompanies/>
+            <GoogleFaq/>
         </div>
     );
 };
