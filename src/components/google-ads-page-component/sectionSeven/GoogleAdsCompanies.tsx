@@ -23,10 +23,10 @@ const GoogleAdsCompanies = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-5">
                 Your are in good hands
             </motion.h1>
-            <div className="relative bg-[#ffffff1e] max-w-[50%] mx-auto p-5 lg:p-10 rounded-3xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div className="relative bg-card border border-borderColor lg:max-w-[50%] mx-auto p-5 lg:p-10 rounded-3xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {companyLogos.map((logo, index) => (
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
@@ -34,7 +34,7 @@ const GoogleAdsCompanies = () => {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         key={index} className="h-full">
                         <Image width={500} height={500} src={logo} alt={`company-logo-${index}`}
-                            className="w-40 h-40 object-contain" />
+                            className="w-40 h-24 object-contain  filter contrast-125" />
                     </motion.div>
                 ))}
 

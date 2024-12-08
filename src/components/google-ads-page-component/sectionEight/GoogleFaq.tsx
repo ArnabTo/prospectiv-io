@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const GoogleFaq = () => {
     return (
         <div>
-            <div className='max-w-7xl mx-auto'>
+            <div className='max-w-7xl mx-auto p-5'>
                 <p className='font-semibold text-secondary text-center mx-auto'>FAQs</p>
                 <motion.h1
                     initial={{ opacity: 0, y: 10 }}
