@@ -1,4 +1,5 @@
 import LinkedinAdsHero from "@/components/linkedin-ads-page/sectionOne/LinkedinAdsHero";
+import OurImpact from "@/components/linkedin-ads-page/sectionThree/OurImpact";
 import LinkedinAdsServices from "@/components/linkedin-ads-page/sectionTwo/LinkedinAdsServices";
 
 
@@ -7,6 +8,7 @@ const LinkedinAds = () => {
         <div className="space-y-24">
             <LinkedinAdsHero/>
             <LinkedinAdsServices/>
+            <OurImpact/>
         </div>
     );
 };
