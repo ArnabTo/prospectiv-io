@@ -36,7 +36,7 @@ const OurImpact = () => {
                     <div className="w-full flex flex-col md:flex-row justify-center items-center gap-5">
                         <motion.div
                             className="bg-gradient-to-br from-buttonHoverColor to-background
-                  rounded-2xl shadow-2xl border-4 border-white/20 
+                  rounded-3xl shadow-2xl border-4 border-white/20 
                   p-6 w-full mx-auto lg:max-w-xs
                   transform transition-all duration-300 
                   hover:scale-105 hover:shadow-4xl"
@@ -45,7 +45,7 @@ const OurImpact = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <div className="flex flex-col items-center justify-center space-y-3">
-                                <div className="bg-white/20 rounded-full p-3 mb-2">
+                                <div className="bg-white/20 rounded-full p-3 mb-2 ring-1 ring-white hover:ring-secondary/80 hover:bg-secondary">
                                     <Banknote className="text-white w-8 h-8" />
                                 </div>
 
@@ -77,7 +77,7 @@ const OurImpact = () => {
                         </motion.div>
                         <motion.div
                             className="bg-gradient-to-br from-buttonHoverColor to-background
-                  rounded-2xl shadow-2xl border-4 border-white/20 
+                  rounded-3xl shadow-2xl border-4 border-white/20 
                   p-6 w-full mx-auto lg:max-w-xs
                   transform transition-all duration-300 
                   hover:scale-105 hover:shadow-4xl"
