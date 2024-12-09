@@ -23,7 +23,7 @@ const ExploreOtherServices = () => {
                                 alt="image"
                                 width={500}
                                 height={500}
-                                className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-all duration-300"
+                                className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-all duration-300"
                             />
                         </div>
                         <div className='flex flex-col flex-grow'>
@@ -41,7 +41,7 @@ const ExploreOtherServices = () => {
                                 alt="image"
                                 width={500}
                                 height={500}
-                                className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-all duration-300"
+                                className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-all duration-300"
                             />
                         </div>
                         <div className='flex-grow'>
