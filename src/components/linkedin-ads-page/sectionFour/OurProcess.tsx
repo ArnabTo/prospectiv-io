@@ -57,7 +57,6 @@ const OurProcess = () => {
 
     return (
         <div>
-            <Image width={500} height={500} alt="image" src={OptimiztionImage} />
             <div className="py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-5 mb-5">
