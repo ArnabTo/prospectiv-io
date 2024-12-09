@@ -74,7 +74,7 @@ const GoogleAdsCampaignWalkThrough = () => {
         <div className="mx-auto px-4 py-16">
           <div className="relative">
             <motion.div
-              className="absolute left-1/2 top-0 bottom-0 w-1 bg-buttonColor transform -translate-x-1/2"
+              className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-buttonColor transform -translate-x-1/2"
               initial={{ scaleY: 0 }}
               animate={{ scaleY: 1 }}
               transition={{ duration: 1 }}

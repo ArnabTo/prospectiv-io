@@ -2,6 +2,7 @@
 import Image from "next/image";
 import GoogleAds from '@/public/assets/googleads.png'
 import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { Separator } from "@/components/ui/separator";
 const WhatOurAgencyDo = () => {
     return (
         <section className="max-w-7xl mx-auto space-y-24 p-5">
@@ -20,7 +21,7 @@ const WhatOurAgencyDo = () => {
                 viewport={{ once: true }}
                 className="flex flex-col lg:flex-row gap-5 lg:gap-28 justify-center items-center">
                 <div className="lg:max-w-[50%] space-y-4">
-                    <motion.h3 
+                    <motion.h3
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -46,7 +47,7 @@ const WhatOurAgencyDo = () => {
                     />
                 </div>
             </motion.div>
-
+            <Separator />
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +55,7 @@ const WhatOurAgencyDo = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-col lg:flex-row-reverse gap-5 lg:gap-28 justify-center items-center">
                 <div className="lg:max-w-[50%] space-y-4">
-                    <motion.h3 
+                    <motion.h3
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -80,7 +81,7 @@ const WhatOurAgencyDo = () => {
                     />
                 </div>
             </motion.div>
-
+            <Separator />
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -88,13 +89,13 @@ const WhatOurAgencyDo = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-col lg:flex-row gap-5 lg:gap-28 justify-center items-center">
                 <div className="lg:max-w-[50%] space-y-4">
-                    <motion.h3 
+                    <motion.h3
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                         className="text-2xl md:text-4xl font-bold">Monitoring conversions and reporting</motion.h3>
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -102,7 +103,7 @@ const WhatOurAgencyDo = () => {
                         className="text-md lg:text-lg text-textColorTwo">
                         Many Google Ads agencies operate on a "set it and forget it" model. We’re quite the opposite. We monitor your accounts daily, are in touch with you weekly, and are consistently pushing your ROI forward. We aim to provide a best-in-class service and operate as an extension of your marketing team.
                     </motion.p>
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -110,7 +111,7 @@ const WhatOurAgencyDo = () => {
                         className="text-md lg:text-lg text-textColorTwo">
                         After the initial campaign has been run, you will receive weekly reports. This will allow you to see results in real-time and can give you a competitive edge. These reports will measure the return on investment (ROI), and we will go through these with you to help you understand the results.
                     </motion.p>
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
