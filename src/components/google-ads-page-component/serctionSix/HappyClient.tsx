@@ -1,9 +1,11 @@
 'use client';
 import Rating from "@/components/rating/RatingComponent";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Separator } from "@/components/ui/separator";
 import { AvatarFallback } from "@radix-ui/react-avatar";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const HappyClient = () => {
@@ -65,22 +67,35 @@ const HappyClient = () => {
 
     return (
         <section className="p-5 py-16">
-            <motion.h1
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10">
-                Happy Clients
-            </motion.h1>
             <div className="max-w-7xl mx-auto space-y-10">
+
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
+                    <div className="lg:w-1/2 text-center lg:text-start space-y-2">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="text-3xl md:text-4xl font-bold">
+                            Happy Clients
+                        </motion.h1>
+                        <p className="text-lg text-textColorTwo">Getuplead is proud to have worked with some of the most successful companies in the world.</p>
+                    </div>
+                    <div
+                        className="w-60 flex rounded-full mx-auto lg:ml-auto shadow-lg duration-300 transform group-hover:scale-105">
+                        <Link href="pricing" className="flex-1 font-semibold text-center text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 px-10 py-5 rounded-full hover:bg-buttonHoverColor">
+                            See Our Pricing
+                        </Link>
+                    </div>
+                </div>
+                <Separator />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5">
                     {Clients.slice(0, visibleClients).map((client, index) => (
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            key={index} className="space-y-5 h-full flex flex-col justify-between">
+                            key={index} className="bg-background border border-borderColor rounded-2xl p-5 space-y-5 h-full flex flex-col justify-between">
                             <div className="flex justify-start items-center gap-5">
                                 <Avatar className="w-16 h-16 border border-secondary">
                                     <AvatarImage src="https://images.pexels.com/photos/1161668/pexels-photo-1161668.jpeg?auto=compress&cs=tinysrgb&w=600" alt="clients_avatar" />
@@ -91,12 +106,12 @@ const HappyClient = () => {
                                     <p className="text-lg text-secondary">{client.position}</p>
                                 </div>
                             </div>
+                            <div className="flex justify-start items-center gap-5">
+                                <Image src={client.companyLogo} width={100} height={100} alt="company-logo" />
+                                <Rating rating={client.rating} />
+                            </div>
                             <div className="space-y-5 flex-grow">
                                 <p className="text-lg text-textColorTwo">{client.says}</p>
-                                <div className="flex justify-start items-center gap-5">
-                                    <Image src={client.companyLogo} width={100} height={100} alt="company-logo" />
-                                    <Rating rating={client.rating} />
-                                </div>
                             </div>
                         </motion.div>
                     ))}

@@ -1,12 +1,10 @@
-'use client'
-
+import LinkedinAdsHero from "@/components/linkedin-ads-page/sectionOne/LinkedinAdsHero";
 
 
 const LinkedinAds = () => {
     return (
         <div>
-            <div>
-            </div>
+            <LinkedinAdsHero/>
         </div>
     );
 };
