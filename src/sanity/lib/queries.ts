@@ -1,6 +1,18 @@
 import { defineQuery } from "next-sanity";
 import { EXPORT_DETAIL } from "next/dist/shared/lib/constants";
 
+export const GOOGLE_HERO_TEXTCONTENT_QUERY = defineQuery(`
+*[_type == "googleherodata" && defined(slug.current)] | order(_createdAt desc){
+  headline,
+  subline,
+  bannerImage{
+            asset->{
+                _id,
+                url
+            }
+        },
+}
+  `)
 export const ALL_POST_QUERY = defineQuery(`
     *[_type == "post" && defined(slug.current)] | order(_createdAt desc){
         _id,

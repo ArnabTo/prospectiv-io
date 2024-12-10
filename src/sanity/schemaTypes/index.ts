@@ -11,6 +11,8 @@ import { guideType } from './guideType'
 import { userDataType } from './userDataType'
 import { successstoryType } from './successstoryType'
 import { awardsType } from './awardsType'
+import { googleAdsHeroType } from './googleHeroType'
+
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [blockContentType,
@@ -23,6 +25,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     whitepaperType,
     userDataType,
     successstoryType,
-    awardsType
+    awardsType,
+    googleAdsHeroType
   ],
 }
