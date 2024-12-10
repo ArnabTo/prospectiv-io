@@ -35,8 +35,9 @@ const WhatYouWillGet = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="lg:p-16">
+                className="lg:p-8 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-3xl">
                     <Image 
+                    className="rounded-3xl"
                     src={ImageContent}
                     width={800}
                     height={800}
