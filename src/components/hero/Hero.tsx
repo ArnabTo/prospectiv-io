@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HeroBg from '@/public/assets/herobg.svg';
+import HeroBg from '@/public/assets/homeherobg.svg';
 import HeroBgTwo from '@/public/assets/herobgtwo.svg';
 import HeroBgThree from '@/public/assets/herobgthree.svg'
 import Image from "next/image";

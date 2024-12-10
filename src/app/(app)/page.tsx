@@ -17,8 +17,8 @@ export default function Home() {
 
     <div className="space-y-24">
       <Hero />
-      <FlexibleLead/>
       <Omni />
+      <FlexibleLead/>
       <SuccessCounts />
       <PayperleadDynamic/>
       <Walkthrough />
