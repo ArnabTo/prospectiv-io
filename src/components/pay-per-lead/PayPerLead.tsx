@@ -1,129 +1,168 @@
-import { ArrowRight, ArrowRightCircle } from 'lucide-react';
-import { useEffect } from 'react';
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { useRef } from "react";
 const PayPerLead = () => {
 
-    const animateRef = useRef(null);
-    const gradientBgRef = useRef(null);
-    const cardOne = useRef(null);
-    const cardTwo = useRef(null);
-    const cardThree = useRef(null);
+    const lottieRefSix = useRef(null);
+    const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
+        if (typeof document !== 'undefined') {
+            lottieRef?.current?.play(); // Play animation on hover
+        }
+    };
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const timer = setTimeout(() => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: animateRef.current,
-                    start: 'top 90%',
-                    toggleActions: 'play none none none',
-                }
-            });
-
-            tl.fromTo(animateRef.current, {
-                opacity: 0,
-                y: 10,
-                scale: 0.9
-            }, {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.7
-            })
-                .fromTo(cardOne.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.6
-                }, "+=0.1") // Wait 0.2s after previous animation
-                .fromTo(cardTwo.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5
-                }, "+=0.1")
-                .fromTo(cardThree.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5
-                }, "+=0.1")
-
-                .fromTo(gradientBgRef.current, {
-                    opacity: 0,
-                    scale: 0.9
-                }, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.5
-                });
-        }, 0);
-
-        return () => clearTimeout(timer);
-    }, []);
+    const handleMouseLeave = (lottieRef: React.RefObject<any>) => {
+        if (typeof document !== 'undefined') {
+            lottieRef?.current?.stop(); // Stop the animation when hover ends
+        }
+    };
 
     return (
-        <div className="max-w-7xl mx-auto p-5 mt-36">
-            <div className="flex flex-col lg:flex-row relative">
-                <div className="space-y-5">
-                    <div
-                        ref={animateRef}
-                        className="space-y-2 text-center">
-                        <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold">Pay per Lead</h2>
-                        <p className="text-md lg:text-lg text-textColorTwo lg:max-w-[80%] mx-auto">Committed to our confidence in our lead generation system, Prospectiv’s lead generation
-                            services come without a fixed-term contract. You only pay for as few or as many leads as
-                            you need and we’ll deliver.
-                        </p>
+        <section
+            className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center p-5 py-16 space-y-6"
+        >
+            <div className="lg:w-1/2 text-center lg:text-start sticky top-0 md:top-10 lg:top-28 xl:top-30 2xl:top-40 self-start space-y-5">
+                <motion.h2
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5"
+                >
+                    Pay per Lead
+                </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="text-lg md:text-xl lg:text-2xl text-textColorTwo"
+                >
+                    Committed to our confidence in our lead generation system, Prospectiv’s lead generation
+                    services come without a fixed-term contract. You only pay for as few or as many leads as
+                    you need and we’ll deliver.
+                </motion.p>
+
+                <div
+                    className="w-60 flex rounded-full mx-auto lg:mx-0 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
+                    <Link href="/demo" className="flex-1 font-bold text-lg text-center bg-black px-10 py-5 rounded-full hover:scale-95 transition-all duration-300">
+                        Book a Demo
+                    </Link>
+                </div>
+            </div>
+            <div className="lg:w-1/2 flex flex-col">
+                <div
+                    className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
+                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                >
+                    <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
+                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                            <Lottie
+                                lottieRef={lottieRefSix}
+                                animationData={require('../../public/assets/analytics.json')}
+                                loop={false} // Play only once
+                                autoplay={false} // Disable autoplay
+                            />
+                        </div>
+                        <div>
+                            <motion.h3
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="text-3xl font-bold"
+                            >
+                                Choose How Many
+                            </motion.h3>
+                            <motion.p
+                                initial={{ opacity: 0, x: 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="text-xl text-textColorTwo"
+                            >
+                                Start From 10 Leads.
+                            </motion.p>
+                        </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center">
-                        <div
-                            ref={cardOne}
-                            className="bg-card border-l-2 border-secondary flex items-center justify-between group tramsition duration-300 rounded-r-xl">
-                            <div className=' p-5 min-w-[80%]'>
-                                <h3 className="text-2xl font-bold">Choose How Many</h3>
-                                <p className="text-lg text-textColorTwo">Start From 10 Leads.</p>
-                            </div>
-                            <ArrowRight size={40} className='group-hover:text-secondary tramsition duration-300 ' />
+                </div>
+                <div
+                    className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
+                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                >
+                    <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
+                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                            <Lottie
+                                lottieRef={lottieRefSix}
+                                animationData={require('../../public/assets/analytics.json')}
+                                loop={false} // Play only once
+                                autoplay={false} // Disable autoplay
+                            />
                         </div>
-                        <div
-                            ref={cardTwo}
-                            className="bg-card border-l-2 border-secondary flex items-center justify-between group tramsition duration-300 rounded-r-xl">
-                          <div className=' p-5 min-w-[80%]'>
-                                <h3 className="text-2xl font-bold">Campaign Launch</h3>
-                                <p className="text-lg text-textColorTwo">Launch In 2 Weeks.</p>
-                            </div>
-                            <ArrowRight size={40} className='group-hover:text-secondary tramsition duration-300 ' />
+                        <div>
+                            <motion.h3
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="text-3xl font-bold"
+                            >
+                                Campaign Launch
+                            </motion.h3>
+                            <motion.p
+                                initial={{ opacity: 0, x: 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="text-xl text-textColorTwo"
+                            >
+                                Launch In 2 Weeks.
+                            </motion.p>
                         </div>
-                        <div
-                            ref={cardThree}
-                            className="bg-card border-l-2 border-secondary flex items-center justify-between group tramsition duration-300 rounded-r-xl">
-                           <div className=' p-5 min-w-[80%]'>
-                                <h3 className="text-2xl font-bold">Leads Delivered</h3>
-                                <p className="text-lg text-textColorTwo">And Booked Into Meetings.</p>
-                            </div>
-                            <ArrowRight size={40} className='group-hover:text-secondary tramsition duration-300 ' />
+                    </div>
+                </div>
+                <div
+                    className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
+                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                >
+                    <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
+                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                            <Lottie
+                                lottieRef={lottieRefSix}
+                                animationData={require('../../public/assets/analytics.json')}
+                                loop={false} // Play only once
+                                autoplay={false} // Disable autoplay
+                            />
+                        </div>
+                        <div>
+                            <motion.h3
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="text-3xl font-bold"
+                            >
+                                Leads Delivered
+                            </motion.h3>
+                            <motion.p
+                                initial={{ opacity: 0, x: 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="text-xl text-textColorTwo"
+                            >
+                                And Booked Into Meetings.
+                            </motion.p>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    ref={gradientBgRef}
-                    className="blur-[100px] w-full max-w-[44%] min-h-[74%] absolute -top-60 -left-24 lg:-left-52 -z-10 animate-spin-slow transition-all">
-                    <div className="bg-gradientColorOne absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                    <div className="bg-gradientColorTwo absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                    <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
