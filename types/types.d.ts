@@ -1,3 +1,36 @@
+export interface HeroContent {
+    headline: string;
+    subline: string;
+    bannerImage: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+    };
+}
+export interface HeroContentColdEmail {
+    headline: string;
+    subline: string;
+    bannerImageOne: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+    };
+    bannerImageTwo: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+    };
+    bannerImageThree: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+    };
+}
+
 export interface Blog {
     _id: string;
     title: string;

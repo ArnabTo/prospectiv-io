@@ -3,22 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion';
 import Partners from "@/components/partners/Partners";
-import axios from "axios";
 import { GOOGLE_HERO_TEXTCONTENT_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
+import { HeroContent } from "@/types/types";
 
-interface HeroContent {
-    headline: string;
-    subline: string;
-    bannerImage: {
-        asset: {
-            _id: string;
-            url: string;
-        };
-    };
-}
 const GoogleHero = () => {
 
     const [heroContents, setHeroContents] = useState<HeroContent[]>([]);
@@ -88,7 +78,7 @@ const GoogleHero = () => {
                                 src={heroContents[0]?.bannerImage?.asset?.url}
                                 width={800}
                                 height={800}
-                                alt="linkedin-hero-bg"
+                                alt="google-ads-hero-bg"
                             />
                         </motion.div>
                     )}

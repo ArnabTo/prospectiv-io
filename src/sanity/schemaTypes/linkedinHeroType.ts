@@ -1,11 +1,11 @@
-import {DocumentTextIcon} from '@sanity/icons'
+import { DocumentTextIcon } from '@sanity/icons'
 import { defineField, defineType} from 'sanity'
 
-export const googleAdsHeroType = defineType({
-  name: 'googleherodata',
-  title: 'Google Hero Section',
+export const linkedInAdsHeroType = defineType({
+  name: 'linkedinherodata',
+  title: 'LinkedIn Hero Section',
   type: 'document',
-  icon: DocumentTextIcon,
+  icon: DocumentTextIcon, 
   fields: [
     defineField({
       name: 'headline',

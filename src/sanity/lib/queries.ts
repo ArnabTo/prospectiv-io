@@ -13,6 +13,42 @@ export const GOOGLE_HERO_TEXTCONTENT_QUERY = defineQuery(`
         },
 }
   `)
+export const LINKEDIN_HERO_TEXTCONTENT_QUERY = defineQuery(`
+*[_type == "linkedinherodata" && defined(slug.current)] | order(_createdAt desc){
+  headline,
+  subline,
+  bannerImage{
+            asset->{
+                _id,
+                url
+            }
+        },
+}
+  `)
+export const COLDEMAIL_HERO_TEXTCONTENT_QUERY = defineQuery(`
+*[_type == "coldemailherodata" && defined(slug.current)] | order(_createdAt desc){
+  headline,
+  subline,
+  bannerImage{
+            asset->{
+                _id,
+                url
+            }
+        },
+  bannerImageTwo{
+            asset->{
+                _id,
+                url
+            }
+        },
+  bannerImageThree{
+            asset->{
+                _id,
+                url
+            }
+        },
+}
+  `)
 export const ALL_POST_QUERY = defineQuery(`
     *[_type == "post" && defined(slug.current)] | order(_createdAt desc){
         _id,

@@ -12,6 +12,8 @@ import { userDataType } from './userDataType'
 import { successstoryType } from './successstoryType'
 import { awardsType } from './awardsType'
 import { googleAdsHeroType } from './googleHeroType'
+import { linkedInAdsHeroType } from './linkedinHeroType'
+import { coldEmailHeroType } from './coldEmailHeroType'
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -26,6 +28,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     userDataType,
     successstoryType,
     awardsType,
-    googleAdsHeroType
+    googleAdsHeroType,
+    linkedInAdsHeroType,
+    coldEmailHeroType
   ],
 }
