@@ -9,7 +9,14 @@ export async function GET(request: Request) {
         const query = url.searchParams.get("query")
 
         if (!query) {
-            return new Response(JSON.stringify({ message: "Query parameter is required" }), { status: 400 });
+            return new Response(JSON.stringify({ message: "Query parameter is required" }),
+                {
+                    status: 400,
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Cache-Control": "no-store", // Prevent caching to always fetch fresh data
+                    },
+                });
         }
 
         const response = await client.fetch(BLOG_SEARCH_QUERY, { params: { query } });

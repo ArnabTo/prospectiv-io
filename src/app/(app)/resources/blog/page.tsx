@@ -7,7 +7,7 @@ import { ArrowRight, Loader2, Search } from "lucide-react";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react"
+import { cache, useCallback, useEffect, useState } from "react"
 import { Blog } from '@/types/types'
 import { Separator } from "@/components/ui/separator";
 
@@ -18,7 +18,6 @@ export default function Blogs() {
     const [isLoading, setIsLoading] = useState(false)
     const [searchQuery, setSearchQuery] = useState('')
     const [searchedBlog, setSearchedBlog] = useState<Blog[]>([])
-    const [msg, setMsg] = useState('')
 
     const fetchBlogs = useCallback(async () => {
         setIsLoading(true)
@@ -49,7 +48,7 @@ export default function Blogs() {
         fetchBlogs()
     }, [fetchBlogs])
 
-
+console.log(blogs)
     return (
         <div className="max-w-7xl mx-auto space-y-16 py-16">
             <div className="w-full mx-auto space-y-7">
@@ -131,7 +130,7 @@ export default function Blogs() {
                                         {
                                             searchedBlog.map((blog) => <>
                                                 <Link href={`/blogs/${blog.slug}`} key={blog._id}>
-                                                    <Card className="border border-borderColor h-full max-w-96 rounded-2xl group">
+                                                    <Card className="flex flex-col border border-borderColor h-full max-w-96 rounded-2xl group">
                                                         <CardHeader className="space-y-3 p-3 lg:p-5">
                                                             <div className="overflow-hidden">
                                                                 <Image
@@ -139,21 +138,21 @@ export default function Blogs() {
                                                                     width={500}
                                                                     height={500}
                                                                     alt='blog_thumbnail'
-                                                                    className="rounded-lg group-hover:scale-110 transition-all duration-300 border border-borderColor"
+                                                                    className="rounded-lg object-cover group-hover:scale-110 transition-all duration-300 border border-borderColor"
                                                                 />
                                                             </div>
                                                             <div className="flex justify-start gap-3">
-                                                                {
+                                                                {/* {
                                                                     blog.categories == null ? <>"Unknown"</>
                                                                         :
                                                                         <Badge className="bg-buttonColor text-foreground hover:bg-secondary w-fit text-center">
-                                                                            {blog.categories.map((category, index) => (<span key={index}>{category.title}</span>))}
+                                                                            {blog.categories.map((category, index) => (<span key={index}>{category?.title}</span>))}
                                                                         </Badge>
-                                                                }
+                                                                } */}
                                                                 <p className="text-sm lg:text-md">{new Date(blog?._createdAt).toDateString()}</p>
                                                             </div>
                                                         </CardHeader>
-                                                        <CardContent className="p-3 lg:p-5">
+                                                        <CardContent className="flex flex-col flex-grow p-3 lg:p-5">
                                                             <h2 className="text-xl font-bold line-clamp-2">{blog.title}</h2>
                                                             <p className="text-lg text-textColorTwo line-clamp-2"><PortableText value={blog.body} /></p>
                                                         </CardContent>
@@ -172,7 +171,7 @@ export default function Blogs() {
                                         {
                                             blogs.map((blog) => <>
                                                 <Link href={`/blogs/${blog.slug.current}`} key={blog._id}>
-                                                    <Card className="border border-borderColor h-full max-w-96 rounded-2xl group">
+                                                    <Card className="flex flex-col border border-borderColor h-full max-w-96 rounded-2xl group">
                                                         <CardHeader className="space-y-3 p-3 lg:p-5">
                                                             <div className="overflow-hidden">
                                                                 <Image
@@ -184,17 +183,17 @@ export default function Blogs() {
                                                                 />
                                                             </div>
                                                             <div className="flex justify-start gap-3">
-                                                                {
+                                                                {/* {
                                                                     blog.categories == null ? <>"Unknown"</>
                                                                         :
                                                                         <Badge className="bg-buttonColor text-foreground hover:bg-secondary w-fit text-center">
                                                                             {blog.categories.map((category, index) => (<span key={index}>{category.title}</span>))}
                                                                         </Badge>
-                                                                }
+                                                                } */}
                                                                 <p className="text-sm lg:text-md">{new Date(blog?._createdAt).toDateString()}</p>
                                                             </div>
                                                         </CardHeader>
-                                                        <CardContent className="p-3 lg:p-5">
+                                                        <CardContent className="flex flex-col flex-grow p-3 lg:p-5">
                                                             <h2 className="text-xl font-bold line-clamp-2">{blog.title}</h2>
                                                             <p className="text-lg text-textColorTwo line-clamp-2"><PortableText value={blog.body} /></p>
                                                         </CardContent>

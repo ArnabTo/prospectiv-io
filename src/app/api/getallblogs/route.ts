@@ -3,12 +3,12 @@ import { client } from "@/sanity/lib/client";
 
 export async function GET(reqest: Request) {
     try {
-        const response = await client.fetch(ALL_POST_QUERY);
-        return new Response(JSON.stringify(response), {
-            status: 200,
+        const response = await client.fetch(ALL_POST_QUERY,{}, { cache: 'no-cache' });
+        return new Response(JSON.stringify(response), {status: 200,
             headers: {
-                "Content-Type": "application/json",
-                "Cache-Control": "no-store", // Prevent caching to always fetch fresh data
+                'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0',
             },
         });
     } catch (error) {
