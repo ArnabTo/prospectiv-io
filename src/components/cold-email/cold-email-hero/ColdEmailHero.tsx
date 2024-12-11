@@ -115,6 +115,7 @@ const ColdEmailHero = () => {
         }
     }, [isLoading]);
 
+    console.log(heroContents)
     return (
 
         <section className="overflow-hidden pt-24 relative z-10">
@@ -166,7 +167,7 @@ const ColdEmailHero = () => {
                                         src={heroContents[0]?.bannerImageTwo?.asset?.url ? heroContents[0]?.bannerImageTwo?.asset?.url : HeroBg}
                                         width={1200} height={1200} alt="HeroBg" />
                                     <Image className="w-full max-w-[15%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-[26px] border border-borderColor animate-floatReverse z-10 absolute right-5 bottom-8 lg:bottom-10 lg:right-8"
-                                        src={heroContents[0]?.bannerImageTwo?.asset?.url ? heroContents[0]?.bannerImageTwo?.asset?.url : HeroBgThree}
+                                        src={heroContents[0]?.bannerImageTwo?.asset?.url ? heroContents[0]?.bannerImageThree?.asset?.url : HeroBgThree}
                                         width={500} height={500} alt="HeroBg" />
                                 </div>
 

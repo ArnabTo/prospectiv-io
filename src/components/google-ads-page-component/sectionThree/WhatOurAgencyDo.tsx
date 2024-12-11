@@ -3,6 +3,8 @@ import Image from "next/image";
 import GoogleAds from '@/public/assets/googleads.png'
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { Separator } from "@/components/ui/separator";
+import GoogleAdsImage from '@/public/assets/googleadsimage.png'
+import CampaignManage from '@/public/assets/campaign-manage.png'
 const WhatOurAgencyDo = () => {
     return (
         <section className="max-w-7xl mx-auto space-y-24 p-5">
@@ -37,12 +39,12 @@ const WhatOurAgencyDo = () => {
                         Then we organize Google ads campaign and ad group structures with the most relevant ads and landing pages.
                     </p>
                 </div>
-                <div className="lg:max-w-[40%] rounded-xl lg:rounded-3xl">
+                <div className="lg:max-w-[50%] rounded-xl lg:rounded-3xl">
                     <Image
-                        className="rounded-xl lg:rounded-3xl"
-                        src='https://images.pexels.com/photos/5833767/pexels-photo-5833767.jpeg?auto=compress&cs=tinysrgb&w=600'
-                        width={800}
-                        height={800}
+                        className="w-full h-full rounded-xl lg:rounded-3xl"
+                        src={GoogleAdsImage}
+                        width={1000}
+                        height={1000}
                         alt='agency-image'
                     />
                 </div>
@@ -74,7 +76,7 @@ const WhatOurAgencyDo = () => {
                 <div className="lg:max-w-[40%] rounded-xl lg:rounded-3xl">
                     <Image
                         className="rounded-xl lg:rounded-3xl"
-                        src='https://images.pexels.com/photos/5833767/pexels-photo-5833767.jpeg?auto=compress&cs=tinysrgb&w=600'
+                        src={CampaignManage}
                         width={800}
                         height={800}
                         alt='agency-image'
