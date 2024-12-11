@@ -29,19 +29,7 @@ export const COLDEMAIL_HERO_TEXTCONTENT_QUERY = defineQuery(`
 *[_type == "coldemailherodata" && defined(slug.current)] | order(_createdAt desc){
   headline,
   subline,
-  bannerImageOne{
-            asset->{
-                _id,
-                url
-            }
-        },
-  bannerImageTwo{
-            asset->{
-                _id,
-                url
-            }
-        },
-  bannerImageThree{
+        bannerImage{
             asset->{
                 _id,
                 url

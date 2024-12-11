@@ -24,26 +24,8 @@ export const coldEmailHeroType = defineType({
     }),
 
     defineField({
-      name: 'bannerImageOne',
+      name: 'bannerImage',
       title: 'Banner Image 1',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-
-    defineField({
-      name: 'bannerImageTwo',
-      title: 'Banner Image 2',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-
-    defineField({
-      name: 'bannerImageThree',
-      title: 'Banner Image 3',
       type: 'image',
       options: {
         hotspot: true,
