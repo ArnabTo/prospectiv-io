@@ -271,7 +271,7 @@ const Navbar = () => {
                                                     <div>
                                                         <h3 className="text-lg font-bold text-secondary">Cold Email</h3>
                                                         <p className="text-sm text-textColorTwo">
-                                                            A page about our culture, people, values and what it's like to work here
+                                                        Connect with prospects effectively through tailored cold email outreach.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -284,7 +284,7 @@ const Navbar = () => {
                                                     <div>
                                                         <h3 className="text-lg font-bold text-secondary">Linkedin Ads</h3>
                                                         <p className="text-sm text-textColorTwo">
-                                                            A page about our culture, people, values and what it's like to work here
+                                                        Engage decision-makers with strategic LinkedIn Ads for B2B success.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -300,7 +300,7 @@ const Navbar = () => {
                                                     <div>
                                                         <h3 className="text-lg font-bold text-secondary">Google Ads</h3>
                                                         <p className="text-sm text-textColorTwo">
-                                                            Meet your campaign team: over 300 prospecting experts helping you sell more.
+                                                        Boost your visibility and drive leads with precision-targeted Google Ads campaigns.
                                                         </p>
                                                     </div>
                                                 </div>
