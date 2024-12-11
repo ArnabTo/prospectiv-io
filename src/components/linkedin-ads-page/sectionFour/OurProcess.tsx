@@ -117,7 +117,7 @@ const OurProcess = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -50 }}
                                 transition={{ duration: 0.3 }}
-                                className="bg-card border border-borderColor rounded-3xl shadow-2xl p-8 space-y-4 flex flex-col xl:flex-row justify-center items-center gap-5"
+                                className="bg-card border border-borderColor rounded-3xl shadow-2xl p-5 lg:p-8 space-y-4 flex flex-col xl:flex-row justify-center items-center gap-5"
                             >
                                 <div>
                                     <motion.h2

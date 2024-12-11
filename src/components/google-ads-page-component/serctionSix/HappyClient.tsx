@@ -13,46 +13,45 @@ const HappyClient = () => {
     const [seeAll, setSeeAll] = useState(false);
     const Clients = [
         {
-            name: 'David James',
-            avatar: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            says: 'Getuplead helped us to get started with an effective paid marketing strategy for our B2B platform leveraging different channels such as Google, Bing, Facebook, or LinkedIn. Since then they regularly adjusted the campaigns for optimal results, challenged our go-to-market approach, and trained our marketing team.',
-            position: 'CEO of Sinfosis',
-            companyLogo: 'https://getuplead.com/wp-content/uploads/sealed-air-logo.png',
-            rating: 3
-        },
-        {
-            name: 'Jimmy Doe',
-            avatar: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            name: 'Mark Seemann',
+            avatar: 'https://getuplead.com/wp-content/uploads/elementor/thumbs/mark-testimonial-qkt7jz5j2clnprwmh16hy8p6er0n2etofrcq4b42vm.jpg',
             says: 'We’ve worked with Getuplead for over 12 months and I have found their performance on our PPC campaigns to be excellent – far better than some other larger PPC agencies we’ve used in the past. Getuplead comes highly recommended.',
-            position: 'CEO of Softonic',
+            position: 'CEO at StaffCircle',
             companyLogo: 'https://getuplead.com/wp-content/uploads/staffcircle-logo.webp',
-            rating: 3
+            rating: 5
         },
         {
-            name: 'John Doe',
-            avatar: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            says: 'Skilled B2B marketing professionals with a primary focus on customer acquisition through PPC. Their skills and extensive experience helped us to significantly increase our number of qualified leads in a few months. I would highly recommend them.',
-            position: 'CEO of MobileTech',
-            companyLogo: 'https://getuplead.com/wp-content/uploads/amenitiz-logo.webp',
-            rating: 3
+            name: 'Gabriela Fabrin Guerra',
+            avatar: 'https://getuplead.com/wp-content/uploads/elementor/thumbs/gabriela-testimonial-qkt7ncepjz7nbh0hszlddw3n1geznd71wfid104aky.jpeg',
+            says: 'Have recently completed a LinkedIn Ads campaign with Getuplead and have only good things to say. This was the most successful LinkedIn campaign we ever ran and working with them was just a pleasure. The process was easy, quick and their team was extremely responsive. Can’t wait to see what our next campaign together can […]',
+            position: 'Marketing Manager at Bremmar',
+            companyLogo: 'https://getuplead.com/wp-content/uploads/bremmar-logo.png',
+            rating: 5
         },
         {
-            name: 'John Doe',
-            avatar: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            name: 'Annie Slattery',
+            avatar: 'https://getuplead.com/wp-content/uploads/elementor/thumbs/annie-testimonial-qkt7o2q6vc7ocjy9jayxbpgjo8t9mw3jc1rygr19qq.jpg',
             says: 'Skilled B2B marketing professionals with a primary focus on customer acquisition through PPC. Their skills and extensive experience helped us to significantly increase our number of qualified leads in a few months. I would highly recommend them.',
-            position: 'CEO of MobileTech',
-            companyLogo: 'https://getuplead.com/wp-content/uploads/amenitiz-logo.webp',
-            rating: 3
+            position: 'CEO at ConX',
+            companyLogo: 'https://getuplead.com/wp-content/uploads/conx-logo.svg',
+            rating: 5
         },
         {
-            name: 'John Doe',
-            avatar: 'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            says: 'Skilled B2B marketing professionals with a primary focus on customer acquisition through PPC. Their skills and extensive experience helped us to significantly increase our number of qualified leads in a few months. I would highly recommend them.',
-            position: 'CEO of MobileTech',
-            companyLogo: 'https://getuplead.com/wp-content/uploads/amenitiz-logo.webp',
-            rating: 3
+            name: 'Timo Van Bargen',
+            avatar: 'https://getuplead.com/wp-content/uploads/elementor/thumbs/timo-testimonial-qkt7m0gxvfe0vcy4kwvecq74qsz9qswqpu8ljw3dea.jpg',
+            says: 'Getuplead helped us to get started with an effective paid marketing strategy for our B2B platform leveraging different channels such as Google, Bing, Facebook, or LinkedIn. Since then they regularly adjusted the campaigns for optimal results, challenged our go-to-market approach, and trained our marketing team.',
+            position: 'Managing Director at Covalo',
+            companyLogo: 'https://getuplead.com/wp-content/uploads/covalo-2048x1152.png',
+            rating: 5
         },
-        // Additional clients can be added here...
+        {
+            name: 'Yohabet Ladapo Tejeida',
+            avatar: 'https://getuplead.com/wp-content/uploads/elementor/thumbs/yohabet-testimonial-qkt7in7rdss19nu98ygix2so43kx5ujd962yn735oy.jpg',
+            says: 'I’ve worked with a lot of B2B and B2C agencies in the past, and I can tell you that I’ve never met a more proficient, involved, and responsible team than Getuplead.',
+            position: 'Paid Advertising Manager at Sealed Air',
+            companyLogo: 'https://getuplead.com/wp-content/uploads/sealed-air-logo.png',
+            rating: 5
+        },
     ];
 
     const handleShowAllClients = () => {

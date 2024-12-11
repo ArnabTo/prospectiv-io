@@ -35,7 +35,7 @@ const LinkedinAdsHero = () => {
                     (
                         <div className="max-w-7xl mx-auto">
                             <div className="flex flex-col lg:flex-row justify-center items-center p-5 lg:p-10">
-                                <div className="space-y-5 lg:max-w-[60%] text-center lg:text-start">
+                                <div className="space-y-5 lg:max-w-[60%] text-center lg:text-start mb-10">
                                     <motion.h1
                                         initial={{ opacity: 0, y: 10 }}
                                         whileInView={{ opacity: 1, y: 0 }}
