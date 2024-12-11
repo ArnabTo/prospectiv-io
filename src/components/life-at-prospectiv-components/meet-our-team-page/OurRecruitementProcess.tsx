@@ -21,25 +21,25 @@ const OurRecruitementProcess = () => {
             title: "Screening",
             description: "Send us your CV. Or your portfolio. Or even better a Github link full of half finished hobby projects and a stack overflow username.",
             lottieRef: lottieRefs.screening,
-            animationData: require('@/public/assets/file.json') // Replace with your actual animation file
+            animationData: require('@/public/assets/lottie-icons/file.json') // Replace with your actual animation file
         },
         {
             title: "Initial chat",
             description: "Initial interview to meet you, explain the role and make sure we look to be a good fit for each other.",
             lottieRef: lottieRefs.initialChat,
-            animationData: require('@/public/assets/chat.json') // Replace with your actual animation file
+            animationData: require('@/public/assets/lottie-icons/chat.json') // Replace with your actual animation file
         },
         {
             title: "Task",
             description: "For some roles, you may be given a task that simulates the job's technology or responsibilities. Our past tests reflect creative, inspired work from candidates.",
             lottieRef: lottieRefs.task,
-            animationData: require('@/public/assets/checklist.json') // Replace with your actual animation file
+            animationData: require('@/public/assets/lottie-icons/checklist.json') // Replace with your actual animation file
         },
         {
             title: "Tech Interview",
             description: "An in-depth interview with your potential line manager and a senior team member. No whiteboard coding or sorting algorithms—just relevant technical questions.",
             lottieRef: lottieRefs.techInterview,
-            animationData: require('@/public/assets/Hire.json') // Replace with your actual animation file
+            animationData: require('@/public/assets/lottie-icons/Hire.json') // Replace with your actual animation file
         }
     ];
     const handleMouseEnter = (ref: any) => {

@@ -4,8 +4,10 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 const PayPerLead = () => {
-
-    const lottieRefSix = useRef(null);
+    
+ const lottieRefOne = useRef(null);
+    const lottieRefTwo = useRef(null);
+    const lottieRefThree = useRef(null);
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
         if (typeof document !== 'undefined') {
             lottieRef?.current?.play(); // Play animation on hover
@@ -39,9 +41,7 @@ const PayPerLead = () => {
                     transition={{ duration: 0.5 }}
                     className="text-lg md:text-xl lg:text-2xl text-textColorTwo"
                 >
-                    Committed to our confidence in our lead generation system, Prospectiv’s lead generation
-                    services come without a fixed-term contract. You only pay for as few or as many leads as
-                    you need and we’ll deliver.
+                  Prospectiv offers flexible lead generation services with no fixed-term contracts—you only pay for the leads you need, and we deliver.
                 </motion.p>
 
                 <div
@@ -54,14 +54,14 @@ const PayPerLead = () => {
             <div className="lg:w-1/2 flex flex-col">
                 <div
                     className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
-                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
-                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                    onMouseEnter={() => handleMouseEnter(lottieRefOne)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefOne)}
                 >
                     <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
-                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                        <div className='min-w-24 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
                             <Lottie
-                                lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                lottieRef={lottieRefOne}
+                                animationData={require('../../public/assets/lottie-icons/Calculator.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -90,14 +90,14 @@ const PayPerLead = () => {
                 </div>
                 <div
                     className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
-                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
-                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                    onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
                 >
                     <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
-                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                        <div className='min-w-24 w-24 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
                             <Lottie
-                                lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                lottieRef={lottieRefTwo}
+                                animationData={require('../../public/assets/lottie-icons/Animation - 1733921662832.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -126,14 +126,14 @@ const PayPerLead = () => {
                 </div>
                 <div
                     className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
-                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
-                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                    onMouseEnter={() => handleMouseEnter(lottieRefThree)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefThree)}
                 >
                     <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
-                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                        <div className='min-w-24 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
                             <Lottie
-                                lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                lottieRef={lottieRefThree}
+                                animationData={require('../../public/assets/lottie-icons/Fast Delivery.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />

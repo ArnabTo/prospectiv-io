@@ -52,7 +52,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefOne}
-                                        animationData={require('@/public/assets/Training.json')}
+                                        animationData={require('@/public/assets/lottie-icons/Training.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -75,7 +75,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefTwo}
-                                        animationData={require('@/public/assets/globe.json')}
+                                        animationData={require('@/public/assets/lottie-icons/globe.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -100,7 +100,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefThree}
-                                        animationData={require('@/public/assets/Heart.json')}
+                                        animationData={require('@/public/assets/lottie-icons/Heart.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -125,7 +125,7 @@ const CultureAndPerks = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefFour}
-                                        animationData={require('@/public/assets/lightbulb.json')}
+                                        animationData={require('@/public/assets/lottie-icons/lightbulb.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />

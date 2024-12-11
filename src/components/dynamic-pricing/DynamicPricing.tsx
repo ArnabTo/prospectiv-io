@@ -5,6 +5,9 @@ import React, { useRef } from 'react';
 
 const DynamicPricing = () => {
 
+    const lottieRefOne = useRef(null);
+    const lottieRefTwo = useRef(null);
+    const lottieRefThree = useRef(null);
 
     const lottieRefSix = useRef(null);
     const handleMouseEnter = (lottieRef: React.RefObject<any>) => {
@@ -32,8 +35,7 @@ const DynamicPricing = () => {
                 <p
                     className="text-lg md:text-xl lg:text-2xl text-textColorTwo"
                 >
-                    We use demand-based pricing to adjust the cost of a lead credit based its true value. For example, if CPM reduces, so does the cost of a credit. We pull data from across our cold email, LinkedIn Ads and
-                    Google Ads efforts to calculate a true cost per lead, so you never pay for more than you have to.
+                    Our demand-based pricing adjusts lead credit costs to reflect true value. If CPM drops, so does the credit cost. We calculate the true cost per lead using data from cold email, LinkedIn Ads, and Google Ads, ensuring you only pay what's necessary.
                 </p>
 
                 <div
@@ -47,14 +49,14 @@ const DynamicPricing = () => {
                 <div
                   
                     className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
-                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
-                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                    onMouseEnter={() => handleMouseEnter(lottieRefOne)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefOne)}
                 >
                     <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
-                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                        <div className='min-w-24 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
                             <Lottie
-                                lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                lottieRef={lottieRefOne}
+                                animationData={require('../../public/assets/lottie-icons/download.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -84,14 +86,14 @@ const DynamicPricing = () => {
                 <div
                   
                     className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
-                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
-                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                    onMouseEnter={() => handleMouseEnter(lottieRefTwo)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefTwo)}
                 >
                     <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
-                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                        <div className='min-w-24 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
                             <Lottie
-                                lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                lottieRef={lottieRefTwo}
+                                animationData={require('../../public/assets/lottie-icons/upload.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -120,14 +122,14 @@ const DynamicPricing = () => {
                 </div>
                 <div
                     className="bg-card group transition duration-300 rounded-r-xl mb-5 border border-borderColor rounded-3xl"
-                    onMouseEnter={() => handleMouseEnter(lottieRefSix)}
-                    onMouseLeave={() => handleMouseLeave(lottieRefSix)}
+                    onMouseEnter={() => handleMouseEnter(lottieRefThree)}
+                    onMouseLeave={() => handleMouseLeave(lottieRefThree)}
                 >
                     <div className="p-5 flex flex-col lg:flex-row justify-start items-center gap-5">
-                        <div className='min-w-28 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
+                        <div className='min-w-24 bg-foreground rounded-lg p-1 group-hover:bg-foreground ring-4 group-hover:ring-secondary/80 transition-all duration-300'>
                             <Lottie
-                                lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                lottieRef={lottieRefThree}
+                                animationData={require('../../public/assets/lottie-icons/Down Payment.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />

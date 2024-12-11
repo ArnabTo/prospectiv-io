@@ -74,7 +74,7 @@ const BenefitsOfProspectiv = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefOne}
-                                        animationData={require('@/public/assets/Advantage.json')}
+                                        animationData={require('@/public/assets/lottie-icons/Advantage.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -99,7 +99,7 @@ const BenefitsOfProspectiv = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefTwo}
-                                        animationData={require('@/public/assets/medicine box.json')}
+                                        animationData={require('@/public/assets/lottie-icons/medicine box.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -121,7 +121,7 @@ const BenefitsOfProspectiv = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefThree}
-                                        animationData={require('@/public/assets/share.json')}
+                                        animationData={require('@/public/assets/lottie-icons/share.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />
@@ -143,7 +143,7 @@ const BenefitsOfProspectiv = () => {
                                 <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                                     <Lottie
                                         lottieRef={lottieRefFour}
-                                        animationData={require('@/public/assets/calendar V3.json')}
+                                        animationData={require('@/public/assets/lottie-icons/calendar V3.json')}
                                         loop={false} // Play only once
                                         autoplay={false} // Disable autoplay
                                     />

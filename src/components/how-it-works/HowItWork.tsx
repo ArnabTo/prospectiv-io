@@ -91,7 +91,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefOne}
-                                animationData={require('@/public/assets/search.json')}
+                                animationData={require('@/public/assets/lottie-icons/search.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -108,7 +108,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefTwo}
-                                animationData={require('../../public/assets/Database.json')}
+                                animationData={require('../../public/assets/lottie-icons/Database.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -125,7 +125,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefThree}
-                                animationData={require('../../public/assets/mail.json')}
+                                animationData={require('../../public/assets/lottie-icons/mail.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -142,7 +142,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefFour}
-                                animationData={require('../../public/assets/play.json')}
+                                animationData={require('../../public/assets/lottie-icons/play.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -159,7 +159,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefFive}
-                                animationData={require('../../public/assets/notification.json')}
+                                animationData={require('../../public/assets/lottie-icons/notification.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
@@ -176,7 +176,7 @@ const HowItWork = () => {
                         <div className='max-w-16 bg-foreground rounded-lg p-1 group-hover:bg-foreground transition-all duration-1000'>
                             <Lottie
                                 lottieRef={lottieRefSix}
-                                animationData={require('../../public/assets/analytics.json')}
+                                animationData={require('../../public/assets/lottie-icons/analytics.json')}
                                 loop={false} // Play only once
                                 autoplay={false} // Disable autoplay
                             />
