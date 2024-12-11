@@ -28,14 +28,14 @@ const GoogleHero = () => {
 
 
     return (
-        <section className="relative space-y-16 py-28 overflow-hidden lg:overflow-visible">
+        <section className="relative space-y-16 py-20 overflow-hidden lg:overflow-visible">
             <div className="max-w-7xl mx-auto">
                {
                isLoading ? <div className="flex items-center justify-center h-screen"><Loader2 size={60} className="w-10 h-10 mx-auto animate-spin"/></div>
                :
                (
                 <div className="flex flex-col lg:flex-row justify-center items-center p-5 lg:p-10">
-                <div className="space-y-5 lg:max-w-[60%] text-center lg:text-start">
+                <div className="space-y-5 lg:max-w-[60%] text-center lg:text-start mb-10">
                     <motion.h1
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}

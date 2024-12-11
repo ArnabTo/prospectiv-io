@@ -7,13 +7,13 @@ import GoogleAdsImage from '@/public/assets/googleadsimage.png'
 import CampaignManage from '@/public/assets/campaign-manage.png'
 const WhatOurAgencyDo = () => {
     return (
-        <section className="max-w-7xl mx-auto space-y-24 p-5">
+        <section className="max-w-7xl mx-auto space-y-10 lg:space-y-20 p-5">
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-2xl md:text-4xl font-bold text-center mb-16">
+                className="text-2xl md:text-4xl font-bold text-center mb-10">
                 What our B2B Google Ads Agency do?
             </motion.div>
             <motion.div
@@ -41,7 +41,7 @@ const WhatOurAgencyDo = () => {
                 </div>
                 <div className="lg:max-w-[50%] rounded-xl lg:rounded-3xl">
                     <Image
-                        className="w-full h-full rounded-xl lg:rounded-3xl"
+                        className="w-full h-full object-cover rounded-xl lg:rounded-3xl"
                         src={GoogleAdsImage}
                         width={1000}
                         height={1000}
@@ -75,7 +75,7 @@ const WhatOurAgencyDo = () => {
                 </div>
                 <div className="lg:max-w-[40%] rounded-xl lg:rounded-3xl">
                     <Image
-                        className="rounded-xl lg:rounded-3xl"
+                        className="object-cover rounded-xl lg:rounded-3xl"
                         src={CampaignManage}
                         width={800}
                         height={800}
@@ -124,7 +124,7 @@ const WhatOurAgencyDo = () => {
                 </div>
                 <div className="lg:max-w-[40%] rounded-xl lg:rounded-3xl bg-gradient-to-tr from-[#ED4A8D] to-[#5C55F6]">
                     <Image
-                        className="rounded-xl lg:rounded-3xl"
+                        className="object-cover rounded-xl lg:rounded-3xl"
                         src={GoogleAds}
                         width={800}
                         height={800}
