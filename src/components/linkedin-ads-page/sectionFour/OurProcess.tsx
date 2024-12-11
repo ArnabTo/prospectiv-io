@@ -4,7 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, CircleCheckBig } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import OptimiztionImage from '@/public/assets/svg/ab-testing-optimisation-1.png'
+import Audit from '@/public/assets/audit-2.png'
+import PositionImage from '@/public/assets/positioning.png'
+import ContentStrategy from '@/public/assets/content-strategy.png'
+import AssetCreation from '@/public/assets/asset-creation.png'
+import Optimization from '@/public/assets/ab-testing-optimisation-1.png'
+import Exprerimentation from '@/public/assets/experiment.png'
+import Reporting from '@/public/assets/reporting-1.png'
 import Image from "next/image";
 const OurProcess = () => {
     const [activeStep, setActiveStep] = useState(0);
@@ -13,27 +19,27 @@ const OurProcess = () => {
         {
             title: 'Audit',
             description: 'A comprehensive review of your Linkedin Ad Account to look at historical data and activity, helping inform our campaign objectives and recommended strategy.',
-            imageContent: OptimiztionImage
+            imageContent: Audit
         },
         {
             title: 'Positioning',
             description: 'We gain a deep understanding of the space you want to occupy in the minds of your target audience by identifying your ideal customers, their interests, and how your product is uniquely positioned to provide solutions to their problems.',
-            imageContent: OptimiztionImage
+            imageContent: PositionImage
         },
         {
             title: 'Targeting & Content Strategy ',
             description: 'We develop a personalised advertising strategy that fits your objectives on the platform. By diversifying ad formats and targeting different stages of customer awareness, we ensure variety and build a holistic brand presence.',
-            imageContent: OptimiztionImage
+            imageContent: ContentStrategy
         },
         {
             title: 'Asset Creation',
             description: 'We create, or brief the relevant assets to deliver the content strategy, prioritising what we plan to activate on a cold audience first.',
-            imageContent: OptimiztionImage
+            imageContent: AssetCreation
         },
         {
             title: 'Experimentation',
             description: 'Continuous split testing across targeting, creative, and copy allows us to quickly hone in on what is likely to deliver the best results. Using the data to refine effective lead magnets, that target decision makers.',
-            imageContent: OptimiztionImage
+            imageContent: Exprerimentation
         },
         {
             title: 'Optimization',
@@ -42,7 +48,7 @@ const OurProcess = () => {
                 "**CRO(Conversion Rate Optimization):**Tweaking ads to improve poor conversion rates, from clicks to leads",
                 "**Landing Page Enhancement:** Ensuring the transition from ad to website is seamless and effective"
             ],
-            imageContent: OptimiztionImage
+            imageContent: Optimization
         },
         {
             title: 'Reporting',
@@ -51,7 +57,7 @@ const OurProcess = () => {
                 "**Insightful Analytics:** Beyond numbers, we provide actionable insights for continuous growth.",
                 "**Feedback Sessions:** Bi-weekly scheduled sessions ensure we’re aligned with your goals and visions."
             ],
-            imageContent: OptimiztionImage
+            imageContent: Reporting
         },
     ]
 
