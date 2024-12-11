@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import ImageOne from '@/public/assets/sectwocontentone.png'
-import ImageTwo from '@/public/assets/sectwocontenttwo.png'
-import ImageThree from '@/public/assets/sectwocontentthree.png'
-import { SectionTwoTextContent } from '@/lib/TextContent';
+import ImageOne from '@/public/assets/whyprospectivone.png'
+import ImageTwo from '@/public/assets/whyprospectivtwo.png'
+import ImageThree from '@/public/assets/whyprospectivthree.svg'
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
