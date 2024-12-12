@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import './custom.css';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import ColdEmail from '@/app/(app)/services/cold-email/page';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -39,7 +39,11 @@ const LinkedinAdsServices = () => {
                                     modifier: 1,
                                     slideShadows: true,
                                 }}
-                                modules={[EffectCoverflow, Pagination]}
+                                modules={[EffectCoverflow, Pagination, Autoplay]}
+                                autoplay={{
+                                    delay: 1500,
+                                    disableOnInteraction: true,
+                                }}
                                 className="mySwiper"
                             >
                                 <SwiperSlide>

@@ -74,11 +74,6 @@ const membersDetails = [
     },
 ]
 
-const firstRow = membersDetails.slice(0, reviews.length / 2);
-
-
-
-
 const MemberCard = ({ name, title, avatar, says }: { name: string, title: string, avatar: any, says: string }) => {
     return (
         <div
