@@ -6,13 +6,15 @@ const GoogleAdsCompanies = () => {
     const companyLogos = [
         'https://getuplead.com/wp-content/uploads/Siemens-Logo-2048x1152.png',
         'https://getuplead.com/wp-content/uploads/staffcircle-2048x1152.png',
-        'https://getuplead.com/wp-content/uploads/flexperto-1-2048x1152.png',
-        'https://getuplead.com/wp-content/uploads/talentsoft2-2048x1152.png',
+        'https://getuplead.com/wp-content/uploads/sealed-air-logo.png',
+        'https://getuplead.com/wp-content/uploads/zinc-logo.png',
         'https://getuplead.com/wp-content/uploads/conx-2048x1152.png',
-        'https://getuplead.com/wp-content/uploads/amenitiz-1-2048x1152.png',
+        'https://getuplead.com/wp-content/uploads/kodo-logo.png',
         'https://getuplead.com/wp-content/uploads/snowflake-2048x1152.png',
         'https://getuplead.com/wp-content/uploads/cegid-2048x1152.png',
-        'https://getuplead.com/wp-content/uploads/covalo-1-2048x1152.png'
+        'https://getuplead.com/wp-content/uploads/covalo-1-2048x1152.png',
+        'https://getuplead.com/wp-content/uploads/yzr-logo.png',
+        'https://getuplead.com/wp-content/uploads/emdesk-logo.png',
     ];
 
     return (
