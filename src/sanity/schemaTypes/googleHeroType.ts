@@ -24,7 +24,15 @@ export const googleAdsHeroType = defineType({
     }),
 
     defineField({
-      name: 'bannerImage',
+      name: 'bannerImageOne',
+      title: 'Banner Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'bannerImageTwo',
       title: 'Banner Image',
       type: 'image',
       options: {
@@ -32,11 +40,12 @@ export const googleAdsHeroType = defineType({
       },
     }),
 
+
   ],
   preview: {
     select: {
       title: 'headline',
-      media: 'bannerImage',
+      media: 'bannerImageOne',
     },
   },
 })

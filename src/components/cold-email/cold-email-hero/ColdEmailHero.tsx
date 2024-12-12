@@ -10,9 +10,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { COLDEMAIL_HERO_TEXTCONTENT_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { Loader2 } from "lucide-react";
-import { HeroContentColdEmail } from "@/types/types";
 import { motion } from "framer-motion";
-import { HeroContent } from "@/types/types";
+import { HeroContentColdEmail } from "@/types/types";
 
 const ColdEmailHero = () => {
 
@@ -23,7 +22,7 @@ const ColdEmailHero = () => {
     const imageRef = useRef(null);
     const gradientBgRef = useRef(null);
 
-    const [heroContents, setHeroContents] = useState<HeroContent[]>([]);
+    const [heroContents, setHeroContents] = useState<HeroContentColdEmail[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const fetchHeroContents = async () => {
         try {
@@ -260,7 +259,6 @@ const ColdEmailHero = () => {
                     <div className="bg-gradientColorThree absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
                 </div>
             </div>
-            <Partners />
         </section>
     );
 };

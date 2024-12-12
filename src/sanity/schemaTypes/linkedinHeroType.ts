@@ -24,7 +24,15 @@ export const linkedInAdsHeroType = defineType({
     }),
 
     defineField({
-      name: 'bannerImage',
+      name: 'bannerImageOne',
+      title: 'Banner Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'bannerImageTwo',
       title: 'Banner Image',
       type: 'image',
       options: {
@@ -36,7 +44,7 @@ export const linkedInAdsHeroType = defineType({
   preview: {
     select: {
       title: 'headline',
-      media: 'bannerImage',
+      media: 'bannerImageOne',
     },
   },
 })

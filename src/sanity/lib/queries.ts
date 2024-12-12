@@ -5,7 +5,13 @@ export const GOOGLE_HERO_TEXTCONTENT_QUERY = defineQuery(`
 *[_type == "googleherodata" && defined(slug.current)] | order(_createdAt desc){
   headline,
   subline,
-  bannerImage{
+  bannerImageOne{
+            asset->{
+                _id,
+                url
+            }
+        },
+        bannerImageTwo{
             asset->{
                 _id,
                 url
@@ -17,7 +23,13 @@ export const LINKEDIN_HERO_TEXTCONTENT_QUERY = defineQuery(`
 *[_type == "linkedinherodata" && defined(slug.current)] | order(_createdAt desc){
   headline,
   subline,
-  bannerImage{
+  bannerImageOne{
+            asset->{
+                _id,
+                url
+            }
+        },
+        bannerImageTwo{
             asset->{
                 _id,
                 url

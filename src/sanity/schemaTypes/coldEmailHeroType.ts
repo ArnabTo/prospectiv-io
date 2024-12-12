@@ -25,7 +25,7 @@ export const coldEmailHeroType = defineType({
 
     defineField({
       name: 'bannerImage',
-      title: 'Banner Image 1',
+      title: 'Banner Image',
       type: 'image',
       options: {
         hotspot: true,
