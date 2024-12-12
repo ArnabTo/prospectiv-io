@@ -9,15 +9,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from 'framer-motion';
 import CountUp from "react-countup";
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import Rating from "@/components/rating/RatingComponent";
 import '../../../custom.css'
 import axios from "axios";
 import { SuccessStoryType } from "@/types/types";
 import CompanyLogoOne from '@/public/assets/company_logo/logoOne.svg'
 import CompanyLogoTwo from '@/public/assets/company_logo/logoTwo.svg'
-import CompanyLogoThree from '@/public/assets/company_logo/logoThree.svg'
+import CompanyLogoThree from '@/public/assets/company_logo/WORK-HOUSE-METAL.png'
+import CompanyLogoFour from '@/public/assets/company_logo/MD2MD.jpg'
 import PaginatedSuccessStories from "@/components/successstories/AllSuccessStories";
 import { successStoryPageTextContent } from "@/lib/TextContent";
 
@@ -255,30 +254,30 @@ const SuccessStory = () => {
                     {/* companies trus on us */}
                     <div className="space-y-5">
                         <h1 className="text-3xl md:text-3xl font-bold text-center">Clients trust on us</h1>
-                        <div className="bg-card grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 border border-borderColor rounded-xl p-5 lg:p-10">
+                        <div className="bg-card grid gird-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 items-center border border-borderColor rounded-xl p-5 lg:p-10">
                             <div className='flex flex-col justify-center items-center gap-3'>
-                                <Image src={CompanyLogoOne} alt="logo" width={200} height={70} />
+                                <Image src={CompanyLogoOne} alt="logo" width={200} height={70} layout="fixed" />
                                 <div className='flex items-center gap-2'>
                                     <Rating rating={4.5} />
                                     <p className='text-textColorTwo text-lg'>4.0</p>
                                 </div>
                             </div>
                             <div className='flex flex-col justify-center items-center gap-3'>
-                                <Image src={CompanyLogoTwo} alt="logo" width={200} height={70} />
+                                <Image src={CompanyLogoTwo} alt="logo" width={200} height={70} layout="fixed" />
                                 <div className='flex items-center gap-2'>
                                     <Rating rating={4.5} />
                                     <p className='text-textColorTwo text-lg'>4.0</p>
                                 </div>
                             </div>
                             <div className='flex flex-col justify-center items-center gap-3'>
-                                <Image src={CompanyLogoThree} alt="logo" width={200} height={70} />
+                                <Image src={CompanyLogoThree} alt="logo" width={200} height={70} layout="fixed" />
                                 <div className='flex items-center gap-2'>
                                     <Rating rating={4.5} />
                                     <p className='text-textColorTwo text-lg'>4.0</p>
                                 </div>
                             </div>
                             <div className='flex flex-col justify-center items-center gap-3'>
-                                <Image src={CompanyLogoThree} alt="logo" width={200} height={70} />
+                                <Image src={CompanyLogoFour} alt="logo" width={200} height={70} layout="fixed" />
                                 <div className='flex items-center gap-2'>
                                     <Rating rating={4.5} />
                                     <p className='text-textColorTwo text-lg'>4.0</p>
