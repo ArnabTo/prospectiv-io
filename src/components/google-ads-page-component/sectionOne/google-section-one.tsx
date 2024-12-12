@@ -68,10 +68,10 @@ const GoogleHero = () => {
                                 </div>
                                 <div className="relative min-w-[50%] h-full md:p-5">
                                     <div
-                                        className="w-full flex justify-center items-end relative px-5">
+                                        className="w-full flex justify-center items-end relative px-5 lg:px-0">
                                         {heroContents[0]?.bannerImageOne && (
                                             <Image
-                                                className="w-full p-2 max-w-[15%] lg:max-w-[18%] mx-auto rounded-[10px] lg:rounded-xl border bg-card border-borderColor animate-floatReverse z-20 -mr-5 md:-mr-8 lg:-mr-10 "
+                                                className="w-full p-2 max-w-[15%] mx-auto rounded-[10px] lg:rounded-xl border bg-card border-borderColor animate-floatReverse z-20 -mr-5 md:-mr-8 lg:-mr-10 "
                                                 src={heroContents[0]?.bannerImageOne?.asset?.url}
                                                 width={300} height={300} alt="HeroBg" />
                                         )}

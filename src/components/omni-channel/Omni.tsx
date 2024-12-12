@@ -75,19 +75,16 @@ const Omni = () => {
     return (
         <div className='relative'>
             <div className='max-w-7xl mx-auto'>
-                <div className='flex flex-col lg:flex-row items-center gap-10 p-5 lg:p-10'>
+                <div className='flex flex-col lg:flex-row justify-between items-center gap-10 p-5 lg:p-10'>
                     <div className='lg:max-w-[40%] space-y-5 h-full'>
                         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-start'>{OmniSection.heading.heading}</h1>
                         <p className='text-md lg:text-lg text-textColorTwo text-center lg:text-start'>
                             {OmniSection.heading.paragraph}
                         </p>
                     </div>
-                    <div className='w-full h-full bg-card p-10 border border-borderColor rounded-xl lg:rounded-3xl'>
+                    <div className='w-full h-full lg:max-w-[50%] bg-card p-5 border border-borderColor rounded-xl lg:rounded-3xl'>
                         <Image className='w-full h-full object-cover rounded-lg lg:rounded-3xl' src={ImageFour} alt='sdfsdf' width={800} height={800} />
                     </div>
-                </div>
-                <div>
-                    <CarouselComp />
                 </div>
             </div>
         </div>

@@ -59,7 +59,7 @@ to generate fast results and scale campaigns efficiently`,
     })
 
     return (
-        <div ref={container} className='relative mt-20 pb-44'>
+        <div ref={container} className='relative mt-20 pb-20'>
             <div>
                 {
                     projects.map((project, i) => {

@@ -11,7 +11,7 @@ import { COLDEMAIL_HERO_TEXTCONTENT_QUERY } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { HeroContentColdEmail } from "@/types/types";
+import { HeroContent } from "@/types/types";
 
 const ColdEmailHero = () => {
 
@@ -22,7 +22,7 @@ const ColdEmailHero = () => {
     const imageRef = useRef(null);
     const gradientBgRef = useRef(null);
 
-    const [heroContents, setHeroContents] = useState<HeroContentColdEmail[]>([]);
+    const [heroContents, setHeroContents] = useState<HeroContent[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const fetchHeroContents = async () => {
         try {
@@ -229,24 +229,26 @@ const ColdEmailHero = () => {
                                             </Link>
                                         </motion.div>
                                     </div>
-                                    <div className="w-full min-w-[50%]">
-                                        {heroContents[0]?.bannerImage && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 100 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                viewport={{ once: true }}
-                                                transition={{ duration: 0.5, delay: 1 }}
-                                            >
-                                                <Image
-                                                    className="w-full h-full object-cover rounded-xl lg:rounded-3xl border border-borderColor filter brightness-110"
-                                                    src={heroContents[0]?.bannerImage?.asset?.url}
-                                                    width={800}
-                                                    height={800}
-                                                    alt="google-ads-hero-bg"
-                                                />
-                                            </motion.div>
+                                    <div className="relative min-w-[50%] h-full md:p-5">
+                                    <div
+                                        className="w-full flex justify-center items-end relative px-5 lg:px-0">
+                                        {heroContents[0]?.bannerImageOne && (
+                                            <Image
+                                                className="w-full p-2 max-w-[15%] mx-auto rounded-[10px] lg:rounded-xl border bg-card border-borderColor animate-floatReverse z-20 -mr-5 md:-mr-8 lg:-mr-10 "
+                                                src={heroContents[0]?.bannerImageOne?.asset?.url}
+                                                width={300} height={300} alt="HeroBg" />
+                                        )}
+                                        {heroContents[0]?.bannerImageTwo && (
+                                            <Image
+                                                className="w-full object-cover max-w-full mx-auto rounded-[10px] lg:rounded-[26px]  animate-float z-10"
+                                                src={heroContents[0]?.bannerImageTwo?.asset?.url}
+                                                width={1200}
+                                                height={1200}
+                                                alt="linkedin-hero-bg"
+                                            />
                                         )}
                                     </div>
+                                </div>
                                 </div>
                             )
                     }

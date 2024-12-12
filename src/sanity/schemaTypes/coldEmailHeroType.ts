@@ -24,8 +24,16 @@ export const coldEmailHeroType = defineType({
     }),
 
     defineField({
-      name: 'bannerImage',
-      title: 'Banner Image',
+      name: 'bannerImageOne',
+      title: 'Banner Image One',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'bannerImageTwo',
+      title: 'Banner Image Two',
       type: 'image',
       options: {
         hotspot: true,
@@ -36,7 +44,7 @@ export const coldEmailHeroType = defineType({
   preview: {
     select: {
       title: 'headline',
-      media: 'bannerImage',
+      media: 'bannerImageOne',
     },
   },
 })

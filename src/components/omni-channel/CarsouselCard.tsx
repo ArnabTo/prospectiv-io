@@ -18,7 +18,7 @@ const CarouselCard = ({ i, title, description, imgcontent, url, color, progress,
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
-    <div ref={container} className=" h-fit flex items-center justify-center sticky top-0 p-5">
+    <div ref={container} className=" h-fit flex items-center justify-center sticky top-16 p-5">
       <motion.div
         style={{
           scale,

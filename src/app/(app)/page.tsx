@@ -11,12 +11,14 @@ import Omni from "@/components/omni-channel/Omni";
 import PayperleadDynamic from "@/components/joint-section/payperlead-dynamic";
 import Walkthrough from "@/components/walkthrough/Walkthrough";
 import FlexibleLead from "@/components/flexible-lead/FlexibleLead";
+import OurServices from "@/components/our-services/OurServices";
 export default function Home() {
 
   return (
 
     <div className="space-y-24">
       <Hero />
+      <OurServices/>
       <Omni />
       <FlexibleLead/>
       <SuccessCounts />
