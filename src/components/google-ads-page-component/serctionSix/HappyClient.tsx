@@ -130,7 +130,10 @@ const HappyClient = () => {
                                         </div>
                                     </div>
                                     <div className="flex justify-start items-center gap-5">
-                                        <Image src={client.logo?.asset?.url} width={100} height={100} alt="company-logo" />
+                                        {
+                                            client.logo?.asset.url &&
+                                            <Image src={client.logo?.asset?.url} width={100} height={100} alt="company-logo" />
+                                        }
                                         <Rating rating={client.rating} />
                                     </div>
                                     <div className="space-y-5 flex-grow">
