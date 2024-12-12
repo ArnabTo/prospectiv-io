@@ -24,6 +24,25 @@ export interface HeroContentColdEmail {
         };
     };
 }
+export interface Testimonial {
+    name: string; // Name of the person giving the testimonial
+    position: string; // Position of the person giving the testimonial
+    testimonial: string; // The actual testimonial text
+    avatar?: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+    };
+    logo?: {
+        asset: {
+            _id: string;
+            url: string;
+        };
+    };
+    rating: number; // Rating provided (required)
+  }
+  
 // export interface HeroContentColdEmail {
 //     headline: string;
 //     subline: string;

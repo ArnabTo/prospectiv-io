@@ -55,6 +55,26 @@ export const COLDEMAIL_HERO_TEXTCONTENT_QUERY = defineQuery(`
         },
 }
   `)
+export const TESTIMONIAL_QUERY = defineQuery(`
+  *[_type == "testimonial"] | order(_createdAt desc) {
+      name,
+    avatar{
+            asset->{
+                _id,
+                url
+            }
+        },
+        testimonial,
+    position,
+    logo{
+            asset->{
+                _id,
+                url
+            }
+        },
+    rating
+    }
+`);
 export const ALL_POST_QUERY = defineQuery(`
     *[_type == "post" && defined(slug.current)] | order(_createdAt desc){
         _id,
