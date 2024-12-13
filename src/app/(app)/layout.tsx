@@ -15,7 +15,7 @@ export default function RootLayout({
     <div>
       <div className="relative z-20 mb-[120vh] md:mb-[75vh] lg:mb-[70vh] h-max bg-background rounded-b-3xl">
         <div className="w-full h-full absolute top-0 left-0 z-0 fbg"></div>
-        {/* <Intro /> */}
+        <Intro />
         <Navbar />
         <div className=" z-40">
           {children}

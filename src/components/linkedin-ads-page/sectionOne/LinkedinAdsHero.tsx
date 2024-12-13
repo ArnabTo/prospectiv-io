@@ -51,13 +51,27 @@ const LinkedinAdsHero = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: 0.5 }}
+
+
+
+
+
+
+
                                         className="text-xl lg:text-2xl font-medium text-textColorTwo">
+
                                         {heroContents[0]?.subline}
+
                                     </motion.p>
+
                                     <motion.div
+
                                         initial={{ opacity: 0, y: 10 }}
+
                                         whileInView={{ opacity: 1, y: 0 }}
+
                                         viewport={{ once: true }}
+                                        
                                         transition={{ duration: 0.5, delay: 0.8 }}
                                         className="w-60 mx-auto lg:mx-0 flex rounded-full bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] p-[2px] shadow-lg duration-300 transform group-hover:scale-105">
                                         <Link href="/demo" className="flex-1 font-bold text-lg text-center bg-black px-10 py-5 rounded-full hover:scale-95 transition-all duration-300">
