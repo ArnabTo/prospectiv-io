@@ -77,7 +77,7 @@ const GoogleHero = () => {
                                         )}
                                         {heroContents[0]?.bannerImageTwo && (
                                             <Image
-                                                className="w-full object-cover max-w-full mx-auto rounded-[10px] lg:rounded-[26px]  animate-float z-10"
+                                                className="w-full object-cover max-w-full mx-auto border border-borderColo rounded-[10px] lg:rounded-[26px]  animate-float z-10"
                                                 src={heroContents[0]?.bannerImageTwo?.asset?.url}
                                                 width={1200}
                                                 height={1200}

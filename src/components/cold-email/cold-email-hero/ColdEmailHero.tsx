@@ -26,7 +26,7 @@ const ColdEmailHero = () => {
     const [isLoading, setIsLoading] = useState(true);
     const fetchHeroContents = async () => {
         try {
-            const response = await client.fetch(COLDEMAIL_HERO_TEXTCONTENT_QUERY, {}, {cache: 'no-cache'})
+            const response = await client.fetch(COLDEMAIL_HERO_TEXTCONTENT_QUERY, {}, { cache: 'no-cache' })
             setHeroContents(response);
             setIsLoading(false);
         } catch (error) {
@@ -229,26 +229,26 @@ const ColdEmailHero = () => {
                                             </Link>
                                         </motion.div>
                                     </div>
-                                    <div className="relative min-w-[50%] h-full md:p-5">
-                                    <div
-                                        className="w-full flex justify-center items-end relative px-5 lg:px-0">
-                                        {heroContents[0]?.bannerImageOne && (
-                                            <Image
-                                                className="w-full p-2 max-w-[15%] mx-auto rounded-[10px] lg:rounded-xl border bg-card border-borderColor animate-floatReverse z-20 -mr-5 md:-mr-8 lg:-mr-10 "
-                                                src={heroContents[0]?.bannerImageOne?.asset?.url}
-                                                width={300} height={300} alt="HeroBg" />
-                                        )}
-                                        {heroContents[0]?.bannerImageTwo && (
-                                            <Image
-                                                className="w-full object-cover max-w-full mx-auto rounded-[10px] lg:rounded-[26px]  animate-float z-10"
-                                                src={heroContents[0]?.bannerImageTwo?.asset?.url}
-                                                width={1200}
-                                                height={1200}
-                                                alt="linkedin-hero-bg"
-                                            />
-                                        )}
+                                    <div className="relative min-w-[50%] h-full md:p-5 lg:p-0">
+                                        <div
+                                            className="w-full flex justify-center items-end relative px-5 lg:px-0">
+                                            {heroContents[0]?.bannerImageOne && (
+                                                <Image
+                                                    className="w-full p-2 max-w-[10%] mx-auto rounded-[10px] lg:rounded-xl border bg-card border-borderColor animate-floatReverse z-20 -mr-5 md:-mr-8 lg:-mr-10 "
+                                                    src={heroContents[0]?.bannerImageOne?.asset?.url}
+                                                    width={300} height={300} alt="HeroBg" />
+                                            )}
+                                            {heroContents[0]?.bannerImageTwo && (
+                                                <Image
+                                                    className="w-full object-cover max-w-full mx-auto border border-borderColor rounded-[10px] lg:rounded-[26px]  animate-float z-10"
+                                                    src={heroContents[0]?.bannerImageTwo?.asset?.url}
+                                                    width={1200}
+                                                    height={1200}
+                                                    alt="linkedin-hero-bg"
+                                                />
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             )
                     }
