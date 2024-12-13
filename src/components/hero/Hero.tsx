@@ -19,79 +19,82 @@ const Hero = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-
-        // Check if this is first visit to home page in this session
-        const isFirstVisit = window.location.pathname === '/' && !sessionStorage.getItem('hasVisitedHome');
-        const delay = isFirstVisit ? 3000 : 0;
-
-        // Mark that we've visited home
-        if (window.location.pathname === '/') {
+    
+        const isFirstVisit = !sessionStorage.getItem('hasVisitedHome');
+        const delay = isFirstVisit ? 3 : 0; // Delay in seconds
+    
+        // Mark the home page as visited
+        if (isFirstVisit) {
             sessionStorage.setItem('hasVisitedHome', 'true');
         }
-
-        const timer = setTimeout(() => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: animateRef.current,
-                    start: 'top 80%',
-                    toggleActions: 'play none none none',
-                }
-            });
-
-            tl.fromTo(animateRef.current, {
+    
+        // GSAP Timeline with delay
+        const tl = gsap.timeline({
+            delay, // Add the delay here
+            scrollTrigger: {
+                trigger: animateRef.current,
+                start: 'top 80%',
+                toggleActions: 'play none none none',
+            },
+        });
+    
+        tl.fromTo(animateRef.current, {
+            opacity: 0,
+            y: 10,
+            scale: 0.9,
+        }, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.7,
+        })
+            .fromTo(sublineRef.current, {
                 opacity: 0,
                 y: 10,
-                scale: 0.9
             }, {
                 opacity: 1,
                 y: 0,
+                duration: 0.6,
+            }, "+=0.1")
+            .fromTo(buttonRefOne.current, {
+                opacity: 0,
+                y: 10,
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+            }, "+=0.1")
+            .fromTo(buttonRefTwo.current, {
+                opacity: 0,
+                y: 10,
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+            }, "+=0.1")
+            .fromTo(imageRef.current, {
+                opacity: 0,
+                y: 10,
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+            }, "+=0.1")
+            .fromTo(gradientBgRef.current, {
+                opacity: 0,
+                scale: 0.9,
+            }, {
+                opacity: 1,
                 scale: 1,
-                duration: 0.7
-            })
-                .fromTo(sublineRef.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.6
-                }, "+=0.1") // Wait 0.2s after previous animation
-                .fromTo(buttonRefOne.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5
-                }, "+=0.1")
-                .fromTo(buttonRefTwo.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5
-                }, "+=0.1")
-                .fromTo(imageRef.current, {
-                    opacity: 0,
-                    y: 10
-                }, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5
-                }, "+=0.1")
-                .fromTo(gradientBgRef.current, {
-                    opacity: 0,
-                    scale: 0.9
-                }, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.5
-                });
-        }, delay);
-
-        return () => clearTimeout(timer);
+                duration: 0.5,
+            });
+    
+        return () => {
+            // Cleanup scroll triggers
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
     }, []);
+    
 
     return (
 
