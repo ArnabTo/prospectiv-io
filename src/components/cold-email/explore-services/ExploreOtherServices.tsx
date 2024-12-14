@@ -14,7 +14,8 @@ const ExploreOtherServices = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
             className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:max-w-[60%] justify-center items-center mx-auto'>
-            <Link href='/services/google-ads' className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
+            <Link href='/services/google-ads' scroll={true}
+            className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                 <div className='flex flex-col gap-5'>
                     <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl'>
                         <Image
@@ -32,7 +33,8 @@ const ExploreOtherServices = () => {
                     </div>
                 </div>
             </Link>
-            <Link href='/services/google-ads' className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
+            <Link href='/services/google-ads' scroll={true}
+             className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                 <div className='flex flex-col gap-5'>
                 <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl'>
                         <Image

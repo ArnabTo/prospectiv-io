@@ -16,7 +16,7 @@ const ExploreOtherServices = () => {
                 viewport={{ once: true }}
                 className='grid grid-cols-1 md:grid-cols-2 h-full gap-5 lg:max-w-[60%] justify-center items-start mx-auto'>
                 <div className='bg-card h-full border border-borderColor rounded-3xl p-4 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
-                    <Link href='/services/cold-email'>
+                    <Link href='/services/cold-email' scroll={true}>
                         <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl overflow-hidden mb-5'>
                             <Image
                                 src={ColdEmail}
@@ -34,7 +34,7 @@ const ExploreOtherServices = () => {
                     </Link>
                 </div>
                 <div className='bg-card border border-borderColor rounded-3xl p-4 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
-                    <Link href='/services/linkedin-ads'>
+                    <Link href='/services/linkedin-ads' scroll={true}>
                         <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl overflow-hidden mb-5'>
                             <Image
                                 src={LinkedinAds}
