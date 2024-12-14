@@ -4,8 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ColdEmail from '@/public/assets/emailmarket.jpg'
 import GoogleAds from '@/public/assets/googleads.png'
+import { useEffect } from 'react';
 
 const ExploreOtherServices = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scrolls to the top
+      }, []); 
+      
     return (
         <section className='max-w-7xl mx-auto space-y-8 p-5'>
         <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Explore other services</h2>

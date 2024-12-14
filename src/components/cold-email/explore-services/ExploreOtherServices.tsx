@@ -5,6 +5,9 @@ import Link from 'next/link';
 import GoogleAds from '@/public/assets/googleads.png'
 import LinkedinAds from '@/public/assets/linkedinads.png'
 const ExploreOtherServices = () => {
+
+
+      
     return (
         <div className='max-w-7xl mx-auto space-y-8 p-5 '>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Explore other services</h2>
@@ -14,7 +17,7 @@ const ExploreOtherServices = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
             className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:max-w-[60%] justify-center items-center mx-auto'>
-            <Link href='/services/google-ads' scroll={true}
+            <Link href='/services/google-ads'  scroll={false}
             className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                 <div className='flex flex-col gap-5'>
                     <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl'>
@@ -33,7 +36,7 @@ const ExploreOtherServices = () => {
                     </div>
                 </div>
             </Link>
-            <Link href='/services/google-ads' scroll={true}
+            <Link href='/services/linkedin-ads' scroll={false}
              className='border border-borderColor rounded-2xl p-5 shadow-black hover:shadow-2xl'>
                 <div className='flex flex-col gap-5'>
                 <div className='h-52 bg-gradient-to-tr from-gradientColorOne via-[#b372ce] to-[#ff7586] rounded-xl'>

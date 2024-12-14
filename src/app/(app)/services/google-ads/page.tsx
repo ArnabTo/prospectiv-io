@@ -1,4 +1,4 @@
-
+'use client'
 import GoogleFaq from '@/components/google-ads-page-component/sectionEight/GoogleFaq';
 import WhatYouWillGet from '@/components/google-ads-page-component/sectionFive/WhatYouWillGet';
 import WhatMakesUsDifferent from '@/components/google-ads-page-component/sectionFour/WhatMakesUsDifferent';
@@ -9,9 +9,15 @@ import GoogleContact from '@/components/google-ads-page-component/sectionTen/Goo
 import WhatOurAgencyDo from '@/components/google-ads-page-component/sectionThree/WhatOurAgencyDo';
 import GoogleAdsCampaignWalkThrough from '@/components/google-ads-page-component/sectionTwo/google-campaign-walkhthrough';
 import HappyClient from '@/components/google-ads-page-component/serctionSix/HappyClient';
+import { useEffect } from 'react';
 
 
 const GoogleAds = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scrolls to the top
+      }, []); 
+      
     return (
         <div className='space-y-24'>
             <GoogleHero />

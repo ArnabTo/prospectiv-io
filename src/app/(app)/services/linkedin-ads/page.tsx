@@ -1,3 +1,4 @@
+
 import GoogleAdsCompanies from "@/components/google-ads-page-component/sectionSeven/GoogleAdsCompanies";
 import GoogleContact from "@/components/google-ads-page-component/sectionTen/GoogleContact";
 import HappyClient from "@/components/google-ads-page-component/serctionSix/HappyClient";
@@ -8,9 +9,13 @@ import OurGoal from "@/components/linkedin-ads-page/sectionSeven/OurGoal";
 import LinkedinFaq from "@/components/linkedin-ads-page/sectionSix/LinkedinFaq";
 import OurImpact from "@/components/linkedin-ads-page/sectionThree/OurImpact";
 import LinkedinAdsServices from "@/components/linkedin-ads-page/sectionTwo/LinkedinAdsServices";
+import { useEffect } from "react";
 
 
 const LinkedinAds = () => {
+
+ 
+
     return (
         <div className="space-y-24">
             <LinkedinAdsHero/>
