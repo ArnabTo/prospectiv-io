@@ -47,52 +47,53 @@ const LinkedinAdsServices = () => {
                                 className="mySwiper"
                             >
                                 <SwiperSlide>
-                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
+                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
                                         <div className='flex flex-col flex-grow'>
                                             <h3 className='text-2xl font-bold text-secondary'>Custom-Tailored LinkedIn Campaigns</h3>
                                             <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
-                                                We don't believe in a one-size-fits-all approach to LinkedIn paid ad campaigns. We achieve results by taking a strategic approach and crafting a content strategy based on your specific business objectives and target customers.
+
+                                                We tailor LinkedIn ad campaigns to your business objectives and audience, crafting a strategic content plan for optimal results.
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
+                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
                                         <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Custom-Tailored LinkedIn Campaigns</h3>
+                                            <h3 className='text-2xl font-bold text-secondary'>Audience Insights & Focused Targeting</h3>
                                             <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
-                                                We don't believe in a one-size-fits-all approach to LinkedIn paid ad campaigns. We achieve results by taking a strategic approach and crafting a content strategy based on your specific business objectives and target customers.
+                                                We research your audience to ensure your ads reach the right people, using LinkedIn’s targeting tools or custom Account and Contact lists.
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
+                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
                                         <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Custom-Tailored LinkedIn Campaigns</h3>
+                                            <h3 className='text-2xl font-bold text-secondary'>Deliver Memorable Messages That Drive Action</h3>
                                             <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
-                                                We don't believe in a one-size-fits-all approach to LinkedIn paid ad campaigns. We achieve results by taking a strategic approach and crafting a content strategy based on your specific business objectives and target customers.
+                                                Our experts craft compelling LinkedIn ads to drive conversions, continuously refining content to resonate with your ideal audience.
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
+                                    <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
                                         <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Custom-Tailored LinkedIn Campaigns</h3>
+                                            <h3 className='text-2xl font-bold text-secondary'>Data-Driven Adjustments & Reporting</h3>
                                             <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
-                                                We don't believe in a one-size-fits-all approach to LinkedIn paid ad campaigns. We achieve results by taking a strategic approach and crafting a content strategy based on your specific business objectives and target customers.
+                                                We monitor ad performance, provide actionable insights, and continuously optimise campaigns to maximise leads and ROI.
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                             </Swiper>
-                            <div 
-                        className=" blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
-                        <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
-                        <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
-                        <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
-                    </div>
+                            <div
+                                className=" blur-[100px] w-full max-w-[44%] min-h-[74%] absolute bottom-12 right-10 lg:bottom-12 lg:-right-10 -z-10 transition-all">
+                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] top-0 right-0"></div>
+                                <div className="bg-gradientColorFive absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%] bottom-0 right-0"></div>
+                                <div className="bg-gradientColorFour absolute rounded-full opacity-50 w-[70%] min-w-[70%] min-h-[70%] max-h-[70%]"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

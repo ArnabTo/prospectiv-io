@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronRight, CircleCheckBig } from "lucide-react";
+import { Brush, ChevronRight, CircleCheckBig, Clipboard, Eye, FlaskConical, MapPin, Search, Target, Wrench } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import Audit from '@/public/assets/audit-2.png'
@@ -19,45 +19,51 @@ const OurProcess = () => {
         {
             title: 'Audit',
             description: 'A comprehensive review of your Linkedin Ad Account to look at historical data and activity, helping inform our campaign objectives and recommended strategy.',
-            imageContent: Audit
+            imageContent: Audit,
         },
         {
             title: 'Positioning',
             description: 'We gain a deep understanding of the space you want to occupy in the minds of your target audience by identifying your ideal customers, their interests, and how your product is uniquely positioned to provide solutions to their problems.',
-            imageContent: PositionImage
+            imageContent: PositionImage,
+            icon: Eye
         },
         {
-            title: 'Targeting & Content Strategy ',
+            title: 'Targeting & Strategy',
             description: 'We develop a personalised advertising strategy that fits your objectives on the platform. By diversifying ad formats and targeting different stages of customer awareness, we ensure variety and build a holistic brand presence.',
-            imageContent: ContentStrategy
+            imageContent: ContentStrategy,
+            icon: Eye
         },
         {
             title: 'Asset Creation',
             description: 'We create, or brief the relevant assets to deliver the content strategy, prioritising what we plan to activate on a cold audience first.',
-            imageContent: AssetCreation
+            imageContent: AssetCreation,
+            icon: Eye
         },
         {
             title: 'Experimentation',
             description: 'Continuous split testing across targeting, creative, and copy allows us to quickly hone in on what is likely to deliver the best results. Using the data to refine effective lead magnets, that target decision makers.',
-            imageContent: Exprerimentation
+            imageContent: Exprerimentation,
+            icon: Eye
         },
         {
             title: 'Optimization',
             description: [
-                "**Performance Analysis:** Ensuring your ads operate at peak performance is our priority. We delve deep into metrics to understand ad behaviour",
-                "**CRO(Conversion Rate Optimization):**Tweaking ads to improve poor conversion rates, from clicks to leads",
-                "**Landing Page Enhancement:** Ensuring the transition from ad to website is seamless and effective"
+                "Performance Analysis: Ensuring your ads operate at peak performance is our priority. We delve deep into metrics to understand ad behaviour",
+                "CRO(Conversion Rate Optimization):Tweaking ads to improve poor conversion rates, from clicks to leads",
+                "Landing Page Enhancement: Ensuring the transition from ad to website is seamless and effective"
             ],
-            imageContent: Optimization
+            imageContent: Optimization,
+            icon: Eye
         },
         {
             title: 'Reporting',
             description: [
-                "**Performance Reports:** Understand your campaign's end-to-end performance through detailed reports.",
-                "**Insightful Analytics:** Beyond numbers, we provide actionable insights for continuous growth.",
-                "**Feedback Sessions:** Bi-weekly scheduled sessions ensure we’re aligned with your goals and visions."
+                "Performance Reports: Understand your campaign's end-to-end performance through detailed reports.",
+                "Insightful Analytics: Beyond numbers, we provide actionable insights for continuous growth.",
+                "Feedback Sessions: Bi-weekly scheduled sessions ensure we’re aligned with your goals and visions."
             ],
-            imageContent: Reporting
+            imageContent: Reporting,
+            icon: Eye
         },
     ]
 
@@ -78,9 +84,9 @@ const OurProcess = () => {
                         </div>
                     </div>
                     <Separator className="mb-5" />
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="flex flex-col lg:flex-row gap-12 items-center">
                         {/* Process Steps Sidebar */}
-                        <div className="space-y-2 bg-card">
+                        <div className="space-y-2 bg-card lg:min-w-[40%]">
                             {Process.map((step, index) => (
                                 <motion.div
                                     key={index}
@@ -117,56 +123,69 @@ const OurProcess = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -50 }}
                                 transition={{ duration: 0.3 }}
-                                className="bg-card border border-borderColor rounded-3xl shadow-2xl p-5 lg:p-8 space-y-4 flex flex-col xl:flex-row justify-center items-center gap-5"
+                                className="bg-card border border-borderColor rounded-3xl shadow-2xl p-5 lg:p-8 "
                             >
-                                <div>
-                                    <motion.h2
-                                        className="text-3xl font-bold text-secondary mb-4"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                    >
-                                        {Process[activeStep].title}
-                                    </motion.h2>
-                                    <motion.p
-                                        className="text-lg text-textColorTwo leading-relaxed"
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 0.2 }}
-                                    >
-                                        {Array.isArray(Process[activeStep].description) ? (
-                                            // If description is an array, render it as a list
-                                            <ul className="space-y-2">
-                                                {Process[activeStep].description.map((item, index) => (
-                                                    <motion.li
-                                                        key={index}
-                                                        initial={{ opacity: 0 }}
-                                                        animate={{ opacity: 1 }}
-                                                        transition={{ delay: 0.3 + index * 0.1 }}
-                                                        className="list-disc"
-                                                    >
-                                                        {item}
-                                                    </motion.li>
-                                                ))}
-                                            </ul>
-                                        ) : (
-                                            // Otherwise, render description as plain text
-                                            <p>{Process[activeStep].description}</p>
-                                        )}
-                                    </motion.p>
+                                <div className="flex justify-start items-center gap-2">
+                                        {
+                                            Process[activeStep].title === 'Audit' ? (<Search size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) :
+                                                Process[activeStep].title === 'Positioning' ? (<MapPin size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) :
+                                                    Process[activeStep].title === 'Targeting & Strategy' ? (<Target size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) :
+                                                        Process[activeStep].title === 'Asset Creation' ? (<Brush size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) :
+                                                            Process[activeStep].title === 'Experimentation' ? (<FlaskConical size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) :
+                                                                Process[activeStep].title === 'Optimization' ? (<Wrench size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) :
+                                                                    Process[activeStep].title === 'Reporting' ? (<Clipboard size={50} className="text-secondary bg-foreground p-2 rounded-xl" />) : null
+                                        }
+                                        <motion.h2
+                                            className="text-3xl font-bold text-secondary"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                        >
+                                            {Process[activeStep].title}
+                                        </motion.h2>
                                 </div>
-                                <motion.div
-                                    className="min-w-[50%] flex justify-center"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.4 }}
-                                >
-                                    <Image
-                                        width={500}
-                                        height={500}
-                                        alt="image"
-                                        src={Process[activeStep].imageContent}
-                                    />
-                                </motion.div>
+                                <div className="flex flex-col xl:flex-row justify-center items-start">
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -50 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        viewport={{ once: true }}
+                                        className="mt-7">
+                                        <p className="text-lg text-textColorTwo leading-relaxed">
+                                            {Array.isArray(Process[activeStep].description) ? (
+                                                // If description is an array, render it as a list
+                                                <ul className="space-y-2 lg:ml-5">
+                                                    {Process[activeStep].description.map((item, index) => (
+                                                        <motion.li
+                                                            key={index}
+                                                            initial={{ opacity: 0 }}
+                                                            animate={{ opacity: 1 }}
+                                                            transition={{ delay: 0.3 + index * 0.1 }}
+                                                            className="list-disc"
+                                                        >
+                                                            {item}
+                                                        </motion.li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                // Otherwise, render description as plain text
+                                                <p>{Process[activeStep].description}</p>
+                                            )}
+                                        </p>
+                                    </motion.div>
+                                    <motion.div
+                                        className="min-w-[50%] flex justify-center"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        transition={{ delay: 0.4 }}
+                                    >
+                                        <Image
+                                            width={500}
+                                            height={500}
+                                            alt="image"
+                                            src={Process[activeStep].imageContent}
+                                        />
+                                    </motion.div>
+                                </div>
                             </motion.div>
                         </AnimatePresence>
                     </div>
