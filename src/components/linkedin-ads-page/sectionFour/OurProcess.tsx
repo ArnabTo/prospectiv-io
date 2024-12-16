@@ -12,10 +12,18 @@ import Optimization from '@/public/assets/ab-testing-optimisation-1.png'
 import Exprerimentation from '@/public/assets/experiment.png'
 import Reporting from '@/public/assets/reporting-1.png'
 import Image from "next/image";
+
+interface ProcessStep {
+    title: string;
+    description: string | string[];
+    imageContent: any;
+}
+
 const OurProcess = () => {
     const [activeStep, setActiveStep] = useState(0);
 
-    const Process = [
+
+    const Process: ProcessStep[] = [
         {
             title: 'Audit',
             description: 'A comprehensive review of your Linkedin Ad Account to look at historical data and activity, helping inform our campaign objectives and recommended strategy.',
@@ -25,25 +33,21 @@ const OurProcess = () => {
             title: 'Positioning',
             description: 'We gain a deep understanding of the space you want to occupy in the minds of your target audience by identifying your ideal customers, their interests, and how your product is uniquely positioned to provide solutions to their problems.',
             imageContent: PositionImage,
-            icon: Eye
         },
         {
             title: 'Targeting & Strategy',
             description: 'We develop a personalised advertising strategy that fits your objectives on the platform. By diversifying ad formats and targeting different stages of customer awareness, we ensure variety and build a holistic brand presence.',
             imageContent: ContentStrategy,
-            icon: Eye
         },
         {
             title: 'Asset Creation',
             description: 'We create, or brief the relevant assets to deliver the content strategy, prioritising what we plan to activate on a cold audience first.',
             imageContent: AssetCreation,
-            icon: Eye
         },
         {
             title: 'Experimentation',
             description: 'Continuous split testing across targeting, creative, and copy allows us to quickly hone in on what is likely to deliver the best results. Using the data to refine effective lead magnets, that target decision makers.',
             imageContent: Exprerimentation,
-            icon: Eye
         },
         {
             title: 'Optimization',
@@ -53,7 +57,6 @@ const OurProcess = () => {
                 "Landing Page Enhancement: Ensuring the transition from ad to website is seamless and effective"
             ],
             imageContent: Optimization,
-            icon: Eye
         },
         {
             title: 'Reporting',
@@ -63,7 +66,6 @@ const OurProcess = () => {
                 "Feedback Sessions: Bi-weekly scheduled sessions ensure we’re aligned with your goals and visions."
             ],
             imageContent: Reporting,
-            icon: Eye
         },
     ]
 

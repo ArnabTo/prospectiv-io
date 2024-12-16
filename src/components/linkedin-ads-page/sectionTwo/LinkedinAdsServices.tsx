@@ -1,21 +1,12 @@
 'use client'
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+import { BarChart2, Briefcase, Megaphone, Target } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import './custom.css';
-
-// import required modules
-import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
-import ColdEmail from '@/app/(app)/services/cold-email/page';
-import Link from 'next/link';
-import Image from 'next/image';
-import { BarChart2, Briefcase, Megaphone, Target } from 'lucide-react';
 
 const LinkedinAdsServices = () => {
     return (
