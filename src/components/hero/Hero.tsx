@@ -129,7 +129,7 @@ const Hero = () => {
                         </div>
                         <div ref={buttonRefTwo}
                             className="w-60 lg:w-full flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                            <Link href="pricing" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 px-10 xl:px-16 py-5 rounded-full hover:bg-buttonHoverColor">
+                            <Link href="/pricing" className="flex-1 font-semibold text-lg bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 px-10 xl:px-16 py-5 rounded-full hover:bg-buttonHoverColor">
                                 See Our Pricing
                             </Link>
                         </div>

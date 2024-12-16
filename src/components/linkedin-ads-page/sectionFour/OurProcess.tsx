@@ -78,7 +78,7 @@ const OurProcess = () => {
                         </div>
                         <div
                             className="w-6o flex rounded-full mx-auto shadow-lg duration-300 transform group-hover:scale-105">
-                            <Link href="pricing" className="flex-1 font-semibold text-lg text-center bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 px-10 py-5 rounded-full hover:bg-buttonHoverColor">
+                            <Link href="/pricing" className="flex-1 font-semibold text-lg text-center bg-buttonColor text-foreground hover:scale-95 transition-all duration-300 px-10 py-5 rounded-full hover:bg-buttonHoverColor">
                                 See Our Pricing
                             </Link>
                         </div>
