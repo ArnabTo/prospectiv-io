@@ -33,6 +33,7 @@ const GoogleAdsCompanies = () => {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 }}
+                        viewport={{ once: true }}
                         key={index} className="h-full">
                         <Image width={500} height={500} src={logo} alt={`company-logo-${index}`}
                             className="w-40 h-24 object-contain  filter contrast-125" />

@@ -15,6 +15,7 @@ import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import ColdEmail from '@/app/(app)/services/cold-email/page';
 import Link from 'next/link';
 import Image from 'next/image';
+import { BarChart2, Briefcase, Megaphone, Target } from 'lucide-react';
 
 const LinkedinAdsServices = () => {
     return (
@@ -48,9 +49,16 @@ const LinkedinAdsServices = () => {
                             >
                                 <SwiperSlide>
                                     <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
-                                        <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Custom-Tailored LinkedIn Campaigns</h3>
-                                            <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
+                                        <div className='flex flex-col flex-grow gap-2'>
+                                            {/* <div className="flex justify-start items-center gap-2">
+                                               icon
+                                                <h2 className="text-3xl font-bold text-secondary">
+                                                    gdd
+                                                </h2>
+                                            </div> */}
+                                            <Briefcase size={50} className="text-secondary bg-foreground p-2 rounded-xl" />
+                                            <h3 className='text-xl lg:text-2xl font-bold text-secondary'>Custom-Tailored LinkedIn Campaigns</h3>
+                                            <p className='flex-grow text-base text-textColorTwo items-end'>
 
                                                 We tailor LinkedIn ad campaigns to your business objectives and audience, crafting a strategic content plan for optimal results.
                                             </p>
@@ -59,9 +67,10 @@ const LinkedinAdsServices = () => {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
-                                        <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Audience Insights & Focused Targeting</h3>
-                                            <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
+                                        <div className='flex flex-col flex-grow gap-2'>
+                                            <Target size={50} className="text-secondary bg-foreground p-2 rounded-xl"/>
+                                            <h3 className='text-xl lg:text-2xl font-bold text-secondary'>Audience Insights & Focused Targeting</h3>
+                                            <p className='flex-grow text-base text-textColorTwo items-end'>
                                                 We research your audience to ensure your ads reach the right people, using LinkedIn’s targeting tools or custom Account and Contact lists.
                                             </p>
                                         </div>
@@ -69,19 +78,21 @@ const LinkedinAdsServices = () => {
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
-                                        <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Deliver Memorable Messages That Drive Action</h3>
-                                            <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
-                                                Our experts craft compelling LinkedIn ads to drive conversions, continuously refining content to resonate with your ideal audience.
+                                        <div className='flex flex-col flex-grow gap-2'>
+                                            <Megaphone size={50} className="text-secondary bg-foreground p-2 rounded-xl"/>
+                                            <h3 className='text-xl lg:text-2xl font-bold text-secondary'>Craft messages that inspire action</h3>
+                                            <p className='flex-grow text-base text-textColorTwo items-end'>
+                                            Our experts create impactful LinkedIn ads that drive conversions and refine content to engage your target audience.
                                             </p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='bg-background h-full border border-borderColor rounded-3xl p-4 lg:p-6 shadow-black hover:shadow-2xl flex-grow flex flex-col gap-5 group'>
-                                        <div className='flex flex-col flex-grow'>
-                                            <h3 className='text-2xl font-bold text-secondary'>Data-Driven Adjustments & Reporting</h3>
-                                            <p className='flex-grow text-md lg:text-lg text-textColorTwo items-end'>
+                                        <div className='flex flex-col flex-grow gap-2'>
+                                            <BarChart2 size={50} className="text-secondary bg-foreground p-2 rounded-xl"/>
+                                            <h3 className='text-xl lg:text-2xl font-bold text-secondary'>Data-Driven Adjustments & Reporting</h3>
+                                            <p className='flex-grow text-base text-textColorTwo items-end'>
                                                 We monitor ad performance, provide actionable insights, and continuously optimise campaigns to maximise leads and ROI.
                                             </p>
                                         </div>
